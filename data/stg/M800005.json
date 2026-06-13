@@ -1,0 +1,109 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M800005",
+  "procedure_code": "M800005",
+  "condition": "Neurotic, stress-related and somatoform disorders",
+  "procedure_name": "Neurotic, stress-related and somatoform disorders",
+  "specialty": "Mental Disorders",
+  "version": "1.1",
+  "source_files": [
+    "Neurotic, stress-related and somatoform disorders_Medco.pdf",
+    "Neurotic, stress-related and somatoform disorders_PPD.CPD.pdf"
+  ],
+  "alos": "6-8 weeks",
+  "min_doctor_qualification": [
+    "MD/DNB/ PG Diploma/ equivalent (in Psychiatry)"
+  ],
+  "clinical_indications": [
+    "General symptoms of tension, anxiety, apprehension, fear, worrying, sadness, lack of interest, uncontrolled negative thoughts, unexplained physical symptoms (chest pain, abdominal pain, muscular tension, headache, nausea), palpitations, difficulty in breathing, choking, light headedness, dizziness, fainting, trembling, attacks of fear, losing control or going \"crazy\", fear of dying, repetitive unwanted thoughts and behaviours.",
+    "Generalized Anxiety Disorder (GAD): Chronic feeling of tension, apprehension, anxiety or worrying about everyday routine life circumstances (work, school, health, finance, household chores etc.).",
+    "Agoraphobia: Fear of going out of home alone, being in enclosed spaces (malls, cinemas etc.), open spaces (bridges, vast playgrounds etc.), or using public transportation (trains, buses, planes etc.).",
+    "Panic Disorder: Recurrent unexpected attacks of intense fear/anxiety along with physical symptoms (palpitations, choking, trembling, chest pain, dizzy/faint etc.).",
+    "Social Phobia: Marked fear and avoidance of social situations (interaction with strangers, meeting unfamiliar people, performing in front of others).",
+    "Obsessive-compulsive disorder (OCD): Recurrent and persistent unwanted thoughts (sexual, blasphemous, fear of harming self/others, contamination, doubts about daily activities etc.) and repetitive behaviours (washing/cleaning, checking, ordering etc.).",
+    "Somatization Disorder/Medically Unexplained Symptoms (SD): Repeated subjective experience of physical symptoms not explained by recognizable physical disease, causing significant distress or disruption of daily life.",
+    "One or more somatic symptoms that are distressing or result in significant disruption of daily life.",
+    "Excessive thoughts, feelings, or behaviours related to the somatic symptoms or associated health concerns (disproportionate/persistent thoughts about seriousness, persistently high anxiety, excessive time/energy devoted to symptoms).",
+    "Symptomatic state is persistent (typically more than 6 months), with severe symptoms and marked impairment."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "somatic_symptoms_duration",
+      "operator": ">=",
+      "value": "6 months",
+      "note": "Persistent symptomatic state in Somatoform Disorders"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_chronicity",
+        "label": "Clinical notes with detailed history and chronicity"
+      },
+      {
+        "key": "admission_document_psychiatrist_signed",
+        "label": "Admission document signed by empanelled psychiatrist"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_treatment_notes",
+        "label": "Detailed treatment notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes, detailed history, mini mental status test, indication for treatment and need of hospitalization provided?",
+        "expected": true
+      },
+      {
+        "q": "Admission document signed by an empaneled psychiatrist?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed treatment notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Admission document not signed by an empaneled psychiatrist.",
+    "Clinical notes lacking detailed history, mini mental status test, indication for treatment, or need of hospitalization.",
+    "Detailed treatment notes not submitted.",
+    "Discharge Summary not mentioning date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": "F40-F42, F45",
+    "special_empanelment": "As per the provisions of the Mental Health Act 2017",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The provisions under Mental Healthcare Act 2017 be referred for details on Admission & Discharge criteria."
+    ],
+    "surgical_options": [
+      "Keep a high threshold for invasive procedures.",
+      "Deep Brain Stimulation and surgery for OCD (mentioned as strategies in tertiary care, generally discouraged)."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Assessment for symptoms of depression, substance and alcohol misuse. Evaluation for physical disorders like thyrotoxicosis, pheochromocytoma, and hypoglycaemia. Management of comorbid psychiatric conditions (e.g., personality disorders, organicity) if present.",
+    "referral_criteria": "For Anxiety Disorders: Refer from Primary to Secondary care if no satisfactory improvement after 4-6 weeks of Escitalopram. Refer from Secondary to Tertiary care if unsatisfactory response after second SSRI and/or addition of CBT. For Somatoform Disorders: Refer from Primary to Secondary care for difficulty in diagnosis, no improvement after 4 weeks of first-line treatment, comorbid medical/psychiatric illness, or suicidal risk. Refer from Secondary to Tertiary care if no improvement in 2nd line treatment, high suicidal risk, needing intense counselling/psychotherapy, or difficult patients.",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Long-term treatment with benzodiazepines for anxiety to be avoided.",
+      "Medical conditions mimicking panic disorder (hyperthyroidism, hyperparathyroidism, pheochromocytoma, vestibular diseases, seizures, arrhythmias, etc.) must be evaluated."
+    ]
+  }
+}

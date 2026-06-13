@@ -1,0 +1,144 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN049B",
+  "procedure_code": "SN049B",
+  "condition": "Brachial plexus injury",
+  "procedure_name": "Peripheral Nerve Surgery (Major)",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Brachial plexus injury_Medco.pdf",
+    "Brachial plexus injury_PPD.CPD.pdf"
+  ],
+  "alos": "4 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Nerves damaged by clean, sharp, relatively fresh lacerations, such as those from a knife wound, should be surgically reconnected within 72 hours.",
+    "Penetrating injuries with severe or complete loss of sensation should be explored as soon as the primary wound heals.",
+    "Injuries with symptoms that continue after four to six months should be investigated surgically."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_evaluation",
+        "label": "Clinical Evaluation"
+      },
+      {
+        "key": "electromyography_emg",
+        "label": "Electromyography (EMG)"
+      },
+      {
+        "key": "nerve_conduction_studies",
+        "label": "Nerve conduction studies"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "in_case_of_accidents_fir_optional",
+        "label": "In case of accidents – FIR (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history especially accident history, signs & symptoms, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient present with paraparesis of upper limb with flexor & extensor muscle weakness?",
+        "expected": true
+      },
+      {
+        "q": "Did EMG confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation, history and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was FIR done is case accidental/traumatic injuries?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing detailed history (accident history, signs & symptoms, indication for procedure, or planned line of treatment).",
+    "Patient did not present with paraparesis of upper limb with flexor & extensor muscle weakness.",
+    "EMG did not confirm the diagnosis.",
+    "Clinical presentation, history, or imaging was not indicative of surgery.",
+    "FIR not provided for accidental/traumatic injuries (if applicable).",
+    "Detailed ICPs are missing daily vitals or treatment details.",
+    "Detailed Procedure / Operative Notes are not available.",
+    "Discharge summary is missing follow-up advice.",
+    "Imaging was not indicative of surgery."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The brachial plexus lies in the neck and consists of a group of combining nerve roots that eventually divide again to form peripheral nerves.",
+      "These nerves are responsible for movement and sensation in the shoulders, arms, forearms and hands, and some muscles of the back and chest."
+    ],
+    "surgical_options": [
+      "neurolysis",
+      "nerve grafts",
+      "nerve transfers",
+      "tendon and muscle transfers"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "decide referral of cases to the appropriate level of care (as required)",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

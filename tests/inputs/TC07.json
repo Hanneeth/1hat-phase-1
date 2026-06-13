@@ -1,0 +1,178 @@
+{
+  "_test_id": "TC07",
+  "_description": "Breast carcinoma (T2N0M0), FNAC confirmed. Planned modified radical mastectomy. Tests MTB_REQUIRED (hard warning) and ONCOLOGY_MULTI_STAGE flags in Phase 8.",
+  "_expected_status": "READY_WITH_WARNINGS",
+  "_expected_specialty": "SC",
+  "_expected_flags_include": [
+    "MTB_REQUIRED",
+    "ONCOLOGY_MULTI_STAGE",
+    "CANDIDATES_GENERATED"
+  ],
+  "_expected_flags_exclude": [
+    "WALLET_INSUFFICIENT",
+    "PUB_RESERVED_BLOCK"
+  ],
+  "session_id": "IRIS-TC07-20260612",
+  "created_at": "2026-06-12T12:30:00+05:30",
+  "patient": {
+    "patient_id": "P007"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Right breast lump noticed 3 months ago, gradually increasing in size, not painful, no nipple discharge",
+    "duration_days": 90,
+    "history_of_present_illness": "Patient noticed a painless lump in right breast 3 months ago. Lump has been gradually increasing in size. No pain, no nipple discharge, no skin changes initially. On presentation, lump is now 3cm, firm, irregular margins, slightly fixed to underlying tissue. No axillary lymphadenopathy clinically. FNAC performed at outside clinic confirmed malignancy (invasive ductal carcinoma). Referred for surgical management.",
+    "provisional_diagnosis": "Carcinoma right breast — invasive ductal carcinoma, T2N0M0 (clinical staging)",
+    "planned_procedure": "Modified radical mastectomy right side",
+    "weight_kg": 65,
+    "height_cm": 160,
+    "vitals": {
+      "bp_systolic_mmhg": 124,
+      "bp_diastolic_mmhg": 78,
+      "pulse_bpm": 80,
+      "spo2_pct": 98,
+      "temperature_f": 98.4,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": null
+    },
+    "examination_findings": {
+      "general": "Conscious, oriented, no pallor, no icterus, no peripheral lymphadenopathy",
+      "cvs": "S1 S2 heard, no murmurs",
+      "rs": "Clear air entry bilateral",
+      "abdomen": "Soft, non-tender, no hepatomegaly, no splenomegaly",
+      "cns": "No focal deficits",
+      "local": "Right breast: 3x3cm firm, irregular, slightly fixed lump in upper outer quadrant. Skin not involved. No nipple retraction. No peau d'orange. Right axilla: no palpable lymph nodes. Left breast: no lump, no discharge."
+    },
+    "investigations": [
+      {
+        "type": "fnac",
+        "result_summary": "FNAC right breast lump: Malignant cells present — invasive ductal carcinoma, Grade 2. ER positive, PR positive, HER2 negative.",
+        "structured_values": [
+          {
+            "parameter": "cytology",
+            "value": "malignant_IDC",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "ER_status",
+            "value": "positive",
+            "unit": null,
+            "flag": null,
+            "leads": null
+          },
+          {
+            "parameter": "PR_status",
+            "value": "positive",
+            "unit": null,
+            "flag": null,
+            "leads": null
+          },
+          {
+            "parameter": "HER2_status",
+            "value": "negative",
+            "unit": null,
+            "flag": null,
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-05"
+      },
+      {
+        "type": "usg",
+        "result_summary": "Right breast USG: Irregular hypoechoic mass 3.2x2.8cm in upper outer quadrant, irregular margins, posterior acoustic shadowing. BIRADS category 5. No axillary lymphadenopathy.",
+        "structured_values": [
+          {
+            "parameter": "lesion_size",
+            "value": "3.2x2.8",
+            "unit": "cm",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "BIRADS",
+            "value": 5,
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "axillary_LN",
+            "value": "absent",
+            "unit": null,
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-05"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "CBC: Hb 12.6 g/dL, WBC 8200/cumm, platelets 2.8 lakh. LFT, RFT normal. CA 15-3: 38 U/mL (mildly elevated).",
+        "structured_values": [
+          {
+            "parameter": "Hb",
+            "value": 12.6,
+            "unit": "g/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "CA_15_3",
+            "value": 38,
+            "unit": "U/mL",
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-10"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No significant past history",
+    "past_surgical_history": "None",
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "none",
+      "diet": "vegetarian"
+    },
+    "family_history": "Mother had breast cancer at age 55",
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Surgical oncology notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo",
+        "available": true
+      },
+      {
+        "key": "fnac",
+        "label": "FNAC report confirming malignancy",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Sunita Reddy",
+      "registration_number": "TN-MED-23456",
+      "qualification": "MS MCh Surgical Oncology",
+      "specialty_code": "SC"
+    },
+    "notes": "MTB decision pending. Hospital oncology board meeting scheduled. Staging workup (CT chest-abdomen, bone scan) in progress. IRIS output subject to MTB recommendation."
+  }
+}

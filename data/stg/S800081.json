@@ -1,0 +1,112 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S800081",
+  "procedure_code": "S800081",
+  "condition": "Cerebrovascular Occlusive Disease",
+  "procedure_name": "Superficial Temporal Artery (STA): middle cerebral artery (MCA) or (other EC - IC) Bypass procedure",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "STA MCA bypass_Medco.pdf",
+    "STA MCA bypass_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "Mch/DNB/equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Cerebrovascular occlusive disease",
+    "Complex intracranial aneurysm",
+    "Skull base tumors where proximal vessel sacrifice is required as part of their treatment",
+    "Conditions that could interrupt the blood flow to the distal middle cerebral vasculature. These conditions include planned proximal vessel sacrifice for tumors or aneurysms, moyamoya disease, and other causes of vascular occlusion that reduce blood flow to the MCA territory."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_procedure_planned_management",
+        "label": "Clinical Notes including evaluation findings, indication of procedure and planned line of management"
+      },
+      {
+        "key": "mra_dsa_brain_report",
+        "label": "MRA/Digital Subtraction Angiography (DSA) report of brain establishing need for surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_scar_photo",
+        "label": "Post Procedure clinical photograph/scar photo (optional)"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure/ Operation notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of management, indication for procedure, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Was MRA/DSA brain report of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was MRA/DSA brain report indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative photographs submitted (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "MRA/DSA brain report not indicative of surgery",
+    "Clinical notes missing or incomplete regarding history, signs, symptoms, planned management, indication, or advice for admission",
+    "MRA/DSA brain report not submitted at pre-authorization",
+    "Detailed Indoor Case Papers (ICPs) missing or incomplete regarding daily vitals and treatment details",
+    "Detailed Procedure/Operative Notes missing",
+    "Discharge summary missing or lacking follow-up advice"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a tertiary hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The superficial temporal artery to middle artery bypass is a technique that allows the blood supply from the extracranial carotid circulation to be routed to the distal middle cerebral artery branches. The procedure allows blood flow to bypass proximal lesions of the intracranial vasculature. The performance of this bypass requires specialized microvascular training and the use of microvascular techniques. The techniques involved in performing these procedures include microdissection of the superficial temporal artery in the scalp, microdissection of the recipient middle cerebral artery branches near the sylvian fissure, and anastomosis techniques using either microvascular sutures or a microanastomotic device."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB023A",
+  "procedure_code": "SB023A",
+  "condition": "Non-union fracture",
+  "procedure_name": "Bone grafting for non-union",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Bone grafting for non union_Medco.pdf",
+    "Bone grafting for non union_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Fracture not radiographically healed by 6 months (FDA definition)",
+    "Fracture has not displayed progression of healing over a 3-month period"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "radiographic_healing_period",
+      "operator": ">=",
+      "value": "6 months",
+      "note": "fracture not radiographically healed (FDA definition)"
+    },
+    {
+      "field": "healing_progression_period",
+      "operator": ">=",
+      "value": "3 months",
+      "note": "no progression of healing"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_earlier_surgery",
+        "label": "Clinical notes detailing earlier surgery that resulted in non-union"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      },
+      {
+        "key": "radiological_investigations_diagnosis",
+        "label": "Radiological investigations confirming the diagnosis (X-ray labelled with patient ID, date and side (Left/ Right) showing affected part.)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_procedure_clinical_photograph_sites",
+        "label": "Post Procedure clinical photograph of donor and recipient sites"
+      },
+      {
+        "key": "post_procedure_imaging_study",
+        "label": "Post procedure imaging study (X-ray labelled with patient ID, date and side (Left/Right) showing affected part)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/ operative notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Does the Post-op X- ray of affected part show the bone grafting?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes detailing earlier surgery that resulted in non-union missing or incomplete.",
+    "Clinical photograph of affected part missing or unclear.",
+    "Radiological investigations (X-ray) confirming diagnosis missing, unlabelled, or not showing affected part.",
+    "Post-procedure clinical photograph of donor and recipient sites missing or unclear.",
+    "Post-procedure imaging study (X-ray) missing, unlabelled, or not showing bone grafting or affected part.",
+    "Detailed procedure/operative notes missing or incomplete.",
+    "Discharge Summary missing or incomplete.",
+    "Nonunion definition not met (e.g., fracture not healed by 6 months or no progression over 3 months).",
+    "Presence of infection not explicitly ruled out in evaluation of nonunion."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB in Orthopedics",
+    "clinical_key_pointers": [
+      "A nonunion has also been defined as a fracture not radiographically healed by 6 months (FDA) or as a fracture that has not displayed progression of healing over a 3-month period.",
+      "In evaluating a nonunion, the presence of infection must be ruled out.",
+      "The patient's clinical history, laboratory findings, and radiographic evaluation are important.",
+      "The quality and rate of fracture healing may also be affected by hypo vascularity (due to the injury or the surgical insult) and by poor stabilization.",
+      "Patient factors such as smoking, use of nonsteroidal anti-inflammatory drugs, malnutrition, and systemic illness also contribute to the incidence of nonunion.",
+      "Autogenous bone grafting is often performed in Orthopedic surgery for a variety of conditions, including the repair of nonunion.",
+      "Bone grafts can be divided into Allografts and autografts and Cortical or cancellous bone grafts; both types of a nonunion need to be supplemented with cancellous bone graft to increase the rate of success.",
+      "Simple X-ray helps to evaluate the characteristics of a non-union: anatomic location, healing effort, bone quality, surface characteristics, status of previously implanted hardware and deformities."
+    ],
+    "surgical_options": [
+      "Autogenous bone grafting",
+      "Allografts and autografts",
+      "Cortical or cancellous bone grafts"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Patient factors such as smoking, use of nonsteroidal anti-inflammatory drugs, malnutrition, and systemic illness also contribute to the incidence of nonunion.",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Presence of infection must be ruled out"
+    ]
+  }
+}

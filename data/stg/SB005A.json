@@ -1,0 +1,141 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB005A",
+  "procedure_code": "SB005A",
+  "condition": "External fixation of Fracture",
+  "procedure_name": "External fixation of Fracture - Long bone",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "External fixation of Fracture_Medco.pdf",
+    "External fixation of Fracture_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Immobilize a particular part of the body following a fracture or with certain orthopedic problems to allow bone healing.",
+    "Fixation and manipulation of multiple bone segments which would otherwise be very difficult to manage.",
+    "Used in orthopedic trauma, pediatric orthopedics, and plastic surgery for an array of different pathology.",
+    "Unstable pelvic ring injuries",
+    "Comminuted periarticular fractures such as pilon, distal femur, tibial plateau, elbow, and distal radius fractures",
+    "Fractures with large amounts of soft tissue swelling",
+    "Fractures which hemodynamically unstable or cannot undergo an open procedure",
+    "Comminuted long bone fractures",
+    "Fractures with significant bone loss",
+    "Open fractures with soft tissue loss",
+    "Limb deformity and limb lengthening",
+    "Osteomyelitis with bone loss",
+    "Immobilization of joint after soft tissue flap",
+    "Arthrodesis, Nonunion, Malunion, Infection, traction to aid in intraoperative fracture reduction."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_indication_surgery",
+        "label": "Clinical notes with indication for surgery"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      },
+      {
+        "key": "x_ray_labelled_patient_id_date_side",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice and barcode of implant"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray labelled with patient ID, date and side (Left/Right) of affected part confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and X-ray report of affected part indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Were Post-operative photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Invoice/barcode of implant submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and X-ray report of affected part not indicative of surgery.",
+    "X-ray not labelled with patient ID, date, or side (Left/Right) of affected part, or diagnosis not confirmed.",
+    "Clinical notes missing detailed history, signs & symptoms, planned treatment, or indication for procedure.",
+    "Invoice or barcode of implant not submitted at claim stage.",
+    "Post-operative clinical photographs not submitted at claim stage.",
+    "Detailed Indoor Case Papers (ICPs) lacking daily vitals and treatment details."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/ Equivalent (in Orthopedics)",
+    "clinical_key_pointers": [
+      "Physicians have been using External fixation to treat fractures for more than 2000 years, it helps to immobilize a particular part of the body following a fracture or with certain orthopedic problems to allow bone healing.",
+      "The fixation and manipulation of multiple bone segments which would otherwise be very difficult to manage.",
+      "Usually the material involved in this process are Pins, wires, self-drilling/tapping, and braces, clamps, Rods, Ring components, used to immobilize the part, Uni, biplanar, biomechanics,",
+      "Types of fixation evolved over period which includes; First Generation (Classic rigid A frame) (Unilateral Fixator), second generation, third generation (Circular fine wire fixator, Circular external fixation), fourth generation (Mobile unilateral external fixators), Fifth generation (Multiplanar Fixation with Multiaxial Correction) and hybrid fixation."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

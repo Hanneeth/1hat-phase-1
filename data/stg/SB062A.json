@@ -1,0 +1,136 @@
+{
+  "_comment": "Distilled from 'Corrective Surgery in Club Foot_Medco.pdf' and 'Corrective Surgery in Club Foot_PPD.CPD.pdf'. Note for SB062A, 'Post procedure X-ray labelled...' is 'Yes' in Medco.pdf mandatory docs but 'No' in PPD.CPD.pdf checklist. Following PPD.CPD for checklist 'expected' boolean, and Medco.pdf for mandatory_documents list.",
+  "stg_id": "SB062A",
+  "procedure_code": "SB062A",
+  "condition": "Club Foot",
+  "procedure_name": "Correction of club foot per cast",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Corrective Surgery in Club Foot_Medco.pdf",
+    "Corrective Surgery in Club Foot_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years' experience"
+  ],
+  "clinical_indications": [
+    "Congenital club foot requiring non-operative correction via manipulation and casting (Ponseti's method)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "x_ray_mri",
+        "label": "X-ray/MRI labelled with patient ID, date and side (Left/Right) of affected part"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_with_cast",
+        "label": "Post procedure clinical photograph with cast"
+      },
+      {
+        "key": "invoice_bar_code_of_implant",
+        "label": "Invoice/bar code of implant"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "post_procedure_x_ray",
+        "label": "Post procedure X-ray labelled with patient ID, date and side (Left/Right) - affected part"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the X-ray/MRI labelled with patient ID, date and side (Left/Right) confirming the diagnosis submitted?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are Detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure clinical photograph with cast submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Invoice/bar code of implant submitted?",
+        "expected": false
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post procedure X-ray labelled with patient ID, date and side (Left/Right) of affected part submitted?",
+        "expected": false
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes (history, signs, symptoms, evaluation findings, indication for procedure, planned line of management, or advice for admission) not submitted or incomplete.",
+    "X-ray/MRI not labelled with patient ID, date, or side (Left/Right), or not submitted.",
+    "Clinical photograph of affected part not submitted.",
+    "Post procedure clinical photograph with cast not submitted.",
+    "Detailed Procedure / Operative Notes not submitted.",
+    "Detailed Discharge Summary not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/ or Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Congenital club foot is a complex deformity that is difficult to correct and has a tendency to recur until the age of six or seven years, often associated with incomplete correction.",
+      "Untreated, children with clubfoot walk on the sides and/or top of their foot, resulting in callus formation.",
+      "The deformity has four components: Equinius, varus, adductus and cavus.",
+      "Postural or positional clubfeet are not true clubfeet.",
+      "Fixed or rigid clubfeet are either flexible (correctable without surgery) or resistant (requiring surgical release).",
+      "The main objective of corrective treatment for club foot is to reduce or eliminate the four deformities, achieving a functional, pain-free, plantigrade foot with good mobility and without calluses, not requiring modified shoes.",
+      "Initial treatment of a club foot should be non-operative, preferably manipulation and application of a plaster cast at a weekly interval.",
+      "Ponseti's method involves gentle manipulation and casting of a newborn's foot at weekly intervals, with a Treatment Phase (deformity correction) and a Maintenance Phase (brace use to prevent recurrence)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "IN003A",
+  "procedure_code": "IN003A",
+  "condition": "Intracranial Aneurysms",
+  "procedure_name": "Coil embolization for aneurysms (includes cost of first 3 coils + balloon and / or stent if used)",
+  "specialty": "Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "Coil Embolization for Aneurysms_Medco.pdf",
+    "Coil Embolization for Aneurysms_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "DM/Equivalent (in Interventional Neuroradiology)",
+    "MCh/DNB/Equivalent (in Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Treatment of ruptured and unruptured aneurysms",
+    "Subarachnoid haemorrhage (SAH) in non-traumatic background",
+    "Symptomatic giant aneurysms (diameter >2.5 cm) causing mass effect (e.g., cranial neuropathies, visual loss)",
+    "Aneurysms causing seizures, headaches, transient ischemic attacks or cerebral infarction secondary to emboli",
+    "When surgical treatment is not feasible or unsafe",
+    "For people at increased risk for craniotomy (e.g., over 65 years of age, with poor clinical status, or with comorbid conditions)",
+    "Ruptured aneurysms requiring urgent treatment (within 72 h of haemorrhage) to prevent rebleeding and permit aggressive management of vasospasm"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "aneurysm_diameter",
+      "operator": ">",
+      "value": "10mm",
+      "note": "Pop-up scenario in TMS"
+    },
+    {
+      "field": "aneurysm_neck",
+      "operator": ">=",
+      "value": "4mm",
+      "note": "Pop-up scenario in TMS"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including indication of implant requirement, evaluation findings along with admission Glasgow coma scale score, and planned line of treatment"
+      },
+      {
+        "key": "ct_mri_dsa",
+        "label": "CT/MRI Brain / Digital Subtraction Angiography (DSA)"
+      },
+      {
+        "key": "complete_blood_count_pt_inr",
+        "label": "Complete blood count, Prothrombin time (PT)/INR"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "post_op_glasgow_coma_scale_score_documentation",
+        "label": "Post-op Glasgow coma scale score documentation"
+      },
+      {
+        "key": "implant_details_invoice_barcode",
+        "label": "Implant details Invoice/barcode (coils/balloon/stent)"
+      },
+      {
+        "key": "post_procedure_check_angiogram",
+        "label": "Post-procedure check angiogram"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the patient present with fainting or sudden loss of consciousness, seizure, vomiting, blurred vision, changes in speech, severe headache?",
+        "expected": true
+      },
+      {
+        "q": "Did CT/MRI/DSA confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was there any evidence of coagulopathies?",
+        "expected": false
+      },
+      {
+        "q": "Is there evidence of aneurysm more than 10mm in diameter?",
+        "expected": true
+      },
+      {
+        "q": "Is there evidence of aneurysm neck greater than or equal to 4mm?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was DSA imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Did post-procedure check-angiogram show coils/balloon/stent?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and imaging not indicative of surgery or lacking sufficient detail",
+    "Evidence of coagulopathies present without adequate justification for proceeding with the procedure",
+    "CT/MRI Brain or Digital Subtraction Angiography (DSA) report not provided or does not confirm the diagnosis",
+    "Implant details (invoice or barcode for coils/balloon/stent) missing at claim submission",
+    "Post-procedure check angiogram not provided or does not clearly show coils/balloon/stent implanted",
+    "Aneurysm diameter less than 10mm or neck less than 4mm without clear clinical justification for intervention (as per IT pop-up scenarios)"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital with facilities for endovascular treatment or neurosurgery.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Endovascular coiling remains a feasible and effective treatment option for the treatment of ruptured and unruptured aneurysms, especially as an alternative to surgical clipping in most cases, which is associated with higher morbidity and mortality rates.",
+      "Intracranial aneurysms are focal outpouching from intracranial arteries with weak walls as compared to normal arteries and therefore have propensity to present with intracranial bleed, usually subarachnoid haemorrhage (SAH). The 3 major types of intracranial aneurysms are saccular, fusiform, and dissecting. Intracranial aneurysms range in size from small (<12 mm in diameter) to large (12–25 mm), and to giant (>25 mm).",
+      "Devices to augment coil embolization now include balloon-assist techniques and intracranial stents to increase coil packing and parent artery patency, as well as reduce the risk of coil herniation.",
+      "Balloon-assisted coil embolization reduces the risk of coil prolapse into the parent artery and can provide immediate proximal control with balloon inflation in case of intraprocedural aneurysm rupture.",
+      "Stent-assisted coiling allows for increased coil packing density, critical for the treatment of wide-necked, large and giant aneurysms, thereby significantly improving obliteration rate and reducing aneurysm recurrence rate."
+    ],
+    "surgical_options": [
+      "Surgical clipping of the aneurysm neck"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [
+      "Rankin Score",
+      "Glasgow Outcome Score"
+    ],
+    "contraindications": [
+      "Coagulopathies"
+    ]
+  }
+}

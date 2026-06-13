@@ -1,0 +1,95 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG024A",
+  "procedure_code": "MG024A",
+  "condition": "Skin and soft tissue infections",
+  "procedure_name": "Skin and soft tissue infections",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Skin and soft tissue infections_Medco.pdf",
+    "Skin and soft tissue infections_PPD.CPD.pdf"
+  ],
+  "alos": "2-5 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Infection is severe or uncontrolled despite outpatient antibiotics and drainage",
+    "Patient is septic, dehydrated, acidotic, or immunosuppressed",
+    "Patient has organ dysfunction or antibiotic intolerance",
+    "Appropriate follow-up is unavailable",
+    "Abscess requires drainage",
+    "Abscess involves face, hands, or genitalia",
+    "Overlying cellulitis is present",
+    "MRSA coverage is required (infection is purulent)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indications for the procedure, planned line of treatment, detailing history, admission notes showing vitals (BP, Pulse) and examination findings"
+      },
+      {
+        "key": "cbc_esr_lft_sr_creatine_reports",
+        "label": "CBC, ESR, LFT, Sr. Creatine reports"
+      },
+      {
+        "key": "c_reactive_protein_level_report",
+        "label": "C-reactive protein level report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers with treatment details"
+      },
+      {
+        "key": "post_treatment_cbc_esr_lft_sr_creatinine_reports",
+        "label": "Post treatment CBC, ESR, LFT, Sr. Creatinine reports"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was infection severe or uncontrolled despite outpatient antibiotics and drainage?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Infection not documented as severe or uncontrolled despite outpatient antibiotics and drainage, or such documentation is insufficient.",
+    "Clinical notes missing or incomplete at pre-authorization, lacking details on history, admission vitals, examination findings, evaluation, indications, or planned treatment.",
+    "CBC, ESR, LFT, or Sr. Creatine reports missing or incomplete at pre-authorization.",
+    "C-reactive protein level report missing or incomplete at pre-authorization.",
+    "Detailed Indoor Case Papers with treatment details missing or incomplete at claim submission.",
+    "Post-treatment CBC, ESR, LFT, or Sr. Creatinine reports missing or incomplete at claim submission.",
+    "Detailed Discharge Summary missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB/equivalent (in General Medicine, Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Proceed with Skin and soft tissue infections only if diagnosis made is backed by clinical manifestation: Bacteriology and Clinical Features of Skin and Soft Tissue Infections (refer to table in document)",
+      "Common symptoms: Erythema, Warmth, Edema, Pain over the affected site, Fever",
+      "Systemic features of infection may follow, their intensity reflecting the magnitude of infection. The lower extremities are most commonly involved. Induration is characteristic of more superficial infections such as erysipelas and cellulitis. Patients with necrotizing fasciitis may have pain disproportionate to the physical findings, rapid progression of infection, cutaneous anesthesia, hemorrhage or bullous changes, and crepitus indicating gas in the soft tissues. Tense overlying edema and bullae, when present, help distinguish necrotizing fasciitis from non-necrotizing infections.",
+      "Initial Management of a Patient with Skin and Soft Tissue Infection (refer to flowchart for decision-making regarding outpatient/inpatient management, incision and drainage, and antibiotic choice)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Cases should be referred for inpatient management if infection is severe or uncontrolled despite outpatient antibiotics and drainage, or if the patient is septic, dehydrated, acidotic, immunosuppressed, has organ dysfunction, antibiotic intolerance, or if appropriate follow-up is unavailable.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

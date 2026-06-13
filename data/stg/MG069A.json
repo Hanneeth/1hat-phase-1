@@ -1,0 +1,115 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG069A",
+  "procedure_code": "MG069A",
+  "condition": "Guillain-Barre Syndrome",
+  "procedure_name": "Guillain-Barre Syndrome",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Guillain-Barre Syndrome_Medco.pdf",
+    "Guillain-Barre Syndrome_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Progressive motor weakness of more than one limb and partial or total areflexia",
+    "Involvement of ventilatory muscles – respiratory distress / shallow respiration, weak voice, inability to cough effectively and decreased inability to count in single breath.",
+    "Progression of symptoms upto 4 weeks, relative symmetry, mild sensory sign or symptoms, facial nerve (50%) or other cranial nerve involvement, transient or absent bladder involvement, recovery 2-4 weeks after nadir, autonomous dysfunction and absence of fever at the onset."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "CSF protein",
+      "operator": "is",
+      "value": "elevated",
+      "note": "CSF report must suggest elevated protein"
+    },
+    {
+      "field": "Electrophysiological evidence",
+      "operator": "shows",
+      "value": "demyelination",
+      "note": "evidenced by prolonged F-wave, distal latencies, decreased conduction velocities, conduction block"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "csf_ncs_report",
+        "label": "Cerebrospinal Fluid (CSF) analysis and Nerve Conduction study (NCS) report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers with treatment given details"
+      },
+      {
+        "key": "electrophysiological_examination_reports",
+        "label": "Electrophysiological examination reports"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Cerebrospinal Fluid (CSF) analysis and Nerve Conduction study (NCS) report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was the Electrophysiological examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "CSF report does not suggest elevated protein, or protein levels are within normal range without justification",
+    "Electrophysiological evidence does not show demyelination (prolonged F-wave, distal latencies, decreased conduction velocities, or conduction block) without justification",
+    "Clinical Notes with evaluation findings, indications, or planned treatment missing or incomplete at pre-authorization",
+    "Cerebrospinal Fluid (CSF) analysis or Nerve Conduction study (NCS) report missing or incomplete at pre-authorization",
+    "Indoor case papers with treatment details missing or incomplete at claim submission",
+    "Electrophysiological examination reports missing or incomplete at claim submission",
+    "Discharge summary missing or incomplete at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": "MD/DNB equivalent in (General Medicine, Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Proceed with Guillian Barre Syndrome only if diagnosis made is backed by clinical manifestation.",
+      "GBS is an acute frequently sever fulminant polyradiculoneuropathy, usually presenting as ascending",
+      "Plasmapheresis for a total of 4-5 exchanges over 7-10 days."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

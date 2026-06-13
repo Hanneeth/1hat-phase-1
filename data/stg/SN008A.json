@@ -1,0 +1,146 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN008A",
+  "procedure_code": "SN008A",
+  "condition": "Burr hole Surgery",
+  "procedure_name": "Burr hole",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Burr hole surgery_Medco.pdf",
+    "Burr hole surgery_PPD.CPD.pdf"
+  ],
+  "alos": "2-4 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent in (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Subdural or Epidural hematoma",
+    "Glasgow coma scale score <8",
+    "Hydrocephalus",
+    "Brain tumor",
+    "Traumatic injuries requiring pressure relief on brain",
+    "Traumatic injuries requiring drainage of blood from the brain",
+    "Traumatic injuries requiring removal of shrapnel or other objects lodged in the skull",
+    "To implant a deep brain stimulation device",
+    "To introduce an endoscope to assist in tumor evacuation or aneurysm treatment",
+    "To obtain a tissue sample for a biopsy"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "Glasgow coma scale score",
+      "operator": "<",
+      "value": "8",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_evaluation",
+        "label": "Clinical Evaluation"
+      },
+      {
+        "key": "ct_mri_brain",
+        "label": "CT Scan/MRI brain"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "ct_brain",
+        "label": "CT Brain"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was Glasgow coma scale documented?",
+        "expected": true
+      },
+      {
+        "q": "Was Glasgow coma scale and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes, history, signs & symptoms, planned line of treatment, or indication for procedure is missing or incomplete",
+    "Imaging did not confirm the diagnosis",
+    "Glasgow Coma Scale (GCS) not documented",
+    "GCS and/or imaging not indicative of surgery",
+    "Detailed Indoor Case Papers (ICPs) missing or lacking daily vitals and treatment details",
+    "Detailed Procedure / Operative Notes not available or incomplete",
+    "Discharge summary missing or lacking follow-up advice"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A burr hole drainage may be used to treat conditions caused by a buildup of fluid around the brain: Subdural or Epidural hematoma, Glasgow coma scale score <8, Hydrocephalus, Brain tumor.",
+      "Burr holes as part of emergency procedures resulting from traumatic injuries: Relieve pressure on brain, Drain blood from the brain after a traumatic injury, Remove shrapnel or other objects lodged in the skull.",
+      "A burr hole may be employed to assist in the treatment of conditions: To implant a deep brain stimulation device, To introduce an endoscope—small medical scope—to assist in tumor evacuation or aneurysm treatment, To obtain a tissue sample for a biopsy."
+    ],
+    "surgical_options": [
+      "Frontotemporoparietal craniotomy",
+      "Burr hole trephination with irrigation",
+      "Twist-drill craniotomy with drain replacement",
+      "Subdural evacuating port system",
+      "Recurrent subdural hematoma – subdural-peritoneal shunt"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

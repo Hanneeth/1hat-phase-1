@@ -1,0 +1,99 @@
+{
+  "_comment": "The procedure is identified by HBP 2.0 code SS011A, with HBP 1.0 code S1400018 also provided in the source document.",
+  "stg_id": "SS011A",
+  "procedure_code": "SS011A",
+  "condition": "Fecal fistula",
+  "procedure_name": "Fecal Fistula Closure",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Fecal fistula_Medco.pdf",
+    "Fecal fistula_PPD.CPD.pdf"
+  ],
+  "alos": "7-10 Days",
+  "min_doctor_qualification": [
+    "MCh/ equivalent (Pediatric Surgery)",
+    "MS/ DNB/equivalent (General Surgery)",
+    "MCh/ equivalent (Surgical Gastroenterology)"
+  ],
+  "clinical_indications": [
+    "Fistula not closing spontaneously"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "ct_fistulography_barium_study",
+        "label": "CT/Fistulography/Barium study"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_icps",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain detailed history, signs & symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "CT/Fistulography/Barium study confirms the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are incomplete, lacking detailed history, signs & symptoms, or explicit indication for surgery.",
+    "CT/Fistulography/Barium study report is missing or does not confirm the diagnosis of fistula.",
+    "Indoor case papers (ICPs) are missing or do not include daily vitals and line of treatment.",
+    "Detailed procedure / operative notes are missing or incomplete.",
+    "Discharge summary is missing or does not include follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Fecal fistula only if diagnosis is backed by clinical manifestation of fecal discharge from surgical wound site.",
+      "Common causes include Trauma, Inflammatory bowel disease, Operations of malignancy, post-operative complication (large or small bowel), appendicitis, diverticulitis, radiation, tuberculosis, and ischemia."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": "Initial resuscitation and electrolyte repletion, antibiotic management, nutrition, wound care, and fistula effluent control are required prior to definitive operative treatment.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

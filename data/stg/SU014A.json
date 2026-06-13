@@ -1,0 +1,123 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU014A",
+  "procedure_code": "SU014A",
+  "condition": "Ureteroscopy, Stone removal with lithotripsy",
+  "procedure_name": "Ureteroscopy, Stone removal with lithotripsy - Lower Ureter",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Ureteroscopy, Stone removal with lithotripsy_Medco.pdf",
+    "Ureteroscopy, Stone removal with lithotripsy_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Colicky pain starting from back and radiating to upper thigh and scrotum/vulva",
+    "Lower ureteric stones may also present with difficulty in passing urine",
+    "Haematuria may be present with stone at any location",
+    "Colics may be associated with nausea and vomiting",
+    "Can present as anuria in bilateral ureteric stones or ureteric stone in a solitary kidney"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "ivp_ncct_ct_ivp",
+        "label": "IVP / NCCT+ CT-IVP confirming the indication for the procedure"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "post_procedure_imaging_stone_removed",
+        "label": "Post procedure Imaging X Ray/USG showing stone is removed."
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the IVP / NCCT/ CT-IVP confirming the indication for the procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Clinical notes and IVP / NCCT/ CT-IVP indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure Imaging X Ray/USG showing the stone removed?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and IVP / NCCT/ CT-IVP not indicative of the procedure",
+    "Clinical notes including evaluation findings and planned line of treatment missing or incomplete at pre-authorization",
+    "IVP / NCCT+ CT-IVP confirming the indication for the procedure missing or inadequate at pre-authorization",
+    "Detailed indoor case papers with daily vitals and treatment details missing or incomplete at claim submission",
+    "Post-procedure imaging (X-Ray/USG) not showing stone removal at claim submission",
+    "Detailed Procedure / Operative Notes missing or incomplete at claim submission",
+    "Detailed discharge summary missing or incomplete at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": "N20.0",
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Colic pain radiating from back to front",
+      "Haematuria may be present or absent",
+      "Difficulty in passing urine",
+      "May be associated with fever, nausea and vomiting",
+      "History of site & type of pain, associated symptoms hint towards possible site of stones. Remember to take past history of stone diseases, medications, family history etc."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Anuria",
+      "Fever with chills and rigors",
+      "Suspected renal failure",
+      "Persistent haematuria"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

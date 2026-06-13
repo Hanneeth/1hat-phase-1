@@ -1,0 +1,114 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG041B",
+  "procedure_code": "MG041B",
+  "condition": "Upper GI bleeding",
+  "procedure_name": "Upper GI bleeding (endoscopic)",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Upper GI Bleeding_Medco.pdf",
+    "Upper GI Bleeding_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MD / DNB equivalent (in General Medicine, Pediatric Medicine)"
+  ],
+  "clinical_indications": [
+    "Hematemesis (either red blood or coffee ground emesis)",
+    "Black and tarry stool",
+    "Rectal Bleeding, usually in or with bleeding stools",
+    "Lightheadedness (with occult bleeding)",
+    "Difficulty breathing (with occult bleeding)",
+    "Fainting (with occult bleeding)",
+    "Chest pain (with occult bleeding)",
+    "Abdominal pain (with occult bleeding)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "cbc_platelets_lft_hb",
+        "label": "Complete Blood count, platelets, Liver Function Test, Hemoglobin"
+      },
+      {
+        "key": "upper_endoscopy_report_ct",
+        "label": "Upper endoscopy report/CT"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor case papers with treatment given details"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the pathological report Complete Blood count, platelets, Liver Function Test, Hemoglobin submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Upper endoscopy report show presence of bleeding in Upper GI?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient complaint of Hematemesis, Black and tarry stool?",
+        "expected": true
+      },
+      {
+        "q": "Did endoscopy report show presence of bleeding in upper GI?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the Detailed Indoor case papers with the Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed discharge summary",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes (evaluation findings, indications, or planned treatment) are missing or incomplete",
+    "Pathological report (Complete Blood count, platelets, Liver Function Test, Hemoglobin) is missing",
+    "Upper endoscopy report/CT is missing",
+    "Patient's complaint does not include Hematemesis or Black and tarry stool",
+    "Endoscopy report does not show presence of bleeding in Upper GI",
+    "Detailed Indoor case papers with treatment details are missing or incomplete",
+    "Detailed discharge summary is missing"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Endoscopy facilities",
+    "min_doctor_qualification_desirable": "MBBS",
+    "clinical_key_pointers": [],
+    "surgical_options": [
+      "Transjugular intrahepatic portosystemic shunt procedure or surgery (for rebleeding of variceal hemorrhage)",
+      "Surgery with severe and ongoing bleeding (after second attempt at endoscopic therapy fails)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

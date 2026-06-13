@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE019A",
+  "procedure_code": "SE019A",
+  "condition": "Limbal Dermoid",
+  "procedure_name": "Limbal Dermoid Removal",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Limbal Dermoid Removal_Medco.pdf",
+    "Limbal Dermoid Removal_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD Ophthalmology",
+    "MS Ophthalmology",
+    "DNB Ophthalmology",
+    "PG Diploma Ophthalmology"
+  ],
+  "clinical_indications": [
+    "When the lesion becomes progressive and starts to increase in size or cause irritative symptoms.",
+    "When it threatens to affect or has affected vision due to astigmatism.",
+    "Cosmetic excision"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_indication",
+        "label": "Clinical notes with indication"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph_affected_eye",
+        "label": "Clinical Photograph of the affected eye"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure/ operative notes"
+      },
+      {
+        "key": "intraoperative_photograph_with_patient_id_time_and_date_optional",
+        "label": "Intraoperative photograph with Patient ID, time and date (optional)"
+      },
+      {
+        "key": "evidence_histopathology_submission",
+        "label": "Evidence of submission of removed tissue for histopathology examination"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes, clinical symptoms and visual acuity?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected part with Proper labelling of Affected Eye whether R or L with full face photograph?",
+        "expected": true
+      },
+      {
+        "q": "Detailed admission notes?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps performed and was the surgery successful?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Was the intra operative photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the documentary evidence available for the removed tissue being send for the Histopathology examination?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "No congenital growth present at the intersection of cornea and sclera, or not documented.",
+    "Clinical notes, symptoms, or visual acuity are not detailed or missing.",
+    "Clinical photograph of affected eye is missing, improperly labelled (R/L), or full face photograph is absent.",
+    "Operative notes do not detail surgical steps or surgical outcome (success).",
+    "Evidence for submission of removed tissue for histopathology examination is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Limbal Dermoid Removal Surgery only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination and does not respond to conservative medical therapy.",
+      "Limbal dermoid is a cyst that is present at the intersection of the cornea and the sclera. They are congenital benign tumors that affect vision and cause visual abnormalities due to the development of astigmatism, encroachment on the visual axis, and fatty component infiltration into the cornea. If left untreated they may lead to irreversible anisometropic amblyopia in children.",
+      "Earlier the surgery is undertaken the simpler is the procedure and better are the overall results."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY",
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "limbal_dermoid_grades": [
+      "Grade I (superficial tumor measuring <5 mm)",
+      "Grade II (larger size and extend into the corneal stroma)",
+      "Grade III (involve the whole cornea and structures of the anterior chamber)"
+    ],
+    "signs_symptoms": "A dome shaped growth on the intersection of the cornea and sclera, with a keratinized surface, sometimes with hair follicles and cilia. It is associated with ocular abnormalities such as lid coloboma (embryologic cleft in the eyelid). Other congenital anomalies may also be present along with limbal dermoid like auricular appendages and vertebral changes.",
+    "investigations": "Ophthalmic examination (Slit lamp/ torchlight/under anaesthesia in case of children)"
+  }
+}

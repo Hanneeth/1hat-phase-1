@@ -1,0 +1,140 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO040A",
+  "procedure_code": "SO040A",
+  "condition": "Ectopic Pregnancy",
+  "procedure_name": "Laparotomy for benign disorders",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Ectopic pregnancy_Medco.pdf",
+    "Ectopic pregnancy_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS Obstetrics & Gynecology",
+    "MD Obstetrics & Gynecology",
+    "DNB Obstetrics & Gynecology",
+    "DGO (Equivalent)"
+  ],
+  "clinical_indications": [
+    "Hemodynamic instability of the patient (surgical management is indicated if unstable)",
+    "Indicated in emergencies where people are not trained in laparoscopy",
+    "Clinical examination, evaluation findings, Beta hCG titre, ultrasonography findings (if indicative of surgery/rupture)",
+    "Consent of the patient"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_for_admission",
+        "label": "Detailed Clinical notes with history, symptoms, signs, examination findings, planned line of treatment, and advice for admission"
+      },
+      {
+        "key": "indication_of_procedure_documentation",
+        "label": "Indication of procedure documentation"
+      },
+      {
+        "key": "serum_beta_hcg_titers",
+        "label": "Serum Beta human chorionic gonadotropin (hCG) titers"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG abdomen/pelvis"
+      },
+      {
+        "key": "culdocentesis_if_us_unavailable",
+        "label": "Culdocentesis – if ultrasound facility is not available (blood collection in pouch of douglas) (Optional)"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count"
+      },
+      {
+        "key": "liver_renal_function_tests",
+        "label": "Liver and renal function tests"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative/procedure notes"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological Examination"
+      },
+      {
+        "key": "usg_abdomen_pelvis_optional",
+        "label": "USG abdomen/pelvis (optional)"
+      },
+      {
+        "key": "blood_transfusion_notes",
+        "label": "Blood transfusion notes (if blood transfusion was given)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did clinical presentation, increased hCG levels, and USG report confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation, severity, imaging, and laboratory investigations, failure of medical management indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is there an evidence of ectopic pregnancy confirmed by clinical examination and USG?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the clinical presentation, investigations/imaging and management indicative of surgery as applicable?",
+        "expected": true
+      },
+      {
+        "q": "Was histopathological examination report submitted as applicable?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, severity, imaging, or laboratory investigations not indicative of surgery.",
+    "Clinical presentation, hCG levels, or USG report did not confirm ectopic pregnancy diagnosis at pre-authorization.",
+    "Missing indication of procedure documentation at pre-authorization.",
+    "Missing detailed operative/procedure notes at claim submission.",
+    "Missing histopathological examination report at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability, laparoscopic facility for laparoscopic procedures.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ectopic pregnancy is an implantation of fertilized ovum outside the uterine cavity, commonly the fallopian tube.",
+      "SITES: Tubes-commonest site, Ovaries, Cervical, Abdominal.",
+      "SYMPTOMS AND SIGNS: Unruptured ectopic pregnancy: Symptoms of early pregnancy there may be spotting, Abdominal and pelvic pain. Ruptured ectopic pregnancy: Acute Abdominal and pelvic pain, Collapse and Weakness, Pallor, Abdominal distension, Fast, weak pulse (110 per min. or more), Hypotension, Rebound tenderness.",
+      "If rupture is diagnosed or even suspected patient has to be rushed to nearest centre where surgery with blood transfusion if needed can be done."
+    ],
+    "surgical_options": [
+      "Salphingectomy",
+      "Salphingostomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

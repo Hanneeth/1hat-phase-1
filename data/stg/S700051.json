@@ -1,0 +1,117 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S700051",
+  "procedure_code": "S700051",
+  "condition": "Ureterolysis for retroperitoneal fibrosis",
+  "procedure_name": "Ureterolysis for retroperitoneal fibrosis (with or without omental wrapping) - Lap.",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Ureterolysis for retroperitoneal fibrosis_Medco.pdf",
+    "Ureterolysis for retroperitoneal fibrosis_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MCh Urology",
+    "DNB Urology"
+  ],
+  "clinical_indications": [
+    "For the treatment of ureteric obstruction",
+    "Dull, poorly localized, non-colicky pain in the flank, back, scrotum, or lower abdomen",
+    "In children pain may be referred to the ipsilateral hip or gluteal region, resulting in resistance to hip extension",
+    "Lower extremity oedema, Phlebitis, Deep venous thrombosis",
+    "RPF can also be associated with Crohn disease, ulcerative colitis, and sclerosing cholangitis"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "ct_ivp_mri_urogram_report_confirming_diagnosis",
+        "label": "CT-IVP/MRI Urogram report confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "intra_procedure_still_photograph",
+        "label": "Intra procedure still photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes_omental_wrapping",
+        "label": "Detailed Procedure / Operative Notes including details of omental wrapping if done"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT-IVP/MRI Urogram report confirming the diagnosis and need for the surgery submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Clinical findings and CT-IVP/ MRI Urogram report indicative of current procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intra procedure still photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed Procedure / Operative Notes including details of omental wrapping, submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes/evaluation findings/planned treatment missing or inadequate at pre-authorization",
+    "CT-IVP/MRI Urogram report missing or not confirming diagnosis/need for surgery at pre-authorization",
+    "Clinical findings and CT-IVP/MRI Urogram report not indicative of the current procedure",
+    "Detailed Indoor case papers with daily vitals and treatment details not available at claim submission",
+    "Intra-procedure still photograph missing at claim submission",
+    "Operative notes (including omental wrapping details, if applicable) incomplete or missing at claim submission",
+    "Detailed discharge summary missing at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "At tertiary care and availability of Laparoscopic surgery facility",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Retroperitoneal fibrosis (RPF) is characterized by the development of extensive fibrosis throughout the retroperitoneum, typically centred over the anterior surface of the fourth and fifth lumbar vertebrae and resulting in entrapment and obstruction of retroperitoneal structures, notably the ureters."
+    ],
+    "surgical_options": [
+      "Open biopsy, ureterolysis, and lateral/intraperitoneal transposition or omental wrapping of the involved ureter."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

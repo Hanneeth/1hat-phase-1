@@ -1,0 +1,125 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP005F",
+  "procedure_code": "MP005F",
+  "condition": "Acute Encephalopathy Management",
+  "procedure_name": "Hepatic encephalopathy",
+  "specialty": "General Medicine / Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Acute Encephalopathy Management_Medco.pdf",
+    "Acute Encephalopathy Management_PPD.CPD.pdf"
+  ],
+  "alos": "7-14 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "F/o liver cell failure like flapping tremor or fetor hepaticus",
+    "Psychiatric variance of varying degree"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including history, evaluation findings, vital monitoring, and planned line of management"
+      },
+      {
+        "key": "lumbar_puncture",
+        "label": "Lumbar Puncture"
+      },
+      {
+        "key": "blood_culture",
+        "label": "Blood culture (Optional)"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count"
+      },
+      {
+        "key": "ct_mri_scan",
+        "label": "CT/MRI scan"
+      },
+      {
+        "key": "optional_etiology_documents",
+        "label": "Optional (Based on suspected etiology): Viral serology markers, Liver function tests, Metabolic panel, Chest X-ray, USG abdomen"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) (including any cross-specialty referral that has been done)"
+      },
+      {
+        "key": "lumbar_puncture_blood_culture",
+        "label": "Lumbar puncture/Blood culture (Optional)"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports (if required)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detail history, signs & symptoms, vital monitoring (HR, RR, BP), planned treatment line, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Imaging and/or investigations confirm the etiology of encephalopathy diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Patient complained of nausea, lethargy, seizures or focal neurological dysfunction?",
+        "expected": true
+      },
+      {
+        "q": "Imaging and/or investigations confirm the diagnosis of encephalopathy?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs (including any cross-specialty referral) with daily vitals and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient did not complain of nausea, lethargy, seizures or focal neurological dysfunction.",
+    "Imaging and/or investigations do not confirm the diagnosis of encephalopathy.",
+    "Clinical notes are incomplete or missing vital monitoring, planned treatment, or admission advice.",
+    "Required Lumbar Puncture report is missing for pre-authorization.",
+    "Required Complete blood count report is missing for pre-authorization.",
+    "Required CT/MRI scan report is missing for pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) are missing or lack daily vitals and treatment details.",
+    "Discharge summary with follow-up advice is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB/DCH/Equivalent (Pediatrics), MD/DNB/Equivalent (General Medicine), DM/DNB/Equivalent (Neurology), Neurosurgical referral if required",
+    "clinical_key_pointers": [
+      "Meningitis is an inflammation of thin membrane of brain and spinal cord. Most common in children caused by viral or bacterial infection and moves into cerebral spinal fluid. Also caused by parasite or fungus usually from respiratory tract.",
+      "Causes: Viral, Bacterial, Parasitic, Non-Infectious, Aseptic"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Neurosurgical referral if required",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "_test_id": "TC12",
+  "_description": "75-year-old with both wallets near-zero (family ₹15K + VV ₹20K = ₹35K total). Planned CABG (expensive procedure). Tests both WALLET_INSUFFICIENT and VAY_VANDANA_DEBIT_ORDER_AMBIGUOUS flags simultaneously.",
+  "_expected_status": "CONDITIONAL",
+  "_expected_specialty": "SV",
+  "_expected_flags_include": [
+    "WALLET_INSUFFICIENT",
+    "VAY_VANDANA_DEBIT_ORDER_AMBIGUOUS",
+    "CANDIDATES_GENERATED"
+  ],
+  "_expected_flags_exclude": [
+    "PUB_RESERVED_BLOCK"
+  ],
+  "session_id": "IRIS-TC12-20260612",
+  "created_at": "2026-06-12T15:00:00+05:30",
+  "patient": {
+    "patient_id": "P010"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Chest pain on mild exertion (CCS class III), breathlessness, unable to walk 50 metres without stopping",
+    "duration_days": 180,
+    "history_of_present_illness": "75-year-old female with known CAD (previous stent 12 months ago, treated under PM-JAY). Now presenting with worsening symptoms — angina on minimal exertion, reduced exercise tolerance. Coronary angiography done 2 weeks ago shows triple vessel disease with all three vessels critically blocked. Cardiac surgery team advises CABG.",
+    "provisional_diagnosis": "Triple vessel coronary artery disease — critical, planned CABG",
+    "planned_procedure": "Coronary artery bypass grafting (CABG), 3 vessels, off-pump",
+    "weight_kg": 58,
+    "height_cm": 152,
+    "vitals": {
+      "bp_systolic_mmhg": 142,
+      "bp_diastolic_mmhg": 88,
+      "pulse_bpm": 74,
+      "spo2_pct": 96,
+      "temperature_f": 98.2,
+      "rr_per_min": 18,
+      "gcs": 15,
+      "blood_glucose_mgdl": 188
+    },
+    "examination_findings": {
+      "general": "Elderly female, conscious, oriented, mild dyspnoea on exertion",
+      "cvs": "S1 S2 heard, no murmurs, raised JVP, bilateral mild pitting oedema",
+      "rs": "Bilateral basal crackles",
+      "abdomen": "Soft, mild hepatomegaly 2cm, no splenomegaly",
+      "cns": "No focal deficits",
+      "local": null
+    },
+    "investigations": [
+      {
+        "type": "cag_report",
+        "result_summary": "Coronary angiogram: LAD 90% stenosis proximal, LCX 80% stenosis mid, RCA 95% stenosis proximal. Left main 40% — non-significant. EF 35% on LV-gram. Triple vessel disease with moderately reduced LV function.",
+        "structured_values": [
+          {
+            "parameter": "LAD_stenosis",
+            "value": 90,
+            "unit": "%",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "LCX_stenosis",
+            "value": 80,
+            "unit": "%",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "RCA_stenosis",
+            "value": 95,
+            "unit": "%",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "LVEF",
+            "value": 35,
+            "unit": "%",
+            "flag": "L",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-05-28"
+      },
+      {
+        "type": "echo",
+        "result_summary": "Echo: Dilated LV, EF 35%, regional wall motion abnormalities — anterior and inferior. Mild MR. No LV thrombus.",
+        "structured_values": [
+          {
+            "parameter": "LVEF",
+            "value": 35,
+            "unit": "%",
+            "flag": "L",
+            "leads": null
+          },
+          {
+            "parameter": "LV_function",
+            "value": "reduced",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-05-30"
+      }
+    ],
+    "comorbidities": [
+      "type2_diabetes",
+      "hypertension",
+      "ckd"
+    ],
+    "past_medical_history": "Hypertension 20 years, T2DM 15 years, CKD stage 2. Prior coronary angioplasty (stent) 12 months ago under PM-JAY.",
+    "past_surgical_history": "Coronary angioplasty with stent 12 months ago",
+    "current_medications": [
+      "Aspirin 75mg OD",
+      "Clopidogrel 75mg OD",
+      "Atorvastatin 40mg OD",
+      "Metformin 500mg BD",
+      "Amlodipine 5mg OD",
+      "Furosemide 40mg OD"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "ex-smoker, quit 20 years ago",
+      "alcohol": "none",
+      "diet": "mixed"
+    },
+    "family_history": "Husband had MI at age 65",
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "CTVS admission notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo",
+        "available": true
+      },
+      {
+        "key": "cag_report",
+        "label": "Coronary angiogram report",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Venkatesan Pillai",
+      "registration_number": "TN-MED-67890",
+      "qualification": "MCh CTVS",
+      "specialty_code": "SV"
+    },
+    "notes": "Both PM-JAY wallets (family + Vay Vandana) nearly exhausted from prior claims this year. Total ₹35K remaining. CABG expected to cost significantly more. Co-payment discussion essential before proceeding."
+  }
+}

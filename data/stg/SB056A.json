@@ -1,0 +1,101 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB056A",
+  "procedure_code": "SB056A",
+  "condition": "Congenital Hip Disorders",
+  "procedure_name": "Pelvic Osteotomy and fixation",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Pelvic Osteotomy and fixation_Medco.pdf",
+    "Pelvic Osteotomy and fixation_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Pelvic Osteotomy and fixation used for Stabilizing the hip and preventing early osteoarthritis and are in evolutionary phase.",
+    "A powerful surgical tool for realigning and providing a biomechanically sound hip joint, the goal is to preserve natural bone and prevent the need for hip joint arthroplasty at adult age.",
+    "Usually performed between ages 3-8 years.",
+    "In children > 3 years, open reduction, femoral shortening, & acetabular redirection will provide concentric reduction, will reduce AVN, & will achieve a functional range of motion.",
+    "Can be considered in children as young as 2 years of age.",
+    "After 8 years of age, consider salvage osteotomy since in older children there is little potential for remodeling & natural history of untreated dislocation is probably better than surgical correction.",
+    "For bilateral dislocation, there is probably little benefit to osteotomy after the age of 5-6 years.",
+    "Exception is the ganz osteotomy which is indicated for residual dysplasia in adolescents and young adults.",
+    "Femoral head subluxation after reduction."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_history",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      },
+      {
+        "key": "x_ray_pelvis_labelled",
+        "label": "X-ray of pelvis labelled with patient ID, date and side (Left/Right)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post-procedure clinical photograph"
+      },
+      {
+        "key": "post_procedure_imaging_x_ray_pelvis_labelled",
+        "label": "Post procedure imaging study (X Ray) pelvis labelled with patient ID, date and side (Left/Right)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Does the Clinical notes justify congenital hip disorders?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes do not justify congenital hip disorders.",
+    "X-ray of pelvis not labelled with patient ID, date, or side (Left/Right) at pre-authorization.",
+    "Clinical photograph of affected part missing at pre-authorization.",
+    "Post-procedure imaging study (X-Ray) of pelvis not labelled with patient ID, date, or side (Left/Right) at claim submission.",
+    "Post-procedure clinical photograph missing at claim submission.",
+    "Detailed Procedure / Operative Notes missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Pelvic Osteotomy and fixation used for Stabilizing the hip and preventing early osteoarthritis and are in evolutionary phase.",
+      "Is a powerful surgical tool for realigning and providing a biomechanically sound hip joint, the goal is to preserve natural bone and prevent the need for hip joint arthroplasty at adult age."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

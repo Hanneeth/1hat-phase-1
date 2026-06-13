@@ -1,0 +1,147 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP029B",
+  "procedure_code": "MP029B",
+  "condition": "Global developmental delay / Intellectual disability of unknown etiology & Developmental and behavioral disorders",
+  "procedure_name": "Intellectual disability of unknown etiology",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Neurodevelopmental disorders_Medco.pdf",
+    "Neurodevelopmental disorders_PPD.CPD.pdf"
+  ],
+  "alos": "1 day (Once diagnosis is established the case can be booked in the relevant package, further stay/admission should be decided based on the level of complications of the disease)",
+  "min_doctor_qualification": [
+    "Paediatrician",
+    "Clinical Psychologists",
+    "Psychiatrists",
+    "Behavioural Analysts",
+    "Nurses",
+    "Social care staff",
+    "Speech and language Therapists",
+    "Educational staff",
+    "Occupational Therapists",
+    "Physiotherapists"
+  ],
+  "clinical_indications": [
+    "Intellectual Disability (ID) characterized by a significant limitation both in intellectual functioning and in adaptive behavior, expressed in conceptual, social, practical, and adaptive skills, affecting usually children more than 5 years.",
+    "Clinical Manifestations of ID: Intellectual functioning level (IQ) is 70 or below, Concurrent deficits in adaptive functioning in two or more of the following areas (Speech and Communication, Adaptive behavior corresponding to the age, Use of community resources, Self-direction, Functional academic skills, Social interpersonal skills, Complex use of language and comprehension, Self-care activities, Home living, Health).",
+    "Associated features (ID): Neurological (seizure, tonal abnormality, behavioral abnormality), Systemic (FTT, dysmorphism, other congenital anomalies, CVS/renal/gastrointestinal/dermatological/pulmonary complaints), Social and emotional deprivation."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "iq",
+      "operator": "<=",
+      "value": "70",
+      "note": "for Intellectual Disability"
+    },
+    {
+      "field": "age",
+      "operator": ">",
+      "value": "5 years",
+      "note": "for Intellectual Disability"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including history, symptoms, signs, vitals, examination findings, planned line of treatment and advice for admission"
+      },
+      {
+        "key": "iq_test",
+        "label": "Intelligence Quotient (IQ) test"
+      },
+      {
+        "key": "social_maturity_assessment_vsms",
+        "label": "Social maturity assessment (Vineland Social Maturity Scale - VSMS)"
+      },
+      {
+        "key": "developmental_screening_test_dst",
+        "label": "Developmental screening test (DST)"
+      },
+      {
+        "key": "ct_mri_brain",
+        "label": "CT/MRI Brain (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "all_investigations_done",
+        "label": "All investigation done"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is the h/o general medical, developmental, family, social, educational and emotional history documented?",
+        "expected": true
+      },
+      {
+        "q": "Does your child have difficulty with transitions and communication?",
+        "expected": true
+      },
+      {
+        "q": "Is there evidence of the symptoms documented for age-appropriateness?",
+        "expected": true
+      },
+      {
+        "q": "Is the delay associated with significant limitations in intellectual functioning and adaptive behavior?",
+        "expected": true
+      },
+      {
+        "q": "Is the Intelligence Quotient (IQ) test documented with a result of 70 or below?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are Detailed Indoor case papers (ICPs) with detailed line of treatment documented?",
+        "expected": true
+      },
+      {
+        "q": "Are all investigations done and documented?",
+        "expected": true
+      },
+      {
+        "q": "Is a detailed Discharge summary with follow-up advice at the time of discharge present?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing or lack detailed history, symptoms, signs, vitals, examination findings, or planned line of treatment.",
+    "Intelligence Quotient (IQ) test is missing or the documented IQ is above 70.",
+    "Social Maturity Assessment (Vineland Social Maturity Scale - VSMS) is missing.",
+    "Developmental Screening Test (DST) is missing.",
+    "Detailed Indoor case papers (ICPs) are missing or lack treatment details at the time of claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital, District early intervention center (DEIC)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A detailed history is the mainstay of diagnosis of neurodevelopmental disorders. A characteristic sequence of events is usually enough to distinguish this condition from other disorders.",
+      "Majority of the times the diagnoses is made on the history provided by the primary care givers, teachers and peers and by examining the patient's state of mind.",
+      "The first step towards evaluating problem behaviors is to obtain a detailed account of the behaviors, including their frequency, severity, and impact on the child and family functioning.",
+      "In addition to a general physical examination and a developmental assessment, the behavior of the child in the consultation room should be observed, including the child's interaction with the family and the physician."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

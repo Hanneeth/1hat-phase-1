@@ -1,0 +1,139 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO056A",
+  "procedure_code": "SO056A",
+  "condition": "Dehiscence of Episiotomy",
+  "procedure_name": "Secondary Suturing of Episiotomy",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Secondary Suturing of Episiotomy_Medco.pdf",
+    "Secondary Suturing of Episiotomy_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MBBS with relevant experience and training"
+  ],
+  "clinical_indications": [
+    "Dehiscence of the episiotomy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed clinical notes with history, symptoms, signs, examination findings, indications, planned line of treatment and advice for admission"
+      },
+      {
+        "key": "delivery_notes",
+        "label": "Delivery notes, if available"
+      },
+      {
+        "key": "cbc_urine_tests",
+        "label": "Complete blood count (CBC); Urine albumin, sugar, microscopic examination"
+      },
+      {
+        "key": "high_vaginal_swab_optional",
+        "label": "High vaginal swab (Optional)"
+      },
+      {
+        "key": "c_reactive_protein_optional",
+        "label": "C-reactive protein (CRP) (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "local_swab_culture_sensitivity_report",
+        "label": "Local swab for culture & sensitivity Report"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Detailed operative/procedure notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge Summary including care of the episiotomy site"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes all vitals, detailed history, symptoms & signs, physical examination including local examination, indication for procedure, planned line of treatment, and advice for admission available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed delivery notes (if available) including details of duration of labor, date of delivery and details of primary episiotomy repair?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical examination confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical examination indicative of procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "No recent history of delivery with episiotomy documented",
+    "Clinical examination findings not indicative of the need for secondary suturing of episiotomy",
+    "Detailed clinical notes are missing or do not clearly state indications, planned treatment, or advice for admission",
+    "Mandatory pre-authorization investigation reports (CBC, Urine albumin, sugar, microscopic examination) are missing or incomplete",
+    "Detailed operative/procedure notes are missing or incomplete",
+    "Discharge summary is missing or lacks follow-up advice for episiotomy site care"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Well-equipped labor room",
+    "min_doctor_qualification_desirable": "MS/MD/DNB/DGO/Equivalent (Obstetrics & Gynecology)",
+    "clinical_key_pointers": [
+      "Secondary suturing of episiotomy is indicated in cases where there is dehiscence of the episiotomy.",
+      "Possible reasons of dehiscence of episiotomy: Infection",
+      "Possible reasons of dehiscence of episiotomy: Faulty repair of the primary episiotomy",
+      "Possible reasons of dehiscence of episiotomy: Anemia",
+      "Possible reasons of dehiscence of episiotomy: Vulva hematoma formation",
+      "Possible reasons of dehiscence of episiotomy: Poor personal hygiene",
+      "Possible reasons of dehiscence of episiotomy: Malnutrition",
+      "Common Presenting symptoms: Pain",
+      "Common Presenting symptoms: Discharge",
+      "Common Presenting symptoms: Fever",
+      "Common Presenting symptoms: Dysuria, with or without urinary retention",
+      "Secondary suturing is done after ensuring: Debridement of necrotic tissue",
+      "Secondary suturing is done after ensuring: Daily care of the wound till there are no signs of infection",
+      "Secondary suturing is done after ensuring: Healthy pink granulation tissue at the episiotomy site",
+      "Secondary suturing is done after ensuring: Adequate analgesia/anaesthesia"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Persisting local infection",
+      "High grade fever",
+      "Presence of slough / unhealthy exudate / pus discharge at the episiotomy site"
+    ]
+  }
+}

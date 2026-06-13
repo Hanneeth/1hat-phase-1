@@ -1,0 +1,322 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M300005",
+  "procedure_code": "M300005",
+  "condition": "Critical Care Neonatal Package",
+  "procedure_name": "Critical Care Neonatal Package: Babies with birthweight of <1200 g or Babies of any birthweight with at least one of the following conditions: • Severe Respiratory Failure requiring High Frequency Ventilation or inhaled Nitric Oxide (INO) • Multisystem failure requiring multiple organ support including mechanical ventilation and multiple inotropes • Critical congenital heart disease Mother's stay and food in the hospital for breastfeeding, family centred care and (Kangaroo Mother Care) KMC is mandatory and included in the package rate",
+  "specialty": "Neo-natal Care",
+  "version": "1.1",
+  "source_files": [
+    "Critical care neonatal package_Medco.pdf",
+    "Critical care neonatal package_PPD.CPD.pdf"
+  ],
+  "alos": "30-45 days",
+  "min_doctor_qualification": [
+    "DM/DNB/Equivalent (in Neonatology) and other specialty referral based on diagnosis"
+  ],
+  "clinical_indications": [
+    "Babies with birthweight of <1200 g",
+    "Babies of any birthweight with Severe Respiratory Failure requiring High Frequency Ventilation or inhaled Nitric Oxide (INO)",
+    "Babies of any birthweight with Multisystem failure requiring multiple organ support including mechanical ventilation and multiple inotropes",
+    "Babies of any birthweight with Critical congenital heart disease",
+    "Mother's stay and food in the hospital for breastfeeding, family centred care and (Kangaroo Mother Care) KMC is mandatory and included in the package rate"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "birth_weight",
+      "operator": "<",
+      "value": "1200gm",
+      "note": "for babies with low birthweight indication"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_management",
+        "label": "Clinical notes including evaluation findings and planned line of management"
+      },
+      {
+        "key": "ballard_scoring_maturity",
+        "label": "Ballard scoring to determine maturity"
+      },
+      {
+        "key": "birth_weight",
+        "label": "Birth weight"
+      },
+      {
+        "key": "gestation_age",
+        "label": "Gestation age"
+      },
+      {
+        "key": "respiratory_support_silverman_score_surfactant_cxr_cpap_mv",
+        "label": "Respiratory support - Silverman score need for Surfactant/Chest X-ray/CPAP/MV"
+      },
+      {
+        "key": "retinopathy_prematurity_screening",
+        "label": "Retinopathy of Prematurity (ROP) screening"
+      },
+      {
+        "key": "neurosonogram",
+        "label": "Neurosonogram"
+      },
+      {
+        "key": "caffeine_administration_documentation",
+        "label": "Caffeine administration documentation"
+      },
+      {
+        "key": "serum_calcium_electrolytes_phosphatase_parathyroid_hormone",
+        "label": "Serum Calcium/Electrolytes/Alkaline Phosphatase /Parathyroid hormone – (osteopenia of prematurity)"
+      },
+      {
+        "key": "hearing_assessment",
+        "label": "Hearing assessment"
+      },
+      {
+        "key": "thyroid_profile",
+        "label": "Thyroid profile"
+      },
+      {
+        "key": "chest_xray_conventional_ventilator",
+        "label": "Chest X-ray while on conventional ventilator"
+      },
+      {
+        "key": "arterial_base_gas_conventional_ventilator_settings",
+        "label": "Arterial Base Gas (ABG) and settings while of conventional ventilator"
+      },
+      {
+        "key": "two_d_echo_for_ino",
+        "label": "2D ECHO (for iNO)"
+      },
+      {
+        "key": "chest_xray",
+        "label": "Chest X-ray"
+      },
+      {
+        "key": "blood_pressure",
+        "label": "Blood pressure"
+      },
+      {
+        "key": "renal_function_test",
+        "label": "Renal function test"
+      },
+      {
+        "key": "liver_function_test",
+        "label": "Liver Function test"
+      },
+      {
+        "key": "serum_lactate",
+        "label": "Serum lactate"
+      },
+      {
+        "key": "arterial_blood_gas",
+        "label": "Arterial Blood Gas (ABG)"
+      },
+      {
+        "key": "urine_output",
+        "label": "Urine output"
+      },
+      {
+        "key": "level_consciousness_volpe_score",
+        "label": "Level of consciousness (Volpe`s score)"
+      },
+      {
+        "key": "sepsis_screen",
+        "label": "Sepsis screen"
+      },
+      {
+        "key": "need_for_inotropes",
+        "label": "Need for inotropes"
+      },
+      {
+        "key": "need_for_mechanical_ventilation",
+        "label": "Need for Mechanical Ventilation"
+      },
+      {
+        "key": "pulse_oximetry_screening",
+        "label": "Pulse-oximetry screening"
+      },
+      {
+        "key": "two_d_echo",
+        "label": "2D ECHO"
+      },
+      {
+        "key": "total_parenteral_nutrition_availability",
+        "label": "Total Parenteral Nutrition (TPN) – based on availability (Optional, based on Etiology)"
+      },
+      {
+        "key": "two_d_echo_patent_ductus_arteriosus",
+        "label": "2D ECHO (Patent Ductus Arteriosus) (Optional, based on Etiology)"
+      },
+      {
+        "key": "need_for_nsg_ventricular_dilatation",
+        "label": "Need for NSG – ventricular dilatation (Optional, based on Etiology)"
+      },
+      {
+        "key": "need_for_pda_closure_paracetamol_ibuprofen",
+        "label": "Need for PDA closure – Paracetamol/Ibuprofen (Optional, based on Etiology)"
+      },
+      {
+        "key": "abdominal_xray_necrotizing_enterocolitis",
+        "label": "Abdominal X-ray (Necrotizing Enterocolitis) (Optional, based on Etiology)"
+      },
+      {
+        "key": "septic_screen_sepsis_optional",
+        "label": "Septic screen (Sepsis) (Optional, based on Etiology)"
+      },
+      {
+        "key": "total_serum_bilirubin_jaundice",
+        "label": "Total Serum Bilirubin (Jaundice) (Optional, based on Etiology)"
+      },
+      {
+        "key": "complete_blood_count_anemia_prematurity",
+        "label": "Complete Blood count (anemia of prematurity) (Optional, based on Etiology)"
+      },
+      {
+        "key": "central_venous_pressure",
+        "label": "Central venous pressure (Optional)"
+      },
+      {
+        "key": "lactate_dehydrogenase_ldh",
+        "label": "Lactate dehydrogenase (LDH) (Optional)"
+      },
+      {
+        "key": "serum_d_dimer",
+        "label": "Serum D-dimer (Optional)"
+      },
+      {
+        "key": "serum_ferritin",
+        "label": "Serum Ferritin (Optional)"
+      },
+      {
+        "key": "electroencephalogram_eeg",
+        "label": "Electroencephalogram (EEG) (Optional)"
+      },
+      {
+        "key": "two_d_echo_functional",
+        "label": "2D ECHO (functional) (Optional)"
+      },
+      {
+        "key": "need_for_dialysis",
+        "label": "Need for dialysis (Optional)"
+      },
+      {
+        "key": "hyperoxia_test",
+        "label": "Hyperoxia test (Optional)"
+      },
+      {
+        "key": "chest_xray_optional_chd",
+        "label": "Chest X-ray (Optional)"
+      },
+      {
+        "key": "electrocardiogram_ecg",
+        "label": "Electrocardiogram (ECG) (Optional)"
+      },
+      {
+        "key": "need_for_prostaglandin",
+        "label": "Need for prostaglandin (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "birth_weight_documentation",
+        "label": "Birth weight documentation"
+      },
+      {
+        "key": "chest_xray_abg",
+        "label": "Chest X-ray/ABG"
+      },
+      {
+        "key": "documentation_indication_mechanical_ventilation_multiple_inotropes",
+        "label": "Documentation of Indication for requirement mechanical ventilation and multiple inotropes"
+      },
+      {
+        "key": "two_d_echo_report",
+        "label": "2D ECHO report"
+      },
+      {
+        "key": "detailed_procedure_notes_indication",
+        "label": "Detailed Procedure notes and indication (if any)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was birth weight at admission < 1200gm documented?",
+        "expected": true
+      },
+      {
+        "q": "Was there a documentation of surfactant administration (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Was ABG/2DECHO indicative of requirement of High Frequency Ventilation/iNO?",
+        "expected": true
+      },
+      {
+        "q": "Were the investigations ABG/Serum Lactate/Chest X-ray/Sr Creatinine/Liver Function tests confirming the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the indication for Mechanical Ventilation and Multiple inotropes documented?",
+        "expected": true
+      },
+      {
+        "q": "Did 2D ECHO document any structural defects?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the indication for procedure documented (optional)?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Birth weight at admission < 1200gm was not documented.",
+    "Surfactant administration was not documented when applicable.",
+    "ABG/2DECHO not indicative of requirement for High Frequency Ventilation or iNO.",
+    "Investigations (ABG/Serum Lactate/Chest X-ray/Sr Creatinine/Liver Function tests) did not confirm the diagnosis of Multisystem failure.",
+    "Indication for Mechanical Ventilation and Multiple inotropes was not documented.",
+    "2D ECHO did not document any structural defects for Critical Congenital Heart Disease.",
+    "Indication for procedure was not documented at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Babies with birthweight of <1200 g",
+      "Elements of a Protocol for Standardizing Care of the Extremely Low Birth Weight (ELBW) covering: Prenatal consultation (parental education, determining parental wishes when viability is questionable, defining limits of parental choice; need for caregiver-parent teamwork).",
+      "Elements of a Protocol for Standardizing Care of the Extremely Low Birth Weight (ELBW) covering: Delivery room care (define limits of resuscitative efforts, respiratory support, low tidal volume ventilation strategy, prevention of heat and water loss, early surfactant therapy).",
+      "Elements of a Protocol for Standardizing Care of the Extremely Low Birth Weight (ELBW) covering: Ventilation strategy (low tidal volume, short inspiratory time, avoid hyperoxia and hypocapnia, early surfactant therapy as indicated, define indications for high-frequency ventilation).",
+      "Elements of a Protocol for Standardizing Care of the Extremely Low Birth Weight (ELBW) covering: Fluids (early use of humidified incubators to limit fluid and heat losses, judicious use of fluid bolus therapy for hypotension, careful monitoring of fluid and electrolyte status, use of double-lumen umbilical venous catheters for fluid support).",
+      "Elements of a Protocol for Standardizing Care of the Extremely Low Birth Weight (ELBW) covering: Nutrition (initiation of parenteral nutrition shortly after birth, early initiation of trophic feeding with maternal milk, advancement of feeding density to provide adequate calories for healing and growth).",
+      "Elements of a Protocol for Standardizing Care of the Extremely Low Birth Weight (ELBW) covering: Cardiovascular support (maintenance of blood pressure within standard range, use of dopamine for support as indicated, corticosteroids for unresponsive hypotension).",
+      "Elements of a Protocol for Standardizing Care of the Extremely Low Birth Weight (ELBW) covering: PDA (avoidance of excess fluid administration, consider medical therapy when hemodynamically significant PDA is present, consider surgical ligation after failed medical therapy).",
+      "Elements of a Protocol for Standardizing Care of the Extremely Low Birth Weight (ELBW) covering: Infection control (scrupulous hand hygiene, use of bedside alcohol gels, limiting blood drawing, skin punctures, protocol for CVL insertion and care, minimize dwell time, minimal entry into CVLs, no use of fluids prepared in NICU)."
+    ],
+    "surgical_options": [
+      "Correction possible: Neonatal Intervention (Balloon atrial septostomy for TGA with intact ventricular septum, Neonatal surgical repair)",
+      "Only multistage surgical palliation possible (Early BT shunt/PDA stent for severe hypoxemia and early PA band for non-resolving heart failure to prepare for future cavo-pulmonary connection) for conditions such as Single ventricle physiology, Double-outlet right ventricle, Tricuspid atresia, Hypoplastic left heart syndrome.",
+      "Surgery/intervention during infancy: Truncus arteriosus, Tetralogy of Fallot (TOF) and TOF physiology (Severe hypoxia warrants surgical Blalock Taussig shunt or percutaneous stenting of right ventricular outflow tract (RVOT) to improve saturation).",
+      "Surgery during childhood: Ebstein anomaly."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV002K",
+  "procedure_code": "SV002K",
+  "condition": "Congenital Heart Disease",
+  "procedure_name": "Atrial septectomy + Glenn",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Atrial septectomy and Glenn_Medco.pdf",
+    "Atrial septectomy and Glenn_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/Equivalent (in Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Complex congenital cyanotic heart disease where it is desirable to increase intracardiac mixing and increase pulmonary blood flow.",
+    "Single ventricle physiology with decrease pulmonary blood flow and will require single ventricular pathway"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_assessment_indication_implant_management",
+        "label": "Clinical notes including clinical assessment, indication of procedure, implant requirement, and planned line of management"
+      },
+      {
+        "key": "pulse_oximetry_documentation",
+        "label": "Pulse oximetry documentation"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      },
+      {
+        "key": "chest_x_ray_optional",
+        "label": "Chest X-ray (Optional)"
+      },
+      {
+        "key": "electrocardiogram_optional",
+        "label": "Electrocardiogram (Optional)"
+      },
+      {
+        "key": "cardiac_catheterization_optional",
+        "label": "Cardiac catheterization (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "implant_details_barcode_invoice",
+        "label": "Implant details (barcode/invoice)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain all vitals, detailed history, symptoms, signs, physical examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical assessment and Echo/ Doppler report supportive of diagnosis and indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show rerouting of SVC circulation into right pulmonary artery after Glenn procedure?",
+        "expected": true
+      },
+      {
+        "q": "Are implant invoice/barcode details available if applicable?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical assessment and Echo/Doppler report not supportive of diagnosis or not indicative of surgery.",
+    "Clinical notes missing or incomplete (lacking vitals, detailed history, symptoms, signs, physical examination, indication for procedure, planned line of treatment, or advice for admission).",
+    "Pulse oximetry documentation missing at pre-authorization.",
+    "Echo/Doppler report missing at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) missing or incomplete (lacking daily vitals or treatment details).",
+    "Detailed Procedure / Operative Notes missing.",
+    "Post-procedure stills of ECHO and/or report missing, or not showing repair of defect/rerouting of SVC circulation.",
+    "Implant details (barcode/invoice) missing when applicable.",
+    "Discharge summary missing or lacking follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Complex congenital cyanotic heart disease where it is desirable to increase intracardiac mixing and increase pulmonary blood flow.",
+      "Single ventricle physiology with decrease pulmonary blood flow and will require single ventricular pathway",
+      "Univentricular hearts are defined as the presence of one ventricle instead of two, or the second ventricle is rudimentary without an inlet portion. This term also includes a number of congenital heart defects where two-ventricle (or biventricular) repair is not possible. Usually, later presentation in life more than 6 months of age. The clinical presentation depends on the ratio of pulmonary-to-systemic blood flow. Infants with unrestricted pulmonary blood flow present with predominant heart failure and mild cyanosis and those with obstruction to pulmonary blood flow have dominant cyanosis and no heart failure."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE009A",
+  "procedure_code": "SE009A",
+  "condition": "Conjunctival Tumor",
+  "procedure_name": "Conjunctival tumour excision including Amniotic Membrane Graft",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Conjunctival Tumor Excision_Medco.pdf",
+    "Conjunctival Tumor Excision_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma/ or equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "Diagnosis of conjunctival tumor backed by clinical signs, symptoms, ophthalmic examination, and preoperative histopathological evaluation (biopsy or impression cytology) wherever indicated, and failure to respond to conservative medical therapy."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph_affected_eye",
+        "label": "Clinical Photograph of the affected eye"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Operative/ procedure notes"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "intraoperative_photograph_with_patient_id_time_and_date_stamp_optional",
+        "label": "Intraoperative photograph with Patient ID, time and date stamp (optional)"
+      },
+      {
+        "key": "postoperative_photograph_after_excision",
+        "label": "Postoperative photograph after excision"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes (including history), clinical symptoms (abnormal growth on the conjunctiva, etc.), eye examination (such as slit lamp biomicroscope) and visual acuity?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of affected part with Proper labelling of affected eye whether R or L with full face photograph?",
+        "expected": true
+      },
+      {
+        "q": "Detailed admission notes?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical symptoms & eye examination suggest presence of conjunctival tumor?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed (including amniotic membrane grafting) and outcomes of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Was the intra operative photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Histopathology report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Pre-authorization request initiated without clear documentation that clinical symptoms and eye examination suggested presence of conjunctival tumor.",
+    "Clinical notes lacking details of history, symptoms (abnormal growth, irritation, tearing), eye examination findings (slit lamp biomicroscopy), or visual acuity.",
+    "Clinical photograph missing, improperly labelled (R or L) for the affected eye, or missing full face photograph.",
+    "Histopathology report of the surgical specimen is missing at claim submission.",
+    "Operative notes do not detail surgical steps, including whether amniotic membrane grafting was performed, or lack documentation of surgical outcomes.",
+    "Documents do not demonstrate appropriate post-operative care or follow-up advice provided to the patient."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Conjunctival Tumor Excision only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination, preoperative histopathological evaluation (biopsy or impression cytology) wherever indicated and does not respond to conservative medical therapy. Surgical specimen should be sent for histopathology."
+    ],
+    "surgical_options": [
+      "Excisional biopsy",
+      "Cryotherapy",
+      "Chemotherapy",
+      "Radiotherapy",
+      "Modified enucleation",
+      "Orbital exenteration",
+      "Various combinations of these methods",
+      "Mucous membrane grafts (from opposite eye or buccal mucosa) or amniotic membrane grafts may be necessary if large conjunctival areas are removed."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Diagnosis not backed by clinical signs, symptoms, ophthalmic examination",
+      "Lack of preoperative histopathological evaluation (biopsy or impression cytology) where indicated",
+      "Responds to conservative medical therapy"
+    ]
+  }
+}

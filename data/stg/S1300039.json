@@ -1,0 +1,124 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Truncus Arteriosus Repair/ : Truncus arteriosus repair_Medco.pdf (clinical + mandatory docs) + Truncus arteriosus repair_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "S1300039",
+  "procedure_code": "S1300039",
+  "condition": "Truncus Arteriosus",
+  "procedure_name": "Surgical Correction of Category - III Congenital Heart Disease (Truncus Arteriosus Repair)",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Truncus arteriosus repair_Medco.pdf",
+    "Truncus arteriosus repair_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Uncontrolled heart failure: Surgical repair as soon as possible (Class I).",
+    "Controlled heart failure: Surgical repair by 3–6 weeks of age (Class I)."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of persistent truncus arteriosus?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the indoor case papers submitted",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not submitted or not suggestive of persistent truncus arteriosus for pre-authorization.",
+    "Clinical notes missing or incomplete, lacking detailed history, signs, symptoms, or indication for procedure at pre-authorization.",
+    "Indoor case papers not submitted at claim stage.",
+    "Procedure / Operative notes not submitted or lacking details of surgical steps at claim stage.",
+    "Post-procedure ECHO stills not submitted or not demonstrating repair of the defect at claim stage.",
+    "Discharge summary not submitted or not explicitly mentioning the date of follow-up at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Persistent truncus arteriosus is characterized by a single arterial vessel that arises from the base of the heart and gives origin to the coronary, pulmonary, and systemic arteries.",
+      "It accounts for < 1% of all congenital heart defects with a prevalence rate of 0.07/1000 live births.",
+      "There is associated microdeletion of chromosome 22q11.2 in about 40% of patients.",
+      "The aortic arch is right sided in about one-third of patients. Aortic arch interruption or coarctation of the aorta is found in 15%-20% of patients with truncus arteriosus.",
+      "Physiologic consequences depend on the size of the pulmonary arteries and on the PVR, with truncal valve regurgitation/stenosis adding to the hemodynamic burden on the ventricles.",
+      "Patients usually present in the first few weeks of life due to congestive heart failure and failure to thrive.",
+      "Untreated patients have a very high mortality, mainly due to congestive heart failure, with a survival rate of 35% at 6 months and 10% at 1 year.",
+      "**Classification of truncus arteriosus:** Type A1 (Aorta and main pulmonary artery from common trunk), Type A2 (Both pulmonary arteries separately from truncus), Type A3 (One pulmonary artery from truncus, other from PDA or collaterals), Type A4 (Associated obstructive aortic arch lesion).",
+      "**Diagnostic workup findings:** Clinical assessment (little/no cyanosis, bounding pulses), Pulse oximetry (quantifying cyanosis, estimating PVR), X-ray chest (cardiomegaly, increased pulmonary vascular markings, right aortic arch, dilated truncal root), ECG (QRS axis, ventricular hypertrophy, atrial enlargement), Echocardiography (key tool for anatomy, VSD, valve assessment, associated lesions), CTA/cMRI (for unclear anatomy, especially aortic arch; follow-up imaging), Cardiac catheterization (for older patients with suspected pulmonary vascular disease), Serum calcium/genetic testing for 22q11.2 microdeletion.",
+      "**Important determinants of long-term prognosis:** Residual or progressive pulmonary hypertension, need for conduit replacement, progressive truncal/neo-aortic valve regurgitation, aortic root dilatation/aneurysm, and recurrent arch obstruction in Type A4."
+    ],
+    "surgical_options": [
+      "Total repair using RV-to-pulmonary artery conduit.",
+      "Non-conduit options (Barbero-Marcial technique) may be possible in select cases.",
+      "Truncal valve repair is done if truncal valve is regurgitant."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Patients with borderline operability due to pulmonary vascular disease should be referred to a higher center for further evaluation.",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Severe pulmonary arterial hypertension with irreversible pulmonary vascular occlusive disease (Class III).",
+      "Age >1 year.",
+      "Resting systemic arterial saturation <85%.",
+      "Absence of cardiomegaly."
+    ]
+  }
+}

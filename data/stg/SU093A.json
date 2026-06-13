@@ -1,0 +1,88 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU093A",
+  "procedure_code": "SU093A",
+  "condition": "Percutaneous Nephrolithotomy",
+  "procedure_name": "PCNL follow-up",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "PCNL_Medco.pdf",
+    "PCNL_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MS / M.Ch/ equivalent (Urology)"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "discharge_summary_of_recent_pcnl_done",
+        "label": "Discharge summary of recent PCNL done"
+      }
+    ],
+    "claim": [
+      {
+        "key": "xray_usg_post_procedure",
+        "label": "X-ray / USG post procedure (Only once)"
+      },
+      {
+        "key": "urine_routine_report",
+        "label": "Urine routine report"
+      },
+      {
+        "key": "clinical_notes_mentioning_drugs_provided",
+        "label": "Clinical notes mentioning the drugs provided"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Discharge summary mentioning the date of the pervious surgery and the follow up date provided?",
+        "expected": true
+      },
+      {
+        "q": "Has the patient previously undergone PCNL?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "X-ray / USG post procedure showing the procedure done (Only once) provided?",
+        "expected": true
+      },
+      {
+        "q": "Urine routine report provided?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes mentioning the procedure done and the drugs provided?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Discharge summary of previous PCNL surgery not provided or date of previous surgery / follow-up date missing at pre-authorization",
+    "Patient has not previously undergone PCNL",
+    "X-ray / USG post procedure not provided or provided more than once at claim submission",
+    "Urine routine report missing at claim submission",
+    "Clinical notes mentioning the procedure done and drugs provided missing at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

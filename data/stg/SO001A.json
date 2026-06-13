@@ -1,0 +1,156 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Laparoscopic Salpingo-oophorectomy/ : Laparoscopic salpingo-oophorectomy_Medco.pdf (clinical + mandatory docs) + Laparoscopic salpingo-oophorectomy_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "SO001A",
+  "procedure_code": "SO001A",
+  "condition": "Laparoscopic Salpingo-oophorectomy",
+  "procedure_name": "Laparoscopic Salpingo-oophorectomy",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Laparoscopic salpingo-oophorectomy_Medco.pdf",
+    "Laparoscopic salpingo-oophorectomy_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS Obstetrics & Gynecology",
+    "MD Obstetrics & Gynecology",
+    "DNB Obstetrics & Gynecology",
+    "DGO Obstetrics & Gynecology",
+    "Equivalent (in Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Elective: Removal of normal appearing ovaries and tubes at the time of a concurrent surgery, commonly a hysterectomy for benign disease, to decrease the risk of development of ovarian pathology, and decrease the need for future procedures",
+    "Malignancy: Ovarian cancer, uterine cancer, or metastases to ovaries from a distant primary malignancy (gastrointestinal, breast, lung carcinoma)",
+    "Risk reducing: Removal of ovaries and tubes in women genetically susceptible to ovarian cancer",
+    "Benign adnexal mass",
+    "Adnexal torsion",
+    "Tubo-ovarian abscess",
+    "Ectopic pregnancy",
+    "Endometriosis",
+    "Chronic Pelvic infection not responding to medical treatment"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes_history_indications_symptoms_signs_examination_findings_advice_admission",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "usg_ct_mri_abdomen_pelvis",
+        "label": "USG/CT/MRI Abdomen/pelvis"
+      },
+      {
+        "key": "doppler_study_ovaries",
+        "label": "Doppler Study of Ovaries (optional)"
+      },
+      {
+        "key": "ca_125_tumor_marker",
+        "label": "CA 125 Tumor marker (optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "post_procedural_usg_abdomen_pelvis",
+        "label": "Post procedural USG Abdomen/pelvis"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological Examination (if applicable)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical examination and imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical examination ± imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical examination and imaging did not confirm the diagnosis or indicate the necessity of surgery at pre-authorization.",
+    "Detailed clinical notes, history, indications, symptoms, signs, examination findings, planned line of treatment, or advice for admission are missing or incomplete at pre-authorization.",
+    "USG/CT/MRI Abdomen/pelvis report is missing or inadequate at pre-authorization.",
+    "Detailed indoor case papers, procedure/operative notes, or discharge summary are missing or incomplete at claim submission.",
+    "Post procedural USG Abdomen/pelvis or Histopathological Examination (if applicable) is missing or inadequate at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary hospital; laparoscopic facility for laparoscopic procedures.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Salpingo-oophorectomy is the removal of the fallopian tube (salpingectomy) and ovary (oophorectomy)."
+    ],
+    "surgical_options": [
+      "A unilateral salpingo-oophorectomy is appropriate for patients in whom an ovary is unable to be preserved, including cases of ruptured ectopic pregnancy with an inability to achieve haemostasis without removal of the tube and ovary, adnexal torsion in which the ovary and tube are necrotic, a tubo-ovarian abscess not responsive to antibiotics, or a benign ovarian mass in which there is no remaining normal ovarian tissue able to be conserved.",
+      "A bilateral salpingo-oophorectomy is generally one of three types: elective at time of hysterectomy for benign conditions, prophylactic in women with increased risk of ovarian cancer, or because of malignancy.",
+      "A laparoscopic approach may be appropriate in cases with low risk of malignancy and smaller sized adnexal mass."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "There are no absolute contraindications for a salpingo-oophorectomy. Severe pelvic adhesive disease may influence approach to surgery."
+    ],
+    "complications": [
+      "Vascular injury and bleeding",
+      "Injury to adjacent organs (bowel, bladder, ureter)",
+      "Injury to nerves",
+      "Infection",
+      "Deep venous thrombosis",
+      "Adhesion formation",
+      "Incisional hernia",
+      "Ovarian remnant syndrome"
+    ]
+  }
+}

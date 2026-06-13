@@ -1,0 +1,136 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG003B",
+  "procedure_code": "SG003B",
+  "condition": "Bleeding Peptic Ulcer",
+  "procedure_name": "Bleeding Ulcer - Partial Gastrectomy with Vagotomy",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Gastrectomy-bleeding peptic ulcer_Medco.pdf",
+    "Gastrectomy-bleeding peptic ulcer_PPD.CPD.pdf"
+  ],
+  "alos": "7-10 days",
+  "min_doctor_qualification": [
+    "MS/ DNB/equivalent (General Surgery, Surgical Gastroenterology)"
+  ],
+  "clinical_indications": [
+    "Failure of endoscopic therapy for peptic ulcer hemorrhage",
+    "Hemodynamic instability despite vigorous resuscitation (more than a three unit transfusion)",
+    "Shock associated with recurrent hemorrhage",
+    "Perforation",
+    "For patients with medical comorbidities and bleeding gastric ulcer, ulcer excision combined with truncal vagotomy and pyloroplasty is an option"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "blood_transfusion",
+      "operator": ">",
+      "value": "3 units",
+      "note": "with hemodynamic instability despite vigorous resuscitation"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_endoscopy_failure",
+        "label": "Clinical notes explaining endoscopy has failed, or other indication for proceeding with surgery"
+      },
+      {
+        "key": "upper_gi_endoscopy_photos",
+        "label": "Upper GI Endoscopy with photographs"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with detailed history, especially previous endoscopy failure, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Upper GI Endoscopy confirms the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Is Histopathological examination submitted (optional)?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing documentation of previous endoscopy failure or other clear indication for surgery.",
+    "Upper GI Endoscopy report or photographs not confirming the bleeding peptic ulcer diagnosis.",
+    "Planned line of treatment document not submitted or incomplete.",
+    "Clinical presentation or imaging not clearly indicative of surgical intervention.",
+    "Detailed Indoor Case Papers (ICPs) missing daily vitals or comprehensive treatment details.",
+    "Operative notes missing or lacking sufficient detail on the surgical steps."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Peptic ulcer disease (PUD) is ulceration of the gastric or duodenal mucosa due to acid and pepsin.",
+      "Complications of PUD include upper GI bleed, perforation, and gastric outlet obstruction.",
+      "Upper gastrointestinal (UGI) bleeding secondary to peptic ulcer disease is a common medical condition.",
+      "Symptoms of bleeding from peptic ulcers: hematemesis (red blood or coffee-ground emesis), melena (black, tarry stool). In rare cases, massive bleeding with hematochezia (red or maroon blood in the stool) and orthostatic hypotension.",
+      "Associated symptoms: sharp gnawing epigastric pain, worsened with gastric ulcer or relieved with duodenal ulcer by food intake. Nocturnal pain commonly awakens patient at midnight. Relapses and remissions are typical."
+    ],
+    "surgical_options": [
+      "For bleeding duodenal ulcer: control of the bleeding site is the first priority. If endoscopy fails to identify the source, the proximal duodenum should be opened longitudinally for inspection of the bleeding vessel.",
+      "For bleeding gastric ulcer: partial gastrectomy with Billroth I or II reconstruction is generally indicated due to malignancy risk.",
+      "For patients with medical comorbidities and bleeding gastric ulcer: ulcer excision combined with truncal vagotomy and pyloroplasty is an option."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

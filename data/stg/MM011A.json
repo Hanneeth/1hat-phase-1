@@ -1,0 +1,80 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MM011A",
+  "procedure_code": "MM011A",
+  "condition": "Behavioral and Emotional Disorders of Childhood and Adolescence",
+  "procedure_name": "Oppositional Defiant Disorder",
+  "specialty": "Mental Disorders",
+  "version": "1.1",
+  "source_files": [
+    "Behavioral & Emotional Disorders of Childhood and Adolescence_Medco.pdf",
+    "Behavioral & Emotional Disorders of Childhood and Adolescence_PPD.CPD.pdf"
+  ],
+  "alos": "3-4 weeks",
+  "min_doctor_qualification": [
+    "MD Psychiatry",
+    "DNB Psychiatry",
+    "equivalent (Psychiatry)"
+  ],
+  "clinical_indications": [
+    "Oppositional defiant disorder is a persistent pattern (e.g., 6 months or more) of markedly defiant, disobedient, provocative or spiteful behaviour that occurs more frequently than is typically observed in individuals of comparable age and developmental level and that is not restricted to interaction with siblings.",
+    "Oppositional defiant disorder may be manifest in prevailing, persistent angry or irritable mood, often accompanied by severe temper outbursts or in headstrong, argumentative and defiant behaviour.",
+    "The behaviour pattern is of sufficient severity to result in significant impairment in personal, family, social, educational, occupational or other important areas of functioning."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailed_history_chronicity",
+        "label": "Clinical notes with detailed history and chronicity"
+      },
+      {
+        "key": "admission_document_signed_psychiatrist",
+        "label": "Admission document signed by empanelled psychiatrist"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_treatment_notes",
+        "label": "Detailed treatment notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was patient admission document signed by an empanelled psychiatrist?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Admission document not signed by an empanelled psychiatrist.",
+    "Clinical notes lack detailed history, mini mental status test, indication for treatment, or justification for hospitalization.",
+    "Discharge summary does not mention a date of follow-up.",
+    "Treating doctor does not meet the minimum qualification (MD/DNB/equivalent Psychiatry).",
+    "The disorder is not associated with physiological disturbances or physical factors as per the disclaimer."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "As per the provisions of the Mental Health Act 2017",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The provisions under Mental Healthcare Act 2017 (https://egazette.nic.in/WriteReadData/2017/175248.pdf) be referred for details on Admission & Discharge criteria.",
+      "Neurodevelopmental disorders other than intellectual disorders come under ICD 11 and DSM-5."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

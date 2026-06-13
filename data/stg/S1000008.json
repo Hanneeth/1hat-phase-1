@@ -1,0 +1,125 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1000008",
+  "procedure_code": "S1000008",
+  "condition": "Pressure Sore",
+  "procedure_name": "Pressure Sore - Surgery",
+  "specialty": "Plastic & Reconstructive Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Pressure Sore Surgery_Medco.pdf",
+    "Pressure Sore Surgery_PPD.CPD.pdf"
+  ],
+  "alos": "3 Days",
+  "min_doctor_qualification": [
+    "MCh Plastic Surgery",
+    "DNB equivalent in Plastic Surgery/ Reconstructive Surgery"
+  ],
+  "clinical_indications": [
+    "Areas of skin and tissue damage resulting from prolonged immobility, unconsciousness, or inability to sense pain (e.g., spinal cord injuries, non-ambulatory individuals, systemic disease like diabetes, intensive care, incapacitated through intoxication, patients lying in bed, sitting in a wheelchair, wearing a cast for a prolonged time, elderly population)",
+    "Skin under pressure where less fat restricts blood flow, leading to tissue breakdown and vulnerability to infections.",
+    "Bedsores in common areas: Gluteal region, Heels of the feet, shoulder blades, back of the head, posterior knee.",
+    "Stage I Ulcers: intact skin, non-blanchable erythema.",
+    "Stage II Ulcers: Partial thickness skin and tissue loss, shallow wounds.",
+    "Stage III Ulcers: Full thickness skin loss, open wounds with deeper tissue damage.",
+    "Stage IV Ulcers: Full thickness tissue loss, ulcers with exposed bone, tendon or muscle.",
+    "Reconstructive surgery for deep or hard-to-heal pressure ulcers, or both, involving removal of dead tissue from the wound and use of fat, muscle, and/or skin from other parts of the patient's body to fill the wound cavity."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_events_pressure_sores",
+        "label": "Clinical notes detailing events that led to pressure sores"
+      },
+      {
+        "key": "supporting_reports_clinical_photograph",
+        "label": "Supporting reports and Clinical photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_given",
+        "label": "Detailed indoor case papers and treatment given"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/Operative notes"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "discharge_summary_follow_up_details",
+        "label": "Discharge summary and follow up details"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes detailing events that led to pressure sores submitted?",
+        "expected": true
+      },
+      {
+        "q": "Supporting reports and clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical notes detailing events/clinical photograph justify the need for procedure submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the Indoor case papers and treatment given submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the detailed procedure/Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure clinical photograph of the affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge summary and follow-up details report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or clinical photograph submitted do not justify the need for the pressure sore surgery.",
+    "Clinical notes detailing events leading to pressure sores are missing or incomplete at pre-authorization.",
+    "Supporting reports or clinical photograph are missing or incomplete at pre-authorization.",
+    "Detailed indoor case papers or treatment given are missing at claim submission.",
+    "Detailed procedure/operative notes are missing at claim submission.",
+    "Post-procedure clinical photograph of the affected part is missing at claim submission.",
+    "Discharge summary or follow-up details report is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination."
+    ],
+    "surgical_options": [
+      "Primary wound closure: direct advancement of wound edges (directly or in layers).",
+      "Skin grafts: harvesting a thin piece of skin from a donor area to replace skin in the defect or denuded area.",
+      "Local random pattern flaps: moving local tissues around the wound, based on random pattern of blood supply, into the wound defect.",
+      "Regional flaps: Muscle or musculocutaneous flaps, fascial or fasciocutaneous flaps, perforator flaps.",
+      "Free flaps: raising a defined island of tissue with an artery and vein, surgically detaching and moving it to the wound site, then surgically anastomosing vessels to re-establish blood flow.",
+      "Tissue expansion: gradual increment and recruitment of tissue surrounding a pressure ulcer."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

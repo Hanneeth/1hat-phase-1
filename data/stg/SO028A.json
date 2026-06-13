@@ -1,0 +1,124 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO028A",
+  "procedure_code": "SO028A",
+  "condition": "Vaginal Septum (Transverse/Longitudinal)",
+  "procedure_name": "Excision of Vaginal Septum (vaginal route)",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Excision of Vaginal Septum_Medco.pdf",
+    "Excision of Vaginal Septum_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO or Equivalent (in Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Mucocolpos, hematocolpos, or pyohematocolpos due to an ascending infection through a small perforation (for transverse vaginal septum)",
+    "Difficulty inserting tampons, persistent bleeding despite tampon placement, tearing of the septum with placement of a tampon or with coitus (for longitudinal vaginal septum)",
+    "Dyspareunia (for longitudinal vaginal septum)",
+    "To facilitate vaginal delivery (for asymptomatic longitudinal vaginal septum)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "clinical_examination",
+        "label": "Clinical Examination"
+      },
+      {
+        "key": "pelvic_abdominal_usg_mri",
+        "label": "Pelvic/Abdominal USG / MRI"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports_if_done",
+        "label": "Investigation reports (if done)"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical presentation and composite examination (pelvic examination) confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging and clinical evaluation indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes lack necessary details (history, indications, symptoms, signs, examination findings, planned treatment, or advice for admission).",
+    "Clinical presentation and/or composite examination (pelvic examination) did not confirm the diagnosis of vaginal septum.",
+    "Imaging (Pelvic/Abdominal USG/MRI) results are missing or do not support the indication for surgery.",
+    "Detailed procedure/operative notes are missing or incomplete.",
+    "Discharge summary is missing or lacks follow-up advice.",
+    "Clinical examination and/or imaging was not indicative of surgery."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A transverse vaginal septum results when there is failure of fusion and/or canalization of the urogenital sinus and Müllerian ducts and located at various levels in the vagina.",
+      "Transverse septa are generally less than 1 centimeter in thickness and may have a small central or eccentric perforation.",
+      "The majority of transverse vaginal septa have a fenestration and are thus not completely obstructed.",
+      "Longitudinal septa are typically associated with uterine anomalies, such as septate uterus and uterus didelphys.",
+      "The septum that divides the vagina may be partial or complete."
+    ],
+    "surgical_options": [
+      "Resection of a small, thin transverse septum followed by an end-to-end anastomosis of the upper and lower vaginal mucosa.",
+      "Excision of a thick transverse septum (to be attempted only by experienced surgeons due to higher risk of restenosis and obstruction).",
+      "Complete resection of longitudinal septum with care to avoid compromise to the bladder and rectum."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

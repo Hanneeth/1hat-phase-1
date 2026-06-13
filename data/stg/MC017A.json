@@ -1,0 +1,125 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MC017A",
+  "procedure_code": "MC017A",
+  "condition": "Peripheral Arterial Disease (PAD)",
+  "procedure_name": "Peripheral Angioplasty",
+  "specialty": "Cardiology",
+  "version": "1.1",
+  "source_files": [
+    "Peripheral angioplasty_Medco.pdf",
+    "Peripheral angioplasty_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MD",
+    "DM",
+    "DNB",
+    "equivalent (Cardiology)"
+  ],
+  "clinical_indications": [
+    "Life-style-limiting disability due to intermittent claudication or critical limb ischaemia.",
+    "Upper limb disease in symptomatic patients with TIA/stroke, coronary subclavian steal syndrome, ipsi-lateral hemodialysis access dysfunction, or impaired quality of life.",
+    "Revascularization in asymptomatic patients with planned CABG using internal mammary artery.",
+    "Revascularization in asymptomatic patients with ipsilateral hemodialysis access.",
+    "Revascularization in asymptomatic patients with significant subclavian stenosis/occlusion for adequate BP surveillance.",
+    "Lower limb disease: short (< 5cm) iliac disease, aorto-iliac occlusive lesions, long and/or bilateral lesions in patients with severe comorbidities, short (ie 50 cm), and infra-popliteal lesions causing chronic limb threatening ischemia."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "iliac_lesion_length",
+      "operator": "<",
+      "value": "5cm",
+      "note": "for lower limb iliac disease where endovascular therapy with stent is recommended"
+    },
+    {
+      "field": "infra_popliteal_lesion_length",
+      "operator": "<=",
+      "value": "50cm",
+      "note": "for lower limb infra-popliteal lesions causing chronic limb threatening ischemia where endovascular therapy with stent is recommended"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "doppler_ultrasound_digital_subtraction_angiography_computed_tomography_angiography_magnetic_resonance_angiography_report_with_stills",
+        "label": "Doppler ultrasound/ Digital subtraction angiography/ Computed tomography angiography/ magnetic resonance angiography report with stills"
+      },
+      {
+        "key": "angiogram_report_with_stills",
+        "label": "Angiogram Report with stills"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_stills_of_angio_with_report",
+        "label": "Post procedure stills of Angio with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "invoice_barcode_of_stent_used",
+        "label": "Invoice/Barcode of stent used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Echo/ Doppler report suggestive of peripheral arterial disease?",
+        "expected": true
+      },
+      {
+        "q": "Was the Angiogram report suggestive of Peripheral arterial disease?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the Post procedure report/ still of angiogram show stent placement in affected vessel?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo, colour Doppler or Angiography report not showing Peripheral Artery disease at pre-authorization.",
+    "Clinical notes missing or lacking detailed history, signs & symptoms, or indication for procedure.",
+    "Post-procedure angiogram stills/report do not show stent placement in affected vessel.",
+    "Invoice or Barcode of stent used not submitted at claim stage.",
+    "Detailed Procedure / Operative notes not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath Lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Peripheral arterial disease (PAD) refers to any obstructive disease of arteries other than the coronary and cerebral arteries, generally referring to extremities.",
+      "PAD affects approximately 5-10% of adults older than 55 years in India and is a powerful predictor of cardiovascular mortality.",
+      "About half of all people with PAD are asymptomatic, whereas about one fifth have the typical symptoms of intermittent claudication, including muscle pain due to the lack of blood supply, and a small proportion (< 10%) have more severe symptoms, i.e. muscle pain at rest and/ or ischaemic ulceration or gangrene of toes, which define critical limb ischaemia.",
+      "Based on the severity of the symptoms, the disease can be classified into Fontaine stages I-IV: stage I indicates the asymptomatic state, stage IIa is defined by the occurrence of intermittent claudication after a pain-free walking distance of more than 200 m, stage IIb by intermittent claudication after walking a distance of less than 200 m, stage III by pain at rest, and stage IV by the presence of ischaemic ulcers.",
+      "The progression of PAD and its local and systemic complications can be halted and reduced by lifestyle modifications (physical exercise), and medical therapy, which should include control or elimination of atherosclerotic risk factors (cigarette smoking, hypertension, diabetes mellitus, and hyperlipidaemia).",
+      "Percutaneous transluminal angioplasty (PTA) is a well-established endovascular technique for revascularising obstructed lower and upper limb arteries."
+    ],
+    "surgical_options": [
+      "Endovascular procedures",
+      "Surgical revascularization"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Control or elimination of atherosclerotic risk factors (cigarette smoking, hypertension, diabetes mellitus, and hyperlipidaemia).",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

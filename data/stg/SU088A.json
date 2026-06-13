@@ -1,0 +1,91 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU088A",
+  "procedure_code": "SU088A",
+  "condition": "Orchiopexy",
+  "procedure_name": "Orchiopexy with laparoscopy",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Orchiopexy_Medco.pdf",
+    "Orchiopexy_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MCh/ DNB or equivalent in (Urology, Pediatric surgery)"
+  ],
+  "clinical_indications": [
+    "Diagnosis of Undescended Testis (Congenital, acquired, palpable, non-palpable, unilateral, bilateral, cryptorchid/undescended, ectopic, retractile, gliding, acquired types)",
+    "Nonpalpable Undescended Testis when diagnosis is backed by clinical manifestations"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_indication_plan",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "usg_abdomen_laparoscopy_testes_location",
+        "label": "USG abdomen confirming the need for laparoscopy in locating the testes"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical Photograph of the affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "detailed_operative_notes_procedure_notes",
+        "label": "Detailed Operative notes / procedure notes"
+      },
+      {
+        "key": "post_operative_clinical_photograph_optional",
+        "label": "Post-operative clinical photograph (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are the clinical notes and USG abdomen confirming the diagnosis of undescended testis and indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes and/or USG abdomen do not confirm undescended testis diagnosis or do not indicate the procedure.",
+    "USG abdomen confirming the need for laparoscopy in locating the testes is missing.",
+    "Clinical photograph of the affected part is missing or of poor quality.",
+    "Operative notes are missing details on surgical steps or procedure outcome.",
+    "Post-operative clinical photograph (if submitted) is unclear or not useful for review."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care and availability of laparoscopic surgery facility",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "With Nonpalpable Undescended Testis proceed with Orchiopexy only if diagnosis made is backed by clinical manifestations. Undescended testis"
+    ],
+    "surgical_options": [
+      "Open/Non laparoscopic orchidopexy",
+      "Laparoscopic Orchidopexy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

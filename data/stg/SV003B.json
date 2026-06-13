@@ -1,0 +1,127 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV003B",
+  "procedure_code": "SV003B",
+  "condition": "Congenitally Corrected Transposition of Great Arteries (ccTGA)",
+  "procedure_name": "Double switch operation (Surgical Correction of Category III Congenital Heart Disease)",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Double switch operation_Medco.pdf",
+    "Double switch operation_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Anatomic repair (double-switch operation-atrial switch plus arterial switch or Rastelli) may be considered when left ventricle is functioning at systemic pressure and when such surgery is feasible (Class IIa).",
+    "For no associated anomalies: Neonatal double-switch operation may be considered (Class IIb).",
+    "For associated large VSD (<3 months): Pulmonary artery banding followed later by double-switch operation (atrial plus arterial switch) (Class I).",
+    "For associated large VSD (>6 months): Double switch (atrial plus arterial switch), provided that the patient has not developed irreversible pulmonary vascular disease (Class I).",
+    "For associated large VSD (3-6 months): Pulmonary artery banding followed by double-switch operation or direct double-switch operation depending on institutional policy (Class IIa).",
+    "For associated large VSD and left ventricular outflow obstruction (PS) where VSD is routable: Double switch (atrial switch plus Rastelli) (Class I).",
+    "If left ventricular pressure is ≥80% of right ventricular pressure: Double-switch operation.",
+    "Good right ventricular function, prepared left ventricle: Double-switch operation and tricuspid valve repair (Class IIa)."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "left_ventricular_pressure_ratio",
+      "operator": ">=",
+      "value": "80% of right ventricular pressure",
+      "note": "for double-switch operation"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "barcode_of_implant_if_used",
+        "label": "Barcode of implant, if used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detail history, signs & symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Echo/Doppler report suggestive of congenitally corrected Transposition of Great Arteries?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not explicitly confirming congenitally corrected Transposition of Great Arteries.",
+    "Clinical notes lacking detailed history, signs & symptoms, or clear indication for procedure.",
+    "Post procedure still of ECHO with report missing or not showing repair of the defect.",
+    "Detailed Discharge Summary missing or not mentioning a date of follow-up.",
+    "Barcode of implant missing, if an implant was used."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Congenitally corrected TGA (ccTGA) is a congenital heart defect characterized by atrioventricular and ventriculoarterial discordance. This double discordance results in physiologically corrected circulation, as the great arteries receive appropriate blood. ccTGA occurs due to abnormal looping of the primitive cardiac tube to the left instead of to the right. Although the physiology is corrected, anatomy is not, and morphologic RV supports systemic arterial circulation.",
+      "In over 90% of cases, ccTGA is accompanied by other cardiac lesions: VSDs in 80%, PS (outflow obstruction to morphologic left ventricle) in 30%-50%, abnormalities of the conduction system in 15%-50%, ASD in 12%, and tricuspid valve abnormalities (as detected at autopsy) in 90%. Mismatch between visceral situs and cardiac position is common, with dextrocardia/mesocardia in one-fourth of patients.",
+      "The age of presentation is variable, and the presentation is determined by the associated anomalies. Patients present with heart failure if a large VSD is present and as TOF physiology if large VSD is associated with significant PS.",
+      "Approximately 10% are born with complete heart block (CHB). In the rest, the risk of developing CHB is 2% per year and about 30% develop CHB by adulthood. Function of the RV deteriorates after the second decade even in those without any associated anomaly.",
+      "Diagnostic workup includes: Clinical assessment (features of heart failure, cyanosis, bradycardia, and systolic murmur of tricuspid regurgitation).",
+      "Echocardiography: Main imaging tool for determining situs, cardiac position, atrioventricular and ventriculoarterial discordance, relationship of great arteries, and associated anomalies. Also useful for diagnosis of Ebstein's malformation, quantification of tricuspid regurgitation, and assessment of right ventricular function. Older patients may require a transesophageal echo.",
+      "Cardiac catheterization: Generally not required for diagnosis, but may be performed for demonstrating coronary anatomy or for measurement of pulmonary artery pressure and PVR in those with large left-to-right shunts.",
+      "CMRI: In adults, diagnostic imaging alone with echo could be inconclusive; cMRI can provide required information."
+    ],
+    "surgical_options": [
+      "The double switch procedure is a surgical technique used to repair congenitally corrected transposition of the great arteries (cc-TGA).",
+      "The procedure consists of any of the following surgical combinations: Atrial inversion surgery (either the Senning or the Mustard repair) and Jatene arterial switch.",
+      "Atrial inversion surgery (either the Senning or the Mustard repair) and Rastelli-type repair (also known as the Ilbawi or Senelli procedure)."
+    ],
+    "pre_op_preparation": "If left ventricular pressure is <80% of right ventricular pressure: pulmonary artery banding to prepare left ventricle.",
+    "post_op_care": null,
+    "fitness_criteria": "Left ventricle is functioning at systemic pressure and such surgery is feasible.",
+    "comorbidity_management": "Tricuspid valve (systemic AV valve) surgery for severe regurgitation should be considered before systemic ventricular failure (ejection fraction < 45%) sets in (Class IIa).",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Patient has developed irreversible pulmonary vascular disease (for >6 months with large VSD)."
+    ]
+  }
+}

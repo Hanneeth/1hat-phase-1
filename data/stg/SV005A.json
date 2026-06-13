@@ -1,0 +1,121 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV005A",
+  "procedure_code": "SV005A",
+  "condition": "Aortic Valve",
+  "procedure_name": "Single Valve Aortic Valve procedure",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Aortic valve_Medco.pdf",
+    "Aortic valve_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Surgical replacement is indicated for Aortic Stenosis (AS) and Aortic Regurgitation (AR), as it is considered the most effective treatment.",
+    "Rarely, in case of AS, balloon valvotomy may serve as a bridge to surgery, but it is not considered an alternative to valve replacement since it only provides temporary relief of symptoms."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_notes_reoperation",
+        "label": "Clinical notes indicating need for reoperation"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "barcode_of_implant",
+        "label": "Barcode of implant, if used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes indicating need for reoperation?",
+        "expected": false
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of Aortic Stenosis/ Aortic Regurgitation?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair/ replacement of the valve?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the discharge summary mention need for reoperation?",
+        "expected": false
+      },
+      {
+        "q": "Is the barcode of implant used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not suggestive of Aortic Stenosis or Aortic Regurgitation.",
+    "Clinical notes lacking detailed history, signs, symptoms, or indication for the procedure.",
+    "Post-procedure ECHO stills do not show repair/replacement of the valve.",
+    "Barcode of implant not submitted at claim stage.",
+    "Echo/Doppler report not submitted at pre-authorization."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Aortic stenosis (AS) is a narrowing of the valve aperture reducing the aortic valve area. Increased resistance to blood flow and transvalvular pressure gradient causes increased left ventricle workload causing hypertrophy. Its prevalence increases with age and can be as high as 4.6% in people greater than age 75 years. AS can be asymptomatic or can cause symptoms of syncope, angina and heart failure. Severe AS is fatal with a 50% mortality at 2 years.",
+      "Aortic regurgitation (AR) is the backflow of blood from the aorta to the left ventricle when the valve leaflets fail to coapt. Common causes include congenital defects, calcific degeneration, infective endocarditis, rheumatic fever, and trauma. Ventricular hypertrophy in chronic cases accommodates increased volume to maintain the normal stroke volume and end-diastolic pressure; hence, chronic AR can be asymptomatic for decades. In contrast, with acute cases of AR, ventricles do not have enough time to undergo the needed changes such as hypertrophy to accommodate increased volumes. Because of decreased stroke volume, the heart rate increases to maintain cardiac output but is insufficient to meet the demand resulting in increased left atrial pressure, pulmonary edema and cardiogenic shock.",
+      "On physical examination, AR murmur is blowing, high-pitched, diastolic, and decrescendo, beginning soon after the aortic component of S (A); it is loudest at the 3rd or 4th left parasternal intercostal space."
+    ],
+    "surgical_options": [
+      "Surgical replacement is considered the most effective treatment for AS and AR."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

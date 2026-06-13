@@ -1,0 +1,139 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN037A",
+  "procedure_code": "SN037A",
+  "condition": "Spinal Canal Stenosis",
+  "procedure_name": "Surgery for Spinal Canal Stenosis",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Spinal Canal Stenosis_Medco.pdf",
+    "Spinal Canal Stenosis_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Neurosurgery)",
+    "MS/Equivalent (in Orthopedic Surgery)"
+  ],
+  "clinical_indications": [
+    "Failure of non-operative management",
+    "Significant decrease in quality of life",
+    "Progression of deformity/imbalance",
+    "Correlation between radiographic and clinical finding",
+    "Preoperative surgical planning",
+    "Persistent disabling pain lasting more than 6 weeks that have failed nonoperative options (and epidural injections)",
+    "Progressive and significant weakness",
+    "Cauda equina syndrome"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "disabling pain duration",
+      "operator": ">",
+      "value": "6 weeks",
+      "note": "failed nonoperative options (and epidural injections)"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_including_clinical_evaluation_findings",
+        "label": "Clinical notes including clinical evaluation findings"
+      },
+      {
+        "key": "xray_ct_mri_spine",
+        "label": "X-ray/CT/MRI Spine"
+      },
+      {
+        "key": "electromyogram_emg",
+        "label": "Electromyogram (EMG) (Optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "xray_if_instrumentation_or_fusion_is_done_optional",
+        "label": "X ray - if instrumentation or fusion is done (optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are clinical notes detailing history, signs & symptoms, planned line of treatment, and indication for procedure available?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed Indoor Case Papers (ICPs) with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed procedure / operative notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advice at the time of discharge available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Radiographic imaging or clinical findings were not indicative of surgery.",
+    "Clinical notes are missing detailed history, signs & symptoms, planned line of treatment, or indication for procedure.",
+    "Clinical presentation and imaging did not confirm the diagnosis.",
+    "Detailed Indoor Case Papers (ICPs) are missing or lack daily vitals and treatment details.",
+    "Detailed procedure or operative notes are not available.",
+    "Discharge summary is missing or lacks follow-up advice at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary/District Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Spinal stenosis is an abnormal narrowing of the spinal canal that can occur in the cervical, thoracic, and lumbar regions. Symptoms of spinal stenosis are caused by spinal cord or root compression. The major reason for the stenosis is degeneration of the spinal components, including the intervertebral disk and ligamentum flavum, which is more common in older patients."
+    ],
+    "surgical_options": [
+      "Decompression",
+      "Correction",
+      "Fixation",
+      "Fusion",
+      "Spinal Instability – lateral mass fixation (Cervical)",
+      "Decompressive laminectomy (Cervical)",
+      "Laminoplasty (Cervical)",
+      "Discectomy - if there are any herniated or bulging discs (Cervical)",
+      "Laminotomy (Lumbar)",
+      "Discectomy (microdiscectomy) (Lumbar)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

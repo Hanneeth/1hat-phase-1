@@ -1,0 +1,103 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M200054",
+  "procedure_code": "M200054",
+  "condition": "Neuromuscular disorders",
+  "procedure_name": "Neuromuscular disorders",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Neuromuscular disorders_Medco.pdf",
+    "Neuromuscular disorders_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_indications_treatment",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "creatine_phosphokinase_electrolytes_report",
+        "label": "Creatine Phosphokinase (CPK), Electrolytes report"
+      },
+      {
+        "key": "emg_nerve_conduction_velocity",
+        "label": "EMG studies, Nerve conduction velocity"
+      },
+      {
+        "key": "ct_angiography_mri_ct_spine",
+        "label": "CT Angiography studies/MRI/CT for spine"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment",
+        "label": "Detailed Indoor case papers with treatment given details."
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the CPK report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the EMG, Nerve conduction velocity report of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT Angiography studies/MRI/CT for spine report of patient submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor case papers with vital (BP and Pulse) and Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or diagnostic reports (NCV/CT Angiography/EMG/MRI/CT Spine) not suggestive of neuromuscular disorder.",
+    "Clinical Notes, including evaluation findings, indications for the procedure, or planned line of treatment, missing or incomplete at pre-authorization.",
+    "Creatine Phosphokinase (CPK) or Electrolytes report missing or incomplete at pre-authorization.",
+    "EMG studies or Nerve conduction velocity report missing or incomplete at pre-authorization.",
+    "Detailed Indoor case papers with vital (BP and Pulse) and treatment details missing or incomplete at claim stage.",
+    "Detailed Discharge Summary missing or without follow-up date at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "DNB / MD (General Medicine / Pediatric Medicine); DM in Pediatric Neurology",
+    "clinical_key_pointers": [
+      "Progressive acquired or hereditary neuromuscular diseases (NMDs) are disorders caused by an abnormality of any component of the lower motor neuron - anterior horn cell, peripheral nerve, neuromuscular junction (pre-synaptic or post-synaptic region), or muscle."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

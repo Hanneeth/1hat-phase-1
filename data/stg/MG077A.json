@@ -1,0 +1,121 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG077A",
+  "procedure_code": "MG077A",
+  "condition": "Continuous Renal Replacement Therapy (CRRT)-Continuous Veno-Venous Hemodiafiltration (CVVHDF)",
+  "procedure_name": "Continuous Renal Replacement Therapy (CRRT)-Continuous Veno-Venous Hemodiafiltration (CVVHDF) initiation cost for disposable",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "CRRT-CVVHDF initiation cost for disposable_MEDCO-converted.pdf",
+    "CRRT-CVVHDF initiation cost for disposable_PPD_CPD-converted.pdf"
+  ],
+  "alos": "1-2 days",
+  "min_doctor_qualification": [
+    "MBBS",
+    "DNB/MD equivalent in General Medicine",
+    "DM/DNB/ equivalent (Nephrology)",
+    "MD/DNB/DCH/ equivalent (Pediatric Medicine)"
+  ],
+  "clinical_indications": [
+    "Need for CRRT-Continuous Veno-Venous Hemodiafiltration procedure due to unstable hemodynamic status with clear justification for use over HD/PD/SLED"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_hemodynamic_status_justification",
+        "label": "Clinical notes detailing history and evidence of unstable hemodynamic status along with clear justification of need to use CVVHD/DF over HD/PD/SLED"
+      },
+      {
+        "key": "indication_crrt_cvvhdf",
+        "label": "Indication for CRRT- Continuous Veno-Venous Hemodiafiltration procedure"
+      },
+      {
+        "key": "egfr_report",
+        "label": "eGFR report"
+      },
+      {
+        "key": "rft_report",
+        "label": "RFT report"
+      },
+      {
+        "key": "other_relevant_investigations",
+        "label": "Other relevant investigations"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_details",
+        "label": "Procedure details"
+      },
+      {
+        "key": "clinical_photograph_connections",
+        "label": "Clinical Photograph with the evidence of connections to the patient."
+      },
+      {
+        "key": "barcode_disposables_used",
+        "label": "Barcode of the disposables used"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailing history and Admission notes showing vitals and examination findings?",
+        "expected": true
+      },
+      {
+        "q": "Were the patient's hemodynamic status and indications suggestive of the catheter placement?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Missing clear justification for using CVVHD/DF over HD/PD/SLED in clinical notes",
+    "Clinical notes do not sufficiently detail history, admission notes, vitals, or examination findings",
+    "Patient's hemodynamic status or indications were not suggestive of catheter placement",
+    "Clinical photograph not showing clear evidence of connections to the patient",
+    "Barcode of the disposables used missing or unreadable at claim submission",
+    "eGFR or RFT report missing or incomplete at pre-authorization"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Care Facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Preparation phase: this phase consists of collection of necessary disposable material, identification and checking of the disposable set, set loading (cassette tubing), connection to the filter, positioning of the tubing, and hanging of bags.",
+      "Priming phase: priming solution is infused into the extracorporeal circuit in order to remove air and impurities remaining after sterilization of the set. When heparin anticoagulation is used, it is usually added to the priming solution. During this phase, the machine makes a general check of all components and sensors.",
+      "Connection to the patient: this phase consists of the connection of the extracorporeal lines to the patient's vascular access."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "main_reagents_disposables": [
+      "Dialysate",
+      "Replacement Fluid",
+      "Tubes - Blood In-flow line",
+      "Blood Out-flow line",
+      "Effluent/ultra-filtrate line",
+      "Dialysate Line",
+      "Replacement Line",
+      "Pre-Blood Line",
+      "Anticoagulant and specific antagonists line",
+      "Filters"
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB021A",
+  "procedure_code": "SB021A",
+  "condition": "Cervical spine fractures, instability, deformities, or infection",
+  "procedure_name": "Cervical spine fixation including odontoid",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Cervical spine fixation including odontoid_Medco.pdf",
+    "Cervical spine fixation including odontoid_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Stabilization of the spine after fracture",
+    "Reconstruction after resection of tumors",
+    "Stabilization after destruction from infection",
+    "Treatment of congenital spinal diseases (scoliosis, spondylolisthesis)",
+    "Treatment of acquired spinal diseases (scoliosis, spondylolisthesis, spinal stenosis, disk disease, inflammatory and degenerative arthritis)",
+    "Treatment of degenerative instability",
+    "Neural decompression",
+    "Poly-trauma (for odontoid fixation)",
+    "Neurological deficit (for odontoid fixation)",
+    "Symptomatic non-union (myelopathy) (for odontoid fixation)",
+    "Unstable non-union (for odontoid fixation)",
+    "Patients presenting risk factors for non-union (for odontoid fixation)",
+    "Odontoid process fracture (Type I: avulsion fracture of apex, stable)",
+    "Odontoid process fracture (Type II: fracture through base of dens, often unstable)",
+    "Odontoid process fracture (Type III: fracture extends into body of axis, usually stable)",
+    "Type IIB odontoid fracture with anterior-superior to posterior-inferior geometry (for anterior odontoid screw fixation)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_planned_treatment",
+        "label": "Clinical notes with planned line of treatment"
+      },
+      {
+        "key": "x_ray_pre_procedure",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) - affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "x_ray_post_procedure",
+        "label": "Post-procedure X-ray labelled with patient ID, date and side (Left/Right) - affected part"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice and barcode of implant"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes and X-ray clearly state Type of fracture (Simple/Compound)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Discharge summary rules out further complications and suggests any enhanced treatments?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or X-ray do not clearly state the Type of fracture (Simple/Compound)",
+    "Pre-procedure X-ray is missing or not appropriately labelled with patient ID, date, and affected side (Left/Right)",
+    "Post-procedure X-ray is missing or not appropriately labelled with patient ID, date, and affected side (Left/Right)",
+    "Invoice and barcode for the implant used are missing at the claim stage",
+    "Discharge summary does not rule out further complications or suggest enhanced treatments"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Metallic devices are subject to fatigue failure and may loosen or break if bone fusion does not occur, as they cannot withstand prolonged weight bearing stresses.",
+      "Odontoid process fractures are classified by Anderson and D'Alonzo into Type I (avulsion of apex, stable), Type II (fracture through base of dens, often unstable), and Type III (fracture extends into body of axis, usually stable)."
+    ],
+    "surgical_options": [
+      "Instrumentation for cervical spine fixation includes various types of traction (Gardner-Wells, Distraction, Halo collars), screws (cortical, cancellous, cannulated, knoringer), wires/cables (wire, songer cables), plates (occipitocervical, Caspar, H plate, Morscher cervical locking plate, Haid plate, tubular plate, malleable reconstruction plate, hook plate), and replacement materials (methylmethacrylate, structural bone grafts), and miscellaneous devices (Halifax clamps, titanium cages).",
+      "Techniques for fusion include anterior cervical fusion, Brooks, Rogers, Cloward, Yale methods, as well as specific C1-C2 fusion techniques like Gallie wiring, Magerl C1-C2 transarticular screw fixation, and Harms posterior C1 lateral mass and C2 pars screws.",
+      "Anterior odontoid screw fixation involves one or two screws inserted via the anterior-inferior corner of the C2-endplate."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

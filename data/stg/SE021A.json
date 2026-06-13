@@ -1,0 +1,149 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE021A",
+  "procedure_code": "SE021A",
+  "condition": "Pediatric cataract",
+  "procedure_name": "Paediatric lensectomy",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Surgery for Paediatric cataract_Medco.pdf",
+    "Surgery for Paediatric cataract_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma or equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "Visually significant opacities",
+    "Unilateral cataract (to be operated as early as possible)",
+    "Bilateral cataract (to be operated as early as possible)",
+    "Symmetric cataract (second eye is operated within 1 week of the first eye/ same sitting)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing Indication for Lensectomy /pediatric lens aspiration/ membranectomy and supporting investigation)"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary_with_visual_outcomes",
+        "label": "Detailed Discharge summary with visual outcomes"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure/ Operative notes"
+      },
+      {
+        "key": "intraoperative_photograph_with_time_and_date",
+        "label": "Intraoperative photograph with time and date (optional)"
+      },
+      {
+        "key": "barcode_of_iol_used",
+        "label": "Barcode of IOL used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes with history, etiology, clinical symptoms, examination and investigation details (visual acuity, direct ophthalmoscopy, ultrasound of eye, etc.)?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected part with Proper labelling of Affected Eye whether R or L with full face photograph.",
+        "expected": true
+      },
+      {
+        "q": "Detailed admission notes?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Pre-anesthesia check-up notes available?",
+        "expected": true
+      },
+      {
+        "q": "Do OT notes detail about General anesthesia, steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up advise?",
+        "expected": true
+      },
+      {
+        "q": "Was the intra operative photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the barcode/ sticker of IOL available, if used?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "History, clinical signs and symptoms, or examination findings do not suggest the presence of pediatric cataract.",
+    "Clinical notes are incomplete or do not detail indications and supporting investigations for the procedure.",
+    "Clinical photograph of affected eye is missing or lacks proper R/L labelling or full face view.",
+    "Operative notes do not detail general anesthesia, steps of surgery, or outcomes.",
+    "Barcode or sticker of the Intraocular Lens (IOL) is missing, if an IOL was used."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery for Pediatric Cataract only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination and does not respond to conservative medical therapy.",
+      "Definition: Pediatric cataract is a treatable leading cause of childhood blindness. Untreated cataracts in children lead to tremendous social, economic, and emotional burden to the child, family, and society. It accounts for 7.4%–15.3% of pediatric blindness. The prevalence is more in low income groups than high income ones. It has been found that during pregnancy, 67% of the mothers of such children had a history of illness and 22% had taken medications during pregnancy. It is usually diagnosed during routine screening/ patient has leukocoria/ strabismus.",
+      "Etiology: Most cataracts are idiopathic in nature.",
+      "Etiology: Hereditary",
+      "Etiology: Metabolic cataract",
+      "Etiology: Congenital infections (Toxoplasma, rubella, cytomegalovirus, herpes, and syphilis infections- TORCH)",
+      "Etiology: Traumatic cataract",
+      "Etiology: Associated with other systemic conditions such as juvenile idiopathic arthritis (JIA)",
+      "Signs & Symptoms (one or more of the following): Leukocoria (lens opacity/ clouding)",
+      "Signs & Symptoms (one or more of the following): Not able to make eye contact",
+      "Signs & Symptoms (one or more of the following): Squint",
+      "Signs & Symptoms (one or more of the following): Microphthalmos (small eye)",
+      "Signs & Symptoms (one or more of the following): Buphthalmos (large eye)",
+      "Signs & Symptoms (one or more of the following): Nystagmus (abnormal movement of the eye)",
+      "Signs & Symptoms (one or more of the following): Difficulty in viewing distant objects (such as a blackboard)",
+      "Signs & Symptoms (one or more of the following): May also be associated with features of other systemic illnesses such as those of Down's syndrome",
+      "Examination & Investigations: Visual acuity assessment",
+      "Examination & Investigations: Direct ophthalmoscopy",
+      "Examination & Investigations: Screening of parent's eye esp. of mother",
+      "Examination & Investigations: Ultrasound biomicroscopy of the eye",
+      "Examination & Investigations: A scan",
+      "Examination & Investigations: Keratometry",
+      "Examination & Investigations: MRI/ Color doppler (if there is suspicion of Persistent fetal vasculature-PFV)",
+      "Examination & Investigations: X-ray / CT scan (in cases with h/o trauma)",
+      "Examination & Investigations: TORCH profile (Toxoplasma, rubella, cytomegalovirus, herpes, and syphilis infection) (in case of bilateral congenital cataract)",
+      "Examination & Investigations: Evaluation by Rheumatologist/ Neurologist/ Nephrologist (based on presence of features of systemic illness, if any)",
+      "Complications: Amblyopia (lazy eye)",
+      "Complications: Glaucoma",
+      "Complications: Retinal detachment",
+      "Complications: Postoperative inflammation",
+      "Complications: Infection of eye"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Prescription of glasses; Amblyopia therapy; Suture removal and repeat refraction at 1 month post-op & at 3 months post-op",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

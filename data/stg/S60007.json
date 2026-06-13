@@ -1,0 +1,140 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Craniotomy and evacuation of hematoma (extradural)/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S60007",
+  "procedure_code": "S60007",
+  "condition": "Craniotomy and evacuation of hematoma (extradural) with fixation of fracture of long bone",
+  "procedure_name": "Extradural hematoma along with fixation of fracture of 2 or more long bone",
+  "specialty": "Polytrauma, Orthopedics, Neurosurgery, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Craniotomy and evacuation of hematoma (extradural)_Medco.pdf",
+    "Craniotomy and evacuation of hematoma (extradural)_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MS/DNB/Equivalent (Orthopedic surgery)",
+    "MCh/DNB/Equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "An epidural hematoma (EDH) is an extra-axial collection of blood within the potential space between the outer layer of the dura mater and the inner table of the skull. It is confined by the lateral sutures (especially the coronal sutures) where the dura inserts. It is a life-threatening condition, which may require immediate intervention and can be associated with significant morbidity and mortality if left untreated.",
+    "Acute EDH",
+    "Hematoma volume greater than 30 ml regardless of Glasgow coma scale score (GCS)",
+    "GCS less than 9 with pupillary abnormalities like anisocoria"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "hematoma_volume",
+      "operator": ">",
+      "value": "30 ml",
+      "note": "regardless of GCS"
+    },
+    {
+      "field": "gcs",
+      "operator": "<",
+      "value": "9",
+      "note": "with pupillary abnormalities like anisocoria"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_injury_surgery_need",
+        "label": "Clinical notes detailing the injury and need for surgery"
+      },
+      {
+        "key": "medico_legal_case_report_fir_accident",
+        "label": "Medico legal case report/ FIR copy of accident"
+      },
+      {
+        "key": "xray_ct_report_fractured_limb",
+        "label": "X-ray/ CT report of fractured limb"
+      },
+      {
+        "key": "ct_mri_brain_film_report",
+        "label": "CT/MRI Brain film and report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "post_op_xray_film_report_skull",
+        "label": "Post op X-ray film and report of skull"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detail accident, signs & symptoms, indication for surgery, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Medico legal report/ FIR copy of the accident submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray/ CT report suggest fracture of one long bone?",
+        "expected": false
+      },
+      {
+        "q": "X-ray/ CT report suggest fracture of more than one long bone?",
+        "expected": true
+      },
+      {
+        "q": "CT/ MRI brain report suggestive of extradural hematoma?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post op X-ray film of the skull demonstrate craniotomy?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "CT/MRI brain report not suggestive of extradural hematoma",
+    "X-ray/ CT report not suggesting fracture of two or more long bones",
+    "Clinical notes are missing or do not detail the injury, need for surgery, or planned treatment",
+    "Medico legal report/ FIR copy of accident not submitted",
+    "Post-operative X-ray film of the skull not demonstrating craniotomy"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operational Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

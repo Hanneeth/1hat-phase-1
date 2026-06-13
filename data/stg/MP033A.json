@@ -1,0 +1,129 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP033A",
+  "procedure_code": "MP033A",
+  "condition": "Short stature",
+  "procedure_name": "Short stature",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Short Stature_Medco.pdf",
+    "Short Stature_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MD/DNB/DCH/ equivalent (Pediatric Medicine)",
+    "DM/DNB/ equivalent (Endocrinology)"
+  ],
+  "clinical_indications": [
+    "Child's height is 2 standard deviations (SD) or more below the mean for children of that sex and chronologic age.",
+    "Child's height is 2 SD or more below mid parental height (MPH).",
+    "Growth faltering (downward crossing of two centiles on a growth curve).",
+    "Child's height is below 3rd centile on gender and population specific growth curve.",
+    "Poor growth velocity.",
+    "Diagnosis of short stature is established and backed by clinical signs, symptoms, physical examination, and investigations, looking for underlying causes."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "height",
+      "operator": "<=",
+      "value": "-2 SD below mean for age and gender",
+      "note": "or below 2 SD of mid parental height (MPH)"
+    },
+    {
+      "field": "height",
+      "operator": "<",
+      "value": "3rd centile",
+      "note": "on gender and population specific growth curve"
+    },
+    {
+      "field": "growth_velocity",
+      "operator": "decreasing",
+      "value": "two centiles",
+      "note": "on a growth curve (growth faltering)"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_ppd",
+        "label": "Clinical notes – detailed history, signs & symptoms, detailed treatment line (including historical details like: since when inadequate growth observed, specific symptoms of chronic illness, antenatal history, neonatal problems, past/family/social/dietary history, medication, symptoms suggestive of early puberty)"
+      },
+      {
+        "key": "investigations_basic_ppd",
+        "label": "Complete blood count, Erythrocyte sedimentation rate, Serum electrolytes, Liver function test, Kidney function test, Urine analysis, Stool analysis"
+      },
+      {
+        "key": "bone_age_radiograph",
+        "label": "Bone Age Radiograph – X-ray of left hand and wrist/Xray elbow AP is radio-graphed to assess bone maturity"
+      },
+      {
+        "key": "optional_etiology_investigations_ppd",
+        "label": "(Optional) Tuberculin test and chest X-ray, thyroid hormones (T4 and TSH), blood gas analysis, tests for celiac disease (anti-endomysial and transglutaminase antibodies), Serum IGF-1, Chromosome analysis and karyotype, growth hormone provocation test, MRI brain"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps",
+        "label": "Detailed ICPs with line of treatment including Establishing diagnosis/clinical improvement"
+      },
+      {
+        "key": "detailed_discharge_summary_with_followup",
+        "label": "Detailed Discharge summary with follow-up advise at the time of discharge"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is the height documented less than 2 standard deviations below the mean for age?",
+        "expected": true
+      },
+      {
+        "q": "Is there a h/o decreasing growth velocity documented in clinical notes?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Height not documented as less than 2 standard deviations below the mean for age",
+    "Decreasing growth velocity not documented in clinical notes",
+    "Mandatory investigations (CBC, ESR, serum electrolytes, LFT, KFT, urine analysis, stool analysis) not submitted",
+    "Bone Age Radiograph (X-ray of left hand and wrist/elbow AP) missing or not properly assessing bone maturity",
+    "Clinical notes missing or incomplete regarding vital parameters, examination findings, planned line of treatment, or advice for admission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Short stature is a term applied to a child whose height is 2 standard deviations (SD) or more below the mean for children of that sex and chronologic age.",
+      "The most common causes of short stature beyond the first year or two of life are familial (genetic) short stature and delayed (constitutional) growth, which are normal, non-pathologic variants of growth.",
+      "The goal of the evaluation of a child with short stature is to identify the subset of children with pathologic causes (such as Turner syndrome, inflammatory bowel disease or other underlying systemic disease, or growth hormone deficiency).",
+      "The evaluation also should assess the severity of the short stature and likely growth trajectory, to facilitate decisions about intervention, if appropriate.",
+      "At any given time, a poor growth velocity is a better indicator of growth disturbance than a single point measurement.",
+      "Presenting complaint: Inability to gain height (delay of growth).",
+      "Associated symptoms: Presence of multiple systemic congenital abnormalities (dysmorphic features), Failure to thrive, Chronic illness/ Malnutrition, Recurrent respiratory infections, Diarrhea/dysentery, Joint pains and rash, Recurrent hospital admission, History of psychological abnormalities."
+    ],
+    "surgical_options": [
+      "Surgical care (e.g., neurosurgical intervention for brain tumors) depends on the underlying cause of short stature."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY, often tertiary hospitals.",
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "management_approaches": [
+      "Diet - Optimize nutrition with supplementation",
+      "Celiac disease – gluten free diet with nutrient supplementation",
+      "Endocrinological and genetic disorders - human recombinant growth hormone",
+      "Insulin-like growth factor-I – indicated for long-term treatment of severe, primary insulin-like growth factor-I (IGF-I) due to mutations of the growth hormone receptor (GH-R) or GH-R downstream signaling pathways",
+      "Constitutional growth delay – testosterone",
+      "Tuberculosis - Antitubercular treatment along with nutrition",
+      "Rickets - Vitamin D and C and phosphorus supplements"
+    ]
+  }
+}

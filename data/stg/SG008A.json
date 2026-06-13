@@ -1,0 +1,114 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG008A",
+  "procedure_code": "SG008A",
+  "condition": "Gastric Outlet Obstruction",
+  "procedure_name": "Pyloroplasty",
+  "specialty": "General/Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Gastric Outlet Obstruction_Medco.pdf",
+    "Gastric Outlet Obstruction_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (in Pediatric surgery, Surgical Gastroenterologist)"
+  ],
+  "clinical_indications": [
+    "Gastric Outlet Obstruction in adults, primarily due to pyloric stenosis from peptic ulcer scarring."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "usg_abdomen_ugi_endoscopy_barium_meal_series",
+        "label": "USG Abdomen/ Upper Gastrointestinal Endoscopy/ Barium meal series"
+      },
+      {
+        "key": "biopsy",
+        "label": "Biopsy (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are clinical notes with detailed history, signs & symptoms, planned line of treatment, and indication for procedure available?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and imaging are not indicative of surgery for Pyloroplasty.",
+    "Mandatory imaging (USG Abdomen/ Upper Gastrointestinal Endoscopy/ Barium meal series) not submitted for pre-authorization.",
+    "Detailed operative notes are missing or do not adequately describe the surgical steps for Pyloroplasty.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details are not submitted for claim processing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "ADULTS - Etiology: Gastric Outlet Obstruction is the sequelae of healing and scarring of peptic ulcer. Chronic cicatrisation of a duodenal ulcer or juxtapyloric ulcer results in narrowing of pyloric antrum which is described as pyloric stenosis.",
+      "ADULTS - Symptoms: Classical hunger pain of duodenal ulcer disappears. It may be replaced by a dull aching pain because of gastric distension. Colicky pain is due to hyperperistalsis of stomach. Vomiting is profuse, projectile, persistent, foul-smelling (because of stasis) and nonbilious. There may be distension of upper abdomen with epigastric fullness. Chronic cases may present with dehydration and weight loss.",
+      "ADULTS - Signs: Visible gastric peristalsis (VGP); Succussion splash; Auscultopercussion test/auscultoscraping test.",
+      "ADULTS - Treatment: Aspiration with Ryle's tube; Fluids to correct electrolyte abnormalities; Exploratory laparotomy; Pyloroplasty is an option for gastric outlet obstruction in suitable cases; Another option is a gastrojejunostomy."
+    ],
+    "surgical_options": [
+      "Pyloroplasty",
+      "Gastrojejunostomy"
+    ],
+    "pre_op_preparation": "Aspiration with Ryle's tube; Fluids to correct electrolyte abnormalities",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

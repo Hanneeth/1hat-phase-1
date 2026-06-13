@@ -1,0 +1,163 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO004A",
+  "procedure_code": "SO004A",
+  "condition": "Tubal patency (Fallopian Tube disease)",
+  "procedure_name": "Procedure on Fallopian Tube for establishing Tubal Patency",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Tubal patency (Fallopian Tube disease)_Medco.pdf",
+    "Tubal patency (Fallopian Tube disease)_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Reversal of tubal sterilization for want of child",
+    "Mild tubal block due to various pathology (e.g. endometriosis, past pelvic surgery, Pelvic inflammatory disease)",
+    "Tubal occlusion secondary to ectopic pregnancy treatment",
+    "Salpingitis isthamica nodosa"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "hsg_sonosalpingography",
+        "label": "HSG (hysterosalpingogram) / Sonosalpingography"
+      },
+      {
+        "key": "follicular_study_optional",
+        "label": "Follicular study (optional)"
+      },
+      {
+        "key": "salpingoscopy_optional",
+        "label": "Salpingoscopy (optional)"
+      },
+      {
+        "key": "falloposcopy_optional",
+        "label": "Falloposcopy (optional)"
+      },
+      {
+        "key": "laparoscopy_diagnostic_optional",
+        "label": "Laparoscopy (diagnostic) (optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "hsg_post_operative",
+        "label": "HSG (hysterosalpingogram) – post operative"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed clinical notes available with all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure and advice for admission, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Is history with evidence (previous tubal ligation done - previous operative notes, indication / anatomical abnormality - HSG showing bilateral tubal block) or current imaging suggestive of diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Is mid tubal block due to various pathology (e.g. endometriosis, past pelvic surgery, pelvic inflammatory disease) a documented indication for surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is tubal occlusion secondary to ectopic pregnancy treatment a documented indication for surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is salpingitis isthmica nodosa a documented indication for surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is there evidence of genital tuberculosis?",
+        "expected": false
+      },
+      {
+        "q": "Is there evidence of sclerotic tubes or dense adhesions?",
+        "expected": false
+      },
+      {
+        "q": "Is there evidence of bilateral fimbriectomy done?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge available?",
+        "expected": true
+      },
+      {
+        "q": "Was the post-operative HSG report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Detailed clinical notes for pre-authorization missing or incomplete, or planned line of treatment not documented.",
+    "Pre-authorization documentation missing HSG (hysterosalpingogram) or Sonosalpingography report.",
+    "Indication for surgery (mid tubal block due to pathology) not documented or without USG report.",
+    "Indication for surgery (tubal occlusion post ectopic pregnancy) not documented or without previous operative notes.",
+    "Indication for surgery (salpingitis isthmica nodosa) not documented or without HSG report.",
+    "Evidence of contraindications such as genital tuberculosis, sclerotic tubes/dense adhesions, or bilateral fimbriectomy found.",
+    "Claim submission missing detailed indoor case papers, procedure/operative notes, or discharge summary.",
+    "Post-operative HSG (hysterosalpingogram) report not submitted with the claim."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Tubal disease accounts for 25%- 35% of female factor infertility, with more than half of the cases due to salpingitis. In addition, large studies report that up to 20%-30% of women regret having a tubal ligation. Thus, there is a need to determine the optimal treatment methods for patients"
+    ],
+    "surgical_options": [
+      "Tubal cannulation for proximal tubal obstruction in young women with no other significant infertility factors.",
+      "Laparoscopic fimbrioplasty or neosalpingostomy for the treatment of mild hydrosalpinges in young women with no other significant infertility factors.",
+      "Laparoscopic salpingectomy or proximal tubal occlusion in cases of surgically irreparable hydrosalpinges to improve IVF pregnancy rates.",
+      "Microsurgical anastomosis for tubal ligation reversal."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Genital tuberculosis",
+      "Sclerotic tubes or dense adhesions",
+      "Bilateral fimbriectomy done"
+    ]
+  }
+}

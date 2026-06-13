@@ -1,0 +1,140 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV023C",
+  "procedure_code": "SV023C",
+  "condition": "Hydatid cyst",
+  "procedure_name": "Lung surgery including Thoracotomy",
+  "specialty": "CTVS, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Hydatid cyst_Medco.pdf",
+    "Hydatid cyst_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (in CTVS, Pediatric Surgery, Thoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Presence of lung hydatid cyst of any size (surgery is gold standard treatment)",
+    "Cysts greater than 5 cm in diameter leading to bronchial compression",
+    "Cyst rupture",
+    "Symptoms such as cough, chest pain, breathlessness, expectoration, fever, hemoptysis, and anaphylactic phenomena associated with lung hydatid cyst"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "cyst_diameter",
+      "operator": ">",
+      "value": "5 cm",
+      "note": "leading to bronchial compression"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "ct_mri_chest",
+        "label": "CT/MRI Chest"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intraoperative_specimen_photographs",
+        "label": "Intra-operative or specimen Photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      },
+      {
+        "key": "postoperative_chest_xray_ct",
+        "label": "Postoperative Chest X-ray or CT"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did CT/MRI Chest report confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathological examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post-operative X-ray/CT Chest report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Imaging was not indicative of surgery for hydatid cyst.",
+    "CT/MRI Chest report did not confirm the diagnosis of hydatid cyst.",
+    "Clinical notes were incomplete or missing, lacking detailed history, signs & symptoms, evaluation findings, planned line of treatment, or indication for procedure.",
+    "Histopathological examination report was not submitted or did not confirm the diagnosis of hydatid cyst.",
+    "Post-operative Chest X-ray or CT report was not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hydatid disease involves the lungs (20-30%) by various mechanisms",
+      "The right lung is more commonly involved than the left",
+      "Cysts in the lungs are usually solitary and mostly unilateral",
+      "Lower lobe of the lungs is the most common site of pulmonary involvement, and there is a predilection for the posterior segments and the right lung"
+    ],
+    "surgical_options": [
+      "Enucleation (Ugon method)",
+      "Pericystectomy (Perez Fontana method)",
+      "Cystotomy with capitonnage (Barrett's method)",
+      "Cystostomy with closure of the bronchial openings and capitonnage (Posadas method)",
+      "Cystostomy with the closure of the bronchial openings alone",
+      "Open aspiration by Figuera technique",
+      "Segmental resection",
+      "Lobectomy",
+      "Thoracotomy"
+    ],
+    "pre_op_preparation": "Preoperative initiation of Albendazole therapy",
+    "post_op_care": "Post-operative Albendazole therapy",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

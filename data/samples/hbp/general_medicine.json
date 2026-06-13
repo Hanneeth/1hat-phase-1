@@ -1,0 +1,82 @@
+{
+  "_comment": "Worked examples of the 'treatment-process' billing shapes: per_session (recurring, capped) and per_day (priced by bed category). Contrast with the one_time surgical shape in ophthalmology.json.",
+  "scheme_id": "pmjay",
+  "specialty": "General Medicine / Nephrology",
+  "specialty_code": "MG",
+  "packages": [
+    {
+      "package_code": "MG072",
+      "package_name": "Haemodialysis / Peritoneal Dialysis",
+      "procedures": [
+        {
+          "procedure_code": "MG072A",
+          "procedure_name": "Haemodialysis",
+          "billing_unit": "per_session",
+          "quantity_basis": "none",
+          "rates_inr": { "tier3": 1500, "tier2": 1800, "tier1": 1800 },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 1500,
+            "increment": null,
+            "quantity_cap": { "max": 3, "per_window": "week", "on_overflow": "separate_preauth" },
+            "sequence": null
+          },
+          "reserved_public_only": false,
+          "stg_ref": "MG072A",
+          "additional_information": {
+            "alos": "day_care",
+            "recurrence_rule": "Chronic dialysis: max 3 sessions/week per pre-auth; extra dialysis needs a separate pre-auth",
+            "doc_cadence": "Chronic patients submit investigations once, then repeat monthly; Serum Iron/ferritin/TIBC/TSAT/SGOT/SGPT/viral markers/calcium/phosphate quarterly",
+            "is_addon_to": ["MG045A"],
+            "special_empanelment": "Dialysis machines, water treatment plant, Hep-B isolation area, dialysis reprocessing area"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf master rows MG072A (1500 base; tier 1500/1800/1800)",
+            "base_rate_inr / billing_unit": "Haemodialysis, Renal failure, AV Fistula _PPD.CPD.pdf — package table (MG072A 1500/-) + docs-table column 'Haemodialysis – per session'",
+            "pricing.quantity_cap": "same STG §1.4 pre-auth header ('max 3 times/week, extra dialysis needs separate pre-auth') + §2.2.1 PPD checklist ('Maximum 3 dialysis sessions per week in a single pre-authorisation?')",
+            "additional_information.alos": "same STG — ALOS section ('Day care')",
+            "additional_information.doc_cadence": "same STG §1.4 mandatory-documents table (chronic: once then monthly; quarterly panel)",
+            "additional_information.special_empanelment": "same STG — 'Special empanelment criteria' line",
+            "additional_information.is_addon_to": "same STG — AKI/Renal failure row note 'Dialysis, if required, will be add on package'"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MG045",
+      "package_name": "AKI (Acute Kidney Injury) / Renal failure",
+      "procedures": [
+        {
+          "procedure_code": "MG045A",
+          "procedure_name": "AKI / Renal failure (medical management)",
+          "billing_unit": "per_day",
+          "quantity_basis": "bed_category",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": { "ward": 1800, "hdu": 2700, "icu_no_vent": 3600, "icu_vent": 4500 },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "reserved_public_only": false,
+          "stg_ref": "MG045A",
+          "additional_information": {
+            "alos": "7-14 days",
+            "total_formula": "per-day bed rate x number of days in that bed category",
+            "dialysis_addon": "If dialysis is required during the admission it is billed as add-on package MG072A",
+            "vintage_note": "These bed rates are the package-specific rates printed in the June-2020 STG (HBP 1.0/2.0). HBP 2022 generic per-day medical bed rates differ (ward 2100 / hdu 3300 / icu 8500 / icu-vent 9000) — confirm the correct rate against the clean HBP 2022 master Excel per package."
+          },
+          "source_refs": {
+            "pricing.bed_rates_inr": "Haemodialysis, Renal failure, AV Fistula _PPD.CPD.pdf — package table MG045A (General Ward 1800 / HDU 2700 / ICU no-vent 3600 / ICU vent 4500)",
+            "billing_unit / quantity_basis": "same STG — per-day medical management stratified by bed category",
+            "additional_information.alos": "same STG — ALOS section ('AKI/Renal failure: 7-14 days')",
+            "additional_information.dialysis_addon": "same STG — MG045A row note",
+            "additional_information.vintage_note": "HBP 2022 generic per-day rates from National_Health_Benefits_Packages_Guidelines_fceb804a58.pdf"
+          }
+        }
+      ]
+    }
+  ]
+}

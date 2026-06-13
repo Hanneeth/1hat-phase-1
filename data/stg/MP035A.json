@@ -1,0 +1,104 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Floppy Infant/ : Floppy infant_Medco.pdf (clinical + mandatory docs) + Floppy infant_PPD.CPD.pdf (PPD/CPD processing checklists). This procedure is also associated with HBP 1.0 code M200052.",
+  "stg_id": "MP035A",
+  "procedure_code": "MP035A",
+  "condition": "Floppy Infant",
+  "procedure_name": "Floppy Infant",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Floppy infant_Medco.pdf",
+    "Floppy infant_PPD.CPD.pdf"
+  ],
+  "alos": "7-10 days",
+  "min_doctor_qualification": [
+    "MD/DNB/DCH (Pediatric)",
+    "DM/DNB/Equivalent (Neurology)"
+  ],
+  "clinical_indications": [
+    "Presentation of generalized hypotonia in an infant/child"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including history, evaluation findings, and planned line of management"
+      },
+      {
+        "key": "investigation_reports_based_on_etiology",
+        "label": "Investigation reports based on etiology (e.g., CT/MRI, Neurosonogram, Muscle and nerve biopsy, Electromyography (EMG), Electroencephalogram (EEG), X-Ray, Spinal tap, Blood culture, Genetic testing, Metabolic profile) (if required)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers mentioning the treatment details"
+      },
+      {
+        "key": "investigation_reports_if_required",
+        "label": "Investigation reports (if required)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes include detailed history (prenatal, perinatal, family, developmental), signs & symptoms, vital monitoring, evaluation findings (neurological examination), planned treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical examination suggestive of floppy infant?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers (ICPs) with daily vitals and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging/investigations supportive of etiological diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation or evaluation findings not suggestive of floppy infant diagnosis.",
+    "Clinical notes incomplete (missing detailed history, signs/symptoms, vitals, evaluation findings, planned treatment, or admission advice).",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details not submitted or incomplete.",
+    "Imaging/investigation reports not supportive of the etiological diagnosis.",
+    "Discharge summary missing or lacking follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Floppy Infant refers to those infants' children presenting with generalized hypotonia, most often arising out of an insult incurred during fetal or neonatal period.",
+      "Infants can present with hypotonia that is due to central or peripheral nervous system abnormalities, myopathies, genetic disorders, endocrinopathies, metabolic diseases, and acute or chronic illness.",
+      "Causes in infants include Paralytic (hereditary spinomuscular dystrophy etc.) and non-Paralytic.",
+      "Causes in neonates include well neonate (spinal muscular atrophy, congenital muscular dystrophy) and sick neonates (CNS, infection, birth asphyxia, IVH, peroximal disorders etc.).",
+      "Severe infections can lead to floppy infant presentation.",
+      "Central causes include hypoxic encephalopathy, brain anomalies/insults, genetic/chromosomal syndromes, congenital or acquired infections, and disorders of metabolism.",
+      "Peripheral causes include spinal muscular atrophy, myasthenia gravis, drug/toxin exposure, hereditary neuropathies, muscular dystrophies, congenital/metabolic myopathies, and congenital myotonic dystrophies.",
+      "Common presentations include feeding difficulties, respiratory problems, poor head control (head fall forward, backward or to the side), feeling limp (especially when lifted), arms and hang legs straight, and tongue fasciculations."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Guidance for clinicians in deciding referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

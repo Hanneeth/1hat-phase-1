@@ -1,0 +1,114 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). S700123 is an HBP 1.0 code.",
+  "stg_id": "S700123",
+  "procedure_code": "S700123",
+  "condition": "Urethral Stricture Disease",
+  "procedure_name": "Internal Urethrotomy including cystoscopy as an independent procedure",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Internal Urethrotomy including cystoscopy_Medco.pdf",
+    "Internal Urethrotomy including cystoscopy_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Strictures",
+    "Urethral trauma",
+    "Fistulae or false passages",
+    "Periurethral/prostatic abscess",
+    "Urinary tract infections",
+    "Functional disorders of bladder and Urethra"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_signs_symptoms_need_surgery",
+        "label": "Clinical Notes detailing the signs and symptoms and need for surgery"
+      },
+      {
+        "key": "retrograde_urethrogram_micturating_cystourethrography_reports",
+        "label": "Retrograde Urethrogram/ Micturating Cystourethrography reports confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "endoscopic_intra_procedure_still_photograph",
+        "label": "Endoscopic Intra procedure still photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes including history, symptoms, signs, vitals, examination findings, planned line of treatment and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Was the Retrograde Urethrogram/ Micturating Cystourethrography report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Endoscopic Intra procedure still photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or Retrograde Urethrogram/Micturating Cystourethrography not indicative of the necessity of the procedure.",
+    "Clinical notes detailing signs and symptoms, and need for surgery are missing or incomplete at pre-authorization.",
+    "Retrograde Urethrogram/Micturating Cystourethrography reports are missing or do not confirm the diagnosis at pre-authorization.",
+    "The endoscopic intra-procedure still photograph is missing or unclear at claim submission.",
+    "Detailed Procedure/Operation notes are missing or do not adequately describe the surgical steps and findings at claim submission.",
+    "Discharge summary is missing or lacks follow-up advice at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary hospital",
+    "min_doctor_qualification_desirable": "MCh/Equivalent (in Urology)",
+    "clinical_key_pointers": [
+      "Internal urethrotomy, is a surgical procedure used to treat urethral stricture disease, involves using a urethrotomy or a surgical knife passed through a cystoscope to widen a narrowed urethra.",
+      "Urethrotomies are generally only performed on men, as urethral strictures in women are very, very rare."
+    ],
+    "surgical_options": [
+      "Minimally invasive method - Direct Visual Internal Urethrotomy (DVIU)",
+      "Open reconstructive urethroplasty"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

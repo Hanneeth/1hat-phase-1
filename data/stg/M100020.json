@@ -1,0 +1,111 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M100020",
+  "procedure_code": "M100020",
+  "condition": "Acute exacerbation of Interstitial Lung Disease",
+  "procedure_name": "Acute exacerbation of Interstitial Lung Disease",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Acute exacerbation of Interstitial Lung Disease_Medco.pdf",
+    "Acute exacerbation of Interstitial Lung Disease_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Acute worsening or development of dyspnea within less than 1 month",
+    "Increased sputum production, fever, and flu-like symptoms",
+    "Many patients present with a severe hypoxemia in the arterial blood gas analysis and respiratory failure"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "chest_x_ray_ct_scan",
+        "label": "Chest X ray / CT scan"
+      },
+      {
+        "key": "cbc_blood_sugar",
+        "label": "CBC, Blood Sugar (Fasting, PP and Random)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_treatment_chest_x_ray_ct_scan_report",
+        "label": "Post treatment Chest X ray / CT scan report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Chest X ray / CT scan report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the CBC, Blood sugar (Fasting and PP) submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Post treatment Chest X ray / CT scan report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient does not complain of continued cough with/without shortness of breath, despite the package criteria.",
+    "X-ray / CT scan report not suggestive of Interstitial Lung Disease (ILD) evidence.",
+    "Clinical notes lacking evaluation findings, indications, or planned line of treatment at pre-authorization.",
+    "Missing Chest X-ray / CT scan report at pre-authorization.",
+    "Post-treatment Chest X-ray / CT scan report not submitted at claim.",
+    "Detailed Indoor case papers (ICPs) are incomplete or not submitted at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB/equivalent (in General Medicine, Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Continued Coughing",
+      "Shortness of the breath / Breathlessness",
+      "Chest discomfort",
+      "Fatigue",
+      "Occasionally weight loss"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

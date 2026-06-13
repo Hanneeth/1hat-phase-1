@@ -1,0 +1,129 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG106A",
+  "procedure_code": "SG106A",
+  "condition": "Subtotal Colectomy",
+  "procedure_name": "Subtotal Colectomy (Open)",
+  "specialty": "General Surgery / Surgical Oncology / Gastrointestinal Surgery / Paediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Subtotal Colectomy_Medco.pdf",
+    "Subtotal Colectomy_PPD.CPD.pdf"
+  ],
+  "alos": "7-10 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MCh/DNB/Equivalent (Surgical Oncology/Gastric Surgery/Gastrointestinal Surgery/Paediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Carcinoma Colon",
+    "Colonic Diverticular Disease",
+    "Inflammatory Bowel Disease",
+    "Trauma",
+    "Bowel Infarction",
+    "Colonic inertia leading to slow transit constipation",
+    "Polyposis Syndromes",
+    "Necrotising Enterocolitis",
+    "Other indications with justification"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_exam_plan",
+        "label": "Clinical Notes with history and examination and planned line of treatment"
+      },
+      {
+        "key": "cect_abdomen_pelvis_report",
+        "label": "CECT Abdomen and Pelvis Report"
+      },
+      {
+        "key": "cect_thorax_malignancy_optional",
+        "label": "CECT Thorax - In Malignancy (Optional)"
+      },
+      {
+        "key": "colonoscopy_biopsy_report_optional",
+        "label": "Colonoscopy with Biopsy Report (Optional)"
+      },
+      {
+        "key": "carcinoembryonic_antigen_cea",
+        "label": "Carcinoembryonic Antigen (CEA)"
+      },
+      {
+        "key": "blood_investigations_cbc_lft_rft_rbs",
+        "label": "Blood Investigations: CBC, LFT, RFT, RBS"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "gross_specimen_removed_photo",
+        "label": "Photograph of the gross specimen removed"
+      },
+      {
+        "key": "post_operative_histopathology_report",
+        "label": "Post Operative Histopathology Report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "intraoperative_photograph_laparoscopic_optional",
+        "label": "Intraoperative Photograph (In Laparoscopic Procedures) (Optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether the investigation reports confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Patient's clinical history/investigations not indicative of Subtotal Colectomy without justification.",
+    "Investigation reports do not confirm the diagnosis for Subtotal Colectomy without justification.",
+    "CECT Abdomen and Pelvis report missing at pre-authorization.",
+    "Mandatory blood investigation reports (CBC, LFT, RFT, RBS, CEA) missing at pre-authorization.",
+    "Detailed operative/procedure notes are missing or incomplete at claim submission.",
+    "Gross specimen photograph or post-operative histopathology report missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Subtotal Colectomies can be performed either laparoscopically or via an open abdominal incision; the surgical principles remain the same.",
+      "The key to adequate resection is the blood supply to the colon.",
+      "Resection for the benign disease does not be as extensive, but resection for malignancy should aim to resect the named colonic vessels supplying the cancerous portion of the colon to yield an adequate number of lymph nodes in the colonic mesentery.",
+      "The bowel proximal and distal to the resection must be mobilised to allow a tension-free anastomosis, and the anastomosis should have a good blood supply.",
+      "Depending on expertise and equipment available, a bowel anastomosis can be performed hand sewn or stapled.",
+      "At the surgeon's discretion, the surgery may include a covering ileostomy."
+    ],
+    "surgical_options": [
+      "Laparoscopic procedure",
+      "Open abdominal incision"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

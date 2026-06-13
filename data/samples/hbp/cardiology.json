@@ -1,0 +1,42 @@
+{
+  "_comment": "Worked example of the 'ordinal / time-gated follow-up sequence' shape: the rate depends on WHICH follow-up it is and a minimum gap between visits — not a flat per-visit rate.",
+  "scheme_id": "pmjay",
+  "specialty": "Cardiology",
+  "specialty_code": "MC",
+  "packages": [
+    {
+      "package_code": "MC022",
+      "package_name": "Follow-up — Cardiology",
+      "procedures": [
+        {
+          "procedure_code": "MC022A",
+          "procedure_name": "Cardiology follow-up visit (ordinal, post-primary)",
+          "billing_unit": "per_visit",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": {
+              "min_gap_days": 90,
+              "ordinal_rates_inr": { "3": 0, "4": 5000, "5": 2500 }
+            }
+          },
+          "reserved_public_only": false,
+          "stg_ref": "MC022A",
+          "additional_information": {
+            "note": "Follow-ups are an ordered sequence after the primary cardiac procedure. The 3rd follow-up is Rs.0, the 4th Rs.5000, the 5th Rs.2500, each at least ~3 months apart. Ordinals 1-2 are assumed bundled into the primary package.",
+            "gap_caveat": "min_gap_days=90 derived from the 'After 3 months' wording; confirm exact window against the clean HBP 2022 master Excel."
+          },
+          "source_refs": {
+            "pricing.sequence.ordinal_rates_inr": "HBP-2022.pdf master rows MC022 follow-up: 'Third Follow-up - After 3 months' = 0, 'fourth Follow-up - After 3 months' = 5000, 'Fifth Follow-up - After 3 months' = 2500",
+            "pricing.sequence.min_gap_days": "HBP-2022.pdf MC022 rows — 'After 3 months' wording",
+            "billing_unit": "HBP-2022.pdf — follow-up package, per visit"
+          }
+        }
+      ]
+    }
+  ]
+}

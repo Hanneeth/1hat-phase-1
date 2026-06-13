@@ -1,0 +1,108 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU005B",
+  "procedure_code": "SU005B",
+  "condition": "Nephrolithotomy & Follow-up",
+  "procedure_name": "Nephrolithotomy (Anatrophic)",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Nephrolithotomy & Follow-up_Medco.pdf",
+    "Nephrolithotomy & Follow-up_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Large renal calculi",
+    "Complete staghorn stones associated with infundibular stenosis or distortion of intrarenal anatomy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_plan_advise",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure"
+      },
+      {
+        "key": "ivp_ncct_ct_ivp_reports",
+        "label": "Intravenous pyelogram (IVP) / Non-contrast computed tomography (NCCT)/CT-IVP reports"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "post_procedure_xray_usg_kub",
+        "label": "Post procedure X Ray / USG KUB showing the stone removed"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intravenous pyelogram (IVP) / Non-contrast computed tomography (NCCT)/CT-IVP report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure/Operative/follow-up (For follow up visit) notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure X Ray / USG KUB showing the stone removed submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and IVP / NCCT/ CT-IVP not indicative of Nephrolithotomy procedure",
+    "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure missing or incomplete at pre-authorization stage",
+    "Intravenous pyelogram (IVP) / Non-contrast computed tomography (NCCT)/CT-IVP reports missing or incomplete at pre-authorization stage",
+    "Detailed Indoor case papers missing or incomplete at claim submission stage",
+    "Detailed Procedure / operation notes missing or incomplete at claim submission stage",
+    "Post procedure X Ray / USG KUB showing the stone removed missing or unclear at claim submission stage",
+    "Detailed discharge summary missing or incomplete at claim submission stage"
+  ],
+  "additional_information": {
+    "icd_10_code": "N20.0",
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Anatrophic: Anatrophic nephrolithotomy is a procedure in which a parenchymal incision is made in an intersegmental plane, allowing removal of large renal calculi.",
+      "A flank incision is made, and the kidney carefully mobilized. The main renal artery is isolated, and the posterior segmental artery identified."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

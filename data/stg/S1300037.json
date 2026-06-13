@@ -1,0 +1,130 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Senning and Mustard Operation/ : Senning and mustard operation_Medco.pdf (clinical + mandatory docs) + Senning and mustard operation_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "S1300037",
+  "procedure_code": "S1300037",
+  "condition": "Transposition of Great Arteries (TGA)",
+  "procedure_name": "Senning Operation (Surgical Correction of Category III Congenital Heart Disease)",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Senning and mustard operation_Medco.pdf",
+    "Senning and mustard operation_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "TGA with intact ventricular septum presenting beyond 3–4 weeks of life with regressed left ventricle, where Arterial Switch Operation (ASO) is not feasible, for patients presenting between 2 and 6 months of age (Class IIa).",
+    "TGA with intact ventricular septum presenting beyond 3–4 weeks of life with regressed left ventricle, for patients presenting between 6 months and 2 years of age (Class IIa)."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "age",
+      "operator": "between",
+      "value": "2 months and 6 months",
+      "note": "if Arterial Switch Operation (ASO) not feasible"
+    },
+    {
+      "field": "age",
+      "operator": "between",
+      "value": "6 months and 2 years",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "barcode_of_implant",
+        "label": "Barcode of implant, if used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detail history, signs & symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of Transposition of Great Arteries?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the barcode of implant used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not suggestive of Transposition of Great Arteries at pre-authorization",
+    "Clinical notes missing or lacking detailed history, signs, symptoms, or procedure indication at pre-authorization",
+    "Post-procedure ECHO stills do not demonstrate repair of the cardiac defect",
+    "Barcode of implant not submitted when an implant was used",
+    "Mandatory documents for claim submission (Indoor case papers, Procedure/Operative notes, Detailed Discharge Summary) are missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Transposition of great arteries (TGA) is the most common cyanotic CHD at birth, accounting for approximately 5% of all CHDs. Its prevalence is 2–3/10,000 live births. Boys are affected two to three times more as compared to girls. This anomaly is reported to be more common in infants born to mothers with diabetes, poor nutrition, or history of alcohol intake. In 70% of cases, there is no associated defect apart from ASD, PDA, or insignificant VSD; these cases are labeled as having simple TGA. Association of TGA with other defects such as large VSD and left ventricular outflow tract obstruction or coarctation is referred to as complex TGA. It is a serious disease and most patients with TGA present very early in life, within few days or weeks after birth. With the advent of improved surgical techniques and postoperative care, long-term survival is > 90% with very low reintervention rates.",
+      "Clinical assessment: In simple TGA, cyanosis is the dominant feature; no heart murmur is audible in most cases. Those with large VSD and/or PDA present with features of heart failure. Weak femoral pulses indicate associated CoA."
+    ],
+    "surgical_options": [
+      "Senning and Mustard operations are type of atrial switch surgeries offered to patients with TGA where arterial switch operation is not feasible.",
+      "With the Senning surgical repair, a baffle or conduit - is created within the atria that reroutes the deoxygenated blood coming from the inferior and superior vena cavae to the mitral valve and therefore to the pulmonary circulation. This is accomplished by creating a systemic venous conduit that channels deoxygenated blood from the superior and inferior vena cava towards the mitral valve. After this complex reconstruction using flaps from the right atrial tissue and the interatrial septum and lets the oxygenated pulmonary venous blood flow to the tricuspid valve and from there to the systemic circulation. The anatomic left ventricle continues to pump into the pulmonary circulation and the anatomic right ventricle will work as the systemic pump, in other words the ventriculo-arterial mismatch is left unrepaired. In the Senning's operation, atrial tissue is used to create the baffle. No prosthetic material is introduced."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

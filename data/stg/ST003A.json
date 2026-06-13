@@ -1,0 +1,157 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "ST003A",
+  "procedure_code": "ST003A",
+  "condition": "Craniotomy and evacuation of hematoma (subdural) with fixation of fracture of long bone",
+  "procedure_name": "Subdural hematoma along with fixation of fracture of single long bone",
+  "specialty": "Polytrauma, Orthopedics, Neurosurgery, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Craniotomy and evacuation of hematoma (subdural)_Medco.pdf",
+    "Craniotomy and evacuation of hematoma (subdural)_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MS/DNB/Equivalent (Orthopedic surgery)",
+    "MCh/DNB/Equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Acute subdural hematomas (aSDH) account for 50%-60% of all subdural hematomas. In the majority of cases, they are related with a traumatic event.",
+    "Clinical presentation, neurologic condition, and imaging findings are the key components in establishing a treatment plan for acute SDH.",
+    "Location and size of the SDH and presence of midline shift can rapidly be determined by computed tomography of the head.",
+    "Immediate laboratory work-up must include Prothrombin time (PT), Partial thromboplastin time (PTT), International normalized ratio (INR), and platelet count.",
+    "Presence of a coagulopathy or bleeding diathesis requires immediate reversal and treatment with the appropriate agent(s), in order to lessen the risk of hematoma expansion.",
+    "Immediate neurosurgical evaluation is sought in order to determine whether the SDH warrants surgical evacuation due to presence of mass effect or elevated intracranial pressure.",
+    "Evacuation of an acute SDH is recommended if the clot thickness exceeds 10 mm or the midline shift is greater than 5 mm, regardless of the neurologic condition.",
+    "In patients with an acute SDH with clot thickness <10 mm and midline shift <5 mm, specific considerations of neurologic findings and clinical circumstances will be of importance."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "clot_thickness",
+      "operator": ">",
+      "value": "10 mm",
+      "note": "Evacuation of acute SDH recommended"
+    },
+    {
+      "field": "midline_shift",
+      "operator": ">",
+      "value": "5 mm",
+      "note": "Evacuation of acute SDH recommended"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_injury_need",
+        "label": "Clinical Notes detailing the injury and need for surgery"
+      },
+      {
+        "key": "medico_legal_report_fir",
+        "label": "Medico legal case report/ FIR copy of accident"
+      },
+      {
+        "key": "xray_ct_fractured_limb",
+        "label": "X-ray/ CT report of fractured limb"
+      },
+      {
+        "key": "ct_mri_brain_report",
+        "label": "CT/MRI Brain film and report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "post_op_xray_skull",
+        "label": "Post op X-ray film and report of skull"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes – details of accident, signs & symptoms, indication for surgery, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was the Medico legal report/ FIR copy of the accident submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did X-ray/ CT report suggest fracture of one long bone?",
+        "expected": true
+      },
+      {
+        "q": "Did X-ray/ CT report suggest fracture of more than one long bone?",
+        "expected": false
+      },
+      {
+        "q": "Was CT/MRI brain report suggestive of subdural hematoma?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the post op X-ray film of the skull demonstrate craniotomy?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "CT/MRI brain report not suggestive of subdural hematoma",
+    "X-ray/ CT report not suggesting fracture of a single long bone",
+    "Medico legal case report/ FIR copy of the accident not submitted for pre-authorization",
+    "Post-operative X-ray film of skull not submitted or not demonstrating craniotomy",
+    "Clinical notes missing details of injury and need for surgery at pre-authorization",
+    "Detailed procedure/operative notes not submitted at claim stage"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operational Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Acute subdural hematomas (aSDH) account for 50%-60% of all subdural hematomas. In the majority of cases, they are related with a traumatic event.",
+      "Clinical presentation, neurologic condition, and imaging findings are the key components in establishing a treatment plan for acute SDH.",
+      "Location and size of the SDH and presence of midline shift can rapidly be determined by computed tomography of the head.",
+      "Immediate laboratory work-up must include Prothrombin time (PT), Partial thromboplastin time (PTT), International normalized ratio (INR), and platelet count. Presence of a coagulopathy or bleeding diathesis requires immediate reversal and treatment with the appropriate agent(s), in order to lessen the risk of hematoma expansion.",
+      "Imaging studies such as a computed tomogram (CT) scan comprise the mainstay of diagnosis. Immediate neurosurgical evaluation is sought in order to determine whether the SDH warrants surgical evacuation due to presence of mass effect or elevated intracranial pressure.",
+      "Generally, evacuation of an acute SDH is recommended if the clot thickness exceeds 10 mm or the midline shift is greater than 5 mm, regardless of the neurologic condition.",
+      "In patients with an acute SDH with clot thickness <10 mm and midline shift <5 mm, specific considerations of neurologic findings and clinical circumstances will be of importance.",
+      "For an acute SDH, evacuation by craniotomy or craniectomy is preferred over burr holes."
+    ],
+    "surgical_options": [
+      "Craniotomy",
+      "Craniectomy"
+    ],
+    "pre_op_preparation": "Immediate laboratory work-up must include Prothrombin time (PT), Partial thromboplastin time (PTT), International normalized ratio (INR), and platelet count. Presence of a coagulopathy or bleeding diathesis requires immediate reversal and treatment with the appropriate agent(s), in order to lessen the risk of hematoma expansion.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

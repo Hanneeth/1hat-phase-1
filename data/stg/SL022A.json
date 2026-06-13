@@ -1,0 +1,124 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL022A",
+  "procedure_code": "SL022A",
+  "condition": "Removal of Submandibular Salivary Gland",
+  "procedure_name": "Removal of Submandibular Salivary gland",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Removal of Submandibular Salivary gland_Medco.pdf",
+    "Removal of Submandibular Salivary gland_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MS/ DNB/ PG Diploma or equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Recurrent submandibular sialadenitis (infective)",
+    "Obstructive sialadenitis due to calculi or duct stenosis",
+    "Drooling"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, indications for doing the procedure & advice for admission)"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of the affected part"
+      },
+      {
+        "key": "xray_usg_sialography_ct_fnac_report",
+        "label": "X-ray occlusal view/ USG for suspected Sialodocholithiasis/Sialography/CT/FNAC report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_note",
+        "label": "Detailed Procedure note/ operative note"
+      },
+      {
+        "key": "picture_gross_specimen_tissue_removed",
+        "label": "Picture of the Gross specimen of the tissue removed"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes, detailing history/Signs and Symptoms indications for doing the procedure & advise for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Clinical photograph of the affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the X-ray occlusal view/ USG for suspected sialodocholithiasis/ Sialography /CT / FNAC report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with daily vitals and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Picture of the Gross specimen of the tissue removed submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathology report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or imaging reports not indicative of surgery.",
+    "Clinical notes missing details on signs, symptoms, examination, indications, or admission advice.",
+    "Clinical photograph of affected part missing or unclear.",
+    "X-ray occlusal view/USG for suspected Sialodocholithiasis/Sialography/CT/FNAC report missing or not supportive of indication for pre-authorization.",
+    "Histopathology report missing or inconsistent with procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "suspected neoplasia of the submandibular gland where fine needle aspiration cytology or core needle biopsy should be carried out to confirm the diagnosis"
+    ]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV003H",
+  "procedure_code": "SV003H",
+  "condition": "Double outlet Right ventricle (DORV)",
+  "procedure_name": "Double outlet Right ventricle (DORV) Repair",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Double outlet Right ventricle (DORV) Repair_Medco.pdf",
+    "Double outlet Right ventricle (DORV) Repair_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Surgery for Double Outlet Right Ventricle (DORV) is indicated, except in cases with irreversible pulmonary vascular disease.",
+    "For DORV with subaortic VSD and PS (TOF-type DORV): Total repair with closure of VSD and infundibular resection if presenting with significant cyanosis at >3–4 months.",
+    "For DORV with subaortic VSD and PS (TOF-type DORV): Total repair with closure of VSD and infundibular resection by 6-12 months for stable patients with no or minimal cyanosis.",
+    "For DORV with large subaortic VSD and pulmonary hypertension (VSD-type DORV): VSD closure by 6 months of age.",
+    "For DORV with large subaortic VSD and pulmonary hypertension (VSD-type DORV): VSD closure if operable, for patients presenting beyond 6 months of age.",
+    "For DORV with subpulmonary VSD and pulmonary hypertension (TGA-type DORV): ASO with VSD closure by 6 weeks of age.",
+    "For DORV with subpulmonary VSD and pulmonary hypertension (TGA-type DORV): ASO with VSD closure if operable, for patients presenting beyond 3 months.",
+    "For DORV with subpulmonary VSD and pulmonary hypertension (TGA-type DORV): Arch repair in the same sitting if associated with aortic arch abnormality.",
+    "For DORV with subpulmonary VSD and PS: ASO with resection of subvalvular stenosis if pulmonary obstruction is localized.",
+    "For DORV with subpulmonary VSD and PS: Complex surgeries (Rastelli -type repair, REV procedure, Nikaidoh procedure, or root translocation) if pulmonary obstruction is tubular or valvular.",
+    "For DORV with remote VSD or other complex anatomy: Biventricular repair by intraventricular baffling of left ventricular connection to aorta should be strived for.",
+    "For DORV with remote VSD or other complex anatomy: Univentricular palliation (single stage or multistage palliative cavopulmonary connection) if biventricular repair is not possible."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of Double Outlet Right Ventricle?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not suggestive of Double Outlet Right Ventricle",
+    "Clinical notes missing detailed history, signs & symptoms, or indication for procedure",
+    "Post procedure ECHO still does not show repair of the defect",
+    "Detailed Discharge Summary not submitted or does not mention date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Double-outlet Right Ventricle (DORV) is a condition in which both great arteries are connected completely or predominantly to the RV. By definition, at least more than half of both arteries should arise from the RV. The VSD is the only outlet for left ventricle. The VSD could be sub-aortic (60%-65%), sub-pulmonary (20%-25%), doubly committed (3%-5%), or remote (noncommitted, 5%).",
+      "DORV may be associated with a number of cardiac anomalies including PS and CoA.",
+      "Clinical presentation of DORV is variable and depends on the location of VSD, presence or absence of obstruction to pulmonary blood flow, and associated cardiac anomalies. Clinical presentation of DORV can be divided into three types: TOF-like presentation, VSD-like presentation, and TGA-like presentation.",
+      "Patients with subaortic or subpulmonary VSD can have total biventricular repair. Those with noncommitted or remote VSD have complex anatomy and may not be suitable for biventricular repair."
+    ],
+    "surgical_options": [
+      "Aortopulmonary shunt (palliative/preliminary for significant cyanosis at <3–4 months with TOF-type DORV)",
+      "Total repair with closure of VSD and infundibular resection",
+      "VSD closure",
+      "ASO (Arterial Switch Operation) with VSD closure",
+      "Arch repair (if associated aortic arch abnormality)",
+      "Rastelli -type repair",
+      "REV procedure (Réparation à l'Etage Ventriculaire)",
+      "Nikaidoh procedure",
+      "Root translocation",
+      "Systemic-to-pulmonary artery shunt (may be required before complex procedures for subpulmonary VSD and PS)",
+      "Biventricular repair by intraventricular baffling of left ventricular connection to aorta",
+      "Univentricular palliation (like single stage or multistage palliative cavopulmonary connection) in cases where biventricular repair is not possible"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": "Assess for operability for patients presenting beyond certain ages (e.g., beyond 6 months for VSD-type DORV, beyond 3 months for TGA-type DORV).",
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Irreversible pulmonary vascular disease"
+    ]
+  }
+}

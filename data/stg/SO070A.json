@@ -1,0 +1,113 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO070A",
+  "procedure_code": "SO070A",
+  "condition": "Wound Dehiscence",
+  "procedure_name": "Resuturing of wounds",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Resuturing of wounds_Medco.pdf",
+    "Resuturing of wounds_PPD.CPD.pdf"
+  ],
+  "alos": "1-2 days",
+  "min_doctor_qualification": [
+    "MS (OB&GYN)",
+    "MD (OB&GYN)",
+    "DNB (OB&GYN)",
+    "DGO (OB&GYN)",
+    "Equivalent (OB&GYN)"
+  ],
+  "clinical_indications": [
+    "Pain, Redness, Swelling, Bleeding, Discharge with/without fever, presence of raw/ infected area in the stitch line",
+    "History of perineal injury after childbirth (Vaginal delivery)",
+    "History of caesarean surgery or laparotomy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, symptoms, signs, examination findings, indication for procedure, planned line of treatment, and advice for admission"
+      },
+      {
+        "key": "history_recent_surgery",
+        "label": "History of undergoing recent surgical procedure/ delivery/ laparotomy."
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers clearly indicating the need for performing the surgery"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary with advice on wound care & follow-up."
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes – all vitals, detailed history (of recent abdominal surgery/ laparotomy, caesarean delivery, perineal injury following vaginal delivery), symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advise for admission available?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical presentation, evaluation findings, and imaging/investigations confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was there a recent history of laparotomy/ delivery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed operative notes available with indications for and outcomes of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is discharge summary available with advice on wound care & follow-up at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation or severity not indicative of resuturing of wounds",
+    "Missing documented recent history of laparotomy or delivery",
+    "Detailed clinical notes, including history of recent surgery/delivery/laparotomy, missing or incomplete at pre-authorization",
+    "Detailed indoor case papers with daily vitals and treatment details missing or incomplete at claim submission",
+    "Detailed operative notes with indications and outcomes of the procedure missing or incomplete at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "When an incision or a cut made during surgical procedure reopens, it's called a Wound dehiscence. Its most common within 5 to 15 days after a surgery. There can be partial or complete disruption of a closed wound with or without protrusion or evisceration. It could be abdominal/ perineal wound."
+    ],
+    "surgical_options": [
+      "Surgical treatment (Resuturing of Wounds)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "risk_factors": {
+      "pre_operative": "obesity, sepsis, diabetes, long term corticosteroid usage, hypoalbunemia/ malnutrition, anemia, uremia, malignancy, chemotherapy, prolonged labour",
+      "intra_operative": "Type of surgical procedure (emergency/ elective), incision type, use of drainage, suturing techniques, suturing materials.",
+      "post_operative": "Conditions that increase intra-abdominal pressure such as use of mechanical ventilation, excessive coughing and vomiting, post operative ileus, urinary bladder distension, ascites, infection, anti-neoplastic medication, hematoma formation"
+    }
+  }
+}

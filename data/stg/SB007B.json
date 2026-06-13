@@ -1,0 +1,108 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB007B",
+  "procedure_code": "SB007B",
+  "condition": "Humerus fracture",
+  "procedure_name": "Elastic nailing for fracture fixation - Humerus",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Percutaneous Fixation  & Elastic nailing of Fracture_Medco.pdf",
+    "Percutaneous Fixation  & Elastic nailing of Fracture_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years' experience"
+  ],
+  "clinical_indications": [
+    "Fracture shaft of humerus",
+    "Stable fixation of the fracture with minimal soft tissue dissection",
+    "To avoid risk of avascular necrosis of the femoral head",
+    "To avoid damage to the growth plates"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      },
+      {
+        "key": "x_ray_pre_procedure",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_notes",
+        "label": "Detailed procedure / operation notes"
+      },
+      {
+        "key": "x_ray_post_procedure",
+        "label": "Post procedure X-ray labelled with patient ID, date and side (Left/Right) - affected part"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice/barcode of Implant used(optional)?"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph(Optional)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are the clinical notes and X-ray report indicative of the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the clinical notes and X-ray report indicative of the procedure?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and X-ray report are not indicative of the procedure.",
+    "Pre-procedure X-ray is missing or not labelled with patient ID, date, or side (Left/Right).",
+    "Clinical photograph of affected part is missing at pre-authorization.",
+    "Detailed procedure/operative notes are missing at claim submission.",
+    "Post-procedure X-ray is missing or not labelled with patient ID, date, or side (Left/Right) at claim submission.",
+    "Discharge summary is missing or does not include follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB or Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "The use of elastic nails allows stable fixation of the fracture with minimal soft tissue dissection and avoids the risk of avascular necrosis of the femoral head and damage to the growth plates.",
+      "The two modalities of internal fixation in fracture shaft of humerus are plate osteosynthesis and intramedullary nailing."
+    ],
+    "surgical_options": [
+      "Plate osteosynthesis",
+      "Intramedullary nailing"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

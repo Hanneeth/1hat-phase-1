@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG037A",
+  "procedure_code": "MG037A",
+  "condition": "Cardiac Tamponade",
+  "procedure_name": "Cardiac Tamponade",
+  "specialty": "General Medicine",
+  "version": "1.1",
+  "source_files": [
+    "Cardiac Tamponade_Medco.pdf",
+    "Cardiac Tamponade_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Presence of Cardiac tamponade, a form of cardiogenic shock and medical emergency",
+    "Large pericardial effusion requiring invasive pericardiocentesis",
+    "Pericardial effusion of unknown etiology (when pericardiocentesis is performed for diagnosis)",
+    "Clinical signs of cardiac tamponade including hypotension, pulsus paradoxus, right ventricular collapse, right atrial collapse, and respiratory variation of mitral and tricuspid flow on echocardiography",
+    "Symptoms such as sensation of retrosternal oppression, dyspnoea, and tachycardia",
+    "Signs such as quieter heart sounds, reduced QRS voltage on ECG complex, QRS complexes alternating in amplitude, and Beck's triad (raised JVP, hypotension, and pulsus paradoxus)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_eval_findings_indications_plan",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "ecg_report_12_lead",
+        "label": "12 lead ECG report"
+      },
+      {
+        "key": "echo_color_doppler_report_stills",
+        "label": "Echo/ color Doppler report with stills"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_treatment_details",
+        "label": "Detailed indoor case papers with treatment details"
+      },
+      {
+        "key": "post_procedure_echo_color_doppler_report",
+        "label": "Post procedure echo/color Doppler report"
+      },
+      {
+        "key": "analysis_fluid_aspirated_report",
+        "label": "Analysis of Fluid Aspirated report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the 12 lead ECG report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ color doppler report suggestive of Cardiac tamponade?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the Indoor case papers and treatment given details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure echo/ color doppler report confirm decrease in volume of pericardial fluid?",
+        "expected": true
+      },
+      {
+        "q": "Is the analysis report of pericardial aspirated submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient Echo/ color doppler report not suggestive of Cardiac tamponade.",
+    "Clinical Notes missing, incomplete, or lacking details on evaluation findings, indications, or planned treatment.",
+    "12 lead ECG report not submitted.",
+    "Indoor case papers or treatment details not available or incomplete.",
+    "Post procedure echo/color Doppler report not confirming decrease in pericardial fluid volume.",
+    "Analysis report of pericardial aspirated not submitted.",
+    "Detailed Discharge Summary missing or not mentioning date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": "MD/DNB or equivalent Internal Medicine; DM (Cardiology)",
+    "clinical_key_pointers": [
+      "Pericardial effusion can develop from any pericardial disease, including pericarditis and several systemic disorders, such as malignancies, pulmonary tuberculosis, chronic renal failure, thyroid diseases, and autoimmune diseases.",
+      "The causes of large pericardial effusion requiring invasive pericardiocentesis may vary according to the time, country, and hospital.",
+      "Transthoracic echocardiography is the most important tool for diagnosis, grading, the pericardiocentesis procedure, and follow up of pericardial effusion.",
+      "Cardiac tamponade is a kind of cardiogenic shock and medical emergency.",
+      "Clinicians should understand the tamponade physiology, especially because it can develop without large pericardial effusion.",
+      "In addition, clinicians should correlate the echocardiographic findings of tamponade, such as right ventricular collapse, right atrial collapse, and respiratory variation of mitral and tricuspid flow, with clinical signs of clinical tamponade, such as hypotension or pulsus paradoxus.",
+      "Percutaneous pericardiocentesis has been the most useful procedure in many cases of large pericardial effusion, cardiac tamponade, or pericardial effusion of unknown etiology.",
+      "The procedure should be performed with the guidance of echocardiography."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

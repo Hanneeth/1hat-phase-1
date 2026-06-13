@@ -1,0 +1,107 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Clinic based therapeutic interventions of ENT/ : Clinic based therapeutic interventions of ENT_Medco.pdf (clinical + mandatory docs) + Clinic based therapeutic interventions of ENT_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "SL035C",
+  "procedure_code": "SL035C",
+  "condition": "Clinic based therapeutic interventions of ENT",
+  "procedure_name": "Intratympanic injections",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Clinic based therapeutic interventions of ENT_Medco.pdf",
+    "Clinic based therapeutic interventions of ENT_PPD.CPD.pdf"
+  ],
+  "alos": "daycare",
+  "min_doctor_qualification": [
+    "MS/ DNB or equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Endolymphatic hydrops",
+    "Sudden sensorineural hearing loss"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the day care procedure"
+      },
+      {
+        "key": "nasoendoscopy_radiology_audiometry_findings",
+        "label": "Nasoendoscopy/ radiology/ audiometry findings to justify the need for Procedure"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes detailing signs and symptoms, treatment given"
+      },
+      {
+        "key": "procedure_note_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "post_procedure_audiology_radiology",
+        "label": "Post procedure audiology and radiology (IT injections)"
+      },
+      {
+        "key": "discharge_summary_report",
+        "label": "Discharge summary report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the day care procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Nasoendoscopy/ radiology/ audiometry report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was clinical notes detailing signs and symptoms, treatment given are submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure audiology and radiology (IT injections) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge summary report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or nasoendoscopy/radiology/audiometry report not indicative of the intratympanic injections procedure.",
+    "Clinical notes for pre-authorization missing or incomplete for intratympanic injections.",
+    "Nasoendoscopy/radiology/audiometry findings to justify intratympanic injections procedure missing at pre-authorization.",
+    "Post-procedure audiology and radiology for intratympanic injections not submitted.",
+    "Procedure note/operative note for intratympanic injections missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Intratympanic (IT) injections is the procedure to deliver medications at a higher concentration in the middle ear through the tympanic membrane by a long and fine needle to target the pathologies in the inner ear avoiding systemic side effects of the drug.",
+      "Common drugs delivered by IT route are corticosteroids and gentamycin indicated for selected patients with endolymphatic hydrops and sudden sensorineural hearing loss."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

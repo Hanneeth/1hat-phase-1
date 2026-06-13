@@ -1,0 +1,154 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG057A",
+  "procedure_code": "SG057A",
+  "condition": "Cystic swellings in the scrotum",
+  "procedure_name": "Epididymal Cyst excision",
+  "specialty": "General Surgery, Pediatric Surgery, Genitourinary Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Cystic swellings in the scrotum_Medco.pdf",
+    "Cystic swellings in the scrotum_PPD.CPD.pdf"
+  ],
+  "alos": "1-2 Days",
+  "min_doctor_qualification": [
+    "MS/Equivalent (in General Surgery)",
+    "MCh/Equivalent (in Pediatric Surgery, Genitourinary Surgery)"
+  ],
+  "clinical_indications": [
+    "Persistent hemiscrotal swelling that is usually painless but may give a dragging sensation depending upon size",
+    "Dull pain in the scrotum",
+    "A feeling of heaviness in the scrotum",
+    "Redness in the scrotum area",
+    "Increased pressure at the bottom of the penis",
+    "Tender or swollen epididymis",
+    "Tender, swollen, or hardened testicles",
+    "Pain in the groin or lower back and abdomen",
+    "Surgical removal of large or painful epididymal cysts from the scrotum"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "cyst_size",
+      "operator": "is",
+      "value": "large",
+      "note": "Excision may be necessary if the cyst is large"
+    },
+    {
+      "field": "symptoms",
+      "operator": "is",
+      "value": "painful",
+      "note": "Excision is indicated for painful cysts"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure and planned line of management"
+      },
+      {
+        "key": "clinical_photographs_optional",
+        "label": "Clinical photographs (optional)"
+      },
+      {
+        "key": "scrotal_ultrasound",
+        "label": "Scrotal ultrasound"
+      },
+      {
+        "key": "fine_needle_aspiration_cytology_optional",
+        "label": "Fine Needle Aspiration Cytology (FNAC) (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photographs_optional",
+        "label": "Post-operative photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical evaluation and Scrotal ultrasound/FNAC confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative photographs submitted (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Histopathological examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or incomplete, lacking detailed history, signs & symptoms, planned line of treatment, or indication for procedure",
+    "Diagnosis not confirmed by clinical evaluation or Scrotal ultrasound/FNAC",
+    "Cyst not documented as large or painful to justify surgical excision",
+    "Scrotal ultrasound not submitted at pre-authorization",
+    "Detailed ICPs with daily vitals and treatment details missing or incomplete",
+    "Detailed procedure / Operative Notes not available",
+    "Histopathological examination report not submitted",
+    "Discharge summary with follow-up advice not provided"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "An epididymal cyst is a fluid-filled, thin-walled cysts found posterior to the testis, usually in the upper or lower pole of the epididymis. They are very common, usually multiple and vary in size at presentation.",
+      "Aetiology: Cystic degeneration of the appendages of epididymis—congenital",
+      "Site: Behind and above the testis in the region of epididymal head",
+      "Loculi: Multilocular",
+      "Contents: Crystal clear, watery",
+      "Transillumination: Brilliant (Chinese lantern pattern)",
+      "Aspiration: Results in recurrence as the cyst is multilocular",
+      "Excision: Excision may be necessary if the cyst is large"
+    ],
+    "surgical_options": [
+      "Surgical removal – Epididymal cyst removal or excision is a procedure to remove large or painful cysts from the scrotum"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

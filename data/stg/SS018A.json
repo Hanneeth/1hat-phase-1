@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS018A",
+  "procedure_code": "SS018A",
+  "condition": "Congenital lobar emphysema",
+  "procedure_name": "Surgery for Congenital lobar emphysema",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Congenital lobar emphysema_Medco.pdf",
+    "Congenital lobar emphysema_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MCh/ equivalent (in pediatric surgery)"
+  ],
+  "clinical_indications": [
+    "Breathlessness",
+    "Cough",
+    "Wheezing",
+    "Respiratory distress in neonatal and early infancy",
+    "Tachypnea and increased work of breathing/retractions",
+    "Cyanosis",
+    "Recurrent respiratory tract infections",
+    "Poor feeding with failure to thrive",
+    "Chronic cough"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "posteroanterior_chest_x_ray",
+        "label": "Posteroanterior chest X-ray"
+      },
+      {
+        "key": "ct_chest",
+        "label": "CT Chest"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "posteroanterior_chest_x_ray_ct_chest",
+        "label": "Posteroanterior chest X-ray/ CT chest"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Chest X-ray and CT Chest reports submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "CT chest report or post-procedure X-ray stills not submitted.",
+    "Chest radiograph does not show evidence of lobar over aeration, mediastinal shift, or compression of the adjacent lobe for diagnosis.",
+    "Clinical notes are missing, incomplete, or lack detailed history, signs & symptoms, or indication for procedure.",
+    "Detailed Indoor Case Papers (ICPs) are missing or do not include daily vitals and line of treatment.",
+    "Detailed procedure/operative notes are missing or incomplete.",
+    "Discharge summary is missing or does not include follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Congenital lobar emphysema (CLE), also known as congenital alveolar overdistension, congenital lobar over inflation and infantile lobar emphysema is a developmental anomaly of the lower respiratory tract that is characterized by hyperinflation/overdistension of one or more of the pulmonary lobes. The left upper lobe is affected most often.",
+      "Congenital lobar emphysema is most frequently the result of a check-valve obstruction with gas trapping, not true emphysema. It can also, on rare occasions, be the result of a hyperalveolar lobe with an excessive number of alveoli of normal size.",
+      "Progressive respiratory distress develops rapidly in some infants, while others have a more gradual, insidious onset and some may remain asymptomatic for years. The severity depends upon the size of the affected lobe, the compression of surrounding lung tissue, and the extent of mediastinal shift.",
+      "A strong clinical suspicion is required to diagnose this rare anomaly which may mimic other causes of respiratory distress.",
+      "Congenital lobar emphysema is characterized by:",
+      "(1) difficulty in breathing or very rapid respiration (respiratory distress) in infancy",
+      "(2) an enlarged chest due to over inflation of at least one lobe of the lung",
+      "(3) compressed normal lung tissue in the section of the lung nearest to the diseased lobe",
+      "(4) bluish color of the skin due to a lack of oxygen in the blood (cyanosis)",
+      "(5) underdevelopment of the cartilage that supports the bronchial tube (bronchial hypoplasia)"
+    ],
+    "surgical_options": [
+      "Treatment of CLE is essentially surgical, i.e., lobectomy",
+      "CLE is rarely treated with thoracoscopy, while thoracotomy is still the most common surgical technique for resection of CLE in childhood",
+      "Asymptomatic patients may be managed conservatively but should be kept in close follow-up as they may require surgical intervention in cases of worsening respiratory distress"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

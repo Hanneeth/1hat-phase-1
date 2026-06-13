@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL003A",
+  "procedure_code": "SL003A",
+  "condition": "Conductive Hearing Loss",
+  "procedure_name": "Stapedectomy",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Stapedectomy.Tympanotomy_Medco.pdf",
+    "Stapedectomy.Tympanotomy_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MS (in ENT)",
+    "DNB (in ENT)",
+    "PG Diploma or equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Hearing loss caused by stapes fixation as a result of otosclerosis, tympanosclerosis, or congenital malformation",
+    "Conductive hearing loss (due to stapes footplate fixation) with an air bone gap of at least 30dB"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "air bone gap",
+      "operator": ">=",
+      "value": "30dB",
+      "note": "due to stapes footplate fixation"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, ear examination findings, indications for doing the procedure& advise for admission)"
+      },
+      {
+        "key": "audiometry_tympanometry_report",
+        "label": "Audiometry report confirming conductive deafness and Tympanometry"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "intraoperative_photograph",
+        "label": "Intra-operative photograph with time and date (optional)"
+      },
+      {
+        "key": "ossicular_prosthesis_invoice",
+        "label": "Invoice of the ossicular prosthesis/ piston used, if any"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes (including clinical symptoms, ear examination findings, indications for doing the procedure & advice for admission)?",
+        "expected": true
+      },
+      {
+        "q": "Evidence of Audiometry confirming conductive deafness?",
+        "expected": true
+      },
+      {
+        "q": "Does the patient complain of functional hearing loss?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advice including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes, ear examination findings, or admission advice missing/incomplete at pre-authorization",
+    "Audiometry report not confirming conductive deafness or Tympanometry missing/incomplete at pre-authorization",
+    "Air bone gap is less than 30dB despite stapes footplate fixation",
+    "Patient does not complain of functional hearing loss",
+    "Operative notes missing or not detailing surgical steps and outcomes at claim submission",
+    "Documents showing appropriate post-operative care and follow-up advice are missing"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for surgery only if diagnosis made is backed by clinical signs, symptoms, and ear examination."
+    ],
+    "surgical_options": [
+      "Stapedectomy",
+      "Stapedotomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "Outcome: Air-bone gap is improved to <20dB.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Patients with active ear infection",
+      "Only hearing ear",
+      "Co-existing Meniere's disease"
+    ]
+  }
+}

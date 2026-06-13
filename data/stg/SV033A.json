@@ -1,0 +1,124 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV033A",
+  "procedure_code": "SV033A",
+  "condition": "Redo sternotomy for management of residual cardiac lesions or complications after previous cardiac surgery",
+  "procedure_name": "Re-do sternotomy",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Redo-sternotomy_Medco.pdf",
+    "Redo-sternotomy_PPD.CPD.pdf"
+  ],
+  "alos": "Additional 2-3 days (Depends on the clinical condition and primary procedure)",
+  "min_doctor_qualification": [
+    "MCh (Cardiothoracic Surgery)",
+    "DNB (Cardiothoracic Surgery)",
+    "Equivalent (in Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Pulmonic regurgitation (treated with surgical or percutaneous valve replacement)",
+    "Right ventricular (RV) outflow tract obstruction, including RV-to-pulmonary artery conduit dysfunction (stenosis of the conduit or stenosis or regurgitation of the valve)",
+    "Pacemaker or defibrillator placement",
+    "Left ventricular (LV) outflow tract obstruction",
+    "Regurgitation (including aortic valve or regurgitation due to root replacement or aneurysm repair)",
+    "Mitral valve repair or replacement"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, previous surgery details, and planned line of management"
+      },
+      {
+        "key": "ct_mri_chest_2decho",
+        "label": "CT/MRI Chest / 2DECHO"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "post_op_ct_chest",
+        "label": "Post-op CT chest (optional)"
+      },
+      {
+        "key": "post_op_chest_xray_echo",
+        "label": "Post-op Chest Xray / ECHO"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are clinical notes with all vitals, symptoms, signs, physical examination findings, and indication for the procedure available?",
+        "expected": true
+      },
+      {
+        "q": "Is the planned line of treatment documented?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical condition and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Does the imaging indicate surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing essential details (vitals, symptoms, signs, physical examination, indication for procedure, planned treatment).",
+    "Clinical condition and/or imaging does not confirm the diagnosis or is not indicative of surgery.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details are missing or incomplete.",
+    "Detailed Procedure / Operative Notes are missing or incomplete.",
+    "Required imaging (CT/MRI Chest / 2DECHO or Post-op CT/Xray/ECHO) is missing or does not support the performed surgery.",
+    "Discharge summary or follow-up advice is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT; Intensive care unit",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Redo procedures after a previous sternotomy for cardiac surgery are considered challenging, with significant associated risk.",
+      "A median re-sternotomy has a high rate of injury during the redo procedure, especially in patients with vascular structures that lie directly behind the sternum (ascending aorta, right ventricle, or patent coronary bypass grafts).",
+      "If the heart or great vessels are damaged with redo sternotomy then immediate cardiopulmonary bypass may be required.",
+      "If there are adhesions or no space between the sternum and underlying structures, the surgical team typically inserts cardiopulmonary bypass (CPB) cannulae in peripheral blood vessels (eg, a femoral vein and axillary artery) so that CPB can be initiated immediately if necessary.",
+      "In some cases when CT or MRI imaging predicts a high risk of catastrophic hemorrhage (eg, retrosternal RV aneurysm or dilated ascending aorta adherent to the sternum), CPB is electively initiated via peripheral cannulation in order to decompress the cardiac chambers and permit safer sternal reentry."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "The purpose of this section is to act as a guidance & a clinical decision support tool for the clinicians in deciding the line of treatment, plan clinical management of patient and decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

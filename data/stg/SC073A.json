@@ -1,0 +1,140 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SC073A",
+  "procedure_code": "SC073A",
+  "condition": "Microvascular & Vascular reconstruction (free flaps)",
+  "procedure_name": "Microvascular reconstruction (free flaps)",
+  "specialty": "Plastic & Reconstructive Surgery, Surgical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Microvascular & Vascular reconstruction (free flaps)_MEDCO-converted.pdf",
+    "Microvascular & Vascular reconstruction (free flaps)_PPD_CPD-converted.pdf"
+  ],
+  "alos": "7 day",
+  "min_doctor_qualification": [
+    "MCh/DNBequivalent in Plastic Surgery/ Reconstructive Surgery/Surgical Oncology"
+  ],
+  "clinical_indications": [
+    "Tissue defects when graft is not possible or has failed",
+    "Reconstruction of wounds with: Exposed bone (Bone without periosteum)",
+    "Reconstruction of wounds with: Exposed cartilage (without perichondrium)",
+    "Reconstruction of wounds with: Exposed tendon (without paratenon)",
+    "Reconstruction of wounds with: Any exposed structure that is not vascularized on its own like open joint, metal, nerves, blood vessels.",
+    "Patients who need full thickness reconstruction such as padding body prominences as in pressure ulcers.",
+    "To provide functional motor unit for facial palsy, reconstruction of anal sphincter, brachial plexus palsy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_pathology_treatment_plan",
+        "label": "Clinical notes, history of surgeries, detailing original pathology, need for microvascular/vascular surgery, planned treatment, and advice for admission"
+      },
+      {
+        "key": "pretreatment_clinical_photograph",
+        "label": "Pretreatment clinical photograph of affected part (If applicable)"
+      },
+      {
+        "key": "biopsy_report",
+        "label": "Biopsy report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/Operative notes"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical notes detailing original pathology submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Pretreatment clinical photograph of affected part submitted? (If applicable)",
+        "expected": true
+      },
+      {
+        "q": "Was the Biopsy report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure clinical photograph of the affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge summary report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or pretreatment clinical photograph are not indicative of the procedure.",
+    "Clinical notes detailing original pathology, treatment plan, or need for surgery missing or incomplete for pre-authorization.",
+    "Biopsy report not submitted at pre-authorization stage for Microvascular reconstruction (free flaps).",
+    "Pretreatment clinical photograph of affected part missing or unclear at pre-authorization.",
+    "Post-procedure clinical photograph of the affected part missing at claim submission.",
+    "Detailed procedure/Operative notes are missing or lack essential surgical details."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed forSurgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "A flap: is tissue that can be transferred from its donor site to the recipient site with its own inherent blood supply. Pedicled flaps remain attached to the donor site at the base after being inset whereas, free flaps are completely detached from the donor site and inset into the recipient area with microvascular anastomosis of the blood vessels of the flap to the donor vessels.",
+      "A flap can consist of skin, fat, fascia, muscle, bone in any combination.",
+      "Reconstruction:Reconstructive surgery is surgery for restoration of form and function. Options for reconstruction include direct closure, tissue grafting, tissue expansion, local flap cover, distant flap cover and free flap cover. A systematic approach is followed to choose the most appropriate form of soft tissue coverage for a defect. Free flap is an effective solution to treat patients and improve their functional and cosmetic outcome."
+    ],
+    "surgical_options": [
+      "Free flap cover"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "advantages_of_flap_cover": [
+      "They have their own blood supply",
+      "Lesser chances of contractures",
+      "Protection for underlying structures",
+      "Increased durability",
+      "Can be sensate",
+      "Better color and texture match"
+    ],
+    "six_cs_of_flap_design": [
+      "Circulation: Blood supply: axial or random",
+      "Constituents: Skin, Fasciocutaneous/fascia, Muscle, Visceral, nerve, Bone, cartilage, Lymph node.",
+      "Contiguity: Local, Regional, Distant",
+      "Construction: Flow: Unipedicle/Bipedicle, Antegrade/Retrograde, Turbocharged, Supercharged, Arterialized venous.",
+      "Conditioning: Delay, tissue expansion, prefabrication.",
+      "Confirmation: Design- Shape, tubed flaps, combined flaps."
+    ]
+  }
+}

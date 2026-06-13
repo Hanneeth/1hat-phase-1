@@ -1,0 +1,526 @@
+{
+  "_comment": "KB-2 HBP 2022 — Emergency Room Packages. Deterministic fields set by kb2_extractor.py. Fill: mandatory_documents, aliases, stratification_criteria, additional_information.",
+  "scheme_id": "pmjay",
+  "specialty": "Emergency Room Packages",
+  "specialty_code": "ER",
+  "packages": [
+    {
+      "package_code": "ER001",
+      "package_name": "Laceration - Suturing / Dressing",
+      "procedures": [
+        {
+          "procedure_code": "ER001A",
+          "procedure_name": "Laceration - Suturing / Dressing",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2000,
+            "tier2": 2300,
+            "tier1": 2300
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 2000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "full",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "ER001A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "pre-clinical photograph"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Clinical notes / discharge summary with planned line of treatment"
+              },
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "post clinical photograph"
+              }
+            ]
+          },
+          "aliases": [
+            "Wound suturing",
+            "Laceration repair",
+            "Dressing of wound",
+            "ICD-10 T14.1",
+            "Primary wound closure",
+            "Emergency suturing",
+            "Cut injury repair"
+          ],
+          "additional_information": {
+            "alos": "3 days",
+            "mlc_note": "MLC required if the laceration is due to an accident, assault, or medico-legal incident."
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row ER001A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (Yes) → full",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "ER002",
+      "package_name": "Cardiopulmonary emergency",
+      "procedures": [
+        {
+          "procedure_code": "ER002A",
+          "procedure_name": "Emergency with stable\ncardiopulmonary status",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2000,
+            "tier2": 2300,
+            "tier1": 2300
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 2000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "full",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "ER002A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "ecg",
+                "label": "ECG"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Clinical notes / discharge summary with planned line of treatment"
+              }
+            ]
+          },
+          "aliases": [
+            "Stable emergency admission",
+            "Cardiopulmonary observation",
+            "ER admission stable",
+            "ICD-10 Z04.8",
+            "Medical emergency management"
+          ],
+          "additional_information": {
+            "alos": "3 days"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row ER002A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (Yes) → full",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "ER002B",
+          "procedure_name": "Emergency with unstable cardiopulmonary status with\nresuccitation",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 11000,
+            "tier2": 12300,
+            "tier1": 12300
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 11000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "full",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "ER002B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "ecg",
+                "label": "ECG"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Clinical notes / discharge summary with planned line of treatment"
+              }
+            ]
+          },
+          "aliases": [
+            "CPR",
+            "Cardiopulmonary resuscitation",
+            "Code blue management",
+            "Unstable emergency admission",
+            "Cardiac arrest management",
+            "ICD-10 I46.9",
+            "Advanced life support in ER"
+          ],
+          "additional_information": {
+            "alos": "5 days",
+            "admission_criteria": "Unstable cardiopulmonary status requiring resuscitation"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row ER002B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (Yes) → full",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "ER003",
+      "package_name": "Animal bites (Excluding Snake Bite)",
+      "procedures": [
+        {
+          "procedure_code": "ER003A",
+          "procedure_name": "Animal bites (Excluding Snake Bite)",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 1700,
+            "tier2": 2000,
+            "tier1": 2000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 1700,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "full",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "ER003A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Classification of bites"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "pre-clinical photograph"
+              }
+            ],
+            "claim": [
+              {
+                "key": "patient_signature",
+                "label": "Beneficiary signature / thumb impession"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "invoice / bar code sticker of the vaccine"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes with complete treatment details given"
+              }
+            ]
+          },
+          "aliases": [
+            "Dog bite",
+            "Cat bite",
+            "Monkey bite",
+            "Rabies post-exposure prophylaxis",
+            "PEP for animal bite",
+            "ICD-10 W54",
+            "ICD-10 W55"
+          ],
+          "additional_information": {
+            "alos": "3 days",
+            "admission_criteria": "Animal bites excluding snake bite"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row ER003A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (Yes) → full",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "SB001",
+      "package_name": "Fracture - Conservative Management - \nWithout plaster",
+      "procedures": [
+        {
+          "procedure_code": "SB001A",
+          "procedure_name": "Fracture - Conservative Management - \nWithout plaster",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2300,
+            "tier2": 2600,
+            "tier1": 2900
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 2300,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "SB001A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment including planned line of treatment"
+              },
+              {
+                "key": "xray",
+                "label": "X-ray films with reports"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operation notes"
+              },
+              {
+                "key": "xray",
+                "label": "Post procedure X-ray films with reports"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Conservative fracture management",
+            "Fracture care without cast",
+            "Closed reduction without plaster",
+            "Splinting of fracture",
+            "ICD-10 T14.2"
+          ],
+          "additional_information": {
+            "alos": "daycare",
+            "mlc_note": "MLC required for accidental fractures."
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row SB001A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "SU073",
+      "package_name": "Emergency management of Hematuria",
+      "procedures": [
+        {
+          "procedure_code": "SU073A",
+          "procedure_name": "Emergency management of Hematuria(per  day) LOS-1-5 days",
+          "billing_unit": "per_day",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Ward",
+              "criterion": "Admission to Ward",
+              "source": "domain_knowledge"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "domain_knowledge"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU without ventilator",
+              "criterion": "Admission to ICU without need for ventilation",
+              "source": "domain_knowledge"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU with ventilator",
+              "criterion": "Admission to ICU requiring mechanical ventilation",
+              "source": "domain_knowledge"
+            }
+          ],
+          "stg_ref": "SU073A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes detailing the hematuria"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "urine report showing frank or microscopic?"
+              }
+            ],
+            "claim": [
+              {
+                "key": "investigation_reports",
+                "label": "Evidence of investigations done treatment given"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Hematuria management",
+            "Blood in urine treatment",
+            "Emergency urology admission",
+            "ICD-10 R31",
+            "Gross hematuria care",
+            "Microscopic hematuria evaluation"
+          ],
+          "additional_information": {
+            "alos": "2 days"
+          },
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    }
+  ]
+}

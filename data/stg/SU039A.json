@@ -1,0 +1,98 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU039A",
+  "procedure_code": "SU039A",
+  "condition": "Kidney Stones (Post Open Pyelolithotomy Follow Up)",
+  "procedure_name": "Open Pyelolithotomy - Follow Up",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Open Pyelolithotomy - Follow Up_Medco.pdf",
+    "Open Pyelolithotomy - Follow Up_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Stone composition (ie, cystine), or anatomy (ie, ectopic, pelvic, or horseshoe kidney).",
+    "In cases of Obstruction of a caliceal infundibulum, the ureteropelvic junction, or the lumbar ureter and when volume and configuration of the stones contraindicate extracorporeal shock wave lithotripsy (ESWL) or percutaneous approach.",
+    "Such as with caliceal stones larger than the renal pelvis. minimally branched staghorn stones in the renal pelvis and excessive morbid obesity.",
+    "patients who are undergoing major open abdominal or retroperitoneal surgical procedures for other indications;",
+    "the most common concomitant procedure is open pyeloplasty for ureteropelvic junction (UPJ) obstruction."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_details",
+        "label": "Clinical notes detailing signs and symptoms, previous surgery/procedure, follow-up visit details, advise for daycare procedure"
+      },
+      {
+        "key": "discharge_summary_last_procedure",
+        "label": "Discharge summary of last pyelolithotomy Open. procedure performed"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_clinical_notes_current_visit",
+        "label": "Detailed clinical notes of the current visit"
+      },
+      {
+        "key": "usg_urine_routine_drugs_prescribed",
+        "label": "USG/Urine routine, Drugs prescribed"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes detailing signs and symptoms, previous surgery/procedure, follow-up visit details, advise for daycare procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge summary of last pyelolithotomy Open. procedure performed submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge summary of last pyelolithotomy Open. procedure indicative of follow-up visit?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed clinical notes of the current visit submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG/Urine routine, drugs prescribed submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes detailing signs and symptoms, previous surgery/procedure, follow-up visit details, or advice for daycare procedure missing or incomplete at pre-authorization.",
+    "Discharge summary of the last open pyelolithotomy procedure not submitted at pre-authorization.",
+    "Detailed clinical notes of the current visit missing or incomplete at claim submission.",
+    "USG/Urine routine or prescribed drugs not submitted at claim submission.",
+    "Discharge summary of the last open pyelolithotomy procedure not indicative of a follow-up visit.",
+    "The current request is for a 'Follow Up' package, but the clinical documentation does not clearly support a follow-up visit after an Open Pyelolithotomy."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pyelolithotomy: is procedure of choice for stones within the renal pelvis, including stones that demonstrated minimal invasion into calyces and infundibulum.",
+      "After introducing extracorporeal shockwave lithotripsy (ESWL) and percutaneous nephropyelolithotomy (PCN), pyelolithotomy has become an uncommon surgery in most countries"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "An imaging study to confirm the removal of all stone particle, prescribing drugs and Patient education (as part of follow up).",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

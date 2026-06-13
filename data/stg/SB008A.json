@@ -1,0 +1,110 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB008A",
+  "procedure_code": "SB008A",
+  "condition": "Fractures of Small Bones",
+  "procedure_name": "Internal Fixation of Small Bones",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Internal Fixation of Small Bones_Medco.pdf",
+    "Internal Fixation of Small Bones_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years' experience"
+  ],
+  "clinical_indications": [
+    "Fractures of small bones requiring open reduction and internal fixation (ORIF) to restore bone anatomy, enable early mobilization, and achieve prompt and full function of the injured part with rapid rehabilitation."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "xray_diagnosis",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) confirming the diagnosis"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_xray_implant",
+        "label": "Post-procedure X-ray labelled with patient ID, date and side (Left/Right) showing implant"
+      },
+      {
+        "key": "post_operative_photographs",
+        "label": "Post-operative photographs"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure / Operative Notes"
+      },
+      {
+        "key": "invoice_implant_used",
+        "label": "Invoice of Implant used"
+      },
+      {
+        "key": "discharge_summary_follow_up",
+        "label": "Is the Discharge summary with follow-up advise at the time of discharge?"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are the clinical notes and imaging reports indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes and/or imaging reports are not indicative of the procedure.",
+    "Pre-procedure X-ray is missing required labelling (patient ID, date, side) or does not confirm the diagnosis.",
+    "Clinical photograph of the affected part is missing.",
+    "Post-procedure X-ray is missing required labelling (patient ID, date, side) or does not show the implant.",
+    "Invoice for the implant used is missing.",
+    "Detailed procedure/operative notes are not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB or Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Fractures can be treated conservatively or with external and internal fixation. Open reduction and internal fixation (ORIF) are used to restore bone anatomy, enable early mobilization, and achieve prompt and full function of the injured part with rapid rehabilitation of the patient.",
+      "The numerous devices used for internal fixation include: wires, pins and screws, plates, and intramedullary nails or rods.",
+      "Pins: Most commonly used pins are Kirschner (K) wires and Steinman pins. These devices are used for temporary fixation of fracture fragments during reduction, to attach skeletal traction devices, and as guides for accurate placement of larger cannulated screws.",
+      "Wires: Wires are used alone or more commonly in combination with other orthopedic fixation devices. Used to reattach osteotomized bone fragments, in combination with pins or screws to create a tension band, which uses distractive muscular forces to create compression at the fracture site (e.g., Cerclage wires, Tension band wire).",
+      "Screws: Screws are commonly used in combination with plates and nails or rods. The use of different types and designs of screws depends on the surgeon's preference. Cortical screws are designed to be used in the diaphysis. Cancellous screws are intended to cross long segments of cancellous bone.",
+      "Plates: Rigid fracture fixation with plates and screws still has an important place and is desirable for fractures that involve an articular surface. 'Compression plating' applies compression to the fracture ends. 'Neutralization plating' is used in cases of severely comminuted fractures, bone loss, or other situations that prevent compression, where the plate is applied in neutral mode to hold fracture fragments in place during healing.",
+      "Intramedullary nails or rods: Intramedullary nailing is the standard treatment for diaphyseal fractures of the femur and tibia. The intramedullary location of the nails provides optimal biomechanical positioning to resist torsion and bending.",
+      "Staples and clamps are also used occasionally for osteotomy or fracture fixation."
+    ],
+    "surgical_options": [
+      "Wires",
+      "Pins",
+      "Screws",
+      "Plates",
+      "Intramedullary nails or rods",
+      "Staples and clamps"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

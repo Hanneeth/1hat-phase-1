@@ -1,0 +1,97 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG111A",
+  "procedure_code": "SG111A",
+  "condition": "Epididymal Excision",
+  "procedure_name": "Epididymal Excision under GA",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Epididymal Excision under GA_Medco.pdf",
+    "Epididymal Excision under GA_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)"
+  ],
+  "clinical_indications": [
+    "Post-vasectomy epididymal engorgement",
+    "Complex epididymal cyst disease",
+    "Chronic recurrent epididymitis",
+    "Epididymal tuberculosis resulting in caseation and a firm expanding mass not responding to antibiotic treatment"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes with history and examination and planned line of treatment"
+      },
+      {
+        "key": "usg_scrotum",
+        "label": "USG Scrotum"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "post_operative_hpe_report",
+        "label": "Post Operative HPE Report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether the investigation reports confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Discharge summary includes follow-up advice?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's clinical history or investigations are not indicative of Epididymal Excision.",
+    "Investigation reports do not confirm the diagnosis for Epididymal Excision.",
+    "Clinical notes are incomplete (missing history, examination, planned line of treatment, or indications for the procedure).",
+    "USG Scrotum report is missing or incomplete.",
+    "Post-operative HPE report is missing.",
+    "Discharge summary is incomplete (missing follow-up advice)."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Secondary Care Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Epididymal excision or Epididymectomy is an operation that is seldom indicated and is usually used as a last resort in treating pain.",
+      "The main indications include post-vasectomy epididymal engorgement, complex epididymal cyst disease, chronic recurrent epididymitis, and epididymal tuberculosis resulting in caseation and a firm expanding mass not responding to antibiotic treatment."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

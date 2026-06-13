@@ -1,0 +1,124 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG120A",
+  "procedure_code": "SG120A",
+  "condition": "Inflammatory Bowel Disease (Crohn's Disease, Ulcerative Colitis)",
+  "procedure_name": "One Stage - Sub Total Colectomy + Ileostomy + J - Pouch",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "One Stage - Subtotal Colectomy and Ileostomy and J-Pouch_Medco.pdf",
+    "One Stage - Subtotal Colectomy and Ileostomy and J-Pouch_PPD.CPD.pdf"
+  ],
+  "alos": "15 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MCh/DNB/Equivalent (GI Surgery)"
+  ],
+  "clinical_indications": [
+    "Inflammatory Bowel Disease (IBD) such as Crohn's Disease and Ulcerative Colitis when medications fail to control the symptoms or malignancies."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_exam_planned_treatment",
+        "label": "Clinical Notes with history and examination and planned line of treatment"
+      },
+      {
+        "key": "ct_abdomen_report",
+        "label": "CT Abdomen Report"
+      },
+      {
+        "key": "colonoscopy_report",
+        "label": "Colonoscopy Report"
+      },
+      {
+        "key": "biopsy_report_optional",
+        "label": "Biopsy Report (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "post_operative_clinical_photograph_stoma",
+        "label": "Post Operative Clinical Photograph of the Stoma created"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology Report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether the investigation reports confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes contain detailed history, signs and symptoms, clinical examination, planned line of treatment, and indications for the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Whether detailed Operative/Procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Whether detailed Discharge Summary Submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes (with history, examination, planned treatment, indications) are missing or incomplete at pre-authorisation.",
+    "CT Abdomen Report is missing at pre-authorisation.",
+    "Colonoscopy Report is missing at pre-authorisation.",
+    "Biopsy Report (if applicable) is missing at pre-authorisation.",
+    "Patient's clinical history or investigation reports are not indicative of the procedure or do not confirm the diagnosis.",
+    "Detailed Indoor Case Papers (ICPs) are missing or do not contain daily vitals and treatment details at claim submission.",
+    "Detailed Operative/Procedure Notes are missing or incomplete at claim submission.",
+    "Post Operative Clinical Photograph of the Stoma created is missing at claim submission.",
+    "Histopathology Report is missing at claim submission.",
+    "Detailed Discharge Summary (with follow-up advice) is missing or incomplete at claim submission.",
+    "Patient exhibits contraindications for anastomosis (e.g., severe proctitis, poor rectal compliance, faecal incontinence, anoperineal disease).",
+    "Rectum preserved for J-pouch, but dysplasia or carcinoma is present."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "One Stage Subtotal Colectomy + Ileostomy and J-Pouch surgery is a surgical procedure recommended for patients with Inflammatory Bowel Disease (IBD) such as Crohn's Disease and Ulcerative Colitis when medications fail to control the symptoms or malignancies.",
+      "The surgery removes the affected colon and rectum and preserves the anus and anal sphincter muscles. The ileum is made into a J-shaped pouch and connected to the superior part of the anal canal. A temporary ileostomy is typically created to increase the chances of healing of the created J pouch. A small loop of ileum is pulled through the stoma in the abdomen to allow faecal excretion into an ostomy bag."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "The anastomosis should not be offered to patients with severe proctitis, poor rectal compliance, faecal incontinence, or anoperineal disease.",
+      "Preservation of the rectum is also contraindicated if dysplasia or carcinoma is present."
+    ]
+  }
+}

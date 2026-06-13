@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS008A",
+  "procedure_code": "S1400021",
+  "condition": "Hirschsprung's Disease",
+  "procedure_name": "Myectomy",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Surgery for Hirschsprungs Disease_Medco.pdf",
+    "Surgery for Hirschsprungs Disease_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "DNB Pediatric surgery",
+    "MCh Pediatric surgery"
+  ],
+  "clinical_indications": [
+    "Failure to pass meconium in first 24-48 hours of life after confirmation of patent anus",
+    "Abdominal Distension",
+    "Constipation",
+    "Unexplained fever",
+    "Vomiting"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "x_ray_abdomen_usg_abdomen_dye_test_sigmoidoscopy_colonoscopy",
+        "label": "X Ray abdomen / USG Abdomen / Dye test / sigmoidoscopy / colonoscopy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "pre_anesthesia_check_up_report",
+        "label": "Pre-anesthesia check-up report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "histopathology_examination_report",
+        "label": "Histopathology examination report (within 7 days of discharge)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Investigations X Ray abdomen / USG Abdomen / Dye test / sigmoidoscopy / colonoscopy?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Is pre-anesthesia check-up report available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the Histopathology report available (within 7 days of discharge)?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient not a diagnosed and confirmed case of Hirschsprung disease based on clinical features and biopsy",
+    "X-ray erect abdomen / dye test / sigmoidoscopy / colonoscopy did not confirm dilated colonic loops",
+    "Histopathology report of resected tissue did not confirm Hirschsprung's Disease",
+    "Clinical notes missing or incomplete at pre-authorization",
+    "Investigation reports (X Ray abdomen / USG Abdomen / Dye test / sigmoidoscopy / colonoscopy) missing or inconclusive at pre-authorization",
+    "Histopathology examination report not submitted within 7 days of discharge for claim"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Failure to pass meconium in first 24-48 hours of life after confirmation of patent anus",
+      "Abdominal Distension",
+      "Constipation",
+      "Unexplained fever",
+      "Vomiting"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

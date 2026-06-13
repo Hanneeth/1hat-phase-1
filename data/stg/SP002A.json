@@ -1,0 +1,100 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SP002A",
+  "procedure_code": "SP002A",
+  "condition": "Diabetic Foot",
+  "procedure_name": "Diabetic Foot – Surgery",
+  "specialty": "Plastic & Reconstructive Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Diabetic Foot Surgery_Medco.pdf",
+    "Diabetic Foot Surgery_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB equivalent in Plastic Surgery/ Reconstructive Surgery"
+  ],
+  "clinical_indications": [
+    "Diagnosis of diabetic foot backed by clinical signs, symptoms, and examination.",
+    "Presence of loss of protective sensation in the lower extremity.",
+    "Increased biomechanical stress in areas of high pressure and eventual tissue loss.",
+    "Presence of intrinsic minus foot, characterized by deformities such as hammer toes, prominent plantar metatarsal heads, wasting of lumbricals, upward rotation of the forefoot, distal migration of the plantar metatarsal fat pads, weak extension of the hallux longus, cock-up deformity of the hallux longus with prominent extensor tendon, high arch, and xerotic skin.",
+    "Presence of Charcot's foot, characterized by erosions and collapse of the foot and ankle bones and the plantar arches, leading to marked deformities, raised plantar pressure, and ulcer formation.",
+    "Ulcer formation resulting from contractures, hammer toe, improper weight bearing, infection, or osteomyelitis.",
+    "Need for reduction of increased plantar pressures.",
+    "Need for reduction of pain.",
+    "Need for restoration of function, stability, and proper appearance of the foot."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_planned_treatment",
+        "label": "Clinical notes with planned line of treatment detailing diabetic foot extent of damage"
+      },
+      {
+        "key": "supporting_reports_clinical_photograph",
+        "label": "Supporting reports and Clinical photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment",
+        "label": "Detailed indoor case papers and treatment given"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/Operative notes"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "detailed_discharge_summary_follow_up",
+        "label": "Detailed Discharge summary and follow-up details"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the clinical notes and planned lined of treatment/clinical photograph justify the need for surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes, planned line of treatment, or clinical photograph did not justify the need for surgery.",
+    "Pre-authorization documents (clinical notes, supporting reports, clinical photograph) were missing, incomplete, or did not detail the extent of diabetic foot damage.",
+    "Post-procedure clinical photograph of the affected part was missing or unclear at claim submission.",
+    "Operative notes were missing or lacked sufficient detail on surgical steps.",
+    "Discharge summary was missing or did not include follow-up details."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Diabetic wound classification systems include Wagner, Armstrong, PEDIS (Perfusion, Extent, Depth, Infection and Sensitivity), and SINBAD (Site, Ischemia, Neuropathy, Bacterial infection, Area, Depth).",
+      "Relevant diagnostic investigations include arterial waveforms, segmental pressure, contrast arteriography, MRA, Multidetector CT, TcO2, Microangiopathy, and Peripheral neuropathy.",
+      "Management of Diabetic foot is multidisciplinary and involves three main stages: promotion of healing (fat transfer and other methods), reconstruction and coverage, and prevention of recurrence.",
+      "Key management steps include adequate offloading, correction of Equinus deformity, frequent debridement, moist wound care & Negative pressure wound therapy, control of infection, revascularization of an ischemic limb, and coverage of resistant ulcers and raw areas.",
+      "Aim of Reconstruction is the reduction of increased plantar pressures, reduction of pain, and the restoration of function, stability, and proper appearance, resulting in a useful foot or remnant that renders patients ambulant."
+    ],
+    "surgical_options": [
+      "Debridement",
+      "Achilles Tendon lengthening",
+      "Vascular surgery"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

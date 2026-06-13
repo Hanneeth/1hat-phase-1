@@ -1,0 +1,148 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN063D",
+  "procedure_code": "SN063D",
+  "condition": "High Cervical Injury (Minor Head Injury)",
+  "procedure_name": "Conservative management of Minor Head Injury",
+  "specialty": "Polytrauma/Neurosurgery",
+  "version": null,
+  "source_files": [
+    "Conservative Management of High Cervical Injury (Moderate & Minor Head Injury)_MEDCO-converted.pdf",
+    "Conservative Management of High Cervical Injury (Moderate & Minor Head Injury)_PPD_CPD-converted.pdf"
+  ],
+  "alos": "24-48 hours (Minor head injury)",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (Neurosurgery)",
+    "MS/DNB/equivalent (Gen Surgery)"
+  ],
+  "clinical_indications": [
+    "No evidence of dural penetration and no significant intracranial hematoma",
+    "Depression <1cm",
+    "No frontal sinus involvement",
+    "No wound infection or gross contamination",
+    "No gross cosmetic deformity",
+    "Adults with simple linear fractures who are neurologically intact do not require any intervention and may even be discharged home safely and asked to return if symptomatic."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "duration_of_unconsciousness",
+      "operator": "<",
+      "value": "30 Minutes",
+      "note": "for classification as Mild TBI (equivalent to Minor Head Injury)"
+    },
+    {
+      "field": "glasgow_coma_scale",
+      "operator": "between",
+      "value": "13-15",
+      "note": "for classification as Mild TBI (equivalent to Minor Head Injury)"
+    },
+    {
+      "field": "post_traumatic_amnesia",
+      "operator": "<",
+      "value": "24 Hours",
+      "note": "for classification as Mild TBI (equivalent to Minor Head Injury)"
+    },
+    {
+      "field": "depression",
+      "operator": "<",
+      "value": "1cm",
+      "note": "for non-surgical management"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_admission_gcs",
+        "label": "Clinical Notes detailing the injury with admission Glasgow coma scale score"
+      },
+      {
+        "key": "relevant_investigations_ct_head",
+        "label": "Relevant Investigations – CT head"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "post_procedure_imaging_ct_head",
+        "label": "Post procedure imaging with film – CT head"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are the Clinical Notes detailing the injury with admission Glasgow coma scale score submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the reports of the relevant Investigations -CT head submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the patient's Glasgow coma score and CT report suggestive of the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure/operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure imaging with film – CT head submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's Glasgow Coma Score or CT report is not suggestive of Minor Head Injury diagnosis.",
+    "Clinical notes detailing injury with admission Glasgow Coma Score not submitted or incomplete.",
+    "Relevant Investigations (CT head) report not submitted.",
+    "Detailed Indoor Case Papers (ICPs) for conservative management not submitted or incomplete.",
+    "Detailed procedure/operative notes (or equivalent clinical progress notes for conservative management) not submitted.",
+    "Post procedure imaging (CT head) not submitted for review."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Common clinical presentation in TBI patient: Headache and vomiting followed by skull fracture with history of loss of consciousness (LOC). Associated clinical findings suggestive of basal skull fracture are nasal bleed, ear bleed, ecchymosis over mastoid (battle'sign) and CSF rhinorrhea/otorrhea."
+    ],
+    "surgical_options": [
+      "The role of surgery is limited in the management of skull fractures. Surgery to elevate depressed skull fractures is preferred in • Open (compound) fractures. • Depressed fracture thickness >of calvaria and • Those fractures not meeting criteria for non-surgical management."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Evidence of dural penetration or significant intracranial hematoma",
+      "Depression >= 1cm",
+      "Frontal sinus involvement",
+      "Wound infection or gross contamination",
+      "Gross cosmetic deformity"
+    ]
+  }
+}

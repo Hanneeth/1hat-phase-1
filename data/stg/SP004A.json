@@ -1,0 +1,108 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SP004A",
+  "procedure_code": "SP004A",
+  "condition": "Microtia / Craniofacial Microsomia",
+  "procedure_name": "Ear Pinna Reconstruction with costal cartilage / Prosthesis (including the cost of prosthesis / implants)",
+  "specialty": "Plastic & Reconstructive Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Ear Pinna Reconstruction with costal cartilage  Prosthesis_Medco.pdf",
+    "Ear Pinna Reconstruction with costal cartilage  Prosthesis_PPD.CPD.pdf"
+  ],
+  "alos": "5 Day (For each stage)",
+  "min_doctor_qualification": [
+    "MCh/DNB - Plastic Surgery/ Reconstructive Surgery"
+  ],
+  "clinical_indications": [
+    "Microtia (congenitally small and malformed external ear)",
+    "Craniofacial microsomia (malformations affecting anatomical regions from first and second branchial arches)",
+    "Child with microtia has reached sufficient age (between 3 and 6 years old) for ear reconstruction"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "age",
+      "operator": "between",
+      "value": "3 and 6 years",
+      "note": "for ear reconstruction"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_planned_treatment_non_traumatic",
+        "label": "Clinical notes with planned line of treatment, supporting documents if indication is non traumatic."
+      },
+      {
+        "key": "mlc_fir_report_traumatic",
+        "label": "In case of injury then MLC/FIR report"
+      },
+      {
+        "key": "supporting_reports_clinical_photograph",
+        "label": "Supporting reports and Clinical photograph."
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers and treatment information"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "intra_operative_clinical_photograph_optional",
+        "label": "Intra operative clinical photograph (optional)"
+      },
+      {
+        "key": "clinical_photograph_affected_ear",
+        "label": "Clinical photograph of the affected ear"
+      },
+      {
+        "key": "invoice_barcode_prosthesis_implant",
+        "label": "Invoice/Barcode of Prosthesis/ Implant used (if applicable)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the clinical notes and planned line of treatment/clinical photograph justify the need for surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes or clinical photograph do not justify the need for ear reconstruction surgery.",
+    "MLC/FIR report not submitted in cases of trauma.",
+    "Supporting reports or general clinical photograph missing at pre-authorization.",
+    "Clinical photograph of the affected ear not submitted at claim stage.",
+    "Invoice or barcode of Prosthesis/Implant not submitted where applicable."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination."
+    ],
+    "surgical_options": [
+      "Autologous ear reconstruction (AER) using costal cartilage grafts (standard clinical practice). This involves harvesting costal cartilages, carving them into a three-dimensional ear shape, and implanting beneath the skin in the auricular region.",
+      "Costal Cartilage Fabrication Methods include reverse engineering (RE), computer-aided design (CAD), and additive manufacturing (AM).",
+      "Prosthetic and alloplastic approaches (while autologous cartilage is standard, these methods also exist)."
+    ],
+    "pre_op_preparation": "In case of unilateral microtia, otolaryngologist and audiologist consultations are required. In case of bilateral atresia, diagnostic brainstem auditory-evoked responses should be performed.",
+    "post_op_care": null,
+    "fitness_criteria": "Child with microtia has reached sufficient age, which may be between 3 and 6 years old.",
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment, especially to a Tertiary Hospital.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG054A",
+  "procedure_code": "MG054A",
+  "condition": "Gout",
+  "procedure_name": "Gout",
+  "specialty": "General Medicine",
+  "version": "1.1",
+  "source_files": [
+    "Gout_Medco.pdf",
+    "Gout_PPD.CPD.pdf"
+  ],
+  "alos": "2-3 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Recurring gout affecting several joints (polyarticular gout) or chronic deforming arthritis.",
+    "Urate deposition with serum uric acid levels greater than 6.8 mg/dL [404.5 mcmol/L].",
+    "More than 1 attack in last 12 months, often accompanied by fever up to 39°C.",
+    "Clinical attack of gout or inflamed tophi present.",
+    "Acute, monarticular arthritis, often of the first MTP joint, with common recurrence.",
+    "Identification of urate crystals in joint fluid or tophi is diagnostic.",
+    "Dramatic therapeutic response to NSAIDs."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "serum_uric_acid_level",
+      "operator": ">",
+      "value": "6.8 mg/dL [404.5 mcmol/L]",
+      "note": "Urate deposition occurs when serum uric acid is supersaturated."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "serum_uric_acid_levels",
+        "label": "Serum Uric acid levels"
+      },
+      {
+        "key": "c_reactive_protein_level",
+        "label": "C-reactive protein level"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers along with indications"
+      },
+      {
+        "key": "detailed_procedure_notes",
+        "label": "Detailed procedure notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Urate deposition levels greater than 6.8 mg/dL [404.5 mcmol/L]?",
+        "expected": true
+      },
+      {
+        "q": "Were Septic Arthritis, pseudogout, Rheumatoid Arthritis, hypertension, and impaired renal function causes been ruled out?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Serum Uric acid levels not submitted at pre-authorization.",
+    "C-reactive protein level not submitted at pre-authorization.",
+    "Urate deposition levels not documented as greater than 6.8 mg/dL [404.5 mcmol/L] or not justified.",
+    "Other causes of inflammation like Septic Arthritis, pseudogout, Rheumatoid Arthritis, hypertension, or impaired renal function not explicitly ruled out.",
+    "Detailed indoor case papers and indications missing or incomplete at claim submission.",
+    "Detailed procedure notes missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/ DNB/equivalent in General Medicine; DM in Rheumatology",
+    "clinical_key_pointers": [
+      "Proceed with management of Gout only if diagnosis made is backed by clinical signs:",
+      "Recurring gout affecting several joints (called polyarticular gout) or chronic deforming arthritis.",
+      "Urate deposition occurs when serum uric acid is supersaturated (ie, at levels greater than 6.8 mg/dL [404.5 mcmol/L]).",
+      "If more than 1 attack in last 12 months and Fever is common and may reach 39°C.",
+      "If clinical attack of gout and tophi/ inflamed tophi.",
+      "It may develop without apparent precipitating cause or may follow rapid increases or decreases in serum urate levels.",
+      "The MTP joint of the great toe is the most susceptible joint (“podagra”).",
+      "Exclude other causes of inflammation, such as sepsis within the joint, especially if gout has not been previously diagnosed, calcium pyrophosphate crystal deposition, including pseudogout, Rheumatoid Arthritis.",
+      "Patients with gout typically have hypertension and impaired renal function.",
+      "Acute, monarticular arthritis, often of the first MTP joint; recurrence is common.",
+      "Polyarticular involvement more common in patients with longstanding disease.",
+      "Identification of urate crystals in joint fluid or tophi is diagnostic.",
+      "Dramatic therapeutic response to NSAIDs.",
+      "With chronicity, urate deposits in subcutaneous tissue, bone, cartilage, joints, and other tissues.",
+      "Raised serum uric acid levels.",
+      "Identification of negatively birefringent sodium urate crystals in joint fluid or material aspirated from a tophus."
+    ],
+    "surgical_options": [
+      "Surgical excision of tophi"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Patients with gout typically have hypertension and impaired renal function. Consideration of renal and hepatic insufficiency when prescribing medication. Pharmacological management for chronic kidney disease.",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Sepsis within the joint (if not previously diagnosed as gout)",
+      "Calcium pyrophosphate crystal deposition (including pseudogout)",
+      "Rheumatoid Arthritis",
+      "Renal and hepatic insufficiency (for Colchicine)",
+      "Concomitant use of clarithromycin (Biaxin) (for Colchicine)"
+    ]
+  }
+}

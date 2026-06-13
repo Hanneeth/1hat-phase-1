@@ -1,0 +1,93 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M100007",
+  "procedure_code": "M100007",
+  "condition": "Accelerated hypertension",
+  "procedure_name": "Accelerated hypertension",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Accelerated hypertension_Medco.pdf",
+    "Accelerated hypertension_PPD.CPD.pdf"
+  ],
+  "alos": "2-3 days",
+  "min_doctor_qualification": [
+    "DNB (General Medicine / Pediatric Medicine)",
+    "MD (General Medicine / Pediatric Medicine)"
+  ],
+  "clinical_indications": [
+    "Blurred or double vision",
+    "Confusion or loss of consciousness for even a brief moment",
+    "Headache",
+    "Irregular heartbeat",
+    "Loss of vision or changes in vision",
+    "Nausea and vomiting",
+    "Weakness",
+    "Difficulty in breathing"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "blood_pressure",
+      "operator": ">",
+      "value": "180/120 mm/hg",
+      "note": "for diagnosis of Accelerated hypertension"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "fundoscopy_report",
+        "label": "Fundoscopy report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers with treatment given"
+      },
+      {
+        "key": "detailed_procedure_notes",
+        "label": "Detailed procedure notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the patient had Blood pressure above 180/120 mm/hg?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Patient's blood pressure not documented or documented below 180/120 mm/hg without justification for Accelerated Hypertension",
+    "Clinical notes, evaluation findings, indications, or planned line of treatment missing or incomplete",
+    "Fundoscopy report missing",
+    "Detailed Indoor Case Papers with vital (BP and Pulse) or Treatment details missing",
+    "Detailed procedure notes missing",
+    "Detailed Discharge Summary missing or missing date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MBBS",
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

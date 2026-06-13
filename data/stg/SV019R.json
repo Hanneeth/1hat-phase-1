@@ -1,0 +1,113 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV019R",
+  "procedure_code": "SV019R",
+  "condition": "Peripheral Arterial Surgeries - Neck",
+  "procedure_name": "Aorto - carotid bypass",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Peripheral Arterial Surgeries -Neck_Medco.pdf",
+    "Peripheral Arterial Surgeries -Neck_PPD.CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "MCh Cardiothoracic Surgery",
+    "DNB Cardiothoracic Surgery",
+    "MCh Vascular Surgery",
+    "DNB Vascular Surgery"
+  ],
+  "clinical_indications": [
+    "Effective for treating cerebrovascular ischemia due to long-segment or proximal carotid narrowing."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "diagnostic_imaging_reports",
+        "label": "Angiogram / CT Angiogram / Doppler ultrasound /Magnetic resonance angiography (MRA) reports investigations confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "graft_invoice_barcode",
+        "label": "Invoice/barcode of graft used (if artificial graft used)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission",
+        "expected": true
+      },
+      {
+        "q": "Was the Angiogram / CT Angiogram / Doppler ultrasound/ Magnetic resonance angiography (MRA) reports suggestive of Peripheral arterial diseases",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are Detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice/barcode of graft used submitted? (if artificial graft used)",
+        "expected": true
+      },
+      {
+        "q": "Is Detailed Discharge Summary with date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Diagnostic imaging reports (Angiogram / CT Angiogram / Doppler ultrasound / MRA) not indicative of Peripheral arterial disease or the specific procedure.",
+    "Clinical notes missing or incomplete (history, signs, symptoms, evaluation findings, indication, planned management, or admission advice).",
+    "Invoice/barcode of artificial graft not submitted when used.",
+    "Detailed Indoor Case Papers (ICPs) not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Peripheral artery disease (PAD) occurs when plaque accumulates in the arterial system and obstructs blood flow.",
+      "Atherosclerosis plaques accumulates inside the arterial intima and obstructs the lumen of the vessel causing a reduction in blood flow, which leads to diminished oxygen supply to the recipient tissues.",
+      "An arterial aneurysm is a bulge in the artery that develops in areas where the arterial wall is weak.",
+      "Also, certain natural branch points and curvatures within the vascular tree are more susceptible to atherosclerosis due to turbulent blood flow and shear stress.",
+      "Aorto-carotid bypass is effective for treating cerebrovascular ischemia due to long-segment or proximal carotid narrowing.",
+      "The morbidity of carotid bypasses: stroke (0.5-8%) and nerve injury (up to 10%)."
+    ],
+    "surgical_options": [
+      "Aorto-carotid bypass is effective for treating cerebrovascular ischemia due to long-segment or proximal carotid narrowing."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

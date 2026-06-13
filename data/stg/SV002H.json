@@ -1,0 +1,117 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV002H",
+  "procedure_code": "SV002H",
+  "condition": "Pulmonic Stenosis Repair",
+  "procedure_name": "Valvular PS repair",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "PS repair_Medco.pdf",
+    "PS repair_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch.",
+    "DNB",
+    "equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Newborns with severe PS who are duct dependent (Class I)",
+    "Infants, children, or adults with right ventricular dysfunction due to severe PS, regardless of the valve gradient (Class I)",
+    "Asymptomatic or symptomatic patients with valvular PS having peak instantaneous gradient by echo-Doppler of >64 mmHg (Class I)",
+    "Neonates and infants with any degree of PS who have mild hypoxia due to mild hypoplasia of RV, even if right ventricular function is normal (Class IIa)",
+    "Patients with valvular pulmonic stenosis due to dysplastic valve, who meet criteria for intervention (Class IIa)",
+    "Noonan syndrome (dysplastic valve) with hypoplastic annulus (Class I)",
+    "Failed balloon dilatation (Class I)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "peak instantaneous gradient by echo-Doppler",
+      "operator": ">",
+      "value": "64 mmHg",
+      "note": "for asymptomatic or symptomatic patients with valvular PS"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detail history, signs, symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of pulmonic stenosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not suggestive of pulmonic stenosis",
+    "Clinical notes missing detailed history, signs & symptoms, or indication for procedure",
+    "Post-procedure ECHO stills do not show repair of the defect",
+    "Detailed Discharge Summary does not mention date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pulmonary stenosis (PS) is a common congenital heart defect, occurring either as an isolated lesion or in association with other CHD. The prevalence of isolated PS is 7/10,000 and is found in 8%-10% of all patients with CHD.",
+      "The obstruction is at the valve level in 80% to 90% of patients, and the rest have obstruction below or above the pulmonary valve. Isolated subvalvular PS is uncommon, and it is generally associated with a VSD.",
+      "Clinical assessment: Phasic ejection click, a hallmark feature of valvular PS may be absent in dysplastic pulmonary valve.",
+      "X-ray chest: May be normal in patients with mild-to-moderate PS. Prominent pulmonary artery segment due to poststenotic dilation of main and left pulmonary artery localizes the obstruction to valve level. Cardiomegaly with right atrial and right ventricular enlargement indicates right ventricular dysfunction. The pulmonary vascularity is reduced in those with right-to-left shunt at atrial level and in severe cases with reduced cardiac output. The dilated RV is rounded rather than boot shaped (typical of TOF). PS due to dysplastic valve stenosis may not show poststenotic dilation of pulmonary trunk.",
+      "ECG: Patients with moderate or severe PS show right-axis deviation and right ventricular hypertrophy. In neonates with critical PS, ECG may show normal QRS axis and left ventricular dominance, especially if the right ventricular cavity is small. Older patients with severe PS may also show right atrial enlargement. R wave amplitude in lead V1 and R/S ratio in leads V1 and V6 correlate with severity of PS. Superior or left-axis deviation may be found in infants with PS who have congenital Rubella syndrome or Noonan syndrome.",
+      "Echocardiography: Key diagnostic tool for assessing the site and severity of PS, morphology of the pulmonary valve, pulmonary annulus diameter, pulmonary valve competence, additional sub- or supravalvular stenosis, evaluation of right ventricular size and function, associated tricuspid regurgitation, other features such as post-stenotic dilation of the main and branch pulmonary arteries, tricuspid valve morphology and shunting across ASD.",
+      "Cardiac catheterization and angiography: Performed primarily for therapeutic balloon valvuloplasty. Angiography is the gold standard for detailed imaging in patients with peripheral pulmonic stenosis.",
+      "CTA/cMRI: Indicated for diagnosis and planning management of patients with peripheral pulmonic stenosis."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

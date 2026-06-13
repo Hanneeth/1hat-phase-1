@@ -1,0 +1,144 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "BM001A",
+  "procedure_code": "BM001A",
+  "condition": "Thermal Burns/ Scald Burns/ Flame Burns",
+  "procedure_name": "% Total Body Surface Area Burns (TBSA) - any % (not requiring admission). Needs at least 5-6 dressing",
+  "specialty": "Burns Management",
+  "version": "1.1",
+  "source_files": [
+    "Thermal scald and flame burns_Medco.pdf",
+    "Thermal scald and flame burns_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "M.Ch / DNB/ equivalent (in Plastic Surgery)"
+  ],
+  "clinical_indications": [
+    "Any % Total Body Surface Area (TBSA) thermal burns not requiring admission, needing at least 5-6 dressings."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "mlc_copy_with_number",
+        "label": "MLC copy with number"
+      },
+      {
+        "key": "clinical_photograph_with_due_consent_of_patient",
+        "label": "Clinical Photograph with due consent of patient"
+      },
+      {
+        "key": "document_showing_percent_of_burn_through_rule_of_9",
+        "label": "Document showing % of burn through rule of 9"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_treatment_clinical_photograph",
+        "label": "Post treatment clinical photograph"
+      },
+      {
+        "key": "blood_test_cbc_sr_creatinine_platelet_etc",
+        "label": "Blood test (CBC, Sr. creatinine, Platelet etc.)"
+      },
+      {
+        "key": "x_ray",
+        "label": "X ray"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure/ operative notes"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes clearly mentioning the areas affected by burn with % of TBSA burn as per rule of 9?",
+        "expected": true
+      },
+      {
+        "q": "Copy of MLC with number?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of the affected part?",
+        "expected": true
+      },
+      {
+        "q": "Has the patient presented with superficial partial thickness burn which will heal without surgery within 3-4 weeks?",
+        "expected": true
+      },
+      {
+        "q": "Is there any evidence of % burn on clinical photograph of full body clearly showing burn?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is there documentary evidence of indication of surgery submitted?",
+        "expected": false
+      },
+      {
+        "q": "Are detailed procedure/ operative notes available with indications and outcomes of the procedure/ surgery?",
+        "expected": false
+      },
+      {
+        "q": "Is discharge summary available with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Is the post treatment photograph available?",
+        "expected": true
+      },
+      {
+        "q": "Are all lab test reports submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes do not clearly mention the areas affected by burn with % of TBSA burn as per rule of 9.",
+    "MLC copy with number is missing.",
+    "Clinical photograph of the affected part is missing or unclear.",
+    "Document showing % of burn through Rule of 9 is missing or incomplete.",
+    "The patient's condition indicates deep burns requiring surgical intervention, but a non-surgical package was chosen.",
+    "Evidence of burn percentage on clinical photograph of full body is missing or unclear.",
+    "Documentary evidence of indication of surgery submitted for a non-surgical package.",
+    "Detailed procedure/operative notes for surgery submitted for a non-surgical package.",
+    "Discharge summary with follow-up advice at discharge is missing.",
+    "Post-treatment photograph is missing.",
+    "Blood test reports (CBC, Sr. creatinine, Platelet etc.) are missing.",
+    "X-ray report is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Burn Management only if diagnosis made is backed by clinical manifestation",
+      "Superficial Burn: a. Dry skin, b. Minor Blisters, c. Erythema, d. Brisk capillary returns, e. Extremely painful",
+      "Superficial Partial thickness Burn: a. Moist, b. Reddened with broken blisters, c. Brisk capillary return, d. Extremely painful",
+      "Deep Partial Thickness: a. Moist white slough, b. Red Mottled, c. Sluggish capillary returns, d. Painless",
+      "Full Thickness: a. Dry, b. Charred whitish, c. Absent capillary return, d. Painless",
+      "Rule of 9 can be referred for understanding the total percentage of burn: a. Head/neck - 9% TBSA, b. Each arm - 9% TBSA, c. Anterior thorax - 18% TBSA, d. Posterior thorax - 18% TBSA, e. Each leg - 18% TBSA, f. Perineum - 1% TBSA"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

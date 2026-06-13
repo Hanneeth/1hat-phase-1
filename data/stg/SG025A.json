@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG025A",
+  "procedure_code": "SG025A",
+  "condition": "Volvulus of Large Intestine",
+  "procedure_name": "Sigmoid Resection",
+  "specialty": "General/Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Volvulus of Large Intestine_Medco.pdf",
+    "Volvulus of Large Intestine_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/Equivalent (Pediatric surgery, Surgical Gastroenterologist)"
+  ],
+  "clinical_indications": [
+    "Bowel obstruction or bowel ischemia due to rotation of sigmoid colon about its mesentery (Sigmoid Volvulus)",
+    "Intermittent crampy pains",
+    "Constipation",
+    "Distension"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings and planned line of management"
+      },
+      {
+        "key": "imaging",
+        "label": "X-ray erect Abdomen or Barium Enema or CT abdomen"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photograph",
+        "label": "Intra-operative photograph (optional)"
+      },
+      {
+        "key": "post_operative_x_ray_abdomen",
+        "label": "Post-operative X-ray Abdomen"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history especially medication history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was post-operative X-ray Abdomen submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and/or imaging not indicative of surgery.",
+    "Clinical notes missing details on history, signs, symptoms, planned treatment, or indication for procedure.",
+    "Pre-authorization imaging (X-ray erect Abdomen or Barium Enema or CT Abdomen) does not confirm diagnosis.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and line of treatment missing or incomplete.",
+    "Detailed Procedure / Operative Notes missing or incomplete.",
+    "Post-operative X-ray Abdomen not submitted.",
+    "Discharge summary missing or lacking follow-up advice at discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Volvulus is a rotation of segment of bowel about its mesentery. Mostly occurs in >70 years old and often bedridden. Symptoms occurs due to bowel obstruction or bowel ischemia."
+    ],
+    "surgical_options": [
+      "Hartmann procedure (if any evidence strangulation or perforation)",
+      "Single-stage resection with primary anastomosis",
+      "Exteriorization (Paul-Mickulicz procedure) in debilitated patients or those with impaired continence"
+    ],
+    "pre_op_preparation": "Nonsurgical decompression (detort by flexible sigmoidoscope or barium enema and insert rectal tube past obstruction)",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO066A",
+  "procedure_code": "SO066A",
+  "condition": "Pelvic Pathology / Female Infertility",
+  "procedure_name": "Diagnostic Hystero - Laparoscopy with/ without Chromopertubation",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Hystero-Laparoscopy with or without chromopertubation_Medco.pdf",
+    "Hystero-Laparoscopy with or without chromopertubation_PPD.CPD.pdf"
+  ],
+  "alos": "1-3 days",
+  "min_doctor_qualification": [
+    "MS (OB&GYN)",
+    "MD (OB&GYN)",
+    "DNB (OB&GYN)",
+    "DGO (OB&GYN)",
+    "Equivalent (OB&GYN) with experience/training of performing endoscopy"
+  ],
+  "clinical_indications": [
+    "Infertility primarily for diagnosis & minor surgical intervention of (endometriosis, pelvic inflammatory disease, adnexal adhesions, polycystic ovarian syndrome, uterine malformations, endometrial polyps, uterine fibroids, etc.)",
+    "Benign uterine pathology",
+    "Unexplained/ intractable pelvic pain"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, symptoms, signs, examination findings, indication for procedure, planned line of treatment, and advice for admission"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG Abdomen/ pelvis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers clearly specifying the indication for performing the diagnostic +/- therapeutic procedure."
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "discharge_summary_follow_up",
+        "label": "Discharge summary with follow up advice"
+      },
+      {
+        "key": "intra_operative_stills_optional",
+        "label": "Intra-operative stills (optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advise for admission available?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical presentation, evaluation findings, and imaging/investigations confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and imaging indicative of requirement of diagnostic hystero-laparoscopy with/without chromopertubation?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed operative notes available with indications for and outcomes of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did the intra-op findings confirm the clinical finidings/ investigations report?",
+        "expected": true
+      },
+      {
+        "q": "Is discharge summary available with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Were the OT notes suggestive of converting the diagnostic procedure to therapeutic hystero-laparoscopy?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Detailed Clinical notes with history, symptoms, signs, examination findings, indication for procedure, planned line of treatment, and advice for admission missing or incomplete at pre-authorization.",
+    "USG Abdomen/ pelvis report missing at pre-authorization.",
+    "Clinical presentation and imaging not indicative of requirement for diagnostic hystero-laparoscopy with/without chromopertubation.",
+    "Detailed indoor case papers with daily vitals and treatment details missing or incomplete at claim submission.",
+    "Operative notes missing, incomplete, or not detailing indications and outcomes of the procedure at claim submission.",
+    "Intra-op findings do not confirm clinical findings/investigations report.",
+    "OT notes not suggestive of conversion to therapeutic hystero-laparoscopy when conversion occurred, or suggestive of conversion when it did not.",
+    "Discharge summary missing or lacking follow-up advice at discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability, laparoscopy & endoscopy facility.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Diagnostic Hystero - Laparoscopy is a minimally invasive procedure that helps in the diagnosis of pelvic pathology in female infertility, and at the same sitting offers an opportunity for minor procedure serving therapeutic purpose for the diagnosed pathology in the uterus, tubes, ovaries, or peritoneum, and thus decreasing the need for a repeat procedure.",
+      "It is usually performed as a diagnostic procedure, however in some cases it may be converted to a therapeutic procedure to avoid the need of repeat procedure."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

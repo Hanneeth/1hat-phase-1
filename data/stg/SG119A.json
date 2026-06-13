@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG119A",
+  "procedure_code": "SG119A",
+  "condition": "Biliary Stricture",
+  "procedure_name": "Hepatico Jejunostomy for biliary stricture",
+  "specialty": "General Surgery / GI Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Hepatico Jejunostomy for Biliary Stricture_Medco.pdf",
+    "Hepatico Jejunostomy for Biliary Stricture_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MS (General Surgery)",
+    "MCh (GI Surgery)",
+    "DNB (General Surgery)",
+    "DNB (GI Surgery)",
+    "Equivalent qualification in General Surgery",
+    "Equivalent qualification in GI Surgery"
+  ],
+  "clinical_indications": [
+    "Benign or iatrogenic strictures",
+    "Injuries to the biliary system"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes with history and examination and planned line of treatment"
+      },
+      {
+        "key": "lft_rft_coagulation_profile_serum_electrolytes",
+        "label": "LFT with Bilirubin, RFT, Coagulation Profile and Serum Electrolytes"
+      },
+      {
+        "key": "usg_abdomen",
+        "label": "USG Abdomen"
+      },
+      {
+        "key": "ct_abdomen_ercp_mrcp_report_showing_stricture",
+        "label": "CT Abdomen / Endoscopic Retrograde Cholangiopancreatography (ERCP) / Magnetic Resonance Cholangiopancreatography (MRCP) Report showing stricture"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "post_procedure_lft",
+        "label": "Post Procedure LFT"
+      },
+      {
+        "key": "intra_operative_clinical_photograph",
+        "label": "Intra Operative Clinical Photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether the investigation reports confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Whether the detailed procedure notes confirm the procedure claimed?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's clinical history/investigations not indicative of the procedure.",
+    "Investigation reports do not confirm the diagnosis.",
+    "Detailed procedure notes do not confirm the procedure claimed.",
+    "Missing or incomplete LFT, RFT, Coagulation Profile, or Serum Electrolytes at pre-auth.",
+    "Missing USG Abdomen, CT Abdomen, ERCP, or MRCP report showing stricture at pre-auth.",
+    "Missing Intra Operative Clinical Photograph at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hepatico-Jejunostomy is the surgical creation of a communication between the hepatic duct and jejunum."
+    ],
+    "surgical_options": [
+      "Right subcostal incision",
+      "Right paramedian incision",
+      "Midline incision"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Patients with severe systemic illnesses such as severe cardiac or pulmonary dysfunction",
+      "Presence of a proximal obstruction to bile flow"
+    ]
+  }
+}

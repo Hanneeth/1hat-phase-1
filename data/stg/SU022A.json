@@ -1,0 +1,102 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU022A",
+  "procedure_code": "SU022A",
+  "condition": "Pyeloplasty Follow Up",
+  "procedure_name": "Pyeloplasty - Follow Up",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Pyeloplasty Follow Up_Medco.pdf",
+    "Pyeloplasty Follow Up_PPD.CPD.pdf"
+  ],
+  "alos": "daycare",
+  "min_doctor_qualification": [
+    "MS/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Assess renal function and to help rule out residual obstruction, generally performed approximately 6-8 weeks after the procedure.",
+    "Presence of symptoms from the obstruction, such as recurrent flank pain, nausea, and vomiting, warranting intervention.",
+    "Recurrent urinary tract infections post-pyeloplasty.",
+    "Pyelonephritis post-pyeloplasty.",
+    "Ipsilateral nephrolithiasis post-pyeloplasty.",
+    "Deterioration in renal function post-pyeloplasty."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical notes detailing signs and symptoms, previous surgery/procedure, follow-up visit details, advise for daycare procedure"
+      },
+      {
+        "key": "discharge_summary_last_pyeloplasty",
+        "label": "Discharge Summary of last pyeloplasty performed"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes_current_visit",
+        "label": "Detailed clinical notes of the current visit"
+      },
+      {
+        "key": "post_procedure_reports",
+        "label": "Post procedure USG/Diuretic renography and Urine Routine reports"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes detailing signs and symptoms, previous surgery/procedure, follow-up visit details, advise for daycare procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Discharge Summary of last pyeloplasty performed submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Earlier Discharge summary indicative of follow-up procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed clinical notes of the current visit submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are post procedure USG/Diuretic renography and Urine Routine reports submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Earlier Discharge Summary not indicative of follow-up procedure.",
+    "Clinical notes detailing signs and symptoms, previous surgery/procedure, follow-up visit details, or advise for daycare procedure not submitted at pre-authorization.",
+    "Discharge Summary of last pyeloplasty performed not submitted at pre-authorization.",
+    "Detailed clinical notes of the current visit not submitted at claim submission.",
+    "Post procedure USG/Diuretic renography and Urine Routine reports not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": "MCh/Equivalent (in Urology)",
+    "clinical_key_pointers": [
+      "Pyeloplasty is a surgical reconstruction of the renal pelvis, performed to drain and decompress the renal pelvis due to Uretero-pelvic junction (UPJ) obstruction.",
+      "If an indwelling ureteral stent is left in place after the initial pyeloplasty, it is usually removed cystoscopically 4-6 weeks after the procedure.",
+      "Imaging studies are generally performed approximately 6-8 weeks after the initial procedure to assess renal function and to help rule out residual obstruction.",
+      "Follow-up of UPJ obstruction after the procedure is determined by the specific pyeloplasty procedure performed.",
+      "Open pyeloplasty typically involves a muscle incision, entails some degree of morbidity. If significant dilation occurs, the renal pelvis is often reduced in size by trimming redundant tissue and tailored to funnel towards the anastomosis. If an accessory vessel is near the UPJ, the anastomosis is positioned anterior to the vessel.",
+      "Laparoscopic pyeloplasty is a minimally invasive approach to UPJ repair, developed due to morbidity of flank incision in open pyeloplasty. It adheres to identical surgical principles as the open approach and can be performed through transperitoneal (allows larger working space) or retroperitoneal (provides more direct access to the UPJ) routes, depending on patient factors like obesity and previous abdominal surgeries."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

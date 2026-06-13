@@ -1,0 +1,100 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV019D",
+  "procedure_code": "SV019D",
+  "condition": "Thoracic Outlet syndrome",
+  "procedure_name": "Thoracic Outlet syndrome Repair",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Thoracic outlet syndrome repair_Medco.pdf",
+    "Thoracic outlet syndrome repair_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/ equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Failed conservative management for thoracic outlet syndrome.",
+    "Presence of arterial thoracic outlet syndrome, for which initial surgical intervention is often indicated.",
+    "Presence of venous thoracic outlet syndrome, for which initial surgical intervention is often indicated."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "doppler_angio_ct_angio_mri_report",
+        "label": "Doppler/Angio/ CT Angio/ MRI report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "barcode_of_graft_used",
+        "label": "Barcode of graft used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are clinical notes with detailed history, signs & symptoms, and indication for procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Doppler/Angio/ CT Angio/ MRI report suggestive of thoracic outlet syndrome?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the barcode of graft used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Angio/ CT Angio/ MRI report not suggestive of thoracic outlet syndrome, or report missing.",
+    "Clinical notes with detailed history, signs & symptoms, and indication for procedure are missing or insufficient.",
+    "Detailed Procedure / Operative notes are missing.",
+    "Detailed Discharge Summary is missing or does not mention date of follow-up.",
+    "Barcode of graft used is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Thoracic outlet syndrome (TOS) is a nonspecific diagnosis representing many conditions that involve the compression of the neurovascular structures that pass through the thoracic outlet."
+    ],
+    "surgical_options": [
+      "Decompression surgery"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

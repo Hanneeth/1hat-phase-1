@@ -1,0 +1,113 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG067A",
+  "procedure_code": "MG067A",
+  "condition": "Heat stroke",
+  "procedure_name": "Heat stroke",
+  "specialty": "General Medicine",
+  "version": "1.1",
+  "source_files": [
+    "Heat Stroke_Medco.pdf",
+    "Heat Stroke_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Hyperthermia with a core body temperature of at least 40.6°C (typically ranges from 40°C to 44°C)",
+    "Rectal temperature exceeds 40°C leading to a presumptive diagnosis of Heat stroke",
+    "Major illness characterized by altered consciousness, confusion or seizure in heatwave or high ambient temperature conditions",
+    "Patient present with confusion and agitation, ataxia and irritability"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "rectal_temperature",
+      "operator": ">",
+      "value": "40°C",
+      "note": "for presumptive diagnosis of Heat stroke"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_admission_vitals_treatment_plan",
+        "label": "Clinical notes with detailing history and Admission notes showing vitals (Temperature, BP, Pulse) and planned line of treatment"
+      },
+      {
+        "key": "wbc_srelectrolytes_blood_gas_cpk_ldh",
+        "label": "White Blood Count, Sr. electrolytes, Blood gas, Creatine phosphokinase, lactate dehydrogenase"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor Case Papers (ICPs) with treatment details"
+      },
+      {
+        "key": "post_treatment_wbc_srelectrolytes",
+        "label": "Post treatment WBC, Sr. electrolytes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes with detailing history and Admission notes showing vitals (Temperature, BP, Pulse) Planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the White Blood Count, Sr. electrolytes, Blood gas, Creatine phosphokinase, lactate dehydrogenase report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical notes and White Blood Count, Sr. electrolytes levels indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the Detailed Indoor Case Papers (ICPs) with treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post treatment WBC, Sr. electrolytes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes, White Blood Count, or Sr. electrolytes levels are not indicative of Heat Stroke diagnosis/procedure.",
+    "Clinical notes, admission notes, vitals (Temperature, BP, Pulse), or planned line of treatment missing/incomplete at pre-authorization.",
+    "White Blood Count, Sr. electrolytes, Blood gas, Creatine phosphokinase, or lactate dehydrogenase report missing/incomplete at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) with treatment details missing/incomplete at claim submission.",
+    "Post-treatment WBC or Sr. electrolytes report missing/incomplete at claim submission.",
+    "Detailed Discharge Summary missing/incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/ DNB/Equivalent in General Medicine",
+    "clinical_key_pointers": [
+      "Proceed with management of Heat stroke only if diagnosis made is backed by clinical signs:"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Other causes of hyperpyrexia and altered consciousness (e.g. malaria, encephalitis, UTI, pneumonia, viral fever and neuroleptic malignant syndrome) should be excluded."
+    ]
+  }
+}

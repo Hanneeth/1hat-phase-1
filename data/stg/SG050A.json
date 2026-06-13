@@ -1,0 +1,121 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG050A",
+  "procedure_code": "SG050A",
+  "condition": "Inguinal Hernia",
+  "procedure_name": "Inguinal Hernia Open",
+  "specialty": "General Surgery/ Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Inguinal Hernia_Medco.pdf",
+    "Inguinal Hernia_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS / DNB/ equivalent (General Surgery)",
+    "DNB/ MCh/ equivalent (Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Bulge in the area on either side of pubic bone",
+    "Pain and discomfort in groin region when coughing, exercising or bending over",
+    "A heavy full sensation in the groin",
+    "Occasionally, pain and swelling around testicles when the protruding intestine descend into the scrotum",
+    "Fever (in case of complications)",
+    "Vomiting/ Nausea (In case of complications)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "photograph_showing_hernia_bulge",
+        "label": "Photograph showing hernia / bulge"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_op_clinical_photograph",
+        "label": "Post op clinical photograph"
+      },
+      {
+        "key": "operative_notes",
+        "label": "Operative notes"
+      },
+      {
+        "key": "invoice_of_mesh_tacker_used",
+        "label": "Invoice of the Mesh / tacker used"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "pre_anesthesia_check_up_report",
+        "label": "Pre-anesthesia check-up report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the Photograph showing hernia / bulge submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the patient operated for hernia on same side in past?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the intraoperative clinical photograph show presence of Mesh?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice of the Mesh used in the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Are the Complete operative notes mentioning the detail procedure performed?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the pre-anesthesia check-up report available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing detailed history, signs & symptoms, or indication for procedure",
+    "Photograph showing hernia/bulge missing at pre-authorization",
+    "Intraoperative clinical photograph missing or does not show presence of Mesh",
+    "Invoice for the mesh used is missing",
+    "Patient previously operated for hernia on the same side without adequate justification",
+    "No clinical symptom of bulge in the area on either side of pubic bone documented"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

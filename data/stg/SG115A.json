@@ -1,0 +1,133 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG115A",
+  "procedure_code": "SG115A",
+  "condition": "Ingrowing Toe Nail",
+  "procedure_name": "Ingrowing Toe Nail",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Ingrowing Toe Nail_Medco.pdf",
+    "Ingrowing Toe Nail_PPD.CPD.pdf"
+  ],
+  "alos": "daycare",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Affected skin of the toe is inflamed",
+    "Redness, swelling, and pain in the affected area",
+    "New tissue starts growing over the toenail",
+    "Inflamed area may weep, bleed, or release pus",
+    "Unpleasant odour, especially if infected by bacteria"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes with history and examination and planned line of treatment"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "post_operative_clinical_photograph",
+        "label": "Post Operative Clinical Photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with detailed history, signs and symptoms, clinical examination, planned line of treatment, and indications for the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Clinical Photograph confirming the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether the investigation reports confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Operative/Procedure notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advice available at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Postoperative photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Whether detailed Operative/Procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Whether detailed Discharge Summary Submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical history or investigations are not indicative of the procedure.",
+    "Investigation reports do not confirm the diagnosis of ingrown toenail.",
+    "Pre-operative clinical photograph not submitted or does not confirm the diagnosis.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details are not available.",
+    "Detailed Operative/Procedure notes were not submitted or are incomplete.",
+    "Discharge Summary not submitted, incomplete, or lacks follow-up advice.",
+    "Post-operative clinical photograph not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ingrown toenails (onychocryptosis/unguis incarnates) are a common problem, and causes include wearing tight footwear, infection, improperly trimmed toenails, trauma, and heredity. The great toenail is most involved, with the lateral side being more involved than the medical side."
+    ],
+    "surgical_options": [
+      "Spicule excision and partial matricectomy (mechanical)",
+      "Chemical partial matricectomy (phenol)",
+      "Wedge resection of the toenail and nail fold",
+      "Excision of the affected nail and total matricectomy (chemical or mechanical)",
+      "Soft tissue nail-fold excision technique",
+      "Electrocautery, radiofrequency ablation, and carbon dioxide laser ablation"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Cases may require referral to an appropriate level of care as required.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL015A",
+  "procedure_code": "SL015A",
+  "condition": "Adenoidectomy",
+  "procedure_name": "Adenoidectomy",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Adenoidectomy_Medco.pdf",
+    "Adenoidectomy_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS/ DNB/ PG Diploma or equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Inadequate or failed response to conservative management for obstructive sleep apnea in children (with or without tonsillectomy)",
+    "Persistent mouth breathing causing facial skeletal abnormality/ dental crowding",
+    "Recurrent otitis media with effusion following grommet insertion",
+    "Hearing loss due to persistent glue ear",
+    "Recurrent rhinosinusitis",
+    "Chronic adenoiditis"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, indications for doing the procedure & advise for admission)"
+      },
+      {
+        "key": "x_ray_nasopharynx_lateral_view",
+        "label": "X-ray of Nasopharynx (lateral view)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_note_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes (including clinical signs & symptoms such as difficulty in breathing, examination findings, indications for doing the procedure & advise for admission)?",
+        "expected": true
+      },
+      {
+        "q": "X-ray report of Nasopharynx (preferably lateral view) showing enlarged adenoids?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Signs, symptoms, examination, or X-ray (nasopharynx) do not confirm the presence of enlarged adenoids.",
+    "Clinical notes are incomplete or do not detail signs, symptoms, examination findings, indications, or advise for admission.",
+    "X-ray report of Nasopharynx (lateral view) is missing or does not show enlarged adenoids.",
+    "Operative notes do not detail surgical steps or outcomes of the surgery.",
+    "Documents for appropriate post-op care or follow-up advice are not available."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Adenoidectomy is the surgical removal of adenoids. It is one of the most commonly performed procedures in children.",
+      "The adenoid tissue consists of lymphoid tissue lining the posterior wall of the nasopharynx, forming the superior boundary of Waldeyer's lymphatic ring.",
+      "The adenoid enlarges rapidly during early childhood till the age of 6-7 years and regresses gradually with enlargement of facial skeleton as well as reduced frequency of upper respiratory tract infections.",
+      "Persistent adenoid tissue in adults is unusual and as a resultant of persistent or frequent rhinosinusitis and allergy.",
+      "An enlarged adenoid may obstruct a small nasopharynx in some children resulting features of mouth breathing, obstructive sleep apnea, and otitis media with effusion.",
+      "Causes: Bacterial/ viral infections, Allergy, Passive smoking.",
+      "Symptoms: Mouth breathing, nasal obstruction, nasal discharge, post-nasal discharge, hypo-nasal speech, loss of appetite, earache, hearing loss, delayed and defective speech and language, snoring, interrupted sleep, sleep arousals, enuresis, irritability.",
+      "Examination: Adenoid hypertrophy associated chronic mouth breathing may lead to adenoid facies (an elongated dull expressionless face, crowded upper teeth, hitched up upper lip, high arched palate and pinched in nose).",
+      "Nasal examination by endoscopy/ posterior rhinoscopy reveals adenoid tissue arising from roof of nasopharynx.",
+      "Aural examination to rule out glue ear and hearing loss.",
+      "Oral cavity examination.",
+      "Eustachian tube function tests (Valsalva technique, if possible).",
+      "Investigations: X-ray Nasopharynx (Lateral view), Otitis media with effusion (Audiometry, Tympanometry), Sleep apnea (Polysomnography - very occasionally required and to be done only with pre-authorization)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Coagulation and bleeding disorders",
+      "Cleft palate (partial adenoidectomy is indicated in such cases, if required)",
+      "Active infection"
+    ],
+    "complications": [
+      "Intraprocedural trauma to teeth/lip/tongue",
+      "Pain (self-limiting)",
+      "Bleeding",
+      "Voice change",
+      "Adenoid regrowth",
+      "Nasopharyngeal stenosis (rare)"
+    ]
+  }
+}

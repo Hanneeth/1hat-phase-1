@@ -1,0 +1,123 @@
+{
+  "_comment": "Distilled from Retrograde Intrarenal Surgery with Laser Lithotripsy_MEDCO-converted.pdf and Retrograde Intrarenal Surgery with Laser Lithotripsy_PPD_CPD-converted.pdf",
+  "stg_id": "SU095A",
+  "procedure_code": "SU095A",
+  "condition": "Renal and Ureteric Stones",
+  "procedure_name": "Retrograde Intrarenal Surgery with Laser Lithotripsy",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Retrograde Intrarenal Surgery with Laser Lithotripsy_MEDCO-converted.pdf",
+    "Retrograde Intrarenal Surgery with Laser Lithotripsy_PPD_CPD-converted.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MCh (Urology)",
+    "DNB (Urology)"
+  ],
+  "clinical_indications": [
+    "Large kidney stones to treat with lithotripsy",
+    "Strictures in the kidney",
+    "Tumors in the kidney",
+    "Kidney stones in pediatric patients",
+    "Kidney stones with Bleeding disorders",
+    "Grossly obese patients"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_indications_symptoms_signs_examination_findings_advice_for_admission",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "ivp_ncct_ct_ivp_reports",
+        "label": "Intravenous pyelogram (IVP) / Non-contrast computed tomography (NCCT)/CT-IVP reports"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "post_procedure_usg_x_ray_kub_stone_removed",
+        "label": "Was the USG / X-RAY KUB along with Patient ID and Date shows stone removed?"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes, detailing signs, symptoms, examination findings, planned line of treatment &advise for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Intravenous pyelogram (IVP) / Non-contrast computed tomography (NCCT)/CT-IVP reports submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Clinical notes and Intravenous pyelogram (IVP) / Non-contrast computed tomography (NCCT)/CT-IVP are indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers (ICPs) with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was Post procedure USG / X-RAY KUB along with Patient ID and date report shows stone removed?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure/Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and imaging reports (IVP/NCCT/CT-IVP) are not indicative of the procedure.",
+    "Clinical notes missing or incomplete, lacking details on history, indications, symptoms, signs, examination findings, or advice for admission.",
+    "Intravenous pyelogram (IVP) / Non-contrast computed tomography (NCCT)/CT-IVP reports missing or unclear.",
+    "Detailed indoor case papers missing or incomplete, lacking daily vitals and treatment details.",
+    "Post-procedure USG / X-RAY KUB report missing, not showing stone removal, or lacking Patient ID and date.",
+    "Detailed Procedure/Operative notes missing.",
+    "Detailed discharge summary missing."
+  ],
+  "additional_information": {
+    "icd_10_code": "N20.0",
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Retrograde intrarenal surgery (RIRS) is described as a safe and effective technique, and a better alternative to extracorporeal shock wave lithotripsy (ESWL) and percutaneous nephrolithotomy (PNL).",
+      "With advances in endourologic technology, RIRS has become second line therapy in the treatment of ESWL-resistant lower pole stones and for patients with co-morbidities.",
+      "Medical Expulsive Therapy (MET) should be offered for ureteric stones <10mm, in the absence of infection, obstruction or deranged renal function, and can be tried for up to 4 weeks (using alpha blockers like Tamsulosin, Alfuzocin, Doxazocin, Silodocin)."
+    ],
+    "surgical_options": null,
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Anuria",
+      "Fever with chills and rigors",
+      "Suspected renal failure",
+      "Persistent haematuria"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

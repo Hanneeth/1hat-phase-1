@@ -1,0 +1,119 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1200001",
+  "procedure_code": "S1200001",
+  "condition": "Congenital heart disease requiring Atrial Septostomy",
+  "procedure_name": "Balloon Atrial Septostomy",
+  "specialty": "Cardiology",
+  "version": "1.1",
+  "source_files": [
+    "balloon atrial septostomy_Medco.pdf",
+    "balloon atrial septostomy_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "DM/DNB/ Equivalent(Cardiology)"
+  ],
+  "clinical_indications": [
+    "Transposition of the great arteries with or without associated cardiac defects",
+    "Tricuspid atresia with restrictive ASD",
+    "Pulmonary atresia with intact ventricular septum and total anomalous pulmonary venous connection with restrictive ASD",
+    "Hypoplastic left heart syndrome for emergency relief of the trans-septal atrial gradient",
+    "Effective treatment in infants less than four to six weeks"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "congenital_heart_defect_requiring_atrial_septostomy",
+      "operator": "present",
+      "value": "true",
+      "note": "As indicated by Echo/Doppler report"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_planned_treatment",
+        "label": "Clinical notes with planned line of treatment"
+      },
+      {
+        "key": "echo_doppler_report_with_stills",
+        "label": "Echo report/ Doppler report with stills"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "invoice_blade_balloon",
+        "label": "Invoice of blade/balloon used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs &symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/Doppler report suggestive of Transposition of the Great Arteries or other congenital heart defect necessitating atrial septostomy?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show atrial septal defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice of blade/balloon used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report does not indicate a congenital heart defect requiring Atrial Septostomy",
+    "Clinical notes are incomplete regarding detailed history, signs, symptoms, or indication for the procedure",
+    "Post-procedure ECHO stills do not confirm the presence of an atrial septal defect",
+    "Detailed Discharge Summary does not mention the date of follow-up",
+    "Invoice for the blade/balloon used is missing at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath Lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Balloon atrial septostomy (BAS) is an interventional procedure undertaken in some cyanotic congenital heart diseases (CHD) with the purpose of widening a restrictive atrial communication.",
+      "A balloon is passed through restrictive atrial communication and inflated to a pre-determined size.",
+      "Then it is jerkily pulled to IVC-RA junction, thus rupturing and widening the small inter-atrial communication.",
+      "A successful procedure allows large inter-atrial communication, significantly improving systemic O2 saturation.",
+      "It is an emergency palliative intervention prior to definitive surgery."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

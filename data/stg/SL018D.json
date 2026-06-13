@@ -1,0 +1,135 @@
+{
+  "stg_id": "SL018D",
+  "procedure_code": "SL018D",
+  "condition": "Branchial Cysts/Sinus/Fistula",
+  "procedure_name": "Branchial sinus excision",
+  "specialty": "General Surgery/ENT",
+  "version": "1.1",
+  "source_files": [
+    "Branchial cysts.sinus.fistula_Medco.pdf",
+    "Branchial cysts.sinus.fistula_PPD.CPD.pdf"
+  ],
+  "alos": "2-3 Days",
+  "min_doctor_qualification": [
+    "MS/ DNB/ equivalent (General Surgery)",
+    "MS/ DNB/ equivalent (ENT)"
+  ],
+  "clinical_indications": [
+    "Presence of branchial arch anomaly presenting as a sinus",
+    "Swelling in the neck (with or without pain)",
+    "Frequent discharge from sinuses",
+    "Large anomalies (sinuses) causing asymmetry of the neck, dyspnea, dysphagia, or dysphonia",
+    "Infected sinuses (surgery best undertaken when lesion is quiescent)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with signs, symptoms, indications, planned line of management and advise for admission"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      },
+      {
+        "key": "usg_neck_fnac",
+        "label": "USG Neck/ Fine needle aspiration cytology (FNAC)"
+      },
+      {
+        "key": "ct_mri",
+        "label": "CT/MRI (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication & advise for procedure?",
+        "expected": true
+      },
+      {
+        "q": "USG Neck/FNAC confirming the diagnosis and indication for surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical picture and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers (ICPs) with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge available?",
+        "expected": true
+      },
+      {
+        "q": "Was histopathological report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical picture or imaging not indicative of surgery.",
+    "Clinical notes lacking detailed history, signs, symptoms, indication, or advice for procedure.",
+    "USG Neck/FNAC not confirming diagnosis or indication for surgery.",
+    "Indoor case papers (ICPs) lacking daily vitals or line of treatment.",
+    "Detailed procedure/operative notes not available.",
+    "Discharge summary lacking follow-up advice.",
+    "Histopathological report not submitted.",
+    "Missing Clinical Photograph at pre-auth."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Branchial arch anomalies result due to persisting remnants of the branchial cleft and are usually lined by squamous epithelium and contain thick, turbid fluid full of cholesterol crystals.",
+      "These anomalies may present as cyst, sinus or fistula in childhood or early adulthood.",
+      "Second arch anomalies are the commonest and usually presents as a swelling or sinus in the upper neck at the junction of the upper third and middle third of the sternomastoid muscle at its anterior border.",
+      "The inner opening in case of fistulas are located in the tonsillar fossa.",
+      "The cysts/sinuses or fistulas may get frequently infected.",
+      "First arch fistulas are related to parotid gland and may be related to the facial nerve in their deeper course.",
+      "Third and fourth branchial arch fistulas are uncommon and are related to the thyroid gland in their course."
+    ],
+    "surgical_options": [
+      "Complete surgical excision"
+    ],
+    "pre_op_preparation": "Treatment is best undertaken when the lesion is quiescent.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

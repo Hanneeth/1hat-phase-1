@@ -1,0 +1,163 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP009A",
+  "procedure_code": "MP009A",
+  "condition": "Intracranial hemorrhage",
+  "procedure_name": "Intracranial hemorrhage",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Intracranial Hemorrhage_Medco.pdf",
+    "Intracranial Hemorrhage_PPD.CPD.pdf"
+  ],
+  "alos": "10 days (Once diagnosis is established the case can be booked in the relevant package, further stay/admission should be decided based on the level of complications of the disease)",
+  "min_doctor_qualification": [
+    "MD / DNB / DCH/ equivalent (Pediatric Medicine)",
+    "DM/DNB/ equivalent (Neurology)",
+    "MCh/DNB/ equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Bleeding within the intracranial vault, including the brain parenchyma and surrounding meningeal spaces (subdural, subarachnoid, periventricular, intraventricular, intraparenchymal, or cerebellar region).",
+    "Diagnosis backed by clinical manifestations.",
+    "Common presenting symptoms: Headache, convulsions, progressive altered sensorium, periorbital swelling / easy bruising, ear bleed, epistaxis, swelling on head, facial / scalp injuries, requiring neurosurgeon consultation.",
+    "Associated symptoms: Excessive cry and irritability, vomiting, anemia, ataxia, acute onset neuro deficits, respiratory distress in newborn, hypotonia in floppy infants, hypovolemic shock, respiratory failure, hypertensive emergencies, coma, status epilepticus, hydrocephalus, new-onset epilepsy of any type, macrocephaly, jitteriness.",
+    "Non-traumatic ICH (Age < 6 years): Mental status changes, convulsions, vomiting, respiratory distress, decreased movement/weakness.",
+    "Non-traumatic ICH (Age ≥ 6 years): Headache, mental status changes, focal neurological deficits, nausea or vomiting, convulsions, dysphasia, fever, dizziness, stomach/neck/ear pain, bradycardia, respiratory arrest, abnormal gait.",
+    "Acute non-traumatic ICH: instantaneous or thunderclap headache, loss of consciousness, nuchal rigidity, focal neurologic deficits, seizures.",
+    "Traumatic ICH: headache, vomiting, lethargy, loss of muscle tone, decreased consciousness and seizures, apnea, progressive neurologic deficits (minutes to hours), focal neurologic deficits (hours), anemia, macrocephaly, seizures, vomiting (weeks to months), depressed consciousness, stiff neck, worst headache of life, late hydrocephalus."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "ICH Score",
+      "operator": "<",
+      "value": "5",
+      "note": "Medical Management"
+    },
+    {
+      "field": "ICH Score",
+      "operator": "between",
+      "value": "5-10",
+      "note": "Active Management"
+    },
+    {
+      "field": "ICH Score",
+      "operator": ">",
+      "value": "10",
+      "note": "Surgical Management"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_vitals_examination_findings",
+        "label": "Clinical notes showing vitals, examination findings, planned line of treatment & advice for admission"
+      },
+      {
+        "key": "glasgow_coma_scale_findings_examination",
+        "label": "Glasgow coma scale findings and examination findings"
+      },
+      {
+        "key": "cranial_ultrasonography_ct_mri_brain",
+        "label": "Cranial ultrasonography/CT/MRI Brain"
+      },
+      {
+        "key": "electroencephalography_optional",
+        "label": "Electroencephalography (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "improved_glasgow_coma_scale_score",
+        "label": "Improved Glasgow coma scale score"
+      },
+      {
+        "key": "cranial_ultrasonography_ct_mri_brain",
+        "label": "Cranial ultrasonography/CT/MRI Brain"
+      },
+      {
+        "key": "detailed_operative_procedures_notes_optional",
+        "label": "Detailed Operative/Procedures notes (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes: detailed history, signs & symptoms, detailed treatment line documented?",
+        "expected": true
+      },
+      {
+        "q": "Glasgow Coma Scale score monitoring documented?",
+        "expected": true
+      },
+      {
+        "q": "Electroencephalography (optional) reports reviewed if submitted?",
+        "expected": true
+      },
+      {
+        "q": "Cranial ultrasonography/CT/MRI Brain reports submitted?",
+        "expected": true
+      },
+      {
+        "q": "History of presentation with severe headache, convulsions, progressive altered sensorium, periorbital swelling or easy bruising?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs with detailed line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Glasgow coma scale documented on daily basis?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Operative/Procedures notes (optional) reviewed if submitted?",
+        "expected": true
+      },
+      {
+        "q": "Cranial ultrasonography/CT/MRI Brain reports submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge summary with follow-up advice at the time of discharge submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "History of severe headache, convulsions, progressive altered sensorium, periorbital swelling or easy bruising not documented at presentation.",
+    "Clinical notes missing or lacking detailed history, signs & symptoms, or detailed treatment line at pre-authorization.",
+    "Glasgow Coma Scale score monitoring not adequately documented at pre-authorization or on a daily basis at claim stage.",
+    "Cranial ultrasonography/CT/MRI Brain reports not submitted at pre-authorization or claim stage.",
+    "Detailed Indoor case papers (ICPs) or treatment details missing at claim submission.",
+    "Detailed discharge summary or follow-up advice missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [
+      "Age based critical volume of ICH beyond which surgery evacuation is indicated",
+      "Stereotactic aspiration with thrombolytic agent",
+      "Craniotomy/craniectomy"
+    ],
+    "pre_op_preparation": "Stabilize the patient:\n- Maintain airway – if poor Glasgow coma scale (GCS) – endotracheal intubation\n- Breathing - Ventilate\n- Circulation - Mean arterial pressure (MAP) should be maintained <130 but >65 mmHg\n- Mannitol should be administered to decrease the intracranial pressure only if there is no active bleeding\n- Euvolemia should be maintained\n- Avoid hyperthermia\n- Correct coagulopathy – administer Vitamin k or transfuse fresh frozen plasma/platelets\n- Fosphenytoin prophylaxis – to control seizures",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "In case of signs of herniation transfer to Neurosurgeons for surgical interventions; Care at Tertiary Hospital",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

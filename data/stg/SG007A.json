@@ -1,0 +1,123 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG007A",
+  "procedure_code": "SG007A",
+  "condition": "Gastric/Duodenal Perforation",
+  "procedure_name": "Operation for Gastric Perforation",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Gastric-Duodenal Perforation_Medco.pdf",
+    "Gastric-Duodenal Perforation_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (Surgical Gastroenterologist)"
+  ],
+  "clinical_indications": [
+    "Acute onset of severe abdominal pain or chest pain",
+    "Cyanosis, fever, vomiting, and bloody stool (less frequently)",
+    "Refusal to feed, vomiting, and decreased activity (typically 2-5 days post-onset)",
+    "Sudden onset of abdominal pain, distension, ileus, respiratory distress (most common presenting manifestation)",
+    "Emergency presentation before 24-48 hours",
+    "Free intraperitoneal air on radiological imaging (for diagnosis)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication of procedure and planned line of management"
+      },
+      {
+        "key": "x_ray_chest_abdomen_usg_ct_abdomen",
+        "label": "X-ray Chest/Abdomen / USG/CT Abdomen"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "fir_mlc_trauma",
+        "label": "FIR/MLC in case of trauma cases (Optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history especially medication history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and imaging (Free air will be visualized on plain x-rays or the CT scan) confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was FIR/MLC filed in case of trauma (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and imaging were not indicative of surgery for perforation.",
+    "Clinical notes are incomplete or missing details regarding history (including medication history), signs, symptoms, planned treatment, or indication for the procedure.",
+    "Clinical presentation and imaging (e.g., plain x-rays, CT scan showing free air) did not confirm the diagnosis of perforation.",
+    "Relevant imaging (X-ray Chest/Abdomen / USG/CT Abdomen) is missing or insufficient for pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) with treatment details are missing or incomplete at claim submission.",
+    "Detailed procedure or operative notes are missing at claim submission.",
+    "Detailed discharge summary is missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Perforation of the stomach is a full-thickness injury of the wall of the organ.",
+      "Etiology: Etiology is unknown in many young people. Gastric injury can be the consequence of: Peptic ulcer disease, Spontaneous Gastric Perforation, Trauma, Malignancy-Related Gastric Perforation, Iatrogenic."
+    ],
+    "surgical_options": [
+      "Emergency surgical repair (open or laparoscopic)"
+    ],
+    "pre_op_preparation": "Initial management: Intravenous antibiotics, Correct fluid and electrolyte imbalance.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

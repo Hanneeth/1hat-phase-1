@@ -1,0 +1,132 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO063A",
+  "procedure_code": "SO063A",
+  "condition": "Laparoscopy for Ectopic/ other benign disorders",
+  "procedure_name": "Laparoscopy for Ectopic/ other benign disorders",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Laparoscopy for Ectopic other benign disorders_Medco.pdf",
+    "Laparoscopy for Ectopic other benign disorders_PPD.CPD.pdf"
+  ],
+  "alos": "2-3 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/ Equivalent (OB&GYN) with experience/training in endoscopy"
+  ],
+  "clinical_indications": [
+    "Ectopic pregnancy: Ultrasonography findings",
+    "Ectopic pregnancy: Confirmed tubal pregnancy measuring more than 35 mm",
+    "Ectopic pregnancy: Concurrent intrauterine pregnancy ruled out through Serum HCG levels",
+    "Ectopic pregnancy: Significant pain abdomen",
+    "Ectopic pregnancy: Failure of medical management of ectopic pregnancy",
+    "Peritubal adhesions/peritoneal adhesions (formation of bands of fibrous tissue joining intra-abdominal organs or parietal peritoneal surfaces after trauma, ischemia, infection, or irritative insult)",
+    "Benign ovarian tumors/ovarian cyst (common cause of pelvic masses in women, fertile age, after ruling out malignancy using Doppler USG, CA-125, CA 19-9)",
+    "Endometriosis (estrogen-dependent chronic condition with ectopic implantation of functional tissue lining the uterus outside uterine cavity, common clinical symptoms being pelvic pain and infertility, formation of chocolate cysts)",
+    "Pelvic Inflammatory Disease (Pyosalpinx/hydrosalpinx) (upper genital infections like endometritis, salpingitis, tubo-ovarian complex, tubo-ovarian abscess, diagnosed clinically with pelvic pain, fever, foul discharge, hyperleukocytosis, elevated CRP)",
+    "Tuboplasty / Reanastomosis (surgical repair of fallopian tubes damaged intentionally for sterilization or unintentionally by previous infections, surgery, or scar tissue produced by endometriosis)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "tubal_pregnancy_size",
+      "operator": ">",
+      "value": "35 mm",
+      "note": "Confirmed tubal pregnancy"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, symptoms, signs, examination findings, indication for procedure, planned line of treatment, and advice for admission"
+      },
+      {
+        "key": "serum_beta_hcg_levels",
+        "label": "Serum Beta human chorionic gonadotropin (hCG) levels (in case of ectopic pregnancy)"
+      },
+      {
+        "key": "tumor_markers",
+        "label": "Tumor markers (CEA-125, etc.)"
+      },
+      {
+        "key": "imaging_report",
+        "label": "USG/CT/MRI (Abdomen/pelvis)/ / HSG (Hysterosalpingography) confirming presence of ectopic/other benign disorders/ pelvic lesions"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed indoor case papers clearly indicating the need for performing the surgery"
+      },
+      {
+        "key": "operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary with follow up advice"
+      },
+      {
+        "key": "histopathology_form",
+        "label": "Histopathology form confirming submission of specimen removed for histopathological examination"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical presentation, severity, imaging, and laboratory investigations, failure of medical management indicative of surgery (for Ectopic Pregnancy)?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and imaging indicative of tubal surgery other than Ectopic pregnancy?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical presentation, evaluation findings, and imaging/investigations confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed operative notes available with indications for and outcomes of the procedure?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, severity, imaging, or laboratory investigations for Ectopic Pregnancy not indicative of surgery, or medical management not failed",
+    "Clinical presentation or imaging not indicative of tubal surgery (other than Ectopic pregnancy)",
+    "Serum Beta human chorionic gonadotropin (hCG) levels missing or inconsistent in cases of ectopic pregnancy",
+    "Tumor markers (CEA-125, etc.) missing or inconsistent in cases of suspected ovarian tumors/cysts",
+    "Imaging report (USG/CT/MRI/HSG) not confirming ectopic/other benign disorders or pelvic lesions",
+    "Histopathology form confirming submission of specimen removed for histopathological examination is missing at claim stage"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, availability of anesthesia and anesthetist, availability of laparoscopic equipment. For indication (1) secondary level facility is required with adequate endoscopy/laparoscopy facility. For indication (2) secondary or tertiary level facility depending upon the severity of the disease condition, is required with adequate endoscopy/laparoscopy facility. For indications (3-6) tertiary level facility is required.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Common presenting complaints: Amenorrhea (in case of ectopic pregnancy)",
+      "Common presenting complaints: Spotting/Bleeding per vagina",
+      "Common presenting complaints: Pain abdomen: esp. one sided, continuous/ intermittent",
+      "Common presenting complaints: Fainting attacks",
+      "Common presenting complaints: Dizziness",
+      "Common presenting complaints: Pyrexia & foul discharge (PID)",
+      "Past history of: Pelvic Inflammatory Disease",
+      "Past history of: Ectopic pregnancy",
+      "Past history of: Tubal surgery",
+      "Past history of: Ovarian cysts",
+      "Past history of: Benign ovarian tumors",
+      "Past history of: Severe congestive dysmenorrhea (in endometriosis)"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

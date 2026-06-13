@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS016A",
+  "procedure_code": "SS016A",
+  "condition": "Retroperitoneal Lymphangioma",
+  "procedure_name": "Retro - Peritoneal Lymphangioma Excision",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Retroperitoneal lymphangioma_Medco.pdf",
+    "Retroperitoneal lymphangioma_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MCh/ equivalent (in Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Presence of symptoms such as palpable abdominal mass, abdominal pain, fever, fatigue, vomiting, weight loss, hematuria, recurrent urinary infections, or a soft, slowly growing and painless retroperitoneal cystic mass.",
+    "Definitive diagnosis of cystic lymphangioma achieved by histological examination subsequent to surgery or exploratory laparotomy."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      },
+      {
+        "key": "usg_ct_mri_abdomen",
+        "label": "USG/CT/MRI Abdomen"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_icps",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "histopathological_examination_report",
+        "label": "Histopathological examination report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Clinical Photograph is available?",
+        "expected": true
+      },
+      {
+        "q": "USG/CT/MRI Abdomen (show insinuating nature crossing multiple compartments)",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge available?",
+        "expected": true
+      },
+      {
+        "q": "Histopathological examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the histopathological report confirm the diagnosis of retroperitoneal lymphangioma?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or lacking detailed history, signs & symptoms, or indication for procedure at pre-authorization.",
+    "Clinical photograph not provided at pre-authorization.",
+    "USG/CT/MRI Abdomen report missing or not demonstrating insinuating nature crossing multiple compartments at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and line of treatment not available at claim submission.",
+    "Detailed Procedure / Operative Notes not available at claim submission.",
+    "Discharge summary with follow-up advice not available at claim submission.",
+    "Histopathological report did not confirm the diagnosis of retroperitoneal lymphangioma at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Lymphangiomas are relatively- rare and benign lesions believed to be congenital malformations of the lymphatic anlage rather than true tumors.",
+      "Retroperitoneal lymphangiomas are also relatively rare and account for 1% to 10% of all lymphangiomas.",
+      "Most retroperitoneal lymphangiomas typically occur in children under 2 years old; however, in some cases, these lesions can be found after a long asymptomatic period due to slow development.",
+      "Three histological types of lymphangiomas are described: cystic, capillary and cavernous.",
+      "Retroperitoneal lymphangioma is commonly of cystic type.",
+      "Most cystic lymphangiomas in the body are present in the first 2 years of life, however lymphangiomas of the retroperitoneum are usually diagnosed in older children or adults."
+    ],
+    "surgical_options": [
+      "The optimum treatment of cystic lymphangioma is complete resection."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV028A",
+  "procedure_code": "SV028A",
+  "condition": "Intercostal drainage management",
+  "procedure_name": "Isolated Intercostal Drainage and Management of ICD, Intercostal Block, Antibiotics & Physiotherapy",
+  "specialty": "General Surgery, Pediatric Surgery, CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Intercostal drainage management_Medco.pdf",
+    "Intercostal drainage management_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent in General Surgery",
+    "MD/DNB/Equivalent in Emergency medicine",
+    "M.Ch./DNB/Equivalent (in Pediatric Surgery, Cardiothoracic Surgery, Thoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Pneumothorax",
+    "In any ventilated patient",
+    "Tension pneumothorax after initial needle relief",
+    "Persistent or recurrent pneumothorax after simple aspiration",
+    "Large secondary spontaneous pneumothorax in patients over 50 years",
+    "Hemothorax",
+    "Empyema and complicated parapneumonic pleural effusion",
+    "Malignant pleural effusion",
+    "Pleurodesis (sclerotherapy)",
+    "Postoperative – thoracotomy, esophagectomy, cardiac surgery"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with evaluation findings, indication of procedure and planned line of management"
+      },
+      {
+        "key": "documentation_icd_block_antibiotics_physiotherapy",
+        "label": "Documentation of intercostal block, antibiotics, and physiotherapy as applicable"
+      },
+      {
+        "key": "chest_xray_pa",
+        "label": "Chest X-Ray PA"
+      },
+      {
+        "key": "optional_ct_scan",
+        "label": "Optional CT scan"
+      },
+      {
+        "key": "ultrasound",
+        "label": "Ultrasound"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_chest_xray_reports",
+        "label": "Post procedure Chest X-ray with reports"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are clinical notes present detailing vitals, history, symptoms, signs, physical examination, indication, planned management (including documentation of intercostal block, antibiotics, and physiotherapy as applicable) and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed Indoor Case Papers (ICPs) with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed procedure / operative notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the post-procedure X-ray report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "X-ray report not suggestive of intercostal drainage procedure",
+    "Clinical presentation not indicative of intercostal drainage procedure",
+    "Pre-authorization clinical notes missing evaluation findings, indication, or planned management",
+    "Missing documentation of intercostal block, antibiotics, or physiotherapy at pre-authorization",
+    "Missing Chest X-Ray PA at pre-authorization",
+    "Missing post-procedure Chest X-ray with reports at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Chest tube placement (also called tube thoracostomy) is a common procedure in daily clinical practice which is performed to drain fluid, blood, or air from the pleural cavity.",
+      "It also serves as a route to instill antibiotics (post-pneumonectomy empyemas), sclerosing agents (pleurodesis), as well as fibrinolytics, DNAse, and/or saline (complicated parapneumonic effusions and empyemas).",
+      "Pleural disease is common and presents frequently both as emergency and as acute admissions.",
+      "On the other hand, indwelling pleural catheters (IPC) are becoming a first-line palliative therapy for symptomatic malignant and persistent benign pleural effusions.",
+      "The administration of prophylactic antibiotics prior to chest tube placement is only recommended in patients with penetrating chest injuries to prevent the development of empyema."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Document using the chest drain insertion paperwork. This will include: indication, operator, consent, insertion site, anaesthetic used, drain size, depth, complications, sutures and fixation device, samples and post procedure instructions. If drain is for fluid clamp after 1000ml has drained. Repeat observations. If observations are stable and patient is not unwell then drain can be opened up again after an hour. Prescribe analgesia (intercostal nerve block). Prescribe regular flushes for the drain. Send any samples taken. Request X-ray (timing at the discretion of clinical team). IPC-related infection develops in about 5% of the cases and the infections can often be managed conservatively. Breathing exercises and chest physiotherapy are the main keys for achieving quick lung expansion and faster recovery. Incentive spirometry provides the impetus for expanding the lung quickly. Upper-limb movements, especially at the shoulder, help restore the movements of the chest wall. Steam inhalations and nebulized bronchodilators may also encourage quick lung expansion.",
+    "fitness_criteria": "Main considerations for chest-tube removal include: initial indication for chest-tube placement, whether the patient is mechanically ventilated, daily chest-tube output, presence of an air leak, and full expansion of lungs on chest radiographs. The timing of tube removal depends on clinical and radiologic evidence of complete drainage of all abnormal contents of the pleural cavity, as well as complete expansion of the lung.",
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Severe pleural adhesions",
+      "Uncorrected/Refractory coagulopathy",
+      "Diaphragmatic hernia",
+      "Local infection"
+    ],
+    "complications": [
+      "Tube dislodgement",
+      "Chest bottle elevation with fluid flowing into the chest cavity",
+      "Damage to intercostal nerve, artery or vein",
+      "Damage to internal mammary artery if puncture is too medial",
+      "Intercostal myalgia",
+      "Introduction of pleural infection",
+      "Laceration or puncture of intra thoracic or intra-abdominal organs",
+      "Local cellulitis",
+      "Local hematoma",
+      "Mediastinal emphysema",
+      "Subcutaneous emphysema"
+    ]
+  }
+}

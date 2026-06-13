@@ -1,0 +1,132 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO022A",
+  "procedure_code": "SO022A",
+  "condition": "Asherman's syndrome",
+  "procedure_name": "Hysteroscopic adhesiolysis",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Hysteroscopic adhesiolysis_Medco.pdf",
+    "Hysteroscopic adhesiolysis_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/ MD/ DNB/DGO or Equivalent (Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Suspicion of Asherman's syndrome in patients investigated for secondary amenorrhea or oligomenorrhoea with or without infertility",
+    "Diagnosis confirmed by hysteroscopy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "usg_pelvis_abdomen",
+        "label": "USG Pelvis/Abdomen"
+      },
+      {
+        "key": "hysterosalpingography_hsg",
+        "label": "Hysterosalpingography (HSG) in case of infertility (Optional)"
+      },
+      {
+        "key": "sonohysterography",
+        "label": "Sonohysterography (Optional)"
+      },
+      {
+        "key": "hysteroscopy",
+        "label": "Hysteroscopy (Optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports (If done)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative/procedure notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did history and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Hysteroscopy findings not indicative of surgery",
+    "Detailed Clinical notes missing or incomplete (vitals, history, symptoms, signs, examination findings, indication, planned treatment, advice for admission)",
+    "History and imaging did not confirm diagnosis",
+    "Detailed ICPs missing or lacking daily vitals and treatment details",
+    "Detailed procedure/Operative Notes missing",
+    "Discharge summary missing or lacking follow-up advice",
+    "Imaging not indicative of surgery"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hysteroscopic adhesiolysis is a blunt or sharp dissection using mechanical, electrosurgical instruments, Versapoint bipolar electrode or laser methods.",
+      "Different techniques have been described depending on the severity of the intrauterine synechia.",
+      "Hysteroscopy is the optimum route for treatment of Asherman's syndrome.",
+      "Asherman's syndrome: This condition refers to the presence of fibrosis and adhesions inside the cervical canal or the uterine cavity.",
+      "Intrauterine synechiae or adhesions are caused by trauma to the endometrium.",
+      "More than one session of operative hysteroscopy may be required to treat moderate to severe cases.",
+      "Recurrence is higher in those with more significant adhesions initially.",
+      "Treatment technique is largely influenced by the nature, extent and site of the intrauterine injury.",
+      "In most cases, menstruation improves following treatment.",
+      "Regarding fertility restoration – pregnancy rate of 50% in treated patients has been reported but with increased complication rate including pregnancy loss and abnormal placentation (especially placenta accreta)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

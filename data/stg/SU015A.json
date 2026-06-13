@@ -1,0 +1,80 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU015A",
+  "procedure_code": "SU015A",
+  "condition": "Renal and Ureteric Stones",
+  "procedure_name": "URSL / URSL Laser Follow Up",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "URSL, URSL Laser Follow Up_Medco.pdf",
+    "URSL, URSL Laser Follow Up_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes detailing examination findings, previous surgery/procedure, follow-up visit details, investigations, advise for daycare procedure"
+      },
+      {
+        "key": "discharge_summary_last_urso_laser",
+        "label": "Discharge Summary of last admission for URSL Laser procedure"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_clinical_notes_current_visit",
+        "label": "Detailed clinical notes of the current visit"
+      },
+      {
+        "key": "post_procedure_imaging_xray_usg",
+        "label": "Post procedure Imaging X Ray/USG"
+      },
+      {
+        "key": "urine_routine_report",
+        "label": "Urine routine report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Discharge Summary of last admission suggestive of follow-up procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Discharge Summary of last admission not suggestive of a follow-up procedure.",
+    "Clinical notes for pre-authorization are incomplete or missing required details (examination findings, previous surgery/procedure, follow-up visit, investigations, or daycare advice).",
+    "Earlier discharge summary of last URSL procedure not submitted at pre-authorization.",
+    "Post-procedure Imaging (X-Ray/USG) not submitted at claim stage.",
+    "Urine routine report not submitted at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": "N20.0",
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Colic pain radiating from back to front",
+      "Hematuria may be present or absent",
+      "Difficulty in passing urine",
+      "May be associated with fever, nausea and vomiting"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Warning signs for immediate referral: Anuria, Fever with chills and rigors, Suspected renal failure, Persistent haematuria",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

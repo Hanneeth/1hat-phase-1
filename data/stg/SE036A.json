@@ -1,0 +1,128 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE036A",
+  "procedure_code": "SE036A",
+  "condition": "Enucleation/ Evisceration/ Exenteration/ Socket reconstruction",
+  "procedure_name": "Evisceration",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Enucleation evisceration Exenteration & socket reconstruction_Medco.pdf",
+    "Enucleation evisceration Exenteration & socket reconstruction_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma or equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "Congenital defects",
+    "Severe trauma",
+    "Tumor of the eye (ocular defects)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_indication",
+        "label": "Clinical notes with indication"
+      },
+      {
+        "key": "recommendation_opinion_2_ophthalmologists",
+        "label": "Recommendation/opinion of 2 ophthalmologists for the procedure"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph_affected_eye",
+        "label": "Clinical Photograph of the affected eye"
+      },
+      {
+        "key": "ct_mri_head_orbits",
+        "label": "CT-scan/ MRI of Head (including affected eye)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure/operative notes"
+      },
+      {
+        "key": "histopathology_report_specimen_form",
+        "label": "Histopathology report/filled specimen form sent for histopathology"
+      },
+      {
+        "key": "barcode_sticker_implant",
+        "label": "Barcode/sticker of the implant used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes including history (e.g. trauma, eye infection, other systemic disease), clinical symptoms, examination and investigations (CT/MRI of Brain and orbits/ B-scan of the orbits)?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected part with Proper labelling of Affected Eye whether R or L with full face photograph?",
+        "expected": true
+      },
+      {
+        "q": "Detailed admission notes?",
+        "expected": true
+      },
+      {
+        "q": "Evidence of recommendation/ opinion of 2 ophthalmologists for the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "OT notes detail the steps of surgery performed (including evidence that amniotic membrane graft has been used during reconstruction of the socket, if applicable) and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Histopathology / Microbiology report available for the specimen (except in case of Socket reconstruction)?",
+        "expected": true
+      },
+      {
+        "q": "Evidence of barcode/ sticker used for socket/ implant?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Recommendation/opinion of 2 ophthalmologists for the procedure is missing or not provided.",
+    "Clinical notes with indication, history, symptoms, examination, or investigation reports (CT/MRI) are missing or incomplete.",
+    "Clinical photograph of the affected eye is missing, not properly labeled R/L, or a full-face photograph is not provided.",
+    "Admission notes are missing or incomplete.",
+    "Histopathology report/filled specimen form is missing at the claim stage.",
+    "OT notes do not detail surgical steps or outcomes of the surgery."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Well equipped OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination and does not respond to conservative medical therapy."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "procedure_description": "Removal of intraocular contents of the globe"
+  }
+}

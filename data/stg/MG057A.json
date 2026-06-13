@@ -1,0 +1,113 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG057A",
+  "procedure_code": "MG057A",
+  "condition": "Hypoglycemia",
+  "procedure_name": "Hypoglycemia",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Hypoglycemia_Medco.pdf",
+    "Hypoglycemia_PPD.CPD.pdf"
+  ],
+  "alos": "1-3 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Symptoms consistent with hypoglycemia",
+    "Low serum glucose measurement (less than 70 mg/dL)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "blood_glucose_level",
+      "operator": "<",
+      "value": "70 mg/dL",
+      "note": "at presentation"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "blood_glucose_level",
+        "label": "Blood glucose level"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers with treatment details"
+      },
+      {
+        "key": "post_treatment_glucose_level",
+        "label": "Post treatment glucose level"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the blood glucose level report submitted ?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor case papers with vital (BP and Pulse) and Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post treatment blood glucose submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's blood glucose not documented or not less than 70 mg/dL at presentation without justification.",
+    "Clinical notes missing, incomplete, or lacking evaluation findings, indications, or planned line of treatment at pre-authorization.",
+    "Blood glucose level report not submitted at pre-authorization.",
+    "Detailed indoor case papers missing, incomplete, or lacking vital signs (BP and Pulse) and treatment details at claim submission.",
+    "Post-treatment blood glucose level not submitted at claim submission.",
+    "Discharge summary missing, incomplete, or lacking the date of follow-up at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "DNB / MD (General Medicine / Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Hypoglycemia is often defined by a plasma glucose concentration below 70 mg/dL; however, signs and symptoms may not occur until plasma glucose concentrations drop below 55 mg/dL.",
+      "The symptoms of Whipple's triad (symptoms of hypoglycemia, low blood glucose, and immediate relief upon glucose correction) have been used to describe hypoglycemia since 1938.",
+      "Clinical manifestations can be classified as neuroglycopenic (e.g., behavioral changes, confusion, fatigue, seizure, coma) or neurogenic (e.g., tremor, palpitations, anxiety, hunger, diaphoresis, paresthesias).",
+      "Most cases occur in diabetic patients undergoing therapeutic intervention with meglitinides, sulfonylureas, or insulin. Drugs are the most common cause.",
+      "Potential causes include critical illness, alcohol, cortisol deficiency, insulinoma, or malnourishment.",
+      "Diagnosis involves symptoms consistent with hypoglycemia and a low serum glucose measurement (< 70 mg/dL). Initial evaluation should confirm hypoglycemia.",
+      "Other pertinent labs may include insulin, proinsulin, and C-peptide levels; low C-peptide with high insulin suggests exogenous insulin.",
+      "Severe hypoglycemia is treated with intravenous (IV) dextrose followed by glucose infusion. Conscious patients can take oral readily absorbable carbohydrates (e.g., fruit juice).",
+      "For patients unable to take oral agents, a 1-mg intramuscular (IM) injection of glucagon can be administered. Follow with a complex carbohydrate food source for sustained euglycemia once the patient is more awake."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

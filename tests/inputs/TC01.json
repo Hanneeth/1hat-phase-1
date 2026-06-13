@@ -1,0 +1,164 @@
+{
+  "_test_id": "TC01",
+  "_description": "Happy path — planned laparoscopic inguinal hernia repair. Normal adult, full wallet, private Tier-1 hospital. All mandatory docs available. Should sail through all phases.",
+  "_expected_status": "READY",
+  "_expected_specialty": "SG",
+  "_expected_flags_include": [
+    "CANDIDATES_GENERATED",
+    "FINANCIAL_ESTIMATE_APPROXIMATE",
+    "EMERGENCY_PHASE_STUBBED"
+  ],
+  "_expected_flags_exclude": [
+    "WALLET_INSUFFICIENT",
+    "PUB_RESERVED_BLOCK",
+    "STG_NOT_ELIGIBLE"
+  ],
+  "session_id": "IRIS-TC01-20260612",
+  "created_at": "2026-06-12T09:00:00+05:30",
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Left groin swelling and dragging pain for 6 months, worsening on exertion, reducible on lying down, no bowel complaints",
+    "duration_days": 180,
+    "history_of_present_illness": "Patient noticed a swelling in left groin 6 months ago, initially small and reducible. Swelling has gradually increased in size. Associated with dragging pain on exertion and prolonged standing. Swelling reduces on lying down. No history of vomiting, constipation, or urinary symptoms. No prior surgeries in this region.",
+    "provisional_diagnosis": "Left indirect inguinal hernia",
+    "planned_procedure": "Laparoscopic inguinal hernioplasty (TEP repair)",
+    "weight_kg": 74,
+    "height_cm": 170,
+    "vitals": {
+      "bp_systolic_mmhg": 118,
+      "bp_diastolic_mmhg": 76,
+      "pulse_bpm": 82,
+      "spo2_pct": 99,
+      "temperature_f": 98.6,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": null
+    },
+    "examination_findings": {
+      "general": "Conscious, oriented, well-built, no pallor, no icterus",
+      "cvs": "S1 S2 heard, no murmurs, pulse regular",
+      "rs": "Clear air entry bilateral, no added sounds",
+      "abdomen": "Soft, non-tender. Left inguinal swelling 5x4 cm, reducible, cough impulse positive, reaches inguinal ring",
+      "cns": "No focal neurological deficits",
+      "local": "Left inguinal region: reducible swelling, positive cough impulse, does not transilluminate"
+    },
+    "investigations": [
+      {
+        "type": "usg",
+        "result_summary": "Left inguinal hernia confirmed — hernial sac with bowel loops, reducible, no obstruction",
+        "structured_values": [
+          {
+            "parameter": "hernia_type",
+            "value": "indirect_inguinal",
+            "unit": null,
+            "flag": null,
+            "leads": null
+          },
+          {
+            "parameter": "contents",
+            "value": "bowel_loops",
+            "unit": null,
+            "flag": null,
+            "leads": null
+          },
+          {
+            "parameter": "reducibility",
+            "value": "reducible",
+            "unit": null,
+            "flag": null,
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-11"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "Pre-operative blood workup: Hb 13.8 g/dL, WBC 8200/cumm, platelets 2.4 lakh, creatinine 0.9 mg/dL, blood glucose fasting 98 mg/dL, PT/INR 1.0",
+        "structured_values": [
+          {
+            "parameter": "Hb",
+            "value": 13.8,
+            "unit": "g/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "WBC",
+            "value": 8200,
+            "unit": "/cumm",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "INR",
+            "value": 1.0,
+            "unit": null,
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "fasting_glucose",
+            "value": 98,
+            "unit": "mg/dL",
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-11"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No significant past medical history. No prior hospitalisations.",
+    "past_surgical_history": "None",
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "non-smoker",
+      "alcohol": "none",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Admission clinical notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Photo of patient on hospital bed",
+        "available": true
+      },
+      {
+        "key": "treating_doctor_prescription",
+        "label": "Surgeon prescription advising admission",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Ramesh Iyer",
+      "registration_number": "TN-MED-45678",
+      "qualification": "MS General Surgery, FMAS",
+      "specialty_code": "SG"
+    },
+    "notes": "Patient fit for surgery. Pre-anaesthetic check-up done and cleared. Planned for elective laparoscopic TEP repair under general anaesthesia."
+  }
+}

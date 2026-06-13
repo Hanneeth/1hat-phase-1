@@ -1,0 +1,145 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG095A",
+  "procedure_code": "SG095A",
+  "condition": "Varicose veins",
+  "procedure_name": "Management of Varicose Veins",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Varicose veins_Medco.pdf",
+    "Varicose veins_PPD.CPD.pdf"
+  ],
+  "alos": "3 Days",
+  "min_doctor_qualification": [
+    "MS General Surgery",
+    "DNB General Surgery",
+    "equivalent (General Surgery)"
+  ],
+  "clinical_indications": [
+    "Presence of symptomatic varicose veins (e.g., aching pain, tiredness, discomfort, ankle/feet edema, eczema, hyperpigmentation, lipodermatosclerosis, venous ulceration, itching, bleeding, superficial thrombophlebitis).",
+    "Significant edema, skin changes, or ulceration associated with varicose veins.",
+    "Confirmed valvular incompetence of saphenous, perforator, or deep veins by Duplex scan.",
+    "Failure of non-pharmacological conservative management (e.g., elastic compression stockings, foot elevation) for significant valvular incompetence or severe symptoms."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "conservative_management",
+      "operator": "fails",
+      "value": "elastic compression stockings and foot elevation",
+      "note": "Required for significant edema, skin changes, or ulcer, or incompetence of greater saphenous vein & perforator vein, or greater saphenous vein + perforator vein + deep vein."
+    },
+    {
+      "field": "diagnosis",
+      "operator": "confirmed by",
+      "value": "Duplex scan",
+      "note": "To classify location of valvular incompetence."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with details of clinical examination and planned line of treatment"
+      },
+      {
+        "key": "clinical_photographs",
+        "label": "Clinical photographs"
+      },
+      {
+        "key": "duplex_scan",
+        "label": "Duplex scan"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_op_clinical_photographs",
+        "label": "Post-op clinical photographs"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the indication for surgery mentioned?",
+        "expected": true
+      },
+      {
+        "q": "Was the duplex scan report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there an evidence of nonsurgical/ medical management tried but failed?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative photographs submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Indication for surgery not mentioned in clinical notes.",
+    "Duplex scan report not submitted at pre-authorization.",
+    "No evidence of nonsurgical/medical management tried and failed prior to intervention.",
+    "Clinical photographs not submitted at pre-authorization.",
+    "Detailed procedure/operative notes missing at claim submission.",
+    "Post-operative clinical photographs missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Varicose veins are dilated, tortuous veins caused by dilation of normal veins due to increased venous pressure.",
+      "They are visible surface manifestations of an underlying syndrome of venous insufficiency.",
+      "Occur in varying severity and in different clinical presentations.",
+      "2% of these patients present with skin changes and morbid chronic venous ulcers.",
+      "Causes include: Hereditary, history of phlebitis, female, pregnancy, pelvic tumors, prolonged standing.",
+      "Varicose veins may also occur secondary to DVT and arteriovenous malformations.",
+      "Varicose veins may involve: Greater saphenous vein (GSV), Lesser saphenous vein (LSV) with their tributaries, Perforator veins (which connect them to the deep venous system of the leg), or a combination of the above veins.",
+      "Clinical presentation depends on severity and may include: Aching pain in the leg, tiredness, discomfort, ankle/feet edema (especially after prolonged standing), eczema, hyperpigmentation, lipodermatosclerosis, venous ulceration, itching, bleeding, superficial thrombophlebitis.",
+      "Patients are categorized according to CEAP (clinical, etiological, anatomical and pathological) status for therapy guidance, documentation, and follow-up."
+    ],
+    "surgical_options": [
+      "Injection sclerotherapy",
+      "Ultrasound guided foam sclerotherapy",
+      "Saphenofemoral junction ligation and greater saphenous stripping with or without incompetent perforator ligation",
+      "Saphenopopliteal junction ligation and lesser saphenous stripping with or without incompetent perforator ligation",
+      "Split thickness skin grafting for venous ulcers, if present"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Consider deep venous reconstruction in tertiary care hospital if incompetence of greater saphenous vein + perforator vein + deep vein fails surgical treatment.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

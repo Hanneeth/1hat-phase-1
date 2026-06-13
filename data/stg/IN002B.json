@@ -1,0 +1,138 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "IN002B",
+  "procedure_code": "IN002B",
+  "condition": "Cerebral and Spinal Arteriovenous Malformations",
+  "procedure_name": "Spinal AVM embolization - Using Histoacryl (per sitting)",
+  "specialty": "Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "Cerebral and Spinal Arteriovenous Malformations_Medco.pdf",
+    "Cerebral and Spinal Arteriovenous Malformations_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "DM/Equivalent (in Interventional Neuroradiology)",
+    "MCh/DNB/Equivalent in (Neurosurgery, if required Vascular Surgeon)"
+  ],
+  "clinical_indications": [
+    "Spinal arteriovenous malformations (AVMs) representing 3%-4% of all space-occupying lesions affecting the spinal cord",
+    "Progressive neurological symptoms over months to years (e.g., back pain, progressive sensory loss, lower extremity weakness)",
+    "Sudden onset of weakness, numbness, difficulty urinating, urinary incontinence, fecal incontinence, or paralysis (especially in patients younger than 30) due to hemorrhage",
+    "Lesions that can be treated via minimally invasive endovascular embolization of the AVM to obliterate it",
+    "Therapeutic option as part of a multidisciplinary approach, depending on the hemodynamics of the lesion, its site and angioarchitecture"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_neurological_evaluation",
+        "label": "Clinical notes including neurological evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "ct_mri_brain_spine",
+        "label": "CT/MRI Brain/Spine"
+      },
+      {
+        "key": "digital_subtraction_angiography",
+        "label": "Digital Subtraction Angiography (DSA)"
+      },
+      {
+        "key": "complete_blood_count_creatinine_pt_inr",
+        "label": "Complete Blood Count, Creatinine, Prothrombin time (PT)/ INR"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "post_procedure_check_angiogram",
+        "label": "Post procedure Check Angiogram"
+      },
+      {
+        "key": "embolization_material_details",
+        "label": "Embolization material details"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Embolization material invoice/barcode submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, severity, or imaging not indicative of surgery.",
+    "Patient has evidence of unfavourable anatomy, renal insufficiency, contrast allergy, or non-correctable coagulopathy.",
+    "Clinical notes lack detailed history, signs & symptoms, evaluation findings, indication for procedure, or planned line of treatment.",
+    "Imaging did not confirm the diagnosis.",
+    "Embolization material invoice/barcode not submitted with claim.",
+    "Detailed Indoor Case Papers (ICPs) are missing daily vitals or line of treatment."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Spinal arteriovenous malformations (AVMs) are abnormal collections of blood vessels in the spinal canal with a direct connection between arterial and venous systems without intervening capillaries.",
+      "Spinal dural AVMs are the most common type in adults.",
+      "Intradural AVMs are located outside the substance of the spinal cord, and Intramedullary AVMs are located within the substance of the spinal cord.",
+      "Classification includes Type I (dural AVF), Type II (glomus intramedullary AVM), Type III (juvenile malformations), and Type IV (perimedullary AVF).",
+      "Symptoms include progressive neurological symptoms (back pain, sensory loss, lower extremity weakness) in 85% of cases, and sudden onset of weakness, numbness, difficulty urinating, incontinence, or paralysis (due to hemorrhage) in 10-20% of cases.",
+      "Treatment involves careful consideration of clinical history, symptoms, physical examination, and diagnostic studies. A multidisciplinary approach is essential for planning management."
+    ],
+    "surgical_options": [
+      "endovascular embolization",
+      "surgical removal"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

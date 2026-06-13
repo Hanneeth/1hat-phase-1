@@ -1,0 +1,98 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB057A",
+  "procedure_code": "SB057A",
+  "condition": "Knee problems with pain and instability due to Varus knee malalignment, or early osteoarthritis confined to the medial compartment",
+  "procedure_name": "High Tibial Osteotomy",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "High tibial osteotomy_Medco.pdf",
+    "High tibial osteotomy_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Knee problems in patients who have pain and instability because of a Varus knee malalignment",
+    "Surgery allows a postoperative valgus limb alignment with shifting the load-bearing axis of the lower limb laterally.",
+    "early osteoarthritis confined to medial compartment",
+    "chronic knee instability due to posterolateral corner (PLC), posterior cruciate ligament (PCL), and anterior cruciate ligament (ACL) Insufficiencies with concurrent malalignment in the coronal and/or sagittal plane."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_indication_surgery",
+        "label": "Clinical notes with indication for surgery"
+      },
+      {
+        "key": "weightbearing_xray_labelled",
+        "label": "Weightbearing (FLWB)/ Standing X-ray labelled with patient ID, date and side (Left/ Right)-affected limb justifying the indication"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_op_clinical_photograph",
+        "label": "Post operation clinical photograph"
+      },
+      {
+        "key": "post_op_xray_labelled",
+        "label": "Post op X-ray is labelled with patient ID, date and side (Left/Right) showing affected part."
+      },
+      {
+        "key": "invoice_barcode_implant_optional",
+        "label": "Invoice / bar code of implant (optional)"
+      },
+      {
+        "key": "detailed_operative_note",
+        "label": "Detailed operative note"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Did Post-operative X- ray shows the presence of implant?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes with indication for surgery missing or inadequate at pre-authorization.",
+    "Weightbearing (FLWB)/ Standing X-ray missing at pre-authorization, or not labelled with patient ID, date, or side.",
+    "Post-operation clinical photograph missing at claim submission.",
+    "Post-op X-ray missing at claim submission, or not labelled with patient ID, date, or side, or not showing affected part.",
+    "Post-operative X-ray does not show the presence of an implant.",
+    "Detailed operative note missing at claim submission.",
+    "Discharge summary missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB in Orthopedics",
+    "clinical_key_pointers": [
+      "early osteoarthritis confined to medial compartment",
+      "chronic knee instability due to posterolateral corner (PLC), posterior cruciate ligament (PCL), and anterior cruciate ligament (ACL) Insufficiencies with concurrent malalignment in the coronal and/or sagittal plane."
+    ],
+    "surgical_options": [
+      "Closing wedge osteotomy",
+      "Opening wedge osteotomy",
+      "Dome osteotomy progressive callus distraction",
+      "Chevron osteotomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

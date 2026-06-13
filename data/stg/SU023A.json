@@ -1,0 +1,125 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU023A",
+  "procedure_code": "SU023A",
+  "condition": "Ureterocalycostomy",
+  "procedure_name": "Ureterocalycostomy - Open",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Ureterocalycostomy_Medco.pdf",
+    "Ureterocalycostomy_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "MCh Urology",
+    "DNB Urology",
+    "MCh Pediatric surgery",
+    "DNB Pediatric surgery"
+  ],
+  "clinical_indications": [
+    "Proceed with Ureterocalycostomy only if diagnosis made is backed by clinical manifestation",
+    "Flank pain",
+    "Pain in abdomen and can radiate down to the groin",
+    "High fever",
+    "Blood in Urine"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "usg_abdomen_report",
+        "label": "USG abdomen report"
+      },
+      {
+        "key": "dtpa_renal_scan_report",
+        "label": "DTPA renal scan report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photograph",
+        "label": "Intra-operative photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was Clinical notes including evaluation findings, indication for procedure, and planned line of management submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG abdomen report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the DTPA renal scan report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure/Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intra-operative photograph suggestive of the procedure done?",
+        "expected": true
+      },
+      {
+        "q": "Was the detailed discharge summary submitted with follow up date?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "DTPA renal scan report not suggestive of abnormalities in ureter junction",
+    "Clinical notes including evaluation findings, indication for procedure, and planned line of management not submitted",
+    "USG abdomen report not submitted",
+    "DTPA renal scan report not submitted",
+    "Detailed indoor case papers not submitted",
+    "Detailed Procedure / operative notes not submitted",
+    "Intra-operative photograph not submitted or not suggestive of the procedure done",
+    "Detailed discharge summary not submitted or missing follow up date"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care and laparoscopic surgery facility availability.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Flank pain",
+      "Pain in abdomen and can radiate down to the groin",
+      "High fever",
+      "Blood in Urine"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

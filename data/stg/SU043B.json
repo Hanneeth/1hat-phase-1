@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU043B",
+  "procedure_code": "SU043B",
+  "condition": "Partial Cystectomy (Only for Benign Condition)",
+  "procedure_name": "Partial Cystectomy Lap",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Partial Cystectomy (Only for Benign Condition)_Medco.pdf",
+    "Partial Cystectomy (Only for Benign Condition)_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MCh/DNB equivalent in (Urology/Pediatric surgery)"
+  ],
+  "clinical_indications": [
+    "Painless hematuria",
+    "Recurrent cystitis (specially in elder population)",
+    "Pain flanks and lower back",
+    "Frequent feeling of urination"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "ct_mri_report",
+        "label": "CT/MRI report"
+      },
+      {
+        "key": "fnac_biopsy_report",
+        "label": "FNAC / Biopsy report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure / operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT/MRI confirming the diagnosis submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the FNAC / Biopsy report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical notes and CT/MRI/FNAC/Biopsy reports are indicative of the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathology report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or CT/MRI/FNAC/Biopsy reports not indicative of the Partial Cystectomy procedure.",
+    "Missing required pre-authorization documents: Clinical notes, CT/MRI report, or FNAC/Biopsy report.",
+    "Missing required claim submission documents: Detailed indoor case papers, Histopathology report, Detailed procedure/operative notes, or Detailed discharge summary.",
+    "Histopathology report not submitted for claim processing.",
+    "Detailed procedure/operative notes not available or incomplete.",
+    "Diagnosis for Partial Cystectomy not backed by clinical manifestation or appropriate reports."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Partial Cystectomy only if diagnosis made is backed by clinical manifestation",
+      "Partial or segmental cystectomy is a bladder-preserving treatment that involves full-thickness surgical removal of the bladder tumor and surrounding bladder wall. Partial cystectomy is used to treat both malignant and benign conditions of the bladder. Its primary malignant indication is for solitary, primary, muscle-invasive, or high-grade bladder cancer that does not involve specific regions of the bladder such as the bladder trigone, vesical neck, or posterior urethra and that can be resected with adequate surgical margins (1-2 cm). The classically described indication for partial cystectomy is for the removal of an adenocarcinoma or urachal carcinoma that develops in the dome of the bladder."
+    ],
+    "surgical_options": [
+      "Open",
+      "Lap"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

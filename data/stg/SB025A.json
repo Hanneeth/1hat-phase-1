@@ -1,0 +1,132 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB025A",
+  "procedure_code": "SB025A",
+  "condition": "Posttraumatic elbow stiffness",
+  "procedure_name": "Arthrolysis of Elbow joint",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Arthrotomy-Arthrolysis of joint_Medco.pdf",
+    "Arthrotomy-Arthrolysis of joint_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Elbow arthrolysis for stiff elbow",
+    "Open arthrolysis with a unilateral hinged external fixator for posttraumatic elbow stiffness"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_confirming_diagnosis",
+        "label": "Clinical notes confirming the diagnosis"
+      },
+      {
+        "key": "x_ray_pre_procedure_labelled",
+        "label": "X-ray labelled with patient ID, date and side (Left/ Right) of affected part"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_x_ray_labelled",
+        "label": "Post-procedure X-ray labelled with patient ID, date and side (Left/Right) of affected part"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with indication for surgery submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray labelled with patient ID, date and side (Left/Right) of affected part is indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Post-procedure X-ray labelled with patient ID, date and side (Left/Right) of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Were Post-operative photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical findings and X-ray report not indicative of surgery",
+    "Clinical notes with indication for surgery not submitted",
+    "X-ray labelled with patient ID, date and side (Left/Right) of affected part not indicative of surgery",
+    "Clinical photograph of affected part not submitted or unclear",
+    "Detailed ICPs with daily vitals and treatment details not provided",
+    "Post-procedure X-ray (labelled with patient ID, date and side) of affected part not submitted",
+    "Detailed Procedure / Operative Notes not available",
+    "Post-operative photographs not submitted",
+    "Discharge summary with follow-up advice not provided at discharge"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/ Equivalent (in Orthopedics)",
+    "clinical_key_pointers": [
+      "Elbow arthrolysis is a technically demanding procedure, but if indication and techniques are used correctly and surgeon, physiotherapist, and patient are familiar with the procedure, good long-term results may be achieved.",
+      "Open arthrolysis with a unilateral hinged external fixator has been commonly used to treat posttraumatic elbow stiffness.",
+      "Different approaches are used for open arthrolysis of stiff elbow.",
+      "Among them, the posterior approach might have some advantages especially in post-traumatic patients, who have undergone the same surgical approach in the past.",
+      "Using the posterior approach, triceps muscle, which is considered the most important cause in post-operational adhesion formation, could be addressed easily.",
+      "In the posterior approach, the manipulation of the anterior elements is minimal, so neurovascular complications will be reduced.",
+      "It also provides a better accessibility to the medial and lateral posterior elements and makes it easier to remove the previous devices.",
+      "The superior radio-ulnar joint is accessible in this approach and it makes it possible to release the intra-articular adhesions that limit the elbow range of motion."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

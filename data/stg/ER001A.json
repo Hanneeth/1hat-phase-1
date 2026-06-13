@@ -1,0 +1,108 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "ER001A",
+  "procedure_code": "ER001A",
+  "condition": "Laceration",
+  "procedure_name": "Laceration - Suturing, Dressing",
+  "specialty": "Emergency Room Packages",
+  "version": "1.1",
+  "source_files": [
+    "Laceration - Suturing, Dressing_Medco.pdf",
+    "Laceration - Suturing, Dressing_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MBBS",
+    "MD/DNB/Equivalent (in Emergency Medicine/General medicine/Pediatrics)"
+  ],
+  "clinical_indications": [
+    "Deep wounds of the hand or foot",
+    "Full-thickness lacerations of the eyelid, lip, or ear",
+    "Lacerations involving nerves, arteries, bones, or joints",
+    "Penetrating wounds of unknown depth",
+    "Severe crush injuries",
+    "Severely contaminated wounds requiring drainage",
+    "Wounds leading to a strong concern about cosmetic outcome"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical notes including evaluation findings, planned line of treatment"
+      },
+      {
+        "key": "pre_clinical_photograph",
+        "label": "Pre-clinical photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_clinical_notes_vitals_treatment",
+        "label": "Detailed clinical notes, vitals and treatment given"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the pre-clinical photograph and clinical notes submitted are indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes (pre-authorization) detailing evaluation findings or planned line of treatment are missing or incomplete.",
+    "Pre-clinical photograph (pre-authorization) is missing.",
+    "Pre-clinical photograph and/or clinical notes are not indicative of the procedure.",
+    "Detailed clinical notes, vitals, or treatment given (claim) are missing or incomplete.",
+    "Detailed Procedure / Operative Notes (claim) are missing.",
+    "Post-procedure clinical photograph of the affected part (claim) is missing.",
+    "Detailed discharge summary (claim) is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent (in General Surgery)",
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Lacerations are caused when trauma exceeds intrinsic tissue strength",
+      "Skin torn by blunt injury over a bony prominence such as the scalp",
+      "Tissue damage may not be extensive, and primary suturing may be possible."
+    ],
+    "surgical_options": [
+      "Suturing (Single interrupted closure, Running (“baseball\") closure, Subcuticular running closure, Horizontal/ Vertical mattress suture technique)",
+      "Non-surgical: Dressing",
+      "Non-surgical: Tissue adhesives",
+      "Non-surgical: Irrigation"
+    ],
+    "pre_op_preparation": "Immediately upon presentation, a laceration should be evaluated, and the bleeding controlled using direct pressure, to determine severity and whether it involves muscle, tendons, nerves, blood vessels, or bone. Baseline neurovascular and functional status of the involved body part should be evaluated before repair.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Deep wounds of the hand or foot",
+      "Full-thickness lacerations of the eyelid, lip, or ear",
+      "Lacerations involving nerves, arteries, bones, or joints",
+      "Penetrating wounds of unknown depth",
+      "Severe crush injuries",
+      "Severely contaminated wounds requiring drainage",
+      "Wounds leading to a strong concern about cosmetic outcome"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "stg_id": "M300002",
+  "procedure_code": "M300002",
+  "condition": "Special Neonatal Care Package",
+  "procedure_name": "Special Neonatal Care Package: Babies that required admission to SNCU or NICU",
+  "specialty": "Neo-natal Care",
+  "version": "1.1",
+  "source_files": [
+    "Special nenonatal care package_Medco.pdf",
+    "Special nenonatal care package_PPD.CPD.pdf"
+  ],
+  "alos": "3-6 days",
+  "min_doctor_qualification": [
+    "MD Pediatrics",
+    "DNB Pediatrics",
+    "DCH Pediatrics"
+  ],
+  "clinical_indications": [
+    "Babies admitted for short term care for conditions like:",
+    "Mild Respiratory Distress/tachypnea",
+    "Mild encephalopathy",
+    "Severe jaundice requiring intensive phototherapy",
+    "Haemorrhagic disease of newborn",
+    "Unwell baby requiring monitoring",
+    "Some dehydration",
+    "Hypoglycaemia"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "respiratory_distress_score",
+      "operator": "<",
+      "value": "5",
+      "note": "Silverman Anderson or Downes' Vidyasagar score for mild respiratory distress"
+    },
+    {
+      "field": "total_serum_bilirubin",
+      "operator": ">",
+      "value": "15 mg/dl",
+      "note": "Alert sign for pathological jaundice"
+    },
+    {
+      "field": "total_serum_bilirubin",
+      "operator": "exceeds",
+      "value": "nomogram line",
+      "note": "American Academy of Pediatrics (AAP) nomogram for intensive phototherapy based on gestation, birth weight and postnatal age"
+    },
+    {
+      "field": "blood_glucose",
+      "operator": "<",
+      "value": "45 mg/dl",
+      "note": "Definition of hypoglycemia in all newborns"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings and planned line of management"
+      },
+      {
+        "key": "chest_x_ray",
+        "label": "Chest X-ray (Mandatory if Mild Respiratory Distress/tachypnea)"
+      },
+      {
+        "key": "hemoglobin_rd",
+        "label": "Hemoglobin (Mandatory if Mild Respiratory Distress/tachypnea)"
+      },
+      {
+        "key": "blood_sugar_rd",
+        "label": "Blood sugar (Mandatory if Mild Respiratory Distress/tachypnea)"
+      },
+      {
+        "key": "sepsis_screen_rd",
+        "label": "Sepsis screen (Mandatory if Mild Respiratory Distress/tachypnea)"
+      },
+      {
+        "key": "blood_culture",
+        "label": "Blood culture (Mandatory if Mild Respiratory Distress/tachypnea)"
+      },
+      {
+        "key": "2decho_optional",
+        "label": "2DECHO (Optional if Mild Respiratory Distress/tachypnea)"
+      },
+      {
+        "key": "abg_analysis_optional_rd",
+        "label": "Arterial Blood Gas (ABG) analysis (Optional if Mild Respiratory Distress/tachypnea)"
+      },
+      {
+        "key": "abg_cord_blood_analysis_me",
+        "label": "Arterial Blood Gas (ABG)/Cord blood analysis (Mandatory if Mild encephalopathy)"
+      },
+      {
+        "key": "blood_sugar_me",
+        "label": "Blood sugar (Mandatory if Mild encephalopathy)"
+      },
+      {
+        "key": "serum_electrolytes_me",
+        "label": "Serum Electrolytes (Mandatory if Mild encephalopathy)"
+      },
+      {
+        "key": "serum_creatinine_me",
+        "label": "Serum Creatinine (Mandatory if Mild encephalopathy)"
+      },
+      {
+        "key": "septic_screen_csf_analysis_optional",
+        "label": "Septic screen/CSF Analysis (Meningitis) (Optional if Mild encephalopathy)"
+      },
+      {
+        "key": "metabolic_profile_optional",
+        "label": "Metabolic profile (for fatty acid defects) (Optional if Mild encephalopathy)"
+      },
+      {
+        "key": "liver_function_test_jaundice",
+        "label": "Liver function test (Mandatory if Severe jaundice requiring intensive phototherapy)"
+      },
+      {
+        "key": "coombs_test_direct",
+        "label": "Coomb`s test (Direct) (Mandatory if Severe jaundice requiring intensive phototherapy)"
+      },
+      {
+        "key": "hemoglobin_reticulocyte_smear_hemolysis",
+        "label": "Hemoglobin, reticulocyte count, peripheral smear for evidence of hemolysis (Mandatory if Severe jaundice requiring intensive phototherapy)"
+      },
+      {
+        "key": "blood_grouping_mother_newborn",
+        "label": "Blood grouping (mother and newborn) (Mandatory if Severe jaundice requiring intensive phototherapy)"
+      },
+      {
+        "key": "sepsis_screen_jaundice_optional",
+        "label": "Sepsis screen (Optional if Severe jaundice requiring intensive phototherapy)"
+      },
+      {
+        "key": "g6pd_enzyme_activity_optional",
+        "label": "G6PD enzyme activity (for boys) (Optional if Severe jaundice requiring intensive phototherapy)"
+      },
+      {
+        "key": "hearing_assessment_bera_optional",
+        "label": "Hearing assessment (BERA) (Optional if Severe jaundice requiring intensive phototherapy)"
+      },
+      {
+        "key": "complete_blood_count_hdn",
+        "label": "Complete blood count (Mandatory if Haemorrhagic disease of newborn)"
+      },
+      {
+        "key": "coagulation_profile_pt_aptt",
+        "label": "Coagulation profile – Prothrombin Time, Activated Partial Thromboplastin Time (Mandatory if Haemorrhagic disease of newborn)"
+      },
+      {
+        "key": "sepsis_screen_hdn",
+        "label": "Sepsis screen (Mandatory if Haemorrhagic disease of newborn)"
+      },
+      {
+        "key": "liver_function_test_hdn_optional",
+        "label": "Liver Function Test (Optional if Haemorrhagic disease of newborn)"
+      },
+      {
+        "key": "d_dimer_test_optional",
+        "label": "D-Dimer test (Optional if Haemorrhagic disease of newborn)"
+      },
+      {
+        "key": "ferritin_optional",
+        "label": "Ferritin (Optional if Haemorrhagic disease of newborn)"
+      },
+      {
+        "key": "pivka_optional",
+        "label": "PIVKA (vitamin K deficiency) (Optional if Haemorrhagic disease of newborn)"
+      },
+      {
+        "key": "apt_test_optional",
+        "label": "Apt test (Optional if Haemorrhagic disease of newborn)"
+      },
+      {
+        "key": "usg_skull_abdomen_optional",
+        "label": "USG skull/abdomen (Optional if Haemorrhagic disease of newborn)"
+      },
+      {
+        "key": "blood_sugar_monitoring",
+        "label": "Blood sugar (Mandatory if Unwell baby requiring monitoring)"
+      },
+      {
+        "key": "serum_calcium_monitoring",
+        "label": "Serum Calcium (Mandatory if Unwell baby requiring monitoring)"
+      },
+      {
+        "key": "sepsis_screen_monitoring",
+        "label": "Sepsis screen (Mandatory if Unwell baby requiring monitoring)"
+      },
+      {
+        "key": "serum_electrolytes_monitoring",
+        "label": "Serum Electrolytes (Mandatory if Unwell baby requiring monitoring)"
+      },
+      {
+        "key": "abdominal_girth",
+        "label": "Abdominal girth (Mandatory if Unwell baby requiring monitoring)"
+      },
+      {
+        "key": "neurosonogram_optional",
+        "label": "Neurosonogram (Optional if Unwell baby requiring monitoring)"
+      },
+      {
+        "key": "clinical_evaluation_dehydration",
+        "label": "Clinical evaluation (Mandatory if Some dehydration)"
+      },
+      {
+        "key": "serum_electrolytes_dehydration",
+        "label": "Serum electrolytes (Mandatory if Some dehydration)"
+      },
+      {
+        "key": "urine_analysis",
+        "label": "Urine analysis (Mandatory if Some dehydration)"
+      },
+      {
+        "key": "blood_sugar_hypoglycemia",
+        "label": "Blood sugar (Mandatory if Hypoglycaemia)"
+      },
+      {
+        "key": "sepsis_screen_hypoglycemia_optional",
+        "label": "Sepsis screen (Optional if Hypoglycaemia)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigations reports (if done)"
+      },
+      {
+        "key": "detailed_procedure_notes_indication",
+        "label": "Detailed Procedure notes and indication (if any)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with history, signs, symptoms, vitals, examination findings, planned line of treatment, and advice for admission consistent with clinical criteria?",
+        "expected": true
+      },
+      {
+        "q": "Chest X-ray/sepsis screen indicative of mild respiratory distress diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Respiratory severity score documented?",
+        "expected": true
+      },
+      {
+        "q": "APGAR score/HIE score/septic screen documented?",
+        "expected": true
+      },
+      {
+        "q": "TSB levels plotted on nomogram and indicative of intensive phototherapy?",
+        "expected": true
+      },
+      {
+        "q": "Complete blood count/septic screen/coagulation profile investigations done?",
+        "expected": true
+      },
+      {
+        "q": "Monitoring charts (HR, RR, oxygenation, perfusion, temperature) documented?",
+        "expected": true
+      },
+      {
+        "q": "Monitoring charts for any procedure done or on ventilatory support available?",
+        "expected": true
+      },
+      {
+        "q": "Clinical evaluation/serum electrolyte suggestive of dehydration?",
+        "expected": true
+      },
+      {
+        "q": "Blood sugar for at-risk neonates monitored and suggestive of hypoglycemia diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Indoor Case Papers (ICPs) with daily vitals and line of treatment available?",
+        "expected": true
+      },
+      {
+        "q": "Investigation reports (if done) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure notes with indication available (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary with follow-up advice available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes lacking evaluation findings, planned line of treatment, or admission advice.",
+    "Mandatory investigation (e.g., Chest X-ray, Sepsis screen, Blood sugar) missing or not indicative of the specific diagnosis for the admitted condition.",
+    "Respiratory severity score not documented for mild respiratory distress.",
+    "APGAR score, HIE score, or septic screen not documented for mild encephalopathy.",
+    "TSB levels not plotted on nomogram or not indicative of intensive phototherapy for severe jaundice.",
+    "Complete blood count, septic screen, or coagulation profile investigations not done for hemorrhagic disease of newborn.",
+    "Monitoring charts (HR, RR, oxygenation, perfusion, temperature) not documented for unwell baby.",
+    "Weight loss, decreased urine output, or increased urine specific gravity not documented for dehydration.",
+    "Blood sugar not documented below 45 mg/dl for hypoglycemia, or not documented at all."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at District/Tertiary Hospital (SNCU/NICU)",
+    "min_doctor_qualification_desirable": "DM Neonatology, DNB Neonatology",
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "If hypoglycemia persists despite above management, refer to a higher health facility for further evaluation and management.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

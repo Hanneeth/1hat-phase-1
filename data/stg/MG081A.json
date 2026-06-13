@@ -1,0 +1,119 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG081A",
+  "procedure_code": "MG081A",
+  "condition": "IHD / CAD / Arrhythmia",
+  "procedure_name": "Arrhythmia",
+  "specialty": "General Medicine, Cardiology, Pediatric Medicine",
+  "version": "1.1",
+  "source_files": [
+    "IHD,CAD,Arrhythmia_Medco.pdf",
+    "IHD,CAD,Arrhythmia_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MBBS",
+    "DNB/MD equivalent in General Medicine",
+    "DM/DNB/ equivalent (Cardiology)",
+    "MD/DNB/DCH/ equivalent (Pediatric Medicine)"
+  ],
+  "clinical_indications": [
+    "Problem with the rate or rhythm of the heartbeat (too fast/tachycardia, too slow/bradycardia, or irregular rhythm)",
+    "Symptoms such as irregular heartbeat, dizziness, or difficulty breathing",
+    "Underlying conditions including Bradyarrhythmia, Premature or extra heart beat, Supraventricular arrhythmia (atrial fibrillation, atrial flutter, paroxysmal supraventricular tachycardia), or Ventricular arrhythmia (ventricular tachycardia, ventricular fibrillation)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_vitals_examination",
+        "label": "Clinical notes detailing history and Admission notes showing vitals and examination findings."
+      },
+      {
+        "key": "investigation_reports_diagnosis_ecg_echo_cardiac_enzymes_angiography_holter",
+        "label": "Investigation reports establishing diagnosis ECG/ECHO/Cardiac Enzymes/ Angiography/ Holter?"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "treatment_details",
+        "label": "Treatment details"
+      },
+      {
+        "key": "relevant_investigations_ecg_echo_cardiac_enzymes_angiography_holter",
+        "label": "Relevant Investigations report ECG/ECHO/Cardiac Enzymes/ Angiography/ Holter"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailing history and Admission notes showing vitals and examination findings.",
+        "expected": true
+      },
+      {
+        "q": "Were the investigation reports establishing diagnosis – ECG/ECHO/Cardiac Enzymes/ Angiography/ Holter submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the relevant investigations ECG/ECHO/Cardiac Enzymes/ Angiography/ Holter submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is a Detailed Discharge Summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's ECG/ECHO/Cardiac enzymes/Angiography/Holter reports are not suggestive of the diagnosis.",
+    "Clinical notes detailing history and admission notes showing vitals and examination findings are missing or incomplete.",
+    "Investigation reports establishing diagnosis (ECG/ECHO/Cardiac Enzymes/Angiography/Holter) are missing at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) are missing at claim submission.",
+    "Detailed discharge summary is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Care Facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "An arrhythmia is a problem with the rate or rhythm of the heartbeat (too fast/tachycardia, too slow/bradycardia, or irregular rhythm).",
+      "Causes include changes in heart tissue/activity or electrical signals due to damage from disease, injury, or genetics.",
+      "Symptoms may include irregular heartbeat, dizziness, or difficulty breathing.",
+      "Types include Bradyarrhythmia/Bradycardia, Premature/extra heart beat, Supraventricular arrhythmia (atrial fibrillation, atrial flutter, paroxysmal supraventricular tachycardia), and Ventricular arrhythmia (ventricular tachycardia, ventricular fibrillation).",
+      "Diagnosis is primarily by Electrocardiogram (ECG).",
+      "Management involves Healthy Lifestyle Changes, Medicines (Adenosine, Atropine, Beta Blockers, calcium channel Blockers, Digitalis/Digoxin, Sodium Channel Blockers, Potassium Channel Blockers), and Procedures (Cardioversion, Catheter ablation, Implantable cardioverter defibrillators (ICDs), Pacemakers) if medicines are ineffective."
+    ],
+    "surgical_options": [
+      "Cardioversion",
+      "Catheter ablation",
+      "Implantable cardioverter defibrillators (ICDs)",
+      "Pacemakers"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

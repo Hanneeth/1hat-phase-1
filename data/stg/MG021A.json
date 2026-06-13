@@ -1,0 +1,151 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG021A",
+  "procedure_code": "MG021A",
+  "condition": "Urinary Tract Infection",
+  "procedure_name": "Urinary Tract Infection",
+  "specialty": "General Medicine; Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Urinary Tract Infection Guidelines_Medco.pdf",
+    "Urinary Tract Infection Guidelines_PPD.CPD.pdf"
+  ],
+  "alos": "1- 5 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Upper UTI (Pyelonephritis)",
+    "Complicated UTI",
+    "Pregnancy UTI",
+    "Male UTI with prostatitis",
+    "Catheter UTI",
+    "Infants UTI",
+    "Recurrent UTI / Non- Resolving UTI",
+    "For evaluation of underlying abnormality",
+    "Simple cystitis/ single episode of Lower UTI",
+    "Symptoms like fever, chills, pain renal angle, etc."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "on_bed_patient_photograph",
+        "label": "On bed patient photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "prescribed_medications",
+        "label": "Prescribed medications including culture sensitive antibiotics"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      },
+      {
+        "key": "urine_culture_sensitivity_report",
+        "label": "Urine culture/ sensitivity report"
+      },
+      {
+        "key": "ultrasound_kub_report",
+        "label": "Ultrasound KUB report (if indicated and available)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are clinical notes detailing past history of UTI, risk factors, signs and symptoms, and meeting suggestive admission criteria available?",
+        "expected": true
+      },
+      {
+        "q": "Is planned line of management documented?",
+        "expected": true
+      },
+      {
+        "q": "Is a photograph of the patient on bed available?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do the documents (clinical notes and physical examination reports) available detail the need for admission (admission criteria)?",
+        "expected": true
+      },
+      {
+        "q": "Was there documentary evidence of Urine culture/ sensitivity, Ultrasound KUB (if indicated – like no response to antibiotics in 48 hours and if device available)?",
+        "expected": true
+      },
+      {
+        "q": "If the patient is an Infant/Child, is abnormal Ultrasound KUB (if indicated) documented in the indoor patient record/discharge summary?",
+        "expected": true
+      },
+      {
+        "q": "Is there an evidence of temperature being monitored regularly?",
+        "expected": true
+      },
+      {
+        "q": "Is there a documentary evidence of medication/ treatment given?",
+        "expected": true
+      },
+      {
+        "q": "Do the discharge documents show the reasons for discharge / referral criteria (secondary to tertiary); counselling on control of risk factors like diabetes/ water intake, etc.; post discharge treatment advise including follow-up after discharge?",
+        "expected": true
+      },
+      {
+        "q": "If admitted to HDU/ICU, do documents show a need for admission to HDU/ICU?",
+        "expected": true
+      },
+      {
+        "q": "If admitted to HDU/ICU, is there documentary evidence of monitoring in HDU/ICU?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are incomplete or do not justify admission based on past history, risk factors, signs/symptoms, or suggestive admission criteria.",
+    "Photograph of the patient on bed is missing at pre-authorization.",
+    "Urine culture/sensitivity report or Ultrasound KUB report (if indicated) is missing at claim submission.",
+    "There is no evidence of regular temperature monitoring or medication/treatment given during admission.",
+    "Admission to HDU/ICU or monitoring within HDU/ICU is not justified by documentation.",
+    "Simple cystitis or single episode of Lower UTI is admitted without clear indication or justification."
+  ],
+  "additional_information": {
+    "icd_10_code": "N39.0",
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/ DNB/ equivalent (Medicine) / MD/ DNB/ PG Diploma/ equivalent (Pediatrics)",
+    "clinical_key_pointers": [
+      "Proceed for admission for management of Urinary Tract Infection only if indicated",
+      "The diagnosis made should be backed by clinical signs, symptoms, physical examination, investigations.",
+      "Look out for Red flag signs (Refer para 1.3 below). If applicable, refer to higher centre for further evaluation and management."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Counselling on control of risk factors like diabetes/ water intake, etc. is required in discharge documents.",
+    "referral_criteria": [
+      "Presence of red flag signs.",
+      "All males with UTI (except simple cystitis).",
+      "Pyelonephritis or complicated UTI not managed in primary care.",
+      "Non-response to antibiotics within 3 days.",
+      "Recurrent UTI.",
+      "Infants and Upper UTI (Pyelonephritis) in children.",
+      "Males with prostatitis."
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Nitrofurantoin: Avoid if GFR <45, caution in elderly.",
+      "TMP/SMX for pregnant UTI: Avoid in 1st trimester & near term."
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV025A",
+  "procedure_code": "SV025A",
+  "condition": "Foreign Body Aspiration",
+  "procedure_name": "Foreign Body Removal with scope",
+  "specialty": "CTVS, Pediatric Surgery, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Foreign body removal with scope__Medco.pdf",
+    "Foreign body removal with scope_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Cardiothoracic Surgery, Thoracic Surgery, Pediatric Surgery)",
+    "MS/DNB/Equivalent (in ENT/ General surgery)"
+  ],
+  "clinical_indications": [
+    "Presence of an aerodigestive foreign body causing varying amounts of obstruction to the airway"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "time_since_presentation",
+      "operator": "<=",
+      "value": "24h",
+      "note": "Endoscopic removal usually performed within this timeframe"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "chest_x_ray_report",
+        "label": "Chest X-ray report"
+      },
+      {
+        "key": "ct_chest_report_optional",
+        "label": "CT Chest (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_chest_x_ray_report",
+        "label": "Post procedure Chest X-ray report"
+      },
+      {
+        "key": "intra_operative_stills_optional",
+        "label": "Intra-operative stills (optional)"
+      },
+      {
+        "key": "photograph_of_removed_foreign_body",
+        "label": "Photograph of removed foreign body"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes include all vitals, detailed history, symptoms, signs, physical examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Chest X-ray report was suggestive of foreign body aspiration?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs include daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / Operative Notes are available?",
+        "expected": true
+      },
+      {
+        "q": "Post procedure Chest X-ray shows removal of the foreign body?",
+        "expected": true
+      },
+      {
+        "q": "Photograph of removed foreign body was submitted?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary includes follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation or imaging (Chest X-ray/CT Chest) not indicative of foreign body aspiration.",
+    "Pre-authorization request missing Chest X-ray report suggestive of foreign body aspiration.",
+    "Claim submission missing photograph of the removed foreign body.",
+    "Post-procedure Chest X-ray report does not confirm removal of the foreign body.",
+    "Procedure/Operative notes do not detail the removal of the foreign body."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Foreign body aspiration remains a significant cause of death in children for anatomic as well as developmental reasons.",
+      "Choking is typically defined as an aerodigestive foreign body causing varying amounts of obstruction to the airway.",
+      "Presentation: Infants and toddlers mainly, Male to female ratio 2:1, Children usually ingest/inhale food, coins, balloon, and toys whereas in adults commonly it is bones that are ingested /inhaled there may be violent bouts of coughing, choking, and gagging with possible complete airway obstruction, This is usually followed by an asymptomatic interval, where there is an absence of signs and symptoms as the foreign body becomes lodged.",
+      "Types: Upper airway foreign bodies (usually bone or eggshell, complete obstruction), Tracheal foreign bodies (partial obstruction, audible slap/palpatory thud), Bronchial foreign bodies (signs change rapidly, wheezing, coughing, decreased ipsilateral air entry).",
+      "Complications (from a missed foreign body aspiration): Obstruction with infection distal to the foreign body, Cough, hemoptysis, and fever, Atelectasis, lung abscess, pneumonia, bronchiectasis, Bronchial granulation tissue, fistula formation, Tracheal laceration."
+    ],
+    "surgical_options": [
+      "Endoscopic removal usually performed within 24h of presentation.",
+      "Flexible instruments should not be used as they are unable to adequately control the airways.",
+      "A rigid bronchoscope and retrieving forceps are the instruments of choice."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

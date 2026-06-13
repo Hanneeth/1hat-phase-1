@@ -1,0 +1,178 @@
+{
+  "stg_id": "MP031A",
+  "procedure_code": "MP031A",
+  "condition": "Acute severe malnutrition",
+  "procedure_name": "Acute severe malnutrition",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Severe Acute Malnutrition Guidelines_Medco.pdf",
+    "Severe Acute Malnutrition Guidelines_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "PG Diploma/MD/ DNB or equivalent (Paediatrics)"
+  ],
+  "clinical_indications": [
+    "Severe Acute Malnutrition (SAM) present along with complications/poor appetite/failed home treatment",
+    "0-6 months: MUAC <11.0 cm",
+    "6-59 months: MUAC <11.5 cm or WHZ <-3 SD or bilateral pitting oedema",
+    ">5 years: BMI ≤ 3SD (severe thinness)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "MUAC",
+      "operator": "<",
+      "value": "11.0 cm",
+      "note": "for 0-6 months old children"
+    },
+    {
+      "field": "MUAC",
+      "operator": "<",
+      "value": "11.5 cm",
+      "note": "for 6-59 months old children"
+    },
+    {
+      "field": "WHZ",
+      "operator": "<-",
+      "value": "3 SD",
+      "note": "for 6-59 months old children"
+    },
+    {
+      "field": "Bilateral pitting oedema",
+      "operator": "present",
+      "value": "true",
+      "note": "for 6-59 months old children"
+    },
+    {
+      "field": "BMI",
+      "operator": "<=",
+      "value": "3SD",
+      "note": "for children >5 years (severe thinness)"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "child_admission_image",
+        "label": "Still image of the child at the time of admission with patient ID and date"
+      },
+      {
+        "key": "clinical_notes_indications",
+        "label": "Clinical notes with indications (Faulty feeding habits, Poor appetite, Lethargy/Irritability, Any delayed developmental milestones including Weight, Vitals- Pulse rate (PR), respiratory rate (RR), Capillary refill time (CRT), Loss of Subcutaneous fat, muscle wasting, pallor, mid-upper arm circumference (MUAC) less than normal, Signs of Vitamin B, K and A deficiencies (if any of these symptoms are present), Dehydration, Respiratory distress)"
+      },
+      {
+        "key": "essential_investigations",
+        "label": "Essential Investigations (Haemogram, Random Blood sugar (RBS), LFT, KFT, Chest X-ray, RDT-HIV (only where available/ possible), Gastric aspirate for CBNAAT/ AFB (only where available/ possible), Peripheral smear examination)"
+      },
+      {
+        "key": "planned_line_of_management",
+        "label": "Planned line of management"
+      }
+    ],
+    "claim": [
+      {
+        "key": "child_discharge_image",
+        "label": "Still image of the child at the time of discharge with patient ID and date"
+      },
+      {
+        "key": "indoor_case_papers_treatment_details",
+        "label": "Detailed indoor case papers with treatment details indicating (Monitoring of vitals with Input-output charting as well as urine frequency, stool/ vomitus volumes, Intake: IV fluids (IVF) (DNS) 4ml/ Kg/hr for 2-3 days with early/ concomitant initiation of oral feeds (130 ml/kg/day), Condition/ complication specific treatment such as Antibiotics for Infection, Dextrose for Hypoglycemia/ severe dehydration, Potassium/ Magnesium for electrolyte imbalance, Whole blood/ PRBC transfusion for Anemia.)"
+      },
+      {
+        "key": "essential_investigation_reports",
+        "label": "Detailed essential investigation reports (Haemogram, Random Blood sugar (RBS), LFT, KFT, Chest X-ray, RDT-HIV (only where available/ possible), Gastric aspirate for CBNAAT/ AFB (only where available/ possible), Peripheral smear examination)"
+      },
+      {
+        "key": "discharge_summary_follow_up_advice",
+        "label": "Detailed Discharge summary with follow-up advise including (Transfer to Nutritional Rehabilitation Centre (NRC), Feeding, electrolytes (Zinc, Copper & Iron), vitamins (A & D, A, B complex) & supplementation advice)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is the still image of the child at the time of admission with patient ID and date?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes indicating (Faulty feeding habits, Poor appetite, Lethargy/Irritability, Any delayed developmental milestones including Weight, Vitals- Pulse rate (PR), respiratory rate (RR), Capillary refill time (CRT), Loss of Subcutaneous fat, muscle wasting, pallor, mid-upper arm circumference (MUAC) less than normal, Signs of Vitamin A, B and K deficiencies (If any of these symptoms are present), Dehydration, Respiratory distress)?",
+        "expected": true
+      },
+      {
+        "q": "Essential Investigations (Haemogram, Random Blood sugar (RBS), LFT, KFT, Chest X-ray, RDT-HIV (only where available/ possible), Gastric aspirate for CBNAAT/ AFB (only where available/ possible))?",
+        "expected": true
+      },
+      {
+        "q": "SAM with Complications/ Poor appetite/ failed home treatment?",
+        "expected": true
+      },
+      {
+        "q": "Is the Child 0-6 months of age- Yes, then is MUAC< 11.0 cm?",
+        "expected": true
+      },
+      {
+        "q": "Is the Child 6-59 months of age- Yes, then is MUAC<11.5 cm or WHZ <-3 SD or bilateral pitting edema?",
+        "expected": true
+      },
+      {
+        "q": "Is the Child > 5years of age- Yes, then is BMI </= 3SD (severe thinness)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is the still image of the child at the time of discharge with patient ID and date available?",
+        "expected": true
+      },
+      {
+        "q": "Does the patient have documentary evidence of (clinical indications & physical examination) for admission for Severe Acute Malnutrition (SAM) such as: Faulty feeding habits (Not exclusively Breast fed for 6 months/ bottle feeding/ delayed or inadequate complementary feeding), Poor appetite, Lethargy/Irritability, Any delayed developmental milestones including Weight, Vitals- Pulse rate (PR), respiratory rate (RR), Capillary refill time (CRT), Loss of Subcutaneous fat, muscle wasting, pallor, mid-upper arm circumference (MUAC) less than normal, Signs of Vitamin A, B, and K deficiencies (If any of these symptoms are present), Dehydration, Respiratory distress?",
+        "expected": true
+      },
+      {
+        "q": "Do the indoor case papers give the treatment details such as: Monitoring of vitals with Input-output charting as well as urine frequency, stool/ vomitus volumes, Intake: IVF(DNS) 4ml/ Kg/hr for 2-3 days with early/ concomitant initiation of oral feeds (130 ml/kg/day), Condition/ complication specific treatment such as Antibiotics for Infection, Dextrose for Hypoglycemia/ severe dehydration, Potassium/ Magnesium for electrolyte imbalance, Whole blood/ PRBC transfusion for Anemia?",
+        "expected": true
+      },
+      {
+        "q": "Is there a documentary evidence to confirm the discharge criteria i.e.: Child is clinically well and alert, No or resolving medical complications, No or resolving edema (if present), Satisfactory oral intake, has a good appetite with appropriate weight gain (taking at least 75% of target calorie intake of 150-200 kcal/kg/day & 0-6 months old have weight gain of 3-5 g/kg/day for three days).",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary available and includes follow-up advise for rehabilitation phase such as: Transfer to Nutritional Rehabilitation Centre (NRC), Feeding, electrolytes (Zinc, Copper & Iron), vitamins (A & D, A, B complex), Supplementation advise?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "SAM not indicated with complications/poor appetite/failed home treatment as per criteria.",
+    "MUAC not documented or outside threshold for the child's age group (0-6 months, 6-59 months).",
+    "WHZ or bilateral pitting edema not documented or outside threshold for 6-59 months age group.",
+    "BMI not documented or outside threshold for children >5 years.",
+    "Admission image missing patient ID or date.",
+    "Clinical notes missing key indications such as faulty feeding habits, poor appetite, lethargy/irritability, vitals, or MUAC measurement.",
+    "Essential investigation reports (e.g., Haemogram, RBS, LFT, KFT, Chest X-ray) missing or incomplete.",
+    "Discharge image missing patient ID or date.",
+    "Indoor case papers lack details on vital monitoring, fluid/feed intake, or specific treatment for complications.",
+    "Discharge criteria not met or not documented (e.g., child not clinically well, complications not resolving, edema present, unsatisfactory oral intake/weight gain).",
+    "Discharge summary not available or missing required follow-up advice for rehabilitation."
+  ],
+  "additional_information": {
+    "icd_10_code": "E43",
+    "special_empanelment": "1. Availability of appropriately equipped & staffed Neonatal ICU(NICU) / Paediatric ICU (PICU) for admitting children requiring ICU care.\n2. Availability of a qualified Paediatrician (as per the above essential qualifications) in the hospital",
+    "min_doctor_qualification_desirable": "DM/DNB(Neonatology) (for NICU patients)",
+    "clinical_key_pointers": [
+      "Proceed for admission only if Severe Acute Malnutrition (SAM) is present along with Complications/ poor appetite/ failed home treatment",
+      "If the patient is not having any complications/ is able to feed well and mother is co-operative, admission may not be required.",
+      "Transfer to Nutrition Rehabilitation Centre (NRC) when child meets the discharge criteria & accepts home available foods",
+      "Discharge criteria from hospital to outpatient care: i. Child is clinically well and alert ii. No or resolving medical complications iii. No or resolving edema (if present) iv. Satisfactory oral intake, has a good appetite with appropriate weight gain"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": "Clinically well and alert; no or resolving medical complications; no or resolving oedema (if present), satisfactory oral intake has a good appetite (taking at least 75% of target calorie intake of 150-200 kcal/kg/day & 0-6 months old have weight gain of 3-5 g/kg/day for three days).",
+    "comorbidity_management": null,
+    "referral_criteria": "Transfer to Nutrition Rehabilitation Centre (NRC) when child meets the discharge criteria & accepts home available foods",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

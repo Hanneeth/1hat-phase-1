@@ -1,0 +1,119 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU089A",
+  "procedure_code": "SU089A",
+  "condition": "Varicocele",
+  "procedure_name": "Surgical Correction of Varicocele (Non-Microsurgical)",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Surgical Correction of Varicocele_Medco.pdf",
+    "Surgical Correction of Varicocele_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent in Urology"
+  ],
+  "clinical_indications": [
+    "The varicocele is palpable on physical examination of scrotum.",
+    "Infertility, Abnormal semen parameters, Clinical varicocele, Oligospermia",
+    "Infertility duration of ≥2 years",
+    "Otherwise unexplained infertility in the couple.",
+    "Varicocele treatment is recommended for adolescents with progressive failure of testicular development documented by serial clinical examination."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure."
+      },
+      {
+        "key": "ultrasound_imaging_scrotum",
+        "label": "Ultrasound Imaging of the Scrotum"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes submitted?"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary submitted?"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Ultrasound Imaging of the Scrotum report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Do the EHCP have facilities for microsurgery?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or USG scrotum report not indicative of the procedure.",
+    "Clinical notes including evaluation findings, indication for procedure, planned line of management, or advise for the procedure not submitted.",
+    "Ultrasound Imaging of the Scrotum report not submitted.",
+    "EHCP claiming non-microsurgical procedure but facilities for microsurgery are indicated as present.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details not submitted.",
+    "Detailed Procedure / Operative Notes not submitted.",
+    "Detailed Discharge Summary not submitted or missing date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A varicocele leads to impair sperm production and function due to anatomical abnormality and is due to a dilatation of the pampiniform venous plexus within the scrotum.",
+      "There is no effective medical treatment available for varicoceles. Surgical correction is the main treatment option used.",
+      "Varicocele is the most common correctable aetiology found in adult men with infertility.",
+      "The goal of surgical corrections of varicocele is to improve the potential for future fertility."
+    ],
+    "surgical_options": [
+      "The Palomo retroperitoneal technique.",
+      "The Ivanissevich inguinal approach.",
+      "Antegrade sclerotherapy,",
+      "Retrograde embolization,",
+      "Microsurgery: The microsurgical sub-inguinal approach is the gold standard.",
+      "Retroperitoneoscopic and",
+      "Laparoscopic procedures.",
+      "The inguinal and sub inguinal approaches are most used, the microsurgical technique has advanced the surgical treatment of this disorder by allowing optimal visualization.",
+      "Microsurgical repair of varicocele may improve the patient's erectile and ejaculatory function, along with raising testosterone levels."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

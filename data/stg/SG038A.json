@@ -1,0 +1,113 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG038A",
+  "procedure_code": "SG038A",
+  "condition": "Abdominal Hydatid Cyst",
+  "procedure_name": "Abdominal Hydatid Cyst (Single Organ)",
+  "specialty": "Pediatric Surgery/ General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Abdominal Hydatid Cyst_Medco.pdf",
+    "Abdominal Hydatid Cyst_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MS/ DNB/ equivalent (General Surgery)",
+    "MCh/Equivalent (Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Abdominal lump in right upper quadrant. Pain may be characterized as heaviness in abdomen. Associated symptoms dyspepsia, anorexia, nausea and vomiting",
+    "Obstructive jaundice when daughter cyst may communicate with biliary tree",
+    "Anaphylactic shock if cyst ruptures into peritoneal cavity",
+    "Other less common complications include intraperitoneal rupture, intrathoracic rupture, internal rupture, rupture into viscera, rupture into vascular system and external compression leading to portal hypertension",
+    "Symptomatic and complicated cases are modality of choice for surgery"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "usg_ct_mri_abdomen",
+        "label": "USG/CT/MRI Abdomen"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_icps",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative Photographs (optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the indication for surgery mentioned?",
+        "expected": true
+      },
+      {
+        "q": "Did the USG/CT/MRI Abdomen report confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes / photographs and histopathology report available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Indication for surgery not mentioned in clinical notes",
+    "USG/CT/MRI Abdomen report does not confirm diagnosis",
+    "Clinical notes are incomplete (missing detailed history, signs, symptoms, or indication for procedure)",
+    "Detailed ICPs with daily vitals and line of treatment are missing or incomplete",
+    "Detailed procedure/operative notes, photographs (if applicable), or histopathology report are missing",
+    "Discharge summary is missing or does not include follow-up advice"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hydatid disease in people is mainly caused by infection with the larval stage of the dog tapeworm Echinococcus granulosus.",
+      "It is an important pathogenic, zoonotic and parasitic infection (acquired from animals) of humans, following ingestion of tapeworm eggs excreted in the faeces of infected dogs.",
+      "Cystic echinococcosis most frequently involves only one organ by forming a solitary cyst.",
+      "Hydatid disease commonly involves the liver (75%) and lungs (15%), followed by other regions of the body (10- 15%)."
+    ],
+    "surgical_options": [
+      "PAIR- Puncture, Aspiration, Injection (of a scolicidal agent), Reaspiration",
+      "Partial cystectomy",
+      "Anatomical or non-anatomical liver resections, including cystopericystectomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

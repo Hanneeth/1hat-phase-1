@@ -1,0 +1,106 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Lung Abscess/ : Lung Abscess_Medco.pdf (clinical + mandatory docs) + Lung Abscess_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG019A",
+  "procedure_code": "MG019A",
+  "condition": "Lung Abscess",
+  "procedure_name": "Lung abscess",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Lung Abscess_Medco.pdf",
+    "Lung Abscess_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "as a complication of aspiration pneumonia caused by mouth anaerobes.",
+    "Bacterial infections",
+    "Patients with Periodontal disease, Seizure disorder, Alcohol abuse, Dysphagia"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes detailing examination findings, previous surgery/procedure, follow-up visit details, investigations, advise for daycare procedure"
+      },
+      {
+        "key": "chest_xray_ct_scan",
+        "label": "Chest X Ray and CT scan Chest (as applicable)"
+      },
+      {
+        "key": "sputum_microscopy_culture_sensitivity",
+        "label": "Sputum microscopy/ culture + sensitivity report"
+      },
+      {
+        "key": "cbc_blood_sugar",
+        "label": "CBC, Blood Sugar (Fasting, PP and Random)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "post_treatment_chest_xray",
+        "label": "Post treatment Chest X ray submitted?"
+      },
+      {
+        "key": "post_treatment_cbc_blood_sugar",
+        "label": "Post treatment CBC, Blood Sugar (Fasting, PP and Random) reports"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is there Localized collection of pus in the lungs in one or more cavities on chest X ray report show presence of Abscess?",
+        "expected": true
+      },
+      {
+        "q": "Are the Sputum smear and culture reports available?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Localized collection of pus in the lungs in one or more cavities is not shown on chest X-ray report or CT scan, indicating absence of Abscess.",
+    "Sputum smear and culture reports are not available.",
+    "Mandatory pre-authorization document 'Clinical notes detailing examination findings, previous surgery/procedure, follow-up visit details, investigations, or advise for daycare procedure' is missing or incomplete.",
+    "Post-treatment Chest X-ray report not submitted at claim stage.",
+    "Detailed discharge summary missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB/ equivalent (in General Medicine / Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "is defined as necrosis of the pulmonary tissue and formation of cavities containing necrotic debris or fluid caused by microbial infection.",
+      "A patient with an ongoing pneumonia of 2 to 3 weeks duration",
+      "History of pneumonia in recent past with respiratory symptoms",
+      "Cough, sputum that may be putrid and foul smelling",
+      "Haemoptysis",
+      "Pleuritic chest pain or heaviness in the chest",
+      "Fever",
+      "Night sweats",
+      "Anorexia",
+      "Weight loss and digital clubbing"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

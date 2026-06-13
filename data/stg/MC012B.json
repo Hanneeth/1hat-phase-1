@@ -1,0 +1,145 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MC012B",
+  "procedure_code": "MC012B",
+  "condition": "Electrophysiological Study",
+  "procedure_name": "Electrophysiological Study with Radio Frequency Ablation",
+  "specialty": "Cardiology",
+  "version": "1.1",
+  "source_files": [
+    "Electrophysiological study _Medco.pdf",
+    "Electrophysiological study _PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD Cardiology",
+    "DM Cardiology",
+    "DNB Cardiology"
+  ],
+  "clinical_indications": [
+    "Supraventricular tachycardia (SVT)",
+    "Ventricular tachycardia (VT)",
+    "Sinus node dysfunction",
+    "Conduction abnormalities (Atrioventricular block, Bundle branch block/bifascicular block/trifascicular block/intraventricular conduction disease)",
+    "Evaluation of Syncope",
+    "Assessment after post antiarrhythmic surgery",
+    "Guiding drug therapy",
+    "Congenital heart disease",
+    "Survivors of cardiac arrest",
+    "Undocumented palpitations",
+    "Conduction disorders after transcatheter aortic valve replacement",
+    "SVT due to recurrent, refractory AVNRT and AVRT",
+    "Atrial tachycardia",
+    "Accessory pathway",
+    "Atrial fibrillation (in some patients)",
+    "Atrial flutter",
+    "VT for those with normal heart (outflow tract tachycardia, fascicular tachycardia)",
+    "VT associated with structural abnormalities of heart",
+    "Life threatening and incessant arrhythmias",
+    "Recurrent tachyarrhythmias that require prophylactic antiarrhythmics for an indefinite period"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "ecg_with_cardiologist_report",
+        "label": "ECG with report of cardiologist"
+      },
+      {
+        "key": "echo_colour_doppler_report_with_stills",
+        "label": "Echo/colour doppler report with stills"
+      },
+      {
+        "key": "indication_for_procedure",
+        "label": "Indication for procedure"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "ep_study_report",
+        "label": "EP study report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "invoice_barcode_of_catheters",
+        "label": "Invoice/Bar code of catheters"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the ECG and its report by cardiologist submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the echo/ colour doppler report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the EP report of the procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the invoice/ barcode of catheter submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing or lack detailed history, signs, symptoms, or indication for the procedure.",
+    "ECG with cardiologist report is not submitted or incomplete.",
+    "Echo/colour doppler report with stills is not submitted or incomplete.",
+    "EP study report is not submitted.",
+    "Invoice or barcode of catheters is not submitted at the claim stage.",
+    "The indication for Radiofrequency Ablation (RFA) is not clearly justified based on the EPS findings or patient history."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Electro-physiological study (EPS) is an invasive procedure that needs catheter placement into the cardiac chambers, commonly via the femoral vein and femoral artery, using the Seldinger technique.",
+      "The aim is to stimulate the heart using two pacing techniques: extra-stimulus pacing and incremental pacing.",
+      "The use of extra stimulus pacing reveals the refractory periods, conduction and activation changes, diagnostic for certain diseases.",
+      "The incremental pacing helps for observing and measuring the impulse conduction during stress conditions and evaluates the recovery time of cardiac tissue under evaluation at cessation of stimulation.",
+      "Electrophysiologic testing is indicated in patients with various suspected or obvious arrhythmias for their documentation and initiation, study mechanism (automaticity, triggered activity or re-entry) and treat them by radio frequency ablation (RFA).",
+      "Radiofrequency Ablation (RFA) treatment has revolutionised management of arrhythmias resulting in a cure in over 90% of cases.",
+      "Apart from life threatening and incessant arrhythmias, the technique is established for patients with recurrent tachyarrhythmias that require prophylactic antiarrhythmics for an indefinite period.",
+      "Catheter ablation is a rapidly evolving science and has proved to be a good solution in most of the patients suffering from recurrent arrhythmia, which limit their productivity and hinder their lifestyle."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

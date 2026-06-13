@@ -1,0 +1,140 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG117A",
+  "procedure_code": "SG117A",
+  "condition": "Corrosive Injury Stomach",
+  "procedure_name": "Replacement Surgery for Corrosive Injury Stomach",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Replacement Surgery for Corrosive Injury Stomach_Medco.pdf",
+    "Replacement Surgery for Corrosive Injury Stomach_PPD.CPD.pdf"
+  ],
+  "alos": "7-10 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MCh/DNB/Equivalent (GI Surgery)"
+  ],
+  "clinical_indications": [
+    "Stricture formation with an inability to swallow food after corrosive injury",
+    "Inability to swallow following a corrosive stricture of the oesophagus",
+    "Corrosive injury of the stomach (antrum, body, or pyloroduodenal area) leading to strictures",
+    "Corrosive injury of the oesophagus requiring a new passage (replacement)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes with history and examination and planned line of treatment"
+      },
+      {
+        "key": "upper_gi_endoscopy_report",
+        "label": "Upper GI Endoscopy Report"
+      },
+      {
+        "key": "barium_study",
+        "label": "Barium Study"
+      },
+      {
+        "key": "ct_abdomen_colonoscopy_barium_enema",
+        "label": "CT Abdomen/Colonoscopy/Barium Enema"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "intra_operative_clinical_photograph",
+        "label": "Intra Operative Clinical Photograph (Optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether the investigation reports confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Whether all the submitted reports are suggestive of history of upper GI corrosive injury?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Whether detailed Operative/Procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Whether detailed Discharge Summary Submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advice available at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's clinical history or investigations not indicative of the procedure for corrosive injury stomach.",
+    "Investigation reports do not confirm the diagnosis of corrosive injury stomach.",
+    "Upper GI Endoscopy Report missing or incomplete at pre-authorization.",
+    "Barium Study missing or incomplete at pre-authorization.",
+    "CT Abdomen/Colonoscopy/Barium Enema missing or incomplete at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details not submitted at claim stage.",
+    "Detailed Operative/Procedure Notes missing or incomplete at claim stage.",
+    "Detailed Discharge Summary with follow-up advice missing or incomplete at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Potentially catastrophic presentation and lifelong complications resulting from caustic ingestion make it one of the most challenging clinical situations in gastroenterology.",
+      "Ingestion of caustic materials is accidental in children and usually suicidal in teenagers and adults.",
+      "Alkaline caustics and acids are the most common chemicals implicated in caustic burns.",
+      "Burns from such agents may include the oral cavity, pharynx, larynx, oesophagus, and stomach.",
+      "Destruction of the tissues of these organs may lead to complications, of which respiratory compromise, oesophageal and gastric perforation, septicemia, or even death.",
+      "Acids commonly affect the stomach more than alkalis, cause mucosal damage by coagulation necrosis, and require a longer duration of contact.",
+      "Acids are cleared rapidly from the oesophagus to the stomach, pooling in the prepyloric area due to corrosive induced pylorospasm.",
+      "Strictures can also occur in the antrum, body, or the pyloroduodenal area.",
+      "Alkalis cause liquefaction necrosis, are more viscous, and tend to adhere to the oesophageal mucosa with only a relatively small amount reaching the stomach.",
+      "The extent of oesophageal damage is greater with alkalis than with acids.",
+      "Treatment options include dilations (blind, retrograde endless string, and endoscopic) or creating a new passage (replacement)."
+    ],
+    "surgical_options": [
+      "Gastric Conduit",
+      "Colonic Conduit",
+      "Jejunal Conduit",
+      "Bypass procedures (preferred over resection procedures due to reduced morbidity)",
+      "Gastric pull-up (technically easier, requires one anastomosis)",
+      "Colon graft (requires three anastomoses and extensive dissection)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

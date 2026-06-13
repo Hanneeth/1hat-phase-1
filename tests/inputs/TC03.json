@@ -1,0 +1,164 @@
+{
+  "_test_id": "TC03",
+  "_description": "Cataract surgery in 72-year-old with dual wallet (family + Vay Vandana). Tests VAY_VANDANA_DEBIT_ORDER_AMBIGUOUS flag in Phase 5 and PAEDIATRIC_DEVICE flag should NOT fire (age 72, not paediatric). Day-care package.",
+  "_expected_status": "READY_WITH_WARNINGS",
+  "_expected_specialty": "SE",
+  "_expected_flags_include": [
+    "VAY_VANDANA_DEBIT_ORDER_AMBIGUOUS",
+    "CANDIDATES_GENERATED"
+  ],
+  "_expected_flags_exclude": [
+    "WALLET_INSUFFICIENT",
+    "PUB_RESERVED_BLOCK",
+    "PAEDIATRIC_DEVICE"
+  ],
+  "session_id": "IRIS-TC03-20260612",
+  "created_at": "2026-06-12T10:00:00+05:30",
+  "patient": {
+    "patient_id": "P002"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Gradual painless diminution of vision right eye over 2 years, difficulty reading and recognising faces, glare in bright light",
+    "duration_days": 730,
+    "history_of_present_illness": "Patient noticed progressive painless decrease in vision in the right eye over the past 2 years. Difficulty in near vision and recognising faces. Glare while driving at night. No redness, no pain, no discharge. Left eye vision relatively better. Patient is a known hypertensive and diabetic.",
+    "provisional_diagnosis": "Senile cataract right eye — mature nuclear sclerosis",
+    "planned_procedure": "Phacoemulsification with foldable IOL implantation right eye",
+    "weight_kg": 62,
+    "height_cm": 155,
+    "vitals": {
+      "bp_systolic_mmhg": 138,
+      "bp_diastolic_mmhg": 86,
+      "pulse_bpm": 76,
+      "spo2_pct": 97,
+      "temperature_f": 98.2,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": 156
+    },
+    "examination_findings": {
+      "general": "Elderly female, conscious, oriented, mild pallor, no icterus",
+      "cvs": "S1 S2 heard, no murmurs",
+      "rs": "Clear air entry bilateral",
+      "abdomen": "Soft, non-tender",
+      "cns": "No focal deficits",
+      "local": "Right eye: BCVA 6/60 not improving with pinhole. Dense nuclear cataract on slit lamp. Fundus view hazy. Left eye: BCVA 6/18 with glasses. Mild cortical cataract."
+    },
+    "investigations": [
+      {
+        "type": "other",
+        "result_summary": "Ocular biometry (A-scan): Axial length RE 23.4mm, IOL power calculated +20.5D. Keratometry: 43.5/44.0 D. BCVA right eye: 6/60, does not improve with pinhole or refraction. Slit lamp: Dense nuclear sclerosis grade 3+. IOP: 14 mmHg bilaterally.",
+        "structured_values": [
+          {
+            "parameter": "BCVA_RE",
+            "value": "6/60",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "pinhole_improvement",
+            "value": "none",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "IOL_power",
+            "value": 20.5,
+            "unit": "Diopters",
+            "flag": null,
+            "leads": null
+          },
+          {
+            "parameter": "IOP_RE",
+            "value": 14,
+            "unit": "mmHg",
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-10"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "Pre-op workup: Hb 11.2 g/dL, blood glucose fasting 142 mg/dL, blood glucose PP 198 mg/dL, HbA1c 7.8%",
+        "structured_values": [
+          {
+            "parameter": "Hb",
+            "value": 11.2,
+            "unit": "g/dL",
+            "flag": "L",
+            "leads": null
+          },
+          {
+            "parameter": "fasting_glucose",
+            "value": 142,
+            "unit": "mg/dL",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "HbA1c",
+            "value": 7.8,
+            "unit": "%",
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-10"
+      }
+    ],
+    "comorbidities": [
+      "type2_diabetes",
+      "hypertension"
+    ],
+    "past_medical_history": "Hypertension 15 years, Type 2 DM 12 years, both on medication. Prior cataract surgery left eye 5 years ago at another hospital (not under PM-JAY).",
+    "past_surgical_history": "Cataract surgery left eye 5 years ago",
+    "current_medications": [
+      "Metformin 1g BD",
+      "Glipizide 5mg OD",
+      "Amlodipine 5mg OD",
+      "Losartan 50mg OD"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "none",
+      "diet": "vegetarian"
+    },
+    "family_history": "No significant family history of glaucoma or retinal disease",
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Ophthalmology consultation notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo on hospital bed",
+        "available": true
+      },
+      {
+        "key": "treating_doctor_prescription",
+        "label": "Ophthalmologist prescription advising surgery",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Meera Krishnan",
+      "registration_number": "TN-MED-78901",
+      "qualification": "MS Ophthalmology, FRCS",
+      "specialty_code": "SE"
+    },
+    "notes": "Patient pre-op clearance done. Blood pressure controlled on medication. Blood sugar acceptable for surgery. Informed consent obtained. Planned for phacoemulsification under local anaesthesia."
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO072A",
+  "procedure_code": "SO072A",
+  "condition": "Cervical abnormalities / Precancerous conditions / Cervical cancer",
+  "procedure_name": "Cone Biopsy",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Cone biopsy_Medco.pdf",
+    "Cone biopsy_PPD.CPD.pdf"
+  ],
+  "alos": "1-2 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/ Equivalent (OB&GYN)"
+  ],
+  "clinical_indications": [
+    "H/o post coital bleeding",
+    "Discrepancy between clinical findings and PAP smear report",
+    "Colposcopy showing inadequate delineation of transformation zone/ upper limit of abnormal area not visible"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, symptoms, signs, examination findings, indication for procedure and advice for admission"
+      },
+      {
+        "key": "other_investigation_reports",
+        "label": "Other investigation report (such as PAP test, HPV test, Colposcopy report, etc.)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed indoor case papers clearly indicating the need for performing the procedure"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "gross_specimen_pictures",
+        "label": "Pictures of gross specimen removed along with size of cone"
+      },
+      {
+        "key": "histopathology_form",
+        "label": "Histopathology form confirming submission of specimen removed for histopathological examination"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary with follow-up advice"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure and advice for admission available?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation, physical examination ± supporting investigations indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed procedure notes available with indications for the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is discharge summary available with follow-up advice at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was Histopathology form confirming submission of specimen removed for histopathological examination submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was there a correlation of biopsy lesion with histopathology report?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, physical examination, or supporting investigations not indicative of the procedure.",
+    "Detailed Clinical notes (vitals, history, symptoms, signs, physical examination, indication, admission advice) not available or incomplete.",
+    "Other investigation reports (e.g., PAP test, HPV test, Colposcopy report) not provided or incomplete.",
+    "Detailed procedure notes are missing or do not contain indications for the procedure.",
+    "Discharge summary is missing or does not include follow-up advice.",
+    "Histopathology form confirming submission of specimen removed for examination is missing or incomplete.",
+    "No correlation found between biopsy lesion and histopathology report.",
+    "Pictures of gross specimen removed or its size are missing or incomplete.",
+    "Indoor case papers are missing or do not clearly indicate the need for the procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary level facility (essential criteria) having Well equipped operation theatre with anaesthesia facility.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Cervical biopsy can be done in several ways (Punch biopsy/ Cone biopsy/ Endocervical curettage (ECC).",
+      "Cone biopsy (conization) is a procedure done to remove a sample of abnormal tissue from the cervix.",
+      "The tissue thus removed is sent for histopathology examination to test for abnormal/ precancerous conditions/cervical cancer.",
+      "It can be done both as a diagnostic and a therapeutic procedure."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Too little cervix to excise due to previous excision",
+      "Pregnancy (relative contraindication), should only be performed incases of strong suspicion of invasive cancer",
+      "Severe cervico-vaginal infection",
+      "Patient is on anticoagulant therapy"
+    ]
+  }
+}

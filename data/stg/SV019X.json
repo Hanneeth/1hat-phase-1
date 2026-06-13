@@ -1,0 +1,125 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV019X",
+  "procedure_code": "SV019X",
+  "condition": "Arterial Aneurysm-Renal Artery",
+  "procedure_name": "Surgery for Arterial Aneurysm-Renal Artery",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Surgery for Artery Anuerysm-Renal Artery_MEDCO.pdf",
+    "Surgery for Artery Anuerysm-Renal Artery PPD_CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "MCh/ or equivalent (in Cardiothoracic Surgery, Vascular Surgery)"
+  ],
+  "clinical_indications": [
+    "Rupture",
+    "Symptomatic renal artery aneurysm - Hypertension (from associated renal artery stenosis, refractory to medical management), pain, renal ischemia or infarction secondary to embolization from the aneurysm sac",
+    "Renal artery aneurysms in females who are pregnant or are contemplating pregnancy.",
+    "Diameter greater than 2 cm",
+    "Enlarging renal artery aneurysm",
+    "Renal artery aneurysm associated with acute dissection."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "diameter",
+      "operator": ">",
+      "value": "2 cm",
+      "note": "for renal artery aneurysm"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_indication_admission",
+        "label": "Clinical notes with indication and admission notes."
+      },
+      {
+        "key": "relevant_investigations_angiogram_ct_mri",
+        "label": "Relevant investigations - Angiogram / CT Angiogram / MRI reports"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/ operative notes"
+      },
+      {
+        "key": "barcode_of_graft",
+        "label": "Is the barcode of the graft if used submitted? (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are the Clinical notes with indication and admission notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the investigations reports - Angiogram / CT Angiogram / MRI reports?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Arethe detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure/ operative notessubmitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the barcode of graft if used submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is a detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's clinical notes and investigation reports (Angiogram / CT / MRI) were not suggestive for the procedure.",
+    "Clinical notes with indication and admission notes not submitted at pre-authorization.",
+    "Relevant investigations (Angiogram / CT Angiogram / MRI reports) not submitted at pre-authorization.",
+    "Detailed indoor case papers (ICPs) not submitted at claim submission.",
+    "Detailed procedure/operative notes not submitted at claim submission.",
+    "Detailed discharge summary not submitted at claim submission.",
+    "Clinical indication threshold of 'Diameter greater than 2 cm' for renal artery aneurysm not met or documented."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Care Facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A renal artery aneurysm (RAA) is defined as a dilated segment of renal artery that exceeds twice the diameter of a normal renal artery.",
+      "Symptomatic RAAs can cause hypertension, pain, hematuria, and renal infarction.",
+      "Asymptomatic RAAs may seem benign, but the potential for rupture and fistulization increases with size.",
+      "Asymptomatic patients can be referred for elective repair, but if patients are symptomatic, further investigation with possible surgical intervention should be considered."
+    ],
+    "surgical_options": [
+      "Aneurysmectomy",
+      "Arteriorrhaphy with or without patch arteriography",
+      "Nephrectomy which is usually an unplanned event necessitated by complications such as aneurysm rupture or end-stage ischemic nephropathy."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

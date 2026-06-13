@@ -1,0 +1,130 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MN010A",
+  "procedure_code": "MN010A",
+  "condition": "Hydrocephalus",
+  "procedure_name": "Ventriculoperitoneal Shunt Surgery (VP) or Omaya Reservoir or External Drainage for Hydrocephalus",
+  "specialty": "Neo-natal Care/ pediatric surgery",
+  "version": "1.1",
+  "source_files": [
+    "Hydrocephalus (Surgical management)_Medco.pdf",
+    "Hydrocephalus (Surgical management)_PPD.CPD.pdf"
+  ],
+  "alos": "2-3 days",
+  "min_doctor_qualification": [
+    "MCh (Neurosurgery)",
+    "DNB (Neurosurgery)",
+    "equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Relief of increased CSF and ICP",
+    "Symptomatic hydrocephalus in newborns",
+    "Elevated ICP is a concern, managed by surgical implantation of a ventriculoperitoneal (VP) shunt"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_picture",
+        "label": "Clinical picture"
+      },
+      {
+        "key": "neurosonogram_ct_mri_brain",
+        "label": "Neurosonogram/CT Brain/MRI Brain"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_icps",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_photograph_optional",
+        "label": "Post-procedure photograph (Optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical picture and imaging suggestive of diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed laser procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the Neurosonogram/CT/MRI Brain report indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was post-operative photograph submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical picture or imaging not suggestive of diagnosis or not indicative of surgery.",
+    "Clinical notes incomplete (missing history, signs, symptoms, planned treatment, or indication for procedure).",
+    "Indoor Case Papers (ICPs) lack daily vitals or line of treatment.",
+    "Operative Notes not available or incomplete (missing surgical steps or implant details).",
+    "Discharge summary missing follow-up advice.",
+    "Neurosonogram/CT/MRI Brain report not indicative of surgery."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hydrocephalus is one of the most common congenital abnormalities affecting the nervous system, occurring in 0.3 to 2.5 per 1,000 live births.",
+      "It results from obstruction of cerebrospinal fluid (CSF) pathways by a diverse range of developmental, genetic, and acquired abnormalities and can have negative consequences on the neurodevelopmental outcome of affected neonates.",
+      "Hydrocephalus is a clinical diagnosis of cerebrospinal fluid (CSF) accumulation in the ventricles and brain spaces accompanied by an increase in intracranial pressure (ICP)."
+    ],
+    "surgical_options": [
+      "Ventricular access device (VAD)",
+      "Ventriculosubgaleal shunt (VSGS)",
+      "Endoscopic third ventriculostomy (ETV) without or with choroid plexus coagulation (CPC)",
+      "Ventriculoperitoneal (VP) shunt insertion",
+      "Omaya Reservoir",
+      "External Drainage"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

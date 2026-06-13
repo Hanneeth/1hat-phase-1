@@ -1,0 +1,154 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG036A",
+  "procedure_code": "MG036A",
+  "condition": "Atrial Fibrillation",
+  "procedure_name": "Atrial Fibrillation",
+  "specialty": "General Medicine",
+  "version": "1.1",
+  "source_files": [
+    "Atrial Fibrillation_Medco.pdf",
+    "Atrial Fibrillation_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MD (General Medicine)"
+  ],
+  "clinical_indications": [
+    "Rapid irregular heart beat or rapid rate palpitations",
+    "General fatigue, weakness, or exhaustion",
+    "Dizziness, near syncope or syncope",
+    "Shortness of breath",
+    "Chest pain, especially more marked on exertion",
+    "Irregularly irregular pulse",
+    "Variable heart sound",
+    "Systolic blood pressure <90 mm/hg",
+    "Heart rate >150 b/m or <50 b/m"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "systolic_bp",
+      "operator": "<=",
+      "value": "90 mmHg",
+      "note": "for immediate intervention"
+    },
+    {
+      "field": "heart_rate",
+      "operator": ">=",
+      "value": "150/min",
+      "note": "for immediate intervention"
+    },
+    {
+      "field": "heart_rate",
+      "operator": "<=",
+      "value": "50/min",
+      "note": "for immediate intervention"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "coagulation_profile",
+        "label": "Blood test: Coagulation profile (PT, INR)"
+      },
+      {
+        "key": "sr_electrolytes",
+        "label": "Blood test: Sr. electrolytes"
+      },
+      {
+        "key": "ecg_irregular_rhythm_abnormal_hr",
+        "label": "ECG it shows irregular rhythm and abnormal heart rate"
+      },
+      {
+        "key": "x_ray_chest",
+        "label": "X-ray Chest"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_treatment_ecg",
+        "label": "Post treatment ECG"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      },
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs), Treatment details"
+      },
+      {
+        "key": "all_investigations_reports",
+        "label": "All investigations reports"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Was patient ECG done at the time of/ before discharge?",
+        "expected": true
+      },
+      {
+        "q": "Did patient's serum electrolytes result reach normal range before discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient ECG not done at the time of or before discharge",
+    "Patient's serum electrolytes did not reach normal range before discharge",
+    "Clinical notes missing or incomplete at pre-auth stage",
+    "Missing or incomplete blood test results (Coagulation profile/PT, INR or Sr. electrolytes) at pre-auth stage",
+    "ECG not showing irregular rhythm or abnormal heart rate, or missing at pre-auth stage",
+    "Post-treatment ECG missing at claim stage",
+    "X-ray Chest missing at pre-auth stage"
+  ],
+  "additional_information": {
+    "icd_10_code": "I48.91",
+    "special_empanelment": "ECG Machine",
+    "min_doctor_qualification_desirable": "MD/DNB or equivalent (in Cardiology)",
+    "clinical_key_pointers": [
+      "Clinical symptoms: Rapid irregular heart beat",
+      "Clinical symptoms: General fatigue",
+      "Clinical symptoms: Weakness",
+      "Clinical symptoms: Exhaustion",
+      "Clinical symptoms: Dizziness",
+      "Clinical symptoms: Near syncope or Syncope",
+      "Clinical symptoms: Shortness of breath",
+      "Clinical symptoms: Chest pain",
+      "Signs: Irregular pulse",
+      "Signs: Variable heart sound",
+      "Signs: Systolic blood pressure<90 mm/hg",
+      "Signs: Heart rate >150 b/m or <50 b/m",
+      "Risk Factors: Prior valvular heart disease",
+      "Risk Factors: Chronic heart failure",
+      "Risk Factors: Myocardial infraction",
+      "Risk Factors: Prior Transient Ischemic Attack",
+      "Risk Factors: Stroke",
+      "Risk Factors: Embolic episode",
+      "Risk Factors: Hypertension",
+      "Risk Factors: Diabetes mellitus",
+      "Risk Factors: COPD",
+      "Risk Factors: CKD",
+      "Risk Factors: Obesity"
+    ],
+    "surgical_options": [
+      "Pharmacological Cardioversion",
+      "Long Term Rhythm Control",
+      "Radiofrequency Ablation (RFA) in select patients"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Management of comorbidities like Hypertension (control SBP to less than 140 mmHg), Diabetes Mellitus, COPD, CKD, and Obesity. Also assess for precipitating factors like post (cardiac) surgery, alcoholism/binge drinking, myo-pericarditis/ACS, pneumonitis/pulmonary embolism, sepsis, hyperthyroidism.",
+    "referral_criteria": "Referral from PHC/CHC if indicators for early intervention; Referral from District Hospital if heart rate uncontrolled or presence of CHF or angina.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU031B",
+  "procedure_code": "SU031B",
+  "condition": "Ureteric stricture",
+  "procedure_name": "Boari flap for ureteric stricture (Lap)",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Boari flap for ureteric stricture_Medco.pdf",
+    "Boari flap for ureteric stricture_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MCh equivalent in Urology",
+    "DNB equivalent in Urology"
+  ],
+  "clinical_indications": [
+    "Ureteral stricture is a narrowing of the lumen of the ureter, the duct that carries urine from the kidneys to the bladder, resulting in an obstruction.",
+    "Ureteral stricture may arise from a variety of causes and is characterized as either anastomotic or nonanastomotic, depending on how they develop.",
+    "Decreased urine stream",
+    "Incomplete bladder emptying",
+    "Spraying of the urine stream",
+    "Difficulty, straining or pain when urinating",
+    "Increased urge to urinate or more-frequent urination",
+    "Urinary tract infection"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "intravenous_pyelogram_ct_intravenous_pyelogram_micturating_cysto_urethrogram",
+        "label": "Intravenous pyelogram /CT- Intravenous pyelogram +/- Micturating Cysto-Urethrogram"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intravenous pyelogram /CT- Intravenous pyelogram +/- Micturating Cysto-Urethrogram submitted?",
+        "expected": true
+      },
+      {
+        "q": "Intravenous pyelogram /CT- Intravenous pyelogram +/- Micturating Cysto-Urethrogram finding detect structural abnormalities of ureteric segment?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Intravenous pyelogram /CT- Intravenous pyelogram +/- Micturating Cysto-Urethrogram findings do not detect structural abnormalities of the ureteric segment.",
+    "Diagnosis of ureteric stricture not backed by clinical manifestation as per clinical key pointers.",
+    "Clinical notes including evaluation findings and planned line of treatment are missing or incomplete at pre-authorization.",
+    "Intravenous pyelogram /CT- Intravenous pyelogram +/- Micturating Cysto-Urethrogram report is missing or incomplete at pre-authorization.",
+    "Detailed Procedure / Operative Notes are missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facility",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Boari flap for ureteric stricture only if diagnosis made is backed by clinical manifestation",
+      "Boari flap is a useful option when the diseased segment of the ureter is too long, or ureteral mobility is too limited to perform a primary ureteroureterostomy."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

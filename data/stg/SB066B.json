@@ -1,0 +1,110 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB066B",
+  "procedure_code": "SB066B",
+  "condition": "Nerve compression injuries",
+  "procedure_name": "Nerve release",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Nerve Transposition, Release, Neurolysis_Medco.pdf",
+    "Nerve Transposition, Release, Neurolysis_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Nerve compression injuries such as carpal tunnel syndrome, cubital tunnel syndrome and tarsal tunnel syndrome"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_indication_surgery",
+        "label": "Clinical notes with indication for surgery"
+      },
+      {
+        "key": "emg_ncv_mri_labelled",
+        "label": "EMG/NCV/MRI labelled with patient ID, date and side (Left/Right) of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "EMG/NCV/MRI labelled with patient ID, date and side (Left/Right) of affected part confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Were clinical findings and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Were Post-operative photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing detailed history, signs & symptoms, planned line of treatment, or indication for procedure.",
+    "EMG/NCV/MRI report does not confirm the diagnosis or is missing patient ID, date, or side (Left/Right) labels.",
+    "Clinical findings and/or imaging are not indicative of surgery for nerve release.",
+    "Detailed Indoor Case Papers (ICPs) are missing or lack daily vitals and treatment details.",
+    "Detailed Procedure / Operation Notes are not available or incomplete.",
+    "Post-operative photographs were not submitted.",
+    "Discharge summary is missing or does not include follow-up advice at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/ Equivalent (in Orthopedics)",
+    "clinical_key_pointers": [
+      "A nerve release is a surgical procedure used with nerve compression injuries such as carpal tunnel syndrome, cubital tunnel syndrome and tarsal tunnel syndrome."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

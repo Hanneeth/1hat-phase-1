@@ -1,0 +1,135 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB015A",
+  "procedure_code": "SB015A",
+  "condition": "Fracture Condyle - Humerus – Open reduction and internal fixation (ORIF)",
+  "procedure_name": "Fracture Condyle - Humerus - ORIF - Lateral Condyle",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Fracture Condyle - Humerus - ORIF_Medco.pdf",
+    "Fracture Condyle - Humerus - ORIF_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years' experience"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "xray_preauth",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) confirming the diagnosis"
+      },
+      {
+        "key": "clinical_photo_affected_part_preauth",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_xray",
+        "label": "Post-procedure X-ray labelled with patient ID, date and side (Left/Right) -Showing implant"
+      },
+      {
+        "key": "post_procedure_clinical_photo",
+        "label": "Post procedure clinical photograph"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "implant_invoice_barcode",
+        "label": "Invoice or barcode of Implant used (optional)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray labelled with patient ID, date and side (Left/Right) - confirming the diagnosis submitted?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes and imaging indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post-procedure X-ray labelled with patient ID, date and side (Left/Right) showing implant submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post procedure clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice/barcode of Implant used submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing key information (history, signs, symptoms, evaluation findings, indication for procedure, planned line of management, or advice for admission).",
+    "Pre-operative X-ray missing or incorrectly labelled with patient ID, date, or side (Left/Right), or does not confirm diagnosis.",
+    "Clinical photograph of affected part missing or not clearly showing the affected area.",
+    "Post-procedure X-ray missing or incorrectly labelled with patient ID, date, or side (Left/Right), or does not clearly show the implant.",
+    "Detailed Procedure / Operative Notes missing or incomplete regarding surgical steps and implant details.",
+    "Invoice or barcode of Implant used is missing (if applicable).",
+    "Detailed Discharge summary missing or incomplete.",
+    "Clinical notes and imaging are not indicative of the procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/ or Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Open reduction internal fixation of Humerus lateral condyle"
+    ],
+    "surgical_options": [
+      "Fixation can be achieved using pins, headless screws, lag screws, locking compression plates, or dynamic compression plates to allow for early range of motion."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

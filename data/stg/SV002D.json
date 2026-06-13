@@ -1,0 +1,117 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV002D",
+  "procedure_code": "SV002D",
+  "condition": "Atrial Septal Defect",
+  "procedure_name": "ASD Closure + Pulmonary Procedure",
+  "specialty": "Cardiology/ CTVS",
+  "version": "1.1",
+  "source_files": [
+    "ASD closure_Medco.pdf",
+    "ASD closure_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "DM/DNB/ equivalent (Cardiology)",
+    "M.Ch./DNB/ equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "ASD with left to right shunt, associated with evidence of right ventricular volume overload without evidence of irreversible pulmonary vascular disease (Class I).",
+    "Asymptomatic child aged 2-4 years (Class I). For sinus venosus defect, surgery may be delayed to 4-5 years (Class IIa).",
+    "Symptomatic ASD in infancy (congestive heart failure and pulmonary artery hypertension) (Class I).",
+    "Elective closure irrespective of age if there is left-to-right shunt with right heart volume overload and pulmonary vascular resistance (PVR) is within operable range (Class I).",
+    "Symptomatic sequel of paradoxical emboli such as stroke or recurrent transient ischemic attack due to transient right-to-left shunting at the atrial level (Class IIa)."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppl er report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "invoice_barcode_device_used",
+        "label": "Invoice/ barcode of blade / device used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/Doppler report suggestive of Atrial septal defect?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/color Doppler suggestive of other heart defect along with ASD?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice/barcode of blade / device used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's Echo/Doppler report does not show Atrial Septal Defect.",
+    "Post-procedure ECHO stills do not show repair of the defect.",
+    "Echo/color Doppler report does not suggest other heart defects along with ASD, which is expected for this specific procedure.",
+    "Invoice/barcode of blade/device used not submitted at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "CCU/ICCU: Yes, Qualified cardiothoracic surgeon (MCh/ DNB): Yes",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [
+      "Device Closure",
+      "Surgical Repair"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Patients with borderline operability due to pulmonary vascular disease should be referred to a higher center for further evaluation."
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Severe pulmonary arterial hypertension or irreversible pulmonary vascular occlusive disease (Class III)."
+    ]
+  }
+}

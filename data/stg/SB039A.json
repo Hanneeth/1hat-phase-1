@@ -1,0 +1,114 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB039A",
+  "procedure_code": "SB039A",
+  "condition": "Total Knee Replacement",
+  "procedure_name": "Primary Total Knee Replacement",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Total Knee Replacement_Medco.pdf",
+    "Total Knee Replacement_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Primary Osteoarthritis",
+    "Secondary Arthritis (Post Trauma)",
+    "Secondary Arthritis (Systemic Joint diseases like Rheumatoid arthritis, Osteonecrosis, and other type of inflammatory arthritis)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "age",
+      "operator": ">",
+      "value": "55 years",
+      "note": "For primary osteoarthritis, and no history of trauma to the joint and no systemic joint disease"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with indication for surgery"
+      },
+      {
+        "key": "xray_ct_knee_labelled",
+        "label": "X-ray / CT of Knee labelled with patient ID, date and side (Left/Right)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "post_op_clinical_photograph",
+        "label": "Post op clinical photograph"
+      },
+      {
+        "key": "post_op_xray_operated_knee_implant_labelled",
+        "label": "Post op X-ray of the operated knee showing the implant. The X-ray is labelled with patient ID, date and side (Left/Right)"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice / bar code of implant"
+      },
+      {
+        "key": "detailed_operative_procedure_note",
+        "label": "Detailed operative / procedure note"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "If the indication of surgery is primary osteoarthritis (& there is no history of trauma to the joint and no systemic joint disease), then is the patient age >55 years?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the Post-op X- ray of knee show the presence of implant?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient age for primary osteoarthritis is 55 years or less, or age is not documented, without justification",
+    "Post-op X-ray of the operated knee does not show the presence of an implant",
+    "X-ray / CT of Knee not labelled with patient ID, date, or side (Left/Right) at pre-authorization",
+    "Invoice / bar code of implant is missing at claim submission",
+    "Clinical notes are missing the indication for surgery at pre-authorization"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": "MS/DNB in Orthopedics",
+    "clinical_key_pointers": [
+      "Pain refractive to conservative management",
+      "Knee pain that hinders walking, climbing stairs, or getting in and out of a chair",
+      "Knee pain that interferes with sleep or does not subside with rest",
+      "Inability to cope with side effects of pain relief medication",
+      "Knee swelling that does not respond to treatment and that limits bending or straightening the knee",
+      "Significant bowing in or out of the knee usually genu varum",
+      "History of frequent locking episodes",
+      "Joint instability",
+      "Narrowed Joint space in standing X Ray",
+      "No evidence of infection"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

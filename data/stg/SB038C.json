@@ -1,0 +1,133 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB038C",
+  "procedure_code": "SB038C",
+  "condition": "Total Hip Replacement",
+  "procedure_name": "Total Hip Replacement - Hybrid",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Total Hip Replacement_Medco.pdf",
+    "Total Hip Replacement_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Osteoarthritis",
+    "Rheumatoid arthritis",
+    "Osteonecrosis",
+    "Pain Persists, despite pain medication",
+    "Pain Worsens with walking, even with a cane or walker",
+    "Pain Interferes with patient's sleep",
+    "Affects the patient's ability to go up or down stairs",
+    "Makes it difficult to rise from a seated position"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_indication",
+        "label": "Clinical notes with indication for surgery"
+      },
+      {
+        "key": "xray_ct_hip_labelled",
+        "label": "X-ray / CT of Hip labelled with patient ID, date and side (Left/Right)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "post_op_clinical_photograph",
+        "label": "Post op clinical photograph"
+      },
+      {
+        "key": "post_op_xray_implant_labelled",
+        "label": "Post op X-ray showing the implant. The X-ray is labelled with patient ID, date and side (Left/Right)"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice / bar code of implant"
+      },
+      {
+        "key": "detailed_ot_note",
+        "label": "Detailed OT note"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with indication for surgery present?",
+        "expected": true
+      },
+      {
+        "q": "X-ray / CT of Hip labelled with patient ID, date and side (Left/Right) present?",
+        "expected": true
+      },
+      {
+        "q": "Pre-op X-ray of the affected hip shows an implant?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Post op X-ray showing the implant, labelled with patient ID, date and side (Left/Right) present?",
+        "expected": true
+      },
+      {
+        "q": "Invoice / bar code of implant present?",
+        "expected": true
+      },
+      {
+        "q": "Detailed operative note present?",
+        "expected": true
+      },
+      {
+        "q": "Discharge Summary present?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes with indication for surgery are missing or incomplete.",
+    "X-ray / CT of Hip is missing or not correctly labelled with patient ID, date, or side.",
+    "Pre-op X-ray shows an implant for a primary hip replacement without justification.",
+    "Post-op X-ray / CT of hip does not show the presence of implant.",
+    "Post-op X-ray showing the implant is missing or not correctly labelled with patient ID, date, or side.",
+    "Invoice or barcode of implant is missing.",
+    "Detailed operative note is missing or incomplete.",
+    "Discharge summary is missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": "MS/DNB in Orthopedics",
+    "clinical_key_pointers": [
+      "Osteoarthritis",
+      "Rheumatoid arthritis",
+      "Osteonecrosis",
+      "Pain Persists, despite pain medication",
+      "Pain Worsens with walking, even with a cane or walker",
+      "Pain Interferes with patient's sleep",
+      "Affects the patient's ability to go up or down stairs",
+      "Makes it difficult to rise from a seated position"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

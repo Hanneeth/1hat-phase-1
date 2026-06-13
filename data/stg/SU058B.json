@@ -1,0 +1,89 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU058B",
+  "procedure_code": "SU058B",
+  "condition": "Urachal Cyst excision",
+  "procedure_name": "Urachal Cyst excision laparoscopic",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Urachal Cyst excision_Medco.pdf",
+    "Urachal Cyst excision_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [],
+  "clinical_indications": [
+    "Diagnosis made is backed by clinical manifestation (Early signs: Belly button is noted to be wet; Later signs/symptoms: Fever, Lower abdominal pain, Fullness in the midline in the area below the belly button, Redness over the lower belly, Tiredness, Vomiting)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_eval_findings_indication_mgmt",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "usg_abdomen_ct_mri_report",
+        "label": "USG abdomen/ CT/MRI report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "operative_notes_procedure_notes",
+        "label": "Operative Notes / Procedure Notes"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Ultrasound abdomen/CT/MRI report shows presence of cyst in Urachus?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes and/or imaging (USG/MRI/CT scan) are not indicative of the presence of a cyst in Urachus.",
+    "Clinical notes including evaluation findings, indication for procedure, and planned line of management not submitted at pre-authorization.",
+    "USG abdomen/CT/MRI report not submitted at pre-authorization.",
+    "Detailed indoor case papers not submitted at claim submission.",
+    "Operative Notes / Procedure Notes not submitted at claim submission.",
+    "Histopathology report not submitted at claim submission.",
+    "Detailed Discharge Summary not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": "MCh/DNB equivalent in Urology",
+    "clinical_key_pointers": [
+      "Belly button is noted to be wet",
+      "Fever",
+      "Lower abdominal pain",
+      "Fullness in the midline in the area below the belly button",
+      "Redness over the lower belly",
+      "Tiredness",
+      "Vomiting"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

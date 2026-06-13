@@ -1,0 +1,127 @@
+{
+  "stg_id": "SU096A",
+  "procedure_code": "SU096A",
+  "condition": "Vesicovaginal fistula",
+  "procedure_name": "Repair for VVF - Open / Vaginal",
+  "specialty": "Obstetrics & Gynecology/ Urology",
+  "version": "1.1",
+  "source_files": [
+    "Repair of VVF_Medco.pdf",
+    "Repair of VVF_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)",
+    "MCh/DNB/Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Continuous escape of urine per vaginum (true incontinence) due to Vesicovaginal fistula (VVF).",
+    "Presence of Vesicovaginal fistula (VVF) caused by obstetrical factors (ischemic, traumatic) or gynecological factors (operative injury, traumatic, malignancy, radiation, infective).",
+    "Associated pruritus vulvae due to VVF."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "cystoscopy_cystourethroscopy",
+        "label": "Cystoscopy/Cystourethroscopy"
+      },
+      {
+        "key": "complete_urine_examination_cue",
+        "label": "Complete Urine Examination (CUE)"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG Abdomen/pelvis (Optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports_if_required",
+        "label": "Investigation reports (If required)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment, and advice for admission documented in the detailed clinical notes?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and/or imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed ICPs with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed procedure / operative notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, physical examination, and/or imaging was not indicative of surgery.",
+    "Cystoscopy/Cystourethroscopy report not provided at pre-authorization.",
+    "Complete Urine Examination (CUE) report not provided at pre-authorization.",
+    "Planned line of treatment is not clearly documented at pre-authorization.",
+    "Detailed procedure/operative notes are missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary hospital.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "In Vesicovaginal fistula (VVF), there is a communication between the bladder and the vagina and the urine escapes into the vagina causing true incontinence. This is the commonest type of genitourinary fistula."
+    ],
+    "surgical_options": [
+      "Transvaginal repair (preferred method of repair in most cases)",
+      "Latzko technique (for repair of uncomplicated post hysterectomy VVF)",
+      "Interposition grafts (can be used for tissue bulk and as a source of neovascularity)",
+      "Abdominal approach (especially O'Conor technique) (should be reserved for situations in which access to the fistula is limited)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

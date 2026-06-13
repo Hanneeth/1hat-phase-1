@@ -1,0 +1,91 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "SB046A",
+  "procedure_code": "SB046A",
+  "condition": "Tendon Grafting / Repair",
+  "procedure_name": "Tendon grafting",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Tendon Grafting-Repair-Tendon Release-Tenotomy_Medco.pdf",
+    "Tendon Grafting-Repair-Tendon Release-Tenotomy_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Bridging of a gap in a tendon with an autogenous donor tendon from the same or a separate extremity"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "clinical_photo_affected_part_preauth",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "post_procedure_clinical_photo_donor_recipient_sites",
+        "label": "Post Procedure clinical photograph of affected part (of donor and recipient sites- for tendon graft)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Does the Clinical notes, clinical photograph of affected part justifying the need for the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the Clinical notes, clinical photograph of affected part justifying the need for the procedure?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or clinical photograph of affected part do not justify the medical necessity of the procedure at pre-authorization.",
+    "Clinical notes at pre-authorization lack adequate detail regarding history, signs, symptoms, evaluation findings, or indication for the procedure.",
+    "Post-procedure clinical photograph for tendon grafting does not clearly show both donor and recipient sites.",
+    "Procedure / operation notes at claim submission lack sufficient detail on surgical steps or outcomes."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Tendon grafting involves the bridging of a gap in a tendon with an autogenous donor tendon from the same or a separate extremity.",
+      "Commonly used donor tendons include the palmaris longus, the plantaris, and, on occasion, a toe extensor.",
+      "One of the most important criteria for a successful tendon graft procedure is the establishment and maintenance of good passive motion of the involved segment and adjacent rays.",
+      "Splinting may be effectively employed for creating and preserving supple digits, both preoperatively and during the postoperative course.",
+      "Postoperative splinting should be designed to meet the individual problems presented."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

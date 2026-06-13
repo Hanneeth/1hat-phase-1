@@ -1,0 +1,411 @@
+This PDF pair covers 3 procedure(s): SG050C, SG050D, SG050E. I will produce 3 separate JSON objects.
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG050C",
+  "procedure_code": "SG050C",
+  "condition": "Femoral and Obturator Hernia",
+  "procedure_name": "Groin Hernia Repair - Femoral - Open",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Femoral and Obturator hernia_Medco.pdf",
+    "Femoral and Obturator hernia_PPD.CPD.pdf"
+  ],
+  "alos": "2-3 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)"
+  ],
+  "clinical_indications": [
+    "Herniation of intra-abdominal contents through the femoral canal",
+    "Recurrent painless variable dimension lump in the upper part of the groin on the medial side of the thigh",
+    "Heaviness or dull discomfort in the groin",
+    "Vague pelvic discomfort (in women)",
+    "Moderate-to-severe pain with hernias, suggesting incarceration or strangulation",
+    "Nausea, vomiting, and abdominal distention associated with groin pain or mass, indicating bowel obstruction",
+    "Definitive treatment of all hernias is surgical repair",
+    "Femoral hernias are associated with a high risk of complications, and therefore early elective surgical repair is indicated"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for implant as applicable, and planned line of management"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "implant_details_barcode_invoice",
+        "label": "Implant details – barcode/invoice (if applicable)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical evaluation ± imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical evaluation ± imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Were Implant details (invoice/barcode) available? (if applicable)",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing detailed history, signs & symptoms, planned line of treatment, or indication for procedure.",
+    "Clinical evaluation or imaging not indicative of surgery.",
+    "Implant details (invoice/barcode) missing, despite implant being used.",
+    "Detailed Indoor case papers (ICPs) with daily vitals and treatment details not available.",
+    "Detailed Procedure / operative notes not available.",
+    "Discharge summary missing or lacking follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Herniation of intra-abdominal contents through the femoral canal is described as femoral hernia.",
+      "Femoral hernias are located inferior to the inguinal ligament and protrude through the femoral ring, which is medial to the femoral vein and lateral to the lacunar ligament.",
+      "Women are more often involved, as compared to men with the ratio being 2:1, which is doubled in parous women.",
+      "Femoral hernia is the third most common type of hernia in woman.",
+      "Commonly the hernia is unilateral, the right side being affected more often than the left side.",
+      "The most common mode of presentation is a recurrent painless variable dimension lump in the upper part of the groin on the medial side of the thigh. Typically, the swelling is below and lateral to the pubic tubercle (inguinal hernia is above and medial to pubic tubercle).",
+      "A common symptom associated with hernia is a heaviness or dull discomfort in the groin, which may or may not be associated with a visible bulge.",
+      "Groin hernias in women can also result in vague pelvic discomfort.",
+      "Moderate-to-severe pain with hernias is unusual and, when present, should raise the possibility of incarceration or strangulation.",
+      "For patients who present with nausea, vomiting, and abdominal distention associated with a history of groin pain or mass, bowel obstruction due to bowel incarceration or strangulation should be suspected.",
+      "Diagnosis of hernia is purely clinical, investigations are required where diagnosis is inconclusive or for evaluation of associated conditions (USG- local part for defect).",
+      "In majority of cases, a diagnosis of inguinal or femoral hernia can be made based upon history and physical examination, without the need for further studies."
+    ],
+    "surgical_options": [
+      "Low operation of Lockwood",
+      "Inguinal operation",
+      "Combined approach: High operation of McEvedy",
+      "Henry's approach"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": "Can the patient tolerate general anesthesia?",
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+===NEXT_PROCEDURE===
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG050D",
+  "procedure_code": "SG050D",
+  "condition": "Femoral and Obturator Hernia",
+  "procedure_name": "Groin Hernia Repair - Femoral - Lap",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Femoral and Obturator hernia_Medco.pdf",
+    "Femoral and Obturator hernia_PPD.CPD.pdf"
+  ],
+  "alos": "2-3 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)"
+  ],
+  "clinical_indications": [
+    "Herniation of intra-abdominal contents through the femoral canal",
+    "Recurrent painless variable dimension lump in the upper part of the groin on the medial side of the thigh",
+    "Heaviness or dull discomfort in the groin",
+    "Vague pelvic discomfort (in women)",
+    "Moderate-to-severe pain with hernias, suggesting incarceration or strangulation",
+    "Nausea, vomiting, and abdominal distention associated with groin pain or mass, indicating bowel obstruction",
+    "Definitive treatment of all hernias is surgical repair",
+    "Femoral hernias are associated with a high risk of complications, and therefore early elective surgical repair is indicated",
+    "Laparoscopic repair may be chosen for primary, unilateral, bilateral, or recurrent hernias, based on surgeon and patient preference, provided no contraindications exist."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for implant as applicable, and planned line of management"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "implant_details_barcode_invoice",
+        "label": "Implant details – barcode/invoice (if applicable)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical evaluation ± imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical evaluation ± imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Were Implant details (invoice/barcode) available? (if applicable)",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing detailed history, signs & symptoms, planned line of treatment, or indication for procedure.",
+    "Clinical evaluation or imaging not indicative of surgery.",
+    "Implant details (invoice/barcode) missing, despite implant being used.",
+    "Detailed Indoor case papers (ICPs) with daily vitals and treatment details not available.",
+    "Detailed Procedure / operative notes not available.",
+    "Discharge summary missing or lacking follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Herniation of intra-abdominal contents through the femoral canal is described as femoral hernia.",
+      "Femoral hernias are located inferior to the inguinal ligament and protrude through the femoral ring, which is medial to the femoral vein and lateral to the lacunar ligament.",
+      "Women are more often involved, as compared to men with the ratio being 2:1, which is doubled in parous women.",
+      "Femoral hernia is the third most common type of hernia in woman.",
+      "Commonly the hernia is unilateral, the right side being affected more often than the left side.",
+      "The most common mode of presentation is a recurrent painless variable dimension lump in the upper part of the groin on the medial side of the thigh. Typically, the swelling is below and lateral to the pubic tubercle (inguinal hernia is above and medial to pubic tubercle).",
+      "A common symptom associated with hernia is a heaviness or dull discomfort in the groin, which may or may not be associated with a visible bulge.",
+      "Groin hernias in women can also result in vague pelvic discomfort.",
+      "Moderate-to-severe pain with hernias is unusual and, when present, should raise the possibility of incarceration or strangulation.",
+      "For patients who present with nausea, vomiting, and abdominal distention associated with a history of groin pain or mass, bowel obstruction due to bowel incarceration or strangulation should be suspected.",
+      "Diagnosis of hernia is purely clinical, investigations are required where diagnosis is inconclusive or for evaluation of associated conditions (USG- local part for defect).",
+      "In majority of cases, a diagnosis of inguinal or femoral hernia can be made based upon history and physical examination, without the need for further studies."
+    ],
+    "surgical_options": [
+      "Laparoscopic repair",
+      "Open or laparoscopic repair based upon surgeon and patient preference"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": "Can the patient tolerate general anesthesia?",
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Previous surgery involving the preperitoneum (Laparoscopic groin hernia repair, Prostatectomy, Hysterectomy, Cesarean section, Laparotomy via lower midline incision)",
+      "Presence of ascites",
+      "Complicated hernia (infected hernia, incarcerated hernia, strangulated hernia, large scrotal hernia (>3 cm))",
+      "Inability to tolerate general anesthesia",
+      "Hernias with active infection or contamination (requires open repair without mesh)"
+    ]
+  }
+===NEXT_PROCEDURE===
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG050E",
+  "procedure_code": "SG050E",
+  "condition": "Femoral and Obturator Hernia",
+  "procedure_name": "Groin Hernia Repair - Obturator - Open or Lap.",
+  "specialty": "General Surgery, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Femoral and Obturator hernia_Medco.pdf",
+    "Femoral and Obturator hernia_PPD.CPD.pdf"
+  ],
+  "alos": "2-3 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (in Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Protrusion of the abdominal contents through the obturator foramen",
+    "Acute intestinal obstruction with strangulation (80%)",
+    "Recurrent attacks of intestinal obstruction which get resolved spontaneously",
+    "Pain in the knee (Howship-Romberg sign)",
+    "Bruising below the medial edge of the inguinal ligament (due to strangulation and blood in hernial sac)",
+    "Palpable hernial mass in the groin (20% of patients)",
+    "Tender lump on the lateral side of the vault on per vaginal examination (for women)",
+    "Diagnosis during surgery for obstruction",
+    "Surgical repair is the treatment",
+    "Incarcerated obturator hernia causing small bowel obstruction requires urgent surgical repair to avoid strangulation/bowel gangrene",
+    "Non-strangulated obturator hernias should also be repaired to prevent future complications"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for implant as applicable, and planned line of management"
+      },
+      {
+        "key": "ultrasound_ct_mri_groin",
+        "label": "Ultrasound/CT/MRI of the groin (for obturator hernia diagnosed preoperatively)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "implant_details_barcode_invoice",
+        "label": "Implant details – barcode/invoice (if applicable)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical evaluation ± imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical evaluation ± imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Were Implant details (invoice/barcode) available? (if applicable)",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing detailed history, signs & symptoms, planned line of treatment, or indication for procedure.",
+    "Clinical evaluation or imaging not indicative of surgery.",
+    "Ultrasound/CT/MRI of the groin missing (for obturator hernia diagnosed preoperatively).",
+    "Implant details (invoice/barcode) missing, despite implant being used.",
+    "Detailed Indoor case papers (ICPs) with daily vitals and treatment details not available.",
+    "Detailed Procedure / operative notes not available.",
+    "Discharge summary missing or lacking follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Obturator hernias are the protrusion of the abdominal contents through the obturator foramen.",
+      "This hernia occurs through the obturator canal which is bounded above by the superior ramus of pubis and below by the sharp edge of the obturator membrane.",
+      "As the hernia is covered by the pectineus muscle, it is often overlooked.",
+      "The most common presentation is acute intestinal obstruction with strangulation (80%).",
+      "Recurrent attacks of intestinal obstruction which get resolved spontaneously is also common.",
+      "Can present as only pain in the knee (Howship-Romberg sign).",
+      "Due to strangulation and blood in the hernial sac bruising is seen below the medial edge of the inguinal ligament.",
+      "A few patients (20%) complain of palpable hernial mass in the groin.",
+      "For women, per vaginal examination can reveal a tender lump on the lateral side of the vault.",
+      "The patient may undergo surgery for obstruction, and the obturator hernia is diagnosed during surgery.",
+      "Obturator hernias may be initially confused with femoral hernias but can also occur in conjunction with femoral hernia.",
+      "When a clinical diagnosis is uncertain, CT, ultrasound, or magnetic resonance imaging (MRI) can be used for confirmation."
+    ],
+    "surgical_options": [
+      "Transperitoneal (open or laparoscopic)",
+      "Obturator",
+      "Inguinal approaches",
+      "For patients with bowel obstruction, a transperitoneal approach is preferred.",
+      "Since majority of the cases present with intestinal obstruction and strangulation, a lower laparotomy is done."
+    ],
+    "pre_op_preparation": "Patients with an incarcerated obturator hernia causing small bowel obstruction require urgent surgical repair to avoid strangulation/bowel gangrene.",
+    "post_op_care": null,
+    "fitness_criteria": "Can the patient tolerate general anesthesia?",
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }

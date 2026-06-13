@@ -1,0 +1,129 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV0031C",
+  "procedure_code": "SV0031C",
+  "condition": "Mitral Valve Disease (Stenosis & Regurgitation) requiring Reoperation",
+  "procedure_name": "Immediate Reoperation - Mitral Valve",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Mitral valve_Medco.pdf",
+    "Mitral valve_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "M.Ch. (Cardiothoracic Surgery)",
+    "DNB (Cardiothoracic Surgery) equivalent"
+  ],
+  "clinical_indications": [
+    "Clinical notes indicating need for reoperation"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_notes_need_for_reoperation",
+        "label": "Clinical notes indicating need for reoperation"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "barcode_of_implant",
+        "label": "Barcode of implant, if used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes indicating need for reoperation",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of Mitral Stenosis/ Mitral Regurgitation?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair/replacement of the valve?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the discharge summary mention need for reoperation?",
+        "expected": false
+      },
+      {
+        "q": "Is the barcode of implant used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing or do not indicate the need for reoperation.",
+    "Echo/Doppler report not suggestive of Mitral Stenosis or Mitral Regurgitation.",
+    "Procedure / Operative notes are missing or lack required detail.",
+    "Post procedure stills of ECHO with report are missing or do not show repair/replacement of the valve.",
+    "Discharge summary incorrectly mentions the need for reoperation (this should have been established at pre-auth).",
+    "Barcode of implant is missing or not submitted despite an implant being used."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Mitral stenosis is characterized by narrowing of the mitral valve orifice.",
+      "Most common cause of mitral stenosis is rheumatic fever. Uncommon causes include calcification of the mitral valve leaflets, congenital heart disease, infective endocarditis, mitral annular calcification, endomyocardial fibroelastosis, malignant carcinoid syndrome, systemic lupus erythematosus, Whipple disease, Fabry disease, and rheumatoid arthritis.",
+      "Primary Mitral Regurgitation (degenerative or organic) results from structural deformity of or damage to the leaflets, chordae, and/or papillary muscles causing leaflets to close insufficiently during systole.",
+      "Common causes of primary MR include cusp retraction, papillary muscle rupture, mitral valve prolapse (MVP), or leaflet perforation.",
+      "Secondary Mitral Regurgitation (functional or ischemic) is due to left ventricular wall motion abnormalities (i.e., ischemic cardiomyopathy) or left ventricular remodeling (i.e., dilated cardiomyopathy).",
+      "Secondary MR involves no structural problems with the valve itself but leads to mitral annular dilatation or displacement of papillary muscles causing retrograde flow from improperly closed mitral valve leaflets."
+    ],
+    "surgical_options": [
+      "Percutaneous mitral balloon valvuloplasty (PMBV)",
+      "Mitral valve replacement surgery",
+      "Mitral valve repair"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Percutaneous mitral balloon valvuloplasty (PMBV) is contraindicated when there is unfavorable valve morphology."
+    ]
+  }
+}

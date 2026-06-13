@@ -1,0 +1,156 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/COVID-19 infection/ : Treatment of COVID-19 infection_Medco.pdf (clinical + mandatory docs) + Treatment of COVID-19 infection_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "ID003A",
+  "procedure_code": "ID003A",
+  "condition": "COVID-19 infection",
+  "procedure_name": "Treatment of COVID-19 infection",
+  "specialty": "Infectious Diseases",
+  "version": "1.1",
+  "source_files": [
+    "Treatment of COVID-19 infection_Medco.pdf",
+    "Treatment of COVID-19 infection_PPD.CPD.pdf"
+  ],
+  "alos": "10-15 days (According to severity of disease)",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Laboratory confirmed COVID-19 infection.",
+    "Moderate clinical severity defined by clinical features of dyspnea and or hypoxia, fever, cough, SpO2 <94% (90-94%) on room air, or respiratory rate >/= 24 per minute.",
+    "Severe clinical severity presenting as Severe Pneumonia, Acute Respiratory Distress Syndrome (ARDS), Sepsis, or Septic shock."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "SpO2",
+      "operator": "<",
+      "value": "94%",
+      "note": "on room air (for moderate severity)"
+    },
+    {
+      "field": "respiratory_rate",
+      "operator": ">=",
+      "value": "24/min",
+      "note": "per minute (for moderate severity)"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including history, signs & symptoms"
+      },
+      {
+        "key": "rt_pcr_test_report",
+        "label": "Laboratory Investigation report (Real time or Conventional RT-PCR test)"
+      },
+      {
+        "key": "upper_respiratory_samples_report",
+        "label": "Report of upper respiratory tract samples (Throat/Nasal/Nasopharyngeal swab & Oropharyngeal swab)"
+      },
+      {
+        "key": "lower_respiratory_samples_report",
+        "label": "Report of lower respiratory tract samples (Bronchoalveolar lavage/tracheal aspirate/sputum) (when readily available for mechanically ventilated patients)"
+      },
+      {
+        "key": "other_etiology_test_reports",
+        "label": "Test reports for other potential etiologies (e.g. Influenza, other respiratory viruses, malaria, dengue fever, typhoid fever) (as appropriate)"
+      },
+      {
+        "key": "blood_culture_report",
+        "label": "Blood culture report (for severe COVID-19 patients, prior to initiation of antimicrobial therapy)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor case papers (treatment, daily monitoring of temperature, vitals, SpO2; Chest X-ray & CBC in moderate/severe illness; supportive therapy)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed discharge summary with post-discharge advise"
+      },
+      {
+        "key": "all_investigation_reports",
+        "label": "All investigation reports"
+      },
+      {
+        "key": "negative_rt_pcr_report_at_discharge",
+        "label": "Negative RT-PCR test report (for severe cases, once after symptom resolution, before patient discharge)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detail history, risk factors, signs, symptoms, vitals, investigations, and admission criteria?",
+        "expected": true
+      },
+      {
+        "q": "Planned line of management documented?",
+        "expected": true
+      },
+      {
+        "q": "Photograph of the patient on bed available?",
+        "expected": true
+      },
+      {
+        "q": "Patient presents with signs/symptoms of mild/moderate/severe COVID-19 infection?",
+        "expected": true
+      },
+      {
+        "q": "Laboratory report confirms COVID-19 infection at admission?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Documents (clinical notes, physical exam, lab reports) detail the need for admission?",
+        "expected": true
+      },
+      {
+        "q": "Documentary evidence of vital monitoring (SpO2, Heart rate, chest exam) available?",
+        "expected": true
+      },
+      {
+        "q": "Medication/treatment chart available and treatment aligns with MoH&FW COVID-19 protocol?",
+        "expected": true
+      },
+      {
+        "q": "Discharge documents clearly indicate discharge criteria as per MoH&FW revised policy for COVID-19?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Laboratory RT-PCR test report not provided or does not confirm COVID-19 infection at admission.",
+    "Clinical notes lack sufficient detail on patient history, signs, symptoms, vitals, or admission criteria.",
+    "Planned line of management is not documented or is unclear at pre-authorization.",
+    "Photograph of the patient on bed is missing or insufficient for identity verification.",
+    "Discharge summary does not clearly state discharge criteria met as per MoH&FW revised policy.",
+    "Vital monitoring records (temperature, SpO2, heart rate, chest examination) are incomplete or missing in indoor case papers.",
+    "Negative RT-PCR test report for discharge (for severe cases) is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "ICMR/Government approved treatment facility requirement, Oximeter, and other requirements.",
+    "min_doctor_qualification_desirable": "MD/ DNB/ equivalent in Medicine/ Pulmonology/ Diploma in Tuberculosis and Chest Disease (DTCD)",
+    "clinical_key_pointers": [
+      "Suspect case definition as per MoH&FW guidelines.",
+      "Probable case definition as per MoH&FW guidelines.",
+      "Confirmed case: laboratory confirmation of COVID-19 infection, irrespective of clinical signs and symptoms.",
+      "Common signs & symptoms include fever, cough, fatigue, shortness of breath, expectoration, myalgia, rhinorrhea, sore throat, diarrhea, loss of smell (anosmia), loss of taste (ageusia).",
+      "Risk factors for severe disease include age > 60 years and underlying non-communicable diseases (diabetes, hypertension, cardiac disease, chronic lung disease, cerebro-vascular disease, chronic kidney disease, immune-suppression, cancer).",
+      "Admission criteria: Moderate clinical severity (dyspnea, hypoxia, SpO2 <94% (90-94%), respiratory rate >= 24/min) or Severe clinical severity (Severe Pneumonia, ARDS, Sepsis, Septic shock).",
+      "Mild clinical severity cases (normal oxygen saturation) are preferably managed at home.",
+      "Discharge criteria are as per extant MoH&FW Guidelines."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

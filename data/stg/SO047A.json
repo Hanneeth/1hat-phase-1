@@ -1,0 +1,123 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO047A",
+  "procedure_code": "SO047A",
+  "condition": "Amniocentesis",
+  "procedure_name": "Amniocentesis",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Amniocentesis_Medco.pdf",
+    "Amniocentesis_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/ or equivalent (in Obstetrics & Gynecology)",
+    "DM/Equivalent in Genetics"
+  ],
+  "clinical_indications": [
+    "Increased risk of fetal aneuploidy in the combined test, non-invasive prenatal test (NIPT), abnormal genetic sonography (positive major soft tissue marker, two positive minor soft tissue marker), previously affected fetus, family history of a balanced translocation.",
+    "Increased risk for genetic disease, i.e., an autosomal recessive disease with carrier status of both parents, or X-linked recessive diseases.",
+    "Maternal transmittable disease, i.e., TORCH infections, such as toxoplasmosis, rubella, cytomegalovirus, herpes simplex, and other organisms.",
+    "Therapeutic: In hydramnios to relieve maternal discomfort and to instill intraamniotic drugs."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_indications",
+        "label": "Detailed clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "report_biochemical_tests",
+        "label": "Report of biochemical tests"
+      },
+      {
+        "key": "nt_early_tifa_scan_reports",
+        "label": "Nuchal translucency (NT) and/or Early TIFFA (Targeted imaging for fetal anomalies) scan reports"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps_indication",
+        "label": "Detailed Indoor Case Papers (ICPs) with details of indication"
+      },
+      {
+        "key": "detailed_procedure_notes",
+        "label": "Detailed procedure notes"
+      },
+      {
+        "key": "amniotic_fluid_report",
+        "label": "Claim processing submission with amniotic fluid report (usually within 2 weeks)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed clinical notes (vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advise for admission) available and complete?",
+        "expected": true
+      },
+      {
+        "q": "Has the indication for amniocentesis been clearly written?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers (ICPs) with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure notes available?",
+        "expected": true
+      },
+      {
+        "q": "Did the NT/Early TIFFA scan reports submitted show any abnormality and indicative of performing the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Did the final report of amniotic fluid confirm the clinical suspicion?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Indication for amniocentesis not clearly written.",
+    "Final report of amniotic fluid did not confirm the clinical suspicion.",
+    "Detailed clinical notes are missing or incomplete (e.g., lack vitals, detailed history, symptoms, signs, physical examination, indication for procedure, planned line of treatment, or advice for admission).",
+    "NT/Early TIFFA scan reports are missing, do not show abnormality, or are not indicative of performing the procedure.",
+    "Amniotic fluid report for claim processing not submitted within 2 weeks."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care preferably at a Tertiary hospital, procedure done under ultrasound guidance. Facility should be registered as per PCPNDT law for intervention procedures.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Amniocentesis is the aspiration of amniotic fluid from the amniotic cavity and is usually used for prenatal diagnosis of aneuploidy or congenital diseases and infections. It is the most commonly performed invasive fetal test."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Infections",
+      "Patients on anticoagulants. Oral anticoagulants should be stopped 48 to 72 hours before the procedure, and patients may be shifted to low molecular weight heparin."
+    ]
+  }
+}

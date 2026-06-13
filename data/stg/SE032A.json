@@ -1,0 +1,149 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE032A",
+  "procedure_code": "SE032A",
+  "condition": "Vitreoretinal Surgery",
+  "procedure_name": "Vitreoretinal Surgery (with Silicon Oil Insertion)",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Vitreoretinal surgery_Medco.pdf",
+    "Vitreoretinal surgery_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma or equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "Age-related macular degeneration",
+    "Diabetic retinopathy",
+    "Diabetic vitreous hemorrhage",
+    "Macular hole",
+    "Detached retina",
+    "Epiretinal membrane",
+    "Cytomegalovirus (CMV) retinitis",
+    "Removal of scar tissue from retina",
+    "Repair of retinal detachments",
+    "Retinal tear",
+    "Treatment of macular holes",
+    "Macular edema",
+    "Proliferative vitreoretinopathy",
+    "Removal of foreign matter from the vitreous humor (e.g., in diabetic vitreous hemorrhage)",
+    "Removal of vision blocking vitreous opacities",
+    "Diagnosis of certain vitreoretinal conditions"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "fundus_examination",
+        "label": "Fundus examination"
+      },
+      {
+        "key": "b_scan",
+        "label": "B-Scan (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure/ operative notes"
+      },
+      {
+        "key": "iol_sticker_barcode",
+        "label": "Sticker/Barcode of the Intraocular lens (IOL) (If IOL Used)"
+      },
+      {
+        "key": "intraoperative_photograph_patient_id_timestamp",
+        "label": "Intraoperative photograph with patient ID, time and date stamp (optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical examination suggests presence of vitreoretinal indications for performing surgery such as vitreous haemorrhage/ vitreous opacities, retinal detachment, retinal tear, diabetic retinopathy, etc.?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Clinical notes including history (diabetes/trauma), clinical symptoms (visual haze/ floaters/ cloudy vision/ photophobia/ shadow/ curtain effect/ cobwebs) and examination findings (fundus examination/B-scan (optional)) are present?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected Eye (R or L) with full face photograph is provided?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "OT notes detail the steps of surgery performed (including steps indication insertion of silicon oil) and the outcomes of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Documents show appropriate post-op care and follow-up advice?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical examination does not suggest presence of vitreoretinal indications for performing surgery (e.g., vitreous haemorrhage, vitreous opacities, retinal detachment, retinal tear, diabetic retinopathy).",
+    "Clinical notes incomplete regarding detailed history (diabetes/trauma), clinical symptoms (visual haze/ floaters/ cloudy vision/ photophobia/ shadow/ curtain effect/ cobwebs), or examination findings (fundus examination).",
+    "Affected eye not labelled R or L in the clinical photograph, or full face photograph not provided.",
+    "Fundus examination missing at pre-authorization.",
+    "Procedure/operative notes missing at claim submission or lack detail on surgical steps and outcomes.",
+    "IOL Sticker/Barcode not provided at claim stage, despite IOL being used."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination."
+    ],
+    "surgical_options": [
+      "Pars plana vitrectomy (for diseases of the posterior segment)",
+      "Anterior vitrectomy (rare, may happen in cases following eye trauma, during complex cataract, cornea and glaucoma surgery or lens problems)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "complications_of_vitreoretinal_surgery_silicon_oil_insertion": [
+      "Endophthalmitis",
+      "Cataract",
+      "Glaucoma",
+      "Conjunctival scarring and inflammation",
+      "Retinal tears",
+      "Emulsification",
+      "Corneal decompensation",
+      "Band keratopathy",
+      "Acute and chronic changes in intraocular pressure (IOP)",
+      "Lens opacities",
+      "Epiretinal membrane",
+      "Retinopathy",
+      "Optic neuropathy",
+      "Extraocular extension"
+    ],
+    "investigations": [
+      "Fundus examination using direct/ indirect ophthalmoscope",
+      "B-scan",
+      "Optical Coherence Tomography (OCT)",
+      "Fundus fluorescein angiography (FFA)"
+    ]
+  }
+}

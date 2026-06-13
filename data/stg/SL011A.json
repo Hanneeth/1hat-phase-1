@@ -1,0 +1,121 @@
+{
+  "_comment": "The procedure Inferior turbinate reduction under GA is associated with HBP 1.0 codes S200043, S200044 and HBP 2.0 code SL011A. Using SL011A as the primary procedure_code.",
+  "stg_id": "SL011A",
+  "procedure_code": "SL011A",
+  "condition": "Inferior turbinate hypertrophy",
+  "procedure_name": "Inferior turbinate reduction under GA",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Inferior turbinate reduction_Medco.pdf",
+    "Inferior turbinate reduction_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS ENT",
+    "DNB ENT",
+    "PG Diploma or equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Symptomatic nasal obstruction secondary to enlarged/ hypertrophy of inferior turbinate",
+    "Inferior turbinate hypertrophy not responsive to medical management"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "medical_management_status",
+      "operator": "is",
+      "value": "failed/ineffective",
+      "note": "Surgery may be done only if maximal medical management has been tried but failed/ ineffective."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, indications for doing the procedure& advise for admission)"
+      },
+      {
+        "key": "nasal_endoscopic_picture",
+        "label": "Nasal Endoscopic picture of the affected part, if available"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_note_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "intra_operative_stills",
+        "label": "Intra-operative stills of the affected part with time and date (optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes (including clinical signs & symptoms such as difficulty in breathing, examination findings, and indications for doing the procedure& advice for admission) available?",
+        "expected": true
+      },
+      {
+        "q": "Did the signs, symptoms and examination confirm the presence of hypertrophy of inferior turbinate?",
+        "expected": true
+      },
+      {
+        "q": "Has medical management/ conservative management tried and failed/ ineffective?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advice including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes (detailing signs, symptoms, examination findings, indications, and advice for admission) are missing or incomplete at pre-authorization.",
+    "Nasal endoscopic picture of the affected part is missing at pre-authorization.",
+    "Signs, symptoms, or examination findings do not confirm the presence of hypertrophy of inferior turbinate.",
+    "Medical management/conservative management was not tried or documented as successful, rather than failed/ineffective.",
+    "Indoor case papers are missing at claim submission.",
+    "Procedure note/operative note is missing or does not detail surgical steps and outcomes at claim submission.",
+    "Detailed discharge summary is missing at claim submission.",
+    "Documentation of appropriate post-operative care and follow-up advice is missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for surgery only if diagnosis made is backed by clinical signs, symptoms, and examination.",
+      "Inferior Turbinate Surgery is the surgery for management of inferior turbinate hypertrophy not responsive to medical management. The surgery aims at reduction of the soft tissue volume of the turbinate with preservation of the maximum possible overlying mucosa."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Maximal medical management has not been tried or has been effective.",
+      "Surgical correction of other causes such as deviated nasal septum or nasal polyp is not indicated or has not been addressed as a primary intervention."
+    ]
+  }
+}

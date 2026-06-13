@@ -1,0 +1,132 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG073A",
+  "procedure_code": "SG073A",
+  "condition": "Sympathectomy",
+  "procedure_name": "Sympathectomy (U/L)",
+  "specialty": "General Surgery / Pediatric Surgery / Vascular Surgery",
+  "version": "1.2",
+  "source_files": [
+    "Sympathectomy_Medco.pdf",
+    "Sympathectomy_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MCh/DNB/Equivalent (Pediatric Surgery, Vascular Surgery)"
+  ],
+  "clinical_indications": [
+    "To relieve ischemia when the fingers, toes, ears, or nose are exposed to cold (Raynaud's phenomenon)",
+    "To help treat Reflex Sympathetic Dystrophy (RSD), which sometimes develops after an injury",
+    "To effectively treat excessive sweating (Hyperhidrosis) of the palms, armpits, or face",
+    "To relieve rest pain in Thromboangitis obliterans (TAO)",
+    "For cutaneous ulcer in TAO patients (if direct arterial surgery is not possible)",
+    "For Raynaud's Disease",
+    "For Causalgia"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes with Indications and planned line of treatment"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      },
+      {
+        "key": "doppler_ultrasound_blood_flow",
+        "label": "Doppler Ultrasound Blood Flow"
+      },
+      {
+        "key": "duplex_scan",
+        "label": "Duplex Scan (Optional)"
+      },
+      {
+        "key": "angiography",
+        "label": "Angiography (Optional)"
+      },
+      {
+        "key": "mra",
+        "label": "Magnetic Resonance Angiography (MRA) (Optional)"
+      },
+      {
+        "key": "ct_angiography",
+        "label": "CT Angiography (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "intraoperative_clinical_photograph",
+        "label": "Intraoperative clinical photograph (Optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether the investigation reports confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Whether detailed Operative/Procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Whether detailed Discharge Summary Submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's clinical history or investigations not indicative of the procedure",
+    "Investigation reports do not confirm the diagnosis",
+    "Detailed Operative/Procedure notes not submitted",
+    "Detailed Discharge Summary not submitted",
+    "Clinical notes with indications and planned line of treatment not submitted or incomplete",
+    "Clinical photograph not submitted or unclear",
+    "Doppler Ultrasound Blood Flow report not submitted",
+    "Detailed Indoor Case Papers (ICPs) not submitted or incomplete"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Sympathectomy is a surgical procedure that destroys nerves in the sympathetic nervous system.",
+      "The procedure increases blood flow and decreases long-term pain in certain diseases that cause narrowed blood vessels.",
+      "It can also be used to reduce excessive sweating.",
+      "This surgical procedure cuts or destroys the sympathetic ganglia, a collection of nerve cell bodies in clusters along the thoracic or lumbar spinal cord."
+    ],
+    "surgical_options": [
+      "Lumbar Sympathectomy",
+      "Cervical Sympathectomy"
+    ],
+    "pre_op_preparation": "A reversible block of the affected nerve cell (ganglion) determines if sympathectomy is needed.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

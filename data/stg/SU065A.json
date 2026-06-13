@@ -1,0 +1,98 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU065A",
+  "procedure_code": "SU065A",
+  "condition": "Meatotomy / Meatoplasty",
+  "procedure_name": "Meatotomy",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Meatotomy, Meatoplasty_Medco.pdf",
+    "Meatotomy, Meatoplasty_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Urology, pediatric surgery)"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "retrograde_urethrography_report",
+        "label": "Retrograde urethrography/ Voiding cystourethrogram report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was Clinical notes including evaluation findings, indication for procedure, and planned line of management submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Retrograde urethrography/ Voiding cystourethrogram report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure/Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "No evidence of meatal stenosis or narrowing of meatus in retrograde urethrography.",
+    "Clinical notes, including evaluation findings and indication for procedure, not submitted at pre-authorization.",
+    "Retrograde urethrography/Voiding cystourethrogram report not submitted at pre-authorization.",
+    "Detailed Procedure/Operative notes not submitted at claim submission.",
+    "Detailed discharge summary not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pain or burning while urinating",
+      "Getting sudden urges of urinate",
+      "Needing to urinate often",
+      "A urinary stream that sprays",
+      "A small drop of blood at the tip of the penis when finished urinating"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

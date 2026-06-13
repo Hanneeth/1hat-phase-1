@@ -1,0 +1,133 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG008A",
+  "procedure_code": "MG008A",
+  "condition": "Leptospirosis",
+  "procedure_name": "Leptospirosis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Leptospirosis_Medco.pdf",
+    "Leptospirosis_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Fever",
+    "Myalgia",
+    "Conjunctival suffusion",
+    "Headache",
+    "Renal Manifestation",
+    "Pulmonary Manifestation",
+    "Hemorrhage",
+    "Nausea",
+    "Vomiting",
+    "Diarrhoea",
+    "Abdominal pain",
+    "Hypotension",
+    "Circulatory Collapse",
+    "Jaundice",
+    "Renal Dysfunction",
+    "Hemorrhagic pneumonitis",
+    "Arrhythmias",
+    "Maculopapular erythematous skin eruptions"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "MAT titre",
+      "operator": ">=",
+      "value": "100/200/400",
+      "note": "or above in single sample based on endemicity (presumptive diagnosis)"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes detailing examination findings, investigations, Planned line of treatment"
+      },
+      {
+        "key": "mat_pcr_igm_antibody_test",
+        "label": "MAT (Microscopic Agglutination Test), PCR or IgM antibody test"
+      },
+      {
+        "key": "lft_kft_reports",
+        "label": "LFT, KFT Reports"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor case papers and treatment details"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are all the sign and symptoms with vitals mentioned in the clinical notes?",
+        "expected": true
+      },
+      {
+        "q": "Are the reports related to IgM or MAT test submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the SGOT, SGPT, Sr. Bilirubin etc. submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the LFT, KFT test reports submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the MAT test, or IgM test report confirm the presence of leptospirosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Is discharge summary available with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "MAT test or IgM test report does not confirm the presence of leptospirosis",
+    "Clinical notes are missing or do not detail examination findings, investigations, or planned line of treatment",
+    "MAT (Microscopic Agglutination Test), PCR or IgM antibody test report is missing at pre-authorization",
+    "LFT or KFT reports are missing at pre-authorization",
+    "SGOT, SGPT, or Sr. Bilirubin reports are missing at pre-authorization",
+    "Detailed Indoor case papers with daily vitals and treatment details are not available at claim submission",
+    "Discharge summary is missing or does not include follow-up advice at the time of discharge",
+    "Signs and symptoms with vitals are not mentioned in the clinical notes"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD / DNB/ equivalent (in General Medicine/Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Anicteric leptospirosis",
+      "Icteric leptospirosis",
+      "Severe leptospirosis"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

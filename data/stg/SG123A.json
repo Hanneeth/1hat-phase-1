@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG123A",
+  "procedure_code": "SG123A",
+  "condition": "Achalasia",
+  "procedure_name": "Heller Myotomy (Lap. /Open)",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Heller Myotomy_Medco.pdf",
+    "Heller Myotomy_PPD.CPD.pdf"
+  ],
+  "alos": "3 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MCh/DNB/Equivalent (GI Surgery)"
+  ],
+  "clinical_indications": [
+    "Aperistalsis/hypoperistalsis of the oesophagal body",
+    "Absence of relaxation of the lower oesophagal sphincter (LES) with high resting pressure",
+    "Progressive dysphagia",
+    "Regurgitation",
+    "Chest pain or heartburn",
+    "Aspiration",
+    "Weight loss"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes with history and examination and planned line of treatment"
+      },
+      {
+        "key": "oesophagogastroscopy_report",
+        "label": "Oesophagogastroscopy Report with Stills"
+      },
+      {
+        "key": "barium_swallow_oesophagography_contrast_oesophagography",
+        "label": "Barium Swallow Oesophagography / Contrast Oesophagography"
+      },
+      {
+        "key": "oesophageal_manometry_report",
+        "label": "Oesophageal Manometry Report (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "intraoperative_photograph",
+        "label": "Intraoperative Photograph (Optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Patient's clinical history/investigations indicative of Heller Myotomy procedure?",
+        "expected": true
+      },
+      {
+        "q": "Investigation reports confirm the diagnosis of Achalasia?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Operative/Procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge Summary submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical history/investigations not indicative of Heller Myotomy procedure.",
+    "Investigation reports do not confirm the diagnosis of Achalasia.",
+    "Oesophagogastroscopy report or Oesophagography reports missing at pre-authorization.",
+    "Detailed Operative/Procedure notes not submitted at claim stage.",
+    "Detailed Discharge Summary not submitted or incomplete at claim stage.",
+    "Detailed Indoor Case Papers (ICPs) not available or incomplete at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Achalasia is a primary disorder characterised by aperistalsis/hypoperistalsis of the oesophagal body and the absence of relaxation of the lower oesophagal sphincter (LES), which often has a high resting pressure.",
+      "The presenting symptoms have an insidious onset (usually over at least two years) and include progressive dysphagia, regurgitation, chest pain or heartburn, aspiration, and weight loss.",
+      "The primary treatment principle consists of disrupting the unrelaxing lower oesophagal sphincter either by myotomy or forceful dilation.",
+      "The Laparoscopic Heller-Dor procedure is now the treatment of choice for this disease, with good results in 90% of the patients.",
+      "The myotomy is made by dividing all the circular and longitudinal (collar-sling) muscular fibres above the area of constriction.",
+      "The incision is extended to the oesophagus and gastric cardia to reduce outflow resistance.",
+      "The muscularis should be \"undermined\" to allow wide separation of oesophagal muscles, but care must be taken to avoid making an incision entirely through the mucosa."
+    ],
+    "surgical_options": [
+      "Myotomy",
+      "Forceful dilation",
+      "Laparoscopic Heller-Dor procedure"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO058B",
+  "procedure_code": "SO058B",
+  "condition": "Re exploration after laparotomy / Caesarean Section",
+  "procedure_name": "Re exploration after laparotomy",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Re-exploration after laparatomy and C-Section_Medco.pdf",
+    "Re-exploration after laparatomy and C-Section_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)",
+    "MS/Equivalent (in General Surgery)"
+  ],
+  "clinical_indications": [
+    "Burst abdomen",
+    "Abdominal hemorrhage",
+    "Bleeding into the peritoneal cavity",
+    "Rectus sheath hematoma",
+    "Subacute intestinal obstruction",
+    "Postpartum haemorrhage",
+    "Post-operative Sepsis",
+    "Bladder/bowel injury",
+    "Haemorrhage into intestinal canal or abdominal cavity",
+    "Peritonitis that occurs in the absence or presence of a perforation",
+    "Mechanical or paralytical postoperative ileus",
+    "Eventration or evisceration",
+    "Miscellaneous complications"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "time_since_previous_surgery",
+      "operator": "<",
+      "value": "60 days",
+      "note": "RL refers to operations performed within 60 days in association with the primary surgery."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, symptoms, signs, examination findings, indication for planned line of treatment and advice for admission"
+      },
+      {
+        "key": "clinical_photograph_scar_previous_surgery",
+        "label": "Clinical photograph of scar from previous surgery"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG Abdomen/pelvis"
+      },
+      {
+        "key": "coagulation_profile",
+        "label": "Coagulation profile"
+      },
+      {
+        "key": "complete_blood_profile",
+        "label": "Complete blood profile"
+      },
+      {
+        "key": "sepsis_screen",
+        "label": "Sepsis screen (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed operative notes"
+      },
+      {
+        "key": "post_op_usg_abdomen",
+        "label": "Post-op USG Abdomen"
+      },
+      {
+        "key": "post_operative_scar_photo_optional",
+        "label": "Post-operative scar photo (optional)"
+      },
+      {
+        "key": "blood_transfusion_notes",
+        "label": "Blood transfusion notes (if blood transfusion was given)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history especially previous surgery details, symptoms, signs, physical examination including local examination, indication for procedure and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical photograph of scar from previous surgery (optional), clinical presentation and imaging confirm the requirement of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was the history of previous surgery documented < 60 days?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was post-op USG report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was requirement of blood transfusion documented (if applicable)?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and imaging not indicative of surgery",
+    "History of previous surgery not documented within 60 days",
+    "Detailed Clinical notes missing or incomplete at pre-authorization",
+    "Clinical photograph of scar from previous surgery missing or unclear at pre-authorization",
+    "Detailed Indoor Case Papers (ICPs) missing or incomplete at claim submission",
+    "Detailed Operative Notes missing or incomplete at claim submission",
+    "Post-op USG report missing at claim submission",
+    "Blood transfusion requirement not documented (if applicable)",
+    "Discharge summary with follow-up advice not submitted"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The term \"Relaparotomy\" (RL) refers to operations performed within 60 days in association with the primary surgery.",
+      "RL is categorized as early or late; radical or palliative; urgent or elective; and, planned or unplanned depending on the performed period, its purpose, urgency, and whether or not it is scheduled, respectively.",
+      "Early relaparotomy is one that is done, within 21 days of the primary surgery.",
+      "Relaparotomy is a serious complication of caesarean section.",
+      "The purpose of the relaparotomy is to relieve intestinal obstruction, maintain homeostasis, prevent infections and carryout delayed curative surgeries."
+    ],
+    "surgical_options": [
+      "Hysterectomy",
+      "Uterine artery ligation",
+      "Internal iliac artery ligation",
+      "Drainage of blood clots and parietal hematoma",
+      "Securing angles of uterine incision",
+      "Removal of a foreign body",
+      "Drainage of pus",
+      "Suturing abdominal wall",
+      "Repair of urinary bladder or bowel injuries"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

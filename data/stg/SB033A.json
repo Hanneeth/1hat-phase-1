@@ -1,0 +1,99 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB033A",
+  "procedure_code": "SB033A",
+  "condition": "Excision Arthroplasty of Femur head",
+  "procedure_name": "Excision Arthroplasty of Femur head",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Excision Arthroplasty of Femur head_Medco.pdf",
+    "Excision Arthroplasty of Femur head_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Chronic deep-seated infections of the hip joint",
+    "Tuberculosis of Hip",
+    "Aseptic loosening of hip",
+    "Recurrent dislocation of the hip",
+    "Failed internal fixation of femoral neck fractures",
+    "Acute pyogenic infection of the hip—haematogenous, from compound fracture, or from gunshot wound—in which the fever has not given way to more conservative measures, such as immobilization, daily aspiration, and chemotherapy by sulphanilamides or penicillin, demanding radical drainage.",
+    "Acute pyogenic infection cases where the hip-joint is not yet ankylosed, cavity distended with pus, or suppuration is almost absent with severe symptoms (Group A).",
+    "Acute pyogenic infection cases where infective material has leaked out to spread further sepsis between muscular planes.",
+    "Acute pyogenic infection cases where ankylosis has already developed, and pus has escaped from the joint and burrowed into the intermuscular planes (Group B)."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "affected_part_clinical_photograph",
+        "label": "Clinical photograph of affected part"
+      },
+      {
+        "key": "xray_mri_affected_limb",
+        "label": "X-ray/MRI labelled with patient ID, date and side (Left/ Right) - affected limb"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "post_operative_clinical_photograph",
+        "label": "Post-operative clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Do the clinical notes justify the diagnosis, indication, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Is the X-ray/MRI labelled with patient ID, date, side, and does it justify the submitted indication for the affected limb?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes and X-ray/MRI do not justify the need for operative procedure.",
+    "Clinical notes lack sufficient detail regarding history, signs, symptoms, evaluation findings, indication, planned line of management, or advice for admission.",
+    "X-ray/MRI is missing proper labelling (patient ID, date, side) or does not adequately support the indication for the affected limb.",
+    "Post-operative clinical photograph is unclear or inconsistent with the described procedure.",
+    "Operative notes are incomplete or do not clearly describe the surgical steps, findings, or any complications."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "a surgical procedure to restore/realigning/reconstructing the function of hip joint or restored by resurfacing the head of femur. Excision arthroplasty excising a part of the deformed joint, there by relaxing the surrounding soft tissues, and thus correcting deformity."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

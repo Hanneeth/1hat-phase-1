@@ -1,0 +1,179 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP028A",
+  "procedure_code": "MP028A",
+  "condition": "Continuous Renal Replacement therapy (CRRT)",
+  "procedure_name": "CRRT",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "CRRT_Medco.pdf",
+    "CRRT_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "DM/DNB/ equivalent (Nephrology)",
+    "MD/DNB/DCH/ equivalent (Pediatric Medicine)"
+  ],
+  "clinical_indications": [
+    "Acute Kidney Injury and one or more of the indications for initiating RRT: hyperkalemia (> 6 mEq/L)",
+    "Acute Kidney Injury and one or more of the indications for initiating RRT: fluid overload (pulmonary edema, severe hypertension)",
+    "Acute Kidney Injury and one or more of the indications for initiating RRT: uremic encephalopathy",
+    "Acute Kidney Injury and one or more of the indications for initiating RRT: severe metabolic acidosis (TCO2 < 10–12 mEq/L)",
+    "Acute Kidney Injury and one or more of the indications for initiating RRT: hyponatremia (120 mEq/L or symptomatic) or hypernatremia",
+    "Patients with stage 5 CKD may have life-threatening biochemical abnormalities, requiring renal replacement therapies (RRT), [Kidney failure, end stage renal disease < GFR 15 (mL/min/1.73 m²)]"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "hyperkalemia",
+      "operator": ">",
+      "value": "6 mEq/L",
+      "note": null
+    },
+    {
+      "field": "TCO2",
+      "operator": "<",
+      "value": "10–12 mEq/L",
+      "note": "for severe metabolic acidosis"
+    },
+    {
+      "field": "hyponatremia",
+      "operator": "<",
+      "value": "120 mEq/L",
+      "note": "or symptomatic"
+    },
+    {
+      "field": "GFR",
+      "operator": "<",
+      "value": "15 mL/min/1.73 m²",
+      "note": "for stage 5 CKD"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailing_history",
+        "label": "Clinical notes detailing history"
+      },
+      {
+        "key": "notes_showing_evidence_of_unstable_hemodynamic_status",
+        "label": "Notes showing evidence of unstable hemodynamic status"
+      },
+      {
+        "key": "investigations_done_serum_creatinine",
+        "label": "Investigations done -Serum creatinine"
+      },
+      {
+        "key": "indication_for_crrt",
+        "label": "Indication for CRRT"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "any_investigation_done",
+        "label": "Any investigation done"
+      },
+      {
+        "key": "treatment_details",
+        "label": "Treatment details"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is there a history of Acute kidney injury or chronic kidney disease with cardiovascular instability?",
+        "expected": true
+      },
+      {
+        "q": "Is there an indication for CRRT?",
+        "expected": true
+      },
+      {
+        "q": "Are other types of dialysis contraindicated?",
+        "expected": true
+      },
+      {
+        "q": "Are admission notes showing vitals and examination findings present?",
+        "expected": true
+      },
+      {
+        "q": "Are investigations for high creatinine present?",
+        "expected": true
+      },
+      {
+        "q": "Are other necessary investigations (urinalysis, CBC, Sr. Electrolytes, LFT, ABG, Chest X-ray, Renal ultrasound, sepsis screen) present as per medical condition and availability?",
+        "expected": true
+      },
+      {
+        "q": "Is the planned line of treatment documented?",
+        "expected": true
+      },
+      {
+        "q": "Is documentation of consent from the guardian present?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed Indoor case papers (ICPs) detailing history, clinical course and deteriorating condition present?",
+        "expected": true
+      },
+      {
+        "q": "Was anticoagulation administered, unless contraindicated?",
+        "expected": true
+      },
+      {
+        "q": "Are treatment details present?",
+        "expected": true
+      },
+      {
+        "q": "Are frequent monitoring charts (vital signs, labs, hemodynamics during treatment, procedure performance) present?",
+        "expected": true
+      },
+      {
+        "q": "Is a detailed Discharge summary with follow-up advice at discharge present?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "History of acute or chronic kidney disease with cardiovascular instability not documented or unclear",
+    "Indication for CRRT not documented or not meeting clinical criteria",
+    "Other types of dialysis not documented as contraindicated or justification for CRRT not provided",
+    "Clinical notes not sufficiently detailing history, clinical course, deteriorating condition, or indication for procedure",
+    "High serum creatinine investigation not present or not adequately high to justify CRRT",
+    "Consent from guardian not documented or incomplete",
+    "Anticoagulation status not documented or not justified if contraindicated",
+    "Frequent monitoring charts (vitals, labs, hemodynamics) or procedure performance details missing/incomplete"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Special expertise, equipment and trained staff in critical care dialysis (CRRT) and pediatric patient management. Care at Tertiary care hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with CRRT only if diagnosis made is backed by clinical manifestation",
+      "Continuous renal replacement therapy (CRRT) is useful in patients with unstable hemodynamic status, concomitant sepsis, or multiorgan failure in the intensive care setting."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

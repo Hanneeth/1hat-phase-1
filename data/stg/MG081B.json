@@ -1,0 +1,113 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG081B",
+  "procedure_code": "MG081B",
+  "condition": "IHD / CAD / Arrhythmia",
+  "procedure_name": "CAD",
+  "specialty": "General Medicine, Cardiology, Pediatric Medicine",
+  "version": "1.1",
+  "source_files": [
+    "IHD,CAD,Arrhythmia_Medco.pdf",
+    "IHD,CAD,Arrhythmia_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 days",
+  "min_doctor_qualification": [
+    "MBBS",
+    "DNB/MD equivalent in General Medicine",
+    "DM/DNB/ equivalent (Cardiology)",
+    "MD/DNB/DCH/ equivalent (Pediatric Medicine)"
+  ],
+  "clinical_indications": [
+    "Narrowing or blockage of the coronary arteries, usually caused by atherosclerosis (build-up of cholesterol and fatty deposits/plaques).",
+    "Symptoms such as angina (chest discomfort), pain in the arms or shoulders, shortness of breath, sweating, or dizziness.",
+    "Defined as an established pattern of angina pectoris, a history of myocardial infarction (MI), or the presence of plaque documented by catheterization."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_vitals_examination",
+        "label": "Clinical notes detailing history and Admission notes showing vitals and examination findings."
+      },
+      {
+        "key": "investigation_reports_diagnosis_ecg_echo_cardiac_enzymes_angiography_holter",
+        "label": "Investigation reports establishing diagnosis ECG/ECHO/Cardiac Enzymes/ Angiography/ Holter?"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "treatment_details",
+        "label": "Treatment details"
+      },
+      {
+        "key": "relevant_investigations_ecg_echo_cardiac_enzymes_angiography_holter",
+        "label": "Relevant Investigations report ECG/ECHO/Cardiac Enzymes/ Angiography/ Holter"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailing history and Admission notes showing vitals and examination findings.",
+        "expected": true
+      },
+      {
+        "q": "Were the investigation reports establishing diagnosis – ECG/ECHO/Cardiac Enzymes/ Angiography/ Holter submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the relevant investigations ECG/ECHO/Cardiac Enzymes/ Angiography/ Holter submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is a Detailed Discharge Summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's ECG/ECHO/Cardiac enzymes/Angiography/Holter reports are not suggestive of the diagnosis.",
+    "Clinical notes detailing history and admission notes showing vitals and examination findings are missing or incomplete.",
+    "Investigation reports establishing diagnosis (ECG/ECHO/Cardiac Enzymes/Angiography/Holter) are missing at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) are missing at claim submission.",
+    "Detailed discharge summary is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Care Facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Coronary artery disease (CAD) involves narrowing or blockage of coronary arteries, primarily due to atherosclerosis (plaque buildup).",
+      "Stable CAD is defined by an established pattern of angina pectoris, a history of myocardial infarction (MI), or the presence of plaque documented by catheterization.",
+      "Symptoms include angina (chest discomfort), pain in arms/shoulders, shortness of breath, sweating, and dizziness.",
+      "Diagnosis relies on ECG, ECHO, Tread Mill Testing (TMT), Coronary Angiogram (CAG), and CT Angiography.",
+      "Medical management aims to alleviate symptoms, prevent cardiovascular events, and reduce mortality, primarily with Lipid-lowering agents (Statins), Antihypertensive agents (Beta blockers, ACE inhibitors; alternatives: calcium channel blockers, ARBs), and Antiplatelet agents (Aspirin, Clopidogrel)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

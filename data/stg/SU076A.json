@@ -1,0 +1,123 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU076A",
+  "procedure_code": "SU076A",
+  "condition": "Urethrorectal fistula",
+  "procedure_name": "Urethrorectal fistula repair",
+  "specialty": "Urology, Pediatric surgery",
+  "version": "1.1",
+  "source_files": [
+    "Urethrorectal fistula repair_Medco.pdf",
+    "Urethrorectal fistula repair_PPD.CPD.pdf"
+  ],
+  "alos": "4 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB/ equivalent (in Urology, Pediatric surgery)"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [
+    {
+      "field": "clinical_presentation",
+      "operator": "is",
+      "value": "pneumaturia and/or faecaluria and passage of urine through the anus",
+      "note": "Patient must present with these symptoms."
+    },
+    {
+      "field": "diagnostic_evidence",
+      "operator": "is",
+      "value": "suggestive of urethrorectal fistula",
+      "note": "Evidence from Cystoscopy + Sigmoidoscopy report."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_plan",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure."
+      },
+      {
+        "key": "cystoscopy_sigmoidoscopy_report",
+        "label": "Cystoscopy + Sigmoidoscopy report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Does the patient present with pneumaturia and/or faecaluria and the passage of urine through the anus?",
+        "expected": true
+      },
+      {
+        "q": "Was there any evidence of Cystoscopy + Sigmoidoscopy suggestive of urethrorectal fistula?",
+        "expected": true
+      },
+      {
+        "q": "Was detailed Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure are submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Cystoscopy + Sigmoidoscopy report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient does not present with pneumaturia, faecaluria, or passage of urine through the anus",
+    "No evidence from Cystoscopy + Sigmoidoscopy report suggestive of urethrorectal fistula",
+    "Clinical notes are missing, incomplete, or lack evaluation findings, indication for procedure, planned line of management, or advise at pre-authorization",
+    "Cystoscopy + Sigmoidoscopy report not submitted at pre-authorization",
+    "Indoor case papers (ICPs) are missing, incomplete, or lack daily vitals and line of treatment at claim submission",
+    "Operative notes are missing or incomplete at claim submission",
+    "Discharge summary is missing or lacks follow-up advise at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facility",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pneumaturia",
+      "Faecaluria",
+      "Previous history of prostate surgery in males",
+      "Past history of pelvic radiotherapy",
+      "Urinary infection",
+      "Fever",
+      "Potential Sepsis"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

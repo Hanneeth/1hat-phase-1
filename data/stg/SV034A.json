@@ -1,0 +1,127 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV034A",
+  "procedure_code": "SV034A",
+  "condition": "Excessive bleeding requiring re-exploration",
+  "procedure_name": "Excessive bleeding requiring re-exploration",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Excessive bleeding requiring re-exploration_Medco.pdf",
+    "Excessive bleeding requiring re-exploration_PPD.CPD.pdf"
+  ],
+  "alos": "Additional 2-3 days based on the clinical condition and primary disease",
+  "min_doctor_qualification": [
+    "MCh Cardiothoracic Surgery",
+    "DNB Cardiothoracic Surgery",
+    "Equivalent (in Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Torrential hemorrhage or increasing rate of bleeding, tamponade",
+    "Hemodynamic instability (e.g., escalating pressor requirement)",
+    "Large hemothorax",
+    "Minimal coagulopathy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including previous surgery details, evaluation findings, and planned line of management"
+      },
+      {
+        "key": "chest_x_ray",
+        "label": "Chest X-ray"
+      },
+      {
+        "key": "thromboelastography_optional",
+        "label": "Thromboelastography (optional)"
+      },
+      {
+        "key": "2d_echo_optional",
+        "label": "2D ECHO (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "blood_transfusion_notes",
+        "label": "Blood transfusion notes (if applicable)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes – all vitals, history especially previous surgery details when performed, symptoms, signs, physical examination, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical condition, previous surgery details, and imaging confirming the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Does the imaging indicate surgery?",
+        "expected": true
+      },
+      {
+        "q": "Blood transfusion details if applicable",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge provided?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical condition, previous surgery details, or imaging not indicative of surgery for re-exploration",
+    "Clinical notes, previous surgery details, evaluation findings, or planned line of management missing or incomplete at pre-authorization (or submitted later without adequate justification for emergency)",
+    "Chest X-ray missing at pre-authorization",
+    "Detailed Indoor case papers (ICPs) with daily vitals and treatment details missing or incomplete at claim submission",
+    "Detailed Procedure / Operative notes missing or incomplete at claim submission",
+    "Blood transfusion notes (if applicable) missing at claim submission",
+    "Discharge summary with follow-up advice missing or incomplete at claim submission",
+    "Lack of documentation for factors indicating re-exploration (e.g., torrential hemorrhage, hemodynamic instability, large hemothorax, minimal coagulopathy)"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Post-operative bleeding requiring surgical re-exploration is a frequent complication following cardiac surgery. Re-exploration for bleeding is associated with increased operative mortality and morbidity after cardiac surgery.",
+      "The interplay between time to re-exploration for bleeding and volume bled before must be taken in the context of the patient`s clinical picture and no one factor should be relied upon.",
+      "The re-sternotomy rate for bleeding or tamponade following first pericardiotomy is ~1-2%.",
+      "Resternotomy is best performed in OR (sterility, light, equipment), but if patient too unstable to transfer can be performed at bedside in ICU."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV0020",
+  "procedure_code": "SV0020",
+  "condition": "Sub-valvular aortic stenosis",
+  "procedure_name": "Sub-aortic membrane resection",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Subaortic membrane resection_Medco.pdf",
+    "Subaortic membrane resection_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch. (Cardiothoracic Surgery)",
+    "DNB (Cardiothoracic Surgery)",
+    "equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Surgical correction of the obstruction is the definitive therapy for the sub-valvular aortic stenosis.",
+    "In children and adolescents with Doppler mean gradient of 50 mm of Hg or more should be surgically treated.",
+    "In children and adolescents with Doppler mean gradients of 30 to 50 mm Hg, may be considered for surgery if they are symptomatic with angina, syncope, or dyspnea on exertion; if they are asymptomatic but develop changes on ECG at rest or with exercise; or older age at diagnosis.",
+    "Progression and worsening of aortic regurgitation to a significant grade is an indication for surgery."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "Doppler mean gradient",
+      "operator": ">=",
+      "value": "50 mm Hg",
+      "note": "for children and adolescents"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_stills_of_echo_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of Sub-valvular Aortic Stenosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not suggestive of Subvalvular Aortic Stenosis",
+    "Clinical notes missing or not detailing history, signs, symptoms, or indication for procedure",
+    "Post procedure stills of ECHO with report missing or incomplete",
+    "Detailed Discharge Summary missing or not mentioning date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Sub-valvular aortic stenosis (SAS), also called subaortic stenosis, is a rare disorder seen in infants. In most cases, there is a membrane (usually fibro-muscular) just below the aortic valve which causes a fixed obstruction to the blood flow across the left ventricular outflow tract. Despite being classified as a congenital heart defect, the fact that it is rare at birth and infancy, its gradual course and its high rate of postoperative recurrence propose that it may be an acquired defect.",
+      "Subaortic stenosis is usually detected at birth while working up the infant for another congenital heart disorder. Most infants are asymptomatic at birth or may have a murmur during evaluation. Among infants who are symptomatic, dyspnea on exertion, angina, effort syncope and presyncope, orthopnea and sudden cardiac death are commonly observed. Heart failure may be seen in infants with severe obstruction of the left ventricular outflow tract.",
+      "Exertional dyspnea is the most common symptom seen in 40% of symptomatic patients, and it reflects pulmonary venous hypertension that is induced by an increase in left ventricular filling pressure caused by the impaired diastolic compliance of the hypertrophied left ventricle.",
+      "The physical examination helps to distinguish from the other causes of left ventricular outflow tract obstruction.",
+      "Children with sub-valvular aortic stenosis have a normal pattern of growth and development. Peripheral pulses are symmetrical except in cases of severe left ventricular outflow tract obstruction.",
+      "One-third of the patients with mild sub-valvular aortic stenosis is noted to have a palpable carotid thrill and a left parasternal thrill. Patients with moderate to severe sub-valvular aortic stenosis have a forceful left ventricular apical impulse.",
+      "During the first year of life, more than one-half of affected patients have a cardiac murmur. It becomes more prominent and typical of the left ventricular outflow tract obstruction as the patient gets older. A low-pitched ejection systolic murmur is appreciated in the second and third left parasternal spaces, and it radiates to the suprasternal notch. The duration of the murmur is directly proportional to the degree of obstruction.",
+      "The ejection click is absent in isolated sub-valvular aortic stenosis and is an important differentiating point from the murmur of aortic valve stenosis.",
+      "A high pitched early diastolic murmur of aortic regurgitation is heard in 30% to 50% of patients.",
+      "The Valsalva maneuver decreases the intensity of the murmur in sub-valvular aortic stenosis."
+    ],
+    "surgical_options": [
+      "Surgical correction may range from simple removal of the membrane (sub-aortic membrane resection) to extensive ring resection, with or without myectomy."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "In children and adolescents with Doppler mean gradient of less than 30 mm Hg and no left ventricular hypertrophy, the management of sub-valvular aortic stenosis is nonintervention and medical follow up."
+    ]
+  }
+}

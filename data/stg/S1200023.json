@@ -1,0 +1,150 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1200023",
+  "procedure_code": "S1200023",
+  "condition": "Permanent Pacemaker Implantation",
+  "procedure_name": "Permanent Pacemaker Implantation - Single Chamber",
+  "specialty": "Cardiology",
+  "version": "1.1",
+  "source_files": [
+    "Permanent Pacemaker Implantation_Medco.pdf",
+    "Permanent Pacemaker Implantation_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MD/ DM/DNB/ equivalent (Cardiology)",
+    "M.Ch./DNB/ equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Symptomatic patients with sinus pauses > 3 s long with symptom correlation",
+    "Asymptomatic patients with sinus pauses > 6 s long",
+    "Complete heart block, advanced AV block, or Mobitz Type II block",
+    "Symptomatic patients with AV block other than complete heart block, advanced AV block, or Mobitz Type II block",
+    "Associated neuromuscular disease (with AV nodal disease)",
+    "Symptomatic patients with HV ≥100 ms on EPS",
+    "Alternating BBB, Infiltrative/neuromuscular disease (with 1:1 AV conduction)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "sinus_pause_duration",
+      "operator": ">",
+      "value": "3 s",
+      "note": "for symptomatic patients with symptom correlation"
+    },
+    {
+      "field": "sinus_pause_duration",
+      "operator": ">",
+      "value": "6 s",
+      "note": "for asymptomatic patients"
+    },
+    {
+      "field": "hv_interval",
+      "operator": ">=",
+      "value": "100 ms",
+      "note": "for symptomatic patients on EPS"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_indication",
+        "label": "Clinical notes with indication for implantation"
+      },
+      {
+        "key": "ecg_with_cardiologist_report",
+        "label": "ECG with report of cardiologist"
+      },
+      {
+        "key": "angiogram_report",
+        "label": "Angiogram report, if done"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "x_ray_pacemaker_in_situ",
+        "label": "X Ray showing pacemaker in situ"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "invoice_barcode_designated_pacemaker",
+        "label": "Invoice/barcode of designated pacemaker"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the ECG and its report by cardiologist suggestive of an indication requiring permanent pacemaker implantation?",
+        "expected": true
+      },
+      {
+        "q": "Was the angiogram report if done submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the X-ray of the patient show pacemaker placement in situ?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice/barcode of designated pacemaker used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "ECG report not abnormal or does not suggest an indication for permanent pacemaker implantation.",
+    "Clinical notes missing or not detailing patient's history, signs, symptoms, or indication for procedure.",
+    "Angiogram report (if performed) not submitted.",
+    "Procedure/operative notes missing or incomplete.",
+    "X-ray showing pacemaker in situ missing.",
+    "Detailed discharge summary missing or not mentioning date of follow-up.",
+    "Invoice or barcode of the designated pacemaker not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": "R00.1",
+    "special_empanelment": "Functional Cardiac Cath lab/CTVS O.T.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Permanent pacemaker implantation is done to treat symptomatic or potentially life-threatening bradycardia of various etiologies. The most common indications for permanent pacemaker implantation are sinus node dysfunction (SND) and atrioventricular (AV) block.",
+      "In a suspected sinus node dysfunction, a symptomatic patient with sinus bradycardia with symptomatic correlation or an asymptomatic patient with prolonged sinus pauses of more than 6 sec are recommended to receive permanent pacemaker.",
+      "In suspected AV node disease, asymptomatic or symptomatic patients with complete heart block, advanced AV block, or Mobitz Type II block or symptomatic patients with AV block other than mentioned previously or patients with alternating bundle branch block or symptomatic patient with 1:1 AV conduction with significant (>100 msec) HV prolongation, are recommended to receive permanent pacemaker implantation.",
+      "Permanent pacemaker is indicated after acute phase of MI, when there is persistent AB block or evidence of disease of His-Purkinje system. It is also required in some patients of neuro-cardiogenic syncope or after repair of congenital heart disease."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Hypotension (SBP <90 mmHg)",
+      "Impaired consciousness or ongoing chest pain",
+      "Recurrent or ongoing syncope/pre-syncope",
+      "Associated headache with or without neurologic deficit (suspect Intracranial event)",
+      "Patient with a pre-existing device",
+      "If ECG available, evidence of any of the following: Complete heart block, Sinus node disease with pauses >3 s long, Bradycardia (HR < 50 bpm) (with or without hyperkalemia, serum K > 5 mEq/L)"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

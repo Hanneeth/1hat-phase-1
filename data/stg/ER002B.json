@@ -1,0 +1,111 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "ER002B",
+  "procedure_code": "ER002B",
+  "condition": "Cardiopulmonary emergency",
+  "procedure_name": "Emergency with unstable cardiopulmonary status with resuscitation",
+  "specialty": "Emergency Room Packages",
+  "version": "1.1",
+  "source_files": [
+    "Cardiopulmonary emergency_Medco.pdf",
+    "Cardiopulmonary emergency_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MD/DNB in Emergency Medicine",
+    "General medicine",
+    "DM in Cardiology"
+  ],
+  "clinical_indications": [
+    "Unstable Angina (UA): A clinical syndrome subset of Acute coronary syndrome (ACS) defined by ECG ST-segment depression or prominent T wave inversion."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "cardiac_biomarkers",
+      "operator": "no_elevation",
+      "value": "Troponins T/I or CPKMB",
+      "note": "no elevation of cardiac biomarkers of necrosis for Unstable Angina (UA)"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "ecg_report",
+        "label": "Electrocardiogram (ECG) report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "ECG report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes and ECG report indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with vitals and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary and treatment details provided including drugs used for thrombolysis (if applicable) submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes not submitted or incomplete, failing to support Unstable Angina/NSTEMI criteria.",
+    "ECG report not submitted or does not show ST-segment depression or prominent T wave inversion for Unstable Angina/NSTEMI.",
+    "Cardiac biomarkers (Troponins T/I or CPKMB) are documented as elevated, contradicting the diagnosis of Unstable Angina.",
+    "Detailed Indoor Case Papers are missing or lack essential vital and treatment details.",
+    "Discharge summary is missing or incomplete, or fails to detail drugs used for thrombolysis (if applicable)."
+  ],
+  "additional_information": {
+    "icd_10_code": "I20.0",
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for treatment only if diagnosis made is backed by clinical signs, symptoms, examination."
+    ],
+    "surgical_options": [
+      "Revascularization: PCI (Percutaneous Coronary Intervention)",
+      "Revascularization: CABG (Coronary Artery Bypass Graft)"
+    ],
+    "pre_op_preparation": "Load with clopidogrel or prasugrel or ticagrelor if not already done.",
+    "post_op_care": "Continue Dual anti-platelets in patients undergoing PCI for at least 12 months in DES and for 3 months in BMS.",
+    "fitness_criteria": "Very High risk clinical instability: Immediate invasive (<2 hours); High risk (GRACE >140, TIMI >4): Early invasive (2-24 hours); Intermediate risk (GRACE 109-140, TIMI 2-3): Delayed invasive (25-72 hours); Low risk (GRACE <109, TIMI <=1): Medical/non-invasive strategy or non-invasive ischaemic testing.",
+    "comorbidity_management": "Optimal medical therapy to continue (BB, high dose atorvastatin, ACE-inhibitors, intra-venous nitrates if ongoing pain, severe MR or LVF).",
+    "referral_criteria": "Refer as emergency to nearest Primary PCI/Thrombolysis capable centre for Red Flag Signs (pain >20 mins, recurrent pain, breathlessness, profuse sweating, syncope, hemodynamic instability). Refer High/Intermediate risk to PCI capable centre. Refer to PCI capable centre if Acute LVF, Hypotension, Systolic murmur, Arrhythmia.",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Angina unlikely if: Variable location or characteristic of pain",
+      "Angina unlikely if: Long lasting (hours to days) or short lasting (less than a minute) pain",
+      "Angina unlikely if: Pain restricted to areas above jaw or below epigastrium",
+      "Angina unlikely if: Localized to a point pain",
+      "Angina unlikely if: Pricking or piercing or stabbing type of pain",
+      "Angina unlikely if: Pain precipitated by movement of neck or arms or respiration"
+    ]
+  }
+}

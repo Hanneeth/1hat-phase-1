@@ -1,0 +1,144 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Renal Transplantation/ : Renal transplantation_MEDCO.pdf (clinical + mandatory docs) + Renal transplantation_PPD_CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "OT001B",
+  "procedure_code": "OT001B",
+  "condition": "Renal Transplantation",
+  "procedure_name": "Induction",
+  "specialty": "Organ and Tissue Transplant",
+  "version": "1.1",
+  "source_files": [
+    "Renal transplantation_MEDCO.pdf",
+    "Renal transplantation_PPD_CPD.pdf"
+  ],
+  "alos": "4-5 days",
+  "min_doctor_qualification": [
+    "MS in General Surgery",
+    "DNB in General Surgery",
+    "MCh in General Surgery",
+    "MS in Urology Surgery",
+    "DNB in Urology Surgery",
+    "MCh in Urology Surgery",
+    "Fellowship in Transplant Surgery with 2 years training",
+    "Equivalent qualification with 2 years training in Transplant Surgery"
+  ],
+  "clinical_indications": [
+    "Immunosuppressive therapy administered at the time of kidney transplantation to reduce the risk of allograft rejection.",
+    "Practically all kidney allograft recipients require immunosuppressive therapy to prevent rejection and loss of the allograft."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with planned line of management"
+      },
+      {
+        "key": "documentation_of_indication_for_induction",
+        "label": "Documentation of indication for induction"
+      },
+      {
+        "key": "hospital_authorization_letter",
+        "label": "Hospital authorization letter on recipient and donor with details of the surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "investigation_reports_if_done",
+        "label": "Investigation reports (if done)"
+      },
+      {
+        "key": "details_of_drug_and_dosage_used_for_induction",
+        "label": "Details of the drug and dosage used for induction"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes all vitals, detailed history, symptoms, signs, physical examination, indication for surgery, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Were the following documents available NOTTO ID, donor/recipient work-up summary sheet/cross-match report, informed consent of donor (in living donor transplant), hospital authorization letter?",
+        "expected": true
+      },
+      {
+        "q": "Were DSA and biopsy reports submitted (if applicable)?",
+        "expected": true
+      },
+      {
+        "q": "Is the hospital registered under HOTA/NOTTO ACT?",
+        "expected": true
+      },
+      {
+        "q": "Has the hospital transplant committee approved the case?",
+        "expected": true
+      },
+      {
+        "q": "Is the patient suffering from end stage kidney disease and/or not responding to dialysis?",
+        "expected": true
+      },
+      {
+        "q": "Documentation of no absolute contraindications for doing the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the Donor medically fit to undergo the Transplant Donor Nephrectomy?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details (including drug and dosage for induction/treatment rejection – if applicable)?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailedprocedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Hospital not registered under HOTA/NOTTO Act.",
+    "Hospital transplant committee has not approved the case.",
+    "Patient is not suffering from end-stage kidney disease, or is responding to dialysis.",
+    "Absolute contraindications for the procedure are documented.",
+    "Donor is not medically fit to undergo Transplant Donor Nephrectomy.",
+    "Missing documentation of indication for induction at pre-authorization.",
+    "Missing hospital authorization letter on recipient and donor at pre-authorization.",
+    "Missing details of the drug and dosage used for induction at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facility should be registered as per HOTA Act (THE HUMAN ORGANS TRANSPLANTATION ACT)for intervention procedures. Care at a Tertiary Hospital. The Hospital should have the required infrastructure of transplantation like Normo-thermic perfusion system, vascular access, pre-transplant work-up, dialysis, transplant immunology (HLA & cross match), transplant pathology and post-transplant care.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "High risk for rejection: Rabbit antithymocyte globulin (rATG)-Thymoglobulin is superior to interleukin (IL) 2 receptor antibodies and placebo among patients at high immunologic risk who are receiving concurrent immunosuppressive regimens. Administer rATG-Thymoglobulin, a lymphocyte-depleting agent, rather than an IL-2 receptor antagonist or no antibody therapy to high-risk patients undergoing kidney transplantation.",
+      "Lower risk for rejection: Some administer rATG-Thymoglobulin based upon evidence that it produces lower acute rejection rates. Others administer an IL-2 receptor antagonist based upon studies that have shown similar rates of acute rejection, patient and graft survival, and infection with rATG-Thymoglobulin and IL-2 receptor antagonists."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

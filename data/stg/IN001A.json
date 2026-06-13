@@ -1,0 +1,136 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "IN001A",
+  "procedure_code": "IN001A",
+  "condition": "Dural Arteriovenous Malformation",
+  "procedure_name": "Dural AVMs (per sitting) with glue",
+  "specialty": "Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "Dural Arteriovenous Malformation_Medco.pdf",
+    "Dural Arteriovenous Malformation_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "DM/Equivalent (in Interventional Neuroradiology)",
+    "MCh/DNB/Equivalent in (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Clinical manifestations of DAVMs are highly variable and related to the lesion location, arterial supply, and venous drainage. Symptoms can be sudden or slowly progressive.",
+    "Common symptoms include ringing in the ear, headache, visual and gaze abnormalities, and swelling of the optic nerve head.",
+    "Dural AVMs involving bleeding, especially if a portion of their drainage goes through vessels on the surface of the brain.",
+    "Retrograde leptomeningeal drainage portends more aggressive behavior, including hemorrhage, focal neurologic deficits, and seizures.",
+    "High risk of rebleeding from DAVMs that have hemorrhaged previously.",
+    "Selection of treatment based on symptom presentation, lesion location, and presence/absence of leptomeningeal venous drainage.",
+    "Endovascular embolization is the treatment of choice, designed to close off blood flow to the AVM."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication of procedure, and planned line of treatment"
+      },
+      {
+        "key": "ct_mri_brain_spine",
+        "label": "CT/MRI Brain/Spine"
+      },
+      {
+        "key": "digital_subtraction_angiography",
+        "label": "Digital Subtraction Angiography (DSA)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "post_procedure_check_angiogram",
+        "label": "Post procedure Check Angiogram"
+      },
+      {
+        "key": "invoice_barcode_onyx_glue_used",
+        "label": "Invoice/barcode of onyx/glue used"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure, and planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was invoice/barcode of glue/onyx used submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or lacking details on history, signs, symptoms, indication, planned treatment, or admission advice at pre-authorization.",
+    "Clinical presentation and/or imaging do not confirm the diagnosis during pre-authorization.",
+    "CT/MRI Brain/Spine or Digital Subtraction Angiography (DSA) not uploaded at pre-authorization.",
+    "Invoice or barcode for glue used not submitted during claim.",
+    "Post-procedure check angiogram not uploaded during claim.",
+    "Clinical presentation, severity, or imaging not indicative of surgery."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital with facilities for interventional neuroradiology",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Dural arteriovenous malformation (DAVM) consists of pathological shunting within the dural leaflet, with secondary involvement of the cerebral venous circulation.",
+      "These AVMs, with direct connections between the arterial and venous system without intervening capillaries, usually are found adjacent to the venous channels found between layers of the dura mater, but can be found elsewhere too.",
+      "The vast majority of these lesions are acquired in nature; with possible causes including trauma, surgery, dural venous thrombosis and hypercoagulability.",
+      "The optimal treatment plan for each patient involves careful review of medical history, physical exam and diagnostic studies.",
+      "The Borden/Djindjian/Cognard (Appendix 1) classifications are the most well-known classification systems used for predicting the aggressiveness of DAVMs."
+    ],
+    "surgical_options": [
+      "Transarterial or transvenous embolization",
+      "Microsurgical resection and disconnection",
+      "Stereotactic radiosurgery"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MC003B",
+  "procedure_code": "MC003B",
+  "condition": "Pulmonary Artery Stenosis",
+  "procedure_name": "Pulmonary Artery Stenosis",
+  "specialty": "Cardiology",
+  "version": "1.1",
+  "source_files": [
+    "Pulmonary Artery Stenosis_Medco.pdf",
+    "Pulmonary Artery Stenosis_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "DM Cardiology",
+    "DNB Cardiology",
+    "Equivalent (Cardiology)"
+  ],
+  "clinical_indications": [
+    "Pulmonary angioplasty, preferably with stenting is indicated for hemodynamically significant proximal or distal PA stenosis, where the vessel is large enough to accommodate a stent which can be redilated to adult diameter as the child grows."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes - detailed history, signs & symptoms, indication for procedure"
+      },
+      {
+        "key": "echo_doppler_report_stills",
+        "label": "Echo-Doppler report and Stills suggestive of Pulmonary Artery Stenosis"
+      },
+      {
+        "key": "angiogram_report_stills",
+        "label": "Angiogram Report and Stills suggestive of Pulmonary Artery Stenosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operation_notes",
+        "label": "Detailed Procedure/ Operation notes"
+      },
+      {
+        "key": "post_procedure_echo_angiogram_stills_report",
+        "label": "Post Procedure Echo/Angiogram stills with report show increase in diameter of the affected part of Pulmonary Artery"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary mentioning date of follow-up"
+      },
+      {
+        "key": "invoice_balloon_used",
+        "label": "Invoice of blade/balloon used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the patient Echo/angio stills report showing Pulmonary Artery Stenosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does Post Procedure Echo/Angiogram stills with report show increase in diameter of the affected part of Pulmonary Artery?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/angiogram stills report not showing Pulmonary Artery Stenosis",
+    "Clinical notes missing or lacking detailed history, signs, symptoms, or indication for procedure",
+    "Post-procedure Echo/Angiogram stills and report do not show an increase in diameter of the affected pulmonary artery",
+    "Detailed discharge summary missing or does not mention date of follow-up",
+    "Missing invoice or barcode for the balloon/blade used"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath Lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pulmonary artery stenosis is a congenital or acquired narrowing of the pulmonary artery, leading to an enlarged heart and pressure overloaded right chambers of the heart.",
+      "This condition is often associated with other medical problems, such as a congenital heart defect, a genetic abnormality or an infection during pregnancy, as part of Williams-Beuren syndrome (WBS) or Alagille syndrome or after surgery for congenital heart disease involving pulmonary artery reconstruction.",
+      "In addition, Takayasu arteritis and Behçet disease have been associated with pulmonary artery stenosis.",
+      "Symptoms may range from asymptomatic to frank right sided heart failure. It depends on location and severity of stenosis, and on associated underlying cardiac conditions.",
+      "Infants may present with failure to thrive, lethargy, poor feeding or rapid breathing. Isolated PPS may present with signs of right sided pressure overload, CHF or soft systolic murmur centrally or over the lung fields."
+    ],
+    "surgical_options": [
+      "Pulmonary angioplasty, preferably with stenting"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

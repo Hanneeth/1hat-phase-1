@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV019J",
+  "procedure_code": "SV019J",
+  "condition": "Peripheral Arterial Surgeries-Lower Limb",
+  "procedure_name": "Popliteal aneurysm repair",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Peripheral Arterial Surgeries -Lower Limb_Medco.pdf",
+    "Peripheral Arterial Surgeries -Lower Limb_PPD.CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "MCh/ or equivalent (in Cardiothoracic Surgery, Vascular Surgery)"
+  ],
+  "clinical_indications": [
+    "Symptomatic lower-extremity ischemia (disabling claudication, rest pain, tissue loss)",
+    "Unavailability of endovascular options for management of iliac occlusive disease",
+    "Patients presenting with infected aortic grafts or aortoenteric fistulae.",
+    "Intermittent Claudication, Aortoenteric fistulae, Aortic coarctation",
+    "Patients without endovascular options for management of their ischemic symptoms",
+    "Symptomatic lower-extremity ischemia",
+    "Acute (thrombosed aortoiliac system) or chronic"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "angiogram_ct_doppler_mri_reports",
+        "label": "Angiogram / CT Angiogram / Doppler ultrasound /MRI reports investigations confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "invoice_barcode_graft",
+        "label": "Invoice/barcode of graft used (if artificial graft used)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission",
+        "expected": true
+      },
+      {
+        "q": "Was the Angiogram / CT Angiogram / Doppler ultrasound/MRI report suggestive of Peripheral arterial diseases",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are Detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice/barcode of graft used submitted? (if artificial graft used)",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Angiogram / CT Angiogram / Doppler ultrasound/ MRI report not indicative of Peripheral Arterial Diseases.",
+    "Clinical notes for pre-authorization not submitted or incomplete (missing history, signs, symptoms, evaluation findings, indication for procedure, planned line of management, or advice for admission).",
+    "Detailed Indoor case papers (ICPs) not submitted or incomplete at claim stage.",
+    "Procedure / Operative notes not submitted or incomplete at claim stage.",
+    "Invoice/barcode of artificial graft not submitted when an artificial graft was used.",
+    "Discharge Summary not submitted or missing date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Peripheral artery disease (PAD) occurs when plaque accumulates in the arterial system and obstructs blood flow.",
+      "Atherosclerosis plaques accumulates inside the arterial intima and obstructs the lumen of the vessel causing a reduction in blood flow, which leads to diminished oxygen supply to the recipient tissues.",
+      "An arterial aneurysm is a bulge in the artery that develops in areas where the arterial wall is weak.",
+      "Certain natural branch points and curvatures within the vascular tree are more susceptible to atherosclerosis due to turbulent blood flow and shear stress."
+    ],
+    "surgical_options": [
+      "Axillo - femoral bypass Bilateral and Unilateral (B/L, U/L): Axillofemoral bypass is revascularization used in the patients with aortoiliac occlusive, who have no endovascular option or cannot undergo an aorto-femoral reconstruction. The surgery depends on adequate inflow of axillary artery to the ipsilateral arm and one or both legs. Technique involve exposure of axillary artery, exposure to femoral artery, tunneling of graft.",
+      "Femoro - Femoral Cross-over Bypass: It is a surgical method of revascularization used in the setting of unilateral common and/or external iliac artery occlusive disease. It is a commonly used means of extra-anatomic vascular reconstruction for patients with disabling claudication or critical limb-threatening ischemia (CLTI). Also used as a component of endovascular repair of abdominal aortic aneurysms (AAAs).",
+      "Femoral - popliteal Bypass: is a procedure used to treat femoral artery disease.",
+      "Femoral aneurysm repair: True femoral artery aneurysms are rare and include dilation of all the layers of the vessel wall. Risks associated with Femoral aneurysm includes thrombosis/occlusion, distal embolization, and rupture. They are more commonly seen in individuals who are older than 70 years of age and male. Consideration should be given to repair of asymptomatic femoral artery aneurysms when they exceed about 2.5 cm in diameter. Generally repaired using the open surgical technique.",
+      "Popliteal aneurysm repair: Surgical bypass is considered the gold standard for popliteal artery aneurysm (PAA) repair, especially in young patients fit for conventional surgery. Endovascular treatment, great saphenous vein (GSV) bypass, and prosthetic bypass and Open surgeries are treatment options. In a patient with multiple other aneurysms (such as aortic or popliteal), the symptomatic aneurysm should be addressed first."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG090A",
+  "procedure_code": "SG090A",
+  "condition": "Free Grafts - Wolfe Grafts/Split thickness skin grafts",
+  "procedure_name": "Split thickness skin grafts Small (< 4% TBSA)",
+  "specialty": "General Surgery, Plastic & Reconstructive Surgery, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Free Grafts - Wolfe Grafts - Split thickness skin grafts_Medco.pdf",
+    "Free Grafts - Wolfe Grafts - Split thickness skin grafts_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MCh Plastic Surgery",
+    "DNB Plastic Surgery",
+    "MCh Reconstructive Surgery",
+    "DNB Reconstructive Surgery",
+    "MCh Pediatric Surgery",
+    "DNB Pediatric Surgery"
+  ],
+  "clinical_indications": [
+    "Used to cover wounds where skin has been lost",
+    "Early cover with a skin graft reduces fluid, electrolyte, protein and other nutrient loss from the body",
+    "Common reasons for a skin grafting procedure include: deep burns, skin infections, loss of skin following trauma, post skin cancer surgery",
+    "Includes full epidermis and part of dermis",
+    "Used to cover post burn, post traumatic, post infective or any other raw areas"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "TBSA",
+      "operator": "<",
+      "value": "4%",
+      "note": "Small split thickness skin graft"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_original_pathology_time_of_burn",
+        "label": "Clinical notes detailing original pathology (In case of Split thickness skin graft time of burn)"
+      },
+      {
+        "key": "supporting_reports_clinical_photograph",
+        "label": "Supporting reports and clinical photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/Operative notes"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical notes detailing original pathology (In case of Split thickness skin graft Time of burns) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Supporting reports and Clinical photograph submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure clinical photograph of the affected part submitted? (Optional)",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge summary report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or clinical photograph not indicative of a split thickness skin graft, or if used for purposes other than post burn, post traumatic, or post infective raw areas without justification.",
+    "Time of burn not documented in the clinical notes for split thickness skin graft cases.",
+    "Supporting reports or clinical photograph missing or unclear at pre-authorization stage.",
+    "The percentage of Total Body Surface Area (TBSA) not documented or exceeding 4% for the small split thickness skin graft package.",
+    "Detailed Indoor Case Papers (ICPs) lacking daily vitals or comprehensive treatment details at claim stage.",
+    "Operative notes not adequately detailing the surgical steps and specific characteristics of the split thickness skin graft."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Restoration of an intact skin barrier is of critical importance following wound and may be achieved in numerous ways, including skin grafting."
+    ],
+    "surgical_options": [
+      "Skin Grafting: Transfer of skin from one area to other without its inherent blood supply.",
+      "Skin grafts are classified as Full thickness or split thickness grafts, based on their thickness.",
+      "Split thickness skin grafts include full epidermis and part of dermis.",
+      "Donor areas for split thickness skin grafts: Thighs, Abdomen, inner and outer arm, inner forearm, back, scalp.",
+      "Advantages of split thickness skin grafts: large areas can be covered, meshing can be done to expand the graft.",
+      "Procedure of grafting involves: Donor site selection, wound preparation, graft harvest, graft placement on the raw area, dressing."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Disadvantage of split thickness skin grafts: greater secondary contraction, poor color and texture match, poor sensation (may be a relative contraindication if these factors are critical for the outcome)."
+    ]
+  }
+}

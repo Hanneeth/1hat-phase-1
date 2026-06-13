@@ -1,0 +1,171 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG074B",
+  "procedure_code": "MG074B",
+  "condition": "Blood Transfusion",
+  "procedure_name": "Blood component including platelet transfusion (RDP, PC, SDP)",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Blood transfusion_Medco.pdf",
+    "Blood transfusion_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "**Plasma:** To replace coagulation factors in patients receiving massive transfusion (>one blood volume or 70 ml/kg in 24 h or >50% of blood volume in 3 h)",
+    "**Plasma:** For urgent reversal of the effect of warfarin",
+    "**Plasma:** In known coagulation factor deficiency",
+    "**Plasma:** In cases of thrombotic thrombocytopaenic purpura",
+    "**Platelet:** For a bleeding patient below a platelet count of 50 × 10^9 /L",
+    "**Platelet:** If platelet count is between 50 × 10^9 /L and 100 × 10^9 /L, in case of platelet dysfunction (e.g., clopidogrel therapy), on-going bleeding, and surgeries in confined spaces such as eye and brain",
+    "**Cryoprecipitate:** To increase fibrinogen levels in patients with dysfibrinogenaemia and hypofibrinogenaemia",
+    "**Cryoprecipitate:** For microvascular bleeding in patients receiving massive transfusion when fibrinogen cannot be measured",
+    "**Cryoprecipitate:** For congenital fibrinogen deficiency"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "prothrombin_time",
+      "operator": ">",
+      "value": "1.5",
+      "note": "For Plasma transfusion"
+    },
+    {
+      "field": "international_normalized_ratio",
+      "operator": ">",
+      "value": "2",
+      "note": "For Plasma transfusion"
+    },
+    {
+      "field": "partial_thromboplastin_time",
+      "operator": ">",
+      "value": "2 times",
+      "note": "For Plasma transfusion"
+    },
+    {
+      "field": "platelet_count",
+      "operator": "<",
+      "value": "50 × 10^9 /L",
+      "note": "For bleeding patients requiring Platelet transfusion"
+    },
+    {
+      "field": "platelet_count",
+      "operator": "<=",
+      "value": "100 × 10^9 /L",
+      "note": "Rarely required above this for bleeding patients. Considered between 50-100 × 10^9 /L for platelet dysfunction, on-going bleeding, or surgeries in confined spaces."
+    },
+    {
+      "field": "fibrinogen_level",
+      "operator": "<",
+      "value": "80-100 mg/dl",
+      "note": "For Cryoprecipitate transfusion"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "blood_grouping_abo_rh",
+        "label": "Blood grouping (ABO and Rh)"
+      },
+      {
+        "key": "complete_hemogram",
+        "label": "Complete hemogram"
+      },
+      {
+        "key": "viral_markers_donor",
+        "label": "Viral markers of the donor"
+      },
+      {
+        "key": "screening_malaria_syphilis_hiv_hbv_hcv_cmv",
+        "label": "Screening for Malaria, Syphilis, HIV, HBV, HCV, CMV"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers including treatment details"
+      },
+      {
+        "key": "post_transfusion_hemogram",
+        "label": "Post Transfusion hemogram"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the blood group report of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the complete hemogram report of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the viral marker reports of donor blood submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor case papers with vital (BP and Pulse) and Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post transfusion hemogram report of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's hemogram not suggestive of an indication for blood or blood products transfusion",
+    "Clinical notes (including evaluation findings, indications, planned treatment) not submitted or incomplete",
+    "Blood grouping (ABO and Rh) report not submitted",
+    "Complete hemogram report not submitted",
+    "Viral markers of donor blood not submitted",
+    "Screening for Malaria, Syphilis, HIV, HBV, HCV, CMV reports not submitted",
+    "Detailed indoor case papers (including vital signs and treatment details) not submitted or incomplete at claim stage",
+    "Post transfusion hemogram report not submitted at claim stage",
+    "Detailed discharge summary not submitted or missing follow-up date at claim stage",
+    "Platelet count outside recommended ranges for transfusion (e.g., >100 x 10^9/L for bleeding, or without specified dysfunction/surgery between 50-100 x 10^9/L)",
+    "Coagulation factor levels (prothrombin time, INR, or partial thromboplastin time) not meeting transfusion criteria for plasma",
+    "Fibrinogen levels not meeting transfusion criteria for cryoprecipitate (<80-100 mg/dl)"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "DNB / MD (General Medicine / Pediatric Medicine/Blood transfusion/Blood transfusion medicine)",
+    "clinical_key_pointers": [
+      "Blood transfusion has been widely used and overused in medical practice since early 20th century to treat anaemia and haemorrhage. Transfused red blood cells (RBCs) provide three beneficial effects: Circulatory (volume-related), rheological (viscosity-related) and oxygen carriage. Blood transfusion is currently not recommended for volume expansion alone, except in cases of severe haemorrhage. Similarly, transfusion is required to increase viscosity only in cases of severe haemodilution. High viscosity in itself may impede circulation. Transfused blood also does not immediately increase oxygen delivery or utilisation at the tissue level. Therefore, clinical situations where blood transfusion is beneficial to the patient and improves outcome are limited. The decision to administer blood should be taken after weighing the risks and benefits of blood transfusion against those of anaemia.",
+      "Plasma is conventionally prescribed to replace coagulation factors in patients receiving massive transfusion (>one blood volume or 70 ml/kg in 24 h or >50% of blood volume in 3 h), for urgent reversal of the effect of warfarin, in known coagulation factor deficiency, and in cases of thrombotic thrombocytopaenic purpura. The decision to transfuse is based on both presence of bleeding and abnormal laboratory values of prothrombin time (>1.5), international normalized ratio (>2) and partial thromboplastin time (>2 times). Plasma should not be used to replace intravascular volume.",
+      "Platelet transfusion is usually required in a bleeding patient below a platelet count of 50 × 10 9 /L but rarely above 100 × 10 9 /L. If the values fall between these two, transfusion is considered in case of platelet dysfunction (e.g., clopidogrel therapy), on-going bleeding and surgeries in confined spaces such as eye and brain.",
+      "Cryoprecipitate is used to increase fibrinogen levels in patients with dysfibrinogenaemia and hypofibrinogenaemia (fibrinogen <80-100 mg/dl), microvascular bleeding in patients receiving massive transfusion when fibrinogen cannot be measured and congenital fibrinogen deficiency."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

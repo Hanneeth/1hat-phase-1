@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG073A",
+  "procedure_code": "MG073A",
+  "condition": "Plasmapheresis",
+  "procedure_name": "Plasmapheresis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Plasmapheresis_Medco.pdf",
+    "Plasmapheresis_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Acute Guillain-Barré syndrome",
+    "Chronic inflammatory demyelinating polyneuropathy",
+    "Myasthenia gravis",
+    "Polyneuropathy associated with paraproteinaemias",
+    "PANDASA (Paediatric autoimmune neuropsychiatric disorders associated with streptococcal infection)",
+    "Thrombotic thrombocytopenic purpura",
+    "Atypical haemolytic uraemic syndrome (autoantibody to factor H)",
+    "Hyperviscosity syndromes (paraproteinaemias)",
+    "Severe/symptomatic cryoglobulinaemia",
+    "Goodpasture's syndrome (anti-glomerular basement membrane antibodies)",
+    "Antineutrophil cytoplasmic antibody (ANCA)-associated rapidly progressive glomerulonephritis",
+    "Recurrent focal segmental glomerular sclerosis",
+    "Antibody-mediated renal transplant rejection",
+    "Familial hypercholesterolaemia (homozygous)",
+    "Fulminant Wilson's disease",
+    "Lambert-Eaton myasthenic syndrome",
+    "Acute exacerbation of multiple sclerosis",
+    "Chronic focal encephalitis",
+    "Neuromyelitis optica",
+    "ABO-incompatible haemopoietic stem cell transplantation",
+    "Pure red cell aplasia",
+    "Life-threatening cold agglutinin disease",
+    "Atypical haemolytic uraemic syndrome (complement factor gene mutations)",
+    "Myeloma with cast nephropathy",
+    "Red cell alloimmunisation in pregnancy",
+    "Catastrophic antiphospholipid syndrome",
+    "Cerebral systemic lupus erythematosus (SLE)",
+    "Refsum's disease"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indications_planned_treatment",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_with_indications",
+        "label": "Detailed indoor case papers along with indications"
+      },
+      {
+        "key": "detailed_procedure_notes",
+        "label": "Detailed procedure notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indication of procedure, examination findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical notes and indications mentioned are indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed indoor case papers along with indications and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes, evaluation findings, indication of procedure, examination findings, or planned line of treatment are missing or incomplete at pre-authorization.",
+    "Detailed indoor case papers along with indications and treatment details are missing or incomplete at claim submission.",
+    "Detailed procedure notes are missing or incomplete at claim submission.",
+    "Detailed Discharge Summary is missing or incomplete at claim submission.",
+    "Clinical notes and indications mentioned are not indicative of the Plasmapheresis procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB equivalent (in General Medicine / Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "TPE removes large-molecular-weight substances such as harmful antibodies from the plasma.",
+      "It is usually carried out using an automated blood cell separator to ensure fluid balance and maintain a normal plasma volume.",
+      "This may require the insertion of a femoral or jugular line to allow adequate blood flow.",
+      "Typically, 30-40 mL/kg of plasma (1-1.5 plasma volumes) are removed at each procedure.",
+      "Removed plasma is replaced with isotonic 4.5% or 5.0% human albumin solution (some services substitute 25–50% of replacement volume with 0.9% saline).",
+      "Exchange with fresh frozen plasma (FFP) is reserved for the replacement of ADAMTS13 in thrombotic thrombocytopenic purpura or to replace clotting factors.",
+      "A one plasma volume exchange removes about 66% of an intravascular constituent; a two plasma volume exchange approximately 85%.",
+      "TPE is normally combined with disease modifying treatment, such as immunosuppressive drugs, for the underlying condition."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

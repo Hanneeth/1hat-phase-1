@@ -1,0 +1,120 @@
+{
+  "_comment": "Distilled from Cordocentesis_Medco.pdf and Cordocentesis_PPD.CPD.pdf.",
+  "stg_id": "SO049A",
+  "procedure_code": "SO049A",
+  "condition": "Fetal anomalies/disorders",
+  "procedure_name": "Cordocentesis",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Cordocentesis_Medco.pdf",
+    "Cordocentesis_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO or equivalent (in Obstetrics & Gynecology)",
+    "DM/Equivalent in Genetics",
+    "1 Year training in maternal fetal medicine/PDCC/Equivalent certificate course"
+  ],
+  "clinical_indications": [
+    "Diagnose and treat fetal severe anemia",
+    "Diagnose and evaluate therapeutic response in NAIT",
+    "Evaluate nonimmune fetal hydrops"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "nt_early_tiffa_scan_reports",
+        "label": "Nuchal translucency (NT) and Early TIFFA (Targeted imaging for fetal anomalies) scan reports"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advice for admission detailed in the clinical notes?",
+        "expected": true
+      },
+      {
+        "q": "Was the prenatal screen of the women positive indicating need for fetal genetic analysis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Did the NT/Early TIFFA scan reports submitted show any abnormality and indicative of performing the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Prenatal screen of the women not documented as positive or not indicating need for fetal genetic analysis",
+    "Nuchal translucency (NT) and Early TIFFA scan reports not submitted, or not showing abnormality indicative of performing the procedure",
+    "Detailed Clinical notes missing essential information such as history, indications, symptoms, signs, examination findings, planned line of treatment, or advice for admission at pre-authorization stage",
+    "Detailed indoor case papers missing daily vitals or line of treatment at claim submission",
+    "Detailed procedure/operative notes not available at claim submission",
+    "Discharge summary not available or lacking follow-up advice at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary hospital, procedure done under ultrasound guidance. Facility should be registered as per PCPNDT law for intervention procedures.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ultrasound-guided fetal blood sampling (FBS), also known as cordocentesis, or percutaneous umbilical cord blood sampling is performed under local anesthetic usually from 18 weeks of gestation.",
+      "Ultrasound-guided FBS is the only procedure that provides direct access to the fetal circulation.",
+      "Umbilical vein is preferred. The advantages are: (a) vein is larger in size (b) causes less bradycardia and (c) less hemorrhage.",
+      "Fetal aneuploidy for karyotyping (Rarely used in current practice; largely replaced by CVS or amniocentesis with FISH, or by NIPT)",
+      "Determine fetal blood type and platelet antigen status (Largely replaced by other tests, eg, NIPT, CVS, or amniocentesis, and molecular testing)",
+      "Diagnose genetic disorders (eg, hemophilia, thalassemia) (Largely replaced by CVS or amniocentesis for molecular genetic diagnosis)",
+      "Measurement of biochemical or other serum markers for fetal disease (eg, fetal infection, thyroid function) (Largely replaced by amniocentesis and PCR (eg, infection); rarely needed (eg, thyroid function))",
+      "Direct intravascular therapy (Reported rarely, most commonly for failed maternal systemic treatment of fetal supraventricular tachycardia)"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "risks_complications": [
+      "This invasive procedure may lead to abortion, preterm labor and intrauterine fetal death.",
+      "These may be due to bleeding, cord hematoma formation, infection (amnionitis), feto-maternal hemorrhage or preterm rupture of membranes."
+    ]
+  }
+}

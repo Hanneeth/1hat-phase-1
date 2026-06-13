@@ -1,0 +1,94 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU052A",
+  "procedure_code": "SU052A",
+  "condition": "Neurogenic Bladder",
+  "procedure_name": "Neurogenic bladder - Package for evaluation / investigation (catheter + ultrasound + culture + RGU/MCU) for 1 month (medicines - antibiotics)",
+  "specialty": "Urology/ Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Neurogenic Bladder Package evaluation Investigation_Medco.pdf",
+    "Neurogenic Bladder Package evaluation Investigation_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS/DNB or Equivalent (in Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Spinal cord injuries – stroke, brain tumour, Parkinson disease, Multiple sclerosis, Diabetic, Pelvic surgeries.",
+    "To diagnose the root cause for detrusor underactivity to over activity.",
+    "To protect kidney diseases",
+    "To rule out/decrease Urinary tract infections",
+    "To address Urine incontinence"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "post_void_residual_urine_determination_urodynamic_testing",
+        "label": "Post void residual urine determination/ Urodynamic testing"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "retrograde_urethrogram_micturating_cysto_urethrogram",
+        "label": "Retrograde urethrogram (RGU)/ Micturating Cysto-Urethrogram (MCU) with patient ID and Date"
+      },
+      {
+        "key": "detailed_procedure_operative_notes_antibiotic_given",
+        "label": "Detailed Procedure / Operative notes, Antibiotic given"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes and Post void residual urine determination/ Urodynamic testing reports indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes and/or Post void residual urine determination/ Urodynamic testing reports are not indicative of the procedure.",
+    "Detailed clinical notes are missing or incomplete, lacking history, indications, symptoms, signs, examination findings, or advice for admission.",
+    "Post void residual urine determination or Urodynamic test report is missing or not submitted.",
+    "Detailed indoor case papers with daily vitals and treatment details are not available.",
+    "Retrograde urethrogram (RGU) or Micturating Cysto-Urethrogram (MCU) reports are missing or do not include patient ID and date.",
+    "Detailed Procedure / Operative notes or Antibiotic given notes are missing or incomplete.",
+    "Detailed discharge summary is missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital.",
+    "min_doctor_qualification_desirable": "MCh/or Equivalent (in Urology, Pediatric Surgery)",
+    "clinical_key_pointers": [
+      "Neurogenic bladder is a term applied to urinary bladder malfunction due to neurologic dysfunction emanating from internal or external trauma, disease, or injury."
+    ],
+    "surgical_options": [
+      "Urinary diversion",
+      "Open or Laparoscopic bladder suspension surgery",
+      "Artificial sphincter",
+      "Sling surgery"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

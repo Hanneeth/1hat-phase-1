@@ -1,0 +1,119 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL017A",
+  "procedure_code": "SL017A",
+  "condition": "Tonsillectomy & Peritonsillar abscess drainage",
+  "procedure_name": "Peritonsillar abscess drainage / intraoral calculus removal",
+  "specialty": "ENT/ Pediatric surgery",
+  "version": "1.1",
+  "source_files": [
+    "Tonsillectomy & Peritonsillar abscess drainage_Medco.pdf",
+    "Tonsillectomy & Peritonsillar abscess drainage_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/ DNB/ PG Diploma or equivalent (in ENT)",
+    "MCh/ DNB or equivalent (Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Emergency condition with symptoms of severe sore throat, trismus, fever, altered voice, difficulty to swallow saliva, ipsilateral earache."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, indications for doing the procedure & advise for admission)"
+      },
+      {
+        "key": "throat_culture_report",
+        "label": "Throat culture report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_note_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "culture_sensitivity_report_of_pus",
+        "label": "Culture/Sensitivity report of pus"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph of the affected part"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes (including clinical signs & symptoms such as difficulty in breathing, examination findings of oral cavity and tonsils, indications for doing the procedure & advise for admission)?",
+        "expected": true
+      },
+      {
+        "q": "Throat culture report?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary available?",
+        "expected": true
+      },
+      {
+        "q": "Is the culture/ sensitivity report of pus removed in case of peritonsillar abscess/intraoral calculus removal available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Post procedure clinical photograph of the affected part available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes (detailing signs, symptoms, examination findings, indications, and advice for admission) missing or incomplete at pre-authorization",
+    "Throat culture report missing at pre-authorization",
+    "OT notes do not detail surgical steps or outcomes at claim stage",
+    "Culture/sensitivity report of pus missing at claim stage",
+    "Post-procedure clinical photograph of the affected part missing at claim stage",
+    "Signs, symptoms, or examination findings do not confirm the presence of peritonsillar abscess or intraoral calculus"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination."
+    ],
+    "surgical_options": [
+      "Needle aspiration or incision and drainage followed by a course of antibiotics"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "soft diet, oral hygiene, oral antibiotics, analgesics and immediate reporting to hospital in case of oral bleeding",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Coagulation and bleeding disorders",
+      "active infection"
+    ]
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Duraplasty/ : Duraplasty_Medco.pdf (clinical + mandatory docs) + Duraplasty_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN007A",
+  "procedure_code": "SN007A",
+  "condition": "Chiari Malformation",
+  "procedure_name": "Duraplasty with Endogenous graft",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Duraplasty_Medco.pdf",
+    "Duraplasty_PPD.CPD.pdf"
+  ],
+  "alos": "3 Days",
+  "min_doctor_qualification": [
+    "Mch/DNB/Equivalent (in Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Presence of Chiari malformation requiring foramen magnum decompression",
+    "Symptomatic CM-I with lower cranial nerve palsies, syringomyelia, myelopathy, cerebellar symptoms, severe neck pain, or occipital headache",
+    "CM-II and CM-III requiring decompression of tight posterior fossa structures"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_management",
+        "label": "Clinical notes with signs, symptoms, indications, planned line of management and advice for admission"
+      },
+      {
+        "key": "clinical_photograph_associated_conditions_optional",
+        "label": "Clinical photograph (optional) for associated conditions"
+      },
+      {
+        "key": "mri_brain_spine",
+        "label": "MRI Brain and Spine"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_operative_photographs_optional",
+        "label": "Post-operative photographs (optional)"
+      },
+      {
+        "key": "post_op_ct_cvj",
+        "label": "Post-op CT CVJ (craniovertebral junction)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and imaging not indicative of surgery at pre-authorization",
+    "Imaging did not confirm the diagnosis at pre-authorization",
+    "MRI Brain and Spine report missing at pre-authorization",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details are not available",
+    "Detailed Procedure / Operative Notes are not available",
+    "Post-op CT CVJ (craniovertebral junction) not submitted",
+    "Discharge summary is missing or does not include follow-up advice"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The primary indication for foramen magnum decompression is the presence of Chiari malformation. The operation has been historically considered to be the primary and gold standard operation for this condition."
+    ],
+    "surgical_options": [
+      "Posterior decompression via suboccipital craniectomy with or without duraplasty.",
+      "Anterior decompression of the foramen magnum by odontoidectomy and shunting."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Asymptomatic patients with an incidental diagnosis of CM-I who do not have syringomyelia can be managed conservatively with clinical and magnetic resonance imaging (MRI) surveillance."
+    ]
+  }
+}

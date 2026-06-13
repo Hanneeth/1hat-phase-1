@@ -1,0 +1,134 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL018A",
+  "procedure_code": "SL018A",
+  "condition": "Thyroglossal cyst / sinus / fistula excision",
+  "procedure_name": "Thyroglossal cyst excision",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Thyroglossal - cyst - sinus - fistula_Medco.pdf",
+    "Thyroglossal - cyst - sinus - fistula_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "Diploma/ DLO with equivalent (in ENT) 4 years' experience"
+  ],
+  "clinical_indications": [
+    "Midline swelling in the upper neck (between the thyroid cartilage and the submental triangle)",
+    "Intermittent discharge and infections",
+    "Swelling with or without external opening (sinus) and internal opening (fistula) in the head and neck region (for branchial arch anomalies)",
+    "Infection leading to drainage of abscesses and subsequent scarring",
+    "Diagnosis confirmed by USG or CT/MRI Sinograms"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, indications for doing the procedure & advise for admission)"
+      },
+      {
+        "key": "pre_operative_clinical_photograph_affected_part",
+        "label": "Pre-operative clinical photograph of the affected part"
+      },
+      {
+        "key": "usg_ct_mri_sinugram_fistulogram_confirming_diagnosis",
+        "label": "USG/CT/MRI sinugram/ fistulogram confirming the Diagnosis (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "procedure_note_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "histopathology_examination_report",
+        "label": "Histopathology examination report"
+      },
+      {
+        "key": "photograph_gross_specimen_tissue_removed",
+        "label": "Photograph of the Gross specimen of the tissue removed"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_affected_part",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical notes, detailing history submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG/CT/MRI Sinugram/ fistulogram confirming the Diagnosis submitted?",
+        "expected": false
+      },
+      {
+        "q": "Was the pre-operative Clinical photograph of the affected part submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Histopathology report?",
+        "expected": true
+      },
+      {
+        "q": "Was the Picture of the Gross specimen of the tissue removed submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure clinical photograph of the affected part available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes, pre-clinical photograph, or imaging studies (if submitted) not indicative of thyroglossal cyst/sinus/fistula.",
+    "Clinical notes detailing history not submitted at pre-authorization.",
+    "Pre-operative clinical photograph of the affected part not submitted at pre-authorization.",
+    "Histopathology report not submitted at claim submission.",
+    "Photograph of the Gross specimen of the tissue removed not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/ DNB/ or equivalent (in ENT)",
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination."
+    ],
+    "surgical_options": [
+      "Surgery is the definite treatment to remove all the remnants of the persistent embryonal structures in the abnormal location to avoid recurrence. During surgery, all care should be is taken to preserve all the vital structures like facial nerve and major vessels which may be in close relation to the sinus/ fistula tracts."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

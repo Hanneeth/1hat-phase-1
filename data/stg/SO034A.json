@@ -1,0 +1,141 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO034A",
+  "procedure_code": "SO034A",
+  "condition": "Vulval Haematoma Drainage",
+  "procedure_name": "Vulval Haematoma Drainage",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Vulval Haematoma Drainage_Medco.pdf",
+    "Vulval Haematoma Drainage_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/ MD/ DNB / PG Diploma or equivalent (Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Large haematoma (=/> 5cm) presenting as a painful tender swelling, bluish black in appearance, persistent pain in small hematoma",
+    "Persistently increasing size of the haematoma",
+    "Pallor/Shock, which is out of proportion to the clinical blood loss",
+    "Haematoma is causing retention of urine or tenesmus"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "haematoma_size",
+      "operator": ">=",
+      "value": "5cm",
+      "note": "presenting as a painful tender swelling, bluish black in appearance, persistent pain in small hematoma"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "delivery_notes",
+        "label": "Delivery notes (whether haematoma is formed after delivery), if available/ reason for non-availability"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports"
+      },
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "blood_transfusion_notes",
+        "label": "Blood transfusion notes (if blood transfusion was given)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure and advice for admission",
+        "expected": true
+      },
+      {
+        "q": "Delivery details (incase of institutional delivery)",
+        "expected": true
+      },
+      {
+        "q": "Was haematoma =/>5 cms and required drainage?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed operative / procedure notes",
+        "expected": true
+      },
+      {
+        "q": "Investigation reports done prior to the procedure",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary with follow-up advise at the time of discharge",
+        "expected": true
+      },
+      {
+        "q": "Investigations done post-procedure, if required",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Haematoma size not documented as =/>5 cms, or not requiring drainage without justification.",
+    "Detailed Clinical notes missing essential information (vitals, history, local examination, etc.) at pre-authorization.",
+    "Delivery notes missing or reason for non-availability not provided.",
+    "Detailed indoor case papers not submitted at claim stage.",
+    "Operative/procedure notes missing or incomplete at claim stage.",
+    "Investigation reports (prior or post-procedure) missing.",
+    "Blood transfusion notes not provided if transfusion was administered."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "History: Did she have an accident or fall?",
+      "History: Did she deliver in last few days? (Date of delivery, Place of delivery, Was episiotomy performed during delivery?)",
+      "History: Persistent, severe pain in the perineal region",
+      "History: Retention of urine",
+      "History: Rectal tenesmus",
+      "History: Fever may be present",
+      "History: Did she have vulval varicose veins (especially during pregnancy)?",
+      "Examination: Check vitals",
+      "Examination: Pallor and its severity",
+      "Examination: Local examination: tender, blackish/purple swelling at the vulva",
+      "Investigations: Haemoglobin",
+      "Investigations: Packed Cell Volume (PCV)"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [
+      "Time Interval between delivery and drainage?",
+      "Proportion of hematoma to normal delivery taken place in the hospital?"
+    ],
+    "contraindications": [
+      "Static / non increasing Small haematoma (< 3cm) can be managed conservatively",
+      "If existing signs of infection, drainage may be done under antibiotic cover but resuturing if required, should be done after infection resolves"
+    ]
+  }
+}

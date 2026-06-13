@@ -1,0 +1,118 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Vaginal Myomectomy/ : Vaginal Myomectomy_Medco.pdf (clinical + mandatory docs) + Vaginal Myomectomy_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "SO061A",
+  "procedure_code": "SO061A",
+  "condition": "Vaginal Myomectomy",
+  "procedure_name": "Vaginal Myomectomy",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Vaginal Myomectomy_Medco.pdf",
+    "Vaginal Myomectomy_PPD.CPD.pdf"
+  ],
+  "alos": "2-3 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/ Equivalent (OB&GYN)"
+  ],
+  "clinical_indications": [
+    "Submucous fibroid protruding through the external Os with an inaccessible pedicle",
+    "Sessile polyp",
+    "Broad-based polyp"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes clearly indicating the reason(s) for admission, symptoms, signs, physical examination and procedure to be performed"
+      },
+      {
+        "key": "lab_investigations_cbc_hb_tft",
+        "label": "Lab investigations (Complete Blood count, Hemoglobin, Thyroid function test)"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG Abdomen/ pelvis confirming presence of uterine fibroid/ polyp and its size"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed indoor case papers clearly indicating the need for performing the surgery"
+      },
+      {
+        "key": "operative_notes",
+        "label": "Detailed Operative notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary with follow up advice"
+      },
+      {
+        "key": "pictures_gross_specimen",
+        "label": "Pictures of gross specimen removed"
+      },
+      {
+        "key": "histopathology_form",
+        "label": "Histopathology form confirming submission of specimen removed for histopathological examination"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical presentation, physical examination & supporting investigations indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the patient have a definitive indication for performing this surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed operative notes available with indications for and outcomes of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is discharge summary available with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Is the picture(s) of gross specimen removed date, timed with patient ID available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Histopathology form confirming submission of specimen removed for histopathological examination available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, physical examination, or supporting investigations not indicative of the procedure.",
+    "USG Abdomen/pelvis report missing or not confirming presence/size of uterine fibroid/polyp at pre-authorization.",
+    "Detailed operative notes missing or not clearly detailing indications and outcomes for the procedure at claim submission.",
+    "Picture(s) of gross specimen removed missing or not correctly date/time stamped with patient ID.",
+    "Histopathology form confirming submission of specimen not provided at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Vaginal myomectomy is a minimally invasive surgery as an alternative to abdominal or laparoscopic myomectomy.",
+      "The diagnosis made should be backed by clinical &/or USG findings and all required reports shall be uploaded."
+    ],
+    "surgical_options": [
+      "Abdominal myomectomy",
+      "Laparoscopic myomectomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO024A",
+  "procedure_code": "SO024A",
+  "condition": "Stress Urinary Incontinence",
+  "procedure_name": "Trans-vaginal tape",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Stress Urinary Incontinence_Medco.pdf",
+    "Stress Urinary Incontinence_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MS Obstetrics & Gynecology",
+    "MD Obstetrics & Gynecology",
+    "DNB Obstetrics & Gynecology",
+    "DGO or Equivalent (Obstetrics & Gynecology)",
+    "MCh/Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Involuntary loss of urine coincides with stressful activity like coughing, sneezing, straining or other physical activity",
+    "No prior urge to void",
+    "Amount - small",
+    "Patient - fully aware of it",
+    "Micturition - normal",
+    "Failure of conservative medical management"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, evaluation findings, planned line of management, and advice for admission"
+      },
+      {
+        "key": "clinical_diagnosis",
+        "label": "Clinical diagnosis"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG abdomen/pelvis (Optional)"
+      },
+      {
+        "key": "urine_culture_blood_sugar_residual_urine",
+        "label": "Urine culture/Blood sugar in residual urine (Optional)"
+      },
+      {
+        "key": "urethroscopy",
+        "label": "Urethroscopy (Optional)"
+      },
+      {
+        "key": "urodynamic_studies",
+        "label": "Urodynamic studies (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "investigation_reports_if_required",
+        "label": "Investigation reports (if required)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advise for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical presentation and physical examination confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical evaluation and/or investigation/imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical evaluation, severity, or imaging not indicative of surgery for Stress Urinary Incontinence.",
+    "Detailed clinical notes missing or incomplete, failing to document history, symptoms, signs, evaluation findings, planned treatment, or admission advice.",
+    "Clinical presentation and physical examination do not confirm the diagnosis of Stress Urinary Incontinence.",
+    "Detailed Indoor Case Papers (ICPs) missing or incomplete, lacking daily vitals and treatment details at the time of claim.",
+    "Detailed procedure/operative notes are missing or incomplete at the time of claim.",
+    "Discharge summary is missing or does not include follow-up advice at the time of claim."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability; Laparoscopic facility for laparoscopic procedure.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Incontinence may be stress incontinence, urge incontinence or true incontinence.",
+      "Urinary incontinence may indicate a symptom, a sign or a condition.",
+      "There are two types of Stress Urinary Incontinence (SUI): hypermobility (or anatomic) and intrinsic sphincter deficiency. Most patients have elements of both causes for their incontinence but in varying degrees for each.",
+      "The common type of stress incontinence is associated with cystocele and genital prolapse when the woman voids a small quantity of urine involuntarily while sneezing, coughing or laughing. The condition also develops during pregnancy and soon after delivery."
+    ],
+    "surgical_options": [
+      "Vaginal (Kelly)",
+      "Abdominal (Marshall-Marchetti–Krantz and Pereyra Burch)",
+      "Combined vaginal and abdominal suspension",
+      "Slings (Tension-free sling (Trans-vaginal type))",
+      "Slings (Trans-obturator type)",
+      "Slings (Laparoscopic suspension of bladder neck)",
+      "The approach for primary SUI is a tension-free mid-urethral sling, Burch retropubic urethropexy, or other sub-urethral sling.",
+      "The approach for recurrent SUI and a scarred bladder neck is most often a sub-urethral sling.",
+      "Periurethral bulking has a place in medically compromised or elderly patients, especially for those with severe incontinence and minimal mobility of the bladder neck, i.e., Q-tip test",
+      "The procedure can be done along with Uterine prolapse surgery or Vault prolapse or Vaginal prolapse surgeries"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

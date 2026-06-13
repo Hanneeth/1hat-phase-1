@@ -1,0 +1,123 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG020A",
+  "procedure_code": "MG020A",
+  "condition": "Pericardial / Pleural tuberculosis",
+  "procedure_name": "Pericardial tuberculosis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Pericardial - Plueral tuberculosis_Medco.pdf",
+    "Pericardial - Plueral tuberculosis_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Diagnosis backed by clinical manifestation",
+    "Dyspnea",
+    "Anterior chest pain",
+    "Fever",
+    "Tachycardiac",
+    "Paradoxical pulse",
+    "Anorexia",
+    "Weight loss and night sweat"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "esr_report",
+        "label": "Erythrocyte Sedimentation Rate (ESR) report"
+      },
+      {
+        "key": "xray_mri_ct_chest_report",
+        "label": "X-Ray / MRI / CT scan (Chest) report"
+      },
+      {
+        "key": "ecg_report",
+        "label": "Electrocardiogram (ECG) report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers with treatment details"
+      },
+      {
+        "key": "post_treatment_chest_xray",
+        "label": "Post treatment Chest x-ray"
+      },
+      {
+        "key": "post_treatment_electrocardiogram",
+        "label": "Post treatment Electrocardiogram"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Erythrocyte Sedimentation Rate (ESR) report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the X ray report / MRI / CT scan report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did X-ray report show presence of fluid collection?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the Detail Indoor case papers and Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post treatment Chest x-ray, Electrocardiogram submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the detailed Discharge Summary with 15 days of follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "X-ray report does not indicate presence of fluid collection.",
+    "Clinical notes including evaluation findings, indications for the procedure, or planned line of treatment missing or incomplete.",
+    "Erythrocyte Sedimentation Rate (ESR) report missing.",
+    "X-ray / MRI / CT scan (Chest) report missing.",
+    "Detailed Indoor case papers with treatment details missing or incomplete.",
+    "Post treatment Chest x-ray or Post treatment Electrocardiogram missing.",
+    "Detailed Discharge Summary missing or does not include 15 days of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD / DNB/Equivalent (in General Medicine, Pediatric Medicine)",
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

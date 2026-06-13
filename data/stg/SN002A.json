@@ -1,0 +1,130 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN002A",
+  "procedure_code": "SN002A",
+  "condition": "Cranioplasty",
+  "procedure_name": "Cranioplasty with Endogenous graft",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Cranioplasty_Medco.pdf",
+    "Cranioplasty_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Brain protection",
+    "Cosmetic aspects",
+    "Decreased incidence of epilepsy after cranioplasty",
+    "Relief to psychological drawbacks",
+    "Increased social performance",
+    "Avoidance of recurrence of brain damage",
+    "Achievement of plastic effect",
+    "Protection from cerebral seizures",
+    "Relief of syndrome of trephine (i.e., headaches, dizziness, intolerance of vibration and noise, irritability, fatigability, loss of motivation and concentration, depression, and anxiety)",
+    "Increased brain blood flow",
+    "Improved brain energy metabolism",
+    "Promotion of resumption of brain tissue",
+    "Treatment of encephalocele skull defects with neurological cognition and mental syndrome"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_eval_findings_indication_treatment_plan",
+        "label": "Clinical Notes including evaluation findings, indication of procedure, and planned line of treatment"
+      },
+      {
+        "key": "ct_mri_report_skull",
+        "label": "CT/MRI report of skull"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_x_ray_report_skull",
+        "label": "Post Procedure X-ray with report of skull"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_scar_photo_optional",
+        "label": "Post Procedure clinical photograph/scar photo (optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was CT/MRI skull report of patient submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the detailed indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was post procedure clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure X-ray report of skull submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure/ Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the invoice/barcode of implant submitted?",
+        "expected": false
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes detailing history, signs & symptoms, indication for procedure, and planned line of treatment not submitted at pre-authorization.",
+    "CT/MRI skull report of patient not submitted at pre-authorization.",
+    "Detailed indoor case papers not submitted at claim submission.",
+    "Post-procedure X-ray report of skull not submitted at claim submission.",
+    "Detailed Procedure/Operative notes not submitted at claim submission.",
+    "Detailed Discharge Summary mentioning date of follow-up not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operational Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Cranioplasty, the repair of a skull vault defect by insertion of an object (bone or nonbiological materials such as metal or plastic plates), is a well-known procedure in modern neurosurgery.",
+      "It is important not only for cosmetic and protection of underlying brain but also for restoring the dynamics of a closed cavity, which are disturbed when in the absence of overlying bone the atmospheric pressure is allowed to exert an influence."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

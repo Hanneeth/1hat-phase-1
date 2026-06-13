@@ -1,0 +1,115 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M100024",
+  "procedure_code": "M100024",
+  "condition": "Poisoning",
+  "procedure_name": "Acute organophosphorus poisoning",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Posioning_Medco.pdf",
+    "Posioning_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MD equivalent (in General Medicine, Pediatric Medicine)",
+    "DNB equivalent (in General Medicine, Pediatric Medicine)"
+  ],
+  "clinical_indications": [
+    "Onset of symptoms is within 12 hours of exposure; usually following a household spraying.",
+    "Dizziness, headache.",
+    "Blurred vision, miosis, excessive lacrimation",
+    "Salivation, nausea, vomiting, diarrhoea, epigastric pain,",
+    "Sense of constriction around chest, dyspnoea,",
+    "Sweating, muscle twitching, fasciculations, flaccidity and muscle weakness",
+    "Convulsions, loss of reflexes and coma."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "Red cell cholinesterase level",
+      "operator": "<=",
+      "value": "20% of normal values (normal range 5-12 U/ml)",
+      "note": "in clinically apparent poisoning"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "red_cell_cholinesterase_level_ecg_cbl_lft_kft_reports",
+        "label": "Red cell cholinesterase level, ECG, CBL, LFT, KFT reports (as applicable)"
+      },
+      {
+        "key": "medico_legal_certificate_fir_copy",
+        "label": "Copy of Medico legal certificate / FIR"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers with treatment given details"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes, signs, and symptoms, supporting with laboratory investigations are indicative of poisoning?",
+        "expected": true
+      },
+      {
+        "q": "Were the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Red cell cholinesterase level, ECG, CBL, LFT, KFT (as applicable) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Copy of Medico legal certificate / FIR submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the Detailed Indoor case papers with the Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes, evaluation findings, indications for the procedure, or planned line of treatment not submitted or incomplete.",
+    "Red cell cholinesterase level, ECG, CBL, LFT, KFT reports (as applicable) not submitted or incomplete.",
+    "Copy of Medico legal certificate / FIR not submitted.",
+    "Clinical notes, signs, symptoms, or supporting laboratory investigations not indicative of poisoning.",
+    "Red cell cholinesterase level not reduced to 20% of normal values or not documented."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Secondary care facilities",
+    "min_doctor_qualification_desirable": "MBBS",
+    "clinical_key_pointers": [
+      "Proceed with Poisoning procedure only if diagnosis made is backed by clinical manifestation:",
+      "Stepwise care approach to a patient of poisoning is helpful in successful management."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG016A",
+  "procedure_code": "SG016A",
+  "condition": "Duodenal Diverticulum",
+  "procedure_name": "Excision Duodenal Diverticulum",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Diverticulectomy_Medco.pdf",
+    "Diverticulectomy_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MS/Equivalent (in General Surgery)",
+    "MCh/Equivalent (Pediatric surgery, Surgical Gastroenterologist)"
+  ],
+  "clinical_indications": [
+    "Symptomatic duodenal diverticulum",
+    "Bleeding diverticulum of the duodenum"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_procedure_planned_management",
+        "label": "Clinical notes including evaluation findings, indication of procedure and planned line of management"
+      },
+      {
+        "key": "imaging_reports",
+        "label": "Barium X-ray / Upper GI Endoscopy / USG/CECT/MRI Abdomen / Meckel scan (99mTcpertechnetate Scintigraphy – gastrointestinal bleeding) / Double balloon Enteroscopy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination_report",
+        "label": "Histopathological examination report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned lined of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes with photographs available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathological examination report available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation or imaging not indicative of surgery.",
+    "Missing or incomplete clinical notes at pre-authorization.",
+    "Missing or incomplete imaging reports (Barium X-ray/Upper GI Endoscopy/USG/CECT/MRI Abdomen) at pre-authorization.",
+    "Surgery performed for asymptomatic duodenal diverticulum without other indications (e.g., bleeding).",
+    "Missing detailed procedure / operative notes at claim submission.",
+    "Missing histopathological examination report at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Duodenal diverticula are the most common type of small bowel diverticula. It is a pouch attached to the duodenum. There are 2 types of duodenal diverticulum – Intramural and Extramural.",
+      "Extramural diverticulum is the more common type that sticks out from duodenum and varies in size. They are acquired as this is secondary to herniation near the entrance of a large vessel. They usually are located in the area around the Papilla of Vater.",
+      "Intramural diverticulum (windsock diverticula) is of rare type that protrudes into the duodenal lumen. This is congenital, secondary to incomplete canalization."
+    ],
+    "surgical_options": [
+      "Simple diverticulectomy",
+      "Endoscopic removal"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Asymptomatic duodenal diverticulum incidentally detected during imaging does not require any surgical intervention."
+    ]
+  }
+}

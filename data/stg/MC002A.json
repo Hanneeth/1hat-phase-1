@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MC002A",
+  "procedure_code": "MC002A",
+  "condition": "Deep Vein Thrombosis (DVT)",
+  "procedure_name": "Catheter Directed Thrombolysis (CDT)- Deep Vein Thrombosis (DVT)",
+  "specialty": "Cardiology/Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "CDT-DVT_Medco.pdf",
+    "CDT-DVT_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "DM (Cardiology)",
+    "DNB (Cardiology)",
+    "Equivalent (Cardiology)",
+    "Fellowship (Interventional Radiology)",
+    "Training (Interventional Radiology)"
+  ],
+  "clinical_indications": [
+    "Used as an adjunct to anticoagulation, preferably within 2 weeks of onset, to prevent severe Post-Thrombotic Syndrome (PTS)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_planned_treatment",
+        "label": "Clinical Notes with planned line of treatment"
+      },
+      {
+        "key": "colour_doppler_ct_angio_report",
+        "label": "Colour Doppler/ CT angio Report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "post_procedure_colour_doppler_angio_report",
+        "label": "Post procedure Colour Doppler/ angio report of affected limb"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "invoices_catheter_used",
+        "label": "Invoices of catheter used"
+      },
+      {
+        "key": "invoice_thrombolytic_drug_tpa",
+        "label": "Invoice of thrombolytic drug (tPA) used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical Notes with planned line of treatment-detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the colour Doppler/ CT angioreport indicative of DVT?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure colour Doppler/ angio report of affected limb show recanalization of affected vessel?",
+        "expected": true
+      },
+      {
+        "q": "Is detailed discharge summary with follow-up period submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice of catheter used submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is Invoice of thrombolytic drug used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Colour Doppler/CT angio report not submitted or not indicative of Deep Vein Thrombosis",
+    "Clinical notes lacking planned line of treatment, detailed history, signs, symptoms, or indication for procedure",
+    "Post-procedure Colour Doppler/angio report not submitted or does not demonstrate recanalization of affected vessel",
+    "Invoice for catheter or thrombolytic drug (tPA) not submitted",
+    "Detailed discharge summary with follow-up period not submitted"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath lab/ Interventional Radiology lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Deep vein thrombosis (DVT) is a major health problem worldwide. Risk factors for DVT are advanced age, major surgery, prolonged bed rest, prior DVT, malignancy, contraceptive therapy, pregnancy or blood clotting disorders.",
+      "The risk of pulmonary embolism following DVT is well established, but the long-term vascular sequelae of DVT are often underappreciated, costly to manage, and can have extremely detrimental effects on quality of life.",
+      "Treatment of DVT classically involves oral anticoagulation, which reduces the risk of pulmonary embolism but does not remove the clot and does little to prevent venous damage and scarring, leaving patient at risk for permanent venous insufficiency and development of post-thrombotic syndrome (PTS). It affects valvular function leading to venous reflux and chronic venous hypertension (congestion). PTS is a chronic debilitating clinical entity characterized by a spectrum of disease severity from chronic leg swelling and pain, to skin changes, claudication, and in severe cases ulceration.",
+      "Catheter-directed thrombolysis (CDT) is a minimally invasive endovascular treatment that is used as an adjunct to anticoagulation, if given preferably within 2 weeks of onset and it prevents severe PTS, as compared to anticoagulation alone. A catheter is advanced directly to the site of thrombosis under fluoroscopy followed by a slow, prolonged infusion of a relatively low dose of thrombolytic agent. CDT restores venous patency faster than anticoagulation, which hastens the relief of acute symptoms. Adjunctive CDT modalities have become increasingly popular among interventional radiologists, allowing for additional mechanical thrombectomy or ultrasound-enhanced thrombolysis at the time of catheter placement.",
+      "DVT has varied presentation, from asymptomatic to catastrophic pulmonary embolism.",
+      "Common Signs and Symptoms of DVT are: Symptoms: Pain in a leg or hip, Warm and Red Skin over affected limb, Asymmetrical Swelling in limb, Symptoms of Pulmonary Thromboembolism in case of thrombus migration to lungs (chest pain, hemoptysis, breathlessness)",
+      "Common Signs and Symptoms of DVT are: Signs: Tenderness in limb, Edema in limb, Homan's Sign: Pain on dorsiflexion of foot, Signs of Pulmonary Thromboembolism as described above"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

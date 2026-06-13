@@ -1,0 +1,116 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU027A",
+  "procedure_code": "SU027A",
+  "condition": "Ureterostomy",
+  "procedure_name": "Ureterostomy (Cutaneous)",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Ureterostomy Uretero-ureterostomy_Medco.pdf",
+    "Ureterostomy Uretero-ureterostomy_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MCh Urology",
+    "DNB Urology",
+    "MCh Pediatric Surgery",
+    "DNB Pediatric Surgery"
+  ],
+  "clinical_indications": [
+    "Bladder cancer",
+    "Spinal cord injury",
+    "Malfunctioning of the bladder",
+    "Birth defect e.g spina bifida"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_planned_management",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "ct_mri_report",
+        "label": "CT / MRI report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_given",
+        "label": "Detailed Indoor case papers with Treatment given"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative /Procedure notes"
+      },
+      {
+        "key": "clinical_photograph_stoma_created",
+        "label": "Clinical Photograph of the stoma created"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the CT / MRI report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the imagining report show any presence of obstruction or indication for surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure/Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical photograph show evidence of stoma creation?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Imaging report does not show any presence of obstruction or indication for surgery.",
+    "Clinical notes missing detailed history, signs & symptoms, or indication for procedure.",
+    "CT / MRI report not submitted during pre-authorization.",
+    "Detailed Indoor case papers with treatment given not submitted during claim processing.",
+    "Detailed Operative / Procedure notes not submitted during claim processing.",
+    "Clinical photograph of the stoma creation not submitted or does not show evidence of stoma creation.",
+    "Detailed discharge summary not submitted during claim processing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care and Laparoscopic surgery facility availability",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Ureterostomy/ Uretero-ureterostomy only if diagnosis made is backed by clinical manifestation"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

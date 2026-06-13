@@ -1,0 +1,119 @@
+{
+  "scheme_id": "pmjay",
+  "name": "Ayushman Bharat PM-JAY",
+  "authority": "National Health Authority",
+  "version": "HBP 2022",
+  "model": "trust_or_insurance_or_hybrid",
+
+  "coverage": {
+    "sum_insured_inr": 500000,
+    "basis": "family_floater",
+    "period": "annual",
+    "family_size_cap": null,
+    "age_limit": null,
+    "ped_waiting_period_days": 0,
+    "pre_authorization_required": true,
+    "covers": ["secondary_inpatient", "tertiary_inpatient", "daycare"],
+    "excludes_opd": true,
+    "pre_hosp_days": 3,
+    "post_hosp_days": 15,
+    "senior_70plus_shared_topup_inr": 500000
+  },
+
+  "pricing": {
+    "model": "fixed_package_rate",
+    "balance_billing_allowed": false,
+    "copay": { "allowed": false, "exceptions": ["exceeds_wallet_balance", "exceeds_ceiling"] },
+    "state_rate_modification_pct": { "max_increase": 10, "max_decrease": null },
+
+    "city_tier_uplift_pct": {
+      "surgical": { "tier1": 25, "tier2": 17, "tier3": 0, "tertiary": 25 },
+      "medical":  { "tier1": 15, "tier2": 15, "tier3": 0, "tertiary": 10 }
+    },
+
+    "quality_incentives_pct": {
+      "bronze": 5,
+      "nabh_entry": 10,
+      "nabh_full": 15,
+      "nqas": 15,
+      "aspirational_district": 10
+    },
+    "incentive_stacking": "compounded",
+    "incentive_applies_to_implant": false,
+
+    "per_day_bed_rates_inr": { "ward": 2100, "hdu": 3300, "icu_no_vent": 8500, "icu_vent": 9000 },
+
+    "multi_procedure_rule_pct": [100, 50, 25],
+
+    "combination_rules": {
+      "surgical_plus_surgical": "highest_100_then_50_then_25",
+      "surgical_plus_medical_nonperday": "full_each",
+      "surgical_plus_perday_medical": "not_allowed",
+      "medical_plus_medical_nonperday": "full_each",
+      "perday_plus_perday": "not_allowed"
+    },
+
+    "special_case_payment_pct": {
+      "lama_before_surgery": "per_day_medical_full_days",
+      "lama_after_surgery": 75,
+      "death_on_table": 75,
+      "death_after_surgery": 100,
+      "death_within_24h": 50,
+      "death_before_surgery": "per_day_medical_full_days",
+      "referral_before_pac": { "referring": "per_day_medical", "receiving": 100 },
+      "referral_after_pac_abandoned": { "referring": 15, "receiving": 85 },
+      "referral_after_surgery": { "referring": 75, "receiving": 100 },
+      "referral_to_non_empanelled": 0
+    }
+  },
+
+  "usp": {
+    "name": "Unspecified Surgical Package",
+    "applies_to": "surgical_only",
+    "approver": "CEO_SHA",
+    "max_inr": 500000,
+    "decision_hours": 48,
+    "not_allowed_for": ["medical_packages", "individual_drugs", "diagnostics", "reserved_packages", "exclusions", "aesthetic"]
+  },
+
+  "exclusions": [
+    "opd_only_conditions",
+    "diagnostic_evaluation_only_admission",
+    "cosmetic_aesthetic_surgery",
+    "dental_non_trauma",
+    "infertility_assisted_reproduction",
+    "vaccination_immunization",
+    "persistent_vegetative_state",
+    "circumcision_under_2_non_medical"
+  ],
+
+  "slas": {
+    "preauth_decision_hours": 6,
+    "preauth_deemed_approved_on_timeout": true,
+    "usp_decision_hours": 48,
+    "claim_submission_days": { "private": 7, "public": 15 },
+    "nafu_fraud_scan_hours": 24,
+    "deduction_review_threshold_pct": 20,
+    "review_window_days": 15,
+    "crc_decision_days": 21,
+    "portability_claim_settlement_days": 30
+  },
+
+  "it_systems": {
+    "beneficiary_identification": "BIS",
+    "transactions": "TMS",
+    "empanelment": "HEM",
+    "grievance": "CGRMS",
+    "anti_fraud": "NAFU"
+  },
+
+  "adjudication_roles": {
+    "preauth": "PPD",
+    "claim_completeness": "CEX",
+    "claim_clinical": "CPD",
+    "finance": "ACO",
+    "final_payer": "SHA_or_insurer",
+    "audit_committee": "MAC",
+    "appeal": "CRC"
+  }
+}

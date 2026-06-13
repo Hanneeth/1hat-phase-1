@@ -1,0 +1,165 @@
+{
+  "_comment": "Generated from Bronchial artery embolisation_Medco.pdf and Bronchial artery embolisation_PPD.CPD.pdf",
+  "stg_id": "MC018A",
+  "procedure_code": "MC018A",
+  "condition": "Hemoptysis",
+  "procedure_name": "Bronchial artery Embolisation (for Haemoptysis)",
+  "specialty": "Cardiology",
+  "version": "1.1",
+  "source_files": [
+    "Bronchial artery embolisation_Medco.pdf",
+    "Bronchial artery embolisation_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MD",
+    "DM",
+    "DNB",
+    "equivalent (Cardiology)"
+  ],
+  "clinical_indications": [
+    "Severe/massive/life-threatening hemoptysis (> 300 mL/day)",
+    "Severe/massive/life-threatening hemoptysis of any volume leading to drop in hemoglobin (> 1g/dL)",
+    "Severe/massive/life-threatening hemoptysis of any volume leading to drop in hematocrit (> 5%)",
+    "Severe/massive/life-threatening hemoptysis of any volume leading to respiratory failure (SPaO2 < 60%)",
+    "Severe/massive/life-threatening hemoptysis of any volume leading to hypotension (systolic BP < 90 mm Hg)",
+    "Tuberculosis",
+    "Post-tubercular sequelae",
+    "Bronchiectasis",
+    "Aspergillomas",
+    "First-line treatment in emergency settings",
+    "First-line treatment for surgically unfit patients",
+    "First-line treatment for patients with diffuse or bilateral lung disease"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "hemoptysis_volume",
+      "operator": ">",
+      "value": "300 mL/day",
+      "note": "for severe/massive/life-threatening hemoptysis"
+    },
+    {
+      "field": "hemoglobin_drop",
+      "operator": ">",
+      "value": "1g/dL",
+      "note": "for severe/massive/life-threatening hemoptysis"
+    },
+    {
+      "field": "hematocrit_drop",
+      "operator": ">",
+      "value": "5%",
+      "note": "for severe/massive/life-threatening hemoptysis"
+    },
+    {
+      "field": "spa02",
+      "operator": "<",
+      "value": "60%",
+      "note": "for respiratory failure in severe/massive/life-threatening hemoptysis"
+    },
+    {
+      "field": "systolic_bp",
+      "operator": "<",
+      "value": "90 mm Hg",
+      "note": "for hypotension in severe/massive/life-threatening hemoptysis"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_planned_treatment",
+        "label": "Clinical notes with planned line of treatment"
+      },
+      {
+        "key": "chest_x_ray",
+        "label": "Chest X ray"
+      },
+      {
+        "key": "hrct_chest_ctpa",
+        "label": "HRCT Chest/ CTPA"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "check_angiography_after_procedure",
+        "label": "Check angiography of same bronchial artery after procedure"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the chest X ray of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the HRCT chest/ CTPA of patient suggestive of bronchial artery hemorrhage?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the post procedure angiogram of affected bronchial artery show thrombosis of the artery?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes do not confirm the patient suffering from hemoptysis.",
+    "HRCT Chest/CTPA not submitted or does not suggest bronchial artery hemorrhage.",
+    "Post-procedure angiogram not submitted or does not show thrombosis of the affected bronchial artery.",
+    "Clinical notes are missing detailed history, signs & symptoms, or indication for procedure.",
+    "Detailed Procedure/Operative notes not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath Lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hemoptysis is an important clinical and potentially grave condition with diverse inflammatory, neoplastic, and vascular etiologies.",
+      "Precise anatomic localization of hemorrhage poses a challenge for clinicians.",
+      "Bronchial artery angiography with embolization (BAE) has become a mainstay in treatment.",
+      "Mild hemoptysis: < 100 mL/day or < 50 mL/episode.",
+      "Moderate hemoptysis: 100–300 mL/day or > 3 bouts of > 100 mL/day in one week.",
+      "Severe/massive/life-threatening hemoptysis: > 300 mL/day, or any volume leading to drop in hemoglobin (> 1g/dL) or hematocrit (> 5%), or respiratory failure (SPaO2 < 60%), or hypotension (systolic BP < 90 mm Hg).",
+      "Worldwide, the most common cause of hemoptysis is active tuberculosis.",
+      "Other etiologies: aspergillosis, cystic fibrosis, bronchiectasis, bronchogenic carcinoma, congenital heart disease, cryptogenic.",
+      "Diagnostic evaluation includes: thorough history and physical examination, signs/symptoms of infection/vasculitis/granulomatous/airway disease, chest radiography, bronchoscopy, and CTA (for cause detection and vascular roadmap).",
+      "Historically, surgery was definitive but carries high mortality (~18% elective, 40% emergent).",
+      "Conservative management with medication has high mortality (~50%).",
+      "BAE is a minimally invasive procedure, potentially offered as first-line treatment or a bridge to more definitive intervention.",
+      "Overall immediate clinical success rate of BAE (complete cessation of hemoptysis) varies from 70%-99%.",
+      "Recurrence rate remains high (10%–57%) due to incomplete initial embolization, recanalization, and recruitment of new collaterals.",
+      "BAE continues to be the first-line, minimally invasive treatment of hemoptysis in emergency settings, surgically unfit patients, or in patients with diffuse or bilateral lung disease."
+    ],
+    "surgical_options": [
+      "Historically, surgery has been the definitive therapy for hemoptysis, with mortality ~18% for elective procedures and up to 40% for emergent ones."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

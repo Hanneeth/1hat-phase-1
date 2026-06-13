@@ -1,0 +1,137 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "IN001D",
+  "procedure_code": "IN001D",
+  "condition": "Dural Arteriovenous Fistula",
+  "procedure_name": "Dural AVFs (per sitting) with onyx",
+  "specialty": "Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "Dural Arteriovenous Fistula_Medco.pdf",
+    "Dural Arteriovenous Fistula_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "DM/Equivalent (in Interventional Neuroradiology)",
+    "MCh/DNB/Equivalent in (Neurosurgery, if required Vascular Surgeon)"
+  ],
+  "clinical_indications": [
+    "Symptomatic dural arteriovenous fistulas (dAVFs)",
+    "High-grade dAVFs with cortical venous drainage",
+    "dAVFs associated with risk of intracranial hypertension",
+    "dAVFs associated with risk of hemorrhage"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication of procedure, and planned line of treatment"
+      },
+      {
+        "key": "ct_mri_brain_spine_dsa",
+        "label": "CT/MRI Brain/Spine / Digital Subtraction Angiography"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "post_procedure_check_angiogram",
+        "label": "Post procedure Check Angiogram"
+      },
+      {
+        "key": "invoice_barcode_onyx_used",
+        "label": "Invoice/barcode of onyx/glue used"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging and clinical presentation confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was invoice/barcode of glue/onyx used submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or imaging do not confirm the diagnosis of Dural Arteriovenous Fistula.",
+    "Clinical presentation, severity, or imaging is not indicative of the necessity for surgical intervention.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and line of treatment are missing or incomplete at claim submission.",
+    "Detailed Procedure / Operative Notes are missing at claim submission.",
+    "Invoice or barcode for the specific embolic material (onyx) used is not submitted at claim stage.",
+    "Post-procedure check angiogram is missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital with facilities for interventional neuroradiology",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Dural arteriovenous fistulas (dAVF) are vascular abnormalities in which arteries arising from branches of the carotid or vertebral arteries drain directly into the dural leaflets of the venous sinuses.",
+      "The transverse-sigmoid junction is the most common location, with a slight left-sided predominance. They can also be found at tentorial, petrosal, ethmoidal, Sylvian, cavernous sinus, spinal dura, and superior sagittal sinus locations.",
+      "The Borden and Cognard classifications (Appendix 1) are the most well-known classification systems used for predicting the aggressiveness of dAVFs.",
+      "Most dural arteriovenous fistulas have no clear origin; however, they may be caused after a dural sinus thrombosis, trauma, infection, or prior craniotomy."
+    ],
+    "surgical_options": [
+      "Open surgery",
+      "Endovascular embolization",
+      "Stereotactic radiosurgery",
+      "Endovascular surgery using embolic material or coil occlusion can involve transvenous, trans-arterial, direct access, or a combination of techniques to block the abnormal connection in the blood vessels. Agents used for DAVF embolization include, Onyx, polyvinyl alcohol particles, coils, and N-butyl cyanoacrylate.",
+      "Surgery is usually indicated in cases in which endovascular approaches have failed or cannot be performed.",
+      "Stereotactic radiosurgery achieves excellent rates of obliteration for low-grade lesions but is less effective for higher-grade lesions."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "complications": [
+      "Subdural/Intracranial/Subarachnoid Hemorrhage",
+      "Intracranial hypertension",
+      "Venous congestion and edema",
+      "Seizures"
+    ]
+  }
+}

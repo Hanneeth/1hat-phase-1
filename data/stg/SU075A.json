@@ -1,0 +1,135 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU075A",
+  "procedure_code": "SU075A",
+  "condition": "Urethrovaginal fistula",
+  "procedure_name": "Urethrovaginal fistula repair",
+  "specialty": "Obstetrics & Gynecology/ Urology/ Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Urethrovaginal fistula_Medco.pdf",
+    "Urethrovaginal fistula_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)",
+    "MCh/DNB/Equivalent (in Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Patient has urge to pass urine but the urine dribbles out into the vagina during the act of micturition.",
+    "Diagnosis confirmed by passing a sound or a metal catheter through the external urethral meatus which comes out through the communicating urethrovaginal opening.",
+    "Three swab test may be employed in cases of confusion in diagnosis with Vesicovaginal fistula or ureterovaginal fistula."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "usg_pelvis_abdomen",
+        "label": "USG pelvis/abdomen"
+      },
+      {
+        "key": "three_swab_test",
+        "label": "Three swab test"
+      },
+      {
+        "key": "cystoscopy_optional",
+        "label": "Cystoscopy (optional)"
+      },
+      {
+        "key": "vaginoscopy_optional",
+        "label": "Vaginoscopy (optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports_if_required",
+        "label": "Investigation reports (If required)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "post_operative_photographs_optional",
+        "label": "Post-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and investigation/imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was investigation/imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation or investigation/imaging not indicative of surgery for urethrovaginal fistula repair.",
+    "Missing or incomplete detailed clinical notes including history, symptoms, signs, examination findings, indication for procedure, planned line of treatment, or advice for admission.",
+    "USG pelvis/abdomen report not provided at pre-authorization.",
+    "Three swab test report not provided or inconclusive, especially when differential diagnosis for fistula type is required.",
+    "Planned line of treatment for urethrovaginal fistula repair is missing or unclear.",
+    "Detailed procedure/operative notes are missing or lack sufficient detail at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A fistula is an abnormal communication between two or more epithelial surfaces.",
+      "Causes: Part or whole of the urethra is involved along with bladder.",
+      "Causes: Small isolated urethrovaginal fistula is caused by injury inflicted during anterior colporrhaphy, urethroplasty, suspension or sling operation for stress incontinence.",
+      "Causes: Small isolated urethrovaginal fistula is caused by residual fistula left behind following repair of vesicourethrovaginal fistula."
+    ],
+    "surgical_options": [
+      "Surgical repair in two layers followed by continuous bladder drainage as outlined in repair of VVF.",
+      "Prior suprapubic or vaginal cystostomy ensures better success.",
+      "In cases of complete destruction of the urethra, reconstruction of urethra is to be performed."
+    ],
+    "pre_op_preparation": "Prior suprapubic or vaginal cystostomy ensures better success.",
+    "post_op_care": "Continuous bladder drainage after surgical repair.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

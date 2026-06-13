@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG076A",
+  "procedure_code": "SG076A",
+  "condition": "Mammary duct fistula",
+  "procedure_name": "Mammary duct fistula - Total duct excision",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Mammary duct fistula - Total duct excision_Medco.pdf",
+    "Mammary duct fistula - Total duct excision_PPD.CPD.pdf"
+  ],
+  "alos": "1-2 Days",
+  "min_doctor_qualification": [
+    "MS",
+    "DNB",
+    "Equivalent (in General Surgery)"
+  ],
+  "clinical_indications": [
+    "Nipple discharge",
+    "Rubefaction",
+    "Mass",
+    "Abscess",
+    "Skin ulceration",
+    "Inverted nipple",
+    "Recurrent inflammation – redness, heat, pain, edema"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_procedure_planned_management",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "ultrasound_affected_site",
+        "label": "Ultrasound of the affected site"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are clinical notes with detailed history, signs & symptoms, planned line of treatment, and indication for procedure available?",
+        "expected": true
+      },
+      {
+        "q": "Did Ultrasound chest report confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical evaluation and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was histopathology examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical evaluation and imaging not indicative of surgery for mammary duct fistula.",
+    "Ultrasound report for the affected site did not confirm the diagnosis.",
+    "Clinical notes are missing or incomplete regarding evaluation findings, indication for procedure, or planned line of management.",
+    "Histopathological examination report was not submitted.",
+    "Detailed Procedure / Operative Notes are missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Mammary fistula is an abnormal communication of the mammary ducts with the skin, being included in the group of chronic breast suppurations, a pathology characterized by numerous recurrences, apparently without cause, which raises problems for both the patient and the surgeon.",
+      "Subareolar abscess resulting from duct ectasia and periductal mastitis are the major predisposing factors."
+    ],
+    "surgical_options": [
+      "Fistulectomy and packing",
+      "Fistulectomy and primary closure",
+      "Excision and Biopsy",
+      "Radical duct excision"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

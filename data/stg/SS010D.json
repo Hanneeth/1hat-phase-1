@@ -1,0 +1,117 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS010D",
+  "procedure_code": "SS010D",
+  "condition": "Ano Rectal Malformation",
+  "procedure_name": "Ano Rectal Malformation- PSARP",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Ano Rectal Malformation_Medco.pdf",
+    "Ano Rectal Malformation_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "DNB Pediatric surgery",
+    "MCh Pediatric surgery",
+    "or equivalent (in Pediatric surgery)"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_congenital_disorders",
+        "label": "Clinical notes indicating whether other associated congenital disorders like those of spine, anus, heart, trachea, esophagus, kidneys, or limbs, etc. are present/not"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      },
+      {
+        "key": "distal_cologram_barium_enema",
+        "label": "Distal Cologram/ Barium enema (if available)"
+      },
+      {
+        "key": "usg_abdomen",
+        "label": "USG Abdomen"
+      },
+      {
+        "key": "xray_lumbosacral_spine_inverted_position",
+        "label": "Xray Lumbosacral spine (inverted position)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph"
+      },
+      {
+        "key": "pre_anesthesia_check_up_report",
+        "label": "Pre-anesthesia check-up report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, presence of other associated congenital disorders like those of spine, anus, heart, trachea, esophagus, kidneys, or limbs, etc. are present/not and indication(s) for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Does the patient presented with absent anus, abdominal distention, vomiting, meconium per urethra in males / passage of stool through vagina in females?",
+        "expected": true
+      },
+      {
+        "q": "Are the following tests being done - Distal cologram in males, USG abdomen / X ray scan in both the sexes?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Patient does not present with absent anus, abdominal distention, vomiting, meconium per urethra in males or passage of stool through vagina in females, without justification.",
+    "Required tests (Distal cologram in males, USG abdomen, X-ray scan in both sexes) not performed or not available.",
+    "Clinical notes lack detailed history, signs & symptoms, presence/absence of associated congenital disorders (spine, anus, heart, trachea, esophagus, kidneys, or limbs) or indication(s) for procedure.",
+    "Distal Cologram/Barium enema, USG Abdomen, or X-ray Lumbosacral spine (inverted position) not provided at pre-authorization."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Lack of stool",
+      "Stool coming from the vagina",
+      "Stool in the urine",
+      "Urine coming from the anus",
+      "Trouble having a bowel movement, or constipation"
+    ],
+    "surgical_options": [
+      "Ano Rectal Malformation- Abd - Perineal PSARP",
+      "Ano Rectal Malformation- Anoplasty",
+      "Ano Rectal Malformation- Cutback",
+      "Ano Rectal Malformation- PSARP",
+      "Ano Rectal Malformation- Redo pull through",
+      "Ano Rectal Malformation- Transposition"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

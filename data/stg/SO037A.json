@@ -1,0 +1,154 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Mullerian Anomaly/ : Mullerian Anomaly_Medco.pdf (clinical + mandatory docs) + Mullerian Anomaly_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code.",
+  "stg_id": "SO037A",
+  "procedure_code": "SO037A",
+  "condition": "Mullerian Anomaly",
+  "procedure_name": "Abdomino Perineal repair for Mullerian Anomaly",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Mullerian Anomaly_Medco.pdf",
+    "Mullerian Anomaly_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (Obstetrics & Gynecology)",
+    "MCh/DNB/Equivalent (in Pediatric Surgery, Urology, Colorectal surgery, Plastic Surgery)"
+  ],
+  "clinical_indications": [
+    "Conditions that lead to problems with fertility, menstrual flow, or the ability to have sex, requiring surgical intervention."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_indications_symptoms_signs_examination_findings_advice_for_admission",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "usg_transvaginal_trans_abdominal_tvs_tas",
+        "label": "USG Transvaginal/Trans abdominal (TVS/TAS)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      },
+      {
+        "key": "spine_imaging_xray_optional",
+        "label": "Spine imaging (X-ray) (optional)"
+      },
+      {
+        "key": "kryotyping_optional",
+        "label": "Kryotyping (optional)"
+      },
+      {
+        "key": "hormonal_profile_optional",
+        "label": "Hormonal profile (optional)"
+      },
+      {
+        "key": "renal_ultrasound_optional",
+        "label": "Renal ultrasound (optional)"
+      },
+      {
+        "key": "mri_pelvis_optional",
+        "label": "MRI pelvis (optional)"
+      },
+      {
+        "key": "hysterosalpingography_hsg_optional",
+        "label": "Hysterosalpingography (HSG) (optional)"
+      },
+      {
+        "key": "laparoscopy_hysteroscopy_vaginoscopy_optional",
+        "label": "Laparoscopy/ Hysteroscopy/Vaginoscopy (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports_if_done",
+        "label": "Investigation reports (If done)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment, and advice for admission available?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical examination and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging report indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Medical history, clinical examination (especially pelvic examination), or imaging not indicative of surgery",
+    "Imaging did not confirm the diagnosis",
+    "Detailed clinical notes are missing or incomplete, or do not include history, indications, symptoms, signs, examination findings, or advice for admission",
+    "USG Transvaginal/Trans abdominal (TVS/TAS) report is missing or inconclusive",
+    "Detailed procedure or operative notes are missing or incomplete",
+    "Discharge summary with follow-up advice is missing or incomplete"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Müllerian anomalies occur when müllerian ducts (a critical component of the reproductive system) develop abnormally, which can disrupt the development of the entire reproductive system, including the fallopian tubes, uterus, cervix, and upper two-thirds of the vagina.",
+      "The clinical presentation and treatment for müllerian malformations are directly related to the anatomy of the defect.",
+      "Conditions that can lead to problems with fertility, menstrual flow, or the ability to have sex, however, often require surgery."
+    ],
+    "surgical_options": [
+      "Vaginal dilatation should be the first line of treatment for creation of a neovagina in patients with mullerian agenesis.",
+      "Hysteroscopic metroplasty is a successful, minimally invasive technique for removal of a uterine septum.",
+      "Rudimentary horn should be excised to reduce the risk of ectopic pregnancy.",
+      "Resection of a uterine septum has been shown to improve pregnancy success in patients with a history of recurrent pregnancy loss.",
+      "Strassman metroplasty should be considered in select women with a bicornate uterus who have experienced recurrent pregnancy loss or preterm delivery",
+      "Vaginoplasty",
+      "Abdomino-perineal repair"
+    ],
+    "pre_op_preparation": "Appropriate preoperative evaluation of reproductive and pelvic anatomy remains a critical step before surgical treatment of any mullerian anomaly.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Mere presence of any uterine malformation per se is not an indication of surgical intervention."
+    ]
+  }
+}

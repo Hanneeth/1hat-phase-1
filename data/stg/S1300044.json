@@ -1,0 +1,87 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1300044",
+  "procedure_code": "S1300044",
+  "condition": "Pulmonary Embolism",
+  "procedure_name": "Pulmonary Embolectomy",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Pulmonary embolectomy_Medco.pdf",
+    "Pulmonary embolectomy_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/ equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "High risk and cardiogenic shock, massive PE patients who cannot receive fibrinolysis",
+    "Massive PE patients who remain unstable after fibrinolysis administration",
+    "Sub-massive PE patients for whom thrombolysis is contraindicated or has failed",
+    "Patients with right heart thrombi located close or straddling through a patent foramen ovale"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      },
+      {
+        "key": "ct_angiography_report",
+        "label": "CT Angiography report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the CT Angiography report suggestive of pulmonary thromboembolism?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "CT Angiography report not suggestive of pulmonary thromboembolism",
+    "Clinical notes missing detailed history, signs & symptoms, or clear indication for procedure",
+    "Echo/Doppler report or CT Angiography report is missing or incomplete for pre-authorization",
+    "Procedure/Operative notes, post procedure ECHO stills, or detailed discharge summary is missing or incomplete for claim submission",
+    "Detailed Discharge Summary does not mention the date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Massive pulmonary embolism (PE) is a severe condition that can potentially lead to death caused by right ventricular (RV) failure and the consequent cardiogenic shock.",
+      "Despite thrombolysis often being administered to critical patients to increase pulmonary perfusion and reduce RV afterload, surgical treatment represents another valid option in case of failure or contraindications to thrombolytic therapy."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE004A",
+  "procedure_code": "SE004A",
+  "condition": "Lid Tear",
+  "procedure_name": "Lid Tear Repair",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Lid surgeries_Medco.pdf",
+    "Lid surgeries_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma/ equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "Partial- or full-thickness defects in the eyelid following trauma to the face and eye",
+    "Erythema, edema, or tissue disruption around the eyelid or surrounding structures",
+    "Pain, irritation, bleeding, drainage from the eyelid / surrounding structures",
+    "Distorted vision"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph_affected_eye",
+        "label": "Clinical Photograph of the affected eye"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Operative/procedure notes"
+      },
+      {
+        "key": "histopathology_microbiology_report",
+        "label": "Histopathology/microbiology report of host tissue (No)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed clinical notes, including history, clinical signs and symptoms, physical examination/investigations and indication, available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed admission notes available?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of affected part with proper labelling (R/L) and full face photograph available?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Documents available to show appropriate post-op care and follow-up advice?",
+        "expected": true
+      },
+      {
+        "q": "OT notes detail the steps of surgery performed and outcomes of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Documentary evidence present for histopathology examination of specimen?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "History of trauma to the face/eye not documented for Lid Tear Repair",
+    "Affected eye not labelled R or L in the clinical photograph for Lid Tear Repair",
+    "Diagnosis not backed by clinical signs/symptoms/ophthalmic examination or conservative therapy not attempted/failed for Lid Tear Repair"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Lid Surgeries only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination and does not respond to conservative medical therapy."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

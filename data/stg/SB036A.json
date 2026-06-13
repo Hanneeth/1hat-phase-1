@@ -1,0 +1,101 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB036A",
+  "procedure_code": "SB036A",
+  "condition": "Arthroscopic Meniscus Repair / Meniscectomy, Reconstruction of Cruciate Ligament with implant and brace",
+  "procedure_name": "Arthroscopic Meniscus Repair / Meniscectomy",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Arthroscopic Meniscus Repair - Meniscectomy_Medco.pdf",
+    "Arthroscopic Meniscus Repair - Meniscectomy_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Torn meniscus requiring repair",
+    "When meniscal repair is not possible, partial resection of the meniscus is indicated"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "mri_scan_affected_part",
+        "label": "MRI scan of affected part labelled with patient ID, date and side (Left/Right)"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical Photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "intra_operative_still_image_patient_name",
+        "label": "Intra operative still image with patient name"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Does the intra operative still image with patient name submitted in Arthroscopic Meniscus Repair/ Meniscectomy patients?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Intra operative still image with patient name is missing or does not contain patient name for Arthroscopic Meniscus Repair/Meniscectomy patients.",
+    "MRI scan of affected part is not labelled with patient ID, date, or side (Left/Right).",
+    "Clinical photograph of affected part is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "The meniscus has functions in load bearing, load transmission, shock absorption, joint stability, joint lubrication, and joint congruity.",
+      "Total meniscectomy: Nowadays, total meniscectomy is not a common procedure. However, previously it was a popular procedure, and short-term outcome results of this technique were regarded as excellent.",
+      "Partial meniscectomy: When meniscal repair is not possible, partial resection of the meniscus is indicated.",
+      "Repair: Meniscal repair has evolved from open to arthroscopic techniques, which include the inside-out and outside-in suture repairs and the all-inside techniques.",
+      "Open repair: Open meniscal repair offers the advantage of better preparation of the tear site. However, only the most peripheral of tears in the red-red zone are amenable to this technique because of exposure and accessibility.",
+      "Arthroscopic inside-out repair: The inside-out meniscal repair technique involves fixation of a tear by placing sutures from inside the knee to a protected area on the outside of the joint capsule.",
+      "Arthroscopic outside-in repair: Outside-in techniques involve passing sutures percutaneously through spinal needles at the joint line across the tear, and then retrieving the sutures intra-articularly under arthroscopic observation."
+    ],
+    "surgical_options": [
+      "Partial meniscectomy",
+      "Open meniscal repair",
+      "Arthroscopic inside-out repair",
+      "Arthroscopic outside-in repair"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

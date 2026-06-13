@@ -1,0 +1,92 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB060A",
+  "procedure_code": "SB060A",
+  "condition": "Growth modulation and fixation",
+  "procedure_name": "Growth modulation and fixation",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Growth Modulation and fixation_Medco.pdf",
+    "Growth Modulation and fixation_PPD.CPD.pdf"
+  ],
+  "alos": "6 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Deformities that can be treated with growth modulation include Ankle valgus, Genu valgum, Genu varum, Knee flexion contracture, Limb-length discrepancy (LLD), Spine.",
+    "Angular coronal deformities around the knee are common in pediatric orthopedic practice, surgical treatment is needed when the deformity persists or progress after correction of underlying biochemical abnormalities.",
+    "Corrective osteotomy unlike in adults is not satisfactory in growing children due to potential complications, therefore growth modulation surgeries are preferred in children. Staples and screw hemi epiphysiodesis are associated with permanent damage to the physis and growth disturbances.",
+    "The titanium-based figure of 8 plates were introduced to overcome growth plate injuries and growth disturbances in growth modulation surgeries."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "x_ray_pre_procedure",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) - affected limb"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "x_ray_post_procedure",
+        "label": "Post-procedure X-ray labelled with patient ID, date and side (Left/Right) - affected limb"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice and bar code of implant"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Does the Post Procedure X Ray show the Growth modulation/Fixation plate?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Post-procedure X-ray does not show the Growth modulation/Fixation plate.",
+    "Clinical notes for pre-authorization are missing or incomplete, lacking history, signs, symptoms, evaluation findings, indication, planned management, or admission advice.",
+    "Pre-procedure X-ray is missing or not properly labelled with patient ID, date, or affected side (Left/Right).",
+    "Detailed Indoor Case Papers (ICPs) are missing at claim submission.",
+    "Post-procedure X-ray is missing or not properly labelled with patient ID, date, or affected side (Left/Right) at claim submission.",
+    "Invoice or barcode of the implant is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Growth modulation means modifying/manipulating the normal growth patterns.",
+      "It facilitates correction of angular deformities by selectively reversible tethering a portion of the physis to correct limb alignment."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

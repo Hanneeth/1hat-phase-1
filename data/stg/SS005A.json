@@ -1,0 +1,143 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS005A",
+  "procedure_code": "SS005A",
+  "condition": "Intestinal Malrotation",
+  "procedure_name": "Ladd's Procedure (Intestinal Malrotation)",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "ladds procedure_Medco.pdf",
+    "ladds procedure_PPD.CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "MCh/ equivalent (in Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Vomiting, typically bilious (green or fluorescent yellow) but can be nonbilious",
+    "Hemodynamic instability from hypovolemia and/or septic shock",
+    "Abdominal distension (not always present, especially in young infants)",
+    "Abdominal tenderness (can be difficult to elicit, especially in infants and young children)",
+    "Peritonitis (eg, rigid abdomen) indicating volvulus with perforation",
+    "Hematochezia indicating bowel ischemia and possible necrosis due to volvulus",
+    "Classical presentation in newborn period is bilious vomiting with scaphoid abdomen",
+    "In older children, malrotation of gut may cause intermittent volvulus, resulting in a variety of symptoms from chronic intermittent pain, vomiting (may or may not be bilious), failure to thrive, and chronic intestinal blood loss",
+    "Failure to thrive (less common presentation)",
+    "Solid food intolerance (less common presentation)",
+    "Malabsorption (less common presentation)",
+    "Chronic diarrhea from protein-losing enteropathy (less common presentation)",
+    "Pancreatitis (less common presentation)",
+    "Biliary obstruction (less common presentation)",
+    "Gastrointestinal (GI) motility disorder (less common presentation)",
+    "Chylous ascites (less common presentation)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "investigations",
+        "label": "Investigations: Plain X-ray erect abdomen/Upper GI contrast series/USG abdomen/CECT"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photograph",
+        "label": "Intra-operative photograph"
+      },
+      {
+        "key": "investigations",
+        "label": "Investigations: Plain X ray erect abdomen/ Upper GI contrast follow through/ USG Abdomen"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Plain X-ray erect abdomen/ Upper GI contrast series (misplaced duodenum/cockscrew duodenum) / USG Abdomen (for Superior mesenteric artery/vein (SMA/SMV) inversion)/ CECT (Whirlpool sign - optional) report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the USG abdomen/Upper GI series showing malrotation?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Did the Intra operative procedure clinical photograph revealed the procedure was performed for Intestinal Malrotation?",
+        "expected": true
+      },
+      {
+        "q": "Was histopathology report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "USG abdomen/Upper GI series not showing malrotation or report missing",
+    "Clinical notes are missing or do not contain detailed history, signs & symptoms, or indication for the procedure",
+    "Required investigations (Plain X-ray erect abdomen/Upper GI contrast series/USG abdomen/CECT) are missing or incomplete at pre-authorization",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and line of treatment are not available",
+    "Detailed procedure / operative notes are missing or incomplete",
+    "Intra-operative photograph does not clearly reveal that the procedure was performed for Intestinal Malrotation",
+    "Histopathology report is missing"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Malrotation is a congenital disorder featured with abnormal positioning of intestine within the peritoneal cavity.",
+      "Intestinal malrotation occurs as a result of an arrest of normal rotation of the embryonic gut.",
+      "In malrotation, the duodenojejunal limb remains in a position of nonrotation, and the cecocolic limb has partial rotation (usually approximately 90 degrees instead of 180 degrees).",
+      "The end result is that the cecum ends up in the mid-upper abdomen and the abnormally positioned cecum is fixated to the right lateral abdominal wall by bands of peritoneum.",
+      "These bands of peritoneum, called Ladd bands, cross the duodenum and can cause extrinsic compression and obstruction of the duodenum."
+    ],
+    "surgical_options": [
+      "Open/Laproscopic Ladd`s procedure"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

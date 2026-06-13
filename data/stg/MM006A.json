@@ -1,0 +1,108 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Behavioral syndromes associated with physiological disturbances and physical factors/ : Behavioral syndromes associated with physiol disturbaces & phy factors_Medco.pdf (clinical + mandatory docs) + Behavioral syndromes associated with physiol disturbaces & phy facto_PPD.CPD.pdf (PPD/CPD processing checklists). The package also refers to HBP 1.0 codes M800006 and M800016.",
+  "stg_id": "MM006A",
+  "procedure_code": "MM006A",
+  "condition": "Behavioral syndromes associated with physiological disturbances and physical factors",
+  "procedure_name": "Behavioral syndromes associated with physiological disturbances and physical factors",
+  "specialty": "Mental Disorders",
+  "version": "1.1",
+  "source_files": [
+    "Behavioral syndromes associated with physiol disturbaces & phy factors_Medco.pdf",
+    "Behavioral syndromes associated with physiol disturbaces & phy facto_PPD.CPD.pdf"
+  ],
+  "alos": null,
+  "min_doctor_qualification": [
+    "MD/DNB/ equivalent (Psychiatry)"
+  ],
+  "clinical_indications": [
+    "Eating disorders (e.g., Anorexia nervosa, Bulimia nervosa, Atypical forms, Overeating associated with psychological disturbances)",
+    "Nonorganic sleep disorders (e.g., Nonorganic insomnia, Nonorganic hypersomnia, Nonorganic disorder of the sleep-wake schedule, Sleepwalking, Sleep terrors, Nightmares)",
+    "Sexual dysfunction, not caused by organic disorder or disease (e.g., lack/loss of sexual desire, erectile dysfunction, vaginal dryness/failure of lubrication, dyspareunia)",
+    "Mental and behavioral disorders associated with the puerperium, not elsewhere classified (commencing within six weeks of delivery)",
+    "Psychological and behavioral factors associated with disorders or diseases classified elsewhere",
+    "Abuse of non-dependence-producing substances (e.g., psychotropic drugs not producing dependence, laxatives, non-prescription analgesics)",
+    "Unspecified behavioral syndromes associated with physiological disturbances and physical factors"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailed_history_chronicity",
+        "label": "Clinical notes with detailed history and chronicity"
+      },
+      {
+        "key": "admission_document_signed_by_psychiatrist",
+        "label": "Admission document signed by empanelled psychiatrist"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_treatment_notes",
+        "label": "Detailed treatment notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with detailed history, mini mental status test, indication for treatment and need of hospitalization submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the admission document signed by an empanelled psychiatrist?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed treatment notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient admission document not signed by an empanelled psychiatrist.",
+    "Clinical notes missing detailed history, chronicity, mini mental status test, indication for treatment, or justification for hospitalization.",
+    "Detailed treatment notes are missing or incomplete.",
+    "Detailed Discharge Summary is missing or does not mention the date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "As per the provisions of the Mental Health Act 2017",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The provisions under Mental Healthcare Act 2017 be referred for details on Admission & Discharge criteria.",
+      "Eating disorders include Anorexia nervosa (deliberate weight loss, undernutrition, restricted dietary choice, excessive exercise, induced vomiting, purgation, use of appetite suppressants), Bulimia nervosa (repeated bouts of overeating, preoccupation with body weight control, vomiting or purgatives leading to electrolyte disturbances), and Atypical forms of both.",
+      "Overeating can be associated with other psychological disturbances due to stressful events like bereavement, accident, childbirth.",
+      "Nonorganic sleep disorders include conditions where emotional causes are primary factors, not due to identifiable physical disorders.",
+      "Nonorganic insomnia is unsatisfactory quantity/quality of sleep, persisting for a considerable period of time, including difficulty falling asleep, staying asleep, or early final wakening.",
+      "Nonorganic hypersomnia is excessive daytime sleepiness and sleep attacks or prolonged transition to arousal, not due to inadequate sleep, usually associated with mental disorder.",
+      "Nonorganic disorder of the sleep-wake schedule is lack of synchrony between sleep-wake schedule and desired schedule, leading to insomnia or hypersomnia.",
+      "Sleepwalking [somnambulism] is an altered consciousness combining sleep and wakefulness, occurring usually in the first third of nocturnal sleep, with low awareness and no recall.",
+      "Sleep terrors [night terrors] are nocturnal episodes of extreme terror and panic with intense vocalization, motility, high autonomic discharge, usually in the first third of nocturnal sleep, with limited recall.",
+      "Nightmares are dream experiences loaded with anxiety/fear, with detailed recall of vivid content, often involving threats to survival/security/self-esteem, with autonomic discharge but no vocalization/body motility.",
+      "Other nonorganic sleep disorders include Dream anxiety disorder, Unspecified Emotional sleep disorder NOS.",
+      "Sexual dysfunction not caused by organic disorder involves psychosomatic processes and includes lack/loss of sexual desire, erectile dysfunction (men), vaginal dryness/failure of lubrication (women), dyspareunia.",
+      "Mental and behavioral disorders associated with the puerperium (within six weeks of delivery) that don't meet criteria for other classified disorders.",
+      "Psychological and behavioral factors associated with disorders classified elsewhere include mild, often prolonged mental disturbances (worry, emotional conflict, apprehension) playing a major part in the etiology of physical disorders.",
+      "Abuse of non-dependence-producing substances involves medicaments and folk remedies, specifically psychotropic drugs not producing dependence (antidepressants), laxatives, and non-prescription analgesics (aspirin, paracetamol).",
+      "Unspecified behavioral syndromes associated with physiological disturbances and physical factors."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

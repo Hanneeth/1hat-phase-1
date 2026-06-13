@@ -1,0 +1,140 @@
+{
+  "_comment": "Package name is 'Closed reduction / intermaxillary fixation for fracture of maxilla / mandible / zygoma'. This is the specific procedure for maxilla.",
+  "stg_id": "SL033A",
+  "procedure_code": "SL033A",
+  "condition": "Closed Reduction Fixation (maxilla, mandible, zygoma)",
+  "procedure_name": "Closed reduction for fracture of maxilla",
+  "specialty": "Oral Maxillofacial Surgery/ENT",
+  "version": "1.1",
+  "source_files": [
+    "Closed Reduction Fixation maxilla mandible zygoma_Medco.pdf",
+    "Closed Reduction Fixation maxilla mandible zygoma_PPD.CPD.pdf"
+  ],
+  "alos": "1-2 Days",
+  "min_doctor_qualification": [
+    "MDS (Oral Maxillo-facial surgery)"
+  ],
+  "clinical_indications": [
+    "Nondisplaced favorable fracture",
+    "Grossly comminuted fracture",
+    "Fractures exposed with significant loss of overlying soft tissue.",
+    "Edentulous mandibular fractures.",
+    "Mandibular fractures in children",
+    "Condylar fracture"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, clinical photographs (intraoral & extraoral), indications for doing the procedure & advise for admission)"
+      },
+      {
+        "key": "xray_report_maxilla_mandible_zygoma_head_neck",
+        "label": "X-ray report of Maxilla/mandible/zygoma/Head & Neck showing fractures or multiple fractures"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of the affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "informed_consent",
+        "label": "Consent (informed written)"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "anesthesia_notes",
+        "label": "Anesthesia Notes (where applicable)"
+      },
+      {
+        "key": "barcode_implants",
+        "label": "Barcode of Implants used"
+      },
+      {
+        "key": "post_operative_xray",
+        "label": "Post-Operative X-ray of the affected part"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Oral Maxillofacial clinical notes (including clinical signs & symptoms such as difficulty in breathing, examination findings, indications for doing the procedure & advise for admission)?",
+        "expected": true
+      },
+      {
+        "q": "X-ray report of Maxilla/mandible/zygoma/Head & Neck showing fractures or multiple fractures?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Post-Operative X-Ray confirm Fixation of Fracture?",
+        "expected": true
+      },
+      {
+        "q": "Barcode of Implant(s) used?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes lacking details on signs, symptoms, examination findings, procedure indications, or admission advice.",
+    "X-ray report not confirming Maxilla/Mandible/Zygoma fracture(s).",
+    "Operative notes fail to detail surgical steps or outcomes.",
+    "Post-operative X-ray does not confirm fracture fixation.",
+    "Missing barcode for implant(s) used."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination & radiologically.",
+      "Closed Reduction Fixation Package: It is procedure for restoration and alignment of the fractured fragments to their original anatomical position without visualization of the fracture line.",
+      "Methods of Closed Reduction: a. Reduction by manipulation, b. Reduction by Traction",
+      "It includes: Fracture reduction that involves the technique of not opening the skin or mucosa covering the fracture site.",
+      "Fracture site heals by secondary bone healing.",
+      "This is also form of non-rigid fixation."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Unfavorable fractures at the angle of the mandible.",
+      "Unfavorable fractures at the symphysis or the body of the mandible.",
+      "Medically compromised patient.",
+      "Complex facial fracture",
+      "Edentulous mandibular fracture with severe displacement."
+    ]
+  }
+}

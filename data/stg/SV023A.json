@@ -1,0 +1,132 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV023A",
+  "procedure_code": "SV023A",
+  "condition": "Lung cyst",
+  "procedure_name": "Lung cyst excision",
+  "specialty": "CTVS, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Lung cyst_Medco.pdf",
+    "Lung cyst_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MCh (CTVS)",
+    "DNB (CTVS)",
+    "Equivalent (CTVS)",
+    "MCh (Pediatric Surgery)",
+    "DNB (Pediatric Surgery)",
+    "Equivalent (Pediatric Surgery)",
+    "MCh (Thoracic Surgery)",
+    "DNB (Thoracic Surgery)",
+    "Equivalent (Thoracic Surgery)"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_eval_findings_indication_mgmt_plan",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "hrct_chest",
+        "label": "HRCT Chest (High resolution contrast CT)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_specimen_photographs",
+        "label": "Intra-operative or specimen Photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      },
+      {
+        "key": "postoperative_chest_ct",
+        "label": "Postoperative Chest CT (Optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are the clinical notes detailed with history, signs & symptoms, evaluation findings, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did the CT Chest report, investigations, clinical history/findings, and clinical presentation confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging and clinical presentation indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers (ICPs) with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathological examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Imaging and clinical presentation not indicative of surgery",
+    "Clinical notes missing or incomplete regarding history, signs & symptoms, evaluation findings, planned line of treatment, or indication for procedure",
+    "HRCT Chest report missing or does not confirm the diagnosis in conjunction with clinical history/findings",
+    "Detailed Indoor Case Papers (ICPs) missing or lacking daily vitals and treatment details",
+    "Detailed Procedure / Operative Notes missing or incomplete",
+    "Histopathological examination report missing",
+    "Discharge summary missing or lacking follow-up advice"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Cystic lung disease (CLD) is a group of lung disorders characterized by the presence of multiple cysts, defined as air-filled lucencies or low-attenuating areas, bordered by a thin wall (usually < 2 mm).",
+      "Cysts are rare in asymptomatic individuals < 55 years of age but their prevalence increases with age.",
+      "CLD is a constellation of diverse lung disorders that originate from various causes, but they have in common an anatomical cystic deformity.",
+      "Due to its etiological heterogeneity, CLD can be classified based on the underlying pathophysiologic mechanisms: congenital, genetic, infectious, inflammatory, lymphoproliferative, neoplastic, and smoking-related.",
+      "CLD must also be distinguished from emphysema, cavity, bulla, bleb, pneumatocele, and honeycombing, all of which feature lucencies that mimic a pulmonary cyst.",
+      "Disease progression is unpredictable and understanding of the complications of cystic lung disease and their appearance during evolution of the disease are essential for management.",
+      "The main diseases in this group include: Lymphangioleiomyomatosis (LAM), Pulmonary Langerhans cell histiocytosis (PLCH), Folliculin gene-associated syndrome (Birt-Hogg-Dubé) (BHD syndrome), Lymphocytic interstitial pneumonia (LIP)/follicular bronchiolitis (FB), Amyloidosis, and other rare causes of cystic lung disease, including cystic metastasis of sarcoma.",
+      "Diagnosis: The combination of appearance upon imaging and clinical features, together with extrapulmonary manifestations, when present, permits confident and accurate diagnosis of the majority of these diseases without recourse to open-lung biopsy.",
+      "Correlation of disease evolution and clinical context with chest imaging findings provides important clues for defining the underlying nature of cystic lung disease and guides diagnostic evaluation and management."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

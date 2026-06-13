@@ -1,0 +1,116 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG114A",
+  "procedure_code": "SG114A",
+  "condition": "Neurofibroma",
+  "procedure_name": "Neurofibroma Excision under LA",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Neurofibroma Excision under LA_Medco.pdf",
+    "Neurofibroma Excision under LA_PPD.CPD.pdf"
+  ],
+  "alos": "Daycare",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)"
+  ],
+  "clinical_indications": [
+    "Neurofibroma causing significant motor and/or sensory loss",
+    "Neurofibroma with risk of main nerve involvement",
+    "Non-cosmetic/non-aesthetic indication for excision"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes with history and examination and planned line of treatment"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      },
+      {
+        "key": "pre_procedure_hpe_report",
+        "label": "Pre-procedure HPE Report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "post_operative_clinical_photograph",
+        "label": "Post Operative Clinical Photograph (Optional)"
+      },
+      {
+        "key": "post_procedure_hpe_report",
+        "label": "Post Procedure HPE Report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the indication for the procedure cosmetic/aesthetic?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Whether the clinical photograph confirms the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the Histopathology Examination report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's clinical history/investigations are not indicative of the procedure.",
+    "Indication for the procedure is cosmetic/aesthetic.",
+    "Clinical photograph at claim submission does not confirm diagnosis.",
+    "Histopathology Examination report not submitted at claim stage.",
+    "Clinical notes with history, examination, and planned treatment not submitted at pre-authorization.",
+    "Pre-procedure HPE Report not submitted at pre-authorization."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Neurofibromas are the most common peripheral nerve sheet tumour. They consist of an overgrowth of nerve tissue along with blood vessels, other types of cells and fibres.",
+      "Neurofibromas can grow on nerves in the skin (cutaneous neurofibroma), under the skin (subcutaneous neurofibroma) or deeper in the body, including in the abdomen, chest, and spine.",
+      "These appear as soft, skin-coloured papules or subcutaneous nodules.",
+      "Macroscopically, Neurofibromas are often an unencapsulated, well-circumscribed, grey tan firm mass. The plexiform type is often large, with multiple tortuous nerve fascicles.",
+      "Microscopically, features include loose and haphazard spindled cells with poorly defined cell borders, myxoid to pale pink collagenous matrix background, low to moderate cellularity and mast cells commonly found within the lesion.",
+      "Neurofibromas found along the nerves, such as in the neck, axilla or arm, should be evaluated for main nerve involvement before excision since it can cause significant motor and/or sensory loss.",
+      "Three main types of Neurofibromas: Localised, Diffuse, Plexiform.",
+      "Localised neurofibromas are well-circumscribed lesions in the dermis or subcutaneous tissue, often unencapsulated (dermis) or with a true capsule (subcutaneous).",
+      "Diffuse neurofibromas are poorly defined, expansile proliferations around adnexal structures, extending into subcutaneous tissue and infiltrating adipose, may entrap nerves or be intraneural, and have characteristic pseudomeissnerian corpuscles.",
+      "Plexiform neurofibromas have multiple intertwined hypertrophic nerve fascicles, a serpentine pattern with multiple nodules, may have predominantly myxoid or edematous background with thick collagen fibers, and may show atypia (nuclear enlargement, hyperchromasia) related to degenerative change.",
+      "The majority of neurofibromas are sporadically occurring and localised, with an extremely low risk of malignant transformation.",
+      "The plexiform type is pathognomic for Neurofibromatosis Type 1 and carries an increased risk of malignant transformation."
+    ],
+    "surgical_options": null,
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Cases should be referred to the appropriate level of care as required for treatment under PM-JAY. Evaluation for main nerve involvement before excision for neurofibromas along nerves (neck, axilla, arm). Plexiform type carries increased risk of malignant transformation (Neurofibromatosis Type 1)."
+  }
+}

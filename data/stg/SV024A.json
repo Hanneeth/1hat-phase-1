@@ -1,0 +1,133 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV024A",
+  "procedure_code": "SV024A",
+  "condition": "Pulmonary Resection",
+  "procedure_name": "Pulmonary Resection",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Pulmonary resection_Medco.pdf",
+    "Pulmonary resection_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/Equivalent (in Cardiothoracic Surgery/ Thoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Malignancy: Primary lung disease",
+    "Malignancy: Metastatic disease",
+    "Malignancy: Special considerations during the COVID-19 pandemic",
+    "Benign disease: Pulmonary blebs and bullae",
+    "Benign disease: Benign masses and nodules",
+    "Benign disease: Bronchiectasis",
+    "Benign disease: Infectious lung disease",
+    "Benign disease: Chronic obstructive pulmonary disease",
+    "Traumatic injury",
+    "Diagnosis for some pulmonary diseases"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with evaluation findings, indication of procedure, and planned line of management"
+      },
+      {
+        "key": "chest_x_ray_ct",
+        "label": "Chest X-Ray / CT"
+      },
+      {
+        "key": "pulmonary_function_tests_optional",
+        "label": "Pulmonary function tests (Optional)"
+      },
+      {
+        "key": "predicted_post_operative_values_optional",
+        "label": "Predicted post-operative values (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_serial_chest_x_ray",
+        "label": "Post procedure serial Chest X-ray until chest tube removal"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did clinical presentation and imaging/investigation confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation and imaging/investigations indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging/investigation indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Were the Post procedure X-ray reports submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and imaging/investigations were not indicative of surgery.",
+    "Pre-operative imaging studies (Chest X-Ray / CT) were not performed within 6-8 weeks for inflammatory/infectious etiologies, or within 10-12 weeks for malignancy, prior to planned surgery.",
+    "Missing Histopathological examination at claim submission.",
+    "Missing Detailed Procedure / Operative notes at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pulmonary (lung) resection is used for the treatment of pulmonary malignancy, infection, and trauma. In addition, pulmonary resection can be used as a means to diagnose pulmonary disease.",
+      "Types of lung resection: Anatomic resection (Pneumonectomy, Lobectomy, Segmentectomy, Sleeve resection), Non-anatomic wedge resection"
+    ],
+    "surgical_options": [
+      "Open",
+      "Minimally invasive thoracotomy techniques (video-assisted thoracoscopic surgery [VATS])",
+      "Minimally invasive thoracotomy techniques (robotic-assisted thoracoscopic surgery [RATS])"
+    ],
+    "pre_op_preparation": "The preoperative evaluation includes anatomic and cardiopulmonary assessment to determine the risk of pulmonary resection. The evaluation includes history and physical examination, pulmonary function tests including calculation of predicted postoperative pulmonary function values, and lung imaging. If imaging studies of the chest have not been performed within six to eight weeks of the planned thoracic surgery, they should be repeated, particularly for inflammatory or infectious etiologies. For malignancy, imaging within 10 to 12 weeks is sufficient.",
+    "post_op_care": "Following lung resection, one or more chest tubes are placed in the hemithorax. Postoperative management of chest tubes is directed by postoperative imaging, presence or absence of air leak (identified by the presence of bubbles within the water seal chamber), and the volume and/or character of drainage.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

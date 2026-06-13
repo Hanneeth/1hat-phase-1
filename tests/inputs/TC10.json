@@ -1,0 +1,111 @@
+{
+  "_test_id": "TC10",
+  "_description": "Hospital H006 has scheme=cmchis (not pmjay). Phase 0 MUST return BLOCKED immediately with SCHEME_NOT_SUPPORTED flag. Clinical input does not matter — blocked before any other phase runs.",
+  "_expected_status": "BLOCKED",
+  "_expected_specialty": null,
+  "_expected_flags_include": [
+    "SCHEME_NOT_SUPPORTED"
+  ],
+  "_expected_flags_exclude": [
+    "CANDIDATES_GENERATED"
+  ],
+  "session_id": "IRIS-TC10-20260612",
+  "created_at": "2026-06-12T14:00:00+05:30",
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H006"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Right knee pain on walking, difficulty climbing stairs, swelling",
+    "duration_days": 365,
+    "history_of_present_illness": "Chronic bilateral knee osteoarthritis, worse on right. Now presenting for total knee replacement right side.",
+    "provisional_diagnosis": "Bilateral knee osteoarthritis Kellgren-Lawrence Grade 3",
+    "planned_procedure": "Total knee replacement right side",
+    "weight_kg": 74,
+    "height_cm": 170,
+    "vitals": {
+      "bp_systolic_mmhg": 124,
+      "bp_diastolic_mmhg": 78,
+      "pulse_bpm": 80,
+      "spo2_pct": 98,
+      "temperature_f": 98.4,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": null
+    },
+    "examination_findings": {
+      "general": "Conscious, oriented, obese",
+      "cvs": "S1 S2 heard",
+      "rs": "Clear bilateral",
+      "abdomen": "Soft, non-tender",
+      "cns": "No focal deficits",
+      "local": "Right knee: effusion present, crepitus on movement, range of movement 0-90 degrees painful"
+    },
+    "investigations": [
+      {
+        "type": "xray",
+        "result_summary": "Bilateral knee X-ray: Severe joint space narrowing, osteophytes, subchondral sclerosis — KL Grade 3 bilateral, worse on right",
+        "structured_values": [
+          {
+            "parameter": "KL_grade_right",
+            "value": 3,
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "joint_space_right",
+            "value": "severely_narrowed",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-10"
+      }
+    ],
+    "comorbidities": [
+      "hypertension",
+      "type2_diabetes"
+    ],
+    "past_medical_history": "Hypertension, T2DM",
+    "past_surgical_history": "None",
+    "current_medications": [
+      "Metformin 500mg BD",
+      "Amlodipine 5mg OD"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "none",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Orthopaedic admission notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Arjun Kumar",
+      "registration_number": "TN-MED-11111",
+      "qualification": "MS DNB Orthopaedics",
+      "specialty_code": "SB"
+    },
+    "notes": "Hospital H006 is CMCHIS scheme. Pipeline must BLOCK at Phase 0 with SCHEME_NOT_SUPPORTED. No other phases should run."
+  }
+}

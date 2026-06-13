@@ -1,0 +1,136 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV003L",
+  "procedure_code": "SV003L",
+  "condition": "VSD with Pulmonary Atresia (VSD-PAt)",
+  "procedure_name": "VSD closure + RV - PA conduit",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "VSD closure + RV - PA conduit_Medco.pdf",
+    "VSD closure + RV - PA conduit_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "M.Ch. (Cardiothoracic Surgery)",
+    "DNB (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "VSD with pulmonary atresia (VSD-PAt) Type B, with optimal pulmonary blood flow and good-sized PAs, for total repair with RV-PA conduit at 3-4 years.",
+    "VSD with pulmonary atresia (VSD-PAt) Type B, with suboptimal pulmonary blood flow and small PAs, after additional shunt, for total repair with RV-PA conduit at 3–4 years.",
+    "VSD with pulmonary atresia (VSD-PAt) Type B, with increased pulmonary blood flow and large PAs, for total repair with RV-PA conduit by 1 year.",
+    "VSD with pulmonary atresia (VSD-PAt) Type C, with optimal pulmonary blood flow and good-sized PAs, for total repair with RV-PA conduit and VSD closure at 3-4 years.",
+    "VSD with pulmonary atresia (VSD-PAt) Type C, with borderline PAs and large MAPCAs, for total repair with RV-PA conduit and VSD closure at 3–4 years.",
+    "VSD with pulmonary atresia (VSD-PAt) Type C, with increased pulmonary blood flow and large PAs, for single-stage repair (unifocalization of MAPCAs + RV-PA conduit + VSD closure) at about 1 year of age.",
+    "VSD with pulmonary atresia (VSD-PAt) Type D, after 1st intervention or late presentation, for total repair with RV-PA conduit and VSD closure at 3–4 years."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "age",
+      "operator": "between",
+      "value": "3-4 years",
+      "note": "For VSD-PAt Type B (optimal/suboptimal PBF), Type C (optimal/borderline PAs), and Type D total repair"
+    },
+    {
+      "field": "age",
+      "operator": "<=",
+      "value": "1 year",
+      "note": "For VSD-PAt Type B (increased PBF) and Type C (single-stage repair)"
+    },
+    {
+      "field": "weight",
+      "operator": ">",
+      "value": "10 kg",
+      "note": "For VSD-PAt Type C single-stage repair"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Echo/ Doppler report suggestive of Ventricular septal defect with pulmonary atresia?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not suggestive of Ventricular Septal defect with pulmonary atresia at pre-authorization.",
+    "Clinical notes incomplete regarding detailed history, signs, symptoms, or indication for the procedure at pre-authorization.",
+    "Post-procedure ECHO stills or report do not show repair of the defect at claim submission.",
+    "Detailed Discharge Summary missing or does not mention the date of follow-up at claim submission.",
+    "Missing or incomplete procedure/operative notes at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "VSD with pulmonary atresia (VSD-PAt) is the most severe form of Tetralogy of Fallot (TOF).",
+      "A prevalence of 0.07 per 1000 live births was observed for VSD-PAt, accounting for 20% of all forms of TOF.",
+      "About 20% of cases are associated with a syndrome/genetic defect.",
+      "This CHD usually presents in the neonatal period with cyanosis due to right-to-left shunt at ventricular level.",
+      "The degree of cyanosis depends on the magnitude of pulmonary blood flow, which in turn, depends on the size of PDA and/or the number and size of aortopulmonary collaterals.",
+      "Closure of the ductus in the early neonatal period can be lethal due to acute severe cyanosis.",
+      "After the neonatal period, cyanosis gradually increases.",
+      "Rarely, however, patients may present in congestive heart failure due to multiple aortopulmonary collaterals (MAPCAs) or a large PDA.",
+      "VSD-PAt is a complex disease with varying anatomy, especially related to pulmonary artery branches and sources of pulmonary arterial blood supply.",
+      "The detailed anatomy must be defined in each case to plan management.",
+      "Echocardiography is a vital tool for the diagnosis; however, it may not delineate the distal pulmonary arterial tree or the sources of pulmonary arterial supply. Hence, additional imaging in the form of cardiac catheterization, CTA/cMRI, or a combination of these is essential for planning definitive repair."
+    ],
+    "surgical_options": [
+      "VSD-PAt is classified into four anatomical types: Type A, Type B, Type C, Type D.",
+      "Type A: Short-segment valvular atresia, pulmonary arteries confluent, and good sized, supplied by a PDA.",
+      "Type B: Long-segment pulmonary atresia with absent main pulmonary artery. Branch pulmonary arteries confluent and good sized, supplied by a PDA.",
+      "Type C: Long-segment pulmonary atresia with absent main pulmonary artery. Branch pulmonary arteries confluent, but pulmonary blood flow dependent predominantly on MAPCAs.",
+      "Type D: Long-segment pulmonary atresia with absent main pulmonary artery. Nonconfluent branch pulmonary arteries with MAPCA-dependent pulmonary blood flow."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Patients with VSD-PAt Type C and D have a more complex anatomy and are best referred to a specialized center for further treatment.",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "VSD with pulmonary atresia (VSD-PAt) Type A, as an RV-to-pulmonary artery (PA) conduit is not required for this type."
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1300030",
+  "procedure_code": "S1300030",
+  "condition": "Hypertrophic Obstructive Cardiomyopathy (HOCM)",
+  "procedure_name": "Surgery for Hypertrophic Obstructive Cardiomyopathy (HOCM)",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Surgery for HOCM_Medco.pdf",
+    "Surgery for HOCM_PPD.CPD.pdf"
+  ],
+  "alos": "10 Days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Significant Left Ventricular Outflow Tract Obstruction (LVOTO) with refractory symptoms on medical therapy"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "left_ventricle_hypertrophy_diameter",
+      "operator": ">=",
+      "value": "13-15 mm",
+      "note": "from Echo/color Doppler report"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "ecg_with_cardiologist_report",
+        "label": "ECG with report of cardiologist"
+      },
+      {
+        "key": "echo_color_doppler_report_with_stills",
+        "label": "Echo/ color Doppler report with stills"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_color_doppler_report",
+        "label": "Post procedure echo/colour Doppler report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the ECG and its report by cardiologist suggestive of Hypertrophic obstructive cardiomyopathy?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ color doppler report suggestive of Hypertrophic obstructive cardiomyopathy?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Did the post procedure echo/ colour doppler report confirm decrease in septal thickness?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/color doppler report does not suggest hypertrophic obstructive cardiomyopathy",
+    "ECG and its report by cardiologist not suggestive of Hypertrophic obstructive cardiomyopathy",
+    "Post-procedure echo/color Doppler report does not confirm a decrease in septal thickness",
+    "Detailed discharge summary is missing or does not mention the date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hypertrophic cardiomyopathy (HCM) is a disease of the myocardium characterized by hypertrophy of the left ventricle that is greater than or equal to 13-15 mm in diameter",
+      "Dynamic left ventricular outflow obstruction is a major cause of exertional symptoms in patients with hypertrophic cardiomyopathy. The obstruction is secondary to systolic anterior motion of the mitral valve abutting against a hypertrophied septum, resulting in diastolic dysfunction, myocardial oxygen supply-demand mismatch, reduced forward output, and secondary mitral regurgitation. Medical treatment directed at decreasing contractility, improving diastolic filling, and slowing heart rate can be successful in reducing symptoms in many patients. However, there is a subset of patients who remain severely symptomatic, despite optimal medical therapy.",
+      "Symptoms: Angina on effort, Dyspnea on effort, Syncope on effort.",
+      "Signs: Jerky pulse, Palpable left ventricular hypertrophy, Double impulse at apex (palpable fourth heart sound due to left atrial hypertrophy), Mid-systolic murmur at base, Pansystolic murmur at apex (due to mitral regurgitation)."
+    ],
+    "surgical_options": [
+      "Surgical myectomy",
+      "Percutaneous alcohol septal ablation (ASA)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

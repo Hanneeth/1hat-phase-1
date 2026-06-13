@@ -1,0 +1,228 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO053A",
+  "procedure_code": "SO053A",
+  "condition": "Medical Termination of Pregnancy",
+  "procedure_name": "MTP upto 8 weeks",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Medical Termination of Pregnancy_Medco.pdf",
+    "Medical Termination of Pregnancy_PPD.CPD.pdf"
+  ],
+  "alos": "Day care",
+  "min_doctor_qualification": [
+    "MBBS with MTP/Comprehensive Abortion Care (CAC) training",
+    "MS Obstetrics & Gynecology",
+    "MD Obstetrics & Gynecology",
+    "DNB Obstetrics & Gynecology",
+    "PG Diploma in Obstetrics & Gynecology"
+  ],
+  "clinical_indications": [
+    "Termination of pregnancy upto 8 weeks gestation/uterine size"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "amenorrhea",
+      "operator": "<=",
+      "value": "2 months",
+      "note": "History"
+    },
+    {
+      "field": "uterine_size",
+      "operator": "<=",
+      "value": "8 weeks",
+      "note": "Intrauterine pregnancy on Pelvic Examination"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_admission_notes",
+        "label": "Detailed Admission notes with History & indication"
+      },
+      {
+        "key": "clinical_examination_findings",
+        "label": "Findings of clinical examination"
+      },
+      {
+        "key": "how_pregnancy_confirmed",
+        "label": "How was pregnancy confirmed? UPT/ Clinical examination/ USG"
+      },
+      {
+        "key": "hemoglobin_pcv_report",
+        "label": "Hemoglobin, Packed cell volume (PCV)"
+      },
+      {
+        "key": "urine_routine_examination",
+        "label": "Urine routine examination"
+      },
+      {
+        "key": "usg_report",
+        "label": "USG (if available)"
+      },
+      {
+        "key": "mtp_form",
+        "label": "MTP form"
+      },
+      {
+        "key": "detailed_operative_note",
+        "label": "Detailed operative note"
+      },
+      {
+        "key": "age_proof",
+        "label": "Age proof"
+      },
+      {
+        "key": "consent_form_c",
+        "label": "Completed Consent form (Form C, given as Annexure 1)"
+      },
+      {
+        "key": "rmp_opinion_form_i",
+        "label": "Completed RMP Opinion Form (Form I, given as Annexure 2)"
+      },
+      {
+        "key": "pelvic_examination",
+        "label": "Pelvic examination to establish that uterine size is corresponding to the gestation age"
+      }
+    ],
+    "claim": [
+      {
+        "key": "operative_notes_method",
+        "label": "Method used for termination (Detailed Operative notes)"
+      },
+      {
+        "key": "operative_notes_medications_anesthesia",
+        "label": "Medications/anaesthesia used (Detailed Operative notes)"
+      },
+      {
+        "key": "operative_notes_outcomes",
+        "label": "Outcomes of the procedure (Detailed Operative notes)"
+      },
+      {
+        "key": "discharge_summary_prescription_drugs",
+        "label": "Prescription of drugs (Detailed Discharge Summary)"
+      },
+      {
+        "key": "discharge_summary_warning_signs_symptoms",
+        "label": "Warning signs and symptoms (Detailed Discharge Summary)"
+      },
+      {
+        "key": "discharge_summary_contraceptive_use",
+        "label": "Contraceptive use (Detailed Discharge Summary)"
+      },
+      {
+        "key": "discharge_summary_follow_up_visit_date",
+        "label": "Follow up visit date (Detailed Discharge Summary)"
+      },
+      {
+        "key": "admission_register_entry",
+        "label": "Completed entry in MTP/Admission Register (Form III, given as Annexure 3)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Acute pelvic infection ruled out?",
+        "expected": true
+      },
+      {
+        "q": "Uterine size (pre procedure) is not more than the gestation age for which MTP procedure is being performed?",
+        "expected": true
+      },
+      {
+        "q": "Age proof has been taken?",
+        "expected": true
+      },
+      {
+        "q": "Completed consent form (with Guardian signature in case of a minor) has been submitted?",
+        "expected": true
+      },
+      {
+        "q": "If blood group of the patient is Rh -ve and husband's blood group is Rh +ve then was the patient given anti-D Immunoglobulin?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Admission notes with history & indication for procedure reviewed?",
+        "expected": true
+      },
+      {
+        "q": "Clinical examination including symptoms, signs, vitals, etc. documented and reviewed?",
+        "expected": true
+      },
+      {
+        "q": "Completed Consent Form (Form C) submitted and reviewed?",
+        "expected": true
+      },
+      {
+        "q": "Completed RMP Opinion Form (Form I) submitted and reviewed?",
+        "expected": true
+      },
+      {
+        "q": "Reports of mandatory investigations (Hemoglobin, PCV, Urine routine) submitted and reviewed?",
+        "expected": true
+      },
+      {
+        "q": "How was pregnancy confirmed (UPT/ Clinical examination/ USG) documented?",
+        "expected": true
+      },
+      {
+        "q": "Pelvic examination establishes uterine size corresponding to up to 8 weeks gestation age?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Completed entry in Admission Register (Form III) available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed operative notes (method, medications/anesthesia, outcomes including complete expulsion of foetal parts and placenta) available?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary with follow-up advice (medications, expected side effects, warning signs for return, contraceptive advice) available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Acute pelvic infection not explicitly ruled out or present, or MTP performed with acute pelvic/vaginal infection.",
+    "Uterine size found to be more than 8 weeks gestation age during pre-procedure assessment.",
+    "Age proof not submitted or found incomplete.",
+    "Consent form (Form C) incomplete, or guardian signature missing for a minor.",
+    "Anti-D Immunoglobulin not documented as given when patient is Rh-negative and husband is Rh-positive.",
+    "Detailed Admission notes with history and indication for procedure missing or incomplete.",
+    "Documentation of how pregnancy was confirmed (UPT/Clinical examination/USG) is missing or insufficient.",
+    "Hemoglobin, PCV, or Urine routine examination reports are missing.",
+    "Pelvic examination report does not establish uterine size corresponding to up to 8 weeks gestation age.",
+    "MTP form or Detailed operative note missing at pre-authorization stage (as required).",
+    "Admission register entry (Form III) missing or incomplete at claim submission.",
+    "Operative notes detailing surgical steps, medications/anaesthesia, or outcomes (including expulsion) missing or incomplete at claim submission.",
+    "Discharge summary missing, or lacking details on medications, side effects, warning signs, or contraceptive advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facility to be an MTP centre approved by District Level Committee (DLC) for MTP upto 12 weeks.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "This document is applicable only for cases where hospitalization is required for termination of pregnancy as per the provisions of the extant Medical Termination of Pregnancy Act.",
+      "Necessary paras in this document will change subject to amendments in the MTP act from time to time.",
+      "If blood group of the patient is Rh -ve then husband's Blood group Rh must also be documented. In case the husband is Rh +ve then the patient must be given anti-D Immunoglobulin.",
+      "Reasons for termination of pregnancy must be clearly documented.",
+      "In any case of MTP (upto 8 weeks, >8 weeks-12 weeks, >12 weeks- 20 weeks)- if the patient's Hb <8g/dl, the patient should preferably be referred to tertiary care centres; pros and cons should be explained to the patient and a high risk consent be taken before performing the procedure.",
+      "In cases where the girl is a minor (under the age of 18 years), the healthcare provider needs to inform the local authorities (local police station/ district child welfare officer) when providing abortion services under the MTP Act. (copy of this must be submitted) As per the 2013, MoH&FW Guidelines and Protocols- Medico-legal care for survivors/ victims of sexual violence (...), “providing treatment and necessary medical investigations is the prime responsibility of the examining doctor\" and that \"admission, evidence collection or filing a police complaint is not mandatory for providing treatment\". The necessary provisions under the POSCO Act must also be referred to while offering MTP services to the minor. May also refer to the following document for more details: https://www.ipasdevelopmentfoundation.org/resourceFiles/75201803210124.pdf"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Acute pelvic or vaginal infection (to be done under antibiotic cover)"
+    ]
+  }
+}

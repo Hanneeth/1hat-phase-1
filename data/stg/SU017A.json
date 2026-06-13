@@ -1,0 +1,72 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU017A",
+  "procedure_code": "SU017A",
+  "condition": "Post-ESWL evaluation",
+  "procedure_name": "ESWL - Follow Up",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "ESWL & ESWL Follow Up_Medco.pdf",
+    "ESWL & ESWL Follow Up_PPD.CPD.pdf"
+  ],
+  "alos": "Daycare",
+  "min_doctor_qualification": [
+    "MS/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "In most cases, 2 weeks after the ESWL procedure the follow-up visit is recommended.",
+    "Is mainly to evaluate any complications: Hematomas, Hemorrhage, Hyperventilation tetany, Blockage of Urinary tract.",
+    "The follow up visit compares both new and the old KUB.",
+    "The efficacy of ESWL lies in its ability to pulverize calculi in vivo into smaller fragments, which the body can then expulse spontaneously.",
+    "ESWL follow up visit give a chance to examines any collected stone fragments."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "discharge_summary_last_eswl",
+        "label": "Discharge summary of last ESWL performed"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes_current_visit",
+        "label": "Detailed clinical notes of current visit"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission missing at pre-authorization.",
+    "Earlier Discharge Summary from the last ESWL performed missing or not indicating a need for follow-up at pre-authorization.",
+    "Detailed clinical notes of the current visit missing or incomplete at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "ESWL follow up visit: In most cases, 2 weeks after the ESWL procedure the follow-up visit is recommended. Is mainly to evaluate any complications: Hematomas, Hemorrhage, Hyperventilation tetany, Blockage of Urinary tract.",
+      "The follow up visit compares both new and the old KUB.",
+      "The efficacy of ESWL lies in its ability to pulverize calculi in vivo into smaller fragments, which the body can then expulse spontaneously.",
+      "ESWL follow up visit give a chance to examines any collected stone fragments.",
+      "Management: Blood analysis and 24-hour urine collections measuring for pH, urinary volume, citrate, calcium, oxalate, uric acid, sodium, magnesium, phosphates, and electrolytes can assist in identifying and alleviating risk factors for future stone production."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

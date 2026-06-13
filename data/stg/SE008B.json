@@ -1,0 +1,127 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE008B",
+  "procedure_code": "SE008B",
+  "condition": "Squint correction",
+  "procedure_name": "Squint correction Major - 3 or more muscles (complex surgery involving four muscles or oblique muscles)",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Squint correction_Medco.pdf",
+    "Squint correction_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma or equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "Child has a squint all the time",
+    "Child is > 3 months of age and has a squint that comes and goes",
+    "Child regularly turns its head to one side or keeping one eye closed when looking at things",
+    "Squint or double vision later in life",
+    "Recommended if other treatments are not suitable or do not help"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "patient_age_for_intermittent_squint",
+      "operator": ">",
+      "value": "3 months",
+      "note": "for squints that come and go"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_muscle_affected",
+        "label": "Clinical notes detailing which muscle is affected"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      },
+      {
+        "key": "indication_ga_if_required",
+        "label": "Indication for GA, if required"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure notes/ operative notes"
+      },
+      {
+        "key": "intraoperative_photograph_patient_id_date_time_optional",
+        "label": "Intraoperative photograph with patient ID, date and time (optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes including history, clinical symptoms (diplopia, etc.) and ocular examination (misalignment of the eyes, etc.) suggestive of Squint?",
+        "expected": true
+      },
+      {
+        "q": "Evidence for indication of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected part with Proper labelling of Affected Eye whether R or L with full face photograph?",
+        "expected": true
+      },
+      {
+        "q": "Detailed admission notes?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed, and outcomes of the successful?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Was the intra operative photograph submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Evidence of prior conservative management for squint is not documented or does not indicate failure to treat, requiring surgery.",
+    "Clinical notes do not detail the affected muscle.",
+    "Clinical photograph is missing, not of affected part, lacks R/L labelling, or is not a full face photograph.",
+    "Operative notes are missing or do not detail surgical steps and outcomes.",
+    "Documents for post-operative care or follow-up advice are not available or insufficient."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Squint correction surgery only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination and does not respond to conservative medical therapy."
+    ],
+    "surgical_options": [
+      "Surgery- in cases when glasses are not completely effective"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Babies <= 3 months with squints that come and go (are not usually a cause for concern)"
+    ]
+  }
+}

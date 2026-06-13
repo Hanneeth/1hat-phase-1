@@ -1,0 +1,110 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Comprehensive medical rehabilitation/ : Comprehensive medical rehabilitation_Medco.pdf (clinical + mandatory docs) + Comprehensive medical rehabilitation_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "MG0120F",
+  "procedure_code": "MG0120F",
+  "condition": "Medical/Neuro rehabilitation",
+  "procedure_name": "Medical Rehabilitation special learning disability",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1",
+  "source_files": [
+    "Comprehensive medical rehabilitation_Medco.pdf",
+    "Comprehensive medical rehabilitation_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MBBS",
+    "BPT",
+    "BOT (Under supervision of Physical Medicine & Rehabilitation specialist)"
+  ],
+  "clinical_indications": [
+    "Patient diagnosed with special learning disability requiring medical rehabilitation, which may include neurorehabilitation, physical therapy, occupational therapy, speech therapy, social skill training, and psychotherapy."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical Notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "x_ray_ct_mri",
+        "label": "X-Ray/CT/MRI"
+      },
+      {
+        "key": "past_history_treatment_records",
+        "label": "Details past history with treatment records"
+      },
+      {
+        "key": "eeg_report_intellectual_learning_disability",
+        "label": "Electroencephalogram (EEG) report in intellectual and learning disability"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_treatment_details",
+        "label": "Indoor case papers with treatment given details"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are all the Clinical Notes including evaluation findings, planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is Electroencephalogram (EEG) report?",
+        "expected": true
+      },
+      {
+        "q": "Are /X-Ray/CT/MRI report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is Details patient past history & treatment records submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with daily vitals and line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary submitted with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes, evaluation findings, or planned line of treatment not submitted or incomplete.",
+    "X-Ray/CT/MRI report not submitted or incomplete.",
+    "Patient's past history or treatment records not submitted or incomplete.",
+    "Electroencephalogram (EEG) report for intellectual and learning disability not submitted or incomplete.",
+    "Detailed indoor case papers with daily vitals and line of treatment not submitted or incomplete.",
+    "Discharge summary not submitted, or lacking follow-up advice.",
+    "Patient's past history or diagnostic report does not suggest rehabilitation treatment."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB (General Medicine, Pediatric Medicine, Physical Medicine & Rehabilitation), DM/DNB (Neurology)",
+    "clinical_key_pointers": [
+      "Rehabilitation is defined as \"a set of interventions designed to optimize functioning and reduce disability in individuals with health conditions in interaction with their environment.",
+      "Rehabilitation is an essential part of universal health coverage along with promotion of good health, prevention of disease, treatment and palliative care.",
+      "Rehabilitation helps a child, adult or older person to be as independent as possible in everyday activities and enables participation in education, work, recreation and meaningful life roles such as taking care of family."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

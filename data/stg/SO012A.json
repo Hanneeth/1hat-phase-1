@@ -1,0 +1,127 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO012A",
+  "procedure_code": "SO012A",
+  "condition": "Uterovaginal prolapse",
+  "procedure_name": "Manchester Repair",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Uterovaginal prolapse_Medco.pdf",
+    "Uterovaginal prolapse_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 days",
+  "min_doctor_qualification": [
+    "MS (Obstetrics & Gynecology)",
+    "MD (Obstetrics & Gynecology)",
+    "DNB (Obstetrics & Gynecology)",
+    "DGO (Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Preservation of reproductive function.",
+    "When the symptoms are due to vaginal prolapse associated with elongation of the (supravaginal) cervix.",
+    "Patients with infertility and difficulty in sexual activity."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings confirming diagnosis and advice for admission"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG abdomen/pelvis (Optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports (If required)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "blood_transfusion_notes",
+        "label": "Blood transfusion notes (if blood transfusion was given)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment, and advice for admission provided?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and/or imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, physical examination, and/or imaging not indicative of surgery.",
+    "Detailed clinical notes for pre-authorization are missing or incomplete.",
+    "Planned line of treatment is not documented or unclear.",
+    "Detailed procedure/operative notes are missing or lack necessary details.",
+    "Detailed discharge summary is missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Uterovaginal prolapse is the prolapse of the uterus, cervix and upper vagina. This is the commonest type.",
+      "It is appropriate in young women with any degree of uterovaginal prolapse.",
+      "Cystocele occurs first followed by traction effect on the cervix causing retroversion of the uterus.",
+      "Fothergill's or Manchester operation is designed to correct uterine descent associated with cystocele and rectocele where preservation of the uterus is desirable.",
+      "It combines anterior colporrhaphy, amputation of the cervix and posterior colpoperineorrhaphy in one procedure."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "It is avoided in women anxious for more children because amputation of the cervix is associated with a high incidence of infertility, premature delivery and cervical dystocia."
+    ]
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB019C",
+  "procedure_code": "SB019C",
+  "condition": "Fracture Neck Femur and Hemiarthroplasty",
+  "procedure_name": "Intertrochanteric Fracture with Proximal Femoral Nail",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Fracture Neck Femur and Hemiarthroplasty _Medco.pdf",
+    "Fracture Neck Femur and Hemiarthroplasty _PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years' experience"
+  ],
+  "clinical_indications": [
+    "Intertrochanteric fracture"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      },
+      {
+        "key": "xray_ct_labelled",
+        "label": "X-ray/CT (Hemiarthroplasty) labelled with patient ID, date and side (Left/Right) affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "post_procedure_xray_labelled",
+        "label": "Post procedure X-ray labelled with patient ID, date and side (Left/Right) affected"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice and bar code of Implant"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "discharge_summary_followup",
+        "label": "Discharge summary with follow-up advise at the time of discharge"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray/CT (Hemiarthroplasty), labelled with patient ID, date and side (Left/Right) of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical notes and imaging report are indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Procedure / operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post procedure X-ray labelled with patient ID, date and side (Left/Right) affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice/barcode of Implant used submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post Procedure clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or imaging report not indicative of surgery.",
+    "X-ray/CT is missing or not labelled with patient ID, date, or affected side (Left/Right) during pre-authorization.",
+    "Post-procedure X-ray is missing or not labelled with patient ID, date, or affected side (Left/Right) during claim submission.",
+    "Invoice and barcode of implant are missing at the time of claim submission.",
+    "Clinical notes are incomplete or missing key information such as indication for procedure or planned line of management.",
+    "Clinical photograph of affected part is missing or unclear."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB or Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Common injuries, especially seen in elderly in the emergency settings, also in young patients in sports or high energy trauma.",
+      "Femoral neck fractures associated with multiple injuries and high rates of avascular necrosis and nonunion.",
+      "There are many femoral neck fractures and the most common classification is by Garden:",
+      "Type I: Incomplete fracture - valgus impacted-nondisplaced",
+      "Type II: Complete fracture - nondisplaced",
+      "Type III: Complete fracture - partial displaced",
+      "Type IV: Complete fracture - fully displaced",
+      "Pauwel: Type I less than 30 degrees, Type II 30-50 degrees, Type III greater than 50 degrees"
+    ],
+    "surgical_options": [
+      "Non operative and operative options.",
+      "Non-displaced fractures are treated with typically with percutaneous cannulated screws or a sliding hip screw.",
+      "With displaced fractures of the femoral neck: Less active individuals may receive a hemiarthroplasty.",
+      "With displaced fractures of the femoral neck: More active individuals are treated with total hip arthroplasty."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

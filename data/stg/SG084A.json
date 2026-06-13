@@ -1,0 +1,130 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG084A",
+  "procedure_code": "SG084A",
+  "condition": "Abscess",
+  "procedure_name": "Incision & Drainage of Abscess",
+  "specialty": "General/Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Incision and Drainage of Abscess_Medco.pdf",
+    "Incision and Drainage of Abscess_PPD.CPD.pdf"
+  ],
+  "alos": "1-2 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (in Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Localized collection of pus (abscess) presenting as red and inflammatory swelling, painful, sometimes with fistula, fluctuant upon gentle palpation.",
+    "Abscesses located in deep organs such as the lung, liver, or brain requiring specific treatment."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure and planned line of management"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      },
+      {
+        "key": "sepsis_screen_blood_culture",
+        "label": "Sepsis screen/blood culture"
+      },
+      {
+        "key": "usg_ct_optional",
+        "label": "USG/CT (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "culture_report_of_wound_or_pus",
+        "label": "Culture report of wound or pus"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain detailed history, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Clinical evaluation/Clinical photograph and/or laboratory investigations confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Clinical evaluation and laboratory investigations/imaging are indicative of the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs with detailed line of treatment are available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / Operative Notes are available?",
+        "expected": true
+      },
+      {
+        "q": "Culture report of wound or pus was submitted?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary with follow-up advice at the time of discharge is available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical evaluation and laboratory investigations/imaging are not indicative of the procedure.",
+    "Clinical notes are missing, incomplete, or do not sufficiently detail history, signs, symptoms, planned line of treatment, or indication for Incision & Drainage of Abscess.",
+    "Clinical photograph of the abscess is missing, unclear, or does not confirm the diagnosis.",
+    "Sepsis screen/blood culture report is missing or does not confirm diagnosis at pre-authorization.",
+    "Abscess not documented as 'ripe' (red, inflammatory, painful, fluctuant, or with fistula) prior to Incision & Drainage.",
+    "Culture report of wound or pus is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "An abscess is a localized collection of pus (dead and dying neutrophils plus proteinaceous exudate). Skin-puncturing trauma is the most common cause.",
+      "S. aureus is the most common pathogen, followed by Streptococcus.",
+      "Abscesses are often found in the soft tissue under the skin such as the armpit or the groin.",
+      "Abscesses are far more serious and call for more specific treatment if they are located in deep organs such as the lung, liver, or brain.",
+      "The patient feels ill and complains of throbbing pain at the site. Throbbing pain is indicative of pus and is due to pressure on the nerve endings by the pus. Fever, with or without chills and rigors, can be present.",
+      "Signs: Calor-heat (affected part warmer), Rubor-redness (inflammation/hyperaemia), Dolor-pain (extremely tender), Tumour-swelling (tensely cystic with brawny oedema), Loss of function (impaired due to pain), Fluctuation (can be elicited; deep-seated abscess may be negative)."
+    ],
+    "surgical_options": [
+      "Incision and drainage (I&D)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

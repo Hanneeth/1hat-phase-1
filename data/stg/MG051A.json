@@ -1,0 +1,102 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG051A",
+  "procedure_code": "MG051A",
+  "condition": "Hydrocephalus",
+  "procedure_name": "Hydrocephalus",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Hydrocephalus_Medco.pdf",
+    "Hydrocephalus_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Hydrocephalus is progressive and associated with increased ICP"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "neuroimaging_report",
+        "label": "Neuroimaging report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers with details of treatment given"
+      },
+      {
+        "key": "detailed_procedure_notes",
+        "label": "Detailed procedure notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "detailed_icps_vitals_treatment_details",
+        "label": "Detailed ICPs with vital (BP and Pulse) and Treatment details"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was neuroimaging report submitted suggestive of hydrocephalus?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed ICPs with vital (BP and Pulse) and Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Neuroimaging report not submitted or not suggestive of hydrocephalus",
+    "Clinical notes with evaluation findings, indications, or planned treatment not submitted or incomplete",
+    "Detailed Indoor case papers or treatment details not submitted",
+    "Detailed procedure notes not submitted",
+    "Detailed discharge summary not submitted or missing date of follow-up",
+    "Detailed ICPs with vital (BP and Pulse) and treatment details not submitted for claims"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": "DNB / MD (General Medicine/General surgery / Pediatric Medicine/Pediatric surgery/Neurosurgery/Neuro medicine)",
+    "clinical_key_pointers": [],
+    "surgical_options": [
+      "Shunt procedures",
+      "Endoscopic 3rd ventriculostomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

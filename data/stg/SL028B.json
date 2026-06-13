@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL028B",
+  "procedure_code": "SL028B",
+  "condition": "Post trauma neck exploration",
+  "procedure_name": "Post trauma neck exploration",
+  "specialty": "ENT/ General Surgery/ Pediatric surgery",
+  "version": "1.1",
+  "source_files": [
+    "Deep neck abscess drainage_Medco.pdf",
+    "Deep neck abscess drainage_PPD.CPD.pdf"
+  ],
+  "alos": "5-10 Days",
+  "min_doctor_qualification": [
+    "MS/ DNB/ PG Diploma or equivalent (in ENT)",
+    "MS/ DNB or equivalent (in Surgery)",
+    "MCh. / DNB or equivalent (in Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Surgical exploration for severe neck trauma is more likely to be required for penetrating neck injury. The indications and technique for exploring the neck due to severe neck trauma are Open neck wound with injury to major vessels, larynx, trachea, phrarynx or oesophagus.",
+    "Airway compromise",
+    "Closed wound with rapidly spreading neck swelling or subcutaneous emphysema/ acute dysphagia/ hematoma/ breathing difficulty/ clinical or radiological evidence of progressive hematoma",
+    "Contaminated open neck wound",
+    "Retained infected foreign bodies like pebbles/ glass piece/ wood/ metal etc."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, indications for doing the procedure & advice for admission)"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of the affected part"
+      },
+      {
+        "key": "contrast_enhanced_ct_lateral_soft_tissue_neck_xray_usg",
+        "label": "Contrast enhanced CT/ lateral soft tissue neck X-ray supporting the diagnosis/ USG-of neck"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_note_operative_note",
+        "label": "Detailed Procedure note/ operative note"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_affected_part",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "culture_sensitivity_report_pus_removed",
+        "label": "Culture/ sensitivity report of the pus removed"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the detailed Clinical notes – all vitals, detailed history especially previous surgery, symptoms, signs, physical examination including local examination, indication for procedure, advice for admission, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Contrast enhanced CT/ lateral soft tissue neck X-ray supporting the diagnosis/ USG of neck investigation report confirming the diagnosis submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Clinical photograph of the affected part submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with daily vitals and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the culture/ sensitivity report of the pus report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or imaging reports not indicative of surgery for post trauma neck exploration.",
+    "Missing clinical notes at pre-authorization for post trauma neck exploration.",
+    "Missing clinical photograph of the affected part at pre-authorization for post trauma neck exploration.",
+    "Missing contrast enhanced CT/ lateral soft tissue neck X-ray or USG of neck report at pre-authorization for post trauma neck exploration.",
+    "Missing Detailed Procedure note/ operative note at claim submission for post trauma neck exploration."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Post trauma neck exploration: Surgical exploration for severe neck trauma is more likely to be required for penetrating neck injury. The indications and technique for exploring the neck due to severe neck trauma are Open neck wound with injury to major vessels, larynx, trachea, phrarynx or oesophagus."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

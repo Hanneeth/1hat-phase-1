@@ -1,0 +1,128 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO015A",
+  "procedure_code": "SO015A",
+  "condition": "Endometriosis",
+  "procedure_name": "Laparoscopic Surgery for Endometriosis (Other than Hysterectomy)",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Laparoscopic Surgery for Endometriosis_Medco.pdf",
+    "Laparoscopic Surgery for Endometriosis_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Infertility",
+    "Chronic pelvic pain",
+    "Failure of medical treatment of endometriosis",
+    "Cyclical symptoms in different organs affected with endometriosis like bladder, rectum, lungs, gastrointestinal tract"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed clinical notes with history, symptoms, signs, examination findings, indication for procedure, planned line of treatment, advice for admission"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG Abdomen/pelvis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports (if required)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "gross_specimen_photo_optional",
+        "label": "Photograph of the gross specimen removed (optional)"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology examination report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes all vitals, detailed history especially medication history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did the history, clinical examination, and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathology report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "History, clinical examination, or imaging not indicative of surgery.",
+    "Detailed clinical notes (including history, symptoms, signs, examination findings, indication, planned treatment, admission advice) are incomplete or missing at pre-authorization.",
+    "USG Abdomen/pelvis report is missing or inconclusive at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and line of treatment are incomplete or missing at claim submission.",
+    "Detailed procedure / operative notes are missing or incomplete at claim submission.",
+    "Histopathology examination report is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia equipment and anesthetist",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Endometriosis is the presence of endometrial glands or stroma in sites other than the uterine cavity and is associated with pain and subfertility. Surgical interventions aim to remove visible areas of endometriosis and restore the anatomy."
+    ],
+    "surgical_options": [
+      "Biopsy of the lesion",
+      "Aspiration of peritoneal fluid in cul-de-sac",
+      "Ablation of Endometrioma",
+      "Excision of larger lesions and chocolate cyst",
+      "Cauterization of the cyst wall",
+      "Adhesiolysis",
+      "Evaluation findings, patient`s clinical condition, and decision of the surgeon may convert laparoscopy to laparotomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

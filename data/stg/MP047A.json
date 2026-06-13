@@ -1,0 +1,89 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP047A",
+  "procedure_code": "MP047A",
+  "condition": "Severe Acute Laryngitis",
+  "procedure_name": "Severe Acute Laryngitis requiring hospitalization",
+  "specialty": "General Medicine/Pediatric Medical Management/ENT",
+  "version": "1.1",
+  "source_files": [
+    "Severe Acute Laryngitis requiring hospitalization_Medco.pdf",
+    "Severe Acute Laryngitis requiring hospitalization_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MBBS",
+    "DNB/MD equivalent in General Medicine",
+    "MD/DNB/DCH/ equivalent (Pediatric Medicine)",
+    "MS/ DNB/ PG Diploma or equivalent (in ENT)"
+  ],
+  "clinical_indications": [],
+  "clinical_indications_uncertain": "The document defines the condition and lists symptoms but does not explicitly state clinical indications for hospitalization.",
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_infectious_history",
+        "label": "Clinical notes detailing infectious history or sickness contact and admission notes showing vitals and examination findings"
+      },
+      {
+        "key": "laryngoscopy_report",
+        "label": "Laryngoscopy report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers (ICPs)"
+      },
+      {
+        "key": "treatment_details",
+        "label": "Treatment details"
+      },
+      {
+        "key": "laryngoscopy_nasal_endoscopy_report",
+        "label": "Relevant investigations report - Laryngoscopy/Nasal endoscopy report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were patient's history, physical examination findings and Larygoscopy report suggestive of the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Laryngoscopy report not submitted or findings not supportive of diagnosis",
+    "Clinical notes missing infectious history, sickness contact, or vitals/examination findings at pre-authorization",
+    "Patient's history, physical examination, or laryngoscopy report not suggestive of Severe Acute Laryngitis requiring hospitalization",
+    "Relevant investigations report (Laryngoscopy/Nasal endoscopy) not provided during claim submission",
+    "Detailed indoor case papers (ICPs) missing or incomplete at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Secondary Care Facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Acute laryngitis is a short-term inflammatory condition affecting the larynx or voice box, typically lasting less than 3 weeks; if it lasts over 3 weeks, it is termed chronic laryngitis.",
+      "Etiology can be infectious (viral upper respiratory infection agents like rhinovirus, parainfluenza virus, respiratory syncytial virus, coronavirus, adenovirus, influenza; bacterial agents like Streptococcus pneumoniae, Haemophilus influenzae, Moraxella catarrhalis) or non-infectious (vocal trauma/abuse/misuse, allergy, gastroesophageal reflux disease, asthma, environmental pollution, smoking, inhalational injuries, or functional/conversion disorders).",
+      "In children, croup (laryngotracheobronchitis) is due to parainfluenza virus (most commonly parainfluenza-1), presenting with isolated vocal symptoms, a characteristic \"barking\" cough, and potentially progressing to inspiratory or biphasic stridor.",
+      "Common symptoms include dysphonia (hoarseness), fever (during the first few days), sore throat, dry cough, and frequent throat-clearing.",
+      "Management involves Voice Rest, Steam Inhalation, Avoidance of Irritants, Dietary Modification, and Medications such as Antibiotics, Antifungal agents, Anti-reflux medications for Laryngopharyngeal reflux (LPR), H2 receptor and proton pump blocking agents for Gastroesophageal reflux, and Mucolytics for clearing secretions."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

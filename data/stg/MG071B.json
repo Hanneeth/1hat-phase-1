@@ -1,0 +1,108 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG071B",
+  "procedure_code": "MG071B",
+  "condition": "Poisoning",
+  "procedure_name": "Other poisonings",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Posioning_Medco.pdf",
+    "Posioning_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MD equivalent (in General Medicine, Pediatric Medicine)",
+    "DNB equivalent (in General Medicine, Pediatric Medicine)"
+  ],
+  "clinical_indications": [
+    "Diagnosis made is backed by clinical manifestation as per Table 2.8. Signs and symptoms helpful in diagnosis of poisoning, including:",
+    "CNS signs (Delirium/hallucinations, Depression/coma, Convulsions, Weakness or paralysis, Fasciculations, Dilated pupil, Small pupil) with associated poisons (e.g., Antihistamines, Barbiturates, Organophosphates, Atropine group, Opium group).",
+    "Respiratory signs (Respiratory difficulty, Cyanosis without respiratory distress) with associated poisons (e.g., Organophosphate-insecticides, Methaemoglobinaemia).",
+    "Temperature abnormality (High fever, Hypothermia) with associated poisons (e.g., Salicylates, Opiates).",
+    "CVS signs (Hypotension, Hypertension, Bradycardia) with associated poisons (e.g., Beta-blockers, Amphetamine, Digitalis).",
+    "Odours (e.g., Kerosene, bitter almond-cyanides, garlic-parathion, phosphorus, alcohol, phenols and cresols, sulfides).",
+    "Poisoning types include: Aluminum phosphide, Phenol, Hydrocarbons, Carbone monoxide, Ethylene glycol and Methanol, Dhatura poisoning, Opioid intoxication etc."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "red_cell_cholinesterase_level_ecg_cbl_lft_kft_reports",
+        "label": "Red cell cholinesterase level, ECG, CBL, LFT, KFT reports (as applicable)"
+      },
+      {
+        "key": "medico_legal_certificate_fir_copy",
+        "label": "Copy of Medico legal certificate / FIR"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers with treatment given details"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes, signs, and symptoms, supporting with laboratory investigations are indicative of poisoning?",
+        "expected": true
+      },
+      {
+        "q": "Were the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Red cell cholinesterase level, ECG, CBL, LFT, KFT (as applicable) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Copy of Medico legal certificate / FIR submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the Detailed Indoor case papers with the Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes, evaluation findings, indications for the procedure, or planned line of treatment not submitted or incomplete.",
+    "Red cell cholinesterase level, ECG, CBL, LFT, KFT reports (as applicable) not submitted or incomplete or not justified if applicable.",
+    "Copy of Medico legal certificate / FIR not submitted.",
+    "Clinical notes, signs, symptoms, or supporting laboratory investigations not indicative of poisoning.",
+    "Clinical manifestations for the specific type of poisoning not documented or inconsistent with diagnosis."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Secondary care facilities",
+    "min_doctor_qualification_desirable": "MBBS",
+    "clinical_key_pointers": [
+      "Proceed with Poisoning procedure only if diagnosis made is backed by clinical manifestation:",
+      "Stepwise care approach to a patient of poisoning is helpful in successful management."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

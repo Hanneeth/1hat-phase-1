@@ -1,0 +1,99 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S100080",
+  "procedure_code": "S100080",
+  "condition": "Hydrocele",
+  "procedure_name": "Operation for Hydrocele (U/L)",
+  "specialty": "General Surgery / Pediatric Surgery",
+  "version": "1.2",
+  "source_files": [
+    "Operation for Hydrocele_Medco.pdf",
+    "Operation for Hydrocele_PPD.CPD.pdf"
+  ],
+  "alos": "01 Day",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MCh/DNB/Equivalent (Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Painless swelling of unilateral scrotum"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes with history and examination and planned line of treatment"
+      },
+      {
+        "key": "investigations_done_optional",
+        "label": "Investigations done (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed Operative Notes"
+      },
+      {
+        "key": "intraoperative_clinical_photograph",
+        "label": "Intraoperative clinical photograph"
+      },
+      {
+        "key": "pre_anaesthetic_check_up_pac",
+        "label": "Pre-Anaesthetic Check-up (PAC)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether the investigation reports confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Whether detailed Operative/Procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Whether detailed Discharge Summary Submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's clinical history or investigations were not indicative of the procedure.",
+    "Investigation reports do not confirm the diagnosis.",
+    "Detailed Operative/Procedure notes not submitted.",
+    "Detailed Discharge Summary not submitted.",
+    "Clinical Notes with history and examination and planned line of treatment missing or incomplete at pre-authorisation.",
+    "Intraoperative clinical photograph missing at claim submission.",
+    "Pre-Anaesthetic Check-up (PAC) report missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Painless swelling of unilateral or bilateral scrotum"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN056A",
+  "procedure_code": "SN056A",
+  "condition": "Chronic Sub Dural Hematoma",
+  "procedure_name": "Sub Dural Hematoma - Craniotomy",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Chronic SDH_MEDCO.pdf",
+    "Chronic SDH_PPD_CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "Mch in Neurosurgery",
+    "DNB in Neurosurgery",
+    "Equivalent in Neurosurgery"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed clinical notes"
+      },
+      {
+        "key": "relevant_investigations_ct_mri",
+        "label": "Relevant Investigations such as CT/MRI"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "post_procedure_imaging_ct_mri",
+        "label": "Post procedure imaging with film (CT/MRI)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph showing evidence of surgery"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the patient's CT/MRI report indicative of the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Patient's CT/MRI report not indicative of the procedure",
+    "Relevant Investigations (CT/MRI) not submitted at pre-authorization",
+    "Post-procedure imaging (CT/MRI) not submitted at claim stage",
+    "Post-procedure clinical photograph showing evidence of surgery not submitted at claim stage",
+    "Detailed procedure/operative notes not submitted at claim stage"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Care Facilities.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Chronic subdural hematoma (cSDH) is a chronic (≥3 weeks) intracranial bleeding between the dura mater (which adheres to the skull), and the arachnoid mater (which envelops the brain). The underlying cause of cSDH is usually traumatic tearing of the bridging veins which connect the brain surface with the dura mater.",
+      "Common symptoms include headache, lethargy, memory impairment, dizziness, confusion, weakness, nausea, vomiting, impaired vision, and seizures.",
+      "Patients with large hematomas may develop varying degrees of paralysis and coma.",
+      "cSDH may mimic other brain diseases like dementia, stroke, TIA, encephalitis, tumors, or abscesses.",
+      "Craniotomy is a neurosurgical procedure to temporarily remove a section of the skull to access and remove the hematoma."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

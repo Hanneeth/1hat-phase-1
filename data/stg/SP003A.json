@@ -1,0 +1,98 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SP003A",
+  "procedure_code": "SP003A",
+  "condition": "Revascularization of limb / digit",
+  "procedure_name": "Revascularization of limb / digit",
+  "specialty": "Plastic & Reconstructive Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Revascularization of limb digit_Medco.pdf",
+    "Revascularization of limb digit_PPD.CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB equivalent in Plastic Surgery/ Reconstructive Surgery"
+  ],
+  "clinical_indications": [
+    "Injuries and traumatic amputations, life-threatening injuries",
+    "Replantation is only considered in a stable patient.",
+    "Indications for digital replantation include (1) amputated thumbs, (2) multiple digits, (3) single digit distal to the flexor digitorum superficialis tendon, and (4) all digital amputations in children.",
+    "Upper extremity amputations at the level of the wrist and hand should be replanted unless there are absolute life-threatening contraindications."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes_with_planned_line_of_treatment_and_advice_for_admission",
+        "label": "Detailed Clinical notes with planned line of treatment and advice for admission."
+      },
+      {
+        "key": "doppler_report",
+        "label": "Doppler report"
+      },
+      {
+        "key": "clinical_photograph_of_the_affected_part",
+        "label": "Clinical photograph of the affected part"
+      },
+      {
+        "key": "mlc_fir_report_if_traumatic",
+        "label": "MLC/FIR report (If traumatic)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_with_treatment_information",
+        "label": "Detailed indoor case papers with treatment information"
+      },
+      {
+        "key": "intra_procedure_clinical_photograph_optional",
+        "label": "Intra procedure clinical photograph (optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Doppler report missing at pre-authorization or claim stage.",
+    "MLC/FIR report (if traumatic) missing at pre-authorization or claim stage.",
+    "Clinical photograph of the affected part missing or unclear.",
+    "Detailed Clinical notes lacking planned line of treatment or advice for admission.",
+    "Detailed procedure/Operative notes missing or incomplete at claim stage.",
+    "Post-procedure clinical photograph missing at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Revascularization of damaged limbs/digits is technically feasible; Replantation refers to the reattachment and revascularization of an amputated part such as digit or hand.",
+      "Developments in microsurgery have led to excellent results in limb/digit replantation."
+    ],
+    "surgical_options": [
+      "Upper Extremity Replantation",
+      "Digital Replantation",
+      "Digital nerve reconstruction etc."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": "Replantation is only considered in a stable patient.",
+    "comorbidity_management": "There are comorbid conditions taken into consideration, with the standard score from the Charlson comorbidity index as follows: 1 point (myocardial infarct, congestive heart failure, peripheral vascular disease, dementia, cerebrovascular disease, chronic lung disease, connective tissue disease, ulcer, chronic liver disease, diabetes), 2 points (hemiplegia, moderate or severe kidney disease, diabetes with end-organ damage, tumor, leukemia, lymphoma), 3 points (moderate or severe liver disease), 6 points (malignant tumor, metastasis, AIDS). Replantation success also depends on patient co-morbidities including smoking status, general health (psychiatric conditions), and coagulopathy.",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Absolute life-threatening contraindications (for upper extremity amputations)"
+    ]
+  }
+}

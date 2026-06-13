@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU083A",
+  "procedure_code": "SU083A",
+  "condition": "Priapism",
+  "procedure_name": "Aspiration",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Surgery for Priapism_Medco.pdf",
+    "Surgery for Priapism_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Progressive penile pain (Ischemic priapism)",
+    "Erection lasting more than four hours or unrelated to sexual interest or stimulation",
+    "Rigid penile shaft, but the tip of penis (glans) is soft (Ischemic priapism)",
+    "Erect but not fully rigid penile shaft (Nonischemic priapism)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "blood_flow_penis",
+      "operator": "==",
+      "value": "absent",
+      "note": "as per Doppler USG, suggestive of ischemic priapism"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes detailing examination findings, previous surgery/procedure, follow-up visit details, investigations, planned line of treatment and advise for procedure."
+      },
+      {
+        "key": "color_doppler_usg_penis_perineum_report",
+        "label": "Color doppler USG of the penis and perineum report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes detailing examination findings, previous surgery/procedure, follow-up visit details, investigations, planned line of treatment and advice for the procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Doppler USG of the penis and perineum report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Doppler USG of the penis suggestive of the absence of blood flow to Penis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure/Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Doppler USG of the penis suggestive of the absence of blood flow to Penis?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes for pre-authorization missing or incomplete.",
+    "Color Doppler USG of the penis and perineum report missing or incomplete at pre-authorization.",
+    "Doppler USG report does not indicate absence of blood flow to the penis, despite being submitted for ischemic priapism.",
+    "Detailed indoor case papers missing or incomplete at claim submission.",
+    "Detailed Procedure/Operative notes missing or incomplete at claim submission.",
+    "Detailed Discharge Summary missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Surgery for Priapism only if diagnosis made is backed by clinical manifestation"
+    ],
+    "surgical_options": [
+      "Aspiration",
+      "Shunt"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

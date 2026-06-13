@@ -1,0 +1,140 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL010A",
+  "procedure_code": "SL010A",
+  "condition": "Fracture - setting nasal bone",
+  "procedure_name": "Fracture - setting nasal bone",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Fracture - setting nasal bone_Medco.pdf",
+    "Fracture - setting nasal bone_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MS",
+    "DNB",
+    "or Equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "New onset or worsened nasal obstruction",
+    "New onset nasal deformity which patient wishes for correction",
+    "Septal hematoma"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, planned line of treatment & advise for admission)"
+      },
+      {
+        "key": "xray_ct_report",
+        "label": "X-ray/CT report of the affected part"
+      },
+      {
+        "key": "mlc_fir",
+        "label": "Medico-legal case (MLC) / First information report (FIR) for traumatic injuries and circumstances of the incident which led to fracture (In applicable cases)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "post_procedure_xray",
+        "label": "Post procedure X-ray"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes, detailing signs, symptoms, examination findings, planned line of treatment & advise for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the X-ray/CT report of the affected part confirming the diagnosis and justify the procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the still photograph of the affected part submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was detailed Procedure / operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure X-ray of the affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure clinical photograph of the affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and X-ray/CT report were not indicative of the procedure.",
+    "Diagnosis not supported by clinical presentation and investigations.",
+    "Medico-legal case (MLC) / First information report (FIR) is missing or incomplete for traumatic injuries where applicable.",
+    "Required pre-authorization documents (Clinical notes, X-ray/CT report, still photograph) were not submitted or were incomplete.",
+    "Required claim submission documents (Indoor Case Papers, Procedure/Operative Notes, Post-procedure X-ray, Post-procedure clinical photograph, Discharge Summary) were not submitted or were incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for surgery only if diagnosis made is backed by clinical presentation and investigations.",
+      "Nasal bone is the commonest facial bone prone for fracture owing to the prominent projection of the bone in the face. It can occur in isolation or in combination with other facial soft tissue and bony injuries which mandates thorough evaluation of patients presenting with facial trauma for a timely detection and management of nasal bone fractures."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Inadequate assessment of displaced fracture due to soft tissue swelling",
+      "Skull base fracture",
+      "CSF leak",
+      "Meningitis"
+    ],
+    "timing_of_surgery": [
+      "Within 3-4 hours of trauma prior to onset of soft tissue swelling",
+      "After resolution of soft tissue swelling, but before 2 weeks of trauma (time for onset of fracture healing)",
+      "Immediately in the presence of septal hematoma/abscess"
+    ],
+    "common_complications": [
+      "Septal hematoma/abscess",
+      "Bleeding",
+      "Persistent/inadequate reduction"
+    ]
+  }
+}

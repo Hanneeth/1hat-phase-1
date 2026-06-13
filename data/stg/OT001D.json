@@ -1,0 +1,102 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "OT001D",
+  "procedure_code": "OT001D",
+  "condition": "Renal Transplant – Follow up",
+  "procedure_name": "Post-Transplant Medication – Month 1-3",
+  "specialty": "Organ and Tissue Transplant",
+  "version": "1.1",
+  "source_files": [
+    "Renal transplantation - follow up_MEDCO.pdf",
+    "Renal transplantation - follow up_PPD_CPD.pdf"
+  ],
+  "alos": null,
+  "min_doctor_qualification": [
+    "DM/DNB/Fellowship/Equivalent training in transplant Nephrology (in Nephrology)",
+    "MCh/DNB/Fellowship or Equivalent training (in Kidney Transplant Surgery /Urology Surgery)"
+  ],
+  "clinical_indications": [
+    "Requirement for post-transplant immunosuppressive medication and monitoring following kidney transplantation.",
+    "Patients require close follow-up after transplantation due to complex immunosuppressive regimens rendering them susceptible to infection, malignancy, diabetes, and cardiovascular disease (CVD).",
+    "Long-term graft function is critical; regular long-term follow-up by experienced transplant physicians is essential to detect complications or graft dysfunction early and ensure adherence to the immunosuppressive regimen."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "discharge_summary_last_admission",
+        "label": "Discharge summary of the last admission"
+      },
+      {
+        "key": "clinical_notes_current_visit",
+        "label": "Clinical notes including examination findings of the current visit"
+      },
+      {
+        "key": "investigation_requirement_current_visit",
+        "label": "Any requirement of the investigation for the current visit (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "details_of_drugs",
+        "label": "Details of the drugs (invoice/receipt) and dosages"
+      },
+      {
+        "key": "investigation_reports_if_done",
+        "label": "Investigation reports (if done)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Previous admission discharge summary – condition, treatment details and follow-up advice?",
+        "expected": true
+      },
+      {
+        "q": "Current visit -Physical Examination, any complications, follow-up advice along with treatment or investigations?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Clinical notes of the patient by the treating doctor including key findings and advice for follow-up including investigations andany referrals to multidisciplinary teams as indicated?",
+        "expected": true
+      },
+      {
+        "q": "Invoice/receipt of drugs and dosages documentation?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes do not mention clinical examination, investigations, complications, medication plan, or follow-up advice for the current visit.",
+    "Previous admission discharge summary is missing or incomplete (lacks condition, treatment details, or follow-up advice).",
+    "Current visit clinical notes are missing or incomplete (lacks physical examination, complications, follow-up advice, treatment, or investigations).",
+    "Clinical notes from the treating doctor are missing or incomplete for claim (lacks key findings, follow-up advice, investigations, or multidisciplinary team referrals).",
+    "Invoice/receipt for drugs and dosages is missing or incomplete at claim submission.",
+    "Mandatory investigation reports, if applicable, are not provided for the current visit."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facility should be registered as per HOTA (THE HUMAN ORGANS TRANSPLANTATION) Act for intervention procedures. Care at a Tertiary Hospital. The Hospital should have the required infrastructure of transplantation like Normothermic perfusion system, vascular access, pre-transplant work-up, dialysis, transplant immunology (HLA & cross match), transplant pathology and post-transplant care.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Kidney transplantation is the treatment of choice for patients with end-stage kidney disease.",
+      "Patients require close follow-up after transplantation since they are on complex immunosuppressive regimens that render them susceptible to infection, malignancy, diabetes, and cardiovascular disease (CVD).",
+      "The frequency of follow-up varies among centers and depends upon the stability of the patient.",
+      "Patients often have multiple comorbidities due to, or as a cause of, their underlying end-stage kidney disease and may have complications of reduced kidney function, such as anemia and bone disease.",
+      "Patients are also at risk for opportunistic infections including cytomegalovirus (CMV), Pneumocystis jirovecii (formerly carinii) pneumonia (PCP), and polyomavirus (BK and John Cunningham [JC] virus).",
+      "Long-term graft function is of critical importance for the success of a transplant. Therefore, regular long-term follow-up by experienced transplant physicians is essential in order to detect complications or graft dysfunction early and reassure adherence to the immunosuppressive regimen.",
+      "Other important long-term problems are non-adherence, the development of anti-HLA antibodies, recurrence of the original disease and CNI-associated nephrotoxicity."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Patients require lifelong regular post-transplant follow-up by an experienced transplant specialist (at least every six to twelve months). This includes adherence to immunosuppressive regimens, appropriate lifestyle changes, and monitoring for potential complications such as infection, malignancy, diabetes, CVD, and complications of reduced kidney function (anemia, bone disease). Routine monitoring involves regularly checking serum creatinine, eGFR, blood pressure, urinary protein excretion, immunosuppression levels, and screening for proteinuria. Graft function is evaluated through serum creatinine and proteinuria, with kidney biopsy considered for dysfunction. Immunosuppression regimens (glucocorticoids, CNIs, antimetabolic agents, mTOR inhibitors, costimulatory blockade agents) are continued long-term, with careful consideration of efficacy and side effects. Medical treatment for hypertension, diabetes, proteinuria, and cardiac risk factors is initiated as per guidelines. Regular laboratory tests include basic chemistry, CBC, immunosuppressant levels, urinalysis, urine protein-to-creatinine ratio, fasting glucose, HbA1c, fasting lipid profile, PTH, 25-hydroxyvitamin D, BK virus PCR, and CMV blood PCR.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

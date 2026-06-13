@@ -1,0 +1,145 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "BM005A",
+  "procedure_code": "BM005A",
+  "condition": "Chemical Burns",
+  "procedure_name": "Chemical burns: Without significant facial scarring and/or loss of function; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+  "specialty": "Burns Management",
+  "version": "1.1",
+  "source_files": [
+    "Chemical Burn_Medco.pdf",
+    "Chemical Burn_PPD.CPD.pdf"
+  ],
+  "alos": "21 days",
+  "min_doctor_qualification": [
+    "M. Ch. / DNB / or equivalent (in Plastic Surgery)"
+  ],
+  "clinical_indications": [
+    "Surgical procedures are required for deep burns that are not amenable to heal with dressings alone."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "burn_depth",
+      "operator": "is",
+      "value": "deep partial thickness or full thickness",
+      "note": "as per patient presentation"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_circumstances",
+        "label": "Clinical notes mentioning the circumstances that led to Chemical Burn"
+      },
+      {
+        "key": "mlc_copy",
+        "label": "MLC copy with number"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical Photograph of the affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "burn_percentage_rule_of_9",
+        "label": "Document showing % of burn through rule of 9"
+      },
+      {
+        "key": "post_treatment_clinical_photograph",
+        "label": "Post treatment clinical photograph"
+      },
+      {
+        "key": "blood_test_reports",
+        "label": "Blood test (CBC, Sr. creatinine, Platelet etc.)"
+      },
+      {
+        "key": "x_ray",
+        "label": "X ray"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure / operative notes"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes clearly mentioning the areas affected by burn with % of TBSA burn as per rule of 9?",
+        "expected": true
+      },
+      {
+        "q": "Was the Copy of MLC with number submitted?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of the affected part",
+        "expected": true
+      },
+      {
+        "q": "Did the Clinical notes mentioning the circumstances that led to Chemical burn submitted?",
+        "expected": true
+      },
+      {
+        "q": "Has the patient presented with either all or some burns of deep partial thickness or full thickness?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is there documentary evidence of indication of surgery submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed operative notes available with indications for surgery and outcomes of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is discharge summary available with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Is the post treatment photograph available?",
+        "expected": true
+      },
+      {
+        "q": "Was all the lab test report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes for chemical burn circumstances missing or incomplete at pre-authorization.",
+    "MLC copy with number missing at pre-authorization.",
+    "Clinical photograph of affected area not submitted at pre-authorization.",
+    "Documentation for % TBSA burn (Rule of 9) missing at claim submission.",
+    "Patient's burn depth not documented as deep partial thickness or full thickness, or documentation is insufficient.",
+    "Operative notes lacking details on indications for surgery or procedure outcomes at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Discoloration of the skin with clear line of demarcation",
+      "Brown or black with sulphuric acid and yellow with nitric acid",
+      "The trickle marks are the special features",
+      "Absence of blisters",
+      "Chemical substance may be present over the surface and the clothing's",
+      "The acid burn victim suffers from severe pain and burning"
+    ],
+    "surgical_options": null,
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

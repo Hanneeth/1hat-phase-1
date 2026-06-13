@@ -1,0 +1,109 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Clinic based therapeutic interventions of ENT/ : Clinic based therapeutic interventions of ENT_Medco.pdf (clinical + mandatory docs) + Clinic based therapeutic interventions of ENT_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "SL035D",
+  "procedure_code": "SL035D",
+  "condition": "Clinic based therapeutic interventions of ENT",
+  "procedure_name": "Wide bore needle aspiration",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Clinic based therapeutic interventions of ENT_Medco.pdf",
+    "Clinic based therapeutic interventions of ENT_PPD.CPD.pdf"
+  ],
+  "alos": "daycare",
+  "min_doctor_qualification": [
+    "MS/ DNB or equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Purulent or other collected fluid from abscesses and post-surgical sites (for pathological/microbiological evaluation and relief from pressure effect)",
+    "Localized deep neck space abscesses (e.g., quinsy)",
+    "Post-surgical seroma"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the day care procedure"
+      },
+      {
+        "key": "nasoendoscopy_radiology_audiometry_findings",
+        "label": "Nasoendoscopy/ radiology/ audiometry findings to justify the need for Procedure"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes detailing signs and symptoms, treatment given"
+      },
+      {
+        "key": "procedure_note_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "post_procedure_clinical_picture_radiology",
+        "label": "Post procedure clinical picture (wide bore aspiration) and radiology (optional, wide bore needle aspiration)"
+      },
+      {
+        "key": "discharge_summary_report",
+        "label": "Discharge summary report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the day care procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Nasoendoscopy/ radiology/ audiometry report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was clinical notes detailing signs and symptoms, treatment given are submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure clinical picture (wide bore aspiration) and radiology (optional, wide bore needle aspiration) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge summary report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or nasoendoscopy/radiology/audiometry report not indicative of the wide bore needle aspiration procedure.",
+    "Clinical notes for pre-authorization missing or incomplete for wide bore needle aspiration.",
+    "Nasoendoscopy/radiology/audiometry findings to justify wide bore needle aspiration procedure missing at pre-authorization.",
+    "Post-procedure clinical picture or radiology for wide bore needle aspiration not submitted.",
+    "Procedure note/operative note for wide bore needle aspiration missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Wide bore needle aspiration is the procedure of aspirating purulent or other collected fluid from abscesses and post-surgical sites for pathological/ microbiological evaluation and relief from pressure effect.",
+      "Common indications are localized deep neck space abscesses (e.g, quinsy) and post-surgical seroma.",
+      "Radiology is advisable to confirm the diagnosis prior to wide bore needle aspiration."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

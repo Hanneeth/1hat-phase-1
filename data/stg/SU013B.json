@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU013B",
+  "procedure_code": "SU013B",
+  "condition": "Perinephric Abscess drainage",
+  "procedure_name": "Percutaneous Perinephric Abscess drainage",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Perinephric Abscess drainage_Medco.pdf",
+    "Perinephric Abscess drainage_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MCh/DNB equivalent in Urology"
+  ],
+  "clinical_indications": [
+    "Occurs secondary to urinary tract obstruction and/or hematogenous spread from infection sites.",
+    "Complication of urologic infection which results from fat necrosis.",
+    "Prolonged bacteremia with Staphylococcus aureus",
+    "These abscesses can extend from the Gerota's fascia into the psoas and transversalis muscles as well as the peritoneal cavity and the pelvis.",
+    "Diagnosis should be considered in any patient with fever and abdominal or flank pain."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "usg_ct_report_perinephric_abscess_diagnosis",
+        "label": "USG/CT report confirming the diagnosis of perinephric abscess."
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "intra_procedure_still_photograph",
+        "label": "Intra procedure still photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG/CT report confirming the diagnosis of perinephric abscess submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Clinical notes and USG/CT report indicative of the Perinephric abscess drainage procedure ?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intra procedure still photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or USG/CT report do not indicate the need for Perinephric abscess drainage procedure",
+    "Missing or incomplete clinical notes including evaluation findings and planned line of treatment at pre-authorization",
+    "Missing or incomplete USG/CT report confirming the diagnosis of perinephric abscess at pre-authorization",
+    "Missing or incomplete detailed Procedure / Operative Notes at claim submission",
+    "Missing intra procedure still photograph at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facility",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Perinephric Abscess drainage only if diagnosis made is backed by clinical manifestation",
+      "Perinephric Abscess is a collection of suppurative material in the renal parenchyma or perinephric space, with a presentation that is insidious (> 14 d). Perinephric abscess drainage is very important because delay in diagnosis increases the risk of morbidity and mortality."
+    ],
+    "surgical_options": [
+      "When kidneys are not functioning or are severely infected, nephrectomy (open or laparoscopic) is the classic treatment for perinephric abscesses.",
+      "Treatment is usually with percutaneous drainage and adjunctive antibiotics.",
+      "Open surgical debridement with placement of large drains may be necessary if percutaneous drainage is ineffective; Certain conditions, such as renal cortical abscess, enteric fistulas, or multilocular abscesses, may require immediate surgical intervention.",
+      "Percutaneous drainage diagnostic aspiration under ultrasonographic guidance carries minimal morbidity. A needle is passed percutaneously into the abscess cavity under ultrasonographic or CT guidance."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Percutaneous drainage is relatively contraindicated in large abscess cavities that are filled with a thick purulent fluid."
+    ]
+  }
+}

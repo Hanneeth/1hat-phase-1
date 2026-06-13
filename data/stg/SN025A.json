@@ -1,0 +1,135 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN025A",
+  "procedure_code": "SN025A",
+  "condition": "Arteriovenous Malformations (AVM)",
+  "procedure_name": "Arteriovenous malformation (AVM) excision - Intracranial",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Arteriovenous Malformation_Medco.pdf",
+    "Arteriovenous Malformation_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent in (Neurosurgery, if required Vascular Surgeon)"
+  ],
+  "clinical_indications": [
+    "Arteriovenous malformation (AVM) is a congenital vessel abnormality with abnormal communication between artery and vein",
+    "Intracerebral hemorrhage (most common)",
+    "Seizure",
+    "Headache",
+    "Focal neurologic deficit",
+    "Incidental finding"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "Spetzler-Martin AVM score",
+      "operator": "<=",
+      "value": "III",
+      "note": "for surgical candidates for Brain AVMs"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "ct_mri_brain_spine",
+        "label": "CT/MRI Brain/Spine"
+      },
+      {
+        "key": "angiography",
+        "label": "Angiography"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with detailed history, signs & symptoms, indication for procedure, and planned line of treatment available?",
+        "expected": true
+      },
+      {
+        "q": "Imaging confirmed the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Clinical presentation, history and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs with daily vitals and line of treatment available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Documentation of indication for GKRS/SRS treatment (if applicable)?",
+        "expected": false
+      },
+      {
+        "q": "Discharge summary with follow-up advise at the time of discharge available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing, incomplete, or not detailing history, signs & symptoms, indication for procedure, or planned line of management.",
+    "Diagnosis not confirmed by imaging (CT/MRI Brain/Spine, Angiography).",
+    "Clinical presentation, history, or imaging not indicative of surgery.",
+    "Detailed Indoor case papers (ICPs) or operative notes missing/incomplete.",
+    "Discharge summary missing or lacking follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital. SRS/GKRS procedure in hospitals with availability",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Arteriovenous malformation (AVM) is a congenital vessel abnormality with abnormal communication between artery and vein",
+      "Nidus is a tangle of arteries and veins connected by at least one fistula.",
+      "An AVM can occur anywhere in the body, but brain and spinal AVMs present substantial risks when they bleed"
+    ],
+    "surgical_options": [
+      "Surgery - For Spetzler-Martin I-III score AVMs",
+      "Radiosurgery – For lesions in deep or eloquent areas that are unresectable",
+      "Radiosurgery – For patients who cannot have surgery or do not desire to undergo surgery",
+      "Endovascular embolization - For lesions"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

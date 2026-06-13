@@ -1,0 +1,124 @@
+{
+  "_comment": "One procedure code SN004A, previously S800009. Extracted from Craniostenosis_Medco.pdf and Craniostenosis_PPD.CPD.pdf.",
+  "stg_id": "SN004A",
+  "procedure_code": "SN004A",
+  "condition": "Craniostenosis",
+  "procedure_name": "Craniostenosis",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Craniostenosis_Medco.pdf",
+    "Craniostenosis_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "Mch/DNB/equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Premature pathologic fusion of one or more cranial vault sutures leading to abnormal shape of the skull.",
+    "Misshaped skull potentially leading to body image problems later in life.",
+    "Presence of raised intracranial pressure (ICP), especially in cases with multiple suture involvement (syndromic cases, ~40% cases).",
+    "Need to restore normal appearance of the skull.",
+    "Need to increase cranial volume to accommodate the growing brain without pressure effects on vital structures.",
+    "Uncorrected continued calvarial deformity leading to abnormalities in the cranial base.",
+    "Consensus to operate around 9-12 months of age, as surgical risk is less and the child is in a better position to withstand surgery, and infant skull bones are pliable for moulding."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indication of procedure and planned line of management"
+      },
+      {
+        "key": "ct_mri_report_skull",
+        "label": "CT/MRI report of skull establishing need for surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_xray_skull",
+        "label": "Post Procedure X-ray with report of skull"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph/scar photo (Optional)"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure/ Operation notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of management, indication for procedure, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Was CTA/MRI skull report of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was CT/ MRI skull report of patient indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure X-ray report of skull submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "CT/ MRI skull report not indicative of surgery for Craniostenosis, or not submitted at pre-authorization.",
+    "Clinical notes missing or incomplete (lacking detailed history, signs & symptoms, planned management, indication, or admission advice) at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) are missing or incomplete (lacking daily vitals and treatment details) at claim submission.",
+    "Post-procedure X-ray report of skull missing or not submitted at claim submission.",
+    "Detailed Procedure/Operation notes missing or incomplete at claim submission.",
+    "Detailed Discharge Summary missing or lacking follow-up advice at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Craniostenosis or Craniosynostosis is a premature pathologic fusion of one or more cranial vault sutures that leads to abnormal shape of the skull.",
+      "The fused sutures lead to restricted growth in some areas and compensatory bossing in other areas. The head may assume different shapes depending upon the site and timing of the abnormally fused suture.",
+      "The exact cause of this suture pathology is still unknown, but the local dura, cranial base and the fibroblast growth factors seem to influence this.",
+      "Diagnosis relies on clinical examination (important) and confirmation via computed tomography (CT) scan.",
+      "The normal head has an egg shape; in craniosynostosis, the skull shape is altered depending on the prematurely fused suture(s).",
+      "Surgical risk is lower at 9-12 months of age, when the child is better able to withstand surgery, infant skull bones are pliable for molding, and small bony defects ossify easily."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

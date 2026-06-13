@@ -1,0 +1,137 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG109A",
+  "procedure_code": "SG109A",
+  "condition": "Endoscopic Retrograde Cholangiopancreatography (ERCP)",
+  "procedure_name": "ERCP",
+  "specialty": "General Surgery",
+  "version": "1.2",
+  "source_files": [
+    "ERCP_Medco.pdf",
+    "ERCP_PPD.CPD.pdf"
+  ],
+  "alos": "01 Day",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery) or Gastroenterologist"
+  ],
+  "clinical_indications": [
+    "Obstructive Jaundice",
+    "Biliary or Pancreatic ductal system disease treatment or tissue sampling",
+    "Pancreatitis of unknown cause",
+    "Manometry of Sphincter of Oddi",
+    "Nasobiliary drainage",
+    "Biliary stenting for strictures and leakage",
+    "Drainage of pancreatic pseudocysts",
+    "Balloon dilation of duodenal papilla and ductal strictures"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes with history and examination with indication for the procedure"
+      },
+      {
+        "key": "cbc_and_lft",
+        "label": "CBC and LFT"
+      },
+      {
+        "key": "usg_abdomen",
+        "label": "USG Abdomen"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "ercp_photograph",
+        "label": "ERCP photograph"
+      },
+      {
+        "key": "invoice_barcode_stent",
+        "label": "Invoice or barcode of the stent (if used)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Admission notes comprising of history and examination with indications for the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Are the relevant investigations like CBC, LFT and USG establishing diagnosis submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether the investigation reports confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Operative/Procedure notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advice available at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Is the ERCP photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the invoice or barcode of the stent (if used) submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical history/investigations are not indicative of the procedure.",
+    "Investigation reports do not confirm the diagnosis.",
+    "Mandatory clinical notes with history and examination are missing or incomplete at pre-authorisation.",
+    "Mandatory investigations (CBC, LFT, USG Abdomen) are missing at pre-authorisation.",
+    "Detailed Indoor Case Papers (ICPs) are missing or incomplete at claim submission.",
+    "Detailed Operative/Procedure notes are missing or incomplete at claim submission.",
+    "ERCP photograph is missing at claim submission.",
+    "Invoice or barcode of the stent (if used) is missing at claim submission.",
+    "Detailed Discharge Summary is missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Endoscopic Retrograde Cholangiopancreatography (ERCP) is a combined endoscopic and fluoroscopic procedure in which an upper endoscope is led into a second part of the duodenum, making it possible for the passage of other tools via the major duodenal papilla into the biliary and pancreatic ducts.",
+      "ERCP as a Diagnostic Procedure: To perform Cholangiopancreatoscopy, biopsy, brush cytology or ductal ultrasound.",
+      "ERCP as a Therapeutic Procedure: To perform Sphincterotomy, stent placement and stone removal."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

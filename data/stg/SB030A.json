@@ -1,0 +1,97 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB030A",
+  "procedure_code": "SB030A",
+  "condition": "Fractures requiring Tension Band Wiring",
+  "procedure_name": "Tension Band Wiring",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Tension Band wiring_Medco.pdf",
+    "Tension Band wiring_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Patella fractures",
+    "Olecranon fractures",
+    "Tuberosity of the humerus fractures",
+    "Lateral malleoli fractures",
+    "Medial malleoli fractures",
+    "Trochanter of the femur fractures"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "x_ray_pre_op_labelled",
+        "label": "X-ray labelled with patient ID, date and side (Left/ Right) - affected limb"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "x_ray_post_op_labelled",
+        "label": "Post-op X-ray labelled with patient ID, date and side (Left/Right) - affected limb"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice and barcode of implant"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Does the Post Procedure X Ray show the Implant/Wire/Plate and type of Fracture?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Post Procedure X-Ray does not show the implant/wire/plate or the type of fracture is not discernible",
+    "Pre-operative X-ray is missing or not labelled with patient ID, date, and affected side",
+    "Post-operative X-ray is missing or not labelled with patient ID, date, and affected side",
+    "Invoice or barcode of the implant is missing",
+    "Detailed Procedure / Operative Notes are missing"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Tension band wiring is a fixation technique which results in absolute stability.",
+      "Interfragmentary compression and direct bone healing is obtained.",
+      "Tension band wiring (TBW) remains the most widespread method for fracture osteosynthesis, of Olecranon fractures, Patella fracture, elbow, Femur.",
+      "It is the most common operative technique for the internal fixation of olecranon fractures.",
+      "The principle of tension band wiring is to bring interfragmentary compression on a bending fracture by applying a 'tension band' on the 'tension side' of the bone.",
+      "The 'tension band' may be wire or plate."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU061A",
+  "procedure_code": "SU061A",
+  "condition": "Urinary Retention / Bladder Dysfunction",
+  "procedure_name": "Suprapubic Drainage - Closed, Trocar",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Suprapubic Drainage - Closed,Trocar_Medco.pdf",
+    "Suprapubic Drainage - Closed,Trocar_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Acute and chronic urinary retention",
+    "Severe Benign prostatic hyperplasia (BPH), false urethral passages, morbid obesity, urethral strictures, bladder neck contracture",
+    "Genital malignancy",
+    "Neurogenic bladder",
+    "Urogenital trauma causing urethral disruption",
+    "Benign hypertrophy and carcinoma of the prostate",
+    "Reduces the pre and postoperative morbidity and mortality of several diseases"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_planned_management",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure."
+      },
+      {
+        "key": "usg_ct_diagnosis_confirmation_and_need",
+        "label": "USG/CT confirming the diagnosis and need for the procedure"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes detailing how urine was drained."
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG/CT diagnosis recommending for the Suprapubic drainage report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or USG/CT diagnosis report not indicative of the procedure.",
+    "Clinical notes including evaluation findings, indication for procedure, planned line of management, and advice not submitted or incomplete.",
+    "USG/CT diagnosis recommending suprapubic drainage not submitted.",
+    "Detailed Indoor case papers with daily vitals and treatment details not submitted or incomplete.",
+    "Detailed Procedure / Operative Notes detailing how urine was drained not available or incomplete.",
+    "Discharge summary with follow-up advise at the time of discharge not available or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Suprapubic Drainage or Percutaneous suprapubic catheterization (SPC) is a procedure for urinary drainage.",
+      "To manage bladder dysfunction and urinary retention, difficulty in urethral catheterization, a suprapubic cystostomy may be a valuable measure for emergency drainage of the bladder.",
+      "Urinary tract infection which accompanies urethral drainage is largely eliminated with Suprapubic trocar drainage of bladder."
+    ],
+    "surgical_options": [
+      "Urethral catheterization",
+      "Intermittent catheterization",
+      "Urinary diversion",
+      "Percutaneous nephrostomy drainage"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

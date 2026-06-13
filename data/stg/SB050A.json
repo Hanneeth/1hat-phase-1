@@ -1,0 +1,139 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB050A",
+  "procedure_code": "SB050A",
+  "condition": "Fasciotomy",
+  "procedure_name": "Fasciotomy",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Fasciotomy -Duputryens Contracture release + rehabilitation_Medco.pdf",
+    "Fasciotomy -Duputryens Contracture release + rehabilitation_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Difference between compartment pressure and diastolic pressure is less than 20 mmHg",
+    "Compartment pressure is greater than 30 mmHg with the correlation of clinical signs"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "compartment_pressure_diastolic_pressure_difference",
+      "operator": "<",
+      "value": "20 mmHg",
+      "note": null
+    },
+    {
+      "field": "compartment_pressure",
+      "operator": ">",
+      "value": "30 mmHg",
+      "note": "with correlation of clinical signs"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "usg_report",
+        "label": "USG report labelled with patient ID, date and side (Left/Right) of Affected part"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post-Procedure clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical documents justifying surgery?",
+        "expected": true
+      },
+      {
+        "q": "USG report labelled with patient ID, date and side (Left/Right) of Affected part?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part?",
+        "expected": true
+      },
+      {
+        "q": "Does the USG report mention the type and location of Fasciotomy conducted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Indoor case papers (ICPs)?",
+        "expected": true
+      },
+      {
+        "q": "Post-Procedure clinical photograph?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Procedure / Operative Notes?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge summary?",
+        "expected": true
+      },
+      {
+        "q": "Do the Post procedure detailed Operative notes mention the type and location of Fasciotomy conducted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical justification for fasciotomy is missing or incomplete, lacking details on compartment pressure or correlation with clinical signs.",
+    "USG report for the affected part is missing or not labelled with patient ID, date, or side (Left/Right).",
+    "USG report does not specify the type and location of fasciotomy conducted.",
+    "Clinical photograph of the affected part is missing at pre-authorization.",
+    "Post-procedure detailed operative notes are missing or do not specify the type and location of fasciotomy conducted.",
+    "Mandatory claim documents (Indoor case papers, post-procedure clinical photograph, detailed procedure/operative notes, discharge summary) are missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "A fasciotomy is an emergency procedure used to treat acute compartment syndrome, when the pressure builds up in a non-compliant Osseo fascial compartment and causes ischemia leading to muscle and nerve necrosis.",
+      "It occurs most commonly In the volar compartment of the forearm, deep posterior, or anterior compartment of the leg, buttocks and lumbar paraspinous muscle.",
+      "It can, however, happen in any closed space where there is muscle surrounded by substantial fascia, i.e., the hand, foot, thigh, or buttock.",
+      "Acute compartment syndrome often follows high energy trauma, fractures, circumferential burns, crush injuries, or even a tight plaster cast.",
+      "Chronic compartment syndrome develops with muscular overuse and commonly occurs in the leg of runners or military personnel or the forearm of weightlifters and rowers. Occasionally acute exertional compartment syndrome can be seen after strenuous exertion."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

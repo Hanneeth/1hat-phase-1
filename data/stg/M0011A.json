@@ -1,0 +1,109 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M0011A",
+  "procedure_code": "M0011A",
+  "condition": "Extremity Soft tissue sarcoma",
+  "procedure_name": "CT for Soft Tissue Sarcoma (Gemcitabine + Docetaxel)",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Soft tissue sarcoma Guidelines.pdf"
+  ],
+  "alos": "1",
+  "min_doctor_qualification": [
+    "M.Ch. or DM (Medical oncology) or equivalent"
+  ],
+  "clinical_indications": [
+    "TNM 8th ed, Stages I-III and selected Stage IV (pulmonary metastasis treated with curative intent)",
+    "NACT, Adjuvant, mets (if cardiac dysfunction)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with documentation of relevant history"
+      },
+      {
+        "key": "investigations",
+        "label": "Investigations- CBC, LFT, RFT, RBS, local & chest X-ray, MRI (of affected region)"
+      },
+      {
+        "key": "core_needle_biopsy",
+        "label": "Core needle biopsy"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "ncct_chest",
+        "label": "NCCT chest"
+      },
+      {
+        "key": "usg_abdomen_pelvis_axilla",
+        "label": "USG Abdomen, pelvis and axilla"
+      }
+    ],
+    "claim": [
+      {
+        "key": "mandatory_parameters_monitored",
+        "label": "Mandatory parameters to be monitored: Haemogram, cardiac, renal and hepatic functioning."
+      },
+      {
+        "key": "drug_bar_code",
+        "label": "Bar code of the drugs"
+      },
+      {
+        "key": "reports_of_tests",
+        "label": "Reports of the tests (pathology, radiology, microbiology, hematology, biochemistry, etc.)"
+      },
+      {
+        "key": "discharge_summary_inpatient",
+        "label": "Discharge summary of inpatient department"
+      },
+      {
+        "key": "discharge_summary_day_care",
+        "label": "Discharge summary of day care department"
+      },
+      {
+        "key": "chemotherapy_regimen_charts",
+        "label": "Charts of chemotherapy regimen"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Any soft tissue lump exhibiting clinical features (Increasing in size, Size >5 cm, Deep to the deep fascia, Painful) that should be considered malignant until proved otherwise?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Soft tissue lump clinical features (increasing size, >5cm, deep to fascia, painful) not documented or not indicating malignancy",
+    "Clinical notes with relevant history are missing or incomplete at pre-authorization",
+    "Investigations (CBC, LFT, RFT, RBS, local & chest X-ray, MRI (of affected region)) are missing or incomplete at pre-authorization",
+    "Bar code of the drugs is missing at claim submission",
+    "Mandatory parameters monitored (Haemogram, cardiac, renal and hepatic functioning) are not documented at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Chemotherapy unit; LINEAC; well-equipped OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Physiotherapy rehabilitation post-operatively, follow-up every 6 months for first 5 years and annual follow-up after every 5 years with clinical evaluation (examination of local area), radiological evaluation (X-ray of the local part and Chest) and functional evaluation (using special scores like Musculoskeletal Tumor Society (MSTS) scoring, etc.)",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

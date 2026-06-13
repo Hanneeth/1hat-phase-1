@@ -1,0 +1,143 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "IN010A",
+  "procedure_code": "IN010A",
+  "condition": "Vertebroplasty",
+  "procedure_name": "Vertebroplasty",
+  "specialty": "Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "Vertebroplasty_Medco.pdf",
+    "Vertebroplasty_PPD.CPD.pdf"
+  ],
+  "alos": "3 Days",
+  "min_doctor_qualification": [
+    "DM/Equivalent (in Interventional Neuroradiology)",
+    "MCh/DNB/Equivalent (in Neurosurgery)",
+    "MS/Equivalent in Orthopedics"
+  ],
+  "clinical_indications": [
+    "Painful osteoporotic collapse vertebra",
+    "Painful metastatic collapse vertebra",
+    "Painful Hemangioma of vertebra",
+    "Post traumatic painful partial collapse in a non-osteoporotic vertebra without retropulsion causing cord compression"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_including_clinical_evaluation_and_confirming_diagnosis",
+        "label": "Clinical notes including clinical evaluation and confirming the diagnosis"
+      },
+      {
+        "key": "x_ray_spine_ap_and_lateral_view",
+        "label": "X-ray Spine (AP and lateral view)"
+      },
+      {
+        "key": "mri_spine",
+        "label": "MRI Spine"
+      },
+      {
+        "key": "investigations_optional_complete_blood_count_inr_pt_serum_creatinine",
+        "label": "Investigations (optional) Complete blood count, INR/PT, Serum creatinine"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "in_case_of_accident_trauma_fir_if_applicable",
+        "label": "In case of accident/trauma – FIR (if applicable)"
+      },
+      {
+        "key": "documentary_evidence_invoice_of_cement_used_as_applicable",
+        "label": "Documentary evidence/Invoice of cement used as applicable"
+      },
+      {
+        "key": "histopathological_examination_if_applicable",
+        "label": "Histopathological examination (if applicable)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history especially accident history, signs & symptoms, indication for procedure, and planned line of treatment available?",
+        "expected": true
+      },
+      {
+        "q": "Did CT/MRI confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Cement invoice/barcode/documentary evidence if applicable?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, investigations, or imaging not indicative of surgery.",
+    "Evidence of breach in posterior cortex of vertebral body, epidural extension, vertebra plana, or uncorrectable coagulopathy without justification.",
+    "Missing X-ray Spine (AP and lateral view) at pre-authorization.",
+    "Missing MRI Spine at pre-authorization.",
+    "Missing detailed procedure / operative notes at claim submission.",
+    "Missing documentary evidence/invoice of cement used (if applicable) at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at District/Tertiary Hospital (centers equipped with capability to perform Interventional neuroradiology)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Vertebroplasty is injection of bone cement into a diseased vertebra, Percutaneously, under image guidance. This is done to provide pain relief and to strengthen the diseased vertebra."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Breach in the posterior cortex of the vertebral body",
+      "Epidural extension",
+      "Vertebra plana",
+      "Uncorrectable coagulopathy"
+    ]
+  }
+}

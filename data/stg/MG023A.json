@@ -1,0 +1,94 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG023A",
+  "procedure_code": "MG023A",
+  "condition": "Septic Arthritis",
+  "procedure_name": "Septic Arthritis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Septic arthritis_Medco.pdf",
+    "Septic arthritis_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MD / DNB equivalent (in General medicine, Pediatric Medicine)"
+  ],
+  "clinical_indications": [
+    "Infection in a joint (Septic Arthritis)",
+    "Septic arthritis due to bacterial infection (destructive form of acute arthritis)",
+    "Presence of Fever",
+    "Presence of Joint pain",
+    "Presence of Joint swelling"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "synovial_fluid_wbc_count",
+      "operator": ">",
+      "value": "50,000/μL",
+      "note": "WBC count findings in synovial joint fluids"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "cbc_x_ray_report",
+        "label": "CBC,X-ray report"
+      },
+      {
+        "key": "synovial_fluid_analysis",
+        "label": "Synovial fluid analysis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed indoor case papers with treatment details"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the synovial joint fluids show WBC count findings that exceeds 50,000/μL?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Synovial fluid WBC count not documented or documented below the 50,000/μL threshold without justification",
+    "Missing clinical notes at pre-authorization",
+    "Missing CBC,X-ray report at pre-authorization",
+    "Missing synovial fluid analysis report at pre-authorization",
+    "Missing detailed indoor case papers at claim submission",
+    "Missing detailed discharge summary at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MBBS",
+    "clinical_key_pointers": [
+      "Septic arthritis is synonymous with an infection in a joint.",
+      "Septic arthritis is usually caused by bacteria but can also be caused by other microorganisms.",
+      "Septic arthritis due to bacterial infection is often a destructive form of acute arthritis.",
+      "Septic arthritis is a serious type of joint infection. It should be treated as soon as possible."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN009B",
+  "procedure_code": "SN009B",
+  "condition": "Intracranial Hematoma",
+  "procedure_name": "Surgery for Haematoma - Intracranial Hypertensive",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Intracranial Hematoma_Medco.pdf",
+    "Intracranial Hematoma_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent in (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Non-traumatic spontaneous (hypertensive) intracerebral hematoma (SICH) requiring surgical intervention such as Craniotomy or Hematoma Evacuation."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, and planned line of management"
+      },
+      {
+        "key": "glasgow_coma_score",
+        "label": "Glasgow coma score (GCS)"
+      },
+      {
+        "key": "blood_pressure_monitoring",
+        "label": "Blood pressure monitoring"
+      },
+      {
+        "key": "fundus_examination",
+        "label": "Fundus examination"
+      },
+      {
+        "key": "coagulation_profile",
+        "label": "Coagulation profile"
+      },
+      {
+        "key": "ct_mri_brain",
+        "label": "CT/MRI Brain"
+      },
+      {
+        "key": "intracranial_pressure_monitoring",
+        "label": "Intracranial Pressure Monitoring (ICP) (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "glasgow_coma_score_pediatric_gcs_documentation",
+        "label": "Glasgow coma score (GCS)/ Pediatric GCS documentation"
+      },
+      {
+        "key": "ct_mri_brain",
+        "label": "CT/MRI Brain (optional)"
+      },
+      {
+        "key": "accident_fir_report",
+        "label": "In case of accident FIR report (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure, and planned line of management?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical evaluation and imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the GCS/Pediatric GCS documented?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation, GCS/Pediatric GCS score and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT/MRI Brain report indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "In case of accidental injury was FIR done?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or lacking details on history, symptoms, indication, or planned management.",
+    "GCS score not documented or not indicative of surgery.",
+    "CT/MRI Brain report not indicative of surgery, or imaging not confirming diagnosis.",
+    "FIR report not available for cases of accidental injury (if applicable).",
+    "Detailed Indoor Case Papers (ICPs) missing or without daily vitals and treatment details.",
+    "Detailed Procedure/Operative Notes missing or incomplete.",
+    "Discharge summary missing or without follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Non-traumatic spontaneous (hypertensive) intracerebral hematoma (SICH) is a devastating disease with higher rates of mortality and morbidity than those of ischemic stroke, with an annual incidence of 10–30 per 100,000.",
+      "SICH occurs suddenly due to the rupture of vessels affected by hypertension-related degenerative changes in the cerebral lobes, basal ganglia, thalamus, brainstem, and cerebellum.",
+      "Hypertensive vasculopathy is the most common etiology of spontaneous intracerebral hemorrhage (ICH).",
+      "Some hypertensive hemorrhages occur with exertion or intense emotional activity.",
+      "Clinical Manifestations: The neurologic symptoms and signs usually increase gradually over minutes or a few hours. Some patients with ICH are obtunded or comatose when first discovered or upon arrival to the emergency department. Headache, vomiting, and a decreased level of consciousness develop if the hemorrhage becomes sufficiently large. Seizures, Cardiac abnormalities, Neurologic signs vary depending upon the location of the hemorrhage."
+    ],
+    "surgical_options": [
+      "Craniotomy",
+      "Hematoma Evacuation"
+    ],
+    "pre_op_preparation": "Basic life support, as well as control of bleeding, seizures, blood pressure (BP), and intracranial pressure, are critical. Medications used include: Anticonvulsants (to prevent seizure recurrence), Antihypertensive agents (to reduce BP and other risk factors of heart disease), Osmotic diuretics (to decrease intracranial pressure in the subarachnoid space).",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "To confirm the diagnosis of SICH, other obvious vascular lesions such as cerebral aneurysm, vascular malformation, arterio-venous fistula, moyamoya disease must be excluded."
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE022A",
+  "procedure_code": "SE022A",
+  "condition": "Capsulotomy (YAG)",
+  "procedure_name": "Capsulotomy (YAG)",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Capsulotomy (YAG)_Medco.pdf",
+    "Capsulotomy (YAG)_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma or equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "YAG laser capsulotomy is indicated for treatment of opacification of the posterior capsule resulting in decreased visual acuity or visual function, or both, for the patient."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing when was cataract surgery done & indications for doing the procedure with details of vision and fundus examination)"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph_affected_eye",
+        "label": "Clinical Photograph of the affected eye"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary (optional)"
+      },
+      {
+        "key": "procedure_note_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "intraoperative_photograph_with_time_and_date",
+        "label": "Intraoperative photograph with time and date (Optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Does the patient have a history of cataract surgery in the same eye?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do procedure notes detail the procedure performed and outcomes of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up, if required?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient does not have a history of cataract surgery in the same eye.",
+    "Clinical notes are missing, incomplete, or do not detail prior cataract surgery, indications for current procedure, vision, or fundus examination.",
+    "Admission notes are missing.",
+    "Clinical photograph of the affected eye is missing or not properly labelled R/L.",
+    "Procedure note/operative note is missing or does not detail the procedure performed or outcomes.",
+    "Documents showing appropriate post-op care or follow-up advice are missing.",
+    "Intraoperative photograph with time and date was not submitted (optional document)."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Capsulotomy (YAG) Surgery only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination and does not respond to conservative medical therapy.",
+      "Yttrium-Aluminum-Garnet (YAG) laser is a solid-state laser with a wavelength of 1064 nm that can disrupt ocular tissues.",
+      "YAG laser posterior capsulotomy is a technique for closed-eye, effective, and relatively safe opening of the opacified posterior capsule.",
+      "Its an extracapsular technique in cataract surgery performed in patients with a history of prior cataract surgery.",
+      "Postoperative opacification of initially clear posterior capsules of the lens occurs frequently in patients after extracapsular extraction of senile cataracts. Time to opacification is highly variable. Time from surgery to visually significant opacification varies from months to years in adults. Rate of opacification declines with increasing age. Phacoemulsification is associated with lower rates of opacification than extracapsular cataract extraction."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Medication: Apraclonidine immediately following capsulotomy. Optional: additional antiglaucoma therapy (beta-adrenergic antagonist, pilocarpine, carbonic anhydrase inhibitor, hyperosmotic agents) as needed for IOP control (Patient's medical history, allergies, and current ocular therapy should be reviewed before determining the appropriate acute antiglaucoma therapy). Optional: cycloplegics (1% cyclopentolate at time of treatment); steroids (1% prednisolone or 0.1% dexamethasone 4 times a day tapered as needed); non-steroidal anti-inflammatory drops (nepafenac 0.1% or ketorolac 0.5% 3 times a day or bromfenac 0.09% twice a day over 1 week). Suggested Follow-Up Protocol: 1 hour-4 hours. Pressure rise to 5 mm Hg: Treatment should be given at 1 day, 1 week, 1 month and 3 months.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Absolute Contraindications: Corneal scars, irregularities, or oedema that interfere with target visualization or make optical breakdown unpredictable.",
+      "Absolute Contraindications: Inadequate stability of the eye.",
+      "Relative Contraindications: Glass intraocular lens.",
+      "Relative Contraindications: Known or suspected cystoid macular oedema.",
+      "Relative Contraindications: Active intraocular inflammation.",
+      "Relative Contraindications: High risk for retinal detachment.",
+      "Relative Contraindications: Up to 6 months post op."
+    ]
+  }
+}

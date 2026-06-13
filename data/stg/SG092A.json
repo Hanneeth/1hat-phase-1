@@ -1,0 +1,121 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Tendon Transfer/ : Tendon Transfer_Medco.pdf (clinical + mandatory docs) + Tendon Transfer_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG092A",
+  "procedure_code": "SG092A",
+  "condition": "Tendon Transfer",
+  "procedure_name": "Tendon Transfer",
+  "specialty": "General Surgery, Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Tendon Transfer_Medco.pdf",
+    "Tendon Transfer_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience",
+    "MS/DNB/Equivalent in General Surgery"
+  ],
+  "clinical_indications": [
+    "Peripheral nerve injury that has no potential to improve (e.g., root avulsions, nerve injuries not recovering after direct nerve repair or grafting, failed nerve transfers)",
+    "Peripheral nerve injuries presenting late where muscle reinnervation is impossible due to motor end-plate fibrosis",
+    "Loss of muscle or tendon following trauma",
+    "Central neurologic deficits such as spinal cord injuries and cerebral palsy",
+    "Tendon ruptures in patients with rheumatoid arthritis",
+    "Disability resulting from poliomyelitis",
+    "Disability resulting from leprosy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      },
+      {
+        "key": "evidence_confirmed_diagnosis_leprosy",
+        "label": "Evidence of confirmed diagnosis of Leprosy (If applicable)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "post_op_clinical_photograph",
+        "label": "Post op clinical photograph"
+      },
+      {
+        "key": "detailed_operative_note",
+        "label": "Detailed operative note"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical photograph of affected part confirming the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Evidence of confirmed diagnosis of Leprosy if applicable?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Post-operative clinical photograph submitted showing operative outcome?",
+        "expected": true
+      },
+      {
+        "q": "Detailed operative note includes surgical steps, findings, and implant details (if any)?",
+        "expected": true
+      },
+      {
+        "q": "Detailed discharge summary covers post-operative course and follow-up advice?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical photograph of affected part not confirming the diagnosis or unclear",
+    "Evidence of confirmed diagnosis of Leprosy not submitted when applicable",
+    "Clinical notes missing key information (history, symptoms, findings, indication, planned management, advice for admission)",
+    "Detailed Indoor Case Papers (ICPs) not submitted or incomplete",
+    "Post-op clinical photograph not submitted or unclear",
+    "Detailed operative note not submitted or lacking surgical details"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Definition: A tendon transfer procedure relocates the insertion of a functioning muscle-tendon unit (MTU) in order to restore lost movement and function at another site.",
+      "Principles of successful tendon transfer procedures:",
+      "Supple joints prior to transfer",
+      "Soft tissue equilibrium",
+      "Donor of adequate excursion",
+      "Donor of adequate strength",
+      "Expendable donor",
+      "Straight line of pull",
+      "Synergy",
+      "Single function per transfer"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

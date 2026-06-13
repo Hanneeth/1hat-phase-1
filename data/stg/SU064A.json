@@ -1,0 +1,101 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code. HBP 1.0 code: S700158; HBP 2.0 code: SU064A. SU064A is used as the primary procedure code.",
+  "stg_id": "SU064A",
+  "procedure_code": "SU064A",
+  "condition": "Acute retention of Urine",
+  "procedure_name": "Emergency management of Acute retention of Urine",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Emergency management of Acute retention of Urine_Medco.pdf",
+    "Emergency management of Acute retention of Urine_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Inability to pass urine",
+    "Suprapubic pain",
+    "Irritability"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "usg_abdomen_report",
+        "label": "USG abdomen report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_notes_catheterization_urine_drained",
+        "label": "Detailed procedure notes with documentation of evidence of simple catheterization and details of how much urine drained"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was detailed clinical notes (all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment) are submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Ultrasound report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG abdomen suggestive of any condition suggestive of urine retention?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Indoor case papers submitted",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed procedure and Evidence of simple catheterization and details of how much urine drained submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "USG abdomen report not suggestive of urine retention, despite clinical presentation.",
+    "Detailed clinical notes (history, symptoms, signs, examination findings, advice for admission) missing or incomplete at pre-authorization.",
+    "USG abdomen report not submitted at pre-authorization.",
+    "Detailed indoor case papers missing or incomplete at claim submission.",
+    "Detailed procedure notes or evidence of simple catheterization, including details of urine drained, missing or incomplete at claim submission.",
+    "Detailed Discharge Summary missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": "MCh/DNB or equivalent in (Urology, Pediatric surgery)",
+    "clinical_key_pointers": [
+      "Inability to pass urine",
+      "Suprapubic pain",
+      "Irritability"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

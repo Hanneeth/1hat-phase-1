@@ -1,0 +1,117 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE024A",
+  "procedure_code": "SE024A",
+  "condition": "Secondary IOL / IOL exchange / explant",
+  "procedure_name": "Secondary IOL/ IOL exchange/ explant",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Iris Prolapse repair Secondary IOL Endopthalmitis SFIOL Guidelines_Medco.pdf",
+    "Iris Prolapse repair Secondary IOL Endopthalmitis SFIOL Guidelines_PPD.CPD.pdf"
+  ],
+  "alos": "Day care",
+  "min_doctor_qualification": [
+    "MD Ophthalmology",
+    "MS Ophthalmology",
+    "DNB Ophthalmology",
+    "PG Diploma in Ophthalmology"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [
+    {
+      "field": "bcva",
+      "operator": "<",
+      "value": "6/9",
+      "note": "Best Corrected Visual Acuity (BCVA) < 6/9 is a pop-up scenario in the TMS for processing doctors to check manually."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_indications_management",
+        "label": "Clinical notes with indications and planned line of management"
+      },
+      {
+        "key": "clinical_photo_affected_part_full_face",
+        "label": "Clinical photograph of the affected part with full face picture of the patient"
+      }
+    ],
+    "claim": [
+      {
+        "key": "still_image_procedure_patient_id_datetime",
+        "label": "Still image of the patient undergoing the procedure with patient ID, date & time"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Operative/ Procedure notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "barcode_of_iol",
+        "label": "Barcode of IOL"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes, documentation of pre-operative eye examination supporting indication for intervention?",
+        "expected": true
+      },
+      {
+        "q": "Clinical Photograph of affected part with proper labelling (L/R) with full-face photograph?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is a still image of patient undergoing the procedure with patient ID, date and time available?",
+        "expected": true
+      },
+      {
+        "q": "Is there a documentary evidence to show that the patient has been examined for any evidence of signs and symptoms justifying the need for surgery for Iris prolapse-Repair, Secondary IOL/ IOL exchange/ explant, Endopthalmitis (excluding Vitrectomy), SFIOL (including vitrectomy)?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed operative notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the detailed patient discharge summary available?",
+        "expected": true
+      },
+      {
+        "q": "Is barcode of lens available in case of Secondary IOL/IOL exchange/ explant and SFIOL (including vitrectomy) surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Pre-operative clinical notes or documentation of eye examination supporting indication for intervention is missing or insufficient.",
+    "Clinical photograph of the affected part is missing, improperly labelled (L/R), or does not include a full-face picture of the patient.",
+    "Still image of the patient undergoing the procedure with patient ID, date, and time is missing or incomplete.",
+    "Documentary evidence of patient examination, signs, or symptoms justifying the need for surgery is missing or insufficient.",
+    "Detailed operative notes are missing or incomplete.",
+    "Detailed patient discharge summary is missing or incomplete.",
+    "BCVA not documented or documented as >= 6/9 without adequate justification.",
+    "Barcode of the implanted IOL is missing at the time of claim processing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN036B",
+  "procedure_code": "SN036B",
+  "condition": "Lumbar Disc Herniation",
+  "procedure_name": "Micro discectomy",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Lumbar discectomy_Medco.pdf",
+    "Lumbar discectomy_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent in (Neurosurgery)",
+    "MS/Equivalent (in Orthopedics)"
+  ],
+  "clinical_indications": [
+    "Cauda equina syndrome associated with a lumbar disc herniation, defined as any combination of saddle (perineal) anesthesia, new onset loss of bowel and/or bladder control (incontinence or retention), or new onset lower extremity neurological deficits not explained by a more proximal lesion.",
+    "Lumbar disc herniation with radiculopathy with: (a) Pattern of radiculopathy explained by imaging; (b) 12 weeks of nonoperative treatment (can be mitigated by severity of symptoms causing forced bed rest, severity preventing patient from working, or herniation resulting in functionally limiting motor weakness like foot drop).",
+    "Recurrent lumbar disc herniation with radiculopathy with: (a) Pattern of radiculopathy explained by imaging; (b) 6-12 weeks of non-operative treatment (can be mitigated by severity of symptoms causing forced bed rest, severity preventing patient from working, or herniation resulting in functionally limiting motor weakness like foot drop).",
+    "Infection involving the disc space in EIHER of the following cases: (a) To perform an open disc biopsy and culture when an organism has not been identified by other less invasive means (e.g. blood cultures, percutaneous needle biopsy); (b) To perform a disc space/spinal canal debridement if ANY of the following is present: lack of clinical response to an appropriate course of antibiotics, epidural abscess with associated neurological deficits, signs of systemic sepsis associated with the disc space infection."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_evaluation",
+        "label": "Clinical Evaluation"
+      },
+      {
+        "key": "mri_lumbar_spine",
+        "label": "MRI Lumbar spine"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the MRI Lumbar Spine report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and imaging not indicative of surgery.",
+    "Nonoperative treatment duration (12 weeks for initial, 6-12 weeks for recurrent) not met or not adequately justified by mitigation factors.",
+    "MRI Lumbar spine report not submitted at pre-authorization or claim stage.",
+    "Detailed procedure / operative notes not available at claim submission.",
+    "Indications for surgery (Cauda equina syndrome, radiculopathy, or infection) not clearly met as per guidelines.",
+    "Procedure performed for a contraindication (isolated axial pain or predominant low back pain with degeneration)."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at District/Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Patients with radiographic evidence of lumbar disc herniation can present with no symptoms, axial pain, radiculopathy, or Cauda equina syndrome. Of these, the most presentation is unilateral radiculopathy secondary to a lumbar disc herniation.",
+      "Recommendations for lumbar Discectomy vary based on the clinical presentation rather than the radiographic appearance."
+    ],
+    "surgical_options": [
+      "Open Discectomy",
+      "Microscope assisted Discectomy",
+      "Less invasive tube assisted Discectomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Isolated axial pain in the presence of a disc herniation",
+      "Predominant low back pain associated with disc degeneration with or without annular tears in the absence of a disc herniation"
+    ]
+  }
+}

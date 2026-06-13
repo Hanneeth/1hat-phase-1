@@ -1,0 +1,279 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP032A",
+  "procedure_code": "MP032A",
+  "condition": "Global developmental delay / Intellectual disability of unknown etiology & Developmental and behavioral disorders",
+  "procedure_name": "Developmental and behavioral disorders",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Neurodevelopmental disorders_Medco.pdf",
+    "Neurodevelopmental disorders_PPD.CPD.pdf"
+  ],
+  "alos": "1 day (Once diagnosis is established the case can be booked in the relevant package, further stay/admission should be decided based on the level of complications of the disease)",
+  "min_doctor_qualification": [
+    "Paediatrician",
+    "Clinical Psychologists",
+    "Psychiatrists",
+    "Behavioural Analysts",
+    "Nurses",
+    "Social care staff",
+    "Speech and language Therapists",
+    "Educational staff",
+    "Occupational Therapists",
+    "Physiotherapists"
+  ],
+  "clinical_indications": [
+    "Autism Spectrum Disorder (ASD): Characterized by social and communication impairment and restricted or repetitive behaviors. Typical onset before 36 months of age. Persistent deficits in social communication and social interaction across multiple contexts (social-emotional reciprocity, nonverbal communicative behaviors, developing/maintaining/understanding relationships) and restricted, repetitive patterns of behavior, interests, or activities (stereotyped motor movements/speech, insistence on sameness, highly restricted/fixated interests, hyper/hypo reactivity to sensory input).",
+    "Learning Disabilities (SLD): Defined as a deficit in a person's ability to learn or process specific types of information in contrast to the apparent level of intellect. Clinical Manifestations include Dyslexia, Dysgraphia, Dyscalculia, academic skills markedly below age level (<2 SD difference), no other sensory issues, normal intelligence (Min IQ > 85), and conventional schooling.",
+    "Attention Deficit / Hyperactivity Disorder (ADHD): Behavioral problem characterized by impaired levels of over-activity not appropriate to age, inability to be attentive, and impulsiveness. Child 4-18 years with academic or behavioral problems and symptoms of inattention, hyperactivity, or impulsivity should be evaluated. Clinical manifestations include Inattention, Hyperactivity, and Impulsiveness.",
+    "Opposition Defiance Disorder (ODD): Behavioral problem characterized by a pattern of angry/irritable mood, argumentative/defiant behavior, or vindictiveness lasting at least 6 months, evidenced by at least four out of 8 symptoms from specified categories (angry/irritable mood, argumentative/defiant behavior, vindictiveness).",
+    "Conduct Disorder (CD): Behavioral problem characterized by violation of others or major age-appropriate societal norms/rules, manifested by at least three of 15 criteria in the past 12 months (with at least one in the past 6 months). Begins in childhood or adolescence. Clinical manifestations include Aggression to people and animals, Destruction of property, Deceitfulness or theft, and Serious violations of rules."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "age_of_onset",
+      "operator": "<",
+      "value": "36 months",
+      "note": "for Autism Spectrum Disorder"
+    },
+    {
+      "field": "academic_skills_sd",
+      "operator": "<",
+      "value": "2 SD",
+      "note": "difference below age level for Learning Disabilities"
+    },
+    {
+      "field": "iq",
+      "operator": ">",
+      "value": "85",
+      "note": "for Normal Intelligence in Learning Disabilities"
+    },
+    {
+      "field": "age",
+      "operator": "between",
+      "value": "4 and 18 years",
+      "note": "for Attention Deficit / Hyperactivity Disorder"
+    },
+    {
+      "field": "symptoms_duration",
+      "operator": ">=",
+      "value": "6 months",
+      "note": "for Opposition Defiance Disorder"
+    },
+    {
+      "field": "odd_symptoms_count",
+      "operator": ">=",
+      "value": "4",
+      "note": "out of 8 specified symptoms for Opposition Defiance Disorder"
+    },
+    {
+      "field": "cd_criteria_count_12_months",
+      "operator": ">=",
+      "value": "3",
+      "note": "out of 15 criteria in past 12 months for Conduct Disorder"
+    },
+    {
+      "field": "cd_criteria_count_6_months",
+      "operator": ">=",
+      "value": "1",
+      "note": "criterion present in past 6 months for Conduct Disorder"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including history, symptoms, signs, vitals, examination findings, planned line of treatment and advice for admission"
+      },
+      {
+        "key": "m_chat_r_scoring",
+        "label": "M-CHAT-R (modified checklist for autism in toddlers revised scoring) (for Toddlers with ASD)"
+      },
+      {
+        "key": "cars_childhood_autism_rating_scale",
+        "label": "CARS (Childhood autism rating scale) (for Children > 3 yr with ASD)"
+      },
+      {
+        "key": "isaa_india_scale_for_assessment_for_autism",
+        "label": "ISAA (India Scale for assessment for autism) (for Children > 3 yr with ASD)"
+      },
+      {
+        "key": "int_asd_inclen_diagnostic_tool_for_autism_spectrum_disorder",
+        "label": "INT-ASD (INCLEN Diagnostic tool for autism spectrum disorder) (for Children > 3 yr with ASD)"
+      },
+      {
+        "key": "autism_behavior_checklist",
+        "label": "Autism behavior checklist (for Children > 3 yr with ASD)"
+      },
+      {
+        "key": "developmental_screening_and_monitoring",
+        "label": "Developmental screening and monitoring (18 months, 2 yrs, 3 yrs) (for ASD)"
+      },
+      {
+        "key": "ct_mri_brain_optional_asd",
+        "label": "CT/MRI (optional) (for ASD)"
+      },
+      {
+        "key": "iq_assessment_sld",
+        "label": "IQ assessment (for Learning Disabilities)"
+      },
+      {
+        "key": "learning_assessment_tools",
+        "label": "Learning: Wide range achievement test, fifth edition (WRAT5), Grade level assessment device (GLAD), Dyslexia Screening test, NIMHANS battery for learning difficulties (for Learning Disabilities)"
+      },
+      {
+        "key": "eye_and_hearing_screening_optional",
+        "label": "Eye and hearing screening (optional) (for Learning Disabilities)"
+      },
+      {
+        "key": "observation_assessment_adhd",
+        "label": "Observation assessment (for ADHD)"
+      },
+      {
+        "key": "acds_adhd_clinical_diagnostic_scale",
+        "label": "ACDS (ADHD Clinical Diagnostic Scale)"
+      },
+      {
+        "key": "dbrs_disruptive_behavior_disorder_rating_scale",
+        "label": "DBRS (Disruptive Behavior Disorder Rating Scale) (for ADHD, ODD, CD)"
+      },
+      {
+        "key": "inclen_diagnostic_tool_for_adhd",
+        "label": "INCLEN Diagnostic Tool for ADHD (INDT-ADHD)"
+      },
+      {
+        "key": "cbcl_child_behavior_check_list",
+        "label": "CBCL (Child Behavior Check-List) (for ADHD, ODD, CD)"
+      },
+      {
+        "key": "conners_abbreviated_rating_scale",
+        "label": "Conners abbreviated rating scale (for ADHD, ODD, CD)"
+      },
+      {
+        "key": "vanderbilt_adhd_diagnostic_parent_rating_scale",
+        "label": "Vanderbilt ADHD diagnostic parent rating scale"
+      },
+      {
+        "key": "lab_investigations_adhd",
+        "label": "Lab: CBC, glucose, RFT, LFT, Sr electrolytes, TSH, lactate, ammonia, metabolic screening, ferritin, B12, toxicology screening, ABG, urinalysis (based on condition) (for ADHD)"
+      },
+      {
+        "key": "eeg_adhd",
+        "label": "EEG (for ADHD)"
+      },
+      {
+        "key": "ct_mri_optional_adhd",
+        "label": "CT/MRI (optional) (for ADHD)"
+      },
+      {
+        "key": "behavioral_rating_scale_odd",
+        "label": "Behavioral rating scale (for ODD, CD)"
+      },
+      {
+        "key": "conduct_disorder_checklist",
+        "label": "Conduct disorder checklist (for ODD, CD)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "all_investigations_done",
+        "label": "All investigation done"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is the h/o general medical, developmental, family, social, educational and emotional history documented?",
+        "expected": true
+      },
+      {
+        "q": "Does your child have difficulty with transitions and communication?",
+        "expected": true
+      },
+      {
+        "q": "Is there evidence of the symptoms documented for age-appropriateness?",
+        "expected": true
+      },
+      {
+        "q": "Is the delay associated with significant limitations in intellectual functioning and adaptive behavior?",
+        "expected": true
+      },
+      {
+        "q": "Is M-CHAT-R (modified checklist for autism in toddlers revised scoring) documented for toddlers with ASD?",
+        "expected": true
+      },
+      {
+        "q": "Are CARS, ISAA, INT-ASD, or Autism behavior checklist documented for children > 3 yrs with ASD?",
+        "expected": true
+      },
+      {
+        "q": "Is IQ assessment documented with a result of > 85 and academic skills are markedly below age level (<2 SD difference) for Learning Disabilities?",
+        "expected": true
+      },
+      {
+        "q": "Are observation assessment, ACDS, DBRS, INCLEN, CBCL, Conners abbreviated rating scale, or Vanderbilt ADHD diagnostic parent rating scale documented, and the child is between 4 and 18 years of age for ADHD?",
+        "expected": true
+      },
+      {
+        "q": "Are DBRS, behavioral rating scale, CBCL, Conners behavior rating scale, or Conduct disorder checklist scores documented, with at least four out of 8 symptoms lasting at least 6 months for ODD?",
+        "expected": true
+      },
+      {
+        "q": "Are DBRS, behavioral rating scale, CBCL, Conners behavior rating scale, or Conduct disorder checklist scores documented, with at least three of 15 criteria in past 12 months and one in past 6 months for CD?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are Detailed Indoor case papers (ICPs) with detailed line of treatment documented?",
+        "expected": true
+      },
+      {
+        "q": "Are all investigations done and documented?",
+        "expected": true
+      },
+      {
+        "q": "Is a detailed Discharge summary with follow-up advice at the time of discharge present?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing or lack detailed history, symptoms, signs, vitals, examination findings, or planned line of treatment.",
+    "Specific diagnostic assessment tools (e.g., M-CHAT-R, CARS, WRAT5, ACDS, DBRS) for the diagnosed disorder are missing or incomplete.",
+    "For Learning Disabilities, IQ assessment is missing or does not meet the criteria (IQ > 85, academic skills <2 SD difference).",
+    "For ADHD, required age (4-18 years) or associated behavioral assessments are not documented.",
+    "For ODD, the documented symptoms do not meet the duration (>=6 months) or frequency (>=4 of 8 symptoms) criteria.",
+    "For Conduct Disorder, the documented criteria do not meet the severity (>=3 of 15 in 12 months, >=1 in 6 months) thresholds.",
+    "Detailed Indoor case papers (ICPs) are missing or lack treatment details at the time of claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital, District early intervention center (DEIC)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A detailed history is the mainstay of diagnosis of neurodevelopmental disorders. A characteristic sequence of events is usually enough to distinguish this condition from other disorders.",
+      "Majority of the times the diagnoses is made on the history provided by the primary care givers, teachers and peers and by examining the patient's state of mind.",
+      "The first step towards evaluating problem behaviors is to obtain a detailed account of the behaviors, including their frequency, severity, and impact on the child and family functioning.",
+      "In addition to a general physical examination and a developmental assessment, the behavior of the child in the consultation room should be observed, including the child's interaction with the family and the physician."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

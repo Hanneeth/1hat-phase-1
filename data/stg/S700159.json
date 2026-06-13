@@ -1,0 +1,104 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S700159",
+  "procedure_code": "S700159",
+  "condition": "Acute management of upper urinary tract trauma",
+  "procedure_name": "Acute management of upper urinary tract trauma - conservative",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Acute management of upper urinary tract trauma conservative_Medco.pdf",
+    "Acute management of upper urinary tract trauma conservative_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MCh Urology",
+    "DNB Urology",
+    "MCh Pediatric Surgery",
+    "DNB Pediatric Surgery"
+  ],
+  "clinical_indications": [
+    "Conservative management is the best approach in stable patients",
+    "Angiography and selective embolization are the first line treatments",
+    "Conservative management is also advised in unilateral main arterial injuries, complete, blunt artery thrombosis, as well as in multiple-trauma patients"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "systolic_blood_pressure",
+      "operator": "<",
+      "value": "90 mm/hg",
+      "note": "Required clinical manifestation for proceeding with conservative management."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indications_planned_treatment",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "usg_abdomen_report",
+        "label": "USG abdomen report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_with_treatment_given",
+        "label": "Detailed Indoor case papers with treatment given"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "USG report suggestive for any injury?",
+        "expected": true
+      },
+      {
+        "q": "Patient's systolic blood pressure <90 mm/hg?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Discharge Summary submitted with the follow-up date mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "USG report not suggestive of any injury",
+    "Patient's systolic blood pressure not documented or documented >= 90 mm/hg without justification for conservative management",
+    "Clinical Notes missing or incomplete (lacking evaluation findings, indications, or planned line of treatment) at pre-authorization",
+    "USG abdomen report missing at pre-authorization",
+    "Detailed Indoor case papers or Detailed Procedure / Operative notes missing at claim submission",
+    "Detailed Discharge Summary missing or without follow-up date mentioned at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hematuria (blood in urine)",
+      "Hypotension (systolic <90 mm/hg)",
+      "Pain in abdomen",
+      "Difficulty in urination"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

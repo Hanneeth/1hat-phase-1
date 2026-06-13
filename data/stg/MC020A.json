@@ -1,0 +1,164 @@
+{
+  "_comment": "Distilled from PTCA, Systemic thrombolysis, CABG, IABP_Medco.pdf and PTCA, Systemic thrombolysis, CABG, IABP_PPD.CPD.pdf",
+  "stg_id": "MC020A",
+  "procedure_code": "MC020A",
+  "condition": "Myocardial Infarction",
+  "procedure_name": "Systemic Thrombolysis (for MI)",
+  "specialty": "Cardiology/ Cardiothoracic Vascular Surgery",
+  "version": "1.1",
+  "source_files": [
+    "PTCA, Systemic thrombolysis, CABG, IABP_Medco.pdf",
+    "PTCA, Systemic thrombolysis, CABG, IABP_PPD.CPD.pdf"
+  ],
+  "alos": "Upto 5 days",
+  "min_doctor_qualification": [
+    "DM/DNB (Cardiology) or equivalent",
+    "M.Ch. or DNB (cardiovascular thoracic surgery) or equivalent",
+    "MD/DNB (Medicine) or equivalent"
+  ],
+  "clinical_indications": [
+    "Diffuse retrosternal pain, heaviness or constriction radiating to arm or neck or back, with sweating, with ST elevation in ECG",
+    "History of coronary artery disease (CAD)/ multiple risk factors for MI",
+    "Within 12 hours of symptom onset (for thrombolysis in PCI incapable centre)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "st_elevation",
+      "operator": "exists",
+      "value": "Yes",
+      "note": "Significant ST Elevation in ECG"
+    },
+    {
+      "field": "troponin_cpk_mb",
+      "operator": "exists",
+      "value": "Positive",
+      "note": "Positive Troponin Test/ Elevated Serial CPK-MB Levels"
+    },
+    {
+      "field": "symptom_onset_time",
+      "operator": "<=",
+      "value": "12 hours",
+      "note": "Within 12 hours of symptom onset"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "electrocardiogram_ecg",
+        "label": "Electrocardiogram (ECG)"
+      },
+      {
+        "key": "2d_echo",
+        "label": "2D ECHO"
+      },
+      {
+        "key": "cardiac_enzymes",
+        "label": "Cardiac enzymes (Troponins T/ I (if not available then CPK-MB)"
+      },
+      {
+        "key": "routine_biochemistry",
+        "label": "Routine Biochemistry (Haemogram, urea, creatinine, electrolytes, sugar, fasting lipids, Liver function test, Urinalysis)"
+      },
+      {
+        "key": "patient_photograph",
+        "label": "Patient Photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "still_image_of_patient_undergoing_procedure",
+        "label": "Still image of the patient undergoing the procedure with date & time"
+      },
+      {
+        "key": "serial_ecgs",
+        "label": "Serial ECGs (serial)"
+      },
+      {
+        "key": "cardiac_enzymes",
+        "label": "Cardiac enzymes (Troponins T/ I (if not available then CPK-MB)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "invoice_of_thrombolytic_agent_used",
+        "label": "Invoice of thrombolytic agent used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Absolute contraindications for Systemic Thrombolysis (for MI): i. Previous intra-cerebral haemorrhage/ stroke of unknown etiology; ii. Ischemic stroke in last 6 months; iii. CNS neoplasm or AV malformation; iv. Recent (within 1 month) major trauma/ surgery/ head injury; v. Recent (within 1month) major GI bleed; vi. Known bleeding tendency (except menstrual bleed); vii. Severe uncontrolled hypertension; viii. Aortic Dissection. (expected: false)",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the patient have indications (documentary evidence, physical examination) of Systemic thrombolysis (for MI) i.e. h/o Diffuse retrosternal chest pain, heaviness or constriction radiating to arm or neck or back, with sweating, with ST elevation in ECG; +/- history of coronary artery disease (CAD)/ multiple risk factors for MI",
+        "expected": true
+      },
+      {
+        "q": "Are there absolute contraindications for thrombolysis (Refer 2.2.1 (B))?",
+        "expected": false
+      },
+      {
+        "q": "Do procedure notes detail the steps of thrombolysis performed with invoice of thrombolytic agent used & outcomes of Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Are post procedure reports of 2D ECHO, Serial ECGs (Done 60-90 min after starting thrombolysis), Serial Cardiac enzymes (Troponin / CPK-MB) available?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show monitoring of vitals (BP, Heart Rate), appropriate post-procedure care with continued medication (low molecular weight heparin), anti-ischemics, High dose Statins, Ace inhibitors, Beta blockers till PCI/PTCA if indicated/required or discharge of patient?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Significant ST Elevation in ECG not documented.",
+    "Positive Troponin Test/ Elevated Serial CPK-MB Levels not documented.",
+    "Symptom onset time for thrombolysis is greater than 12 hours.",
+    "Presence of absolute contraindications for Systemic Thrombolysis.",
+    "Procedure notes not detailing steps of thrombolysis or missing invoice of thrombolytic agent.",
+    "Post procedure reports of 2D ECHO, Serial ECGs, or Cardiac enzymes not available.",
+    "Discharge summary not showing proper monitoring of vitals, post-procedure care or medications.",
+    "Invoice of thrombolytic agent used not uploaded at claim."
+  ],
+  "additional_information": {
+    "icd_10_code": "I21.3",
+    "special_empanelment": "Cardiac catheterization lab, Cardiac Care Unit & qualified Cardiologist (for PTCA/ PCI/ IABP)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Therapy to be started within 10 min preferably",
+      "ECG to be done at 60-90 min after starting thrombolysis to assess whether thrombolysis is successful (>50% ST settlement with pain relief) or not"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Previous intra-cerebral haemorrhage/ stroke of unknown etiology",
+      "Ischemic stroke in last 6 months",
+      "CNS neoplasm or AV malformation",
+      "Recent (within 1 month) major trauma/ surgery/ head injury",
+      "Recent (within 1month) major GI bleed",
+      "Known bleeding tendency (except menstrual bleed)",
+      "Severe uncontrolled hypertension",
+      "Aortic Dissection"
+    ]
+  }
+}

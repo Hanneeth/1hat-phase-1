@@ -1,0 +1,2078 @@
+{
+  "_comment": "KB-2 HBP 2022 — Burns Management. Deterministic fields set by kb2_extractor.py. Fill: mandatory_documents, aliases, stratification_criteria, additional_information.",
+  "scheme_id": "pmjay",
+  "specialty": "Burns Management",
+  "specialty_code": "BM",
+  "packages": [
+    {
+      "package_code": "BM001",
+      "package_name": "Thermal burns",
+      "procedures": [
+        {
+          "procedure_code": "BM001A",
+          "procedure_name": "Criteria 1: % Total Body Surface Area Burns (TBSA):less than 20% in adults and less than 10% in children younger  than 12 years. Dressing without anesthesia",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 7000,
+            "tier2": 8200,
+            "tier1": 8800
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 7000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM001A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent of burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests or other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "Detailed clinical notes"
+              }
+            ]
+          },
+          "aliases": [
+            "Thermal burns",
+            "Minor thermal burns",
+            "Burns dressing",
+            "ICD-10 T30",
+            "Superficial burns",
+            "First degree burns dressing",
+            "Thermal injury",
+            "Burns less than 20 percent"
+          ],
+          "additional_information": {
+            "admission_criteria": "Less than 20% TBSA in adults and less than 10% in children younger than 12 years",
+            "mlc_note": "MLC is required for thermal burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM001A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM001B",
+          "procedure_name": "Criteria 2: % Total Body Surface Area Burns (TBSA): Upto 25%; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 50000,
+            "tier2": 56800,
+            "tier1": 60000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 50000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM001B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent of upto 40% burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Thermal burns upto 25%",
+            "Thermal burns surgical management",
+            "Deep thermal burns",
+            "ICD-10 T30",
+            "Burns skin grafting",
+            "Burns flap cover",
+            "Deep burns"
+          ],
+          "additional_information": {
+            "admission_criteria": "Upto 25% TBSA requiring surgical procedures like skin grafting, flap cover for deep burns",
+            "mlc_note": "MLC is required for thermal burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM001B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM001C",
+          "procedure_name": "Criteria 3: % Total Body Surface Area Burns (TBSA): 25-40 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 62500,
+            "tier2": 71000,
+            "tier1": 75000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 62500,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM001C",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent of upto 40% - 60% burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Thermal burns 25-40%",
+            "Major thermal burns",
+            "Deep burns 25-40%",
+            "ICD-10 T30",
+            "Burns skin grafting",
+            "Thermal burns surgical management"
+          ],
+          "additional_information": {
+            "admission_criteria": "25-40% TBSA deep burns requiring surgery, skin grafted, flap cover",
+            "mlc_note": "MLC is required for thermal burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM001C, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM001D",
+          "procedure_name": "Criteria 4: % Total Body Surface Area Burns (TBSA):40- 60 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 100000,
+            "tier2": 113600,
+            "tier1": 120000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 100000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM001D",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent > 60% burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Thermal burns 40-60%",
+            "Severe thermal burns",
+            "Extensive deep burns",
+            "ICD-10 T30",
+            "Burns skin grafting",
+            "Burns flap cover"
+          ],
+          "additional_information": {
+            "admission_criteria": "40-60% TBSA deep burns requiring surgery, skin grafted, flap cover",
+            "mlc_note": "MLC is required for thermal burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM001D, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM001E",
+          "procedure_name": "Criteria 5: % Total Body Surface Area Burns (TBSA):60-80 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 100000,
+            "tier2": 113600,
+            "tier1": 120000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 100000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 15,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM001E",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent of upto 80% burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Thermal burns 60-80%",
+            "Critical thermal burns",
+            "Major deep burns",
+            "ICD-10 T30",
+            "Burns skin grafting",
+            "Thermal burns surgical care"
+          ],
+          "additional_information": {
+            "admission_criteria": "60-80% TBSA deep burns requiring surgery, skin grafted, flap cover",
+            "mlc_note": "MLC is required for thermal burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM001E, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "BM002",
+      "package_name": "Scald burns",
+      "procedures": [
+        {
+          "procedure_code": "BM002A",
+          "procedure_name": "Criteria 1:  % Total Body Surface Area Burns (TBSA): less than 20% in adults and less than 10% in children younger  than 12 years. Dressing without anesthesia",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 7000,
+            "tier2": 8200,
+            "tier1": 8800
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 7000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM002A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent of burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests or other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "Detailed clinical notes"
+              }
+            ]
+          },
+          "aliases": [
+            "Scald burns",
+            "Hot water burns",
+            "Minor scalds",
+            "ICD-10 T30",
+            "Superficial scald burns",
+            "Scald burns dressing"
+          ],
+          "additional_information": {
+            "admission_criteria": "Less than 20% in adults and less than 10% in children younger than 12 years",
+            "mlc_note": "MLC is required for burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM002A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM002B",
+          "procedure_name": "Criteria 2: % Total Body Surface Area Burns (TBSA): Upto 25%; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 50000,
+            "tier2": 56800,
+            "tier1": 60000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 50000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM002B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent of upto 40% burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Scald burns upto 25%",
+            "Deep scald burns",
+            "Hot liquid burns surgical management",
+            "ICD-10 T30",
+            "Scald burns skin grafting",
+            "Scald burns flap cover"
+          ],
+          "additional_information": {
+            "admission_criteria": "Upto 25% TBSA deep scald burns requiring surgery",
+            "mlc_note": "MLC is required for burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM002B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM002C",
+          "procedure_name": "Criteria 3: % Total Body Surface Area Burns (TBSA): 25-40 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 62500,
+            "tier2": 71000,
+            "tier1": 75000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 62500,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM002C",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent of upto 40% - 60% burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Scald burns 25-40%",
+            "Major scald burns",
+            "Hot fluid burns",
+            "ICD-10 T30",
+            "Scald burns skin grafting"
+          ],
+          "additional_information": {
+            "admission_criteria": "25-40% TBSA deep scald burns requiring surgery, skin grafted, flap cover",
+            "mlc_note": "MLC is required for burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM002C, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM002D",
+          "procedure_name": "Criteria 4: % Total Body Surface Area Burns (TBSA):40- 60 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 100000,
+            "tier2": 113600,
+            "tier1": 120000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 100000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM002D",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent > 60% burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Scald burns 40-60%",
+            "Severe scald burns",
+            "Extensive hot fluid burns",
+            "ICD-10 T30",
+            "Scald burns surgical care"
+          ],
+          "additional_information": {
+            "admission_criteria": "40-60% TBSA deep scald burns requiring surgery, skin grafted, flap cover",
+            "mlc_note": "MLC is required for burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM002D, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM002E",
+          "procedure_name": "Criteria 5: % Total Body Surface Area Burns (TBSA):60-80 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 100000,
+            "tier2": 113600,
+            "tier1": 120000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 100000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 15,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM002E",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent of upto 80% burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Scald burns 60-80%",
+            "Critical scald burns",
+            "Major deep scald burns",
+            "ICD-10 T30",
+            "Scald burns skin grafting"
+          ],
+          "additional_information": {
+            "admission_criteria": "60-80% TBSA deep scald burns requiring surgery, skin grafted, flap cover",
+            "mlc_note": "MLC is required for burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM002E, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "BM003",
+      "package_name": "Flame burns",
+      "procedures": [
+        {
+          "procedure_code": "BM003A",
+          "procedure_name": "% Total Body Surface Area Burns (TBSA) - any % \n(not requiring admission). \nNeeds at least 5-6 dressing",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 7000,
+            "tier2": 8200,
+            "tier1": 8800
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 7000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM003A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent of burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Flame burns",
+            "Fire burns",
+            "Minor flame burns",
+            "Flame burns dressing",
+            "ICD-10 T30",
+            "Superficial flame burns"
+          ],
+          "additional_information": {
+            "admission_criteria": "Any % TBSA not requiring admission, needs at least 5-6 dressings",
+            "mlc_note": "MLC is required for burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM003A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM003B",
+          "procedure_name": "% Total Body Surface Area Burns (TBSA): Upto 40 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 50000,
+            "tier2": 56800,
+            "tier1": 60000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 50000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM003B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent of upto 40% burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Flame burns upto 40%",
+            "Deep flame burns",
+            "Fire burns surgical management",
+            "ICD-10 T30",
+            "Flame burns skin grafting",
+            "Flame burns flap cover"
+          ],
+          "additional_information": {
+            "admission_criteria": "Upto 40% TBSA deep flame burns requiring surgery",
+            "mlc_note": "MLC is required for burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM003B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM003C",
+          "procedure_name": "% Total Body Surface Area Burns (TBSA): 40 % - 60 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 62500,
+            "tier2": 71000,
+            "tier1": 75000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 62500,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM003C",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent of upto 40% - 60% burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Flame burns 40-60%",
+            "Major flame burns",
+            "Extensive fire burns",
+            "ICD-10 T30",
+            "Flame burns skin grafting"
+          ],
+          "additional_information": {
+            "admission_criteria": "40-60% TBSA deep flame burns requiring surgery, skin grafted, flap cover",
+            "mlc_note": "MLC is required for burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM003C, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM003D",
+          "procedure_name": "% Total Body Surface Area Burns (TBSA): >  60 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 100000,
+            "tier2": 113600,
+            "tier1": 120000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 100000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM003D",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Extent > 60% burns visible on photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Flame burns > 60%",
+            "Critical flame burns",
+            "Severe fire burns",
+            "ICD-10 T30",
+            "Flame burns skin grafting",
+            "Flame burns flap cover"
+          ],
+          "additional_information": {
+            "admission_criteria": "> 60% TBSA deep flame burns requiring surgery, skin grafted, flap cover",
+            "mlc_note": "MLC is required for burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM003D, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "BM004",
+      "package_name": "Electrical contact burns",
+      "procedures": [
+        {
+          "procedure_code": "BM004A",
+          "procedure_name": "Electrical contact burns: Low voltage - without part of limb / limb loss; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 37500,
+            "tier2": 42600,
+            "tier1": 45000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 37500,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM004A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Circumstances that led to low voltage electrical contact burns"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "% burns visible on clinical photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Electrical burns low voltage",
+            "Low tension electrical burns",
+            "Electrical burns without amputation",
+            "ICD-10 T30",
+            "ICD-10 W86",
+            "Electrical contact burns skin grafting"
+          ],
+          "additional_information": {
+            "admission_criteria": "Low voltage electrical contact burns without limb loss, requiring surgical procedures like skin grafting, flap cover",
+            "mlc_note": "MLC is required for electrical burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM004A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM004B",
+          "procedure_name": "Electrical contact burns: Low voltage - with part of limb / limb loss; Includes % TBSA skin grafted, flap cover, follow-up dressings Amputation  etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 50000,
+            "tier2": 56800,
+            "tier1": 60000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 50000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM004B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Circumstances that led to low voltage electrical contact burns"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "% burns visible on clinical photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Electrical burns low voltage with amputation",
+            "Low tension electrical burns limb loss",
+            "Electrical burn amputation",
+            "ICD-10 T30",
+            "ICD-10 W86",
+            "Electrical contact burns with limb loss"
+          ],
+          "additional_information": {
+            "admission_criteria": "Low voltage electrical contact burns with part of limb/limb loss requiring surgery (amputation, grafting)",
+            "mlc_note": "MLC is required for electrical burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM004B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM004C",
+          "procedure_name": "Electrical contact burns: High voltage - with part of limb / limb loss; Includes % TBSA skin grafted, flap cover,fasciotomy +/- /amputation/Central IV Line/debridement/early skin grafting pedicle or free flap coverage,follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 75000,
+            "tier2": 85200,
+            "tier1": 90000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 75000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM004C",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Circumstances that led to High voltage electrical contact burns"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "% burns visible on clinical photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "High voltage electrical burns with amputation",
+            "High tension electrical burns limb loss",
+            "Electrical burn amputation high voltage",
+            "ICD-10 T30",
+            "ICD-10 W85",
+            "Electrical contact burns with fasciotomy and limb loss"
+          ],
+          "additional_information": {
+            "admission_criteria": "High voltage electrical contact burns with part of limb/limb loss requiring fasciotomy, amputation, or grafting",
+            "mlc_note": "MLC is required for electrical burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM004C, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM004D",
+          "procedure_name": "Electrical contact burns: High voltage - without part of limb / limb loss; Includes % TBSA skin grafted, flap cover, fasciotomy +/- /debridement/early skin grafting/flap cover: pedicle or free flap coverage,follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 62500,
+            "tier2": 71000,
+            "tier1": 75000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 62500,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM004D",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Circumstances that led to High voltage electrical contact burns"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "% burns visible on clinical photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "High voltage electrical burns without amputation",
+            "High tension electrical burns",
+            "Electrical burns fasciotomy",
+            "ICD-10 T30",
+            "ICD-10 W85",
+            "Electrical contact burns free flap coverage"
+          ],
+          "additional_information": {
+            "admission_criteria": "High voltage electrical contact burns without limb loss requiring fasciotomy, debridement, skin grafting or flap cover",
+            "mlc_note": "MLC is required for electrical burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM004D, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "BM005",
+      "package_name": "Chemical burns",
+      "procedures": [
+        {
+          "procedure_code": "BM005A",
+          "procedure_name": "Chemical burns: Without significant facial scarring and/or loss of function; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.(Similar to therma burns\nrequire more grafting, debridement,(skin grafing/canthopexy)",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 50000,
+            "tier2": 56800,
+            "tier1": 60000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 50000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM005A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Circumstances that led to chemical burns"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "% and area burnt visible on clinical photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph showing treated burns"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Chemical burns without facial scarring",
+            "Acid burns",
+            "Alkali burns",
+            "Chemical burns skin grafting",
+            "ICD-10 T30",
+            "Chemical injury to body"
+          ],
+          "additional_information": {
+            "admission_criteria": "Deep chemical burns requiring surgery, skin grafting, or flap cover, without significant facial scarring/loss of function",
+            "mlc_note": "MLC is required for chemical burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM005A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM005B",
+          "procedure_name": "Chemical burns: With significant facial scarring and/or loss of function; Includes % TBSA skin grafted, flap cover,debridement,skin grafting,follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 75000,
+            "tier2": 85200,
+            "tier1": 90000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 75000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 19,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM005B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Circumstances that led to chemical burns"
+              },
+              {
+                "key": "mlc_fir",
+                "label": "MLC copy with number"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "% and area burnt visible on clinical photograph (with rule of 9 chart)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph showing treated burns"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "lab tests"
+              },
+              {
+                "key": "xray",
+                "label": "X-rays"
+              },
+              {
+                "key": "other_diagnostic_reports",
+                "label": "other diagnostic procedures done as a part of treatment"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Chemical burns with facial scarring",
+            "Acid attack burns",
+            "Severe facial chemical burns",
+            "Chemical burns skin grafting face",
+            "ICD-10 T30",
+            "Chemical burn reconstruction"
+          ],
+          "additional_information": {
+            "admission_criteria": "Deep chemical burns with significant facial scarring or loss of function requiring surgery",
+            "mlc_note": "MLC is required for chemical burns as they are medico-legal cases"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM005B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "BM006",
+      "package_name": "Post Burn Contracture surgeries for Functional Improvement",
+      "procedures": [
+        {
+          "procedure_code": "BM006A",
+          "procedure_name": "Post Burn Contracture surgeries for Functional Improvement (Package including splints, pressure garments, silicone - gel sheet and physiotherapy): Excluding Neck contracture; Contracture release with - Split thickness Skin Graft (STSG) / Full Thickness Skin Graft (FTSG) / Flap cover is done for each joint with post - operative regular dressings for STSG / FTSG / Flap cover.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 62500,
+            "tier2": 71000,
+            "tier1": 75000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 62500,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 10,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM006A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical history detailing the burns - etiology, treatment given and resultant contractures left"
+              },
+              {
+                "key": "functional_assessment_notes",
+                "label": "Functional disability to be detailed and expected functional improvement to be shared"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Pre-op clinical photograph"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              }
+            ]
+          },
+          "aliases": [
+            "Post burn contracture release",
+            "PBC release excluding neck",
+            "Burn contracture surgery",
+            "Contracture release with STSG",
+            "Contracture release with FTSG",
+            "ICD-10 L90.5",
+            "Burn scar reconstruction"
+          ],
+          "additional_information": {
+            "admission_criteria": "Functional disability due to post burn contracture (excluding neck) requiring surgical release and grafting"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM006A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "BM006B",
+          "procedure_name": "Post Burn Contracture surgeries for Functional Improvement (Package including splints, pressure garments,contracture release & split skin graft with or without flap reconstruction,silicone - gel sheet and physiotherapy): Neck contracture; Contracture release with - Split thickness Skin Graft (STSG) / \nFull Thickness Skin Graft (FTSG) / Flap cover is done for each joint with post-operative regular dressings for STSG / FTSG / Flap cover.",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 62500,
+            "tier2": 71000,
+            "tier1": 75000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 62500,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 10,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "BM006B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical history detailing the burns - etiology, treatment given and resultant contractures left"
+              },
+              {
+                "key": "functional_assessment_notes",
+                "label": "Functional disability to be detailed and expected functional improvement to be shared"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "Pre-op clinical photograph"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_posttreat",
+                "label": "Post Treatment clinical photograph"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              }
+            ]
+          },
+          "aliases": [
+            "Post burn neck contracture release",
+            "Neck PBC release",
+            "Cervical burn contracture surgery",
+            "Neck contracture STSG FTSG",
+            "ICD-10 L90.5",
+            "Burn scar reconstruction neck"
+          ],
+          "additional_information": {
+            "admission_criteria": "Functional disability due to post burn neck contracture requiring surgical release and grafting/flap"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row BM006B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU038A",
+  "procedure_code": "SU038A",
+  "condition": "Pelviureteric junction (PUJ) obstruction",
+  "procedure_name": "Endopyelotomy - Retrograde with laser / bugbee",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Endopyelotomy_Medco.pdf",
+    "Endopyelotomy_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS",
+    "M.Ch",
+    "DNB"
+  ],
+  "clinical_indications": [
+    "Functional or anatomic obstruction to outflow of urine from the pelvis to the ureter (Pelviureteric junction (PUJ) obstruction)",
+    "Diagnosis backed by clinical manifestations such as Abdominal mass",
+    "Diagnosis backed by clinical manifestations such as Urinary tract infection with fever",
+    "Diagnosis backed by clinical manifestations such as Flank pain (pain in the upper abdomen or back, mostly with fluid intake)",
+    "Diagnosis backed by clinical manifestations such as Bloody urine (Hematuria)",
+    "Diagnosis backed by clinical manifestations such as Nausea / Vomiting"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "Ureteropelvic junction obstruction (UPJO) confirmation",
+      "operator": "is",
+      "value": "confirmed",
+      "note": "by Intravenous pyelogram /CT- Intravenous pyelogram +/- Micturating Cysto-Urethrogram"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "intravenous_pyelogram_ct_intravenous_pyelogram_micturating_cysto_urethrogram",
+        "label": "Intravenous pyelogram /CT- Intravenous pyelogram +/- Micturating Cysto-Urethrogram"
+      },
+      {
+        "key": "diuretic_renogram",
+        "label": "Diuretic renogram"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure / operative notes"
+      },
+      {
+        "key": "bugbee_electrode_barcode",
+        "label": "Bugbee electrode (barcode)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the detailed clinical notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the investigation report submitted Intravenous pyelogram /CT- Intravenous pyelogram +/- Micturating Cysto-Urethrogram?",
+        "expected": true
+      },
+      {
+        "q": "Was the Diuretic renogram for confirming obstruction and renal function conducted",
+        "expected": true
+      },
+      {
+        "q": "Did the investigation (Intravenous pyelogram /CT- Intravenous pyelogram +/- Micturating Cysto-Urethrogram) confirm the ureteropelvic junction obstruction (UPJO)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the detailed ICPs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the barcode of Bugbee electrodesubmitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the detailed discharge summary mentioning the follow-up date submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Investigation (Intravenous pyelogram /CT- Intravenous pyelogram +/- Micturating Cysto-Urethrogram) did not confirm ureteropelvic junction obstruction (UPJO).",
+    "Detailed clinical notes not submitted at pre-authorization.",
+    "Investigation report (Intravenous pyelogram /CT- Intravenous pyelogram +/- Micturating Cysto-Urethrogram) not submitted at pre-authorization.",
+    "Diuretic renogram not conducted or report not submitted at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) not submitted at claim submission.",
+    "Barcode of Bugbee electrode not submitted at claim submission.",
+    "Detailed discharge summary not submitted or does not mention follow-up date at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Ureteroscope for retro grade. Hospital should be equipped with laser",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Endopyelotomy only if diagnosis made is backed by clinical manifestation",
+      "Pelviureteric junction (PUJ) obstruction is defined as a functional or anatomic obstruction to outflow of urine from the pelvis to the ureter, which if left untreated leads to deterioration of the affected kidney's function. The problem is commonly encountered in day-to day clinical practice."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

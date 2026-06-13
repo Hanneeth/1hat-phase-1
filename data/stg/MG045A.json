@@ -1,0 +1,108 @@
+{
+  "stg_id": "MG045A",
+  "procedure_code": "MG045A",
+  "condition": "AKI (Acute Kidney Injury) / Renal Failure",
+  "procedure_name": "AKI (Acute Kidney Injury) / Renal Failure (Dialysis, if required, will be add on package)",
+  "specialty": "General Medicine/ Pediatric medical management/ General surgery",
+  "version": "1.1",
+  "source_files": [
+    "Haemodialysis, Renal failure, AV Fistula _Medco.pdf",
+    "Haemodialysis, Renal failure, AV Fistula _PPD.CPD.pdf"
+  ],
+  "alos": "7-14 days",
+  "min_doctor_qualification": [
+    "MBBS",
+    "The patient should be periodically seen by a nephrologist to decide the dialysis prescription and line of treatment"
+  ],
+  "clinical_indications": [
+    "Acute Kidney Injury with clinical features such as reduced urine output, dark concentrated urine, swelling of face and limbs, breathlessness",
+    "Acute Kidney Injury with investigations showing elevated serum creatinine, electrolyte/acid-base abnormalities, supportive imaging and serological findings",
+    "Chronic Kidney Disease with clinical features such as Edema, Hematuria, Proteinuria, renal stone, family history of kidney diseases, unexplained hypertension, Anemia",
+    "Chronic Kidney Disease with investigations showing elevated serum creatinine, supportive imaging findings",
+    "Abnormalities of kidney structure or function, present for >3 months (for Chronic Kidney Disease)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "Serum creatinine",
+      "operator": ">",
+      "value": "0.3 mg/dl",
+      "note": "increase in 48 hours for AKI"
+    },
+    {
+      "field": "Urine output",
+      "operator": "<",
+      "value": "0.5 ml/kg/h",
+      "note": "for 6-12 hours for AKI"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "pathological_examination",
+        "label": "Pathological Examination (Complete Blood count, Blood urea, Serum Creatinine, GFR, serum electrolytes; monthly for chronic dialysis, quarterly for Serum Iron, ferritin, TIBC, TSAT, SGOT, SGPT, viral markers, calcium, phosphate)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes_indoor_case_papers",
+        "label": "Clinical Notes/ Indoor case papers"
+      },
+      {
+        "key": "detail_discharge_summary",
+        "label": "Detail discharge Summary (only discharge summary for AKI/Renal Failure)"
+      },
+      {
+        "key": "all_investigation_reports",
+        "label": "All investigation reports"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Diagnosis of Acute Kidney Injury or Chronic Kidney disease/End-stage kidney disease not mentioned in clinical notes",
+    "Pathological examination reports (CBC, Blood urea, Serum Creatinine, GFR, serum electrolytes) missing or incomplete, or not repeated monthly/quarterly as required for chronic cases",
+    "Planned line of treatment not documented",
+    "Discharge summary missing or incomplete at claim stage",
+    "AKI diagnostic criteria (serum creatinine increase or urine output decrease) not met or documented",
+    "CKD diagnostic criteria (abnormalities of kidney structure/function for >3 months) not met or documented"
+  ],
+  "additional_information": {
+    "icd_10_code": "N17.9, N18.3",
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": "MD/ DNB (Medicine); DM/ DNB (Nephrology) or equivalent",
+    "clinical_key_pointers": [
+      "Proceed with Haemodialysis only if diagnosis made is backed by clinical signs, symptoms and investigations.",
+      "A patient with pre-existing CKD may develop AKI"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Indications for dialysis (AKI)",
+      "Unexplained AKI",
+      "Involvement of other organs (AKI)",
+      "Sepsis (AKI)",
+      "Systemic disease (AKI)",
+      "Complicated pregnancy (AKI)",
+      "Initial evaluation of all newly diagnosed cases (CKD)",
+      "Rapid disease progression (CKD)",
+      "New complication (CKD)",
+      "Discussion for Renal Replacement Therapy (RRT) (CKD)"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": null
+  }
+}

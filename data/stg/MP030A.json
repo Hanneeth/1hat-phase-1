@@ -1,0 +1,156 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP030A",
+  "procedure_code": "MP030A",
+  "condition": "Rickets",
+  "procedure_name": "Rickets - requiring admission for work up",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Rickets_Medco.pdf",
+    "Rickets_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MD/DNB/DCH/ equivalent (Pediatric Medicine)",
+    "DM/DNB/ equivalent (Endocrinology/Nephrology)"
+  ],
+  "clinical_indications": [
+    "Rickets is a metabolic disease of childhood in which the osteoid, the organic matrix of bone fails to mineralize, due to interference with calcium metabolism.",
+    "Rickets may be nutritional (vitamin D or calcium deficiency), genetic (vitamin D resistance) or due to hypophosphatasia (renal disorders).",
+    "Proceed with Rickets – requiring admission for work up only if diagnosis made is backed by clinical manifestation.",
+    "If the patient is not responding to Vit-D (assessment after 12 weeks of starting treatment) treatment on the repeat X-ray, thereafter requires admission for further evaluation."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "radiological_findings",
+      "operator": "confirm",
+      "value": "widened physis and frayed appearance of the metaphysis",
+      "note": "on X-ray PA wrist/radius/ulna or Knee/tibia/fibula"
+    },
+    {
+      "field": "serum_calcium",
+      "operator": "is",
+      "value": "decreased or normal",
+      "note": null
+    },
+    {
+      "field": "serum_phosphorus",
+      "operator": "is",
+      "value": "decreased or normal",
+      "note": null
+    },
+    {
+      "field": "alkaline_phosphatase",
+      "operator": "is",
+      "value": "increased",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes showing vitals, examination findings, planned line of treatment and advice for admission"
+      },
+      {
+        "key": "x_ray",
+        "label": "X-ray PA wrist/radius/ulna or Knee/tibia/fibula"
+      },
+      {
+        "key": "serum_calcium",
+        "label": "Serum Calcium"
+      },
+      {
+        "key": "serum_phosphorus",
+        "label": "Serum Phosphorus"
+      },
+      {
+        "key": "alkaline_phosphatase",
+        "label": "Alkaline phosphatase"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps_with_treatment_details",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain detailed history, signs & symptoms, and detailed treatment line?",
+        "expected": true
+      },
+      {
+        "q": "Radiological findings confirm the diagnosis of rickets (widened physis and frayed metaphysis)?",
+        "expected": true
+      },
+      {
+        "q": "Serum Calcium is decreased or normal?",
+        "expected": true
+      },
+      {
+        "q": "Serum Phosphorus is decreased or normal?",
+        "expected": true
+      },
+      {
+        "q": "Alkaline phosphatase is increased?",
+        "expected": true
+      },
+      {
+        "q": "Was there an indication of admission requirement for further workup?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs with line of treatment are present?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge summary with follow-up advise at the time of discharge is present?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Radiological findings do not confirm the diagnosis of rickets.",
+    "Laboratory investigation report (serum calcium, phosphorus, or alkaline phosphatase) is missing or inconsistent with rickets diagnosis (e.g., normal alkaline phosphatase).",
+    "No clear indication for admission for further workup is documented.",
+    "Clinical notes are incomplete or missing details on history, signs & symptoms, or treatment plan.",
+    "Mandatory investigation reports (X-ray, Serum Calcium, Serum Phosphorus, Alkaline Phosphatase) are missing.",
+    "Detailed Indoor Case Papers (ICPs) are missing or lack line of treatment details.",
+    "Detailed discharge summary with follow-up advice is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Rickets is a metabolic disease of childhood in which the osteoid, the organic matrix of bone fails to mineralize, due to interference with calcium metabolism.",
+      "Rickets may be nutritional (vitamin D or calcium deficiency), genetic (vitamin D resistance) or due to hypophosphatasia (renal disorders).",
+      "Approach to Rickets: Calcipenic Rickets, Phosphopenic Rickets, Renal Rickets (RTA).",
+      "Suspected rickets: Elevated alkaline phosphatase activity, Clinical or radiographic findings.",
+      "Diagnostic approach criteria for Calcipenic (hypocalcemic) rickets (PTH high, Pi normal or low, Ca normal or low), Phosphopenic (hypophosphatemic) rickets (PTH normal or mildly elevated, Pi low, Ca normal), and to consider early or transient disease, hypophosphatasia, or primary disorder of bone (PTH normal, Pi normal, Ca normal).",
+      "Etiology of rickets: Deficient intake of minerals (Inadequate calcium/phosphate intake), Poor absorption of minerals (Vitamin D deficiency, 25-hydroxylase deficiency, 1-alpha-hydroxylase deficiency, Hereditary resistance to vitamin D, High phytin content, Antacids, Anticonvulsants, Renal insufficiency, Fanconi syndrome, Hepatic Insufficiency, Fat malabsorption, Neocate brand formula), Increased excretion of minerals (Furosemide, Renal tubular dysfunction - Phosphaturia, Renal tubular acidosis with hypercalciuria, Renal tubular damage), Tumors, Local defect of bone cells (Hypophosphatasia).",
+      "Presenting symptoms: Seizures, Tetany, Irritability, Stridor, Wheezing, Failure to thrive, Short stature, Delayed motor milestones, Delayed dentition, Proximal muscle weakness, Difficulty in walking, Bone pain, Repeated infections.",
+      "Associated symptoms: Polyuria, Polydipsia, Refractory rickets, Renal stones, Diarrhea or oily stools, Alopecia, Nontraumatic fractures.",
+      "Signs due to deformity: Newborn (Skull - frontoparietal bossing, craniotabes, delayed closure of anterior fontanelle, craniosynostosis), Infancy (Chest - rachitic rosary, Harrison`s grove, pectus deformities, Upper limbs – wrist widening, Abdomen - pot belly, visceroptosis), Pre-school (Spine - kyphoscoliosis, lordosis, Lower limbs - genu valgum (knock knees), genu varum (bow legs), windswept deformity, ankle widening, double malleolus, pelvic deformities, coxa vara, anterior bowing of tibia and fibula).",
+      "Management: Initial management with daily Vitamin D supplement. Admission for further evaluation if not responding to Vit-D after 12 weeks, with repeat X-ray assessment. Specific management for Vitamin D dependent Rickets Type 1 & 2, Calcipenic Rickets, Phosphophenic rickets, X-linked hypophosphatemic rickets, Renal tubular acidosis (RTA)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

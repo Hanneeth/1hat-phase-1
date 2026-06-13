@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MM005A",
+  "procedure_code": "MM005A",
+  "condition": "Mood (affective) disorders",
+  "procedure_name": "Mood (affective) disorders",
+  "specialty": "Mental Disorders",
+  "version": "1.1",
+  "source_files": [
+    "Mood Affective disorder_Medco.pdf",
+    "Mood Affective disorder_PPD.CPD.pdf"
+  ],
+  "alos": "6-8 weeks",
+  "min_doctor_qualification": [
+    "MD/ DNB/ PG Diploma/ equivalent (in Psychiatry)"
+  ],
+  "clinical_indications": [
+    "Diagnosis of depression (symptoms must present for at least 2 weeks)",
+    "Mild depression with no improvement after 4 to 6 weeks of non-pharmacological treatment (consider pharmacotherapy)",
+    "Moderate/severe depression warranting pharmacological intervention (e.g., Escitalopram, Fluoxetine)",
+    "Referral to secondary care for difficulty in diagnosis, no improvement with first-line medications, special populations (elderly, pregnancy, lactation, children, adolescents), comorbid medical illness/substance use, or suicidal risk assessment",
+    "Referral to tertiary care for no improvement in 2nd line treatment, immediate risk for suicidal attempt/thought, needing intense counselling/psychotherapy, or co-morbid substance (cannabis/poly substance)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailed_history_chronicity",
+        "label": "Clinical notes with detailed history and chronicity"
+      },
+      {
+        "key": "admission_document_signed_psychiatrist",
+        "label": "Admission document signed by empaneled psychiatrist"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_treatment_notes",
+        "label": "Detailed treatment notes"
+      },
+      {
+        "key": "complete_hemogram",
+        "label": "Complete hemogram"
+      },
+      {
+        "key": "thyroid_function_test",
+        "label": "Thyroid function test"
+      },
+      {
+        "key": "serum_sodium",
+        "label": "Serum sodium"
+      },
+      {
+        "key": "resting_ecg",
+        "label": "Resting ECG"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, mini mental status test, indication for treatment and need of hospitalization",
+        "expected": true
+      },
+      {
+        "q": "Was the admission document signed by an empanelled psychiatrist?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed treatment notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the following investigations done?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Admission document not signed by an empaneled psychiatrist",
+    "Clinical notes missing detailed history, mini mental status test, indication for treatment or need of hospitalization",
+    "Detailed treatment notes not submitted",
+    "One or more mandatory investigations (Complete hemogram, Thyroid function test, Serum sodium, Resting ECG) not submitted",
+    "Detailed Discharge Summary not submitted or missing date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": "F45",
+    "special_empanelment": "As per the provisions of the Mental Health Act 2017",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The provisions under Mental Healthcare Act 2017 be referred for details on Admission & Discharge criteria."
+    ],
+    "surgical_options": [
+      "Electro Convulsive Therapy (ECT) for Catatonia/Suicidality (at Tertiary Care, with a high threshold for invasive procedures)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Rule out associated comorbid medical conditions (Diabetes, Stroke, Epilepsy, Cancer, Coronary Artery Disease, Auto Immune disorder); Assess for other medical comorbidities; Assess other psychiatric comorbidities.",
+    "referral_criteria": "To Secondary Care: Difficulty in making diagnosis; No improvement after 4 to 6 weeks of treatment with first line medications; Depression in special population (Elderly/ Pregnancy/ Lactation/ Children/ Adolescents); Comorbid medical illness/ Substance use; Suicidal risk assessment.\nTo Tertiary Care: No improvement in 2nd line treatment; Immediate risk for suicidal attempt/thought; Needing intense counselling/psychotherapy; Co Morbid Substance (Cannabis/ Poly substance).",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Rule out secondary medical cause of depression (e.g., Hypothyroidism)",
+      "Rule out use of anticancer drugs (Cyclophosphamide), anti retroviral drugs (Efavirenz, Zidovudine), Antibiotics (Dapsone, Ethambutol), Anabolic Steroids, Propanolol",
+      "Rule out Bipolar Disorder/Grief/ Adjustment Disorder"
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU073A",
+  "procedure_code": "SU073A",
+  "condition": "Hematuria",
+  "procedure_name": "Emergency management of Hematuria",
+  "specialty": "Urology, Pediatric Surgery, Emergency Room Packages",
+  "version": "1.1",
+  "source_files": [
+    "Emergency management of Hematuria_Medco.pdf",
+    "Emergency management of Hematuria_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Hematuria defined as the presence of 5 or more red blood cells (RBCs) per high-power field in 3 of 3 consecutive centrifuged specimens obtained at least 1 week apart.",
+    "Microscopic hematuria is a commonly seen condition in the emergency department.",
+    "Macroscopic hematuria has a high diagnostic yield for urological malignancy.",
+    "Associated symptoms present (e.g., inability to pass urine, evidence of clots, fever, urgency, urinary incontinence) which are suggestive of UTI or other underlying cause.",
+    "Goals of treatment in the Emergency Department (ED) include: resuscitation as appropriate; ensuring urine can drain freely with or without catheter insertion; safe discharge from ED where appropriate; prompt follow-up and further investigation."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "red_blood_cells_per_high_power_field",
+      "operator": ">=",
+      "value": "5",
+      "note": "in 3 of 3 consecutive centrifuged specimens obtained at least 1 week apart"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "urine_reports",
+        "label": "Urine (Routine/culture) reports"
+      },
+      {
+        "key": "usg_abdomen",
+        "label": "USG Abdomen"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_notes",
+        "label": "Detailed procedure notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the report related to urine (routine/ culture) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG abdomen report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical notes and USG abdomen suggestive of any underline causes for Hematuria?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the detailed indoor case papers (ICPs) with the treatment provided submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the Detailed procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or USG abdomen not suggestive of any underlying causes for Hematuria, thereby not justifying the emergency management.",
+    "Hematuria not defined by presence of 5 or more red blood cells per high-power field in 3 of 3 consecutive centrifuged specimens obtained at least 1 week apart.",
+    "Absence of associated symptoms (e.g., inability to pass urine, clots, fever, urgency, urinary incontinence) or predisposing factors (e.g., bleeding disorders, trauma) that would necessitate emergency management.",
+    "Missing or incomplete clinical notes, urine (routine/culture) reports, or USG abdomen report at pre-authorization stage.",
+    "Missing or incomplete detailed indoor case papers, detailed procedure notes, or detailed discharge summary at claim submission stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": "MD in Emergency medicine; MCh / DNB (Urology/Pediatric surgery)",
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Hematuria can be either gross (i.e. overtly bloody, smoky, or tea-colored urine) or microscopic."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

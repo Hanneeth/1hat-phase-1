@@ -1,0 +1,111 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL008A",
+  "procedure_code": "SL008A",
+  "condition": "Functional Septorhinoplasty",
+  "procedure_name": "Functional septo-rhinoplasty",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Functional septorhinoplasty_Medco.pdf",
+    "Functional septorhinoplasty_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MS/ DNB/ PG Diploma or equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Nasal obstruction associated with external nasal deformity"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, indications for doing the procedure, circumstances of the incident which led to disfigurement and advise for admission)"
+      },
+      {
+        "key": "clinical_picture_affected_part_full_face_rhinoscopy",
+        "label": "Clinical picture of the affected part along with full face of the patient and anterior rhinoscopy/ endoscopic picture showing deviated septum"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Operative/ procedure notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes (including clinical signs & symptoms such as difficulty in breathing, examination findings, indications for doing the procedure, Evidence of the circumstances of the incident which led to disfigurement& advise for admission)?",
+        "expected": true
+      },
+      {
+        "q": "Clinical picture of the affected part along with full face of the patient and anterior rhinoscopy/ endoscopic picture showing deviated septum?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Are post procedure photographs of the affected part available?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Signs, symptoms, examination, or clinical pictures do not confirm the need for functional septorhinoplasty.",
+    "Evidence of other causes of breathing difficulty (other than nasal septum deformity) not ruled out.",
+    "Clinical notes are incomplete or missing required details (signs, symptoms, examination findings, indications, circumstances of incident, advise for admission).",
+    "Clinical picture of the affected part, full face of the patient, or anterior rhinoscopy/endoscopic picture showing deviated septum is missing or inadequate at pre-authorization.",
+    "Indoor case papers are missing at claim submission.",
+    "Operative/procedure notes are missing or lack detail on surgical steps and outcomes at claim submission.",
+    "Post-procedure photographs of the affected part are not available at claim submission.",
+    "Detailed discharge summary is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Functional septo-rhinoplasty is a procedure that is used to address nasal obstruction secondary to anatomic nasal deformities in the nasal septum and external nasal framework.",
+      "Indications: Nasal obstruction associated with external nasal deformity",
+      "Causes: Post traumatic",
+      "Causes: Developmental",
+      "Causes: Congenital",
+      "Signs & Symptoms: nasal obstruction and external deformity like crooked nose, saddle nose etc."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Surgery should not be planned in children before completion of the development of facial skeleton (atleast 15 to 16 years of age)"
+    ]
+  }
+}

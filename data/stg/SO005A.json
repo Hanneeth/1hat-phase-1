@@ -1,0 +1,135 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Broad Ligament Haematoma/ : Broad Ligament Haematoma_Medco.pdf (clinical + mandatory docs) + Broad Ligament Haematoma_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code. HBP 1.0 codes S400051 and S400059 map to this HBP 2.0 package SO005A.",
+  "stg_id": "SO005A",
+  "procedure_code": "SO005A",
+  "condition": "Broad Ligament Haematoma",
+  "procedure_name": "Laparotomy for broad ligament haematoma",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Broad Ligament Haematoma_Medco.pdf",
+    "Broad Ligament Haematoma_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Clinical history, findings, and imaging suggestive of broad ligament haematoma.",
+    "Clinical examination and imaging indicative of surgical intervention (laparotomy)."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed clinical notes including history, symptoms, signs, examination findings, planned line of treatment, and admission advice"
+      },
+      {
+        "key": "detailed_delivery_notes",
+        "label": "Detailed delivery notes"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG Abdomen/pelvis"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count (CBC)"
+      },
+      {
+        "key": "coagulation_profile",
+        "label": "Coagulation profile (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers (ICPs)"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG abdomen/pelvis (optional)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative/ procedure notes"
+      },
+      {
+        "key": "blood_transfusion_notes",
+        "label": "Blood transfusion notes (if applicable)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes present with all vitals, detailed history, symptoms, signs, physical examination including abdominal and pelvic examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed delivery notes (if available) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical examination and USG abdomen/pelvis confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical history, findings, and imaging suggestive of broad ligament haematoma?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical examination and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical history, findings, or imaging not suggestive of broad ligament haematoma.",
+    "Clinical examination or imaging not indicative of surgical intervention (laparotomy).",
+    "Missing or incomplete detailed clinical notes at pre-authorization, particularly regarding indication for procedure.",
+    "Missing detailed delivery notes at pre-authorization, crucial for establishing predisposing factors.",
+    "Missing detailed operative/procedure notes at claim stage, including details of the surgery."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre for laparotomy",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Broad ligament hematoma is an unusual complication that can occur during delivery, just after delivery or later in the puerperium. Rapid labor, cesarean section, instrumental deliveries, and trauma have been suggested as predisposing factors.",
+      "Difficult/instrumental vaginal delivery followed by one or all the symptoms below: Unexplained shock",
+      "Difficult/instrumental vaginal delivery followed by one or all the symptoms below: Intense pain abdomen (Persistent, intense, spontaneous contractions)",
+      "Difficult/instrumental vaginal delivery followed by one or all the symptoms below: Excessive vaginal bleeding",
+      "Difficult/instrumental vaginal delivery followed by one or all the symptoms below: Inability to void after delivery"
+    ],
+    "surgical_options": [
+      "Laparotomy is the preferred mode of surgical management"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

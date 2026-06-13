@@ -1,0 +1,127 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG038A",
+  "procedure_code": "MG038A",
+  "condition": "Congestive Heart Failure",
+  "procedure_name": "Congestive heart failure",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Congestive heart failure_Medco.pdf",
+    "Congestive heart failure_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Symptoms due to impaired left ventricular myocardial function, presenting with dyspnea and fatigue limiting exercise tolerance, fluid retention characterized by pulmonary and peripheral edema.",
+    "Symptoms of heart failure including dyspnea, orthopnea, edema, pain from hepatic congestion, abdominal distention from ascites, fatigue, and weakness.",
+    "Acute and subacute presentations (days to weeks) with shortness of breath at rest and/or with exertion, orthopnea, paroxysmal nocturnal dyspnea, and right upper quadrant discomfort due to acute hepatic congestion (right heart failure).",
+    "Palpitations, with or without lightheadedness (if atrial or ventricular tachyarrhythmias develop).",
+    "Chronic presentations (months) with fatigue, anorexia, abdominal distension, and peripheral edema.",
+    "Pulsus alternans phenomenon characterized by evenly spaced alternating strong and weak peripheral pulses.",
+    "Apical impulse: laterally displaced past the midclavicular line (indicative of left ventricular enlargement).",
+    "S3 gallop: a low-frequency, brief vibration occurring in early diastole.",
+    "Electrocardiogram (ECG) findings of acute or prior myocardial infarction, acute ischemia, or rhythm abnormalities (e.g., atrial fibrillation).",
+    "Chest X-ray findings including cardiac-to-thoracic width ratio above 50%, cephalization of the pulmonary vessels, Kerley B-lines, and pleural effusions.",
+    "Elevated Cardiac troponin (T or I), BNP (or NT-proBNP) levels, abnormal complete blood count, serum electrolytes, blood urea nitrogen, creatinine, liver function test.",
+    "Transthoracic Echocardiogram showing impaired ventricular function and hemodynamics."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "ecg_echo_report",
+        "label": "ECG/ECHO with report"
+      },
+      {
+        "key": "chest_x_ray_report",
+        "label": "Chest X-ray report"
+      },
+      {
+        "key": "blood_investigations",
+        "label": "Blood investigations: Biomarkers, Brain natriuretic peptide (BNP), N-terminal pro-brain natriuretic peptide (NT-proBNP), Creatine kinase"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor case papers with treatment details"
+      },
+      {
+        "key": "procedure_notes",
+        "label": "Detailed procedure notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the ECG/ECHO with report and Chest X Ray report of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Blood investigations: Biomarkers, Brain natriuretic peptide (BNP), N-terminal pro-brain natriuretic peptide (NT-proBNP), Creatine kinase reports submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor Case Papers with vital (BP and Pulse) and Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient history and examination notes not suggestive of congestive heart failure.",
+    "Clinical notes, evaluation findings, indications, or planned line of treatment missing or incomplete.",
+    "ECG or ECHO report missing or incomplete.",
+    "Chest X-ray report missing or incomplete.",
+    "Required blood investigation reports (Biomarkers, BNP, NT-proBNP, Creatine kinase) missing or incomplete.",
+    "Detailed Indoor Case Papers with vital parameters or treatment details missing for claim submission.",
+    "Detailed Discharge Summary missing or follow-up date not mentioned."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "DNB / MD/Equivalent (General Medicine / Pediatric Medicine)/DM/DNB/Equivalent (Cardiology)",
+    "clinical_key_pointers": [
+      "Heart failure is a common and complex clinical syndrome that results from any functional or structural heart disorder, impairing ventricular filling or ejection of blood to the systemic circulation to meet the body's needs.",
+      "Heart failure can be caused by diseases of the endocardium, myocardium, pericardium, heart valves, vessels or metabolic disorders.",
+      "Most patients with Heart failure have symptoms due to impaired left ventricular myocardial function."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "_comment": "The procedure code SN031A maps to HBP 1.0 codes S800005 and S800006, all covering Excision of Cervical Ribs.",
+  "stg_id": "SN031A",
+  "procedure_code": "SN031A",
+  "condition": "Cervical Rib",
+  "procedure_name": "Excision of Cervical Ribs",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Excision of cervical rib_Medco.pdf",
+    "Excision of cervical rib_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Neurosurgery)",
+    "Plastic Surgeon",
+    "MS/Equivalent (in Orthopedic Surgery)"
+  ],
+  "clinical_indications": [
+    "Localized pain, compression of surrounding structures requiring intervention",
+    "Nerve compression causing symptoms like diminished distal pulse, prolongation of capillary refill, discoloration, decreased temperature of the distal upper extremity, or gangrenous changes at fingertips",
+    "Neurological manifestations due to cervical rib",
+    "Conservative treatment failure"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph"
+      },
+      {
+        "key": "cervical_x_ray",
+        "label": "Cervical X-ray"
+      },
+      {
+        "key": "ct_mri_chest_cervical_spine",
+        "label": "CT/MRI Chest and Cervical Spine"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "cervical_chest_x_ray",
+        "label": "Cervical/Chest X-ray"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did the Cervical X-ray/CT/MRI Chest and Cervical Spine confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the Chest/Cervical X-ray post-surgery report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation or imaging not indicative of surgery.",
+    "Clinical notes (detailed history, signs & symptoms, indication for procedure, or planned line of treatment) missing or incomplete at pre-authorization.",
+    "Cervical X-ray/CT/MRI Chest and Cervical Spine not confirming diagnosis at pre-authorization.",
+    "Clinical photograph missing at pre-authorization.",
+    "Detailed Procedure / Operative Notes missing at claim submission.",
+    "Post-surgery Chest/Cervical X-ray report not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A cervical rib, also known as a 'neck rib' or 'supernumerary rib in the cervical region,' is a congenital overdevelopment of the transverse process of a cervical spine vertebra.",
+      "They are commonly attached to the seventh cervical vertebra. They vary in size, shape, attachment sites, and can occur unilaterally or bilaterally.",
+      "The cervical rib typically consists of a head, neck, and tubercle. It is attached posteriorly to the first rib by a fibrous band near in the insertion of the anterior scalene muscle.",
+      "Cervical ribs must articulate with the transverse process to be considered a rib. Unilateral cervical ribs are more common and found more frequently on the left side than the right side.",
+      "There are four types of cervical ribs: Type 1 (complete rib articulating with first rib or manubrium), Type 2 (incomplete rib with a free distal tip), Type 3 (incomplete rib with a distal fibrous band attachment), Type 4 (short piece of bone extending beyond the C7 transverse process)."
+    ],
+    "surgical_options": [
+      "Complete resection of the rib is the mainstay of therapy; surgical approach varies.",
+      "Supraclavicular and transaxillary approaches with or without a first rib excision or scalenectomy.",
+      "A posterior approach may also be an option for specific indications.",
+      "The supraclavicular approach is primarily preferred for arterial compression.",
+      "The transaxillary approach is the most common approach, reserved for subclavian/axillary venous occlusion or neurological compression.",
+      "The posterior approach is the choice during re-operation for decompression of the brachial plexus and vascular structures."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

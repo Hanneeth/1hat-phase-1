@@ -1,0 +1,109 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL006A",
+  "procedure_code": "SL006A",
+  "condition": "Nasolacrimal Duct Obstruction (NLDO) / Chronic Dacryocystitis",
+  "procedure_name": "Endoscopic Dacryocystorhinostomy (Endoscopic DCR)",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Endoscopic DCR_Medco.pdf",
+    "Endoscopic DCR_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS",
+    "DNB",
+    "PG Diploma or equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Stenosis of nasolacrimal duct refractory to conventional treatment such as warm compresses, massage, medication and repeated probing of the duct."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, indications for doing the procedure & advise for admission)"
+      },
+      {
+        "key": "examination_investigation_findings_dye_disappearance_test_probing_irrigation",
+        "label": "Examination/ investigation findings- Dye disappearance test/ Probing & irrigation"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_note_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "intraoperative_photograph_with_time_and_date_optional",
+        "label": "Intraoperative photograph with time and date (Optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes (including clinical signs & symptoms such as excessive watering of eyes, swelling around the lacrimal duct& advise for admission) present?",
+        "expected": true
+      },
+      {
+        "q": "Are examination/investigation findings such as - dye disappearance test/ probing & irrigation findings present?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Are intra operative endoscopic still images submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical examination findings do not confirm chronic or long-standing epiphora.",
+    "Investigations performed do not confirm chronic dacryocystitis or the need for DCR.",
+    "Missing or incomplete clinical notes detailing signs, symptoms, indications for procedure, or advice for admission.",
+    "Missing or incomplete examination/investigation findings, such as dye disappearance test, probing, or irrigation findings.",
+    "Missing or incomplete detailed discharge summary.",
+    "Missing or incomplete procedure note or operative note.",
+    "Intraoperative endoscopic still images not submitted or missing time and date."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination and does not respond to conventional medical therapy.",
+      "Endoscopic dacryocystorhinostomy (DCR) is a minimally invasive technique used to treat patients diagnosed with nasolacrimal duct obstruction (NLDO). This can be caused by chronic infection or trauma and can also be congenital or acquired."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

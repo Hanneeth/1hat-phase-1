@@ -1,0 +1,139 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU010A",
+  "procedure_code": "SU010A",
+  "condition": "Nephroureterectomy (Benign)/ with cuff of bladder",
+  "procedure_name": "Nephro ureterectomy Open (Benign)",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Nephroureterectomy (Benign) with cuff of bladder_Medco.pdf",
+    "Nephroureterectomy (Benign) with cuff of bladder_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "MCh Urology",
+    "DNB Urology",
+    "MCh Pediatric Surgery",
+    "DNB Pediatric Surgery",
+    "Equivalent (in Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Upper tract urothelial carcinoma (UTUC)",
+    "Chronic pyelonephritis, renal arterial disease, calculus disease",
+    "Presence of systematic diseases",
+    "Benign Diseases: Multicystic or dysplastic kidneys, reflux nephropathy, obstructive uropathy, xanthogranulomatous pyelonephritis, calculus disease, and protein-losing nephropathy",
+    "Carcinoma: localized and metastatic renal cell carcinoma",
+    "Obstructive uropathy",
+    "In paediatric conditions: non-functioning renal segment of a duplex system associated with ectopic ureteroceles, VUR, or obstruction",
+    "Benign/malignant causes: Upper urinary tract tumors also for large, high-grade tumors of the renal pelvis and proximal ureter that are organ-confined or locally advanced",
+    "Tuberculous non-functional kidney: calcification of the renal parenchyma and/or multiple infundibular stenosis or ureteric strictures"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_eval_findings_treatment_plan",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "ct_ct_ivp_mri_mr_urogram_report",
+        "label": "CT/CT-IVP/MRI/MR Urogram report confirming the need for surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "intra_operative_photograph",
+        "label": "Intra operative Photograph"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT/CT-IVP/MRI/MR Urogram report confirming the need for surgery submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intra operative Photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathology report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or CT/CT-IVP/MRI/MR Urogram reports are not indicative of surgery.",
+    "Missing or incomplete clinical notes, evaluation findings, or planned line of treatment at pre-authorization.",
+    "CT/CT-IVP/MRI/MR Urogram report not submitted or does not confirm the need for surgery.",
+    "Missing intra-operative photograph or histopathology report at claim submission.",
+    "Detailed indoor case papers, procedure/operative notes, or discharge summary not submitted or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Laparoscopic facilities to be available",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Nephroureterectomy with cuff of bladder is the removal of the kidney, ureter, and bladder cuff and lymph nodes.",
+      "For patients with high-risk upper tract urothelial carcinoma (UTUC), renal pelvis or ureteral tumour, radical nephroureterectomy with ipsilateral bladder cuff excision (RNU + BCE) is the standard treatment.",
+      "The da Vinci robot system has been widely used in laparoscopy urologic surgery.",
+      "Nephroureterectomy is a minimally invasive procedure to remove the entire kidney along with the ureter.",
+      "It is also recommended for multifocal, recurrent, low-grade tumors.",
+      "The procedure involves removal of the kidney, ureter, and bladder cuff via a thoracoabdominal or flank approach.",
+      "Both Open and Laparoscopic Nephroureterectomy are common procedures.",
+      "Nephroureterectomy with resection of the ipsilateral bladder cuff is the gold-standard treatment for tumors."
+    ],
+    "surgical_options": [
+      "Nephroureterectomy involves three operative steps: (I) nephrectomy, (II) ureteral extirpation, and (III) resection of the intravesical and intramural ureteral segment, known as Bladder Cuff Excision (BCE).",
+      "Bladder Cuff Excision (BCE) techniques include: ONU with formal BCE, Endoscopic BCE, Intussusception technique for BCE, LNU for BCE, LNU with transvesical technique for BCE.",
+      "Open Partial/hemi Nephrectomy (ONU): Excision of the kidney and upper ureter by retroperitoneoscopic approach and bladder cuff excision by lower abdominal incision-open surgery (not minimally invasive).",
+      "Laparoscopic Partial/hemi Nephrectomy (LNU): Excision of the kidney and upper ureter by retroperitoneoscopic approach and bladder cuff excision by lower abdominal incision-open surgery (not minimally invasive).",
+      "Surgical management of nephrectomy, using either open or laparoscopic approach, for non-functional kidney.",
+      "Radical nephroureterectomy (RNU), either open or laparoscopic, with excision of a cuff of bladder mucosa, is the gold standard for Upper urinary tract tumors.",
+      "Laparoscopic approach, open excision of the distal ureter and cuff, endoscopic ureteral \"pluck\" technique, and endoscopic ureteral “intussusception” technique."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL009A",
+  "procedure_code": "SL009A",
+  "condition": "Deviated Nasal Septum",
+  "procedure_name": "Septoplasty",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Septoplasty_Medco.pdf",
+    "Septoplasty_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS",
+    "DNB",
+    "PG Diploma or equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Deviated nasal septum resulting in Nasal obstruction",
+    "Deviated nasal septum resulting in Recurrent epistaxis",
+    "As an initial surgery to create adequate nasal space to perform endoscopic nasal surgeries"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, indications for doing the procedure, circumstances of the incident which led to Deviated Nasal Septum& advise for admission)"
+      },
+      {
+        "key": "anterior_rhinoscopy_endoscopic_picture",
+        "label": "Anterior rhinoscopy/ endoscopic picture showing deviated nasal septum"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "procedure_note_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes (including clinical signs & symptoms such as difficulty in breathing, examination findings, indications for doing the procedure & advice for admission)?",
+        "expected": true
+      },
+      {
+        "q": "Anterior rhinoscopy/ endoscopic picture showing deviated nasal septum?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advice including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are incomplete or do not provide sufficient detail regarding signs, symptoms, examination findings, indications, or admission advice for Septoplasty.",
+    "The mandatory anterior rhinoscopy or endoscopic picture showing deviated nasal septum is missing or inconclusive.",
+    "Patient's age is below the recommended minimum (14-16 years) for Septoplasty without specific clinical justification for limited intervention.",
+    "Operative notes are missing or lack sufficient detail on the surgical steps performed and the outcomes of the Septoplasty procedure.",
+    "Documents demonstrating appropriate post-operative care, follow-up advice, or a detailed discharge summary are missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, and examination.",
+      "Septoplasty is a surgical correction of defects and deformities of nasal septum causing nasal obstruction or recurrent epistaxis."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Surgery should not be planned in children before completion of the development of facial skeleton (at least 14 to 16 years of age).",
+      "In case of severe symptoms in pediatric patients which is not controlled by medical management, limited septoplasty should be considered avoiding the growth centers in the nasal septum."
+    ]
+  }
+}

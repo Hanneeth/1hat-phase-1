@@ -1,0 +1,115 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG052A",
+  "procedure_code": "MG052A",
+  "condition": "Myxedema coma",
+  "procedure_name": "Myxedema coma",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Myxedema coma_Medco.pdf",
+    "Myxedema coma_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Myxedema coma is defined as severe hypothyroidism leading to decreased mental status, hypothermia, and other symptoms related to slowing of function in multiple organs.",
+    "Common symptoms: Myxedematous face",
+    "Common symptoms: Generalized puffiness",
+    "Common symptoms: Macroglossia",
+    "Common symptoms: Ptosis",
+    "Common symptoms: Periorbital edema",
+    "Common symptoms: Nonpitting edema of the lower extremities is sometimes present"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "tsh_ft3_ft4_reports",
+        "label": "Thyroid stimulating hormone (TSH), Free Triiodothyronine (FT3) and Free Thyroxine (FT4) level reports"
+      },
+      {
+        "key": "sr_electrolyte_report",
+        "label": "Sr. Electrolyte report"
+      },
+      {
+        "key": "usg_thyroid_gland_report",
+        "label": "USG thyroid gland report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers with treatment given details"
+      },
+      {
+        "key": "post_treatment_ftsh_ft3_ft4_level",
+        "label": "Post treatment FTSH, FT3 and FT4 level"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the TSH, FT3, FT4 report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG thyroid report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor Case Papers with vital (BP and Pulse) and Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post treatment TSH, FT3, FT4 report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "The thyroid report is not suggestive of hypothyroidism at the time of pre-authorization.",
+    "Clinical notes, evaluation findings, indications, or planned line of treatment are missing or incomplete at pre-authorization.",
+    "TSH, FT3, or FT4 level reports are missing or incomplete at pre-authorization.",
+    "Detailed Indoor Case Papers with vital (BP and Pulse) or treatment details are missing or incomplete at claim submission.",
+    "Post-treatment FTSH, FT3, or FT4 level reports are missing or incomplete at claim submission.",
+    "The detailed discharge summary is missing or does not include the date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": "DNB / MD equivalent in (General Medicine / Pediatric Medicine), DM Endocrinology & Metabolism",
+    "clinical_key_pointers": [
+      "Proceed with Myxedema coma only if diagnosis made is backed by clinical manifestation:"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

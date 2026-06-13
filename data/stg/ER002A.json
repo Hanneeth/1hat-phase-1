@@ -1,0 +1,101 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "ER002A",
+  "procedure_code": "ER002A",
+  "condition": "Cardiopulmonary emergency",
+  "procedure_name": "Emergency with stable cardiopulmonary status",
+  "specialty": "Emergency Room Packages",
+  "version": "1.1",
+  "source_files": [
+    "Cardiopulmonary emergency_Medco.pdf",
+    "Cardiopulmonary emergency_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MD/DNB in Emergency Medicine",
+    "General medicine",
+    "DM in Cardiology"
+  ],
+  "clinical_indications": [
+    "Chronic Stable Angina: Chronic manifestation of coronary artery disease (CAD) described as retrosternal discomfort (heaviness), brought about or increased with exertion and reduced with rest or nitrates."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "symptom_duration",
+      "operator": "<",
+      "value": "10 minutes",
+      "note": "duration of retrosternal discomfort for Chronic Stable Angina"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "ecg_report",
+        "label": "Electrocardiogram (ECG) report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "ECG report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes and ECG report indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with vitals and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary and treatment details provided including drugs used for thrombolysis (if applicable) submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes not submitted or incomplete, failing to support stable cardiopulmonary status.",
+    "ECG report not submitted or does not support stable cardiopulmonary status.",
+    "Clinical notes and/or ECG report indicate an unstable cardiopulmonary status or non-cardiac etiology, not matching this package.",
+    "Detailed Indoor Case Papers are missing or lack essential vital and treatment details.",
+    "Discharge summary is missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": "I20.9",
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for treatment only if diagnosis made is backed by clinical signs, symptoms, examination."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Manage factors potentiating angina: Anaemia, Thyrotoxicosis, Pregnancy, febrile illness, Hypertension, Ventricular hypertrophy, CHF, Tachy or brady-arrhythmia, Drugs: bronchodilators, steroids.",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

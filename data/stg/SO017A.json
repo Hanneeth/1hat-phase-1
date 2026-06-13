@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO017A",
+  "procedure_code": "SO017A",
+  "condition": "Hysteroscopic IUCD Removal",
+  "procedure_name": "Hysteroscopic IUCD Removal",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Diagnostic Hysteroscopy and Hysteroscopic IUCD Removal_Medco.pdf",
+    "Diagnostic Hysteroscopy and Hysteroscopic IUCD Removal_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Missing IUCD thread and suspicion of displaced IUCD"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed clinical notes with history, symptoms, signs, examination findings, indications, and advice for admission"
+      },
+      {
+        "key": "hemoglobin_cbc",
+        "label": "Hemoglobin, Complete blood count"
+      },
+      {
+        "key": "urine_complete_examination",
+        "label": "Urine complete examination (CUE)"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG abdomen/pelvis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "photograph_removed_iucd",
+        "label": "Photograph of removed IUCD"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative/ procedure notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes all vitals, detailed history especially medication history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advice for admission are present?",
+        "expected": true
+      },
+      {
+        "q": "Did the history, clinical examination, and investigation/imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Patient presented with history of IUCD and does not feel the thread?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging/investigation indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was the photograph of the post-removal IUCD available as applicable?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient did not present with history of IUCD and not feeling the thread",
+    "Detailed clinical notes are missing or incomplete",
+    "Hemoglobin/Complete blood count results are missing or do not support the medical necessity of the procedure",
+    "Urine complete examination (CUE) report is missing or incomplete",
+    "USG abdomen/pelvis report is missing or does not support the diagnosis",
+    "Photograph of the removed IUCD is missing at the time of claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with minor operation theatre setting when procedure to be done under local anaesthesia; Facilities with well-equipped operation theatre with Anesthetist and Anesthesia facility when procedure to be done under general anaesthesia",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Common presentation For IUCD removal: Non visualization of IUCD thread"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "complications": []
+  }
+}

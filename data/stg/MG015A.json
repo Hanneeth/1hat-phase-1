@@ -1,0 +1,98 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Visceral Leishmaniasis/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG015A",
+  "procedure_code": "MG015A",
+  "condition": "Visceral Leishmaniasis",
+  "procedure_name": "Visceral Leishmaniasis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Visceral leishmaniasis_Medco.pdf",
+    "Visceral leishmaniasis_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Irregular bouts of high fever",
+    "Substantial weight loss",
+    "Enlargement of liver and spleen",
+    "Anaemia"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "rapid_dip_test_rk_39_report",
+        "label": "Rapid Dip Test (Rk-39) report"
+      },
+      {
+        "key": "blood_report_cbc_platelet_reports",
+        "label": "Blood report (CBC, Platelet) reports"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_paper",
+        "label": "Detailed Indoor case paper"
+      },
+      {
+        "key": "post_treatment_blood_investigation_report_cbc_platelet",
+        "label": "Post treatment Blood investigation report (CBC, Platelet etc.)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the patient have any of the symptoms like Irregular bouts of high fever, Substantial weight loss with enlarged liver and spleen?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient test positive for rK39 test?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was patient treated with IV fluids, IV Dextrose, Steroids NSAIDS?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical symptoms (irregular fever, weight loss, enlarged liver and spleen, anaemia) not documented or not meeting criteria for Visceral Leishmaniasis.",
+    "rK39 test report not submitted or result is negative.",
+    "Treatment includes IV fluids, IV Dextrose, Steroids, or NSAIDS without documented justification.",
+    "Pre-authorization clinical notes lack evaluation findings, indications, or the planned line of treatment.",
+    "Post-treatment blood investigation report (CBC, Platelet etc.) is missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD / DNB equivalent (in General Medicine, Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Irregular bouts of high fever",
+      "Substantial weight loss",
+      "Enlargement of liver and spleen",
+      "Anaemia"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

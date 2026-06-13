@@ -1,0 +1,137 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG121A",
+  "procedure_code": "SG121A",
+  "condition": "Pancreatic Necrosectomy",
+  "procedure_name": "Pancreatic Necrosectomy",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Pancreatic Necrosectomy_Medco.pdf",
+    "Pancreatic Necrosectomy_PPD.CPD.pdf"
+  ],
+  "alos": "15-20 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MCh/DNB/Equivalent (GI Surgery)"
+  ],
+  "clinical_indications": [
+    "Acute pancreatitis patients who develop infected pancreatic necrosis (between 5-10% of cases)",
+    "Severe pancreatitis leading to necrosis of pancreatic tissue despite aggressive supportive care, including antibiotics",
+    "Infected and necrotic pancreatic tissue serving as a nidus for pro-inflammatory factors, leading to severe inflammatory reaction, exacerbating Severe Inflammatory Response Syndrome (SIRS) features, septicaemia, and Multiple Organ Dysfunction Syndrome (MODS)",
+    "Removal of infected necrotic debris to reduce systemic inflammatory response",
+    "Surgery should be performed as late as possible, ideally beyond three weeks from the onset of an acute attack, for easier identification of well-demarcated necrotic tissue and better results."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "time_from_acute_pancreatitis_onset",
+      "operator": ">=",
+      "value": "3 weeks",
+      "note": "Necrosectomy performed beyond three weeks from the onset of an acute attack usually yields better results."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes with history and examination and planned line of treatment"
+      },
+      {
+        "key": "ct_abdomen_report",
+        "label": "CT Abdomen Report"
+      },
+      {
+        "key": "usg_guided_fnac",
+        "label": "USG Guided FNAC (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "intraoperative_photograph",
+        "label": "Intraoperative Photograph (Optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "histopathology_culture_reports",
+        "label": "Histopathology and Culture Reports"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether the investigation reports confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes with detailed history, signs and symptoms, clinical examination, planned line of treatment, and indications for the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether CT Abdomen report available?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Operative/Procedure notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advice available at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Whether HPE and Culture reports submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's clinical history/investigations are not indicative of the Procedure",
+    "Investigation reports do not confirm the diagnosis",
+    "CT Abdomen report not available at pre-authorisation stage",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details not available at claim stage",
+    "Detailed Operative/Procedure notes not submitted at claim stage",
+    "Discharge Summary not submitted or lacks follow-up advice at claim stage",
+    "Histopathology and Culture reports not submitted at claim stage"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Acute pancreatitis is a common condition, the incidence of which is increasing with every passing year. Between 5-10% of patients with acute pancreatitis develop infected pancreatic necrosis. Severe pancreatitis leads to necrosis of pancreatic tissue despite aggressive supportive care, including antibiotics. However, the necrotic tissue initially remains sterile, primarily determined by the extent of pancreatic necrosis. Once infected, the septic process commences immediately, leading to multiple organ failures and high mortality.",
+      "Infected and necrotic pancreatic tissue serves as a nidus for pro-inflammatory factors to be released in large amounts locally and systemically. This elicits a severe inflammatory reaction, thereby exacerbating or amplifying Severe Inflammatory Response Syndrome (SIRS) features. The persistence of these effects eventually leads to septicaemia and Multiple Organ Dysfunction Syndrome (MODS), eventually terminating in death. Therefore, removing this infected necrotic debris reduces the quantum of pro-inflammatory factors released into the system, thereby reducing the systemic inflammatory response.",
+      "The procedure is performed through a midline incision, and the entire abdomen is assessed. Once the focus of necrosis is exposed, blunt necrosectomy is performed, which ensures atraumatic removal of necrotic tissue without damaging the residual pancreatic tissue. After primary necrosectomy, the cavity is irrigated, packed, and closed after placing drains.",
+      "The general agreement is that surgery for severe pancreatitis should be performed as late as possible. The rationale for late surgery is the ease of identifying well-demarcated necrotic tissue from viable parenchyma, limiting the extent of surgery to pure debridement. Necrosectomy performed beyond three weeks from the onset of an acute attack usually yields better results."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

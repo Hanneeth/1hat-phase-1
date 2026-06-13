@@ -1,0 +1,149 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG034A",
+  "procedure_code": "MG034A",
+  "condition": "Ascites",
+  "procedure_name": "Ascites",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Ascites_Medco.pdf",
+    "Ascites_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "DNB / MD (General Medicine / Pediatric Medicine)",
+    "DM/DNB (Gastroenterology)"
+  ],
+  "clinical_indications": [
+    "Progressive abdominal distension, abdominal discomfort, weight gain, early satiety, shortness of breath, dyspnea, or increased abdominal pressure due to fluid accumulation.",
+    "Symptoms such as fever, abdominal tenderness, or confusion, suggesting spontaneous bacterial peritonitis.",
+    "Flank dullness, shifting dullness, a fluid wave, or evidence of pleural effusions on physical examination.",
+    "Findings related to underlying causes, such as stigmata of cirrhosis (spider angioma, palmar erythema, abdominal wall collaterals) or advanced liver disease (spider angiomata, jaundice, muscle wasting, gynecomastia, leukonychia).",
+    "Homogenous freely mobile anechoic collection in the peritoneal cavity, especially in Morison pouch, on ultrasound.",
+    "Diagnosis confirmed by diagnostic abdominal paracentesis with appropriate ascitic fluid analysis (including blood cell count, PMN count, and bacterial culture)."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "liver_function_test",
+        "label": "Liver Function test"
+      },
+      {
+        "key": "ultrasound_abdomen_upper_gi_endoscopy",
+        "label": "Ultrasound abdomen/Upper GI endoscopy"
+      },
+      {
+        "key": "cancer_markers_ca_19_9_cea_ca_125_females_as_and_when_applicable",
+        "label": "Cancer markers CA-19-9, CEA, CA-125 (females) (as and when applicable)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_and_treatment_given",
+        "label": "Detailed Indoor Case Papers and Treatment given"
+      },
+      {
+        "key": "serum_ascites_albumin_gradient_saag_report",
+        "label": "Serum ascites albumin gradient (SAAG) report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the liver function test report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Ultrasound abdomen/Upper Gl endoscopy report of patient suggestive of ascites?",
+        "expected": true
+      },
+      {
+        "q": "Was the Cancer markers CA-19-9, CEA, CA-125 (females) (as and when applicable) report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor case papers and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Serum ascites albumin gradient (SAAG) report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or USG Abdomen/Upper GI endoscopy reports were not indicative of Ascites.",
+    "Liver Function Test report missing at pre-authorization.",
+    "Serum Ascites Albumin Gradient (SAAG) report missing at claim submission.",
+    "Detailed Discharge Summary missing or lacking date of follow-up at claim submission.",
+    "Clinical notes at pre-authorization are incomplete regarding evaluation findings, indications, or planned line of treatment.",
+    "Applicable cancer markers (CA-19-9, CEA, CA-125 for females) report not submitted when required."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ascites is the pathologic accumulation of fluid within the peritoneal cavity.",
+      "It is the most common complication of cirrhosis and occurs in about 50% of patients with decompensated cirrhosis in 10 years."
+    ],
+    "surgical_options": [
+      "Outpatient therapeutic paracentesis (for low-albumin-gradient ascites)",
+      "Surgical debulking and chemotherapy (for ovarian malignancy causing low-albumin-gradient ascites)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "causes_of_ascites": [
+      "Cirrhosis",
+      "Malignancy",
+      "Tuberculosis",
+      "Heart failure",
+      "Chronic alcohol use",
+      "IV drug use",
+      "Obesity",
+      "Hypercholesterolemia",
+      "Type 2 diabetes",
+      "Nephrotic syndrome",
+      "Severe malnutrition",
+      "Pancreatic ascites",
+      "Ovarian lesions",
+      "Rarely Pseudomyxoma peritonei"
+    ],
+    "management_details": [
+      "Sodium restriction and diuretics form the basis of treatment.",
+      "For high-albumin-gradient ascites in cirrhosis: abstinence from alcohol, dietary sodium restriction to 88 mEq (2000 mg)/day, and diuretics (spironolactone and furosemide in a ratio of 100:40 mg/day).",
+      "Patients with treatable liver conditions (autoimmune hepatitis, chronic hepatitis B with reactivation, hemochromatosis, Wilson disease) should receive specific therapy.",
+      "Liver transplantation may be a better option for some patients with cirrhosis.",
+      "Patients with low-albumin-gradient ascites (e.g., non-ovarian peritoneal carcinomatosis) may benefit from outpatient therapeutic paracentesis.",
+      "Patients with ovarian malignancy may benefit from surgical debulking and chemotherapy.",
+      "TB peritonitis is treated with anti-tuberculous medications.",
+      "Pancreatic ascites and postoperative lymphatic leak from a distal splenorenal shunt or radical lymphadenectomy may resolve spontaneously."
+    ]
+  }
+}

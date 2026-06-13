@@ -1,0 +1,142 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M0010A",
+  "procedure_code": "M0010A",
+  "condition": "Osteosarcoma",
+  "procedure_name": "CT for Osteogenic Sarcoma (Cisplatin + doxorubicin)",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Osteosarcoma Guidelines.pdf"
+  ],
+  "alos": "1",
+  "min_doctor_qualification": [
+    "M.Ch. or DM (Medical oncology) or equivalent"
+  ],
+  "clinical_indications": [
+    "TNM 8th ed, Stages I-III and selected Stage IV (pulmonary metastasis treated with curative intent) non-metastatic at presentation",
+    "Metastatic with isolated pulmonary",
+    "Neoadjuvant and adjuvant therapy",
+    "Adjuvant therapy in osteosarcomas initially diagnosed as low grade and later identified with high grade component after surgery"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with documentation of relevant history"
+      },
+      {
+        "key": "bone_imaging",
+        "label": "Bone imaging (local and chest x-ray)"
+      },
+      {
+        "key": "blood_investigations",
+        "label": "Blood investigations- CBC,LFT, RFT, RBS"
+      },
+      {
+        "key": "routine_biochemistry",
+        "label": "Routine Biochemistry"
+      },
+      {
+        "key": "serological_investigations",
+        "label": "Serological investigations- alkaline phosphatase, lactate dehydrogenase"
+      },
+      {
+        "key": "mri_affected_part",
+        "label": "MRI of the affected part"
+      },
+      {
+        "key": "core_needle_biopsy",
+        "label": "Core needle biopsy"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "cect_chest",
+        "label": "CECT chest"
+      },
+      {
+        "key": "bone_scan_f18_pet_scan",
+        "label": "Bone scan/ F18 PET Scan"
+      },
+      {
+        "key": "echo_ecg_gfr_audiometry",
+        "label": "ECHO, ECG, GFR, Audiometry"
+      }
+    ],
+    "claim": [
+      {
+        "key": "parameters_monitored",
+        "label": "Mandatory parameters to be monitored for eg. to look for Hepatic/ Renal or Cardiotoxicity, etc."
+      },
+      {
+        "key": "drug_bar_code",
+        "label": "Bar code of the drugs"
+      },
+      {
+        "key": "reports_of_tests",
+        "label": "Reports of the tests (pathology, radiology, microbiology, hematology, biochemistry, etc.)"
+      },
+      {
+        "key": "discharge_summary_inpatient",
+        "label": "Discharge summary of inpatient department"
+      },
+      {
+        "key": "discharge_summary_day_care",
+        "label": "Discharge summary of day care department"
+      },
+      {
+        "key": "chemotherapy_regimen_charts",
+        "label": "Charts of chemotherapy regimen"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Increased levels of alkaline phosphatase and Lactate dehydrogenase?",
+        "expected": true
+      },
+      {
+        "q": "Local part X-Ray/MRI/ Bone scan/ PET-CT shows osteosarcoma?",
+        "expected": true
+      },
+      {
+        "q": "Biopsy report shows High Grade osteosarcoma?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Increased levels of alkaline phosphatase and Lactate dehydrogenase not documented or outside expected range",
+    "Local part X-Ray/MRI/ Bone scan/ PET-CT does not show osteosarcoma",
+    "Biopsy report does not show High Grade osteosarcoma",
+    "Clinical notes with relevant history are missing or incomplete at pre-authorization",
+    "Bone imaging (local and chest x-ray) is missing or incomplete at pre-authorization",
+    "Bar code of the drugs is missing at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Chemotherapy unit (adequate infrastructure for drug level monitoring especially for MAP regimen i.e. adequate facilities for admission for every cycle and adequate facilities to monitor serum methotrexate levels and to manage renal toxicities); LINEAC; well-equipped OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Physiotherapy rehabilitation post-operatively, follow-up every 4 to 6 months for first 5 years and annual follow-up after every 5 years with clinical evaluation (examination of local area), radiological evaluation (X-ray of the local part and Chest) and functional evaluation (using special scores like Musculoskeletal Tumor Society (MSTS) scoring, etc.) additional investigations may be required if there is suspicion of recurrence or any issue with reconstruction.",
+    "fitness_criteria": null,
+    "comorbidity_management": "Mandatory parameters to be monitored for eg. to look for Hepatic/ Renal or Cardiotoxicity, etc.",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Osteosarcomas diagnosed as low grade on initial biopsy are treated with wide excision only unless diagnosed with high grade"
+    ]
+  }
+}

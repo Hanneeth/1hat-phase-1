@@ -1,0 +1,152 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO023A",
+  "procedure_code": "SO023A",
+  "condition": "Adhesions",
+  "procedure_name": "Laparoscopic adhesiolysis",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Laparoscopic adhesiolysis_Medco.pdf",
+    "Laparoscopic adhesiolysis_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Chronic pelvic pain",
+    "Infertility",
+    "Endometriosis",
+    "Intestinal obstruction",
+    "Pelvic Inflammatory disease (PID)",
+    "Symptoms suggestive of Chronic pelvic pain or endometriosis with adhesions which are unresolved after medical line of management such as NSAID's, Neurolytic agents and hormonal agents (eg: GnRh analogues, Oral Contraceptive pills, progesterone, danazol)",
+    "Patient presented with infertility due to adhesions wherein other causes of infertility have been ruled out",
+    "Patient presented with Pelvic Inflammatory disease with adhesions and medical line of Management (eg: antibiotics and NSAIDS being prescribed)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_indications_symptoms_signs_examination_findings_advice_admission",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "usg_pelvis",
+        "label": "USG Pelvis"
+      },
+      {
+        "key": "hysterosalpingography_hsg",
+        "label": "Hysterosalpingography (HSG) in case of infertility"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports_if_done",
+        "label": "Investigation reports (if done)"
+      },
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "blood_transfusion_notes_if_given",
+        "label": "Blood transfusion notes (if blood transfusion was given)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history especially previous surgery, symptoms, signs, physical examination including local examination, indication for procedure, advise for admission, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation, history and imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the failure of medical treatment documented indicating surgical management?",
+        "expected": true
+      },
+      {
+        "q": "Was there an evidence of Peritonitis?",
+        "expected": false
+      },
+      {
+        "q": "Was there an evidence of Massive abdominal distension?",
+        "expected": false
+      },
+      {
+        "q": "Was there an evidence of Severe co-morbid factors affecting heart and lung?",
+        "expected": false
+      },
+      {
+        "q": "Was there an evidence of Hemodynamic instability?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was there an evidence of failure of medical treatment (prescription) / previous history of surgery (documentation) / infertility (USG/HSG report) indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Failure of medical treatment not documented, indicating surgical management without justification.",
+    "Evidence of peritonitis, massive abdominal distension, severe co-morbid factors affecting heart and lung, or hemodynamic instability without justification.",
+    "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission missing or incomplete at pre-authorization.",
+    "USG Pelvis report not provided at pre-authorization.",
+    "Hysterosalpingography (HSG) report missing for infertility cases at pre-authorization.",
+    "Detailed indoor case papers with daily vitals and treatment details missing or incomplete at claim submission.",
+    "Detailed operative notes not provided or incomplete at claim submission.",
+    "Discharge summary with follow-up advice missing or incomplete at claim submission.",
+    "Blood transfusion notes not provided when blood transfusion was given."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability. Laparoscopic facility for laparoscopic procedures.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Adhesions commonly result from abdominal and pelvic surgical procedures. Indications for lysis of adhesions must be individualized to the patient. Certainly, in cases of acute abdomen secondary to intestinal obstruction or perforation, immediate operation and resection are indicated."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Peritonitis",
+      "Massive abdominal distension",
+      "Severe co-morbid factors affecting heart and lung",
+      "Hemodynamic instability"
+    ]
+  }
+}

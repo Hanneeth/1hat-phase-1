@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS019B",
+  "procedure_code": "SS019B",
+  "condition": "Undescended testis",
+  "procedure_name": "Bilateral Palpable",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Undescended testis_Medco.pdf",
+    "Undescended testis_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MCh/ equivalent (in Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Empty and hypoplastic or poorly rugated scrotum or hemiscrotum (Not seeing or feeling a testicle where you would expect it to be in the scrotum is the main sign of an undescended testicle)",
+    "Inguinal fullness may be present"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG abdomen and pelvis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_icps",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Ultrasound abdomen and pelvis report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Intra-operative photograph?",
+        "expected": true
+      },
+      {
+        "q": "Whether clinical / Ultrasound abdomen and pelvis revealed empty scrotum?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Did the Intra operative photograph revealed type of procedure performed for indication of palpable/non palpable and unilateral/bilateral?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or Ultrasound abdomen and pelvis report does not confirm empty scrotum",
+    "Clinical notes missing or incomplete for detailed history, signs & symptoms, indication for procedure",
+    "Ultrasound abdomen and pelvis report not submitted or incomplete",
+    "Intra-operative photograph not submitted or not clearly showing the procedure performed/indication",
+    "Detailed Procedure / operative notes missing or incomplete",
+    "Discharge summary missing or lacking follow-up advice"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Cryptorchidism is the most common congenital abnormality of the genitourinary tract in boys. A testis that is not within the scrotum and does not descend spontaneously into the scrotum by four months of age (or corrected age for premature infants) is a cryptorchid testis.",
+      "Most cryptorchid testes are undescended, but some are absent (due to agenesis or atrophy).",
+      "True undescended testes have stopped short along their normal path of descent into the scrotum.",
+      "They may remain in the abdominal cavity or they may be palpable in the inguinal canal (intracanalicular) or just outside the external ring (suprascrotal).",
+      "Proceed with Undescended testis surgery only if diagnosis made is backed by clinical manifestation:",
+      "Empty and hypoplastic or poorly rugated scrotum or hemiscrotum (Not seeing or feeling a testicle where you would expect it to be in the scrotum is the main sign of an undescended testicle)",
+      "Inguinal fullness may be present",
+      "The evaluation of cryptorchidism typically includes history and physical examination. Imaging and laboratory studies are not routinely warranted but may be necessary to exclude associated conditions",
+      "Unlike retractile testes, palpable undescended testes cannot be milked into a normal scrotal position and/or will not remain in a normal scrotal position if the cremasteric reflex is overcome.",
+      "Palpable undescended testes are differentiated from ectopic testes by their position (intracanalicular or suprascrotal versus suprapubic, femoral canal, perineum, or contralateral scrotal compartment).",
+      "The major diagnostic considerations for a unilaterally nonpalpable testis include true undescended testis, absent testis, and ectopic testis. Surgical exploration is usually necessary to distinguish among these possibilities.",
+      "The major diagnostic considerations for bilaterally nonpalpable testes include disorders of sex development (DSDs), true undescended testes, anorchia, and bilateral testicular atrophy. The diagnostic evaluation differs depending on age.",
+      "Determining the preoperative location of the testis, aids in planning the surgical approach. A careful bimanual examination is necessary for boys with a undescended testis."
+    ],
+    "surgical_options": [
+      "Orchiopexy - Orchiopexy is a well-established surgical procedure for repositioning undescended or ectopic testes that are palpable.",
+      "Exploratory surgery - Exploratory surgery for the nonpalpable testis is diagnostic and potentially therapeutic.",
+      "Two surgical approaches are used in the management of boys with nonpalpable testes: the open inguinal approach and the laparoscopic approach. The laparoscopic approach usually is undertaken if the surgeon has laparoscopic expertise. Laparoscopy is both a diagnostic and therapeutic procedure."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

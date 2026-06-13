@@ -1,0 +1,143 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG053B",
+  "procedure_code": "SG053B",
+  "condition": "Hiatus Hernia/ Fundoplication",
+  "procedure_name": "Hiatus Hernia Repair - Lap.",
+  "specialty": "General/Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Hiatus hernia and fundoplication_Medco.pdf",
+    "Hiatus hernia and fundoplication_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MS/ DNB/ Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (in Pediatric Surgery, Surgical Gastroenterology)"
+  ],
+  "clinical_indications": [
+    "Hiatus hernia, including Type 1 (sliding), Type 2 (paraesophageal), Type 3 (mixed), or Type 4 (giant).",
+    "Symptoms of reflux (regurgitation, heartburn) refractory to conservative and medical treatment.",
+    "Complications of sliding hernia or gastroesophageal reflux (e.g., stricture, severe ulceration, fibrosis, esophagitis, chronic occult GI blood loss with anemia, lower esophageal stricture, Barrett's esophagus, adenocarcinoma, aspiration pneumonia).",
+    "Complete mechanical failure of the lower esophageal sphincter (LES).",
+    "Paraesophageal hiatus hernia to prevent severe complications (e.g., hemorrhage, incarceration, obstruction, strangulation).",
+    "Symptoms due to complications such as dysphagia, odynophagia, haematemesis, melaena, asthma, chest pain, fullness after eating, upper abdominal pain, pressure sensation in lower chest."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_evaluation",
+        "label": "Clinical Evaluation"
+      },
+      {
+        "key": "upper_gi_barium_swallow",
+        "label": "Upper gastrointestinal series/barium swallow"
+      },
+      {
+        "key": "upper_endoscopy",
+        "label": "Upper endoscopy"
+      },
+      {
+        "key": "24hr_ph_monitoring",
+        "label": "24-hr pH-monitoring"
+      },
+      {
+        "key": "oesophageal_manometry",
+        "label": "Oesophageal manometry"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes incomplete (missing detailed history, signs & symptoms, planned line of treatment, or indication for procedure).",
+    "Imaging (e.g., Upper GI series/barium swallow, Upper endoscopy, chest x-ray) not confirming diagnosis or not indicative of surgery.",
+    "Clinical presentation not indicative of surgery.",
+    "Mandatory investigation reports (24-hr pH-monitoring, Oesophageal manometry) missing at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) missing or incomplete, or daily vitals/line of treatment not documented at claim stage.",
+    "Detailed Procedure / Operative Notes missing or incomplete at claim stage.",
+    "Discharge summary missing or lacking follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital; laparoscopic facility for laparoscopic procedures",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Type 1 - sliding or oroesophagogastric hernia, in which the gastroesophageal junction slides into the thorax",
+      "Type 2 - Paraesophageal or Rolling, in which a portion of the stomach (usually the fundus) is insinuated next to the esophagus inside the gastroesophageal junction in the hiatus",
+      "Type 3 - Mixed hernia, combination of sliding and paraesophageal types. The fundus or body of the stomach or both have herniated into the chest; the gastro-oesophageal junction is also herniated into the chest, but rests below the herniated stomach",
+      "Type 4 - Giant hiatus hernia (massive herniation), Occurrence of any type of hiatus hernia along with herniation of one or more other organs, such as colon, small bowel, omentum, and spleen."
+    ],
+    "surgical_options": [
+      "Nissen (360 degree or complete) fundoplication",
+      "Rosetti-Nissen fundoplication (360-degree fundic wrap without division of the short gastric vessels)",
+      "Partial fundoplication (Toupet - 270-degree posterior wrap for patients with severe associated motor abnormalities)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

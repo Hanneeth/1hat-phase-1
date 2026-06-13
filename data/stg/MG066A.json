@@ -1,0 +1,115 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG066A",
+  "procedure_code": "MG066A",
+  "condition": "Anaphylaxis",
+  "procedure_name": "Anaphylaxis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Anaphylaxis _Medco.pdf",
+    "Anaphylaxis _PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Any acute onset illness with typical skin features (urticarial rash or erythema/flushing, and/or angioedema), involvement of respiratory and/or cardiovascular and/or persistent severe gastrointestinal symptoms",
+    "Any acute onset of hypotension or bronchospasm or upper airway obstruction where anaphylaxis is considered possible, even if typical skin features are not present"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including history (Drug Hx, IV, Sub cutaneous TM, Oral), physical examination, evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "cbc_ige_report",
+        "label": "Complete Blood Count (CBC)/ allergen-specific immunoglobulin E (IgE) report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "post_treatment_cbc_report",
+        "label": "Post treatment CBC report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical Notes including history (Drug Hx, IV, Sub cutaneous TM, Oral), physical examination, evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Complete Blood Count (CBC)/ allergen-specific immunoglobulin E (IgE) report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the clinical notes and Laboratory diagnostic reports are indicative of the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the detailed Indoor case papers with all the daily vital and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post treatment CBC report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the detailed discharge summary with the follow up date submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or laboratory diagnostic reports are not indicative of Anaphylaxis",
+    "Clinical Notes including history, physical examination, evaluation findings, indications, and planned line of treatment are missing or incomplete at pre-authorization",
+    "Complete Blood Count (CBC) or allergen-specific immunoglobulin E (IgE) report is missing at pre-authorization",
+    "Detailed Indoor case papers with daily vital and treatment details are missing or incomplete at claim submission",
+    "Post treatment CBC report is missing at claim submission",
+    "Detailed Discharge Summary with follow-up date is missing or incomplete at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD / DNB General medicine, MD / DNB Pediatric Medicine/Emergency Medicine",
+    "clinical_key_pointers": [
+      "Mild or moderate reactions: Swelling of lips, face, eyes",
+      "Mild or moderate reactions: Hives or welts",
+      "Mild or moderate reactions: Tingling mouth",
+      "Mild or moderate reactions: Abdominal pain,",
+      "Mild or moderate reactions: Vomiting",
+      "Respiratory/chest features (most common in children): Anxiety, Angioedema",
+      "Respiratory/chest features (most common in children): Breathing difficulty",
+      "Respiratory/chest features (most common in children): Hypotension (Low BP)",
+      "Respiratory/chest features (most common in children): Sever/life threatening anaphylaxis",
+      "Respiratory/chest features (most common in children): Diarrhoea",
+      "Respiratory/chest features (most common in children): Abdominal cramps",
+      "Respiratory/chest features (most common in children): Nausea / Vomiting",
+      "Respiratory/chest features (most common in children): Sneezing or Rhinorrhea",
+      "Sever anaphylaxis: Cardiorespiratory, Breathing difficulty wheezing, Hemodynamic instability, compromise hypotension, cardiovascular collapse."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB034A",
+  "procedure_code": "SB034A",
+  "condition": "Congenital Dysplasia of Hip (CDH)",
+  "procedure_name": "Open reduction of CDH",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Open Reduction for CDH_Medco.pdf",
+    "Open Reduction for CDH_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Clinical notes confirming Congenital Dysplasia of Hip (CDH) / Developmental Dysplasia of the Hip (DDH)",
+    "Presence of a palpable 'clunk' with Ortolani maneuver",
+    "Hip subluxation out of the acetabulum with a 'clunk' during Barlow's test",
+    "Presence of Galeazzi sign (one leg appearing shorter than the other) in unilateral hip dislocation for late DDH (age 3-6 months)",
+    "Confirmation of DDH by Ultrasonography",
+    "Confirmation of DDH by Plain Radiography (standing anteroposterior view of pelvis, false profile view)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_confirming_cdh",
+        "label": "Clinical notes confirming CDH"
+      },
+      {
+        "key": "xray_ultrasonography_both_hips_confirming_cdh",
+        "label": "X-ray/Ultrasonography –both Hips confirming CDH labelled with patient ID, date."
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_op_xray",
+        "label": "Post-op X-ray labelled with patient ID, date and side (Left/Right)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Does Post-op X-ray show the corrected hip dislocation and structure of hip joint?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes confirming CDH are missing or incomplete",
+    "X-ray/Ultrasonography of both hips confirming CDH is missing or not labelled with patient ID and date",
+    "Post-op X-ray is missing or not labelled with patient ID, date, and side (Left/Right)",
+    "Detailed procedure/operative notes are missing or incomplete",
+    "Post-op X-ray does not show corrected hip dislocation or structure of hip joint"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB in Orthopedics",
+    "clinical_key_pointers": [
+      "Congenital dislocation of the hip is also known as hip dysplasia or Congenital/developmental dysplasia of the hip (CDH/DDH). The term DDH is used in referring to patients who are born with dislocation or instability of the hip, which may then result in hip dysplasia."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

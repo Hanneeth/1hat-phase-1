@@ -1,0 +1,123 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG078A",
+  "procedure_code": "SG078A",
+  "condition": "Empyema",
+  "procedure_name": "Rib Resection & Drainage",
+  "specialty": "General Surgery, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Rib resection_Medco.pdf",
+    "Rib resection_PPD.CPD.pdf"
+  ],
+  "alos": "5-6 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (in CTVS, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Failure to cure by aspiration, irrigation or fibrinolysis via an intercostal tube",
+    "Decortication contraindicated by the patient's age or debilitated state",
+    "Presence of a bronchopleural or oesophagopleural fistula",
+    "Pus is thick and loculated",
+    "Patient remains toxic after intercostal tube drainage",
+    "Chronic empyema (caused by delayed medical attention, inadequate antibiotic therapy, inadequate drainage, presence of foreign body, infliction of postresectional space, or chronic pulmonary infection such as mismanaged tuberculosis)",
+    "Multiloculated empyema or persistently symptomatic effusion"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with evaluation findings, indication of procedure, and planned line of management"
+      },
+      {
+        "key": "imaging_report",
+        "label": "X-ray/CT/MRI Chest report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "pus_culture_report",
+        "label": "Pus culture report"
+      },
+      {
+        "key": "post_operative_photographs",
+        "label": "Post-operative Photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination (optional)"
+      },
+      {
+        "key": "postoperative_chest_x_ray",
+        "label": "Postoperative Chest X-ray"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did CT/MRI Chest confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the indication for surgery documented?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing or do not contain detailed history, signs & symptoms, evaluation findings, planned line of treatment, or indication for procedure.",
+    "CT/MRI Chest report is missing or does not confirm the diagnosis.",
+    "Indication for surgery was not documented.",
+    "Imaging provided at claim stage was not indicative of surgery.",
+    "Pus culture report is missing.",
+    "Postoperative Chest X-ray is missing.",
+    "Detailed Indoor case papers (ICPs) with treatment details are missing or incomplete.",
+    "Detailed Procedure / Operative Notes are missing.",
+    "Discharge summary is missing or does not include follow-up advice at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Empyema is a localized or free collection of purulent material in the pleural space as a result of combination of pleural dead space, culture medium of pleural fluid, and inoculation of bacteria. It is an advanced parapneumonic effusion."
+    ],
+    "surgical_options": [
+      "Rib resection (reserved for special situations such as failure of less invasive treatments, or in established empyemas with a cortex)",
+      "Thoracotomy and decortication (can achieve considerable lung expansion if early empyema treatment fails, or in more established empyemas with a cortex)",
+      "Open drainage (in chronic cases with a regular discharge of thick pus, where a wide bore tube may be left in place, open to atmospheric pressure, particularly helpful in adolescents with chronic tubercular empyema after prolonged chest tube drainage)"
+    ],
+    "pre_op_preparation": "General measures include increase in the protein and fluid intake. Physiotherapy and breathing exercises will help in early re-expansion of the lung following evacuation of the fluid.",
+    "post_op_care": "In chronic cases with a regular discharge of thick pus, a wide bore tube may be left in place, open to atmospheric pressure. This is helpful in adolescents with chronic tubercular empyema, in whom the daily output has reduced to approximately 25 ml or so after a prolonged (3-5 weeks) chest tube drainage.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

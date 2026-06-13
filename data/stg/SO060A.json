@@ -1,0 +1,177 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO060A",
+  "procedure_code": "SO060A",
+  "condition": "Ovariotomy",
+  "procedure_name": "Ovariotomy - Open",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Ovariotomy_Medco-converted.pdf",
+    "Ovariotomy_PPD_CPD-converted.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (Obstetrics &Gynecology)"
+  ],
+  "clinical_indications": [
+    "A cyst with significant pain and other features suggestive of rupture/torsion",
+    "Any ovarian mass >10cm",
+    "Ovarian cystic structure >7cm without regression for 6-8wks",
+    "Any solid ovarian lesion",
+    "Papillary excrescences in wall",
+    "Palpable adnexal mass in postmenopausal patients",
+    "Presence of ascites"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "ovarian_mass_size",
+      "operator": ">",
+      "value": "10cm",
+      "note": null
+    },
+    {
+      "field": "ovarian_cystic_structure_size",
+      "operator": ">",
+      "value": "7cm",
+      "note": "without regression for 6-8 weeks"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG Abdomen/pelvis"
+      },
+      {
+        "key": "ca_125_tumor_marker",
+        "label": "CA 125 Tumor marker"
+      },
+      {
+        "key": "doppler_ultrasound",
+        "label": "Doppler Ultrasound (Optional)"
+      },
+      {
+        "key": "ct_mri_scan_pelvis",
+        "label": "CT/MRI scan pelvis (Optional)"
+      },
+      {
+        "key": "other_tumor_markers",
+        "label": "Other Tumor markers based on etiology (Optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports_if_done",
+        "label": "Investigation reports if done"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological Examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did physical examination, imaging and investigation confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was there an evidence of cysts/tumor on Ultrasound report?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was malignancy ruled out in suspicious lesions?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Physical examination or imaging and investigation was not indicative of surgery.",
+    "Missing detailed clinical notes including history, indications, symptoms, signs, examination findings, planned line of treatment, or advice for admission.",
+    "Diagnosis not confirmed by physical examination, imaging, or investigation reports.",
+    "No evidence of cysts or tumor on the Ultrasound report.",
+    "Detailed ICPs with daily vitals and treatment details are missing or incomplete.",
+    "Detailed procedure or operative notes are not available.",
+    "Malignancy was not ruled out in suspicious lesions.",
+    "Discharge summary or follow-up advice at the time of discharge is missing or incomplete.",
+    "Ovarian mass >10cm not documented, or documented below threshold without justification.",
+    "Ovarian cystic structure >7cm without regression for 6-8wks not documented, or regression was noted.",
+    "CA 125 Tumor marker or other tumor markers (if indicated) missing or incomplete at pre-authorization."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ovarian cysts can occur at any stage in life from foetal life through menopause. They can be symptomatic or asymptomatic and found incidentally on clinical exam or on imaging.",
+      "It is important to differentiate between benign and malignant enlargements of the ovary to institute timely and effective treatment without undue delay.",
+      "The optimal surgical goal is to remove the entire cyst intact. The cyst should be removed inside a laparoscopic bag so that inadvertent spillage into the peritoneal cavity may be avoided.",
+      "Ovarian conservation is generally the goal in a premenopausal woman with a benign ovarian cyst requiring surgical excision. The advantage is preservation of viable ovarian tissue and thus fertility and hormone production.",
+      "Ovarian cysts can be symptomatic or asymptomatic.",
+      "Symptoms that women may experience include unilateral pain or pressure in the lower abdomen.",
+      "Pain may be intermittent or constant and characterized as sharp or dull.",
+      "If an ovarian cyst ruptures or ovarian torsion is present, the patient may experience a sudden onset of acute severe pain, possibly associated with nausea and vomiting.",
+      "The menstrual cycle can become irregular, and abnormal vaginal bleed may occur.",
+      "For simple cysts in premenopausal women, 2/3rd regress over 2-3 menstrual cycles; a 'Wait and See' policy for 8-10 weeks is recommended. OCPs for 3 cycles have no proven benefit. Aspiration is not useful due to 75% recurrence within 1 year.",
+      "For simple cysts of 5-7 cm in low-risk patients & 2-7 cm in high-risk patients with certain benign nature, yearly follow-up is required until resolved. Cysts >7cm need further evaluation with MRI/Surgery.",
+      "If conservative management fails for benign conditions and surgical intervention is decided, efforts should be made to conserve normal ovarian tissue by ovarian cystectomy.",
+      "Three classic complications of ovarian cysts that commonly present to the emergency department are Rupture, Haemorrhage, and Torsion."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

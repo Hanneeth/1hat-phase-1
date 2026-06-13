@@ -1,0 +1,115 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP021A",
+  "procedure_code": "MP021A",
+  "condition": "Acute Abdomen",
+  "procedure_name": "Acute Abdomen",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Acute Abdomen_Medco.pdf",
+    "Acute Abdomen_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Constipation",
+    "Abdominal Trauma",
+    "Food poisoning, Inflammatory bowel disease",
+    "Intestinal obstruction",
+    "Infantile colic",
+    "Pancreatitis",
+    "Appendicitis",
+    "Vomiting",
+    "Temperature",
+    "Bloating",
+    "Diarrhea",
+    "Dysentery",
+    "Abdominal pain"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including history, evaluation findings, vital monitoring, and planned line of management"
+      },
+      {
+        "key": "imaging_report",
+        "label": "USG Abdomen / CT / Contrast X-rays"
+      },
+      {
+        "key": "sepsis_screening_report",
+        "label": "Sepsis screening report such as complete blood count, C-reactive protein"
+      },
+      {
+        "key": "culture_reports",
+        "label": "Blood culture / Stool culture"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs) (including any cross-specialty referral that has been done)"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports (if required)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, vital monitoring, planned treatment line, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did the imaging ± investigations confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs (including any cross-specialty referral that has been done) with daily vitals and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient did not present with typical symptoms of acute abdomen (abdominal pain, distention, bloating, constipation, vomiting, diarrhea, dysentery).",
+    "Clinical presentation, imaging, or investigations failed to confirm the diagnosis of acute abdomen.",
+    "Clinical notes missing or incomplete, lacking detailed history, signs/symptoms, vital monitoring, planned treatment, or advice for admission.",
+    "Mandatory imaging (USG Abdomen / CT / Contrast X-rays) or investigation reports (e.g., Sepsis screening, Blood culture, Stool culture) not submitted at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) are incomplete or do not include daily vitals and treatment details at claim submission.",
+    "Discharge summary missing or incomplete, or does not include follow-up advice at discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB/DCH/Equivalent (Pediatric), DM/DNB/Equivalent (Gastroenterology), Surgical referral if required",
+    "clinical_key_pointers": [
+      "Abdominal pain is a common problem in children. Although most children with acute abdominal pain have self-limited conditions, the pain may lead to surgical or medical emergency. Clinically, abdominal pain falls into 3 categories: Visceral Pain, Parietal Pain, Referred Pain."
+    ],
+    "surgical_options": [
+      "Surgical intervention"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Surgical referral if required; decide referral of cases to the appropriate level of care; consider surgical consultation.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

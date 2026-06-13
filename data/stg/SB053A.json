@@ -1,0 +1,106 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB053A",
+  "procedure_code": "SB053A",
+  "condition": "Sequestrectomy / Curettage",
+  "procedure_name": "Sequestrectomy / Curettage",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Sequestrectomy-Curettage_Medco.pdf",
+    "Sequestrectomy-Curettage_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Primary Osteomyelitis",
+    "Disc Herniation",
+    "Childhood Heamatogeneous Osteomyelitis (Type B1-B3) requiring Sequestrectomy and curettage"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "osteomyelitis_type",
+      "operator": "in",
+      "value": "B1, B2, B3",
+      "note": "Type of childhood Heamatogeneous Osteomyelitis"
+    },
+    {
+      "field": "sequestrum_formation",
+      "operator": "is",
+      "value": "significant",
+      "note": "Preauthorization X-ray/CT must show significant sequestrum formation"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "xray_ct_labelled",
+        "label": "X-ray/CT labelled with patient ID, date and side (Left/ Right) affected part"
+      },
+      {
+        "key": "biopsy_report_optional",
+        "label": "Biopsy report (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_op_xray_labelled",
+        "label": "Post-op X-ray labelled with patient ID, date and side (Left/Right) affected part"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Does the preauthorization X Ray/CT show significant Sequestrum formation?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Preauthorization X-ray/CT does not show significant Sequestrum formation",
+    "Clinical notes (history, signs, symptoms, evaluation, indication, plan, advice for admission) are missing or incomplete for pre-authorization",
+    "Pre-authorization X-ray/CT is missing or not labelled with patient ID, date, or affected side (Left/Right)",
+    "Detailed Indoor case papers (ICPs) are missing for claim submission",
+    "Post-operative X-ray is missing or not labelled with patient ID, date, or affected side (Left/Right) for claim submission",
+    "Detailed Procedure / Operative Notes are missing for claim submission",
+    "Detailed Discharge summary is missing for claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Sequestra: is a piece of dead bone, surrounded by infected granulation tissue trying to eat the sequestrum away. Different types of Sequestra includes Tubular (Pyogenic), Ring (External fixator), Black (Actinomucosis), Corolliform (Perthe's diseases), Coke (Tuberculosis), Sandy (Tuberculosis), Feathery (Syphillis).",
+      "Sequestrectomy: removal of the Sequestrum. One must wait for adequate involucrum formation before performing sequestrectomy. Following examples of sequestrectomy are common: Femoral Sequestrectomy; Lumbar sequestrectomy: is the removal of the disc fragment alone without or with little invasion of the disc space.",
+      "Curettage: The wall of cavity, lined by infected granulation tissue, is curetted until the underlying normal looking bone is seen."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

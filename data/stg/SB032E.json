@@ -1,0 +1,135 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB032E",
+  "procedure_code": "SB032E",
+  "condition": "Acromioclavicular (AC) Joint reconstruction / Stabilization",
+  "procedure_name": "AC Joint reconstruction / Stabilization Rockwood Type - V",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Acromioclavicular (AC) Joint reconstruction - Stabilization_Medco.pdf",
+    "Acromioclavicular (AC) Joint reconstruction - Stabilization_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Superior shoulder pain with attempts at upper extremity elevation.",
+    "Point tenderness over the AC joint.",
+    "Variable disruption of acromioclavicular and coracoclavicular ligaments due to force pushing acromion inferiorly while clavicle maintains anatomical position.",
+    "Sequential pattern of injuries to supporting structures of the AC joint, first AC ligaments torn, followed by coracoclavicular (CC) ligaments as stress forces rise.",
+    "Rockwood Type V injury: AC and CC ligaments and both the origin of the deltoid and insertion of the trapezius are torn, causing extreme instability of the AC joint. Deltotrapezial fascia is stripped from its attachment and displacement of the clavicle is more than three times the diameter of its distal part. CC distance is increased to 100% to 300%."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_diagnosis",
+        "label": "Clinical notes confirming the diagnosis"
+      },
+      {
+        "key": "xray_mri_affected_limb",
+        "label": "X-ray/ MRI labelled with patient ID, date and side (Left/Right) of affected limb"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_op_xray_operated_limb",
+        "label": "Post-op X-ray labelled with patient ID, date and side (Left/Right) of operated limb"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_optional",
+        "label": "Post Procedure clinical photograph (Optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice and barcode of implant"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "X-ray/ MRI labelled with patient ID, date and side (Left/Right) of affected limb confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative X-ray labelled with patient ID, date and side (Left/Right) of operated limb submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were Post-operative photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Invoice/barcode of implant submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Did the Post Procedure X Ray show the presence of Implant?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing essential details (history, signs & symptoms, planned treatment) or fail to indicate the procedure.",
+    "X-ray/MRI not labelled with patient ID, date, or side, or does not confirm the diagnosis.",
+    "Post-operative X-ray not labelled with patient ID, date, or side.",
+    "Invoice and barcode of the implant are missing or incorrect.",
+    "Post Procedure X-ray does not show the presence of an implant.",
+    "Detailed procedure/operative notes are not available or lack necessary details."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/ Equivalent (in Orthopedics)",
+    "clinical_key_pointers": [
+      "Acromioclavicular (AC) joint injury is a frequent diagnosis after acute shoulder trauma and is very common among athletic populations. It accounts for 40% to 50% of shoulder injuries in many contact sports.",
+      "Mechanism of injury: The management of a dislocation of the AC joint depends on its grade and severity. The most common mechanisms of injury to the AC joint include falling on an outstretched arm or direct trauma to the apex of the shoulder with the arm in adducted position.",
+      "Symptoms & signs: Patients commonly complain of superior shoulder pain with attempts at upper extremity elevation. There is a point tenderness over the AC joint.",
+      "Symptoms & signs: The force pushes the acromion inferiorly while the clavicle maintains its anatomical position, resulting in a variable disruption of the acromioclavicular and coracoclavicular ligaments.",
+      "Symptoms & signs: There is a sequential pattern of injuries to the supporting structures of the AC joint during trauma. As the generated stress forces rise, first the AC ligaments are torn, followed by the coracoclavicular (CC) ligaments.",
+      "The classic Rockwood classification of the AC joint injury: In a Rockwood type V injury, the AC and CC ligaments and both the origin of the deltoid and insertion of the trapezius are torn, causing extreme instability of the AC joint. It is a complex injury where the deltotrapezial fascia is stripped from its attachment and displacement of the clavicle is more than three times the diameter of its distal part. The CC distance is increased to 100% to 300%.",
+      "The classic Rockwood classification of the AC joint injury: Radiographs are the initial imaging modality of choice for diagnosis and classification of AC injuries. As soon as the patient is admitted, standard anteroposterior lateral and axillary views should be obtained as for any shoulder injury. The axillary view often helps to visualize the amount of posterior displacement of the clavicle."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

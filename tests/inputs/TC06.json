@@ -1,0 +1,132 @@
+{
+  "_test_id": "TC06",
+  "_description": "Patient (P006) had SE020A (cataract right eye) this policy year. Now presenting with cataract right eye again. Phase 3 should find SE020A in past_claims and trigger SPECIAL_CONDITIONS_RULE_TRIGGERED if that procedure has special_conditions_rule=True in KB-2. Tests the special conditions code path.",
+  "_expected_status": "READY_WITH_WARNINGS",
+  "_expected_specialty": "SE",
+  "_expected_flags_include": [
+    "CANDIDATES_GENERATED"
+  ],
+  "_expected_flags_may_include": [
+    "SPECIAL_CONDITIONS_RULE_TRIGGERED"
+  ],
+  "_expected_flags_exclude": [
+    "WALLET_INSUFFICIENT",
+    "PUB_RESERVED_BLOCK"
+  ],
+  "session_id": "IRIS-TC06-20260612",
+  "created_at": "2026-06-12T12:00:00+05:30",
+  "patient": {
+    "patient_id": "P006"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Persistent vision problems right eye after prior cataract surgery 10 months ago, patient claims IOL may have dislocated, photophobia and glare",
+    "duration_days": 60,
+    "history_of_present_illness": "Patient underwent cataract surgery (phacoemulsification with IOL) right eye 10 months ago. Now complaining of recurrence of visual difficulty, glare, and photophobia. Claims vision has deteriorated again. Consulting for re-evaluation and possible intervention. BCVA right eye currently 6/24.",
+    "provisional_diagnosis": "Posterior capsular opacification (PCO) right eye post phacoemulsification — possible IOL dislocation",
+    "planned_procedure": "YAG laser capsulotomy or IOL repositioning right eye",
+    "weight_kg": 70,
+    "height_cm": 168,
+    "vitals": {
+      "bp_systolic_mmhg": 124,
+      "bp_diastolic_mmhg": 78,
+      "pulse_bpm": 80,
+      "spo2_pct": 98,
+      "temperature_f": 98.4,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": null
+    },
+    "examination_findings": {
+      "general": "Conscious, oriented, no significant findings",
+      "cvs": "S1 S2 heard, no murmurs",
+      "rs": "Clear air entry bilateral",
+      "abdomen": "Soft, non-tender",
+      "cns": "No focal deficits",
+      "local": "Right eye: BCVA 6/24. Slit lamp shows IOL in position, posterior capsular haziness grade 2. No IOL dislocation visible. IOP 15 mmHg."
+    },
+    "investigations": [
+      {
+        "type": "other",
+        "result_summary": "BCVA right eye 6/24, not improving with refraction. Slit lamp: IOL centred, posterior capsular opacification grade 2. IOP: 15 mmHg RE, 14 mmHg LE.",
+        "structured_values": [
+          {
+            "parameter": "BCVA_RE",
+            "value": "6/24",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "PCO_grade",
+            "value": 2,
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "IOL_position",
+            "value": "centred",
+            "unit": null,
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "IOP_RE",
+            "value": 15,
+            "unit": "mmHg",
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-11"
+      }
+    ],
+    "comorbidities": [
+      "hypertension"
+    ],
+    "past_medical_history": "Hypertension on medication. Prior cataract surgery right eye under PM-JAY (procedure SE020A, August 2025).",
+    "past_surgical_history": "Phacoemulsification with IOL right eye, August 2025 (SE020A under PM-JAY).",
+    "current_medications": [
+      "Amlodipine 5mg OD"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "none",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Ophthalmology consultation notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo",
+        "available": true
+      },
+      {
+        "key": "past_hospitalisation_records",
+        "label": "Prior PM-JAY claim for SE020A August 2025",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Meera Krishnan",
+      "registration_number": "TN-MED-78901",
+      "qualification": "MS Ophthalmology",
+      "specialty_code": "SE"
+    },
+    "notes": "Prior PM-JAY claim SE020A for same eye this policy year. Phase 3 should check past_claims and trigger SPECIAL_CONDITIONS_RULE_TRIGGERED if applicable."
+  }
+}

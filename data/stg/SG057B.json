@@ -1,0 +1,138 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG057B",
+  "procedure_code": "SG057B",
+  "condition": "Cystic swellings in the scrotum",
+  "procedure_name": "Epididymal Nodule excision",
+  "specialty": "General Surgery, Pediatric Surgery, Genitourinary Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Cystic swellings in the scrotum_Medco.pdf",
+    "Cystic swellings in the scrotum_PPD.CPD.pdf"
+  ],
+  "alos": "1-2 Days",
+  "min_doctor_qualification": [
+    "MS/Equivalent (in General Surgery)",
+    "MCh/Equivalent (in Pediatric Surgery, Genitourinary Surgery)"
+  ],
+  "clinical_indications": [
+    "Clinical presentation of epididymal nodule varies from silent incidental discovery (asymptomatic) to multiple episodes of inguino-scrotal pain",
+    "Most non-neoplastic lesions are managed conservatively",
+    "Symptomatic nodules are treated by surgical excision"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "nodule_symptoms",
+      "operator": "is",
+      "value": "symptomatic",
+      "note": "Symptomatic nodules are treated by surgical excision"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure and planned line of management"
+      },
+      {
+        "key": "clinical_photographs_optional",
+        "label": "Clinical photographs (optional)"
+      },
+      {
+        "key": "scrotal_ultrasound",
+        "label": "Scrotal ultrasound"
+      },
+      {
+        "key": "fine_needle_aspiration_cytology_optional",
+        "label": "Fine Needle Aspiration Cytology (FNAC) (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photographs_optional",
+        "label": "Post-operative photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical evaluation and Scrotal ultrasound/FNAC confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative photographs submitted (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Histopathological examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or incomplete, lacking detailed history, signs & symptoms, planned line of treatment, or indication for procedure",
+    "Diagnosis not confirmed by clinical evaluation or Scrotal ultrasound/FNAC",
+    "Nodule not documented as symptomatic to justify surgical excision",
+    "Scrotal ultrasound not submitted at pre-authorization",
+    "Detailed ICPs with daily vitals and treatment details missing or incomplete",
+    "Detailed procedure / Operative Notes not available",
+    "Histopathological examination report not submitted",
+    "Discharge summary with follow-up advice not provided"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Most of the cases are non-neoplastic lesions",
+      "The clinical presentation of epididymal nodule varies from silent incidental discovery (asymptomatic) to multiple episodes of inguino-scrotal pain",
+      "Fine-needle aspiration cytology (FNAC) is useful in diagnosis and guide management strategies of patients with epididymal nodules",
+      "Most non-neoplastic lesions are managed conservatively. Symptomatic nodules are treated by surgical excision"
+    ],
+    "surgical_options": [
+      "Symptomatic nodules are treated by surgical excision"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

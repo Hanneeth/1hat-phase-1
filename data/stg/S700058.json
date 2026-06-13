@@ -1,0 +1,119 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S700058",
+  "procedure_code": "S700058",
+  "condition": "Ureterocele",
+  "procedure_name": "Ureterocele incision including cystoscopy, ureteric catheterization, retrograde pyelogram",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Ureterocele incision_Medco.pdf",
+    "Ureterocele incision_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Symptomatic with UTI",
+    "Asymptomatic with Hydronephrosis",
+    "Hematuria",
+    "Vesicoureteral reflux (VUR)",
+    "Hydroureter"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "usg_ivp_ct_ivp_diagnosis",
+        "label": "USG/IVP/CT-IVP confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "evidence_cystoscopy_ureteric_catheterization_retrograde_pyelogram",
+        "label": "Evidence of cystoscopy, ureteric catheterization, retrograde pyelogram"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG/IVP/CT-IVP report confirming the diagnosis and procedure submitted.",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Evidence of cystoscopy, ureteric catheterization, retrograde pyelogram submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or USG/IVP/CT-IVP report are not indicative of the procedure.",
+    "Clinical notes including evaluation findings and planned line of treatment not submitted at pre-authorization.",
+    "USG/IVP/CT-IVP report confirming the diagnosis not submitted at pre-authorization.",
+    "Detailed indoor case papers not submitted at claim submission.",
+    "Evidence of cystoscopy, ureteric catheterization, retrograde pyelogram not submitted at claim submission.",
+    "Detailed Procedure / Operative Notes not submitted at claim submission.",
+    "Detailed discharge summary not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facility",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ureterocele: is a cystic out-pouching of the distal ureter into the urinary bladder, these are congenital anomalies results in obstruction of urine flow, dilation of the ureter and renal pelvis and loss of renal function. Ureterocele may also association with single or duplex collecting systems and may be intravesical (orthotopic) or extravesical (ectopic)."
+    ],
+    "surgical_options": [
+      "Endoscopic puncture",
+      "Incision or transurethral unroofing of the ureterocele",
+      "Upper pole heminephrectomy",
+      "Excision of ureterocele and ureteral reimplantation",
+      "Nephroureterectomy",
+      "Cystoscopy (used to puncture and decompress the Ureterocele; incision made at infero-medial aspect or dependent portion of large ureterocele)",
+      "Ureteric catheterization (routine medical procedure for direct drainage of the urinary bladder)",
+      "Retrograde Pyelogram (type of X-ray for visualization of bladder, ureters, and renal pelvis, performed during cystoscopy/endoscopic evaluation)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

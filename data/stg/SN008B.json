@@ -1,0 +1,163 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN008B",
+  "procedure_code": "SN008B",
+  "condition": "Burr hole Surgery",
+  "procedure_name": "Burr hole surgery with chronic Sub Dural Hematoma",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Burr hole surgery_Medco.pdf",
+    "Burr hole surgery_PPD.CPD.pdf"
+  ],
+  "alos": "2-4 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent in (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Chronic Subdural Hematoma"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "Subdural hematoma thickness",
+      "operator": ">",
+      "value": "10 mm",
+      "note": "with any Glasgow Coma Scale (GCS)"
+    },
+    {
+      "field": "Midline shift",
+      "operator": ">",
+      "value": "5 mm",
+      "note": "with any Glasgow Coma Scale (GCS)"
+    },
+    {
+      "field": "Glasgow Coma Scale (GCS)",
+      "operator": "<",
+      "value": "9",
+      "note": "dropped ≥ 2 points between injury and emergency department, with subdural hematoma of <10 mm and midline shift <5mm"
+    },
+    {
+      "field": "Glasgow Coma Scale (GCS)",
+      "operator": "<",
+      "value": "9",
+      "note": "with subdural hematoma of <10mm and midline shift <5mm, and fixed or asymmetrical pupils"
+    },
+    {
+      "field": "Glasgow Coma Scale (GCS)",
+      "operator": "<",
+      "value": "9",
+      "note": "with subdural hematoma of <10mm and midline shift <5mm, and ICP >20 mmHg"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_evaluation",
+        "label": "Clinical Evaluation"
+      },
+      {
+        "key": "ct_mri_brain",
+        "label": "CT Scan/MRI brain"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "ct_brain",
+        "label": "CT Brain"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was Glasgow coma scale documented?",
+        "expected": true
+      },
+      {
+        "q": "Was Glasgow coma scale and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes, history, signs & symptoms, planned line of treatment, or indication for procedure is missing or incomplete",
+    "Imaging did not confirm the diagnosis",
+    "Glasgow Coma Scale (GCS) not documented",
+    "GCS and/or imaging not indicative of surgery based on stated thresholds for chronic SDH",
+    "Detailed Indoor Case Papers (ICPs) missing or lacking daily vitals and treatment details",
+    "Detailed Procedure / Operative Notes not available or incomplete",
+    "Discharge summary missing or lacking follow-up advice"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A subdural hematoma (SDH) is a collection of blood between the dural and arachnoid coverings of the brain. Chronic subdural hematomas may take weeks to months to appear.",
+      "More commonly seen in the elderly population where brain shrinkage stretches the blood vessels \"bridging\" between the skull and brain, making them more vulnerable.",
+      "Brain shrinkage also creates more space within the skull, making the effects of blood accumulation slower to appear.",
+      "Chronic subdural hematomas are sometimes hard to diagnose because their symptoms can resemble so many different conditions.",
+      "Up to 80% of people with chronic SDH have a milder headache. They may also have any of the following symptoms, alone or in combination: Behavior and personality changes, Confusion, Speech changes, Limb weakness, numbness, or tingling, Apathy, lethargy, or drowsiness, Double vision, Balance changes and difficulty walking, Memory loss."
+    ],
+    "surgical_options": [
+      "Frontotemporoparietal craniotomy",
+      "Burr hole trephination with irrigation",
+      "Twist-drill craniotomy with drain replacement",
+      "Subdural evacuating port system",
+      "Recurrent subdural hematoma – subdural-peritoneal shunt"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

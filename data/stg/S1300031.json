@@ -1,0 +1,129 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code. HBP 1.0 code S1300031 and HBP 2.0 code SV003A both refer to 'Ebstein Repair'. S1300031 is used as the primary procedure code.",
+  "stg_id": "S1300031",
+  "procedure_code": "S1300031",
+  "condition": "Ebstein's Anomaly",
+  "procedure_name": "Ebstein Repair",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Ebsten repair_Medco.pdf",
+    "Ebsten repair_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Symptoms or deteriorating exercise capacity",
+    "Cyanosis (oxygen saturation < 90%)",
+    "Paradoxical embolism",
+    "Progressive cardiomegaly on chest X-ray (CT ratio > 0.65)",
+    "Progressive dilation or dysfunction of the RV on echocardiography.",
+    "Symptomatic with arrhythmias: Catheter ablation. Surgery, if not amenable to catheter ablation (Class IIa)."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "oxygen_saturation",
+      "operator": "<",
+      "value": "90%",
+      "note": "for cyanosis indication"
+    },
+    {
+      "field": "cardiothoracic_ratio",
+      "operator": ">",
+      "value": "0.65",
+      "note": "for progressive cardiomegaly indication"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of Ebstein Anomaly?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is Detailed Discharge Summary with follow-up advice available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not suggestive of Ebstein Anomaly.",
+    "Clinical notes missing or incomplete, or do not detail history, signs & symptoms, or indication for procedure.",
+    "Oxygen saturation not documented or documented as >= 90% when cyanosis is indicated for surgery.",
+    "Progressive cardiomegaly not documented or CT ratio <= 0.65 when cardiomegaly is indicated for surgery.",
+    "Detailed Procedure / Operative notes not submitted or incomplete.",
+    "Post procedure ECHO not submitted or does not show repair of the defect.",
+    "Detailed Discharge Summary not available or lacks follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ebstein's anomaly of the tricuspid valve is defined as failure of delamination of tricuspid leaflets from the myocardium. Mostly, the septal and the posterior leaflets are involved, and the anterior leaflet remains mobile. This results in the apical displacement of the functional tricuspid annulus and a rotation toward the outflow tract. A part of the RV inflow gets \"atrialized.\" Tricuspid regurgitation of varying degree is invariably present, and the right atrium is enlarged. Some of the patients may be cyanosed due to right-to-left shunting at the atrial level.",
+      "Ebstein's anomaly is rare, seen in 1 in 20,000 live births, and forms <1% of all congenital heart defects. Associated lesions include accessory AV conduction pathways (15%-20%), and an interatrial communication is present in 80%-94% of cases. Patients usually present either in neonatal period or during adolescence or adult life. Neonates may present with cyanosis and heart failure and at times with functional pulmonary atresia with duct-dependent pulmonary circulation. Older patients present with murmur, arrhythmias, or cyanosis. The estimated survival is 76% at 10 years and 53% at 15 years.Prognosis is poor in those diagnosed during fetal or neonatal life. A number of classifications have been described for Ebstein's anomaly; the most commonly used classification was described by Carpentier et al. in 1988.",
+      "Diagnostic workup includes: Clinical assessment; Pulse oximetry: For quantifying cyanosis; ECG: Always abnormal, may show tall (Himalayan) P waves, prolonged PR interval, right bundle branch block, deep q waves in leads V1-V4, preexcitation, or supraventricular tachycardia. Holter monitoring is done when suspecting an arrhythmia.",
+      "X-ray chest: Heart size varies, pedicle narrow, cardiac borders sharp, box-like configuration, enlarged right atrium, oligemic lung fields.",
+      "Echocardiography: Key diagnostic tool showing apical displacement of septal tricuspid leaflet (> 8 mm/m² in adults), severity of tricuspid regurgitation and jet velocity, type of Ebstein's anomaly, size and function of the functional RV, presence or absence of ASD and other lesions. Helps assess valve repair feasibility.",
+      "Cardiac catheterization: Rarely performed, unless for evaluating coronary arteries in older patients (>40 years) or pulmonary artery pressure assessment for bidirectional cavopulmonary anastomosis (Glenn).",
+      "CMRI: Provides quantitative measurement of right ventricular size, volume, and function, important for planning surgical repair.",
+      "Other tests in select patients: Exercise testing, electrophysiological studies.",
+      "Tricuspid valve repair (Cone repair) is best done at about 2 years of age for stable cases.",
+      "Important determinants of long-term prognosis include recurrence of tricuspid valve regurgitation with need for reoperation, right ventricular dilatation and dysfunction, supraventricular and ventricular tachyarrhythmias, and need for pacemaker implantation."
+    ],
+    "surgical_options": [
+      "Tricuspid valve repair; replacement only if repair cannot be achieved.",
+      "Tricuspid valve repair with bidirectional cavopulmonary anastomosis (one and a half ventricle repair).",
+      "Single ventricle repair (aortopulmonary shunt(BTT Shunt)/Glenn followed by Fontan surgery)."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP005G",
+  "procedure_code": "MP005G",
+  "condition": "Acute Encephalopathy Management",
+  "procedure_name": "Brain Abscess",
+  "specialty": "General Medicine / Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Acute Encephalopathy Management_Medco.pdf",
+    "Acute Encephalopathy Management_PPD.CPD.pdf"
+  ],
+  "alos": "7-14 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Collection of pus enclosed in brain tissue caused by bacterial or fungal infection.",
+    "Can be caused by inflammation and collection of infected material coming out of Local source (ear infection, dental abscess, infection of paranasal sinuses, infection of mastoid air cells of temporal bone, epidural abscess)",
+    "Can be caused by inflammation and collection of infected material coming out of Remote source (infection in lung, heart, kidney).",
+    "Symptoms develop slowly and over a period of 2 weeks or they may develop suddenly",
+    "Confusion, Drowsiness, inattention, irritability",
+    "Eventual coma, seizure, loss of speech/muscle function, stiff neck, vomiting",
+    "Decreased movement, speech, sensation",
+    "Fever & chills, headache",
+    "Classic triad of headache, fever, focal neurologic deficit is rarely seen in (5-20% of cases in case series)",
+    "Incidence of Negative culture: 25%-30%.",
+    "Sudden worsening of preexisting headache accompanied with meningismus may be indicative of catastrophic event."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including history, evaluation findings, vital monitoring, and planned line of management"
+      },
+      {
+        "key": "lumbar_puncture",
+        "label": "Lumbar Puncture"
+      },
+      {
+        "key": "blood_culture",
+        "label": "Blood culture"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count"
+      },
+      {
+        "key": "ct_mri_scan",
+        "label": "CT/MRI scan"
+      },
+      {
+        "key": "electroencephalogram_eeg",
+        "label": "Electroencephalogram (EEG)"
+      },
+      {
+        "key": "twod_echo",
+        "label": "2D ECHO"
+      },
+      {
+        "key": "optional_etiology_documents",
+        "label": "Optional (Based on suspected etiology): Viral serology markers, Liver function tests, Metabolic panel, Chest X-ray, USG abdomen"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) (including any cross-specialty referral that has been done)"
+      },
+      {
+        "key": "lumbar_puncture_blood_culture",
+        "label": "Lumbar puncture/Blood culture (Optional)"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports (if required)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detail history, signs & symptoms, vital monitoring (HR, RR, BP, ICP), planned treatment line, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "NSG/MRI/CT shows presence of neural infection?",
+        "expected": true
+      },
+      {
+        "q": "Patient complained of nausea, lethargy, seizures or focal neurological dysfunction?",
+        "expected": true
+      },
+      {
+        "q": "Imaging and/or investigations confirm the diagnosis of brain abscess?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs (including any cross-specialty referral) with daily vitals and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient did not complain of nausea, lethargy, seizures or focal neurological dysfunction.",
+    "Imaging and/or investigations do not confirm the diagnosis of brain abscess.",
+    "Clinical notes are incomplete or missing vital monitoring (especially ICP), planned treatment, or admission advice.",
+    "NSG/MRI/CT scan does not show presence of neural infection.",
+    "Required Lumbar Puncture report is missing for pre-authorization.",
+    "Required Blood culture report is missing for pre-authorization.",
+    "Required Complete blood count report is missing for pre-authorization.",
+    "Required CT/MRI scan report is missing for pre-authorization.",
+    "Required Electroencephalogram (EEG) report is missing for pre-authorization.",
+    "Required 2D ECHO report is missing for pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) are missing or lack daily vitals and treatment details.",
+    "Discharge summary with follow-up advice is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB/DCH/Equivalent (Pediatrics), MD/DNB/Equivalent (General Medicine), DM/DNB/Equivalent (Neurology), Neurosurgical referral if required",
+    "clinical_key_pointers": [
+      "Brain abscess is collection of pus enclosed in brain tissue caused by bacterial or fungal infection.",
+      "Brain abscess can be caused by inflammation and collection of infected material coming out of Local source (ear infection, dental abscess, infection of paranasal sinuses, infection of mastoid air cells of temporal bone, epidural abscess) or Remote source (infection in lung, heart, kidney).",
+      "Anyone can get brain abscess, but certain group of people are at higher risk such as: Compromised immune system, Cancer and other chronic illness, Congenital heart disease, Major head injury or skull injury."
+    ],
+    "surgical_options": [
+      "Neurosurgical intervention"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Neurosurgical referral if required",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

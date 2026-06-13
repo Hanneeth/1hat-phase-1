@@ -1,0 +1,89 @@
+{
+  "_comment": "This procedure code (SU033A) corresponds to HBP 2.0. HBP 1.0 codes S700055 and S700056 refer to the same procedure description.",
+  "stg_id": "SU033A",
+  "procedure_code": "SU033A",
+  "condition": "Kidney stones",
+  "procedure_name": "DJ stenting including cystoscopy, ureteric catheterization, retrograde pyelogram",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "DJ stenting_Medco.pdf",
+    "DJ stenting_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MCh in Urology/Pediatric surgery",
+    "DNB in Urology/Pediatric surgery"
+  ],
+  "clinical_indications": [
+    "To help in reducing renal colic or to allow drainage when infection is present or when a stone prevents urine flow adequately.",
+    "Stents are commonly placed after surgery for stones (ureteroscopy) to allow healing and to ensure that swelling does not block the drainage of urine after the procedure.",
+    "Bilateral Calculus obstruction",
+    "Bilateral lower ureteric reimplants",
+    "Malignant ureteral obstruction",
+    "After bilateral uretero-renoscopy (URS)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_management",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "ct_ivp_ivp_confirming_diagnosis_need",
+        "label": "CT-IVP/ IVP confirming the diagnosis and the need of this surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "post_procedure_xray_showing_stent",
+        "label": "Post Procedure x-ray showing stent"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure / operation notes detailing findings of cystoscopy/ Retrograde pyelogram and ureteric catheterization"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are the clinical notes and CT-IVP/ IVP report indicative of DJ Stenting procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes or CT-IVP/IVP report not indicative of DJ Stenting procedure.",
+    "CT-IVP/ IVP confirming diagnosis and need for surgery not submitted at pre-authorization stage.",
+    "Post Procedure x-ray showing stent not submitted at claim stage.",
+    "Detailed Procedure / operation notes detailing findings of cystoscopy, retrograde pyelogram and ureteric catheterization not submitted at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ureteral stents are placed temporarily into the ureter to drain urine from the kidney into bladder. The stent allows drainage around a stone or can speed up healing after stone surgery.",
+      "A double-J stent is a ureteral stent with curving ends that prevent the stent slipping into the bladder or the kidney. Usually after several days or few weeks these stents will be removed."
+    ],
+    "surgical_options": null,
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

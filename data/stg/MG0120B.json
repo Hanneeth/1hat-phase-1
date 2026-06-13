@@ -1,0 +1,110 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG0120B",
+  "procedure_code": "MG0120B",
+  "condition": "Medical/Neuro rehabilitation",
+  "procedure_name": "Comprehensive medical rehabilitation for complication of secondary to specified disability/multiple disability including procedures, Chemo denervation with or without orthosis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1",
+  "source_files": [
+    "Comprehensive medical rehabilitation_Medco.pdf",
+    "Comprehensive medical rehabilitation_PPD.CPD.pdf"
+  ],
+  "alos": "4 weeks",
+  "min_doctor_qualification": [
+    "MBBS",
+    "BPT",
+    "BOT (Under supervision of Physical Medicine & Rehabilitation specialist)"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical Notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "xray_ct_mri",
+        "label": "X-Ray/CT/MRI"
+      },
+      {
+        "key": "past_history_treatment_records",
+        "label": "Details past history including past treatment records"
+      },
+      {
+        "key": "eeg_report_intellectual_learning_disability",
+        "label": "Electroencephalogram (EEG) report in intellectual and learning disability"
+      },
+      {
+        "key": "ct_mri_brain_report_cva_cerebral_palsy_brain_injury_intellectual_learning_disability",
+        "label": "CT/MRI Brain report in CVA/Cerebral palsy/Brain injury/intellectual/learning disability"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_treatment_details",
+        "label": "Indoor case papers with treatment given details"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are all the Clinical Notes including evaluation findings, planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is Electroencephalogram (EEG) report?",
+        "expected": true
+      },
+      {
+        "q": "Are /X-Ray/CT/MRI report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is Details patient past history & treatment records submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with daily vitals and line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary submitted with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Past history of patient, treatment records, or diagnostic reports are not suggestive of rehabilitation treatment.",
+    "Clinical notes including evaluation findings and planned line of treatment not submitted for pre-authorization.",
+    "Electroencephalogram (EEG) report is missing for intellectual and learning disability cases.",
+    "CT/MRI Brain report is missing for CVA/Cerebral palsy/Brain injury/intellectual/learning disability cases.",
+    "Detailed Indoor case papers with daily vitals and line of treatment not submitted for claim processing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB (General Medicine, Pediatric Medicine, Physical Medicine & Rehabilitation), DM/DNB (Neurology)",
+    "clinical_key_pointers": [
+      "Rehabilitation is defined as \"a set of interventions designed to optimize functioning and reduce disability in individuals with health conditions in interaction with their environment.",
+      "Rehabilitation is an essential part of universal health coverage along with promotion of good health, prevention of disease, treatment and palliative care.",
+      "Rehabilitation helps a child, adult or older person to be as independent as possible in everyday activities and enables participation in education, work, recreation and meaningful life roles such as taking care of family."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

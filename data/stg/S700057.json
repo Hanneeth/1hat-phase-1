@@ -1,0 +1,134 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S700057",
+  "procedure_code": "S700057",
+  "condition": "Ureteric sampling",
+  "procedure_name": "Ureteric sampling including cystoscopy, ureteric catheterization, retrograde pyelogram",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Ureteric sampling_Medco.pdf",
+    "Ureteric sampling_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MCh Urology",
+    "DNB Urology",
+    "Equivalent in Urology"
+  ],
+  "clinical_indications": [
+    "UTIs",
+    "Hematuria",
+    "Urine incontinence",
+    "Urine retention",
+    "Urine urgency",
+    "Urine analysis reports suggests abnormality",
+    "Chronic pelvic pain",
+    "Interstitial cystitis",
+    "Prostate cancer",
+    "Prostate enlargement",
+    "Polyp in Urinary tract",
+    "Tumors of Urinary tract",
+    "Ureteral occlusion for injection of contrast media",
+    "Delivery of irrigation fluids to the ureter",
+    "Drainage of fluids from the urinary tract",
+    "Access, advancement or exchange of ancillary devices including guidewires",
+    "Renal calculi",
+    "Stricture in kidney or Ureters",
+    "Non-visualization of ureteral segment on intravenous pyelography and CT Urography",
+    "Better characterization of ureteral or pelvicalyceal abnormalities seen on IVU or CTU",
+    "Access for brush biopsies of a suspicious area of urothelium",
+    "Evaluation of placement of a catheter or a ureteral stent"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_treatment_plan",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "xray_usg_ct_scan_report",
+        "label": "X-ray/USG/CT Scan report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "detailed_procedure_operative",
+        "label": "Detailed Procedure / Operative"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes include evaluation findings and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "X-ray/USG/CT Scan report includes patient ID and date?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes and X-ray/USG/CT Scan report indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Indoor Case Papers contain daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Procedure notes are detailed?",
+        "expected": true
+      },
+      {
+        "q": "Histopathology report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or X-ray/USG/CT Scan report not indicative of the Ureteric sampling procedure.",
+    "Clinical notes missing evaluation findings or planned line of treatment.",
+    "X-ray/USG/CT Scan report missing patient ID or date.",
+    "Detailed Indoor Case Papers lacking daily vitals or complete treatment details.",
+    "Histopathology report not submitted at claim stage.",
+    "Detailed discharge summary not submitted at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Cystoscopy: Cystoscopy to visualize the urethral mucosa, ectopic ureters, the prostatic urethra, the area of the trigone where urine can be seen entering through the ureters, and the bladder mucosa.",
+      "Ureteric catheterization: Ureteric catheterization is inserted into the ureter to prevent or treat obstruction of the urine flow from the kidney.",
+      "Retrograde Pyelogram: A retrograde pyelogram is a type of X-ray that allows visualization of the bladder, ureters, and renal pelvis, is performed during the cystoscopy, evaluation of the bladder with an endoscope. During a cystoscopy, contrast dye, which helps enhance the X-ray images, can be introduced into the ureters via a catheter."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

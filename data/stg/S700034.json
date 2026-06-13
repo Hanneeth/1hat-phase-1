@@ -1,0 +1,94 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S700034",
+  "procedure_code": "S700034",
+  "condition": "Renal Cyst",
+  "procedure_name": "Renal Cyst deroofing or Marsupialization (Open)",
+  "specialty": "Urology / Pediatric surgery",
+  "version": "1.1",
+  "source_files": [
+    "Renal Cyst deroofing or Marsupialization_Medco.pdf",
+    "Renal Cyst deroofing or Marsupialization_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MCh equivalent in Urology",
+    "MCh equivalent in Pediatric Surgery",
+    "DNB equivalent in Urology",
+    "DNB equivalent in Pediatric Surgery"
+  ],
+  "clinical_indications": [
+    "Presence of symptomatic renal cysts (manifesting as fever, pain/tenderness between ribs and pelvis, upper abdominal pain, changes in urinary habits, or hematuria).",
+    "Symptoms are not relieved by analgesic medication or needle aspiration in the long term.",
+    "Absence of suspicion of malignancy based on imaging (e.g., thin walls, no calcification, septation, or enhancement on contrast studies)."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "usg_ct_report",
+        "label": "USG / CT report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_procedure_clinical_photographs",
+        "label": "Intra procedure clinical photographs"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical findings and USG / CT scan report indicative of the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical findings and/or USG/CT scan report are not indicative of the procedure.",
+    "Clinical notes (including evaluation findings, indication, and planned line of management) not submitted or incomplete at pre-authorization.",
+    "USG/CT report not submitted or incomplete at pre-authorization.",
+    "Diagnosis not supported by documented clinical manifestations (fever, pain, upper abdominal pain, urinary changes, hematuria).",
+    "Lack of documentation regarding prior conservative management or aspiration failure.",
+    "Suspicion of malignancy not ruled out by clinical findings or imaging."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Renal Cyst deroofing or Marsupialization only if diagnosis made is backed by clinical manifestation:"
+    ],
+    "surgical_options": [
+      "Open deroofing or marsupialization",
+      "Laparoscopic deroofing or marsupialization"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Suspicion of malignancy"
+    ]
+  }
+}

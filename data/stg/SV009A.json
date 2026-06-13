@@ -1,0 +1,119 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV009A",
+  "procedure_code": "SV009A",
+  "condition": "Aortic Valve disease / Left Ventricular Outflow Tract Obstruction (LVOTO)",
+  "procedure_name": "Ross Procedure",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Ross and konno procedure_Medco.pdf",
+    "Ross and konno procedure_PPD.CPD.pdf"
+  ],
+  "alos": "10 Days",
+  "min_doctor_qualification": [
+    "M.Ch. Cardiothoracic Surgery",
+    "DNB Cardiothoracic Surgery"
+  ],
+  "clinical_indications": [
+    "Aortic valve disease in children with congenital aortic stenosis (most common indication)",
+    "Females of childbearing age wanting to bear children in the future with bicuspid aortic valve and small aortic annulus",
+    "Some variations of left ventricular outflow obstructive disease",
+    "Native or prosthetic valve endocarditis depending on the extent of disease",
+    "Some forms of adult aortic regurgitation with a dilated aorta",
+    "Severe forms of aortic valve disease not amenable to repair"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_color_doppler_report_with_stills",
+        "label": "Echo/ color Doppler report with stills"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_color_doppler_report",
+        "label": "Post procedure echo/colour Doppler report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ color doppler report suggestive of Aortic Valve disease/ Left Ventricular Outflow Tract Obstruction (LVOTO)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are indoor case papers submitted",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the post procedure echo/ colour doppler report confirm replacement of aortic valve with pulmonary valve or prosthesis?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/color Doppler report not suggestive of Aortic Valve disease or Left Ventricular Outflow Tract Obstruction (LVOTO) for pre-authorization.",
+    "Clinical notes not submitted for pre-authorization.",
+    "Echo/color Doppler report with stills not submitted for pre-authorization.",
+    "Indoor case papers not submitted for claim submission.",
+    "Procedure / Operative notes not submitted for claim submission.",
+    "Post procedure echo/colour Doppler report not submitted for claim submission.",
+    "Detailed Discharge Summary not submitted for claim submission.",
+    "Post procedure echo/colour doppler report did not confirm replacement of aortic valve with pulmonary valve or prosthesis.",
+    "Detailed Discharge Summary did not mention a date for follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The Ross procedure, is a cardiac surgery procedure in which the diseased aortic valve is replaced with the patient's own pulmonary valve, followed by replacement of the pulmonary valve with a pulmonary homograft.",
+      "In some children and infants, sometimes and aortic valve replacement is necessary for a variety of reasons. However, inserting a prosthetic valve is not a good option; firstly there are no small-sized prosthetic valves available and secondly, since the child will grow in size, the prosthetic valve will remain the same size and lead to symptoms of left ventricular outflow tract obstruction.",
+      "In addition, there are some people who do not want to take oral anticoagulant medications for life and hence a Ross procedure would be ideal for them.",
+      "Unlike a prosthetic valve, the Ross procedure has excellent hemodynamics, no need for oral anticoagulation and the risk of embolic complications is almost zero.",
+      "Finally, as the child grows, so does the valve.",
+      "Unfortunately, it is now realized that the Ross procedure also has limitations; the pulmonary homograft will develop regurgitation or stenosis after 15-20 years, necessitating another procedure."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

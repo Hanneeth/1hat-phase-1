@@ -1,0 +1,150 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Renal Transplantation/ : Renal transplantation_MEDCO.pdf (clinical + mandatory docs) + Renal transplantation_PPD_CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "OT001C",
+  "procedure_code": "OT001C",
+  "condition": "Renal Transplantation",
+  "procedure_name": "Intervention for acute rejection",
+  "specialty": "Organ and Tissue Transplant",
+  "version": "1.1",
+  "source_files": [
+    "Renal transplantation_MEDCO.pdf",
+    "Renal transplantation_PPD_CPD.pdf"
+  ],
+  "alos": "1-4 weeks",
+  "min_doctor_qualification": [
+    "MS in General Surgery",
+    "DNB in General Surgery",
+    "MCh in General Surgery",
+    "MS in Urology Surgery",
+    "DNB in Urology Surgery",
+    "MCh in Urology Surgery",
+    "Fellowship in Transplant Surgery with 2 years training",
+    "Equivalent qualification with 2 years training in Transplant Surgery"
+  ],
+  "clinical_indications": [
+    "Acute rejection is a common cause of allograft dysfunction, manifesting within the first six months or later due to non-adherence to immunosuppression. Suspected if creatinine increases above baseline with symptoms like fever, oliguria, graft pain/tenderness.",
+    "Hyper-acute rejection is a destructive immunological attack on the graft, often prevented by ABO blood group and HLA matching."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "serum_creatinine",
+      "operator": ">",
+      "value": "25% (new increase)",
+      "note": "or serum creatinine higher than expected"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with planned line of management"
+      },
+      {
+        "key": "digital_subtraction_angiography",
+        "label": "Digital Subtraction Angiography (DSA)"
+      },
+      {
+        "key": "biopsy",
+        "label": "Biopsy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "investigation_reports_if_done",
+        "label": "Investigation reports (if done)"
+      },
+      {
+        "key": "details_of_drug_and_dosage_used_for_treatment_rejection",
+        "label": "Details of the drug and dosage used for treatment rejection"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes all vitals, detailed history, symptoms, signs, physical examination, indication for surgery, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Were the following documents available NOTTO ID, donor/recipient work-up summary sheet/cross-match report, informed consent of donor (in living donor transplant), hospital authorization letter?",
+        "expected": true
+      },
+      {
+        "q": "Were DSA and biopsy reports submitted (if applicable)?",
+        "expected": true
+      },
+      {
+        "q": "Is the hospital registered under HOTA/NOTTO ACT?",
+        "expected": true
+      },
+      {
+        "q": "Has the hospital transplant committee approved the case?",
+        "expected": true
+      },
+      {
+        "q": "Is the patient suffering from end stage kidney disease and/or not responding to dialysis?",
+        "expected": true
+      },
+      {
+        "q": "Documentation of no absolute contraindications for doing the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the Donor medically fit to undergo the Transplant Donor Nephrectomy?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details (including drug and dosage for induction/treatment rejection – if applicable)?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailedprocedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Hospital not registered under HOTA/NOTTO Act.",
+    "Hospital transplant committee has not approved the case.",
+    "Patient is not suffering from end-stage kidney disease, or is responding to dialysis.",
+    "Absolute contraindications for the procedure are documented.",
+    "Donor is not medically fit to undergo Transplant Donor Nephrectomy.",
+    "Missing Digital Subtraction Angiography (DSA) at pre-authorization.",
+    "Missing Biopsy report at pre-authorization.",
+    "Missing details of the drug and dosage used for treatment rejection at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facility should be registered as per HOTA Act (THE HUMAN ORGANS TRANSPLANTATION ACT)for intervention procedures. Care at a Tertiary Hospital. The Hospital should have the required infrastructure of transplantation like Normo-thermic perfusion system, vascular access, pre-transplant work-up, dialysis, transplant immunology (HLA & cross match), transplant pathology and post-transplant care.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Patients with allograft dysfunction immediately (<1 week) post-transplant commonly present with low urine output or failure of the serum creatinine to decrease after transplantation. Some patients (ie, those with delayed graft function [DGF]) may require dialysis in the first week after transplantation."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Acute T cell-mediated (cellular) rejection is characterized by infiltration of the allograft by lymphocytes and other inflammatory cells. Active (acute) antibody-mediated rejection (ABMR) requires morphologic evidence of acute tissue injury, circulating DSAs, and immunologic evidence of an antibody-mediated process (such as C4d deposition in the allograft). Cellular infiltrates may not be present. Treatment of T-cell mediated acute rejection includes steroid bolus therapy as first-line, ensuring adequate baseline immunosuppression. In severe or steroid-resistant rejection, intensified immunosuppression, high-dose steroid treatment, and eventually T-cell depleting agents are used. Treatment of antibody mediated rejection should include antibody elimination. An algorithm is provided for evaluating renal allograft dysfunction >1 week post-transplant, including checking for fever, abdominal pain, graft tenderness, hypovolemia, recent medication changes, CNI concentration, renal allograft ultrasound, and biopsy.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG116A",
+  "procedure_code": "SG116A",
+  "condition": "Portal Hypertension with Oesophageal Varices",
+  "procedure_name": "Splenorenal Anastomosis",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Splenorenal Anastomosis_Medco.pdf",
+    "Splenorenal Anastomosis_PPD.CPD.pdf"
+  ],
+  "alos": "7-10 Days",
+  "min_doctor_qualification": [
+    "MS/MCh/DNB/Equivalent (General Surgery/GI Surgery)"
+  ],
+  "clinical_indications": [
+    "Clinically significant portal hypertension (pressure gradient greater than 10 mmHg)",
+    "Bleeding from varices due to portal hypertension",
+    "Oesophagal varices leading to severe haemorrhage or variceal rupture"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "portal_pressure_gradient",
+      "operator": ">",
+      "value": "10 mmHg",
+      "note": "for clinically significant portal hypertension"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_examination_treatment_plan",
+        "label": "Clinical Notes with history and examination and planned line of treatment"
+      },
+      {
+        "key": "lab_investigations_cbc_hb_platelets",
+        "label": "Lab Investigations: Complete Blood Count (CBC) for Haemoglobin (Hb) and Platelets"
+      },
+      {
+        "key": "lab_investigations_ast_alt_alp_bilirubin_albumin",
+        "label": "Lab Investigations: Aspartate Aminotransferase (AST), Alanine Aminotransferase (ALT), Alkaline Phosphatase (ALP), Serum Bilirubin, Serum Albumin"
+      },
+      {
+        "key": "lab_investigations_hepatitis_serology",
+        "label": "Lab Investigations: Hepatitis Serology"
+      },
+      {
+        "key": "lab_investigations_bun_coagulation_profile_rft",
+        "label": "Lab Investigations: Blood Urea Nitrogen (BUN), Coagulation Profile, Renal Function Test (RFT)"
+      },
+      {
+        "key": "lab_investigations_abg",
+        "label": "Lab Investigations: Arterial Blood Gas (ABG)"
+      },
+      {
+        "key": "oesophagogastroduodenoscopy_report",
+        "label": "Oesophagogastroduodenoscopy Report"
+      },
+      {
+        "key": "usg_abdomen",
+        "label": "USG Abdomen"
+      },
+      {
+        "key": "doppler_sonography",
+        "label": "Doppler Sonography (Optional)"
+      },
+      {
+        "key": "ct_mri_angiography",
+        "label": "CT / MRI Angiography (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "intra_operative_clinical_photograph",
+        "label": "Intra Operative Clinical Photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether the investigation reports confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes with detailed history, signs and symptoms, clinical examination, planned line of treatment, and indications for the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether all the submitted reports are suggestive of Oesophageal varices due to Portal Hypertension?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Whether detailed Operative/Procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Whether detailed Discharge Summary Submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advice available at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's clinical history or investigations are not indicative of Splenorenal Anastomosis procedure.",
+    "Investigation reports do not confirm the diagnosis relevant to Splenorenal Anastomosis (e.g., portal hypertension, oesophageal varices).",
+    "Clinical notes lack detailed history, signs and symptoms, clinical examination, planned line of treatment, or specific indications for the procedure.",
+    "Submitted reports are not suggestive of Oesophageal varices due to Portal Hypertension.",
+    "Mandatory lab investigations (e.g., CBC, LFTs, RFTs, Coagulation Profile, Hepatitis Serology, ABG) are missing or incomplete.",
+    "Oesophagogastroduodenoscopy Report or USG Abdomen is missing.",
+    "Detailed Operative/Procedure notes are missing or incomplete at claim submission.",
+    "Intra Operative Clinical Photograph is missing at claim submission.",
+    "Detailed Discharge Summary is missing or does not include follow-up advice at claim submission.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details are missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Splenorenal Anastomosis is a surgical procedure in which the splenic vein is detached from the portal venous system and reattached to the left renal vein.",
+      "This surgery selectively reduces pressure in the portal venous system and controls bleeding from varices due to portal hypertension.",
+      "Portal hypertension is characterized by increased pressure in the portal venous system (a pressure gradient greater than 5 mmHg suggests its presence; greater than 10 mmHg indicates clinical significance).",
+      "It develops when resistance to portal blood flow increases, commonly within the liver (e.g., cirrhosis), but can also be pre-hepatic (e.g., portal vein thrombosis) or post-hepatic (e.g., constrictive pericarditis, Budd-Chiari syndrome).",
+      "Oesophagal varices are dilated submucosal distal oesophageal veins connecting portal and systemic circulations, often resulting from portal hypertension and leading to variceal rupture and severe haemorrhage, which is the most common fatal complication of cirrhosis.",
+      "The procedure helps control bleeding from varices without disturbing the portal perfusion of the liver by diverting blood from the splenic vein to the left renal vein and into the Inferior Vena Cava (IVC), while maintaining blood flow to the liver via the portal vein."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment under PM-JAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV008A",
+  "procedure_code": "SV008A",
+  "condition": "Mitral Stenosis",
+  "procedure_name": "Closed Mitral Valvotomy including Thoracotomy",
+  "specialty": "Cardiology/CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Mitral Valvotomy_Medco.pdf",
+    "Mitral Valvotomy_PPD.CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "M.Ch. or DNB/ equivalent (cardiovascular thoracic surgery)"
+  ],
+  "clinical_indications": [
+    "Rheumatic mitral stenosis"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "Mean gradient",
+      "operator": ">",
+      "value": "10 mmHg",
+      "note": "For severe stenosis"
+    },
+    {
+      "field": "Pulmonary artery systolic pressure",
+      "operator": ">",
+      "value": "50 mmHg",
+      "note": "For severe stenosis"
+    },
+    {
+      "field": "Valve area",
+      "operator": "<",
+      "value": "1.0 cm2",
+      "note": "For severe stenosis"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_planned_treatment",
+        "label": "Clinical notes with planned line of treatment"
+      },
+      {
+        "key": "detailed_echo_doppler_report",
+        "label": "Detailed Echo /Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "invoice_barcode_balloon",
+        "label": "Invoice/barcode of balloon used",
+        "note": "Not required for this procedure as per document"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo report suggestive of mitral valve stenosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the Post procedure still of ECHO show improvement of Mitral valve area?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo report not showing mitral valve stenosis.",
+    "Clinical notes missing or not detailing history, signs & symptoms, or indication for procedure.",
+    "Post-procedure ECHO stills missing or not showing improvement in Mitral valve area.",
+    "Patient's condition not clearly documented as rheumatic mitral stenosis.",
+    "Mitral valve area not documented as less than 1.0 cm² for severe stenosis."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiac Catheterization lab: No; CCU/ICCU: Yes; Qualified cardiologist (DM/DNB cardiology): No; Qualified cardiothoracic surgeon (MCh/DNB cardiovascular thoracic surgery): Yes",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Treatment of mitral stenosis ranges from conservative medical management to closed mitral valvotomy and the more recent balloon mitral valvoplasty.",
+      "Closed mitral valvotomy is a well-established method for treatment of rheumatic mitral stenosis.",
+      "A number of large series have reported successful long-term relief of symptoms after operation. Substantial long-term improvement in the mitral valve area following closed valvotomy has been demonstrated.",
+      "Percutaneous mitral balloon valvuloplasty (PMBV) is an invasive procedure used to manage mitral stenosis. PMBV improves symptoms by increasing the mitral valve area and reduce mitral valve gradient.",
+      "Balloon mitral valvotomy is now the treatment of choice for many patients with symptomatic mitral stenosis.",
+      "Common Signs and Symptoms of Mitral Stenosis: Orthopnea, Paroxysmal nocturnal dyspnea, Palpitations, Chest pain, Hemoptysis.",
+      "Common Signs of Mitral Stenosis: Loud first heart sound, Opening snap (OS) may be heard after the A2 component of the second heart sound, Mid-diastolic low pitch rumbling murmur with presystolic accentuation is heard after the opening snap. It is best heard with the bell of the stethoscope at the apex., Atrial fibrillation, Left parasternal heave, Tapping apical beat."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

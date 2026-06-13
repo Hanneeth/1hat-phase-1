@@ -1,0 +1,149 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV003K",
+  "procedure_code": "SV003K",
+  "condition": "Congenital Heart Disease requiring Norwood Procedure",
+  "procedure_name": "Surgical Correction of Category - III Congenital Heart Disease (Norwood Procedure)",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Norwood, Glenn and Fontan procedure_Medco.pdf",
+    "Norwood, Glenn and Fontan procedure_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/ equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Stage I palliation for univentricular heart to allow unobstructed systemic blood flow, establish systemic-pulmonary connection, and ensure unobstructed pulmonary venous flow.",
+    "Neonates or infants (within 2-3 months) with increased pulmonary blood flow requiring pulmonary artery banding (with PDA ligation).",
+    "Neonates or infants (within 2-3 months) with decreased pulmonary blood flow (PS group) requiring systemic-to-pulmonary artery shunt or ductus arteriosus stenting.",
+    "Pulmonary atresia with duct-dependent pulmonary circulation (baby usually on prostaglandin infusion)."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "age",
+      "operator": "<=",
+      "value": "3 months",
+      "note": "Neonatal period or within 2-3 months of life for increased pulmonary blood flow group"
+    },
+    {
+      "field": "age_for_pulmonary_artery_banding",
+      "operator": "between",
+      "value": "4-6 weeks",
+      "note": "preferably before 3 months"
+    },
+    {
+      "field": "systemic_arterial_saturation",
+      "operator": "<=",
+      "value": "70-75%",
+      "note": "Consistently below for decreased pulmonary blood flow (PS group)"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of single ventricle morphology or hypoplastic heart syndrome?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was post procedure echo report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show rerouting of SVC circulation into right pulmonary artery?",
+        "expected": false
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show total cavo-pulmonary circulation?",
+        "expected": false
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not suggestive of single ventricle morphology or hypoplastic heart syndrome.",
+    "Clinical notes, detailed history, signs & symptoms, or indication for procedure is missing or inadequate.",
+    "Indoor case papers not submitted at claim stage.",
+    "Detailed Procedure / Operative notes not submitted at claim stage.",
+    "Post-procedure echo report not submitted at claim stage.",
+    "Detailed Discharge Summary not submitted or does not mention the date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Univentricular hearts are defined as the presence of one ventricle instead of two, or the second ventricle is rudimentary without an inlet portion.",
+      "The main ventricle may be of left (more common) or right ventricular morphology or, in rare cases, indeterminate.",
+      "Classical examples include double-inlet left ventricle, tricuspid atresia, and hypoplastic left heart syndrome.",
+      "The term also includes congenital heart defects where two-ventricle (or biventricular) repair is not possible, such as unbalanced AVSD, double-outlet RV with a non-routable VSD, straddling of an AV valve, or very large/multiple VSDs not amenable to closure.",
+      "These defects are often grouped as “functional univentricular” heart, managed on the lines of single ventricle.",
+      "Clinical presentation depends on the ratio of pulmonary-to-systemic blood flow.",
+      "Infants with unrestricted pulmonary blood flow present with predominant heart failure and mild cyanosis.",
+      "Those with obstruction to pulmonary blood flow have dominant cyanosis and no heart failure.",
+      "Rarely, a balanced circulation could be present.",
+      "Surgery for univentricular heart is a palliative procedure; life expectancy is less than normal.",
+      "Treating physicians must inform and discuss details with the parent/guardian before surgery."
+    ],
+    "surgical_options": [
+      "Norwood Procedure (Stage I palliation): Aims to 1) allow unobstructed blood flow from the right ventricle to the systemic circulation, 2) establish connection between systemic and restricted pulmonary circulation, 3) provide unobstructed flow from pulmonary veins through atrial septum to right atrium.",
+      "Glenn Procedure (Stage II): Transition from high pressure arterial supply to venous pulmonary blood flow, creating anastomosis between superior vena cava and pulmonary artery. SVC is separated from right atrium and connected to pulmonary artery. BT shunt, if present, is taken down. Pulmonary circulation perfused with fully desaturated blood from systemic venous flow.",
+      "Fontan Procedure (Stage III): Total cavo-pulmonary anastomosis or full Fontan circulation. Systemic arterial and venous blood flow completely separated. Inferior vena cava connected to pulmonary artery bypassing the heart. Systemic circulation perfused exclusively with fully saturated blood."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

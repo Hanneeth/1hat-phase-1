@@ -1,0 +1,105 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1300050",
+  "procedure_code": "S1300050",
+  "condition": "Vascular Ring",
+  "procedure_name": "Vascular Ring Division",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Vascular Ring Division_Medco.pdf",
+    "Vascular Ring Division_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/ equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Stridorous breathing",
+    "Dysphagia",
+    "A “barky” chronic cough",
+    "Susceptibility to bronchopneumonia",
+    "Head retraction",
+    "Malnutrition",
+    "Onset during early infancy",
+    "Increase of respiratory distress during feeding"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_barium_swallow_ct_mri_angiography_report",
+        "label": "Echo/Barium swallow/CT/MRI/ Angiography report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_stills_of_echo_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Barium swallow/CT/MRI/angiography report suggestive of vascular ring?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Barium swallow/CT/MRI/angiography report is not suggestive of vascular ring.",
+    "Clinical notes are missing or do not contain detailed history, signs & symptoms, or indication for procedure.",
+    "Detailed Procedure / Operative notes are missing or incomplete.",
+    "Post-procedure stills of ECHO do not show repair of the defect.",
+    "Detailed Discharge Summary is missing or does not mention the date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Complete vascular rings are aortic arch anomalies in which the trachea and esophagus are compressed by the aortic arches and their derivatives."
+    ],
+    "surgical_options": [
+      "Thoracotomy should be carried out on the side of the smaller or atretic aortic arch and on the side of the persistent ductus arteriosus or ligamentum arteriosum. In the presence of a double aortic arch, compression of the esophagus and the trachea is relieved by ligation and division of both the smaller or atretic aortic arch and the persistent ductus arteriosus or ligamentum arteriosum."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

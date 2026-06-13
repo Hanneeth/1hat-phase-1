@@ -1,0 +1,271 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO053C",
+  "procedure_code": "SO053C",
+  "condition": "Medical Termination of Pregnancy",
+  "procedure_name": "MTP > 12 weeks",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Medical Termination of Pregnancy_Medco.pdf",
+    "Medical Termination of Pregnancy_PPD.CPD.pdf"
+  ],
+  "alos": "3 – 4 days",
+  "min_doctor_qualification": [
+    "MS Obstetrics & Gynecology",
+    "MD Obstetrics & Gynecology",
+    "DNB Obstetrics & Gynecology",
+    "PG Diploma in Obstetrics & Gynecology",
+    "Other eligibility conditions as enlisted in section 2 of MTP Rules, 2003 (opinion of atleast 2 registered medical practitioner are required)"
+  ],
+  "clinical_indications": [
+    "Termination of pregnancy of >12 weeks- 20 weeks gestation/uterine size",
+    "Terminating a pregnancy with documented evidence of any congenital fetal malformation diagnosed on USG"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "amenorrhea",
+      "operator": "<=",
+      "value": "4.5 months",
+      "note": "History"
+    },
+    {
+      "field": "uterine_size",
+      "operator": "between",
+      "value": "13 and 20 weeks",
+      "note": "Intrauterine pregnancy on Abdominal Examination"
+    },
+    {
+      "field": "gestation_age",
+      "operator": "between",
+      "value": "12 and 20 weeks",
+      "note": "Termination of pregnancy"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_admission_notes",
+        "label": "Detailed Admission notes with History & indication"
+      },
+      {
+        "key": "clinical_examination_findings",
+        "label": "Findings of clinical examination"
+      },
+      {
+        "key": "how_pregnancy_confirmed",
+        "label": "How was pregnancy confirmed? UPT/ Clinical examination/ USG"
+      },
+      {
+        "key": "hemoglobin_pcv_report",
+        "label": "Hemoglobin, Packed cell volume (PCV)"
+      },
+      {
+        "key": "urine_routine_examination",
+        "label": "Urine routine examination"
+      },
+      {
+        "key": "abo_rh",
+        "label": "ABO Rh"
+      },
+      {
+        "key": "usg_report",
+        "label": "USG (mandatory for pregnancy >12 weeks to 20 weeks)"
+      },
+      {
+        "key": "mtp_form",
+        "label": "MTP form"
+      },
+      {
+        "key": "detailed_operative_note",
+        "label": "Detailed operative note"
+      },
+      {
+        "key": "age_proof",
+        "label": "Age proof"
+      },
+      {
+        "key": "consent_form_c",
+        "label": "Completed Consent form (Form C, given as Annexure 1)"
+      },
+      {
+        "key": "rmp_opinion_form_i",
+        "label": "Completed RMP Opinion Form (Form I, given as Annexure 2)"
+      },
+      {
+        "key": "pelvic_abdominal_examination",
+        "label": "Pelvic examination / Abdominal examination to establish that uterine size is corresponding to the gestation age"
+      },
+      {
+        "key": "reason_for_terminating_pregnancy",
+        "label": "Reason for terminating pregnancy documented"
+      },
+      {
+        "key": "reason_for_delayed_termination",
+        "label": "Reason for delayed termination clearly documented (if no fetal congenital malformation observed on USG)"
+      },
+      {
+        "key": "opinion_of_2_rmp",
+        "label": "Opinion of at least 2 registered medical practitioners"
+      }
+    ],
+    "claim": [
+      {
+        "key": "operative_notes_method",
+        "label": "Method used for termination (Detailed Operative notes)"
+      },
+      {
+        "key": "operative_notes_medications_anesthesia",
+        "label": "Medications/anaesthesia used (Detailed Operative notes)"
+      },
+      {
+        "key": "operative_notes_outcomes",
+        "label": "Outcomes of the procedure including ensuring of complete expulsion of foetal parts and placenta (Detailed Operative notes)"
+      },
+      {
+        "key": "discharge_summary_prescription_drugs",
+        "label": "Prescription of drugs (Detailed Discharge Summary)"
+      },
+      {
+        "key": "discharge_summary_warning_signs_symptoms",
+        "label": "Warning signs and symptoms (Detailed Discharge Summary)"
+      },
+      {
+        "key": "discharge_summary_contraceptive_use",
+        "label": "Contraceptive use (Detailed Discharge Summary)"
+      },
+      {
+        "key": "discharge_summary_follow_up_visit_date",
+        "label": "Follow up visit date (Detailed Discharge Summary)"
+      },
+      {
+        "key": "admission_register_entry",
+        "label": "Completed entry in MTP/Admission Register (Form III, given as Annexure 3)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Acute pelvic infection ruled out?",
+        "expected": true
+      },
+      {
+        "q": "Uterine size (pre procedure) is not more than the gestation age for which MTP procedure is being performed?",
+        "expected": true
+      },
+      {
+        "q": "Age proof has been taken?",
+        "expected": true
+      },
+      {
+        "q": "Completed consent form (with Guardian signature in case of a minor) has been submitted?",
+        "expected": true
+      },
+      {
+        "q": "If blood group of the patient is Rh -ve and husband's blood group is Rh +ve then was the patient given anti-D Immunoglobulin?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Admission notes with history & indication for procedure reviewed?",
+        "expected": true
+      },
+      {
+        "q": "Clinical examination including symptoms, signs, vitals, etc. documented and reviewed?",
+        "expected": true
+      },
+      {
+        "q": "Completed Consent Form (Form C) submitted and reviewed?",
+        "expected": true
+      },
+      {
+        "q": "Completed RMP Opinion Form (Form I) submitted and reviewed?",
+        "expected": true
+      },
+      {
+        "q": "Reports of mandatory investigations (Hemoglobin, PCV, Urine routine, ABO Rh) submitted and reviewed?",
+        "expected": true
+      },
+      {
+        "q": "How was pregnancy confirmed (UPT/ Clinical examination/ USG) documented?",
+        "expected": true
+      },
+      {
+        "q": "USG report submitted (mandatory for pregnancy >12 weeks to 20 weeks)?",
+        "expected": true
+      },
+      {
+        "q": "Abdominal examination establishes intrauterine pregnancy of 13-20 weeks uterine size?",
+        "expected": true
+      },
+      {
+        "q": "Opinion of at least 2 registered medical practitioners available?",
+        "expected": true
+      },
+      {
+        "q": "Reason for terminating pregnancy after 12 weeks clearly documented?",
+        "expected": true
+      },
+      {
+        "q": "If no fetal congenital malformation observed on USG, is reason for delayed termination clearly documented?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Completed entry in Admission Register (Form III) available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed operative notes (method, medications/anesthesia, outcomes including complete expulsion of foetal parts and placenta) available?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary with follow-up advice (medications, expected side effects, warning signs for return, contraceptive advice) available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Acute pelvic infection not explicitly ruled out or present, or MTP performed with acute pelvic/vaginal infection.",
+    "Uterine size found to be outside the 13-20 weeks gestation age range during pre-procedure assessment.",
+    "Age proof not submitted or found incomplete.",
+    "Consent form (Form C) incomplete, or guardian signature missing for a minor.",
+    "Anti-D Immunoglobulin not documented as given when patient is Rh-negative and husband is Rh-positive.",
+    "Detailed Admission notes with history and indication for procedure missing or incomplete.",
+    "Documentation of how pregnancy was confirmed (UPT/Clinical examination/USG) is missing or insufficient.",
+    "Hemoglobin, PCV, Urine routine, or ABO Rh reports are missing.",
+    "USG report is missing (mandatory for pregnancy >12 weeks to 20 weeks).",
+    "Abdominal examination report does not establish uterine size corresponding to 13-20 weeks gestation age.",
+    "MTP form or Detailed operative note missing at pre-authorization stage (as required).",
+    "Opinion of at least 2 registered medical practitioners not submitted for MTP > 12 weeks.",
+    "Reason for terminating pregnancy after 12 weeks not clearly documented, or reason for delayed termination missing when no congenital malformation is observed on USG.",
+    "Facility not approved as MTP centre for MTP upto 20 weeks by District Level Committee (DLC).",
+    "Admission register entry (Form III) missing or incomplete at claim submission.",
+    "Operative notes detailing surgical steps, medications/anaesthesia, or outcomes (including expulsion) missing or incomplete at claim submission.",
+    "Discharge summary missing, or lacking details on medications, side effects, warning signs, or contraceptive advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facility to be an approved MTP centre for MTP upto 20 weeks, by District Level Committee (DLC).",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "This document is applicable only for cases where hospitalization is required for termination of pregnancy as per the provisions of the extant Medical Termination of Pregnancy Act.",
+      "Necessary paras in this document will change subject to amendments in the MTP act from time to time.",
+      "If blood group of the patient is Rh -ve then husband's Blood group Rh must also be documented. In case the husband is Rh +ve then the patient must be given anti-D Immunoglobulin.",
+      "Reasons for termination of pregnancy must be clearly documented.",
+      "In any case of MTP (upto 8 weeks, >8 weeks-12 weeks, >12 weeks- 20 weeks)- if the patient's Hb <8g/dl, the patient should preferably be referred to tertiary care centres; pros and cons should be explained to the patient and a high risk consent be taken before performing the procedure.",
+      "In cases where the girl is a minor (under the age of 18 years), the healthcare provider needs to inform the local authorities (local police station/ district child welfare officer) when providing abortion services under the MTP Act. (copy of this must be submitted) As per the 2013, MoH&FW Guidelines and Protocols- Medico-legal care for survivors/ victims of sexual violence (...), “providing treatment and necessary medical investigations is the prime responsibility of the examining doctor\" and that \"admission, evidence collection or filing a police complaint is not mandatory for providing treatment\". The necessary provisions under the POSCO Act must also be referred to while offering MTP services to the minor. May also refer to the following document for more details: https://www.ipasdevelopmentfoundation.org/resourceFiles/75201803210124.pdf"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Acute pelvic and vaginal infections (procedures not to be performed)"
+    ]
+  }
+}

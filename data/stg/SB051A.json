@@ -1,0 +1,112 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB051A",
+  "procedure_code": "SB051A",
+  "condition": "Dupuytren's Contracture",
+  "procedure_name": "Duputryen's Contracture release + rehabilitation",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Fasciotomy -Duputryens Contracture release + rehabilitation_Medco.pdf",
+    "Fasciotomy -Duputryens Contracture release + rehabilitation_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "usg_report",
+        "label": "USG report labelled with patient ID, date and side (Left/Right) of Affected part"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post-Procedure clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical documents justifying surgery?",
+        "expected": true
+      },
+      {
+        "q": "USG report labelled with patient ID, date and side (Left/Right) of Affected part?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Indoor case papers (ICPs)?",
+        "expected": true
+      },
+      {
+        "q": "Post-Procedure clinical photograph?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Procedure / Operative Notes?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge summary?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing or do not include history, signs, symptoms, evaluation findings, indication for procedure, planned management, or admission advice.",
+    "USG report for the affected part is missing or not labelled with patient ID, date, or side (Left/Right).",
+    "Clinical photograph of the affected part is missing at pre-authorization.",
+    "Mandatory claim documents (Detailed Indoor case papers, Post-Procedure clinical photograph, Detailed Procedure / Operative Notes, Detailed Discharge summary) are missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Dupuytren's contracture is a progressive condition in which connective cords form, thicken, and shorten (typically in the connective tissue of the palmar fascia), causing permanent flexion contractures of joints and of one or more fingers.",
+      "The metacarpophalangeal joint (MCP) and the proximal interphalangeal joint (PIP) are most often affected.",
+      "Eventually, the contractures lead to hand deformity and impaired hand function, and potentially reduced quality of life for the affected individual.",
+      "Dupuytren's contracture may present as a unilateral or bilateral disease."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

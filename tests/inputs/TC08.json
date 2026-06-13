@@ -1,0 +1,150 @@
+{
+  "_test_id": "TC08",
+  "_description": "Preterm neonate (age=0) with respiratory distress syndrome. Admitted to public hospital ICU with ventilator support. Tests NEONATAL_ESCALATION_RISK flag (Phase 8), public hospital document relaxation (Phase 9), and per-day ICU-vent stratification (Phase 3).",
+  "_expected_status": "CONDITIONAL",
+  "_expected_specialty": "MN",
+  "_expected_flags_include": [
+    "NEONATAL_ESCALATION_RISK",
+    "PAEDIATRIC_DEVICE",
+    "CANDIDATES_GENERATED"
+  ],
+  "_expected_flags_exclude": [
+    "PUB_RESERVED_BLOCK"
+  ],
+  "session_id": "IRIS-TC08-20260612",
+  "created_at": "2026-06-12T08:00:00+05:30",
+  "patient": {
+    "patient_id": "P008"
+  },
+  "hospital": {
+    "hospital_id": "H002"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": "icu_vent",
+    "is_emergency": true,
+    "is_medico_legal": false,
+    "chief_complaints": "Preterm delivery at 32 weeks, respiratory distress since birth, nasal flaring, intercostal retractions, cyanosis",
+    "duration_days": 0,
+    "history_of_present_illness": "Baby born today at 32 weeks of gestation (preterm) by emergency LSCS for foetal distress. Birth weight 1.6 kg. Apgar score 5 at 1 minute, 7 at 5 minutes. Developed respiratory distress immediately after birth. Currently on mechanical ventilation in NICU. Surfactant therapy given 2 hours ago.",
+    "provisional_diagnosis": "Preterm respiratory distress syndrome (RDS) — hyaline membrane disease",
+    "planned_procedure": null,
+    "weight_kg": 1.6,
+    "height_cm": 42,
+    "vitals": {
+      "bp_systolic_mmhg": 48,
+      "bp_diastolic_mmhg": 28,
+      "pulse_bpm": 168,
+      "spo2_pct": 84,
+      "temperature_f": 97.2,
+      "rr_per_min": 72,
+      "gcs": null,
+      "blood_glucose_mgdl": 48
+    },
+    "examination_findings": {
+      "general": "Preterm neonate, 32 weeks gestation, 1.6 kg, on mechanical ventilation, active, colour improving post surfactant",
+      "cvs": "Heart sounds normal, no murmur, capillary refill 3 seconds",
+      "rs": "On MV, FiO2 50%, PEEP 5, PIP 22. Bilateral air entry present post surfactant. Mild subcostal retractions.",
+      "abdomen": "Soft, liver 2cm BCM, no splenomegaly, umbilical lines in situ",
+      "cns": "Active, fontanelle flat, no seizures noted",
+      "local": null
+    },
+    "investigations": [
+      {
+        "type": "xray",
+        "result_summary": "Chest X-ray: Bilateral ground-glass haziness with air-bronchograms. Reticulogranular pattern. Features consistent with hyaline membrane disease (RDS grade III).",
+        "structured_values": [
+          {
+            "parameter": "RDS_grade",
+            "value": 3,
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "air_bronchograms",
+            "value": "present",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-12"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "ABG: pH 7.28, PaO2 48 mmHg, PaCO2 52 mmHg, HCO3 22 mEq/L, BE -4 (respiratory acidosis). Blood glucose: 48 mg/dL (low). CBC: WBC 12400, Hb 16.2 g/dL.",
+        "structured_values": [
+          {
+            "parameter": "pH",
+            "value": 7.28,
+            "unit": null,
+            "flag": "L",
+            "leads": null
+          },
+          {
+            "parameter": "PaO2",
+            "value": 48,
+            "unit": "mmHg",
+            "flag": "L",
+            "leads": null
+          },
+          {
+            "parameter": "PaCO2",
+            "value": 52,
+            "unit": "mmHg",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "blood_glucose",
+            "value": 48,
+            "unit": "mg/dL",
+            "flag": "L",
+            "leads": null
+          },
+          {
+            "parameter": "Hb",
+            "value": 16.2,
+            "unit": "g/dL",
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-12"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "Newborn — no past history",
+    "past_surgical_history": "None",
+    "current_medications": [
+      "Surfactant (Poractant alfa) — already administered",
+      "IV dextrose 10%",
+      "IV antibiotics"
+    ],
+    "allergies": [],
+    "personal_history": null,
+    "family_history": "Mother 28 years, G2P1L1. No antenatal complications noted except preterm labour.",
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "NICU admission notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Photo of neonate in NICU",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Geetha Nair",
+      "registration_number": "TN-MED-34567",
+      "qualification": "MD Paediatrics, DCH, Fellowship Neonatology",
+      "specialty_code": "MN"
+    },
+    "notes": "Neonate on MV in NICU. Mother's admission for breastfeeding/KMC should be arranged as per MN package guidelines. Enhancement requests will be needed from Day 2. Public hospital — relaxed doc protocol applies."
+  }
+}

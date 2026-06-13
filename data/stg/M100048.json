@@ -1,0 +1,153 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M100048",
+  "procedure_code": "M100048",
+  "condition": "Gastroenteritis, Dehydration",
+  "procedure_name": "Acute gastroenteritis with severe dehydration",
+  "specialty": "General Medicine/ Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Gastroenteritis, Dehydration_Medco.pdf",
+    "Gastroenteritis, Dehydration_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    ">3 loose or watery stool / day",
+    "Nausea and vomiting",
+    "Pain in Abdomen / Abdominal cramps",
+    "Bloating",
+    "Fever (+/-)",
+    "2 of the following for Severe Dehydration: Lethargy/unconscious; Sunken eyes; Not able to drink/drinking poorly; Skin pinch - goes back slowly"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "dehydration_signs",
+      "operator": ">=2",
+      "value": "Lethargy/unconscious, Sunken eyes, Not able to drink/drinking poorly, Skin pinch - goes back slowly",
+      "note": "2 of these signs for 'Severe Dehydration'"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "cbc_report",
+        "label": "CBC report"
+      },
+      {
+        "key": "sr_electrolyte_report",
+        "label": "Sr. Electrolyte report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "post_treatment_stool_culture_report",
+        "label": "Post treatment Stool culture report"
+      },
+      {
+        "key": "post_treatment_sr_electrolyte_report",
+        "label": "Post treatment Sr. Electrolyte report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the CBP report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Sr. Electrolyte report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient complain of > 3 watery stool per day?",
+        "expected": true
+      },
+      {
+        "q": "Did the Sr. Electrolyte report suggest hyponatremic dehydration (Na <135 mmol/L)/ Hypernatremic dehydration (Na> 145 mmol/L)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the Detailed Indoor case papers submitted with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was post treatment stool culture report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were post treatment Sr. Electrolyte submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the detailed Discharge Summary submitted with date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient did not complain of > 3 watery stool per day.",
+    "Sr. Electrolyte report not suggestive of hyponatremic (Na <135 mmol/L) or hypernatremic (Na >145 mmol/L) dehydration.",
+    "Clinical notes missing or incomplete at pre-authorization.",
+    "CBC report not submitted at pre-authorization.",
+    "Sr. Electrolyte report not submitted at pre-authorization.",
+    "Post treatment Stool culture report not submitted at claim stage.",
+    "Post treatment Sr. Electrolyte report not submitted at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": "R19.7",
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": "MD/DNB/equivalent (in General Medicine, Pediatric Medicine)",
+    "clinical_key_pointers": [
+      ">3 loose or watery stool / day",
+      "Nausea and vomiting",
+      "Pain in Abdomen / Abdominal cramps",
+      "Bloating",
+      "Fever (+/-)"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Severe malnutrition/HIV",
+      "Severe dehydration",
+      "Hypernatremic (Na >145 mmol/L)/ hyponatremic dehydration (Na <135 mmol/L)",
+      "Dysentery with age <1 yr/ measles in past 6 weeks/dehydration/sick",
+      "Dysentery with no improvement on antibiotics",
+      "Persistent diarrhea with dehydration",
+      "Persistent diarrhea with serious systemic infection such as pneumonia, sepsis, infants <4 months of age, or when there is no improvement with treatment over 5 days",
+      "If hydration status is not improving, give IV drip more rapidly",
+      "In hypernatremic and hyponatremic dehydration child appears relatively less ill / more ill respectively and needs to be referred for hospitalization",
+      "Persistent Diarrhoea: Refer to hospital (See box)",
+      "Dysentery: Refer to hospital (See box)"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Unsuitable fluids: carbonated beverages, commercial fruit juice, sweetened tea & coffee, other medicinal teas/infusions.",
+      "For Persistent Diarrhoea, avoid very sweet foods or drinks."
+    ]
+  }
+}

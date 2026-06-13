@@ -1,0 +1,99 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB049B",
+  "procedure_code": "SB049B",
+  "condition": "Arthroscopic Meniscus Repair / Meniscectomy, Reconstruction of Cruciate Ligament with implant and brace",
+  "procedure_name": "Reconstruction of Cruciate Ligament (Posterior) with implant and brace",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Arthroscopic Meniscus Repair - Meniscectomy_Medco.pdf",
+    "Arthroscopic Meniscus Repair - Meniscectomy_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Torn posterior cruciate ligament (PCL) requiring reconstruction to restore stability to the knee joint"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "mri_scan_affected_part",
+        "label": "MRI scan of affected part labelled with patient ID, date and side (Left/Right)"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical Photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "intra_operative_still_image_patient_name",
+        "label": "Intra operative still image with patient name"
+      },
+      {
+        "key": "post_procedure_xray_showing_implant",
+        "label": "Post procedure X-ray showing implant labelled with patient ID, date and side (Left/Right) - affected part"
+      },
+      {
+        "key": "invoice_barcode_implant_brace",
+        "label": "Invoice and bar code of implant ensure brace is provided in package cost"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Does the Post procedure X ray show the implant in reconstruction of cruciate ligament with implant and brace?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Post procedure X-ray does not show the implant for reconstruction of cruciate ligament with implant and brace.",
+    "MRI scan of affected part is not labelled with patient ID, date, or side (Left/Right).",
+    "Invoice or barcode of implant is missing, or brace provision is not confirmed."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Posterior cruciate ligament reconstruction is an operation to replace your torn posterior cruciate ligament (PCL) and restore stability to your knee joint."
+    ],
+    "surgical_options": [
+      "Posterior cruciate ligament reconstruction"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

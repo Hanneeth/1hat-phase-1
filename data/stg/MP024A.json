@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP024A",
+  "procedure_code": "MP024A",
+  "condition": "Infantile cholestasis",
+  "procedure_name": "Infantile cholestasis",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Infantile Cholestasis_Medco.pdf",
+    "Infantile Cholestasis_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [],
+  "clinical_indications": [
+    "Jaundice (yellow discoloration of the skin, sclera, mucous membranes, and body fluids)",
+    "Passage of high colored urine with or without clay stools"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "conjugated_hyperbilirubinemia",
+      "operator": ">",
+      "value": "1.5-2 mg%",
+      "note": "in an infant"
+    },
+    {
+      "field": "direct_component_of_total_bilirubin",
+      "operator": ">",
+      "value": "20%",
+      "note": "of total bilirubin in an infant"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including vitals, examination findings, planned line of treatment and advice for admission"
+      },
+      {
+        "key": "liver_function_test",
+        "label": "Liver function test"
+      },
+      {
+        "key": "usg_abdomen",
+        "label": "USG Abdomen"
+      },
+      {
+        "key": "optional_lab_investigations",
+        "label": "Optional - Lab investigations: Complete Blood Count, Renal Function Test, Prothrombin Time/Partial thromboplastin time, Sepsis screen, Urinalysis, blood sugar, Sr. Electrolytes, Thyroid profile, Viral Serology, Metabolic screening, Genetic screening"
+      },
+      {
+        "key": "optional_diagnostic_imaging_ercp",
+        "label": "Optional - Diagnostic Imaging: Endoscopic retrograde cholangiopancreatography (ERCP)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "total_serum_bilirubin",
+        "label": "Total serum bilirubin"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is the Direct Bilirubin fraction >20% in Total Serum Bilirubin?",
+        "expected": true
+      },
+      {
+        "q": "Is the patient's age more than 28 days and less than one year?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Direct Bilirubin fraction not >20% in Total Serum Bilirubin or not documented.",
+    "Patient's age not documented or not within the 28 days to one year range.",
+    "Clinical notes, including vitals, examination findings, planned line of treatment, or advice for admission, are missing or incomplete at pre-authorization.",
+    "Liver function test report is missing or incomplete at pre-authorization.",
+    "USG Abdomen report is missing or incomplete at pre-authorization.",
+    "Detailed Indoor case papers (ICPs) with treatment details are missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB/DCH (Pediatric Medicine) / Pediatric Surgeon referral (if required)",
+    "clinical_key_pointers": [
+      "Cholestasis is defined as reduced bile formation or flow resulting in the retention of biliary substances within the liver normally excreted into bile and destined for elimination into the intestinal lumen.",
+      "Cholestatic jaundice in infancy is an important clinical condition that results from hepatobiliary dysfunction and can be caused by a number of disorders.",
+      "Idiopathic neonatal hepatitis (INH) and biliary atresia (BA) are two main causes. It is imperative that the clinician differentiates between intrahepatic and extrahepatic origin of cholestasis.",
+      "Causes of infantile cholestasis include obstructive, infectious, metabolic, genetic, and toxic factors.",
+      "Cholestasis is generally recognized by evaluation of serum studies, with elevation of serum conjugated (or direct) bilirubin and bile acids as central readily identified features of hepatobiliary dysfunction.",
+      "Bilirubin is a red flag found in the laboratory evaluation that can help the clinician identify cholestasis.",
+      "There is no gold standard investigations for diagnosing infantile cholestasis. The evaluation should be based on etiology.",
+      "The therapy for cholestasis is treating the underlying etiology of the disease.",
+      "General Management includes: Medium chain Triglycerides (MCT) oil, Fat soluble Supplements (Vitamin A,D,E,K), Water soluble supplements (Twice the RDA), Calcium, Phosphate, Zinc, Ursodeoxycholoic acid, Prophylactic phenobarbitone, Portal hypertension – propranolol."
+    ],
+    "surgical_options": [
+      "Pediatric Surgical consultation if required",
+      "Liver transplantation (for end stage disease)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Pediatric Surgical consultation if required",
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "alos_details": "Once diagnosis is established the case can be booked in the relevant package, further stay/admission should be decided based on the level of complications of the disease."
+  }
+}

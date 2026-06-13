@@ -1,0 +1,103 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB037A",
+  "procedure_code": "SB037A",
+  "condition": "Elbow replacement",
+  "procedure_name": "Elbow replacement",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Elbow replacement_Medco.pdf",
+    "Elbow replacement_PPD.CPD.pdf"
+  ],
+  "alos": "5days",
+  "min_doctor_qualification": [
+    "MS in Orthopedics",
+    "DNB in Orthopedics"
+  ],
+  "clinical_indications": [
+    "Elbow Joint replacement is performed when other interventions, medical and surgical, will not offer a satisfactory outcome.",
+    "Underlying pathology includes: Osteoarthritis, Rheumatoid arthritis (RA).",
+    "Underlying pathology includes: Complex fracture of the elbow, even in the elderly.",
+    "Underlying pathology includes: Severely damaged or torn soft tissues in the elbow, resulting in instability.",
+    "Underlying pathology includes: Malignancy in or around the elbow.",
+    "Underlying pathology includes: Poor results from previous elbow surgery.",
+    "Severe pain with radiological changes of joint destruction in the presence of failed conservative treatment, or the quality of the bone is not suitable for fixation.",
+    "Inflammatory conditions.",
+    "Selected patients with post-traumatic osteoarthritis.",
+    "Elderly patients with low, comminuted distal humerus fractures.",
+    "The salvage of distal humerus nonunion, Ankylosis.",
+    "Haemophilic arthropathy.",
+    "Elbow reconstruction after tumor resection."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "xray_ct_pre_op",
+        "label": "X-ray/ CT labelled with patient ID, date and side (Left/Right)- affected limb justifying the surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary."
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes."
+      },
+      {
+        "key": "xray_ct_post_op_implant",
+        "label": "Post op X-ray labelled with patient ID, date and side (Left/Right)-affected limb, showing the implant"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice / bar code of implant"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Does the Post-op X-ray / CT of Elbow show the presence of implant?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Pre-operative X-ray/CT of affected limb not labelled with patient ID, date, or side (Left/Right), or does not justify the surgery.",
+    "Post-operative X-ray/CT of affected limb not labelled with patient ID, date, or side (Left/Right), or does not show the implant.",
+    "Invoice or barcode of the implant is missing or illegible.",
+    "Post-procedure clinical photograph is missing.",
+    "Clinical notes are incomplete or do not support the necessity of the procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Outcomes of an Elbow Replacement: Replaces the damaged joint surfaces with a synthetic joint.",
+      "Outcomes of an Elbow Replacement: A pain free, mobile elbow that enables patient to perform normal everyday activities.",
+      "This procedure may be associated with complications: Infection, Extensor mechanism dysfunction, Periprosthetic fractures, Wear, loosening, and osteolysis.",
+      "Fortunately, revision techniques developed over the last few years allow successful treatment of some of these complications."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

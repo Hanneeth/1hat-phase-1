@@ -1,0 +1,128 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1000007",
+  "procedure_code": "S1000007",
+  "condition": "Negative pressure wound therapy (NPWT)",
+  "procedure_name": "Negative pressure wound therapy",
+  "specialty": "Plastic & Reconstructive Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Negative pressure wound therapy_Medco.pdf",
+    "Negative pressure wound therapy_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/Equivalent (in General Surgery, Orthopaedics)"
+  ],
+  "clinical_indications": [
+    "Chronic non healing wounds",
+    "Surgical wound dehiscence",
+    "Following surgical debridement of acute or chronic wounds (e.g., traumatic wounds, necrotizing infection, pressure ulcer)",
+    "Diabetic foot ulcers",
+    "Reconstructive surgery (e.g., chronic non healing burn wound, skin graft)",
+    "To prevent surgical wound infection (ie, prophylactic) and as a means of instillation therapy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, symptoms, signs, examination findings, and advice for admission"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph"
+      },
+      {
+        "key": "indication_of_procedure",
+        "label": "Indication of procedure"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photographs",
+        "label": "Post-operative photographs"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes (history, signs & symptoms, planned line of treatment) available?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Is the indication for procedure documented?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge provided?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation not indicative of Negative Pressure Wound Therapy or diagnosis not confirmed at pre-authorization.",
+    "Pre-authorization clinical notes lack sufficient detail regarding history, symptoms, signs, examination findings, or planned line of treatment.",
+    "Documentation of the indication for Negative Pressure Wound Therapy is missing or unclear at pre-authorization.",
+    "Mandatory clinical photographs (pre-operative or post-operative) are missing, unclear, or not relevant.",
+    "Detailed Indoor Case Papers (ICPs) for claim submission are missing or do not contain daily vitals and line of treatment.",
+    "Detailed Procedure/Operative notes are missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facility with equipment availability",
+    "min_doctor_qualification_desirable": "MCh/DNB/Equivalent (in Plastic Surgery)",
+    "clinical_key_pointers": [
+      "Negative pressure wound therapy (NPWT), refers to wound dressing systems that continuously or intermittently apply sub-atmospheric pressure to the surface of a wound.",
+      "NPWT is an adjunctive therapy for the management of mainly chronic and difficult wounds and some acute wounds.",
+      "The wound care system consists of an open-cell foam dressing, semi-occlusive adhesive cover, fluid collection system, and suction pump."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Exposed vital structures – NPWT, in the presence of exposed organs, blood vessels, or vascular grafts, increases the risk for tissue erosion, which can lead to enteric fistula or hemorrhage",
+      "Presence of malignant tissue",
+      "Ischemic wounds (relative contraindication)",
+      "Ongoing infection or devitalized tissue (relative contraindication)",
+      "Fragile skin (relative contraindication)",
+      "Adhesive allergy (relative contraindication)",
+      "Patient on anticoagulants (relative contraindication)"
+    ]
+  }
+}

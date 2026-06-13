@@ -1,0 +1,113 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M100042",
+  "procedure_code": "M100042",
+  "condition": "Sickle cell Anemia",
+  "procedure_name": "Sickle cell Anemia",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Sickle cell anemia_Medco.pdf",
+    "Sickle cell anemia_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MD / DNB/equivalent (in General medicine, Pediatric Medicine)"
+  ],
+  "clinical_indications": [
+    "Yellowish color of the skin",
+    "Whites of the eyes, known as icterus",
+    "Fatigue or fussiness from anemia",
+    "Painful swelling of the hands and feet",
+    "Bedwetting, from associated kidney problems",
+    "Pain in the chest, back, arms, or legs",
+    "Delayed growth or puberty",
+    "Vision problems",
+    "Anemia",
+    "Sickle Cell Crisis (Acute Painful Episodes)",
+    "Sickle Cell Crisis (Abdominal Pain Crisis)",
+    "Sickle Cell Crisis (Splenic Sequestration Crisis)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indications_treatment_plan",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "electrophoresis_report",
+        "label": "Electrophoresis report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_chart",
+        "label": "Detailed Indoor case papers with treatment chart"
+      },
+      {
+        "key": "high_performance_liquid_chromatography_hplc",
+        "label": "High-performance liquid chromatography (HPLC)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Electrophoresis report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Do the clinical notes and Electrophoresis report confirm sickle cell anemia?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the ICPs with detailed treatment chart submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the post procedure High-performance liquid chromatography (HPLC) report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the detailed discharge summary with follow-up date mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and Electrophoresis report do not confirm sickle cell anemia.",
+    "Clinical notes are missing, incomplete, or do not include evaluation findings, indications for the procedure, or planned line of treatment at pre-authorization.",
+    "Electrophoresis report is missing at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) with treatment chart are missing or incomplete at claim submission.",
+    "High-performance liquid chromatography (HPLC) report is missing at claim submission.",
+    "Detailed discharge summary is missing or does not include follow-up date at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MBBS",
+    "clinical_key_pointers": [
+      "Sickle cell Anemia is a genetic disorder that results in the formation of sickled red blood cells (RBCs). The process is further aggravated by abnormal interactions of these RBCs with leukocytes, platelets, vascular endothelium, and clotting factors thus causing acute and chronic complications.",
+      "Complications of Sickle cell Anemia include Stroke, Acute chest syndrome, Kidney disease, and Venous Thromboembolism, as well as an extensive range of issues such as psychosocial problems, infections, musculoskeletal complications, cerebrovascular events, cardiac complications, hepatobiliary complications, pulmonary complications, renal complications, ocular complications, pregnancy-related complications, and multiorgan failure."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

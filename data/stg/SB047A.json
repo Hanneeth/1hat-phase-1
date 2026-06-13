@@ -1,0 +1,92 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "SB047A",
+  "procedure_code": "SB047A",
+  "condition": "Tendon Release / Tenotomy",
+  "procedure_name": "Tendon release/Tenotomy",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Tendon Grafting-Repair-Tendon Release-Tenotomy_Medco.pdf",
+    "Tendon Grafting-Repair-Tendon Release-Tenotomy_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Correction of equinus deformity to gain dorsiflexion",
+    "As an essential step of Ponseti treatment of CTEV (Clubfoot)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "clinical_photo_affected_part_preauth",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "post_procedure_clinical_photo_affected_part",
+        "label": "Post Procedure clinical photograph of affected part"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Does the Clinical notes, clinical photograph of affected part justifying the need for the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the Clinical notes, clinical photograph of affected part justifying the need for the procedure?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or clinical photograph of affected part do not justify the medical necessity of the procedure at pre-authorization.",
+    "Clinical notes at pre-authorization lack adequate detail regarding history, signs, symptoms, evaluation findings, or indication for the procedure.",
+    "Post-procedure clinical photograph of affected part is missing or unclear at claim submission.",
+    "Procedure / operation notes at claim submission lack sufficient detail on surgical steps or outcomes."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "The tenotomy is essential to correct the equines deformity and gain dorsiflexion.",
+      "Tenotomy of the tendo-achillis is an essential step of ponseti treatment of CTEV.",
+      "Conventional blade tenotomy achieves good correction, however complications like damage to neurovascular structures leading to bleeding or pseudo aneurysms are reported.",
+      "In this respect needle tenotomy is a relatively simple procedure which is less invasive and probably has less morbidity.",
+      "It does not require an operation theatre and can safely be done as OPD procedure under sedation. This will also decrease the cost of the procedure."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

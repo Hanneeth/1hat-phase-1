@@ -1,0 +1,162 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE027A",
+  "procedure_code": "SE027A",
+  "condition": "Glaucoma Surgery",
+  "procedure_name": "Cyclocryotherapy/Cyclophotocoagulation",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Glaucoma surgery_Medco.pdf",
+    "Glaucoma surgery_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma/ equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "Moderate/advanced open angle glaucoma with optic nerve damage and visual field loss, requiring IOP reduction of ≥25-50%, where cyclophotocoagulation (or cryotherapy) is a treatment consideration.",
+    "End-stage (refractory) glaucoma presenting as a blind eye with pain, requiring IOP reduction of ≥25-50%, where cyclophotocoagulation (or cryotherapy) is a treatment consideration.",
+    "Diagnosis backed by clinical signs, symptoms, and ophthalmic examination, and failure to respond to conservative medical therapy."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "optic nerve damage",
+      "operator": "is present",
+      "value": "yes",
+      "note": null
+    },
+    {
+      "field": "intraocular pressure",
+      "operator": ">=",
+      "value": "24mmHg",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "indication",
+        "label": "Indication (Open angle Glaucoma: Moderate/ advanced Glaucoma/ end stage refractory Glaucoma)"
+      },
+      {
+        "key": "perimetry_examination",
+        "label": "Documentation of recent field of vision (Perimetry examination)"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary with Intraocular pressure, Fundus and corneal diameter"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure/operative notes"
+      },
+      {
+        "key": "intraoperative_photograph",
+        "label": "Intraoperative photograph with patient ID, time and date (optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is there optic nerve damage?",
+        "expected": true
+      },
+      {
+        "q": "Is the Intra-ocular pressure >/=24mmHg?",
+        "expected": true
+      },
+      {
+        "q": "Raised Intra-ocular pressure not controlled by medication?",
+        "expected": true
+      },
+      {
+        "q": "Are Detailed clinical notes available (indicating condition of optic nerve head and intra-ocular pressure, clinical symptoms and visual acuity)?",
+        "expected": true
+      },
+      {
+        "q": "Are Detailed admission notes available?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and was the surgery successful?",
+        "expected": true
+      },
+      {
+        "q": "Is the intraocular pressure (IOP) on first post op day and IOP on day of discharge mentioned?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Was the intra operative photograph submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Optic nerve damage not documented or not present",
+    "Intra-ocular pressure not documented or documented below 24mmHg threshold without justification",
+    "Intra-ocular pressure documented as controlled by medication",
+    "Clinical notes missing or lacking detail on optic nerve head, IOP, symptoms, or visual acuity",
+    "Admission notes missing",
+    "Perimetry examination documentation missing or incomplete",
+    "Clinical photograph missing or not clearly labelled",
+    "Discharge summary missing or lacking IOP, Fundus, or corneal diameter details",
+    "Procedure/operative notes missing or not detailing surgical steps",
+    "Intraoperative photograph not submitted (if applicable, optional)"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Glaucoma Surgery only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination and does not respond to conservative medical therapy.",
+      "Glaucoma is one of the leading causes of Blindness after Cataract. Glaucoma refers to a group of diseases in which optic nerve damage is the primary pathology leading to vision loss.",
+      "The most common forms of Glaucoma are- Open angle and Closed angle Glaucoma.",
+      "In East Asia vision loss from Closed angle Glaucoma is more common, in western world Open angle Glaucoma is more common.",
+      "Risk factor: Raised Intra-ocular pressure (IOP) is a major risk factor for loss of sight from open and closed angle Glaucoma. Raised IOP leads to damage of optic nerve"
+    ],
+    "surgical_options": [
+      "Cyclophotocoagulation",
+      "Cyclocryotherapy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Acute primary angle closure with uncontrolled IOP on maximum therapy and facilities for laser peripheral iridotomy are not available",
+      "Facilities for cataract surgery not available in lens induced glaucomas (phacomorphic)",
+      "Children (acute intraocular pressure lowering measures initiated prior to referral; laser or surgical therapy to be done at higher centres)",
+      "Secondary glaucomas without facilities to treat the underlying cause (for examplelaser iridotomy for pupil block/ surgery (ex. in microspherophakia or lensectomyfor subluxated crystalline lens)",
+      "Nanophthalmos requiring surgery",
+      "Previous failed trabeculectomy uncontrolled on maximum antiglaucoma therapy",
+      "Patients requiring tube implants",
+      "Only seeing eye",
+      "Post congenital cataract surgery with uncontrolled IOP on therapy",
+      "Complications of filtration surgery requiring surgical intervention, Failing bleb, Large choroidal haemorrhage/ effusions, Bleb leaks, Blebitis and endophthalmitis"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MC002C",
+  "procedure_code": "MC002C",
+  "condition": "Acute Limb Ischemia (ALI)",
+  "procedure_name": "Catheter Directed Thrombolysis- Peripheral Vessels",
+  "specialty": "Cardiology/Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "CDT-PV_Medco.pdf",
+    "CDT-PV_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "DM Cardiology",
+    "DNB Cardiology",
+    "Equivalent (Cardiology)",
+    "Training Interventional Radiology",
+    "Fellowship Interventional Radiology",
+    "Equivalent (Interventional Radiology)"
+  ],
+  "clinical_indications": [
+    "Acute occlusions of lower extremity arteries and bypass grafts having salvageable limb ischemia.",
+    "Patients with viable limb (as evidenced by preserved distal capillary circulation and preserved venous return).",
+    "Patients with salvageable limb (as evidenced by preserved capillary circulation with absent venous drainage, but no motor loss)."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_planned_line_of_treatment",
+        "label": "Clinical Notes with planned line of treatment"
+      },
+      {
+        "key": "doppler_report_angiogram_report",
+        "label": "Doppler Report/ Angiogram report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "post_procedure_colour_doppler_angio_report_of_affected_limb",
+        "label": "Post procedure colour doppler/Angio report of affected limb"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "invoices_of_catheter_used",
+        "label": "Invoices of catheter used"
+      },
+      {
+        "key": "invoice_of_thrombolytic_drug_used",
+        "label": "Invoice of thrombolytic drug used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical Notes with planned line of treatment-detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the colour doppler Report/Angio Report indicative of Peripheral Vascular Disease?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure colour doppler/Angiogram of affected limb show recanalization of affected vessel?",
+        "expected": true
+      },
+      {
+        "q": "Is detailed discharge summary with follow-up period submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes submitted for pre-authorization lack detailed history, signs & symptoms, or indication for procedure.",
+    "Doppler Report/Angiogram report submitted for pre-authorization is missing or not indicative of Peripheral Vascular Disease.",
+    "Procedure/operation notes submitted at claim stage are missing or lack necessary detail.",
+    "Post-procedure colour doppler/Angiogram report of affected limb is missing or does not show recanalization of affected vessel.",
+    "Invoices for catheter used or thrombolytic drug used are missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath lab/ Interventional Radiology Lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Acute limb ischemia (ALI) is potentially devastating but treatable presentation of peripheral arterial disease (PAD).",
+      "ALI may be caused by cardiac emboli, embolization from aneurysmal thrombus, and peripheral bypass graft thrombosis.",
+      "During arterial catheterization, iatrogenic causes may also lead to fresh thrombus formation.",
+      "The clinical signs and symptoms of acute limb ischemia include the six \"P's”: pain, paralysis, paresthesias, pulselessness, pallor, and polar (i.e., a cold extremity).",
+      "The degree of symptoms suggests the underlying diagnosis.",
+      "Patients with embolic occlusion are often the most symptomatic and have an abrupt onset because collateral vessels are not developed to perfuse the limb in the face of occlusion."
+    ],
+    "surgical_options": [
+      "Catheter directed thrombolysis has similar results as surgical intervention in carefully selected patients."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

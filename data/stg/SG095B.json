@@ -1,0 +1,116 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG095B",
+  "procedure_code": "SG095B",
+  "condition": "Management of Varicose Veins",
+  "procedure_name": "Minor sclerotherapy",
+  "specialty": "General Surgery",
+  "version": "1.2",
+  "source_files": [
+    "Management of Varicose Veins_Medco.pdf",
+    "Management of Varicose Veins_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS",
+    "DNB",
+    "Equivalent (General Surgery)"
+  ],
+  "clinical_indications": [
+    "Localized varicose veins with competent greater saphenous vein",
+    "Initial treatment option for incompetence of greater saphenous vein & perforator vein before considering more invasive surgery or deep venous reconstruction"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes with details of clinical examination and planned line of treatment"
+      },
+      {
+        "key": "clinical_photographs",
+        "label": "Clinical Photographs"
+      },
+      {
+        "key": "duplex_scan",
+        "label": "Duplex Scan"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICP)"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Detailed Procedure/Operative notes"
+      },
+      {
+        "key": "post_op_clinical_photographs",
+        "label": "Post-Op clinical Photographs"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the indication for the surgery mentioned?",
+        "expected": true
+      },
+      {
+        "q": "Was the duplex scan report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there evidence of non-surgical/medical management tried but failed?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Whether detailed Operative/Procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Whether detailed Discharge Summary Submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Indication for the procedure (surgery) not mentioned at pre-authorization",
+    "Duplex scan report not submitted at pre-authorization",
+    "No evidence of non-surgical/medical management tried but failed at pre-authorization",
+    "Detailed procedure notes not submitted at claim stage",
+    "Detailed Discharge Summary not submitted at claim stage",
+    "Clinical notes with detailed history, signs and symptoms, clinical examination, planned line of treatment, and indications for the procedure are missing or incomplete",
+    "Clinical photographs (pre-op or post-op) not submitted"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Varicose veins are the most common vein disorder.",
+      "Varicose veins are dilated, tortuous veins caused by dilation of normal veins due to increased venous pressure.",
+      "They are visible surface manifestations of an underlying syndrome of venous insufficiency.",
+      "They occur in varying severity and different clinical presentations.",
+      "2% of these patients present with skin changes and morbid venous ulcers."
+    ],
+    "surgical_options": [
+      "Injection Sclerotherapy",
+      "Ultrasound-guided foam sclerotherapy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG058A",
+  "procedure_code": "SG058A",
+  "condition": "Vasovasostomy",
+  "procedure_name": "Vasovasostomy",
+  "specialty": "General Surgery/Urology",
+  "version": "1.1",
+  "source_files": [
+    "Vasovasostomy_Medco.pdf",
+    "Vasovasostomy_PPD.CPD.pdf"
+  ],
+  "alos": "3 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (Genitourinary surgeon)"
+  ],
+  "clinical_indications": [
+    "Vast majority of vasovasostomies are performed to reverse a prior vasectomy",
+    "Vasovasostomies are also designed to bypass an obstruction in the male genital tract in men who are sterile",
+    "A vasovasostomy may also be performed on occasion to relieve pain associated with post-vasectomy pain syndrome",
+    "Occasionally indicated for repair of an iatrogenic vasal injury secondary to prior surgery (eg, inguinal herniorrhaphy)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_indication_management",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "pre_operative_scrotal_examination",
+        "label": "Pre-operative scrotal examination"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the clinical indications justify the need for surgery?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Pre-operative scrotal examination indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was intra-operative photograph submitted (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical indications not documented or do not justify the need for surgery.",
+    "Clinical notes missing or incomplete regarding evaluation findings, indication for procedure, or planned line of management.",
+    "Pre-operative scrotal examination findings not documented or not indicative of surgery.",
+    "Detailed Indoor Case Papers (ICPs) missing or incomplete, lacking daily vitals and line of treatment.",
+    "Detailed Procedure/Operative Notes missing or incomplete.",
+    "Discharge summary missing or lacks follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A vasovasostomy is a surgical procedure in which the effects of a vasectomy (male sterilization) are reversed. Vasovasostomy involves the anastomosis of segments of the vas deferens above and below an obstruction."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": "Before a vasovasostomy is performed, the patient will undergo a preoperative assessment, including a physical examination of the scrotum and a medical history of prior vasectomy surgery.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

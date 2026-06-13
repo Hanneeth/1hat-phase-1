@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL031B",
+  "procedure_code": "SL031B",
+  "condition": "Lateral & Advanced lateral skull base surgery (for benign conditions)",
+  "procedure_name": "Post-traumatic facial nerve decompression",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Skull base surgery (for benign conditions)_Medco.pdf",
+    "Skull base surgery (for benign conditions)_PPD.CPD.pdf"
+  ],
+  "alos": "6 days",
+  "min_doctor_qualification": [
+    "MS/ DNB/ or equivalent (in ENT)",
+    "MCh/DNB/Equivalent (in Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "complete facial paralysis following temporal bone fracture where the nerve is injured in its course anywhere between the first genu to mastoid segment"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_planned_management",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure"
+      },
+      {
+        "key": "ct_mri_biopsy_to_establish_indication_justify_surgery",
+        "label": "CT/MRI/biopsy to establish the indication and justify the surgery"
+      },
+      {
+        "key": "audiogram_report_justifying_surgery_if_applicable",
+        "label": "Audiogram report justifying surgery (if applicable)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_daily_vitals_line_of_treatment",
+        "label": "Detailed Indoor case papers with daily vitals and line of treatment"
+      },
+      {
+        "key": "detailed_procedure_operative_note",
+        "label": "Detailed Procedure / operative note"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_affected_part",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical notes, detailing signs, symptoms, examination findings, planned line of treatment & advise for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT/MRI/ biopsy to establish the indication and justify the surgery submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Audiogram report justifying surgery submitted? (If applicable)",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathology report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure clinical photograph of the affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "CT/MRI/biopsy of affected side not indicative of surgery or not submitted.",
+    "Clinical notes, detailing signs, symptoms, examination findings, planned line of treatment & advise for admission not submitted or incomplete.",
+    "Audiogram report not submitted or not justifying surgery (if applicable).",
+    "Histopathology report not submitted at claim stage.",
+    "Post procedure clinical photograph of the affected part not submitted at claim stage.",
+    "Detailed Procedure / Operative Notes not submitted at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facility",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Transmastoid facial nerve decompression is performed for complete facial paralysis following temporal bone fracture where the nerve is injured in its course anywhere between the first genu to mastoid segment."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

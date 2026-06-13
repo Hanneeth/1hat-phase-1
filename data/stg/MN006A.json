@@ -1,0 +1,176 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MN006A",
+  "procedure_code": "MN006A",
+  "condition": "Chronic Neonatal Care",
+  "procedure_name": "Chronic Care Package: If the baby requires stay beyond the upper limit of usual stay in Package no MN004A or MN005A for conditions like severe BPD requiring respiratory support, severe NEC requiring prolonged TPN support",
+  "specialty": "Neo-natal Care",
+  "version": "1.1",
+  "source_files": [
+    "Chronic neonatal care package_Medco.pdf",
+    "Chronic neonatal care package_PPD.CPD.pdf"
+  ],
+  "alos": "more than 30 (MN004A) - 45 (MN005A) days",
+  "min_doctor_qualification": [
+    "DM Neonatology",
+    "DNB Neonatology",
+    "Equivalent (in Neonatology)"
+  ],
+  "clinical_indications": [
+    "Necrotizing Enterocolitis",
+    "Bronchopulmonary Dysplasia",
+    "Meningitis/ Ventriculitis [Please review the relevant package for more details]",
+    "Failure to thrive",
+    "Post-surgical prolonged stay especially ileostomy for jejunal/ileal atresia",
+    "Total parenteral nutrition requirement for above mentioned conditions"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "hospitalization_stay_duration",
+      "operator": ">",
+      "value": "ALOS of MN004A (30 days) or MN005A (45 days)",
+      "note": "beyond upper limit of usual stay for MN004A or MN005A"
+    },
+    {
+      "field": "gestation_age",
+      "operator": "<",
+      "value": "32 weeks",
+      "note": "for Necrotizing Enterocolitis (preterm)"
+    },
+    {
+      "field": "oxygen_requirement_duration",
+      "operator": ">",
+      "value": "28 days",
+      "note": "for Bronchopulmonary Dysplasia"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings and planned line of management"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count (for Necrotizing Enterocolitis)"
+      },
+      {
+        "key": "arterial_blood_gas_analysis",
+        "label": "Arterial Blood Gas (ABG) Analysis (for Necrotizing Enterocolitis)"
+      },
+      {
+        "key": "serum_electrolytes",
+        "label": "Serum Electrolytes (for Necrotizing Enterocolitis)"
+      },
+      {
+        "key": "occult_stool_test",
+        "label": "Occult stool test (for Necrotizing Enterocolitis)"
+      },
+      {
+        "key": "abdominal_x_ray",
+        "label": "Abdominal X-ray (AP & lateral decubitus) (for Necrotizing Enterocolitis)"
+      },
+      {
+        "key": "usg_abdomen",
+        "label": "USG Abdomen (for Necrotizing Enterocolitis)"
+      },
+      {
+        "key": "chest_x_ray",
+        "label": "Chest X-ray (for Bronchopulmonary dysplasia)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "investigations_reports",
+        "label": "Investigations reports (if done)"
+      },
+      {
+        "key": "detailed_procedure_notes",
+        "label": "Detailed Procedure notes and indication (if any)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes including history, signs and symptoms, vitals, examination findings, planned line of treatment and advice for admission (refer the clinical criteria mentioned above)?",
+        "expected": true
+      },
+      {
+        "q": "Did the hospitalization stay requirement more than the days mentioned in packages (MN004A/MN005A) documented?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery and long-term requirement of Total parenteral nutrition (TPN) documented?",
+        "expected": true
+      },
+      {
+        "q": "Was the documented gestation age < 32 weeks/preterm?",
+        "expected": true
+      },
+      {
+        "q": "Was the oxygen requirement >28 days documented?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Investigation reports (if done) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure notes with indication available (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Hospitalization stay requirement not documented as more than the days mentioned in packages (MN004A/MN005A).",
+    "For Necrotizing Enterocolitis: Imaging not indicative of surgery or long-term requirement of Total parenteral nutrition (TPN).",
+    "For Necrotizing Enterocolitis: Documented gestation age not < 32 weeks/preterm.",
+    "For Bronchopulmonary Dysplasia: Oxygen requirement not documented as >28 days.",
+    "Pre-authorization clinical notes are incomplete or missing evaluation findings, planned line of management, or advice for admission, or do not refer to the clinical criteria.",
+    "Mandatory Necrotizing Enterocolitis documents (Complete blood count, ABG Analysis, Serum Electrolytes, Occult stool test, Abdominal X-ray, USG Abdomen) not submitted or are incomplete when NEC is the primary diagnosis.",
+    "Mandatory Bronchopulmonary Dysplasia document (Chest X-ray) not submitted or is incomplete when BPD is the primary diagnosis."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Necrotizing Enterocolitis",
+      "Bronchopulmonary Dysplasia",
+      "Meningitis/ Ventriculitis [Please review the relevant package for more details]",
+      "Failure to thrive",
+      "Post-surgical prolonged stay especially ileostomy for jejunal/ileal atresia",
+      "Total parenteral nutrition requirement for above mentioned conditions"
+    ],
+    "surgical_options": [
+      "Laparotomy",
+      "Primary peritoneal drainage (PPD)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

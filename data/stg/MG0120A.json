@@ -1,0 +1,99 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG0120A",
+  "procedure_code": "MG0120A",
+  "condition": "Medical/Neuro rehabilitation for spinal injury/ traumatic brain injury, CVA, Cerebral palsy",
+  "procedure_name": "Comprehensive medical rehabilitation for spinal injury/ traumatic brain injury, CVA, Cerebral palsy with or without orthosis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1",
+  "source_files": [
+    "Comprehensive medical rehabilitation_Medco.pdf",
+    "Comprehensive medical rehabilitation_PPD.CPD.pdf"
+  ],
+  "alos": "14 Days",
+  "min_doctor_qualification": [
+    "MBBS",
+    "BPT",
+    "BOT (Under supervision of Physical Medicine & Rehabilitation specialist)"
+  ],
+  "clinical_indications": [
+    "Medical rehabilitation for spinal injury to optimize recovery and adapt to a new way of life including: emotional support, improved physical/mental/emotional functioning, spinal cord injury-specific education and resources, spasticity management, upper extremity functional restoration, locomotor training, functional electrical stimulation, neurogenic bladder and bowel management, patient/family support and peer mentoring, comprehensive patient and family education.",
+    "Medical rehabilitation for traumatic brain injury/Cerebral palsy with or without orthosis including: patient counselling by Psychologist, physical therapy, occupational therapy, speech & language therapy, recreation therapy.",
+    "Medical rehabilitation for CVA including: motor-skill exercises, mobility training, constraint-induced therapy, range-of-motion therapy, functional electrical stimulation, therapy for cognitive disorders, therapy for communication disorders, noninvasive brain stimulation, social skill training, psychotherapy."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical Notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "x_ray_ct_mri",
+        "label": "X-Ray/CT/MRI"
+      },
+      {
+        "key": "past_history_treatment_records_after_injury",
+        "label": "Details past history & past treatment records after injury"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_treatment_details",
+        "label": "Indoor case papers with treatment given details"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are all the Clinical Notes including evaluation findings, planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are /X-Ray/CT/MRI report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are Details past history & past treatment records after injury submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with daily vitals and line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary submitted with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Past history of patient or diagnostic report not suggestive of rehabilitation treatment.",
+    "Clinical notes do not include evaluation findings or a planned line of rehabilitation treatment.",
+    "Details of past history and past treatment records after injury are not submitted or are incomplete.",
+    "Indoor case papers do not detail the rehabilitation treatment given or daily vitals during the rehabilitation period."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB (General Medicine, Pediatric Medicine, Physical Medicine & Rehabilitation), DM/DNB (Neurology)",
+    "clinical_key_pointers": [
+      "Rehabilitation is defined as \"a set of interventions designed to optimize functioning and reduce disability in individuals with health conditions in interaction with their environment. Rehabilitation is an essential part of universal health coverage along with promotion of good health, prevention of disease, treatment and palliative care. Rehabilitation helps a child, adult or older person to be as independent as possible in everyday activities and enables participation in education, work, recreation and meaningful life roles such as taking care of family."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG098A",
+  "procedure_code": "SG098A",
+  "condition": "Foreign Body Removal",
+  "procedure_name": "Foreign Body Removal",
+  "specialty": "ENT, General Surgery, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Foreign Body Removal_Medco.pdf",
+    "Foreign Body Removal_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/ DNB/PG Diploma or equivalent (in ENT, General Surgery, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Presence of foreign body (FB) in ear, nose, or throat, particularly in children.",
+    "FB causing mild disturbances up to life-threatening complications.",
+    "FB in airway or oesophagus presenting with life-threatening breathing difficulty, history of aspiration/ingestion, unexplained chest infection, or dysphagia.",
+    "Diagnosis confirmed by clinical signs, symptoms, and examination."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the day care procedure."
+      },
+      {
+        "key": "xray_report_or_clinical_picture_preauth",
+        "label": "X-ray report/ clinical picture of the affected part confirming the diagnosis and justify the procedure."
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "procedure_note_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "post_procedure_photo_or_imaging",
+        "label": "Post procedure clinical photograph/ relevant imaging study for pre and post procedure comparison"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the day care procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the X-ray/ clinical picture of the affected part confirming the diagnosis and justify the procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the Clinical notes and X-ray/clinical picture of affected part indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure clinical photograph/ relevant imaging study for pre and post procedure comparison submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or X-ray/clinical picture of affected part are not indicative of the procedure.",
+    "Pre-authorization clinical notes (including evaluation findings, indication, management plan) are missing or incomplete.",
+    "X-ray report or clinical picture of the affected part is missing or does not confirm the diagnosis/justify the procedure at pre-authorization.",
+    "Detailed Indoor case papers are missing at claim submission.",
+    "Procedure note or operative note is missing at claim submission.",
+    "Post-procedure clinical photograph or relevant imaging study for pre and post procedure comparison is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Ear, nose and throat (ENT) foreign bodies (FBs) are common occurrences, particularly among children.",
+      "Consequences of FBs are variable, from mild disturbances to life-threatening complications.",
+      "Variability is related to chemical composition, shape, dimensions of FBs, and anatomical site involved (ear, nose, oral cavity (fish bones etc) as well as inhaled and ingested FB).",
+      "FBs in airway and oesophagus may present in emergency with life-threatening breathing difficulty, with a history of foreign body aspiration/ ingestion and as unexplained chest infection/ dysphagia based on the site of lodgment and nature of the foreign body material."
+    ],
+    "surgical_options": [
+      "Removal of FB from nasal cavity, ear, and oral cavity following visualization of the FB and under adequate light using appropriate instruments.",
+      "Sedation or general anesthesia may be required for pediatric, apprehensive, or deeply impacted painful FBs.",
+      "Endoscopes and microscopes may be used for FB removal from nose/throat and ear.",
+      "Direct laryngoscopy and rigid trachea-bronchoscopy method for FBs in the larynx and airway.",
+      "Flexible or rigid oesophagoscopy may be used for oesophageal foreign bodies."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Referral of cases to the appropriate level of care as required based on the patient's condition and complexity."
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

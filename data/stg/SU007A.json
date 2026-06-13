@@ -1,0 +1,112 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU007A",
+  "procedure_code": "SU007A",
+  "condition": "Percutaneous Nephrolithotomy",
+  "procedure_name": "PCNL (Percutaneous Nephrolithotomy)",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "PCNL_Medco.pdf",
+    "PCNL_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MS / M.Ch/ equivalent (Urology)"
+  ],
+  "clinical_indications": [
+    "Flank pain",
+    "Hematuria",
+    "Colic may be associated with Fever, Nausea and vomiting",
+    "Presence of renal stone >20 mm as shown by IVP / NCCT/CT-IVP"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "renal_stone_size",
+      "operator": ">",
+      "value": "20 mm",
+      "note": "as shown by IVP / NCCT/CT-IVP"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "intravenous_pyelogram_ivp_ncct_ct_ivp",
+        "label": "Intravenous Pyelogram (IVP) / NCCT/CT-IVP"
+      }
+    ],
+    "claim": [
+      {
+        "key": "operative_notes",
+        "label": "Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "xray_usg_post_procedure",
+        "label": "X-ray / USG post procedure"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes- detailed history, signs & symptoms, indication for procedure documented?",
+        "expected": true
+      },
+      {
+        "q": "IVP / NCCT/CT-IVP Showing presence of stone?",
+        "expected": true
+      },
+      {
+        "q": "IVP / NCCT/CT-IVP Showing presence of renal stone >20 mm?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed operative notes with indications and outcomes of the procedure provided?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary with follow-up advise at the time of discharge provided?",
+        "expected": true
+      },
+      {
+        "q": "X-ray / USG post procedure showing the procedure done provided?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "IVP / NCCT/CT-IVP showing presence of renal stone not provided or stone size < 20 mm",
+    "Clinical notes detailing history, signs & symptoms, and indication for procedure missing at pre-authorization",
+    "Operative notes with indications and outcomes of the procedure missing at claim submission",
+    "Detailed Discharge Summary missing at claim submission",
+    "X-ray / USG post procedure missing at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Flank pain",
+      "Hematuria",
+      "Colic may be associated with Fever, Nausea and vomiting"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

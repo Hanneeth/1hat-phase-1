@@ -1,0 +1,160 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG027B",
+  "procedure_code": "SG027B",
+  "condition": "Rectal prolapse",
+  "procedure_name": "Abdominal Procedure for Rectal Prolapse (Lap.)",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Rectal prolapse_Medco.pdf",
+    "Rectal prolapse_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (Pediatric Surgery, Surgical Gastroenterologist)"
+  ],
+  "clinical_indications": [
+    "Protrusion of the entire rectum outside the anal verge (full-thickness protrusion)",
+    "History of mild abdominal discomfort",
+    "Incomplete bowel evacuation",
+    "Rectal mass",
+    "Mucus and/or stool discharge associated with altered bowel habits",
+    "Partial prolapse: protrusion between 1.25 and 3.75 cm outside the anal verge, usually mucosal",
+    "Complete/Total prolapse (procidentia): protrusion of the rectum for more than 3.7 cm outside the anal verge, often entire rectum, sometimes with peritoneal sac, often associated with prolapse uterus",
+    "Complaints of prolapse rectum, constipation, incontinence",
+    "Anorectal manometry findings",
+    "Function of pudendal nerve and puborectalis nerve findings",
+    "Female-male ratio is 6:1",
+    "Constipation",
+    "Excessive mucus discharge causing irritation to the perianal skin",
+    "Tenesmus",
+    "Rectum descends on straining",
+    "Some degree of incontinence of faeces and flatus, urgency, perianal soiling",
+    "Rectal examination: lax anal sphincter, wide gaping on straining",
+    "Procidentia"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "protrusion_length_partial_prolapse",
+      "operator": "between",
+      "value": "1.25 and 3.75 cm",
+      "note": "outside the anal verge"
+    },
+    {
+      "field": "protrusion_length_complete_prolapse",
+      "operator": ">",
+      "value": "3.7 cm",
+      "note": "outside the anal verge"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings",
+        "label": "Clinical notes including evaluation findings especially per rectal examination, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "photograph_demonstrating_prolapse",
+        "label": "Photograph demonstrating prolapse (optional)"
+      },
+      {
+        "key": "diagnostic_imaging_reports",
+        "label": "Digital rectal examination (DRE) / sigmoidoscopy / fluoroscopic defecography / MRI / CT / USG abdomen/ Barium enema / Colonoscopy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photograph",
+        "label": "Post-operative photograph (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Clinical evaluation confirming the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Is history & clinical examination suggestive of prolapse?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical evaluation ± imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was post-operative photographs submitted (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "History & clinical examination not suggestive of prolapse.",
+    "Clinical notes missing detailed history, signs & symptoms, planned line of treatment, or indication for procedure.",
+    "Clinical evaluation not confirming the diagnosis.",
+    "Detailed procedure / operative notes missing or incomplete.",
+    "Clinical evaluation ± imaging not indicative of surgery.",
+    "Discharge summary with follow-up advice missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Protrusion of the entire rectum outside the anal verge is the feature of rectal prolapse.",
+      "This condition is common in children and elderly patients.",
+      "The symptoms of rectal procidentia include a history of mild abdominal discomfort, incomplete bowel evacuation, rectal mass, and mucus and/or stool discharge associated with altered bowel habits.",
+      "The most common sign is a full-thickness protrusion of the rectum though the anus, which may be intermittent.",
+      "Partial Prolapse causes in infants: undeveloped sacral curve; in children: secondary to habitual constipation; can follow an attack of whooping cough or excessive straining; can follow an attack of diarrhea resulting in loss of fat in the ischiorectal fossae; in adults (females mostly): due to Torn perineum caused by obstetric trauma.",
+      "Complete/Total Prolapse causes: common in elderly women who are multipara; excessive straining; defective collagen maturation; presence of deep rectovesical pouch and excessive mobility of the rectum (mesorectum); intussusception in the first stage, initiated by certain factors such as diarrhoea, constipation and disorder of the pelvic floor."
+    ],
+    "surgical_options": [
+      "Safe procedure to correct with minimal morbidity and without mortality.",
+      "To cure or to improve incontinence.",
+      "Abdominal Procedures: Wells operation, Ripstein sling operation, Mesh rectopexy, Lahaut's operation.",
+      "Laparoscopic mesh rectopexy has become gold standard-fast recovery, less pain, short hospital stay.",
+      "Mesh rectopexy corrects/prevents prolapse but does not correct chronic constipation.",
+      "Mesh rectopexy with resection is ideal for patients with constipation or patients with a redundant sigmoid colon."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

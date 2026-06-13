@@ -1,0 +1,110 @@
+{
+  "_comment": "This procedure uses HBP 1.0 code M100023 and HBP 2.0 code MG070A. MG070A is used as the primary procedure_code.",
+  "stg_id": "MG070A",
+  "procedure_code": "MG070A",
+  "condition": "Snake Bite",
+  "procedure_name": "Snake Bite",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Snake bite_Medco.pdf",
+    "Snake bite_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Progressive Weakness (Neuroparalytic and Neurotoxic)",
+    "Bleeding (vasculotoxic / haemotoxic)",
+    "Myotoxic",
+    "Painful progressive swelling"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_eval_findings_indications_planned_treatment",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "bedside_20_minute_whole_blood_clotting_test_optional",
+        "label": "Bedside 20 minute whole blood clotting test (Optional)"
+      },
+      {
+        "key": "urine_examination_albumin_blood_report",
+        "label": "Urine examination for albumin and blood report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor Case Papers with treatment details"
+      },
+      {
+        "key": "details_anti_snake_venom_used_if_applicable",
+        "label": "Details of Anti-snake venom used (If applicable)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the bedside 20-minute whole blood clotting test submitted? (Optional)",
+        "expected": true
+      },
+      {
+        "q": "Was the Urine examination for albumin and blood submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the detailed ICPs with detailed line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the patient treated with anti-snake venom? (If applicable provide details)",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary with date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "No evidence of bite (fang puncture marks, bleeding, swelling of the bitten part etc.) documented for the patient.",
+    "Bedside 20-minute whole blood clotting test not submitted or not positive, where applicable.",
+    "Clinical notes missing or incomplete, lacking evaluation findings, indications, or planned line of treatment.",
+    "Urine examination for albumin and blood report not submitted.",
+    "Detailed Indoor Case Papers with treatment details not submitted.",
+    "Details of anti-snake venom used not provided when applicable.",
+    "Detailed Discharge Summary with date of follow-up not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB equivalent (in General Medicine, Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Proceed with Snake Bite only if diagnosis made is backed by clinical manifestation:",
+      "Clinical presentation of snakebite victim depends upon species of snake, amount of venom injected, season of the bite, whether snake is fed or unfed, site of bite, area covered or uncovered, dry or incomplete bite, multiple bites, venom injection in vessel, weight of the victim and time elapsed between the bite and administration of ASV."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

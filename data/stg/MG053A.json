@@ -1,0 +1,123 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG053A",
+  "procedure_code": "MG053A",
+  "condition": "Thyrotoxic crisis",
+  "procedure_name": "Thyrotoxic crisis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": null,
+  "source_files": [
+    "Thyrotoxic crisis_Medco.pdf",
+    "Thyrotoxic crisis_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Presence of thyrotoxicosis with elevated levels of free triiodothyronine (FT3) or free thyroxine (FT4)",
+    "Central nervous system (CNS) manifestations: Restlessness, delirium, mental aberration/psychosis, somnolence/lethargy, coma",
+    "Fever",
+    "Tachycardia (heart rate ≥ 130 beats per minute or atrial fibrillation with heart rate ≥ 130)",
+    "Congestive heart failure (CHF) manifestations: Pulmonary edema, moist rales, cardiogenic shock, or severe classification (Class IV NYHA or ≥ Class III Killip)",
+    "Gastrointestinal (GI)/hepatic manifestations: nausea, vomiting, diarrhea, or elevated total bilirubin level"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "fever",
+      "operator": ">=",
+      "value": "38°C",
+      "note": "Temperature threshold for fever manifestation"
+    },
+    {
+      "field": "tachycardia",
+      "operator": ">=",
+      "value": "130 beats per minute",
+      "note": "Heart rate threshold for tachycardia or atrial fibrillation"
+    },
+    {
+      "field": "total_bilirubin",
+      "operator": ">=",
+      "value": "3.0 mg/dL",
+      "note": "Total bilirubin level threshold for GI/hepatic manifestations"
+    },
+    {
+      "field": "coma",
+      "operator": ">=",
+      "value": "1 on the Japan Coma Scale",
+      "note": "Coma threshold for CNS manifestations"
+    },
+    {
+      "field": "coma",
+      "operator": "<=",
+      "value": "14 on the Glasgow Coma Scale",
+      "note": "Coma threshold for CNS manifestations"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, advise for admission and planned line of treatment"
+      },
+      {
+        "key": "thyroid_hormone_levels",
+        "label": "Thyroid stimulating hormone, Free triiodothyonine (FT3), Free Thyroxine (FT4)"
+      },
+      {
+        "key": "thyroid_ultrasound_scan",
+        "label": "Thyroid Ultrasound scan"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers with treatment details"
+      },
+      {
+        "key": "radionuclide_iodine_uptake_study",
+        "label": "Radionuclide Iodine uptake study report"
+      },
+      {
+        "key": "post_treatment_thyroid_hormone_levels",
+        "label": "Post treatment Thyroid stimulating hormone, Free triiodothyonine (FT3), Free Thyroxine (FT4)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the report of FT3, FT4, TSH show raised thyroid level?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "FT3, FT4, or TSH report does not show raised thyroid levels at pre-authorization",
+    "Missing Thyroid stimulating hormone, Free triiodothyonine (FT3), or Free Thyroxine (FT4) reports at pre-authorization",
+    "Missing Thyroid Ultrasound scan at pre-authorization",
+    "Radionuclide Iodine uptake study report not submitted at claim stage",
+    "Post-treatment Thyroid stimulating hormone, Free triiodothyonine (FT3), or Free Thyroxine (FT4) reports not submitted at claim stage"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "DNB / MD / or Equivalent (in General Medicine / Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Proceed with Thyrotoxic crisis only if diagnosis made is backed by clinical manifestation:"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

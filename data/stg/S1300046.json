@@ -1,0 +1,109 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1300046",
+  "procedure_code": "S1300046",
+  "condition": "Patent Ductus Arteriosus",
+  "procedure_name": "PDA Closure via thoracotomy",
+  "specialty": "Cardiology / CTVS",
+  "version": "1.1",
+  "source_files": [
+    "PDA Closure_Medco.pdf",
+    "PDA Closure_PPD.CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "DM/DNB/ equivalent (Cardiology)",
+    "M.Ch./DNB/ equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Symptomatic PDA with respiratory compromise (e.g., life threatening respiratory tract infections with or without mechanical support)",
+    "Symptomatic PDA with heart failure",
+    "Large left-to-right ductus shunt with evidence of hemodynamic compromise (e.g., reversal of flow in the descending aorta during diastole, oliguria or rising serum creatinine concentration, hypotension, or wide pulse pressure)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "detailed_echo_doppler_report",
+        "label": "Detailed Echo/ Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_doppler",
+        "label": "Post Procedure Echo/Doppler"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/Doppler report suggestive of Patent Ductus arteriosus?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO/ Doppler show closure of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice/ barcode of blade / device used submitted?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report does not confirm Patent Ductus Arteriosus.",
+    "Clinical notes detailing history, signs, symptoms, and indication for procedure are missing or incomplete.",
+    "Detailed Echo/Doppler report missing at pre-authorization stage.",
+    "Detailed Procedure/Operative notes missing at claim submission stage.",
+    "Post Procedure Echo/Doppler report not submitted or does not show closure of the defect.",
+    "Detailed Discharge Summary mentioning date of follow-up is missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Requires CCU/ICCU and a Qualified cardiothoracic surgeon (MCh/DNB/ equivalent in cardiovascular thoracic surgery).",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Symptoms: Poor feeding, Failure to thrive, Palpitations, Recurrent respiratory infections, Inability to wean from the ventilator, Signs of right heart failure in case of Eisenmenger syndrome (swelling of feet, abdominal swelling).",
+      "Signs: Continuous or systolic murmur, A low diastolic blood pressure (due to runoff into the ductus during diastole, more frequent in the most premature infants), A wide pulse pressure (due to ductus runoff or steal), Hypotension (especially in the most premature infants), Bounding pulses, Hepatomegaly, Signs of Eisenmenger syndrome in case of shunt reversal (cyanosis, increased pulmonary vascular resistance, dyspnea on exertion, syncope, and increased susceptibility to infection)."
+    ],
+    "surgical_options": [
+      "Surgical management is reserved for cases where medical closure has failed or is contraindicated.",
+      "Surgical ligation or division of the PDA remains the treatment of choice for the rare very large ductus.",
+      "Rarely, a large, window-type PDA may have insufficient length to permit ligation, and the appropriate surgical procedure is patch closure on cardiopulmonary bypass."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

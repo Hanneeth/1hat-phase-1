@@ -1,0 +1,146 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO038A",
+  "procedure_code": "SO038A",
+  "condition": "Pelvic Abscess",
+  "procedure_name": "Pelvic Abscess Management including Colpotomy",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Pelvic Abscess Management_Medco.pdf",
+    "Pelvic Abscess Management_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Not responding to IV Antibiotic therapy even after 72 hours",
+    "Abscess is painful and presenting as large swelling on P/V examination, proceed for colpotomy"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "response_to_iv_antibiotics",
+      "operator": "not responded",
+      "value": "72 hours",
+      "note": "after 72 hours of IV antibiotic therapy"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed clinical notes including history symptoms, signs, examination findings, planned line of treatment, and admission advice"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count (CBC)"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG abdomen/pelvis"
+      },
+      {
+        "key": "ct_mri",
+        "label": "CT/MRI (Optional)"
+      },
+      {
+        "key": "urine_culture_sensitivity",
+        "label": "Urine culture & sensitivity (Optional)"
+      },
+      {
+        "key": "chest_x_ray",
+        "label": "Chest X-ray (Optional)"
+      },
+      {
+        "key": "cervical_vaginal_swab_culture_sensitivity",
+        "label": "Cervical/high vaginal swab culture & sensitivity (Optional)"
+      },
+      {
+        "key": "c_reactive_protein",
+        "label": "C-reactive protein (CRP) (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports (If required)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative/ procedure notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history including previous surgical history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical examination and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical examination and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Size of abscess in ultrasound report did not necessitate the drainage procedure or not documented.",
+    "History of recent surgical procedure followed by signs of infection not documented or inconsistent.",
+    "Detailed clinical notes for pre-authorization are missing or incomplete.",
+    "USG abdomen/pelvis report not submitted or does not confirm the diagnosis.",
+    "Operative/procedure notes are missing or lack sufficient detail on surgical steps and findings."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Well-equipped facility for colpotomy, when indicated",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A pelvic abscess is a life-threatening collection of infected fluid in the pouch of Douglas, fallopian tube, ovary, or parametric tissue.",
+      "Usually, a pelvic abscess occurs as a complication after operative procedures such as septic abortion, abdominal or vaginal procedures.",
+      "It starts as pelvic cellulitis or hematoma spreads to parametrial tissue.",
+      "It can also present as a result of the complexity of certain medical conditions like sexually transmitted infection, pelvic inflammatory disease, appendicitis, diverticulitis, inflammatory bowel disease."
+    ],
+    "surgical_options": [
+      "Colpotomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "complications": [
+      "Ectopic pregnancy",
+      "Infertility",
+      "Chronic pelvic pain"
+    ]
+  }
+}

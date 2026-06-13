@@ -1,0 +1,107 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL026B",
+  "procedure_code": "SL026B",
+  "condition": "Tracheostomy / Tracheotomy",
+  "procedure_name": "Tracheotomy",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Tracheostomy - Tracheotomy_Medco.pdf",
+    "Tracheostomy - Tracheotomy_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "a port of mechanical ventilation when prolonged ventilation is needed in sick patients",
+    "to secure the airway bypassing any obstructive pathology in oropharynx/ supraglottis/ subglottis/high trachea",
+    "for better pulmonary toileting where patients are unable to cough out their own secretions due to neuromuscular pathologies"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, symptoms, signs and indication for procedure"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_note",
+        "label": "Detailed Procedure / Operative note"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report (In applicable cases)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the detailed Clinical notes with history, symptoms, signs and indication for procedure submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure clinical photograph of the affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Histopathology report submitted? (In applicable cases)",
+        "expected": true
+      },
+      {
+        "q": "Was the detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and examination findings do not confirm the need for tracheostomy/tracheotomy.",
+    "Detailed Clinical notes with history, symptoms, signs and indication for procedure not submitted for pre-authorization.",
+    "Detailed Procedure / Operative note not submitted at claim stage.",
+    "Post-procedure clinical photograph of the affected part not submitted at claim stage.",
+    "Histopathology report (if applicable) not submitted at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/ DNB/Diploma or equivalent (in ENT)",
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "A tracheostomy and tracheotomy are procedures of incising or excising (a small portion of) anterior tracheal wall to facilitate breathing through the cervical trachea instead of normal nasal breathing."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "_comment": "Discrepancy: Medco.pdf mandatory documents table lists 'Microbiological investigation for causative organism' for claim submission, while PPD.CPD.pdf checklist for claims processing asks 'Was histopathological examination report submitted?'. Both are included as mandatory checks/queries.",
+  "stg_id": "SG099A",
+  "procedure_code": "SG099A",
+  "condition": "Necrotising fasciitis / Fournier Gangrene",
+  "procedure_name": "Necrotising fasciitis / Fournier Gangrene",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Necrotising fasciitis-Fournier Gangrene_MEDCO.pdf",
+    "Necrotising fasciitis_Fournier Gangrene_PPD_CPD.pdf"
+  ],
+  "alos": "7-10 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)"
+  ],
+  "clinical_indications": [
+    "Sudden pain in the affected area with gross swelling of the limbs",
+    "The part is swollen, red, erythematous and oedematous with skip lesions of skin necrosis and ulceration",
+    "Skin changes: Bronze hue, brawny induration, blebs or crepitus",
+    "High degree fever, jaundice, renal failure (can occur soon in untreated cases)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_confirming_diagnosis",
+        "label": "Clinical notes including evaluation findings confirming the diagnosis"
+      },
+      {
+        "key": "ct_scan",
+        "label": "CT scan (optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative/procedure notes"
+      },
+      {
+        "key": "pre_and_post_procedure_photographs",
+        "label": "Pre- and post-procedure photographs"
+      },
+      {
+        "key": "microbiological_investigation_for_causative_organism",
+        "label": "Microbiological investigation for causative organism"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed clinical notes (including all vitals, detailed history, symptoms and signs, evaluation findings, indication for procedure, planned line of treatment, and advice for admission) available and complete?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and evaluation findings confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and evaluation findings indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was histopathological examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, evaluation findings, or imaging not indicative of surgery.",
+    "Detailed Clinical notes (including all vitals, detailed history, symptoms and signs, evaluation findings, indication for procedure, planned line of treatment, and advice for admission) are incomplete or missing at pre-authorization.",
+    "Detailed indoor case papers (ICPs) with daily vitals and treatment details are missing or incomplete at claim submission.",
+    "Pre- and post-procedure photographs are missing at claim submission.",
+    "Microbiological investigation for causative organism report is missing at claim submission.",
+    "Histopathological examination report is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MCh/DNB/Equivalent (in Plastic Surgery)",
+    "clinical_key_pointers": [
+      "Necrotizing fasciitis is a subset of the aggressive skin and soft tissue infections (SSTIs) that cause necrosis of the muscle fascia and subcutaneous tissues.",
+      "It can occur post-surgery, any invasive procedure or even a minor procedure like phlebotomy.",
+      "Common in lower extremities. Other sites are genitalia, groin, lower abdomen. In these places it is comparable or similar to gangrene and is called Meleney's gangrene.",
+      "Monomicrobial: It is due to group A β-haemolytic streptococci. It is also called type II necrotising fasciitis.",
+      "Polymicrobial: It is due to synergistic combination of anaerobes and coliforms or nongroup A streptococci type I necrotising fasciitis.",
+      "Very often there is no history of injury when it occurs in the lower limbs.",
+      "Risk factors for TYPE I: Diabetes Mellitus, malnutrition, Obesity, corticosteroids, Immune deficiency.",
+      "Specific features of Type II: Caused by Streptococcus pyogenes, Occur in young healthy people, Minor abrasions, laceration may be a precipitating factor, Severe systemic illness with multiorgan failure – Streptococcal toxic shock syndrome.",
+      "Diagnosis: Watery pus (dishwater liquid) is a characteristic feature."
+    ],
+    "surgical_options": [
+      "Wide excision",
+      "Generous debridement",
+      "Skin grafting (a few days or weeks later)"
+    ],
+    "pre_op_preparation": "Hospitalisation, adequate hydration, broad spectrum antibiotics (Vancomycin with carbapenem may be required urgently).",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "complications": [
+      "Multiorgan failure",
+      "Septic shock",
+      "Loss of extremity",
+      "Severe scarring",
+      "Toxic shock",
+      "Death"
+    ]
+  }
+}

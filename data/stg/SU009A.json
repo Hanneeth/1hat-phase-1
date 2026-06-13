@@ -1,0 +1,108 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU009A",
+  "procedure_code": "SU009A",
+  "condition": "Nephrostomy (PCN) Follow Up",
+  "procedure_name": "Nephrostomy (PCN) - Follow Up",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Nephrostomy (PCN) Followup_Medco.pdf",
+    "Nephrostomy (PCN) Followup_PPD.CPD.pdf"
+  ],
+  "alos": "Daycare",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent in Urology"
+  ],
+  "clinical_indications": [],
+  "clinical_indications_uncertain": "The document lists indications for the primary Percutaneous Nephrostomy (PCN) procedure, but does not explicitly state clinical indications for the 'PCN Follow Up' procedure itself, other than that a follow-up visit was advised after a previous PCN.",
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_current_visit",
+        "label": "Clinical notes of the current visit detailing examination findings, previous surgery/procedure, investigations, advise for follow-up procedure."
+      },
+      {
+        "key": "discharge_summary_previous_pcn",
+        "label": "Discharge Summary of last admission for Nephrostomy (PCN) and the need for follow-up visit"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_clinical_notes_current_visit",
+        "label": "Detailed clinical notes of the current visit"
+      },
+      {
+        "key": "post_procedure_usg_xray_kub_report",
+        "label": "Post procedure USG / X-RAY KUB report"
+      },
+      {
+        "key": "detailed_procedure_notes",
+        "label": "Detailed procedure notes"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes of the current visit detailing examination findings, previous surgery/procedure, investigations, advise for daycare procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Discharge Summary of last admission for Nephrostomy (PCN) and the need for follow-up visit submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed clinical notes of the current visit submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure USG / X-RAY KUB submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure Notes submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Discharge report of previous PCN visit does not indicate a need for follow-up procedure",
+    "Clinical notes for current visit are missing or lack details on examination findings, previous procedures, investigations, or advice for follow-up procedure",
+    "Discharge summary from previous PCN admission is missing or does not specify the need for a follow-up visit",
+    "Post-procedure USG/X-RAY KUB report is missing or incomplete",
+    "Detailed procedure notes are missing or insufficient"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facility",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Percutaneous nephrostomy (PCN) is a common interventional procedure for upper urinary diversion and decompression of the renal collecting system, in spite of it being a basic urological procedure, it remains technically challenging to insert it in the right way and in the right place.",
+      "PCN can be done under fluoroscopy, ultrasound (USG) or computed tomography guidance.",
+      "Indications for PCN:",
+      "- Obstructive uropathy",
+      "- Benign causes: Impacted ureteric/pelvis calculi with secondary hydronephrosis (HN), HN associated with pregnancy, Pelvic ureteric junction obstruction, Ureteric stricture disease, Retroperitoneal fibrosis, Urosepsis, Pyonephrosis.",
+      "- Malignant causes: HN secondary to carcinoma cervix/prostate, HN secondary to tumor of urinary tract.",
+      "- For providing route of access: antegrade ureteral stent placement, Chemotherapy, antifungal, antibiotic therapy, benign stricture dilatation, stone retrieval, endopyelotomy.",
+      "- For diagnostic procedures: Whitaker test, antegrade pyelography, biopsy.",
+      "Procedure steps for PCN:",
+      "- USG to decide site of percutaneous puncture: USG of the diseased kidney from medial aspect (Para spinal)",
+      "- Puncture technique",
+      "- Guide wire insertion",
+      "- Tract dilatation",
+      "- Insertion of nephrostomy over guide wire"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

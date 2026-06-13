@@ -1,0 +1,153 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG046A",
+  "procedure_code": "SG046A",
+  "condition": "Portal Hypertension",
+  "procedure_name": "Portocaval Anastomosis",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Portal Hypertension_Medco.pdf",
+    "Portal Hypertension_PPD.CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (Surgical Gastroenterology)"
+  ],
+  "clinical_indications": [
+    "Portal decompression is indicated in patients who have portal hypertension complicated by gastrointestinal hemorrhage from esophageal varices that are not effectively controlled with sclerotherapy injections.",
+    "The primary indication for portacaval shunt is the control of massive upper-gastrointestinal hemorrhage from varices which cannot be controlled with endoscopic ablation or when transjugular intrahepatic portosystemic shunts (TIPS) are not available.",
+    "Side-to-side portacaval shunt: presence of portal hypertension with no evidence of a rise in pressure on the hepatic end of the temporarily occluded portal vein. If shunting is indicated to control ascites, the side-to-side shunt or double end-to-side shunt is usually preferred.",
+    "End-to-side portacaval shunt: Cirrhosis of liver due to schistosomiasis. This shunt is particularly indicated when there is no evidence of ascites and when portal blood flow is reversed in the hepatoportal direction, as determined by a rising pressure in the hepatic end of the temporarily occluded portal vein.",
+    "The end-to-side portacaval shunt is the procedure of choice in patients who have had a prior splenectomy, splenic vein thrombosis, or thrombosis of a splenorenal shunt and in those patients who have reversed flow in the portal vein."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_planned_management",
+        "label": "Clinical notes including evaluation findings, indication of procedure and planned line of management"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count"
+      },
+      {
+        "key": "liver_function_tests",
+        "label": "Liver function tests"
+      },
+      {
+        "key": "oesophagogastroduodenoscopy",
+        "label": "Oesophagogastroduodenoscopy"
+      },
+      {
+        "key": "splenoportovenography_optional",
+        "label": "Splenoportovenography (optional)"
+      },
+      {
+        "key": "usg_ct_abdomen",
+        "label": "USG/CT Abdomen"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was clinical evaluation and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did Clinical evaluation and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical evaluation and imaging not indicative of surgery.",
+    "Clinical notes lacking detailed history, signs & symptoms, planned line of treatment, or indication for procedure at pre-authorization.",
+    "Clinical evaluation and imaging did not confirm the diagnosis at pre-authorization.",
+    "Detailed Indoor case papers (ICPs) missing daily vitals or line of treatment at claim submission.",
+    "Detailed Procedure / Operative Notes not available at claim submission.",
+    "Imaging not indicative of surgery at claim submission.",
+    "Discharge summary missing follow-up advice at the time of discharge for claim submission.",
+    "Missing Complete blood count at pre-authorization.",
+    "Missing Liver function tests at pre-authorization.",
+    "Missing Oesophagogastroduodenoscopy report at pre-authorization.",
+    "Missing USG/CT Abdomen report at pre-authorization."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a tertiary hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Portal hypertension is defined as elevated pressure in portal venous system due to resistance to portal blood flow. Pressure more than 10 mmHg is defined as portal hypertension. Portal hypertension is most commonly caused by cirrhosis, but can also be seen in portal vein obstruction from unknown causes.",
+      "Consequences of portal hypertension: Esophageal varices",
+      "Consequences of portal hypertension: Caput Medusae",
+      "Consequences of portal hypertension: Hemorrhoids",
+      "Consequences of portal hypertension: Ascites",
+      "Consequences of portal hypertension: Splenomegaly"
+    ],
+    "surgical_options": [
+      "Devascularization procedure: Oesophageal transection",
+      "Devascularization procedure: Gastric transection of Tanner",
+      "Devascularization procedure: Sugiura and Futugawa operation",
+      "Portosystemic shunt procedures: Side-to-side portacaval shunt",
+      "Portosystemic shunt procedures: End-to-side portacaval shunt",
+      "Portosystemic shunt procedures: Mesocaval shunt",
+      "Portosystemic shunt procedures: Distal splenorenal (Warren)shunt",
+      "Splenorenal shunt: Proximal splenorenal shunt (spleen is removed)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Jaundice",
+      "ascites",
+      "low albumin"
+    ]
+  }
+}

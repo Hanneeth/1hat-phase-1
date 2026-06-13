@@ -1,0 +1,112 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1300029",
+  "procedure_code": "S1300029",
+  "condition": "Aortic Pulmonary (AP) Window",
+  "procedure_name": "Aortic Pulmonary (AP) Window Repair",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "AP window repair_Medco.pdf",
+    "AP window repair_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Uncontrolled heart failure: Surgical repair as soon as possible (Class I)",
+    "Controlled heart failure: Elective surgical repair by 3 months of age (Class I)",
+    "In patients with associated anomalies, single-stage repair of all defects is preferred (Class I)",
+    "Transcatheter device closure in selected cases of intermediate-type APW (Class IIa)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "age",
+      "operator": "<=",
+      "value": "3 months",
+      "note": "for elective surgical repair in controlled heart failure"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes provide detailed history, signs & symptoms, and indication for the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Echo/Doppler report is suggestive of Aortopulmonary Window?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Post procedure still of ECHO shows repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge Summary mentions date of follow-up?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report is not suggestive of Aortopulmonary Window",
+    "Clinical notes lack detailed history, signs & symptoms, or indication for procedure",
+    "Detailed Procedure / Operative notes are missing",
+    "Post-procedure ECHO stills do not show repair of the defect",
+    "Detailed Discharge Summary is missing or does not mention date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Aorto Pulmonary Window (APW) is a rare congenital cardiac malformation, comprising only 0.1% of all congenital heart defects.",
+      "Associated anomalies occur in half of the cases and include interrupted aortic arch (most commonly type A interrupted aortic arch), Ventricular septal defect, origin of right pulmonary artery from the aorta, coarctation of aorta (CoA), anomalous right or left coronary artery origin from main pulmonary artery, tetralogy of Fallot [TOF], subaortic stenosis etc.",
+      "Clinical manifestations depend on the diameter of APW, the relative systemic and pulmonary vascular resistances, and associated lesions.",
+      "Large APW is associated with very early development of advanced pulmonary vascular disease.",
+      "Types of aortopulmonary window: Type 1 proximal defect (most common), Type 2 distal defect, Type 3 total defect, Intermediate type.",
+      "Diagnostic workup includes: Clinical assessment, X-ray chest, ECG, Echocardiography, Cardiac catheterization, Computed tomography angiography (CTA)."
+    ],
+    "surgical_options": [
+      "Surgical patch repair is the treatment of choice (Class I).",
+      "Transcatheter device closure in selected cases of intermediate-type APW (Class IIa)."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "All patients with APW must be advised to maintain good oro-dental hygiene.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Those presenting beyond 6 months of life with severe pulmonary hypertension and suspected elevated PVR should be referred to a higher center for further evaluation to assess operability.",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Severe pulmonary arterial hypertension with irreversible pulmonary vascular occlusive disease (Class III)."
+    ]
+  }
+}

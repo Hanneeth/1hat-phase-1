@@ -1,0 +1,137 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS013A",
+  "procedure_code": "SS013A",
+  "condition": "Congenital Diaphragmatic Hernia",
+  "procedure_name": "Congenital Diaphragmatic Hernia",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Congenital Diaphragmatic Hernia_Medco.pdf",
+    "Congenital Diaphragmatic Hernia_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MS General Surgery",
+    "DNB General Surgery",
+    "MCh Pediatric Surgery",
+    "DNB Pediatric Surgery"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "chest_x_ray_ap_lateral",
+        "label": "Chest X ray AP/ Lateral"
+      },
+      {
+        "key": "usg_ct_scan_stills_report",
+        "label": "USG/ CT scan stills/ report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "fetal_cardiogram",
+        "label": "Fetal Cardiogram"
+      },
+      {
+        "key": "xray_chest_ap_lat_stills_report",
+        "label": "Xray Chest AP/Lat stills/ report"
+      },
+      {
+        "key": "pre_anesthesia_check_up_report",
+        "label": "Pre-anesthesia check-up report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with detailed history, signs & symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Chest X Ray AP/ Lateral available?",
+        "expected": true
+      },
+      {
+        "q": "USG / CT scan stills/ report available?",
+        "expected": true
+      },
+      {
+        "q": "Patient presented with antenatal USG showing diaphragmatic hernia, respiratory distress, or recurrent chest infection?",
+        "expected": true
+      },
+      {
+        "q": "X ray chest/ abdomen, USG chest/ CT chest tests done?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs with daily vitals and line of treatment available?",
+        "expected": true
+      },
+      {
+        "q": "Pre-anesthesia check-up report available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary with follow-up advise at discharge available?",
+        "expected": true
+      },
+      {
+        "q": "Fetal Cardiogram available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Antenatal USG not showing diaphragmatic hernia, respiratory distress, or recurrent chest infection, or not documented.",
+    "X ray chest/abdomen, USG chest/CT chest tests not performed or not reported.",
+    "Clinical notes lacking detailed history, signs & symptoms, or indication for procedure.",
+    "Fetal Cardiogram missing at the time of claim submission.",
+    "Detailed ICPs with daily vitals and line of treatment not available at claim submission.",
+    "Pre-anesthesia check-up report not available at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Chest movements that don't coordinate with the baby's breathing rhythm",
+      "Breath sounds absent on the affected side",
+      "Bowel sounds heard in the chest",
+      "Concave abdomen that feels less full when touched"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

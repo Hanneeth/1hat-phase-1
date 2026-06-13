@@ -1,0 +1,111 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV019O",
+  "procedure_code": "SV019O",
+  "condition": "Peripheral Arterial Surgeries Upper limb",
+  "procedure_name": "Carotido - axillary bypass",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Peripheral Arterial Surgeries- Upper limb_Medco.pdf",
+    "Peripheral Arterial Surgeries Upper limb_PPD.CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery, Vascular Surgery)"
+  ],
+  "clinical_indications": [
+    "Operative repair is indicated for symptomatic occlusion of the proximal arterial supply."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "angiogram_ct_mri_reports",
+        "label": "Angiogram / CT Angiogram / MRI reports investigations confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "invoice_barcode_graft",
+        "label": "Invoice/barcode of graft used (if artificial graft used)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Angiogram / CT Angiogram / MRI reports report suggestive of Peripheral arterial diseases submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are Detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice/barcode of graft used submitted? (if artificial graft used)",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's Angiogram / CT Angiogram / MRI reports not indicative of Peripheral arterial diseases",
+    "Clinical notes for pre-authorization missing or incomplete, lacking details on history, symptoms, evaluation findings, indication for procedure, planned management, or admission advice",
+    "Angiogram / CT Angiogram / MRI reports confirming the diagnosis not submitted or incomplete",
+    "Invoice/barcode of graft used missing or not submitted (if an artificial graft was used)",
+    "Detailed Discharge Summary missing or incomplete, or not mentioning date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Peripheral artery disease (PAD) occurs when plaque accumulates in the arterial system and obstructs blood flow.",
+      "Atherosclerosis plaques accumulates inside the arterial intima and obstructs the lumen of the vessel causing a reduction in blood flow, which leads to diminished oxygen supply to the recipient tissues.",
+      "An arterial aneurysm is a bulge in the artery that develops in areas where the arterial wall is weak.",
+      "Also, certain natural branch points and curvatures within the vascular tree are more susceptible to atherosclerosis due to turbulent blood flow and shear stress.",
+      "Diagnosis can be made via EMG and/or nerve conduction studies, Ultrasound (arterial Duplex scan), CT scan (CTA), or Angiography (DSA)."
+    ],
+    "surgical_options": [
+      "Treatment plan is usually based on severity.",
+      "Interventional procedures include angioplasty (to widen or clear the blocked vessel), angioplasty with stent placement (to support the cleared vessel and keep it open), or atherectomy (to remove the blockage)."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

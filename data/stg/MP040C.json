@@ -1,0 +1,115 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP040C",
+  "procedure_code": "MP040C",
+  "condition": "Cyanotic spells",
+  "procedure_name": "Cyanotic spells with Chest infection",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Cyanotic spells_Medco.pdf",
+    "Cyanotic spells_PPD.CPD.pdf"
+  ],
+  "alos": "5 days (Once diagnosis is established the case can be booked in the relevant package, further stay/admission should be decided based on the level of complications of the disease)",
+  "min_doctor_qualification": [
+    "MD/DNB/DCH/ equivalent (Pediatric Medicine)",
+    "DM/DNB/ equivalent (Cardiology)"
+  ],
+  "clinical_indications": [
+    "Respiratory distress",
+    "Grunting/flaring",
+    "Subcostal recession",
+    "Suprasternal retractions",
+    "Expiratory wheezing",
+    "Stridor",
+    "Drooling",
+    "Fever",
+    "Whooping cough"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "chest_x_ray",
+        "label": "Chest X-ray"
+      },
+      {
+        "key": "blood_gas_analysis",
+        "label": "Blood gas analysis"
+      },
+      {
+        "key": "complete_blood_count_serum_ferritin_blood_glucose",
+        "label": "Complete blood count, serum ferritin, blood glucose"
+      },
+      {
+        "key": "sepsis_screen",
+        "label": "Sepsis screen"
+      },
+      {
+        "key": "measurement_of_oxygen_saturation_co_oximetry",
+        "label": "Measurement of oxygen saturation / co-oximetry"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_with_treatment_details",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "all_investigation_reports",
+        "label": "All investigation reports"
+      },
+      {
+        "key": "detailed_discharge_summary_with_follow_up_advise_at_the_time_of_discharge",
+        "label": "Detailed Discharge summary with follow-up advise at the time of discharge"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was Chest X-ray along with clinical presentation suggestive lung infection?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Chest X-ray report and/or clinical presentation not suggestive of lung infection.",
+    "Sepsis screen not provided.",
+    "Blood gas analysis report not provided when clinically indicated."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Cyanotic spells affect infants and young children from six months to five years of age. The onset is usually between 6 and 18 months of age and is almost always before two years of age.",
+      "Respiratory distress",
+      "Grunting/flaring",
+      "Subcostal recession",
+      "Suprasternal retractions",
+      "Expiratory wheezing",
+      "Stridor",
+      "Drooling",
+      "Fever",
+      "Whooping cough"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

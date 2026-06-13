@@ -1,0 +1,133 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MM002A",
+  "procedure_code": "MM002A",
+  "condition": "Mental disorders - Organic, including symptomatic (Dementia)",
+  "procedure_name": "Mental disorders - Organic, including symptomatic",
+  "specialty": "Mental Disorders",
+  "version": "1.1",
+  "source_files": [
+    "Mental disorders- Organic including symptomatic_Medco.pdf",
+    "Mental disorders- Organic including symptomatic_PPD.CPD.pdf"
+  ],
+  "alos": "6-8 weeks",
+  "min_doctor_qualification": [
+    "MD/DNB/ PG Diploma/ equivalent (in Psychiatry)"
+  ],
+  "clinical_indications": [
+    "Evidence of cognitive decline in more than one domain.",
+    "Evidence of functional decline.",
+    "Presence of clinical features (e.g., impaired memory, anxiety, hallucinations, aggression, etc.) which represent a change from baseline normal functioning in a middle-aged to old person."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailed_history_chronicity",
+        "label": "Clinical notes with detailed history and chronicity"
+      },
+      {
+        "key": "admission_document_signed_psychiatrist",
+        "label": "Admission document signed by empanelled psychiatrist"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_treatment_notes",
+        "label": "Detailed treatment notes"
+      },
+      {
+        "key": "complete_hemogram",
+        "label": "Complete hemogram"
+      },
+      {
+        "key": "thyroid_function_test",
+        "label": "Thyroid function test"
+      },
+      {
+        "key": "biochemistry",
+        "label": "Biochemistry"
+      },
+      {
+        "key": "liver_function_test",
+        "label": "Liver function test"
+      },
+      {
+        "key": "vdrl",
+        "label": "VDRL"
+      },
+      {
+        "key": "vit_d_level",
+        "label": "Vit. D level"
+      },
+      {
+        "key": "vit_b12_level",
+        "label": "Vit. B12 level"
+      },
+      {
+        "key": "neuroimaging_ct_mri",
+        "label": "Neuroimaging (CT/MRI)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, mini mental status test, indication for treatment and need of hospitalization",
+        "expected": true
+      },
+      {
+        "q": "Was the admission document signed by an empanelled psychiatrist?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed treatment notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the following investigations done? (Complete hemogram, Thyroid function test, Biochemistry, Liver function test, VDRL, Vit. D level, Vit. B12 level, Neuroimaging (CT/MRI))",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Admission document not signed by an empanelled psychiatrist.",
+    "Clinical notes missing detailed history, mini mental status test, indication for treatment, or need of hospitalization.",
+    "Missing one or more mandatory investigations (Complete hemogram, Thyroid function test, Biochemistry, Liver function test, VDRL, Vit. D level, Vit. B12 level, Neuroimaging (CT/MRI)).",
+    "Detailed Discharge Summary not submitted or does not mention date of follow-up.",
+    "Lack of comprehensive assessment covering changed behaviours, functional capacity, psychosocial support, and medical comorbidities."
+  ],
+  "additional_information": {
+    "icd_10_code": "F02, F03, G30",
+    "special_empanelment": "As per the provisions of the Mental Health Act 2017",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Dementia is a complex and variable condition",
+      "No single test will definitively diagnose dementia",
+      "The clinical features if present, should be a change from baseline normal functioning in a middle aged to old person",
+      "Assessment should aim at gathering information about changed behaviours, functional capacity, psychosocial support and medical comorbidities",
+      "History should be taken from a close caregiver, staying with the patient for a longer duration than the appearance of symptoms"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Assessment and treatment of medical comorbidities are essential components of care. These may include depression, vision/hearing deficits, gait problems, thyroid disorders, and arthritis.",
+    "referral_criteria": [
+      "Not responding to adequate dose and duration of prescribed medications",
+      "Presence of red flags (Fever, Rapid progression, Seizures, Recent head injury, Alcoholism and falls)"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

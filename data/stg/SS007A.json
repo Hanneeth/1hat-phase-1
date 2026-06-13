@@ -1,0 +1,146 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS007A",
+  "procedure_code": "SS007A",
+  "condition": "Intussusception",
+  "procedure_name": "Non-operative reduction in infants",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Intussusception_Medco.pdf",
+    "Intussusception_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MCh/ equivalent (in Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Infant or child with ileocolic intussusception who is clinically stable",
+    "No evidence of bowel perforation or shock",
+    "Appropriate radiologic facilities are available"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "usg_abdomen",
+        "label": "USG abdomen"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "usg_abdomen",
+        "label": "USG Abdomen"
+      },
+      {
+        "key": "documentary_evidence_conservative_management",
+        "label": "Documentary evidence that conservative management has been tried but failed/ conservative management is not indicated, with reason(s)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Investigations X Ray abdomen / USG Abdomen / CT abdomen / Barium enema?",
+        "expected": true
+      },
+      {
+        "q": "Is the patient a diagnosed and confirmed case of Intussusception based on USG abdomen?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient presented with colicky pain in abdomen, vomiting or red currant jelly stool?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the X-ray abdomen/USG abdomen ('target' or ‘doughnut/target' sign on USG) report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Documentary evidence that conservative management has been tried but failed/conservative management is not indicated, with reason(s)?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "USG abdomen report confirming Intussusception ('target' or 'doughnut' sign) not submitted.",
+    "Patient's clinical presentation missing key symptoms (colicky pain, vomiting, or red currant jelly stool).",
+    "Clinical notes lacking detailed history, signs, symptoms, or justification for the procedure.",
+    "Detailed procedure/operative notes for non-operative reduction missing or incomplete.",
+    "Documentary evidence justifying non-operative reduction or detailing its outcome is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Intussusception refers to the invagination (telescoping) of a part of the intestine into itself.",
+      "It is one of the most common surgical emergencies in the age group of 6 months to 3 years and almost half of all the cases present between the ages of 6 and 12 months.",
+      "Most cases are of ileo-colic variety caused by reactive hyperplasia of Peyer's patches in the terminal ileum in response to upper respiratory or gastrointestinal infections.",
+      "Small bowel intussusceptions such as jejuno-jejunal or ileo-ileal are usually transient and inconsequential.",
+      "Secondary intussusception occurs when there is a pre-existing lesion in the gut that may act as a lead point.",
+      "Proceed with Intussusception surgery only if diagnosis made is backed by clinical manifestation.",
+      "Typical presentation: Intermittent colicky abdominal pain with drawing up of legs accompanied by inconsolable crying (episodes usually occur at 15-20 min intervals).",
+      "Typical presentation: Poor feeding.",
+      "Typical presentation: Vomiting.",
+      "Typical presentation: Per rectal passage of blood mixed with mucus (red currant jelly stool).",
+      "Atypical presentation: Unexplained lethargy or altered consciousness.",
+      "Atypical presentation: Without pain.",
+      "Atypical presentation: Rectal bleeding.",
+      "Atypical presentation: Other symptoms that suggest an intraabdominal process.",
+      "Atypical presentation: Rectal prolapse.",
+      "Late presentation: Abdominal distension.",
+      "Late presentation: Bilious vomiting resulting from frank small bowel obstruction.",
+      "Late presentation: Dehydration."
+    ],
+    "surgical_options": [
+      "Operative laparotomy +/- resection & anastomosis",
+      "Surgical intervention for unstable patient (after resuscitation and stabilization)",
+      "Surgical intervention for peritonitis or intestinal perforation",
+      "Surgical intervention if nonoperative reduction is completely unsuccessful or repeated attempts are unsuccessful"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Bowel perforation or shock (for non-operative reduction)"
+    ]
+  }
+}

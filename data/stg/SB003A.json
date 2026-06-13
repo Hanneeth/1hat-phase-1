@@ -1,0 +1,129 @@
+{
+  "stg_id": "SB003A",
+  "procedure_code": "SB003A",
+  "condition": "Application of Traction / P.O.P. casts / P.O.P. Spikas, Jackets",
+  "procedure_name": "Application of P.O.P. casts (Upper Limbs)",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Application of Traction- P.O.P. casts - P.O.P. Spikas , Jackets_Medco.pdf",
+    "Application of Traction- P.O.P. casts - P.O.P. Spikas , Jackets_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Casts and splints provide immobilization of the extremities or spine following injuries, or in cases of other abnormalities of bone or soft tissues.",
+    "Use a splint for acute injuries to allow room for swelling."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_indication_for_surgery",
+        "label": "Clinical notes with indication for surgery"
+      },
+      {
+        "key": "clinical_photograph_of_affected_part",
+        "label": "Clinical photograph of affected part"
+      },
+      {
+        "key": "x_ray_labelled_with_patient_id_date_and_side",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) of affected limb."
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_with_pop_cast",
+        "label": "Post Procedure clinical photograph with POP cast"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes."
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with indication for surgery submitted?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray labelled with patient ID, date and side (Left/Right) -affected limb with indication for surgery submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers (ICPs) with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Post Procedure clinical photograph with pins submitted?",
+        "expected": false
+      },
+      {
+        "q": "Post Procedure clinical photograph with POP cast submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post Procedure clinical photograph with POP Spika submitted?",
+        "expected": false
+      },
+      {
+        "q": "Post Procedure clinical photograph with POP Jacket submitted?",
+        "expected": false
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical photograph and X-ray of the affected part not indicative of the procedure performed.",
+    "Clinical notes with indication for surgery not submitted or incomplete.",
+    "Clinical photograph of affected part not submitted.",
+    "X-ray labelled with patient ID, date, and side (Left/Right) of affected limb not submitted or incomplete.",
+    "Detailed Indoor case papers (ICPs) with daily vitals and treatment details not submitted or incomplete.",
+    "Post Procedure clinical photograph with POP cast not submitted.",
+    "Detailed Procedure / Operative Notes not available.",
+    "Discharge summary with follow-up advice not available at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent (in Orthopedics)",
+    "clinical_key_pointers": [
+      "Use plaster or fiber glass to construct casts and splints.",
+      "If necessary, wood and cardboard will serve as temporary splints.",
+      "Casts are wrapped circumferentially around the extremity, providing more rigid fixation than splints."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN043A",
+  "procedure_code": "SN043A",
+  "condition": "Intramedullary Spinal Tumors",
+  "procedure_name": "Spine - Intramedullary Tumor",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Intramedullary Spinal Tumors_Medco.pdf",
+    "Intramedullary Spinal Tumors_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Neurosurgery)",
+    "MS/DNB/Equivalent (in Orthopedics)"
+  ],
+  "clinical_indications": [
+    "First-line treatment for intramedullary tumors is open surgical resection.",
+    "Surgery is indicated for all symptomatic lesions.",
+    "If a diagnosis of ependymoma is perceived, a complete surgical resection should be attempted.",
+    "If a diagnosis of astrocytoma is perceived, most clinicians advocate a more limited debulking of only the tissue that is clearly abnormal."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_eval_findings",
+        "label": "Clinical notes including evaluation findings"
+      },
+      {
+        "key": "ct_mri_spine",
+        "label": "CT/MRI Spine"
+      },
+      {
+        "key": "pet_scan_optional",
+        "label": "Positron emission tomography (PET) scan (optional)"
+      },
+      {
+        "key": "chest_x_ray_optional",
+        "label": "Chest X-ray (optional)"
+      },
+      {
+        "key": "bone_scan_optional",
+        "label": "Bone scan (optional)"
+      },
+      {
+        "key": "mammography_optional",
+        "label": "Mammography (optional)"
+      },
+      {
+        "key": "ultrasound_of_abdomen_optional",
+        "label": "Ultrasound of abdomen (optional)"
+      },
+      {
+        "key": "ct_mri_other_regions_if_symptomatic_optional",
+        "label": "CT/MRI of other regions if symptomatic (optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "post_op_ct_spine",
+        "label": "Post-op CT Spine"
+      },
+      {
+        "key": "histopathological_biopsy_report",
+        "label": "Histopathological/Biopsy report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes include detailed history, signs & symptoms, evaluation findings, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "History, physical examination, and radiological investigations confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Clinical presentation and radiological investigations are indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Imaging was indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Post-op CT Spine report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary with follow-up advise submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation or radiological investigations are not indicative of surgery.",
+    "Clinical notes are missing detailed history, signs & symptoms, evaluation findings, indication for procedure, or planned line of treatment.",
+    "History, physical examination, or radiological investigations did not confirm the diagnosis.",
+    "Missing CT/MRI Spine report at pre-authorization stage.",
+    "Post-operative CT Spine report not submitted at claim stage.",
+    "Histopathological/Biopsy report not submitted at claim stage.",
+    "Detailed Indoor case papers (ICPs) with daily vitals and treatment details not provided at claim stage.",
+    "Detailed procedure / operative notes not available at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Spinal tumors occur with an incidence of 1.1 case per 100,000 persons. Intramedullary spinal tumors comprise approximately 2-4% of all Central Nervous System neoplasms.",
+      "The most common kinds of intramedullary tumors are ependymomas, cavernoma, astrocytomas, hemangioblastomas and miscellaneous.",
+      "In adults, ependymomas are the most common tumor type, accounting for 40-60% of all intramedullary spinal tumors, and the mean age of presentation being 35-40 years.",
+      "In children, astrocytomas are the most common tumor type, accounting for around 60% of all intramedullary spinal tumors, and the mean age of presentation is 5-10 years.",
+      "Symptoms often precede diagnosis by an average of 2 years for slow-growing tumors, while malignant or metastatic tumors present in weeks to months.",
+      "Pain and weakness are the most common presenting symptoms, with pain often being earliest and worse at night.",
+      "Progressive weakness may occur in arms or legs, often accompanied by impaired bowel, bladder, or sexual function and poor balance.",
+      "Rarely, symptoms of subarachnoid hemorrhage may be present.",
+      "Intra-tumoral hemorrhage can cause abrupt deterioration, most often associated with ependymomas.",
+      "Ependymomas are associated with: mean age at presentation of 43 years, slight female predominance, pain localized to spine (65%), pain worse at night or upon awakening, dysesthesia pain, long history of symptoms, Myxopapillary variant (mean age 21y, slight male predominance).",
+      "Astrocytomas are associated with: equal male and female prevalence, pain localized to spine, pain worse at night or upon awakening, paresthesia (abnormal sensation).",
+      "Hemangioblastomas are associated with: onset of symptoms by fourth decade (80% by age 40 years), familial disorder (von Hippel-Lindau syndrome) in a third of patients.",
+      "Physical examination sensory findings include: decreased touch, pain, and/or temperature sensation, hyperesthesia's, decreased proprioception, abnormal sensation below the level of lesion, abnormal sensation only at level of lesion (suspended level).",
+      "Physical examination hyperreflexia findings include: Hoffman sign for cervical lesions, clonus, extensor plantar response (Babinski sign).",
+      "Other physical examination findings include: motor weakness (late finding), spasticity, increased tone, muscle atrophy (late finding)."
+    ],
+    "surgical_options": [
+      "Open surgical resection",
+      "Complete surgical resection (for ependymoma)",
+      "Limited debulking of clearly abnormal tissue (for astrocytoma)",
+      "Multiple levels can be decompressed"
+    ],
+    "pre_op_preparation": "Surgical fitness work-up including CBC, LFT, RFT, BT, CT, PT, INR, Serum Electrolytes, HIV, HBsAG, HCV etc. Radiological investigations: X-ray, CT scan for bone details, MRI scan with contrast, Bone scan. Metastasis workup: Chest X-ray, Mammography, Ultrasound of abdomen, Blood tests - PSA, CT/MRI of other regions if symptomatic.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Cases should be referred to the appropriate level of care (as required) for treatment under PMJAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

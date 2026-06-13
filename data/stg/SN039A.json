@@ -1,0 +1,132 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN039A",
+  "procedure_code": "SN039A",
+  "condition": "Spinal Hematoma",
+  "procedure_name": "Spine - Extradural Haematoma",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Spinal Hematoma_Medco.pdf",
+    "Spinal Hematoma_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent in (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Spinal hematomas have the potential to cause lasting neurologic damage and disability if not recognized and treated expeditiously.",
+    "Manifestation with symptoms of back pain and neurologic deficits, related to the level of the cord affected.",
+    "Neurologic deficits are often reversible if diagnosed and treated early with surgical decompression.",
+    "Early diagnosis and recognition are essential to prevent progression to paraplegia or quadriplegia.",
+    "Initial clinical manifestation depends on the spinal levels involved and is characterized by acute onset of back pain with progressive neurologic deficits, most commonly involving the cervicothoracic or thoracolumbar region.",
+    "Neurologic symptoms may manifest as radicular pain and weakness, paraplegia, or quadriplegia.",
+    "Symptoms of spinal compression, warranting emergent decompression and evacuation.",
+    "Goal is to perform decompression within 6–12 hours to prevent permanent neurologic sequelae."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_planned_management",
+        "label": "Clinical notes with evaluation findings, indication of procedure, and planned line of management"
+      },
+      {
+        "key": "ct_mri_spine",
+        "label": "CT/MRI Spine"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_op_x_ray_spine",
+        "label": "Post-op X-ray Spine"
+      },
+      {
+        "key": "post_operative_photographs_optional",
+        "label": "Post-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical evaluation and imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT/MRI Spine report indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing detailed history, signs & symptoms, planned line of treatment, or indication for procedure.",
+    "Clinical evaluation and/or imaging did not confirm the diagnosis.",
+    "Clinical presentation and imaging were not indicative of surgery.",
+    "Detailed Indoor case papers with daily vitals or treatment details are missing/incomplete.",
+    "Detailed procedure / operative notes are missing.",
+    "CT/MRI Spine report was not indicative of surgery.",
+    "Discharge summary with follow-up advise at the time of discharge is missing/incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Spinal hematomas are an important clinical entity, as they have the potential to cause lasting neurologic damage and disability if they are not recognized and treated expeditiously.",
+      "Spinal hematomas are divided into four types, according to their location: Epidural hematomas, Subdural hematomas, Subarachnoid hematomas, Intramedullary hematomas.",
+      "Spinal hematomas are often idiopathic; however, other common causes include trauma, iatrogenic diagnostic or pain management interventions, vascular malformations, and coagulopathy or anticoagulant medications.",
+      "These conditions may manifest with symptoms of back pain and neurologic deficits, related to the level of the cord affected, although subarachnoid hemorrhage may uniquely manifest with meningitis symptoms as well.",
+      "Although smaller hematomas may be managed conservatively, the neurologic deficits are often reversible if diagnosed and treated early with surgical decompression. To allow the best clinical outcome, early diagnosis and recognition are essential for proper conservative or operative treatment and to prevent progression to paraplegia or quadriplegia.",
+      "Spinal epidural hematoma is the most common intraspinal hematoma but remains a rare condition, with an estimated incidence of 0.1 per 100000 per year.",
+      "Causes of epidural hematoma include: the valveless state of the epidural venous plexus predisposes it to rupture with sudden changes in pressure, rupture of small arterioles in the epidural space, coagulopathy, trauma, and iatrogenic causes from interventional pain management procedures, intra-tumoral hemorrhage within epidural spread of tumor.",
+      "Clinical manifestations of epidural hematoma: acute onset of back pain with progressive neurologic deficits, most commonly involving the cervicothoracic or thoracolumbar region. Neurologic symptoms may manifest as radicular pain and weakness, paraplegia, or quadriplegia."
+    ],
+    "surgical_options": [
+      "Emergent decompression and evacuation for patients with symptoms of spinal compression.",
+      "Most commonly performed using a decompressive laminectomy.",
+      "Laminoplasty is an alternative technique for the cervical spine, thereby negating the need for a combined fusion procedure."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

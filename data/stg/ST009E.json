@@ -1,0 +1,110 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "ST009E",
+  "procedure_code": "ST009E",
+  "condition": "Tendon injury",
+  "procedure_name": "Management of Nerve Plexus / Tendon injuries (Tendon Transfer)",
+  "specialty": "Polytrauma, Orthopedics, Neurosurgery, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Tendon injury _Medco.pdf",
+    "Tendon injury _PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MS/DNB/Equivalent (Orthopedic surgery)",
+    "MCh/DNB/Equivalent (Neurosurgery / Reconstructive Surgery)"
+  ],
+  "clinical_indications": [
+    "Inability to bend or extend a finger due to tendon injury",
+    "Underlying tendon injury in clean cuts requiring early repair for optimal results",
+    "Contaminated wounds with tendon injury requiring adequate wound debridement and re-assessment after 48 hours for further decision making",
+    "Gross tissue loss and exposed tendons requiring adequate wound debridement, early soft tissue cover (local/regional/free flaps), and delayed repair"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_injury_surgery_need",
+        "label": "Clinical Notes detailing the injury and need for surgery"
+      },
+      {
+        "key": "medico_legal_fir_copy",
+        "label": "Medico legal case report/ FIR copy if due to accident"
+      },
+      {
+        "key": "optional_nerve_conduction_emg_mri_report",
+        "label": "Optional Nerve conduction velocity EMG report MRI report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "intra_operative_photograph_optional",
+        "label": "Intra operative photograph (optional)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the clinical notes suggestive of tendon injury?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes – details of accident, signs & symptoms, indication for surgery, and planned line of treatment?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes not suggestive of tendon injury",
+    "Clinical notes lack details of accident, signs & symptoms, indication for surgery, or planned line of treatment",
+    "Medico legal report/FIR copy missing for accident-related injury",
+    "Relevant optional reports (nerve conduction velocity/EMG/MRI) not submitted when specifically indicated by clinical findings"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operational Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Patient usually presents with c/o inability to bend or extend a finger",
+      "To be ruled out in cuts involving fingers, palm and dorsum of hand, wrist and forearm",
+      "Mechanism of injury to be noted",
+      "Look whether it's a clean or contaminated wound",
+      "Give thorough wound wash after administering adequate analgesia",
+      "FDS, FDP, FPL, FCR, FCU to be tested and zones of flexor tendon injury to be noted",
+      "APL, EPB, ECRL, ERCB, EPL, EI, EDC, EDM, EhCU to be tested and zones of extensor tendon injury to be noted",
+      "Vascularity of the affected finger/hand to be documented by capillary refill or pinprick",
+      "X-ray of the involved part to rule out fractures and foreign body",
+      "Associated vascular or nerve injury to be documented",
+      "Provide prophylactic antibiotics",
+      "Advice strict hand elevation"
+    ],
+    "surgical_options": [
+      "Early repair in clean cuts with underlying tendon injury",
+      "Debridement and re-assessment in contaminated wounds",
+      "Debridement followed by early soft tissue cover (local/regional/free flaps) and delayed repair in gross tissue loss and exposed tendons"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "_comment": "IRIS test data — BIS stub. 10 patient profiles, each designed to exercise a specific pipeline edge case. Keyed by patient_id. Loaded by stubs/bis_stub.py.",
+
+  "P001": {
+    "_scenario": "Happy path baseline — normal adult, full wallet, no past claims, TN",
+    "patient_id": "P001",
+    "family_id": "FAM-001",
+    "name": "Ravi Kumar",
+    "age": 58,
+    "gender": "M",
+    "home_state": "Tamil Nadu",
+    "home_district": "Chennai",
+    "wallet": {
+      "family_balance_inr": 500000,
+      "vay_vandana_balance_inr": null,
+      "policy_year_start": "2025-04-01"
+    },
+    "past_claims": []
+  },
+
+  "P002": {
+    "_scenario": "Senior 70+ with dual wallet — triggers VAY_VANDANA_DEBIT_ORDER_AMBIGUOUS in Phase 5",
+    "patient_id": "P002",
+    "family_id": "FAM-002",
+    "name": "Kamala Devi",
+    "age": 72,
+    "gender": "F",
+    "home_state": "Tamil Nadu",
+    "home_district": "Chennai",
+    "wallet": {
+      "family_balance_inr": 200000,
+      "vay_vandana_balance_inr": 300000,
+      "policy_year_start": "2025-04-01"
+    },
+    "past_claims": [
+      {
+        "procedure_code": "MG045A",
+        "admission_date": "2025-07-10",
+        "package_amount_inr": 12500,
+        "status": "paid"
+      }
+    ]
+  },
+
+  "P003": {
+    "_scenario": "Child age 5 — triggers PAEDIATRIC_DEVICE flag in Phase 8. Auth via parent's card.",
+    "patient_id": "P003",
+    "family_id": "FAM-003",
+    "name": "Arjun S/O Selvi Krishnan",
+    "age": 5,
+    "gender": "M",
+    "home_state": "Tamil Nadu",
+    "home_district": "Chennai",
+    "wallet": {
+      "family_balance_inr": 500000,
+      "vay_vandana_balance_inr": null,
+      "policy_year_start": "2025-04-01"
+    },
+    "past_claims": []
+  },
+
+  "P004": {
+    "_scenario": "Portability case — home state Maharashtra, treated in Tamil Nadu. Triggers PORTABILITY_CASE flag in Phase 8.",
+    "patient_id": "P004",
+    "family_id": "FAM-004",
+    "name": "Sanjay Patel",
+    "age": 42,
+    "gender": "M",
+    "home_state": "Maharashtra",
+    "home_district": "Nagpur",
+    "wallet": {
+      "family_balance_inr": 350000,
+      "vay_vandana_balance_inr": null,
+      "policy_year_start": "2025-04-01"
+    },
+    "past_claims": []
+  },
+
+  "P005": {
+    "_scenario": "Near-zero wallet (₹8,000 remaining) — triggers WALLET_INSUFFICIENT and copayment_required in Phase 5",
+    "patient_id": "P005",
+    "family_id": "FAM-005",
+    "name": "Meena Bai",
+    "age": 35,
+    "gender": "F",
+    "home_state": "Tamil Nadu",
+    "home_district": "Chennai",
+    "wallet": {
+      "family_balance_inr": 8000,
+      "vay_vandana_balance_inr": null,
+      "policy_year_start": "2025-04-01"
+    },
+    "past_claims": [
+      {
+        "procedure_code": "SO057A",
+        "admission_date": "2025-06-20",
+        "package_amount_inr": 12000,
+        "status": "paid"
+      },
+      {
+        "procedure_code": "MG001A",
+        "admission_date": "2025-09-05",
+        "package_amount_inr": 9800,
+        "status": "paid"
+      },
+      {
+        "procedure_code": "SG019A",
+        "admission_date": "2026-01-15",
+        "package_amount_inr": 18000,
+        "status": "paid"
+      },
+      {
+        "procedure_code": "SE020A",
+        "admission_date": "2026-03-10",
+        "package_amount_inr": 11000,
+        "status": "paid"
+      }
+    ]
+  },
+
+  "P006": {
+    "_scenario": "Past claim for SE020A (cataract right eye) in same policy year — triggers SPECIAL_CONDITIONS_RULE_TRIGGERED in Phase 3 when cataract is presented again",
+    "patient_id": "P006",
+    "family_id": "FAM-006",
+    "name": "Suresh Nair",
+    "age": 65,
+    "gender": "M",
+    "home_state": "Tamil Nadu",
+    "home_district": "Chennai",
+    "wallet": {
+      "family_balance_inr": 420000,
+      "vay_vandana_balance_inr": null,
+      "policy_year_start": "2025-04-01"
+    },
+    "past_claims": [
+      {
+        "_note": "Cataract surgery RIGHT eye already done this policy year",
+        "procedure_code": "SE020A",
+        "admission_date": "2025-08-20",
+        "package_amount_inr": 11000,
+        "status": "paid"
+      }
+    ]
+  },
+
+  "P007": {
+    "_scenario": "Oncology patient — triggers MTB_REQUIRED and ONCOLOGY_MULTI_STAGE flags in Phase 8",
+    "patient_id": "P007",
+    "family_id": "FAM-007",
+    "name": "Priya Sharma",
+    "age": 45,
+    "gender": "F",
+    "home_state": "Tamil Nadu",
+    "home_district": "Chennai",
+    "wallet": {
+      "family_balance_inr": 500000,
+      "vay_vandana_balance_inr": null,
+      "policy_year_start": "2025-04-01"
+    },
+    "past_claims": []
+  },
+
+  "P008": {
+    "_scenario": "Neonate age 0 — triggers NEONATAL_ESCALATION_RISK in Phase 8. age=0 treated as potential neonatal by pipeline.",
+    "patient_id": "P008",
+    "family_id": "FAM-008",
+    "name": "Baby Murugan S/O Murugan",
+    "age": 0,
+    "gender": "M",
+    "home_state": "Tamil Nadu",
+    "home_district": "Tiruchirappalli",
+    "wallet": {
+      "family_balance_inr": 500000,
+      "vay_vandana_balance_inr": null,
+      "policy_year_start": "2025-04-01"
+    },
+    "past_claims": []
+  },
+
+  "P009": {
+    "_scenario": "Patient from NE state (Assam) — triggers PORTABILITY_CASE flag AND NE state enhancement batch size override in Phase 3",
+    "patient_id": "P009",
+    "family_id": "FAM-009",
+    "name": "Rahim Khan",
+    "age": 38,
+    "gender": "M",
+    "home_state": "Assam",
+    "home_district": "Guwahati",
+    "wallet": {
+      "family_balance_inr": 480000,
+      "vay_vandana_balance_inr": null,
+      "policy_year_start": "2025-04-01"
+    },
+    "past_claims": []
+  },
+
+  "P010": {
+    "_scenario": "Senior 70+ with both wallets near-exhausted — triggers WALLET_INSUFFICIENT and VAY_VANDANA_DEBIT_ORDER_AMBIGUOUS together. Tests both wallets considered.",
+    "patient_id": "P010",
+    "family_id": "FAM-010",
+    "name": "Lakshmi Iyer",
+    "age": 75,
+    "gender": "F",
+    "home_state": "Tamil Nadu",
+    "home_district": "Chennai",
+    "wallet": {
+      "family_balance_inr": 15000,
+      "vay_vandana_balance_inr": 20000,
+      "policy_year_start": "2025-04-01"
+    },
+    "past_claims": [
+      {
+        "procedure_code": "MC007A",
+        "admission_date": "2025-05-10",
+        "package_amount_inr": 85000,
+        "status": "paid"
+      },
+      {
+        "procedure_code": "MG001A",
+        "admission_date": "2025-11-22",
+        "package_amount_inr": 9800,
+        "status": "paid"
+      },
+      {
+        "procedure_code": "SB010A",
+        "admission_date": "2026-02-14",
+        "package_amount_inr": 35000,
+        "status": "paid"
+      }
+    ]
+  }
+}

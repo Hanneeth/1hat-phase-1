@@ -1,0 +1,105 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU006A",
+  "procedure_code": "SU006A",
+  "condition": "Nephrolithotomy & Follow-up",
+  "procedure_name": "Open Nephrolithotomy Follow Up",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Nephrolithotomy & Follow-up_Medco.pdf",
+    "Nephrolithotomy & Follow-up_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Post-Nephrolithotomy follow-up to confirm stone removal"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_plan_advise",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure"
+      },
+      {
+        "key": "discharge_summary_last_admission_nephrolithotomy",
+        "label": "Discharge Summary of last admission for Nephrolithotomy procedure"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "urine_routine",
+        "label": "Urine routine"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Discharge Summary of last admission for Nephrolithotomy procedure submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure/Operative/follow-up (For follow up visit) notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Urine routine submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure missing or incomplete at pre-authorization stage for follow-up",
+    "Discharge Summary of last admission for Nephrolithotomy procedure missing or incomplete at pre-authorization stage",
+    "Detailed Indoor case papers missing or incomplete at claim submission stage for follow-up",
+    "Detailed Procedure / operation notes missing or incomplete at claim submission stage for follow-up visit",
+    "Urine routine report missing or incomplete at claim submission stage",
+    "Detailed discharge summary missing or incomplete at claim submission stage for follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": "N20.0",
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Follow-up Visit: an imaging study to confirm the removal of all stone particle, prescribing drugs and Patient education."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

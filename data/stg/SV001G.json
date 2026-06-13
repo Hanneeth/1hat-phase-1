@@ -1,0 +1,140 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Coarctation of Aorta/ : Coarctation of aorta_Medco.pdf (clinical + mandatory docs) + Coarctation of aorta_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV001G",
+  "procedure_code": "SV001G",
+  "condition": "Coarctation of Aorta",
+  "procedure_name": "Coarctation repair (Surgical Correction of Congenital Heart Disease)",
+  "specialty": "Cardiology/ Cardiothoracic Vascular Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Coarctation of aorta_Medco.pdf",
+    "Coarctation of aorta_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "DM/ DNB/ equivalent (Cardiology)",
+    "M.Ch. or DNB/ equivalent (cardiovascular thoracic surgery)"
+  ],
+  "clinical_indications": [
+    "Presence of systemic arterial hypertension.",
+    "Milder obstructions may benefit from intervention by decreasing left ventricular diastolic pressure and preserving left ventricular function in the long term.",
+    "Intervention especially in the presence of hypertension at rest, abnormal blood pressure response during exercise, progressive left ventricular hypertrophy, and in cases of complex heart disease particularly Fontan patients.",
+    "Peak-to-peak coarctation gradient ≥ 20 mg (difference in peak pressure proximal and beyond the narrowed segment).",
+    "Peak-to-peak coarctation gradient < 20 mg with imaging evidence of significant coarctation and radiologic evidence of significant collateral flow.",
+    "Correction of coarctation should be performed in infancy or early childhood to prevent the development of chronic systemic hypertension.",
+    "If coarctation escapes early detection, repair should be performed at the time of subsequent diagnosis."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "systolic_blood_pressure_difference_upper_lower_extremity",
+      "operator": ">=",
+      "value": "20 mg",
+      "note": "for systemic arterial hypertension"
+    },
+    {
+      "field": "peak_to_peak_coarctation_gradient",
+      "operator": ">=",
+      "value": "20 mg",
+      "note": "difference in peak pressure proximal and beyond narrowed segment"
+    },
+    {
+      "field": "peak_to_peak_coarctation_gradient",
+      "operator": "<",
+      "value": "20 mg",
+      "note": "with imaging evidence of significant coarctation and radiologic evidence of significant collateral flow"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report_and_stills",
+        "label": "Echo/Doppler report and Stills"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "post_procedure_echo_angiogram_report",
+        "label": "Post Procedure Echo/Angiogram with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "barcode_of_balloon_implant",
+        "label": "Barcode of the balloon/implant, If used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes show detailed history, signs & symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Echo/Doppler report and Stills are suggestive of Coarctation of Aorta?",
+        "expected": true
+      },
+      {
+        "q": "Patient's Echo/angiogram stills report shows Coarctation of Aorta?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Procedure/ Operation notes are submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post Procedure Echo/Angiogram stills with report show increase in diameter of the affected part of aorta?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge Summary mentioning date of follow-up is submitted?",
+        "expected": true
+      },
+      {
+        "q": "Invoice of implant/graft used is submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Pre-authorization Echo/angiogram stills report does not show Coarctation of Aorta.",
+    "Pre-authorization clinical notes are missing or lack detailed history, signs, symptoms, or indication for procedure.",
+    "Post-procedure Echo/Angiogram stills or report does not show an increase in diameter of the affected part of the aorta.",
+    "Invoice for the implant/graft used is not submitted at the claim stage.",
+    "Discharge summary is missing or does not include the date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiac Catheterisation lab: No, CCU/ICCU: Yes, Qualified cardiologist (DM/ DNB cardiology): No, Qualified cardiothoracic surgeon (MCh/ DNB cardiovascular thoracic surgery): Yes",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Coarctation of the aorta (C) is the sixth most common congenital lesion accounting for 4-6 per cent of live births with congenital heart disease.",
+      "Anatomical spectrum may vary from discrete narrowing of the thoracic aorta at the insertion of the ductus arteriosus to tubular hypoplasia.",
+      "Effect of narrowing includes increased afterload on the left ventricle, exposure of the upper body to hypertension, flow disturbance in the thoracic aorta, and decreased perfusion to the lower body.",
+      "Symptoms (babies with severe coarctation): Pale skin, Irritability, Heavy sweating, Difficulty breathing, Difficulty feeding.",
+      "Left untreated, aortic coarctation in babies might lead to heart failure or death.",
+      "Symptoms (older children and adults with less severe coarctation): Headache, Muscle weakness, Leg cramps or cold feet, Nosebleeds, Chest pain.",
+      "Signs: High blood pressure in the arms, A blood pressure difference between the arms and legs (higher in arms, lower in legs), A weak or delayed pulse in the legs, A heart murmur (an abnormal whooshing sound caused by faster blood flow through the narrowed area)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": "Infants with \"critical” coarctation: Identification essential to maintain patency of the ductus prior to surgical repair by continuous intravenous infusion of prostaglandin E1.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

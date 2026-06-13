@@ -1,0 +1,110 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB052A",
+  "procedure_code": "SB052A",
+  "condition": "Debridement & Closure of injuries - contused lacerated wounds",
+  "procedure_name": "Debridement & Closure of injuries - contused lacerated wounds (Anti-biotic + dressing - minimum of 5 sessions)",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Debridement & Closure of injuries - contused lacerated wounds_Medco.pdf",
+    "Debridement & Closure of injuries - contused lacerated wounds_PPD.CPD.pdf"
+  ],
+  "alos": "6 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Removal of the source of sepsis, mainly necrotic tissue",
+    "Removal of local infection to decrease bacterial burden, to reduce the probability of resistance from antibiotic treatment, and to obtain accurate cultures",
+    "Collection of deep cultures taken after debridement from the tissue left behind to evaluate persistent infection and requirements for systemic antibiotic treatment",
+    "Stimulation of the wound bed to support healing and to prepare for a skin graft or flap"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_planned_treatment",
+        "label": "Clinical notes with planned line of treatment"
+      },
+      {
+        "key": "xray_affected_part",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) - affected part and confirming the diagnosis"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post-procedure clinical photograph"
+      },
+      {
+        "key": "evidence_of_dressing_sessions",
+        "label": "Evidence of dressing sessions"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Does the clinical photograph of affected area classify the type of lacerated/Contusion wound?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the Post Procedure evidence of 5 sessions were produced?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical photograph of affected area does not classify as a lacerated/contusion wound.",
+    "Post-procedure evidence for 5 dressing sessions is missing or incomplete.",
+    "X-ray of affected part is missing or not labelled with patient ID, date, or side (Left/Right).",
+    "Clinical notes lack a planned line of treatment."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Lacerations are caused when trauma exceeds intrinsic tissue strength",
+      "Skin torn by blunt injury over a bony prominence such as the scalp",
+      "Tissue damage may not be extensive, and primary suturing may be possible.",
+      "Sterile skin closure strips may be appropriate in some circumstances—for example, in pretibial laceration, as suturing causes increased tissue tension, with the swelling of early healing and inflammation leading to more tissue loss.",
+      "Contusions are caused by more extensive tissue trauma after severe blunt or blast trauma.",
+      "The overlying skin may seem to be intact but later become non-viable.",
+      "Large hematomas under skin or in muscle may coexist; if they are superficial and fluctuant, they can be evacuated with overlying necrosed skin.",
+      "Extensive contusion may lead to infection (antibiotic prophylaxis should be considered in open wounds) and compartment syndromes (fasciotomy will be needed to preserve a limb).",
+      "The risk of infection in traumatic wounds is reduced by adequate wound cleansing and debridement with removal of any non-viable tissue and foreign material.",
+      "If severe contamination is present, broad spectrum antibiotic prophylaxis is indicated and should be extended as specific therapy as recommended for surgical wounds that are classed as “dirty” or when there are early signs of infection.",
+      "Traumatic wounds need tetanus prophylaxis (parenteral benzylpenicillin and tetanus toxoid, depending on immune status).",
+      "Strong evidence supports the use of antibiotic prophylaxis and treatment for surgical wounds that are classed as “clean contaminated” or “contaminated.\"",
+      "The value of antibiotic prophylaxis in \"clean\" wounds is controversial but is widely accepted in prosthetic surgery (such as hip and knee replacement and synthetic vascular bypass surgery)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "plan clinical management of patient and decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

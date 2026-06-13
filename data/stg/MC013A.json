@@ -1,0 +1,95 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MC013A",
+  "procedure_code": "MC013A",
+  "condition": "Hypertrophic obstructive cardiomyopathy (HOCM)",
+  "procedure_name": "Percutaneous Transluminal Septal Myocardial Ablation",
+  "specialty": "Cardiology",
+  "version": "1.1",
+  "source_files": [
+    "Percutaneous Transluminal Septal Myocardial Ablation _Medco.pdf",
+    "Percutaneous Transluminal Septal Myocardial Ablation _PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MD",
+    "DM",
+    "DNB",
+    "equivalent (Cardiology)"
+  ],
+  "clinical_indications": [
+    "Severely symptomatic patients with Hypertrophic Obstructive Cardiomyopathy (HOCM) despite optimal medical therapy",
+    "Presence of dynamic left ventricular outflow obstruction (LVOTO)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "ecg_cardiologist_report",
+        "label": "ECG with report of cardiologist"
+      },
+      {
+        "key": "echo_color_doppler_report_stills",
+        "label": "Echo/ color Doppler report with stills"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_color_doppler_angio_stills",
+        "label": "Post procedure echo/colour Doppler report and angio stills"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the ECG and echo report by cardiologist suggestive of Hypertrophic obstructive cardiomyopathy?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Did the post procedure echo/ colour doppler report confirm decrease in septal thickness?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/colour Doppler report not suggestive of Ventricular outflow obstruction.",
+    "ECG and Echo report by cardiologist not suggestive of Hypertrophic Obstructive Cardiomyopathy.",
+    "Post-procedure Echo/colour Doppler report does not confirm a decrease in septal thickness.",
+    "Clinical notes lack detailed history, signs, symptoms, or clear indication for Percutaneous Transluminal Septal Myocardial Ablation."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hypertrophic obstructive cardiomyopathy (HOCM) is a clinical condition where there is asymmetrical hypertrophy of antero-basal septum resulting into dynamic left ventricular outflow obstruction.",
+      "The obstruction is secondary to systolic anterior motion of the mitral valve abutting against a hypertrophied septum, resulting in diastolic dysfunction, myocardial oxygen supply-demand mismatch, reduced forward output, and secondary mitral regurgitation."
+    ],
+    "surgical_options": [
+      "Surgical myomectomy",
+      "Percutaneous alcohol septal ablation"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

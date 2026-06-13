@@ -1,0 +1,96 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MM010B",
+  "procedure_code": "MM010B",
+  "condition": "Neuro-Developmental Disorders (NDD) Other than Intellectual Disability",
+  "procedure_name": "Mixed Developmental Disorder",
+  "specialty": "Mental Disorders",
+  "version": "1.1",
+  "source_files": [
+    "Neuro Developmental Disorders (NDD) Other than Intellectual Disability_Medco.pdf",
+    "Neuro Developmental Disorders (NDD) Other than Intellectual Disability_PPD.CPD.pdf"
+  ],
+  "alos": "3-4 weeks",
+  "min_doctor_qualification": [
+    "MD/DNB/ equivalent (Psychiatry)"
+  ],
+  "clinical_indications": [
+    "Disorders characterized by a combination of features from various neuro-developmental disorders that do not meet the full criteria for any single specific disorder, but cause significant impairment in functioning.",
+    "Manifestations are observed during the developmental period and are not attributable to intellectual disability."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailed_history_chronicity",
+        "label": "Clinical notes with detailed history and chronicity"
+      },
+      {
+        "key": "admission_document_signed_by_empanelled_psychiatrist",
+        "label": "Admission document signed by empanelled psychiatrist"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_treatment_notes",
+        "label": "Detailed treatment notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, mini mental status test, indication for treatment and need of hospitalization",
+        "expected": true
+      },
+      {
+        "q": "Was the admission document signed by an empanelled psychiatrist?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed treatment notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Admission document not signed by an empanelled psychiatrist.",
+    "Clinical notes missing or lacking detailed history, mini mental status test, indication for treatment, or need for hospitalization.",
+    "Detailed treatment notes not submitted.",
+    "Detailed discharge summary not submitted or missing date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "As per the provisions of the Mental Health Act 2017 (https://egazette.nic.in/WriteReadData/2017/175248.pdf) be referred for details on Admission & Discharge criteria.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The provisions under Mental Healthcare Act 2017 be referred for details on Admission & Discharge criteria.",
+      "Neurodevelopmental disorders other than intellectual disorders come under ICD 11 and DSM-5 which includes the following conditions:",
+      "i. LANGUAGE/SPEECH DISORDERS: Developmental speech or language disorders arise during the developmental period and are characterized by difficulties in understanding or producing speech and language or in using language in context for the purposes of communication that are outside the limits of normal variation expected for age and level of intellectual functioning. The observed speech and language problems are not attributable to regional, social, or cultural/ethnic language variations and are not fully explained by anatomical or neurological abnormalities. The presumptive aetiology for Developmental speech or language disorders is complex, and in many individual cases, is unknown. Developmental Speech or Language Disorders include: Developmental Speech Sound Disorder, Developmental Speech Fluency Disorder, Developmental Language Disorder, Other Specified Developmental Speech or Language Disorders.",
+      "ii. AUTISM SPECTRUM DISORDER: Characterized by persistent deficits in the ability to initiate and to sustain reciprocal social interaction and social communication and by a range of restricted, repetitive, and inflexible patterns of behaviour, interests or activities that are clearly atypical or excessive for the individual's age and socio-cultural context. The onset of the disorder occurs during the developmental period, typically in early childhood, but symptoms may not become fully manifest until later, when social demands exceed limited capacities. Deficits are sufficiently severe to cause impairment in personal, family, social, educational, occupational or other important areas of functioning and are usually a pervasive feature of the individual's functioning observable in all settings, although they may vary according to social, educational, or other context. Individuals along the spectrum exhibit a full range of intellectual functioning and language abilities.",
+      "iii. DEVELOPMENTAL LEARNING DISORDERS: Characterized by significant and persistent difficulties in learning academic skills, which may include reading, writing, or arithmetic. The individual's performance in the affected academic skill(s) is markedly below what would be expected for chronological age and general level of intellectual functioning, and results in significant impairment in the individual's academic or occupational functioning. Developmental learning disorder first manifests when academic skills are taught during the early school years. Developmental learning disorder is not due to a disorder of intellectual development, sensory impairment (vision or hearing), neurological or motor disorder, lack of availability of education, lack of proficiency in the language of academic instruction, or psychosocial adversity.",
+      "iv. ATTENTION-DEFICIT/HYPERACTIVITY DISORDER: Characterized by a persistent pattern (at least 6 months) of inattention and/or hyperactivity-impulsivity that has a direct negative impact on academic, occupational, or social functioning. There is evidence of significant inattention and/or hyperactivity-impulsivity symptoms prior to age 12, typically by early to mid-childhood, though some individuals may first come to clinical attention later. The degree of inattention and hyperactivity-impulsivity is outside the limits of normal variation expected for age and level of intellectual functioning. Inattention refers to significant difficulty in sustaining attention to tasks that do not provide a high level of stimulation or frequent rewards, distractibility and problems with organization. Hyperactivity refers to excessive motor activity and difficulties with remaining still, most evident in structured situations that require behavioural self-control. Impulsivity is a tendency to act in response to immediate stimuli, without deliberation or consideration of the risks and consequences. The relative balance and the specific manifestations of inattentive and hyperactive-impulsive characteristics varies across individuals and may change over the course of development. In order for a diagnosis to be made, manifestations of inattention and/or hyperactivity-impulsivity must be evident across multiple situations or settings (e.g., home, school, work, with friends or relatives), but are likely to vary according to the structure and demands of the setting. Symptoms are not better accounted for by another mental, behavioral, or neurodevelopmental disorder and are not due to the effect of a substance or medication.",
+      "v. PRIMARY TIC/TIC DISORDERS: Characterized by the presence of chronic motor and/or vocal (phonic) tics. Motor and vocal tics are defined as sudden, rapid, non-rhythmic, and recurrent movements or vocalizations, respectively. In order to be diagnosed, tics must have been present for at least one year, although they may not manifest consistently. Includes Tourette syndrome, Chronic Motor Tic Disorders, Chronic Phonic Tic Disorders, and Transient motor tics.",
+      "vi. MOTOR DISORDERS: Developmental motor coordination disorder is characterized by a significant delay in the acquisition of gross and fine motor skills and impairment in the execution of coordinated motor skills that manifest in clumsiness, slowness, or inaccuracy of motor performance. Coordinated motor skills are markedly below that expected given the individual's chronological age and level of intellectual functioning. Onset of coordinated motor skills difficulties occurs during the developmental period and is typically apparent from early childhood. Coordinated motor skills difficulties cause significant and persistent limitations in functioning (e.g. in activities of daily living, school work, and vocational and leisure activities). Difficulties with coordinated motor skills are not solely attributable to a Disease of the Nervous System, Disease of the Musculoskeletal System or Connective Tissue, sensory impairment, and not better explained by a Disorder of Intellectual Development.",
+      "vii. STEREOTYPED MOVEMENT DISORDERS: Characterized by the persistent (e.g., lasting several months) presence of voluntary, repetitive, stereotyped, apparently purposeless (and often rhythmic) movements that arise during the early developmental period, are not caused by the direct physiological effects of a substance or medication (including withdrawal), and markedly interfere with normal activities or result in self-inflicted bodily injury. Stereotyped movements that are non-injurious can include body rocking, head rocking, finger-flicking mannerisms, and hand flapping. Stereotyped self-injurious behaviors can include repetitive head banging, face slapping, eye poking, and biting of the hands, lips, or other body parts."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

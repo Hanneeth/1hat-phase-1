@@ -1,0 +1,149 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG105A",
+  "procedure_code": "SG105A",
+  "condition": "Obstructive Jaundice",
+  "procedure_name": "Percutaneous Transhepatic Biliary Drainage (PTBD)",
+  "specialty": "General Surgery/IVR/Surgical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Percutaneous Transhepatic Biliary Drainage (PTBD)_Medco.pdf",
+    "Percutaneous Transhepatic Biliary Drainage (PTBD)_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MS/DNB/ Gen Surgery",
+    "MD/DNB Radiology"
+  ],
+  "clinical_indications": [
+    "Cholangitis",
+    "Pain alleviation",
+    "Pruritus",
+    "To decrease serum bilirubin before the initiation of chemotherapy",
+    "To access biliary system for further palliative interventions such as stent placement or transhepatic brachytherapy for cholangiocarcinoma",
+    "To manage post-operative complications like Failed pancreatico-jejunostomy anastomosis",
+    "To manage post-operative complications like Failed bilio-enteric anastomosis",
+    "To manage post-operative complications like Duodenal stump insufficiency",
+    "To manage post-operative complications like Post-operative leak from extrahepatic bile ducts"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "International Normalized Ratio (INR)",
+      "operator": ">",
+      "value": "1.5",
+      "note": "Relative contraindication, triggers TMS pop-up if found."
+    },
+    {
+      "field": "Platelet counts",
+      "operator": "<",
+      "value": "50,000",
+      "note": "Relative contraindication."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_plan",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "relevant_investigations_reports",
+        "label": "Reports of the relevant Investigations"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "treatment_details",
+        "label": "Treatment details"
+      },
+      {
+        "key": "all_investigation_reports",
+        "label": "All investigation reports"
+      },
+      {
+        "key": "stent_invoice_barcode",
+        "label": "Invoice or barcode of the stent (if used)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the reports of the relevant Investigations submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the patient's Clinical history/ investigations indicative of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the International Normalized Ratio (INR) >1.5?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the investigation reports submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the invoice or barcode of the stent (if used) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is thedetailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's clinical history or investigations are not indicative of the procedure performed.",
+    "International Normalized Ratio (INR) is greater than 1.5 without adequate justification for the procedure.",
+    "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management, and advice for admission are missing or incomplete.",
+    "Reports of relevant investigations (CBC/LFT/USG/CT/MRCP) are not submitted.",
+    "Detailed Indoor case papers (ICPs) are missing or incomplete at the time of claim submission.",
+    "Invoice or barcode of the stent (if used) is not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Secondary care facilities with interventional radiology facilities.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Percutaneous biliary drainage is a primary therapeutic or palliative drainage of bile in patients with biliary obstruction. It is an image-guided procedure which can be performed under fluoroscopy or combined ultrasound and fluoroscopic guidance."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Absolute: Uncorrectable bleeding diathesis.",
+      "Relative: International Normalized Ratio (INR)>1.5",
+      "Relative: Platelet counts <50,000",
+      "Relative: Ascites",
+      "Relative: Multiple hepatic cysts."
+    ]
+  }
+}

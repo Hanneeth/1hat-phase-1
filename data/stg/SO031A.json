@@ -1,0 +1,138 @@
+{
+  "_comment": "Generated from 'Complete vaginal agenesis_Medco.pdf' and 'Complete vaginal agenesis_PPD.CPD.pdf'.",
+  "stg_id": "SO031A",
+  "procedure_code": "SO031A",
+  "condition": "Complete vaginal agenesis",
+  "procedure_name": "Vaginoplasty (McIndoe procedure)",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Complete vaginal agenesis_Medco.pdf",
+    "Complete vaginal agenesis_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO or Equivalent (in Obstetrics & Gynecology)",
+    "MCh/Equivalent (in Plastic Surgery)"
+  ],
+  "clinical_indications": [
+    "Primary amenorrhea",
+    "Dyspareunia",
+    "Cyclic pelvic or abdominal pain due to vaginal anomalies",
+    "Difficulty with tampon insertion or coitus due to vaginal anomalies",
+    "Back pain due to marked distension of the vagina",
+    "Pain with defecation due to marked distension of the vagina"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "pelvic_abdominal_usg",
+        "label": "Pelvic/Abdominal USG"
+      },
+      {
+        "key": "karyotyping",
+        "label": "Karyotyping (optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports (if done)"
+      },
+      {
+        "key": "diagnostic_laparoscopy",
+        "label": "Diagnostic laparoscopy (optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "histopathological_report",
+        "label": "Histopathological report (optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advise for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical presentation and composite examination (pelvic examination) confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was there an evidence of vaginal agenesis indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical examination and/or imaging is not indicative of surgery, or documentation is missing/incomplete.",
+    "Detailed Clinical notes lack essential information (vitals, history, symptoms, signs, examination findings, indication for procedure, planned line of treatment, or advice for admission).",
+    "Pelvic/Abdominal USG is not uploaded at pre-authorization.",
+    "Diagnosis is not confirmed by clinical presentation and composite examination (pelvic examination).",
+    "Detailed procedure/operative notes are missing or incomplete at claim submission.",
+    "Discharge summary is missing or lacks follow-up advice at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Complete agenesis of the vagina is almost always associated with absence of uterus. There is, however, presence of healthy gonads and fallopian tubes.",
+      "The patient is phenotypically female, with normal female karyotype pattern.",
+      "The entity is often associated with urinary tract (40%) and skeletal (12%) malformation. This is called Mayer-RokitanskyKüster-Hauser syndrome."
+    ],
+    "surgical_options": [
+      "McIndoe-Reed procedure (1938): A space is created digitally between the bladder and the rectum. Split thickness skin graft is used over a mould. This mould is kept in this neovaginal space.",
+      "Williams Vulvovaginoplasty (1976): A vaginal pouch is created from skin faps of labia majora in the midline. This is not done these days.",
+      "Vaginoplasty with amnion graft (Chakraborty, Konar, 2004)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "patient_counseling": "Treatment of such patients needs repeated psychological counseling.",
+    "complications": [
+      "During surgery: Vesicovaginal fistula, Recto-vaginal Fistula, infection and bleeding are the important ones.",
+      "Late complications: Dyspareunia, restenosis."
+    ]
+  }
+}

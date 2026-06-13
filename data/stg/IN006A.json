@@ -1,0 +1,175 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "IN006A",
+  "procedure_code": "IN006A",
+  "condition": "Intracranial atherosclerotic disease (ICAD)",
+  "procedure_name": "Intracranial balloon angioplasty with stenting",
+  "specialty": "Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "Intracranial atherosclerotic disease (ICAD)_Medco.pdf",
+    "Intracranial atherosclerotic disease (ICAD)_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "DM/Equivalent (in Interventional Neuroradiology)",
+    "MCh/DNB/Equivalent (in Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Endovascular management with angioplasty plus stenting is the rescue modality for high-grade stenosis (> 70%) in patients in failure of medical management (control hypertension, diabetes, de addiction, statins, antiplatelets)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "stenosis_grade",
+      "operator": ">",
+      "value": "70%",
+      "note": "in patients in failure of medical management"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_neurological_examination",
+        "label": "Clinical notes especially evaluation findings including neurological examination"
+      },
+      {
+        "key": "ct_mri_brain",
+        "label": "CT/MRI Brain"
+      },
+      {
+        "key": "digital_subtraction_angiography_dsa",
+        "label": "Digital Subtraction Angiography (DSA)"
+      },
+      {
+        "key": "transcranial_doppler",
+        "label": "Transcranial doppler (Optional)"
+      },
+      {
+        "key": "complete_blood_count_pt_inr_creatinine",
+        "label": "Complete Blood Count, Prothrombin time (PT)/INR, Creatinine"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "implant_stent_balloon_details_invoice_barcode",
+        "label": "Implant (stent, balloon) details invoice/barcode"
+      },
+      {
+        "key": "post_procedure_check_angiogram",
+        "label": "Post procedure check angiogram"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient present with hemiparesis, aphasia, dysarthria, loss of consciousness, cranial nerve palsy?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was there an evidence of renal insufficiency?",
+        "expected": false
+      },
+      {
+        "q": "Was there an evidence of non-correctable coagulopathy?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was Digital subtraction Angiography (DSA) indicative of procedure?",
+        "expected": true
+      },
+      {
+        "q": "Implant (stent, balloon) invoice/barcode submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did post-procedure check-angiogram show balloon/stent?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation or imaging not indicative of surgery",
+    "Evidence of renal insufficiency without justification",
+    "Evidence of non-correctable coagulopathy without justification",
+    "High-grade stenosis (>70%) not documented or patient not in failure of medical management",
+    "Missing CT/MRI Brain or Digital Subtraction Angiography (DSA) at pre-authorization",
+    "Implant (stent, balloon) invoice/barcode not submitted at claim stage",
+    "Post-procedure check-angiogram not showing balloon/stent"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital with endovascular treatment facility",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Intracranial atherosclerotic stenosis of the major arteries (intracranial internal carotid artery, middle cerebral artery, vertebral artery, and basilar artery) is the most common proximate mechanism of ischemic stroke worldwide.",
+      "Intracranial atherosclerotic disease (ICAD) remains an important cause for ischemic stroke, particularly in patients of black, Asian, or Hispanic origin as well as in diabetics. Risk factors include insulin-dependent diabetes mellitus, hypercholesterolemia, hypertension, and cigarette smoking.",
+      "Four mechanisms for ischemic stroke secondary to intracranial atherosclerosis have been proposed: (1) hypoperfusion, (2) thrombosis at the site of stenosis due to plaque rupture, intraplaque hemorrhage, or occlusive plaque growth, (3) thromboembolic events distal to the site of stenosis, (4) direct occlusion of small penetrating arteries at the site of the plaque."
+    ],
+    "surgical_options": [
+      "intracranial stent placement",
+      "medications",
+      "surgery"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "control hypertension, diabetes, de addiction, statins, antiplatelets (as part of medical management before endovascular intervention)",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [
+      "Intimal dissection",
+      "Thrombus formation",
+      "Vessel rupture"
+    ],
+    "contraindications": [
+      "Renal insufficiency",
+      "Non-correctable coagulopathy"
+    ]
+  }
+}

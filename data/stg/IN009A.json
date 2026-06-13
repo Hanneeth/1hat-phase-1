@@ -1,0 +1,163 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "IN009A",
+  "procedure_code": "IN009A",
+  "condition": "Parent vessel occlusion",
+  "procedure_name": "Parent vessel occlusion - Basic",
+  "specialty": "Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "Parent vessel occlusion_Medco.pdf",
+    "Parent vessel occlusion_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "DM/Equivalent (in Interventional Neuroradiology)",
+    "MCH/DNB/Equivalent (in Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Intracranial aneurysms, such as:",
+    "Giant aneurysms",
+    "Complex saccular or fusiform aneurysms",
+    "Dissecting aneurysms (eg: Vertebral artery dissection)",
+    "Blood blister-like aneurysms",
+    "Carotid endarterectomy",
+    "Direct revascularization (Superficial temporal artery – Middle cerebral artery (STA-MCA) bypass)",
+    "Carotid-cavernous fistula",
+    "Tumor infiltration"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of treatment"
+      },
+      {
+        "key": "dsa",
+        "label": "Digital Subtraction Angiography (DSA)"
+      },
+      {
+        "key": "ct_mri_brain",
+        "label": "CT/MRI Brain"
+      },
+      {
+        "key": "bto",
+        "label": "Balloon test occlusion (BTO)"
+      },
+      {
+        "key": "wada_amytal_test",
+        "label": "Wada/Amytal test (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_procedure_photograph_stills",
+        "label": "Intra-procedure photograph stills (optional)"
+      },
+      {
+        "key": "brain_function_intra_op_monitoring",
+        "label": "Clinical Evaluation of the brain function during the procedure (Intra-operative monitoring documentation)"
+      },
+      {
+        "key": "eeg_intra_op_monitoring",
+        "label": "EEG (Electroencephalogram) monitoring during the procedure"
+      },
+      {
+        "key": "intraoperative_angiography_report",
+        "label": "Intraoperative angiography report"
+      },
+      {
+        "key": "embolic_agent_details",
+        "label": "Embolic agent details (invoice/barcode)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the diagnosis and imaging indicative of performing the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings, indication for procedure, planned lined of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did Digital Subtraction Angiography (DSA) confirm diagnosis and indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the diagnosis indicative of procedure to determine the course of therapy?",
+        "expected": true
+      },
+      {
+        "q": "Invoice/barcode of embolic agents used submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was intra-operative monitoring (neurological assessment) documented and imaging submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the diagnosis and imaging indicative of performing the surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Diagnosis and imaging not indicative of performing the surgery.",
+    "Clinical notes are missing or incomplete (e.g., history, symptoms, findings, indication, planned treatment, or admission advice).",
+    "Digital Subtraction Angiography (DSA) report is missing or does not confirm diagnosis or indication for surgery.",
+    "Invoice or barcode for embolic agents is missing or illegible.",
+    "Intra-operative monitoring documentation (e.g., neurological assessment, EEG) or angiography report is missing or incomplete.",
+    "Discharge summary is missing or does not include follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital with facilities for interventional neuroradiology",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Parent vessel occlusion (PVO) is a traditional method for treating aneurysms that are not amenable to direct coiling/clipping.",
+      "PVO has been supplemented with a bypass in situations where the collateral circulation is deemed inadequate.",
+      "PVO remains a viable solution in select ruptured and unruptured intracranial aneurysms.",
+      "Parent artery occlusion with revascularization remains an important treatment of complex intracranial aneurysms.",
+      "Techniques for vessel occlusion vary depending on anatomy and operator, with proximal flow arrest and coils being the main tenants of the procedure.",
+      "Endovascular parent vessel occlusion is an established treatment option for a variety of neurovascular pathologies"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

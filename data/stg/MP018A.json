@@ -1,0 +1,89 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Chronic Cough & Wheezing/ : Chronic cough Wheezing_Medco.pdf (clinical + mandatory docs) + Chronic cough Wheezing_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "MP018A",
+  "procedure_code": "MP018A",
+  "condition": "Wheezing",
+  "procedure_name": "Wheezing",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Chronic cough Wheezing_Medco.pdf",
+    "Chronic cough Wheezing_PPD.CPD.pdf"
+  ],
+  "alos": "1 day (Once diagnosis is established the case can be booked in the relevant package, further stay/admission should be decided based on the level of complications of the disease)",
+  "min_doctor_qualification": [
+    "MD/DNB/DCH/ equivalent (Pediatric Medicine)",
+    "DM/DNB/ equivalent (Pulmonology)"
+  ],
+  "clinical_indications": [
+    "Wheezing is a common presenting symptom of respiratory disease in infants and children.",
+    "Wheezing during infancy may be due to viral infections.",
+    "Wheezing in asthma is recurrent, worsens at night and after exercise, is seasonal, and may be associated with other allergic illnesses like atopic dermatitis or allergic rhinitis.",
+    "Clinical features suggestive of other causes of wheezing include neonatal onset, associated difficulty in feeding, choking or vomiting, localized findings in the chest, or abnormality in the cardiovascular system.",
+    "Presenting complaints include noisy breathing, increased work of breathing (fast breathing, chest indrawing), and high-pitched musical sound heard during expiration.",
+    "Associated symptoms may include fever, weight loss, night sweats, and dysphagia.",
+    "Admission is required if respiratory distress persists after failure of immediate management or recurrent wheezing."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_vitals_exam_planned_treatment_admission_advice",
+        "label": "Clinical notes showing vitals, examination findings, planned line of treatment and advice for admission"
+      },
+      {
+        "key": "mandatory_investigations",
+        "label": "Chest X-ray, Complete blood count, Erythrocyte Sedimentation rate, Chest CT / HRCT, Spirometry, Sputum examination/gastric aspirate, Tuberculin test"
+      },
+      {
+        "key": "optional_etiology_based_investigations",
+        "label": "Optional based on etiology and availability: Renal function test, Serum Electrolytes, barium esophagram / Ph manometry, BAL (bronchoalveolar lavage), Sweat chloride test, Allergy testing (elevated immunoglobulin E), Angiography, 2D ECHO, Bronchoscopy/Nasopharyngoscopy/Endoscopy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is there documentation of detailed h/o of wheeze including patient's age at the onset of wheezing and the course?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Detailed history of wheeze, including patient's age at onset and course, is missing or incomplete.",
+    "Clinical notes for pre-authorization are missing or incomplete, lacking details on vitals, examination findings, planned line of treatment, or admission advice.",
+    "Mandatory investigations for pre-authorization (Chest X-ray, CBC, ESR, CT/HRCT, Spirometry, Sputum examination/gastric aspirate, Tuberculin test) are missing or incomplete.",
+    "Optional etiology-based investigations not provided when clinically indicated or available for pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) with treatment details are missing or incomplete for claim submission.",
+    "Detailed discharge summary is missing or incomplete for claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Causes of wheezing in children are categorized as Acute (e.g., Asthma, Bronchiolitis, Laryngotracheobronchitis, Atypical infection, Bacterial tracheitis, Foreign body aspiration, Esophageal foreign body) and Chronic or recurrent. Chronic or recurrent causes include Structural abnormalities (e.g., Tracheo-bronchomalacia, Vascular compression/rings, Tracheal stenosis/webs, Cystic lesions/masses, Tumors/lymphadenopathy, Cardiomegaly) and Functional abnormalities (e.g., Asthma, Gastroesophageal reflux, Recurrent aspiration, Cystic fibrosis, Immunodeficiency, Primary ciliary dyskinesia, Bronchopulmonary dysplasia, Retained foreign body, Bronchiolitis obliterans, Pulmonary edema, Inducible laryngeal obstruction, Interstitial lung disease).",
+      "Wheeze can be divided according to its pattern and duration, including Episodic wheeze, Multi-trigger wheeze, Never or infrequent wheeze, Transient early wheeze, Intermediate wheeze, Late-onset wheeze, and Persistent wheeze, each with distinct characteristics and associations.",
+      "An algorithmic approach helps in evaluating the wheezing child in primary care, guiding diagnosis based on onset of symptoms (chronic/intermittent, gradual, sudden) and associated clinical features."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

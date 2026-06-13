@@ -1,0 +1,129 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV002L",
+  "procedure_code": "SV002L",
+  "condition": "Congenital Heart Disease",
+  "procedure_name": "Atrial septectomy + PA band",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Atrial Septectomy and PA band_Medco.pdf",
+    "Atrial Septectomy and PA band_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/Equivalent (in Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Single ventricle physiology with increase pulmonary blood flow and will require single ventricular pathway"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including clinical assessment, indication of procedure, implant requirement, and planned line of management"
+      },
+      {
+        "key": "pulse_oximetry_documentation",
+        "label": "Pulse oximetry documentation"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      },
+      {
+        "key": "chest_xray_(optional)",
+        "label": "Optional Chest X-ray"
+      },
+      {
+        "key": "electrocardiogram_(optional)",
+        "label": "Optional Electrocardiogram"
+      },
+      {
+        "key": "cardiac_catheterization_(optional)",
+        "label": "Optional Cardiac catheterization"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_(icps)",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_stills_of_echo_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "implant_details_barcode_invoice",
+        "label": "Implant details barcode/invoice"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain all vitals, detailed history, symptoms, signs, physical examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Implant invoice/barcode details if applicable?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical assessment and Echo/Doppler report not supportive of diagnosis or not indicative of surgery.",
+    "Mandatory clinical notes missing or incomplete at pre-authorization, lacking essential details like indication or planned management.",
+    "Mandatory Echo/Doppler report missing at pre-authorization or not adequately documenting the diagnosis.",
+    "Missing post-procedure ECHO stills or report, or report does not confirm repair of the defect at claim stage.",
+    "Implant details barcode/invoice not submitted at claim stage, preventing verification of implant used.",
+    "Discharge summary missing or incomplete, or lacking essential follow-up advice at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Complex congenital cyanotic heart disease where it is desirable to increase intracardiac mixing and reduce pulmonary blood flow."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

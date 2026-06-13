@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN035B",
+  "procedure_code": "SN035B",
+  "condition": "Trigeminal Neuralgia",
+  "procedure_name": "Neurectomy - Trigeminal",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Trigeminal Neuralgia_Medco.pdf",
+    "Trigeminal Neuralgia_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Intense facial pain affecting day to day activity & can be triggered by common activities such as eating, talking, shaving, brushing, chewing",
+    "Hemifacial spasm",
+    "Recurrent paroxysms of unilateral facial pain in the distribution(s) of one or more divisions of the trigeminal nerve, with no radiation beyond, and fulfilling criteria B and C (ICHD-3 criteria)",
+    "Pain lasting from a fraction of a second to two minutes",
+    "Pain of severe intensity",
+    "Pain is electric shock-like, shooting, stabbing or sharp in quality",
+    "Pain precipitated by innocuous stimuli within the affected trigeminal distribution",
+    "Not better accounted for by another ICHD-3 diagnosis"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including clinical evaluation, indication of procedure, and planned line of management"
+      },
+      {
+        "key": "mri_brain_mri_angiography",
+        "label": "MRI Brain / MRI Angiography"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are clinical notes detailing history, signs & symptoms, evaluation findings, indication for procedure, and planned line of treatment available?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient present with intense facial pain affecting day to day activity & can be triggered by common activities such as eating, talking, shaving, brushing, chewing?",
+        "expected": true
+      },
+      {
+        "q": "Did MRI Brain/MRI Angio imaging show the status of artery in C.P angle?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the history, clinical evaluation, and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation or imaging was not indicative of surgery.",
+    "Clinical notes detailing history, signs & symptoms, evaluation findings, indication for procedure, and planned line of treatment are missing or incomplete.",
+    "MRI Brain/MRI Angio imaging showing the status of artery in C.P angle is missing or does not support the indication.",
+    "Patient did not present with intense facial pain affecting day to day activity or pain that can be triggered by common activities.",
+    "Detailed Indoor case papers (ICPs) with daily vitals and treatment details are missing or incomplete.",
+    "Detailed procedure / operative notes are missing or incomplete.",
+    "Discharge summary with follow-up advice at the time of discharge is missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Trigeminal neuralgia (TN) (also known as tic douloureux) is characterized by recurrent brief episodes of unilateral electric shock-like pains, abrupt in onset and termination, in the distribution of one or more divisions of the fifth cranial (trigeminal) nerve that typically are triggered by innocuous stimuli."
+    ],
+    "surgical_options": [
+      "Microvascular decompression – a major neurosurgical procedure that involves craniotomy and the removal or separation of various vascular structures, often an ectatic superior cerebellar artery, away from the trigeminal nerve",
+      "Rhizotomy – encompasses a number of percutaneous surgical techniques that are performed by passing a cannula through the foramen ovale under fluoroscopic guidance, followed by lesioning of the trigeminal ganglion or root using one of several options: Radiofrequency thermocoagulation rhizotomy, Mechanical balloon compression, Chemical (glycerol) rhizolysis",
+      "Stereotactic Radiosurgery - involves focusing radiation on the trigeminal nerve to cause injury and prevent pain transmission, performed using Gamma Knife or X-Knife",
+      "Peripheral neurectomy – performed on branches of the trigeminal nerve (supraorbital, infraorbital, alveolar, and lingual nerves) by incision, alcohol injection, radiofrequency lesioning, or cryotherapy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

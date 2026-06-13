@@ -1,0 +1,99 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG068A",
+  "procedure_code": "MG068A",
+  "condition": "Systemic Lupus Erythematosus",
+  "procedure_name": "Systematic lupus erythematosus",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": null,
+  "source_files": [
+    "Systemic lupus erythematosus_Medco.pdf",
+    "Systemic lupus erythematosus_PPD.CPD.pdf"
+  ],
+  "alos": "4-6 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Diagnosis of Systemic Lupus Erythematosus (SLE) backed by clinical manifestation.",
+    "Clinical manifestations in children: Malar rash, Ulcers/mucocutaneous involvement, Renal involvement (proteinuria, urinary cellular casts), Seizures, Thrombocytopenia, Hemolytic anemia, Fever, Lymphadenopathy.",
+    "Clinical manifestations in adults: Nausea, Fever, Arthralgia, Seizures, Dyspepsia."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "Antinuclear antibody (ANA) test",
+      "operator": "==",
+      "value": "Positive",
+      "note": "Required for pre-authorization and claim processing"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_eval_findings_treatment_plan",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, advise for admission and planned line of treatment"
+      },
+      {
+        "key": "ana_test_report",
+        "label": "Antinuclear antibody (ANA) test"
+      },
+      {
+        "key": "esr_crp_level",
+        "label": "Erythrocyte sedimentation rate (ESR) or C-reactive protein (CRP) level"
+      },
+      {
+        "key": "x_ray_report",
+        "label": "X ray report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers with treatment details"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the report of Antinuclear antibody (ANA) test show positive result?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Antinuclear antibody (ANA) test did not show a positive result.",
+    "Clinical Notes including evaluation findings, indications for the procedure, advise for admission and planned line of treatment not submitted or incomplete.",
+    "Antinuclear antibody (ANA) test report not submitted.",
+    "Erythrocyte sedimentation rate (ESR) or C-reactive protein (CRP) level not submitted.",
+    "X ray report not submitted.",
+    "Detailed Indoor Case Papers with treatment details not submitted or incomplete.",
+    "Detailed Discharge Summary not submitted or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "DNB / MD / or Equivalent (in General Medicine / Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Systemic lupus erythematosus (SLE) is the most common type of lupus, an autoimmune disease in which the immune system attacks its own tissues, causing widespread inflammation and tissue damage in the affected organs (joints, skin, brain, lungs, kidneys, and blood vessels).",
+      "There is no cure for lupus, but medical interventions and lifestyle changes can help control it.",
+      "Lupus is a long-term autoimmune condition causing inflammation in the skin, organs, and various other body parts.",
+      "Two main types of lupus are Discoid lupus and Systemic lupus erythematosus (SLE).",
+      "Clinical Manifestation in children: Malar rash, Ulcers/mucocutaneous involvement, Renal involvement (proteinuria, urinary cellular casts), Seizures, Thrombocytopenia, Hemolytic anemia, Fever, Lymphadenopathy.",
+      "Clinical Manifestation in adult: Nausea, Fever, Arthralgia, Seizures, Dyspepsia."
+    ],
+    "surgical_options": null,
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

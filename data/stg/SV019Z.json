@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV019Z",
+  "procedure_code": "SV019Z",
+  "condition": "Congenital Arterio Venous Fistula",
+  "procedure_name": "Congenital Arterio Venous Fistula",
+  "specialty": "CTVS/Plastic Surgery/Pediatric surgery/Cardiology/Intervention Radiology",
+  "version": "1.1",
+  "source_files": [
+    "Congenital Arterio Venous Fistula MEDCO.pdf",
+    "Congenital Arterio Venous Fistula PPD_CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "MCh/ or equivalent (in Cardiothoracic Surgery, Vascular Surgery)",
+    "Mch/DNB/Equivalent (in Plastic surgery, Pediatric surgery)",
+    "DM/DNB/Equivalent in Cardiology or Interventional Radiology"
+  ],
+  "clinical_indications": [
+    "Congenital fistulas are typically repaired when they present due to sequelae (pathological consequences) in later life, as many may remain asymptomatic until adulthood.",
+    "Hemodynamic instability, injury to adjacent tissue, and unsuccessful endovascular repair are all indications for open surgical intervention on a fistula."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_indications_admission_notes",
+        "label": "Clinical notes with detailed history, indications for the procedure and admission notes"
+      },
+      {
+        "key": "relevant_investigations_duplex_ultrasound_angiography_cta_mra",
+        "label": "Relevant investigations - Duplex ultrasound scan/Angiography/CTAngiography (CTA)/ MRA"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/ operative notes"
+      },
+      {
+        "key": "barcode_of_implant_or_graft_if_used_optional",
+        "label": "Barcode of the implant or graft if used (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the history of trauma or intervention that may cause arteriovenous fistula ruled out for the patient?",
+        "expected": true
+      },
+      {
+        "q": "Werethe patient's investigation reports Duplex ultrasound scan/Angiography/ CT Angiography (CTA)/ MRA suggestive of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Are the Clinical notes with detailed history, indications for the procedure and admission notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the investigations reports Duplex ultrasound scan/Angiography/ CT Angiography (CTA)/ MRA submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Arethe detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure/ operative notessubmitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the barcode of the implant or graft if used submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is a detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "History of trauma or intervention that may cause arteriovenous fistula was not ruled out for the patient.",
+    "Patient's investigation reports (Duplex ultrasound scan/Angiography/CTAngiography/MRA) were not suggestive of the procedure.",
+    "Clinical notes with detailed history, indications for the procedure, or admission notes were not submitted at pre-authorization.",
+    "Relevant investigation reports (Duplex ultrasound scan/Angiography/CTAngiography/MRA) were not submitted at pre-authorization.",
+    "Detailed Indoor case papers (ICPs) or detailed procedure/operative notes were not submitted at claim submission.",
+    "Barcode of the implant or graft was not submitted at claim submission, if an implant or graft was used."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Care Facilities with the availability of Cath Lab.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "An abnormal connection between an artery and a vein is known as an arteriovenous fistula (AVF). Congenital Arterio Venous Fistula occurs in isolation or as a part of a complex arteriovenous (AV) malformation."
+    ],
+    "surgical_options": [
+      "Repair of arteriovenous fistula (AVF) can be done by endovascular or open surgical procedures",
+      "Endovascular management includes the use of coils, stent-grafts, covered stents and cyanoacrylate glue for closing the fistula.",
+      "Open Surgical Repair can be made via autogenous (usually saphenous vein) grafts, synthetic grafts, venous ligation (diameter dependent), bypass, or complex reconstruction involving one or more of the above."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

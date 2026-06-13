@@ -1,0 +1,86 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Stress Incontinence Surgery/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). This HBP 1.0 code S700132 is for the same procedure as SU062A.",
+  "stg_id": "S700132",
+  "procedure_code": "S700132",
+  "condition": "Stress incontinence surgery",
+  "procedure_name": "Stress incontinence surgery - Open",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Stress incontinence surgery_Medco.pdf",
+    "Stress incontinence surgery_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MCh/DNB equivalent in Urology"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "cystoscopy_usg_urodynamic_study",
+        "label": "Cystoscopy/ USG /Urodynamic study to confirm the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "barcode_invoice_for_implant_used",
+        "label": "Barcode/invoice for Implant used"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was there any evidence of stress urinary inconsistence in the cystoscopy report?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "No evidence of stress urinary incontinence found in the cystoscopy report",
+    "Clinical notes including evaluation findings, indication for procedure, and planned line of management not submitted or incomplete",
+    "Cystoscopy/ USG /Urodynamic study not submitted or not confirming the diagnosis",
+    "Barcode/invoice for Implant used not submitted at claim stage"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Stress urinary Incontinence: (SUI) Is an Unintentional loss if urine during physical activity or coughing, laughing, sneezing, running or heavy lifting.",
+      "Urinary incontinence can originate from the urethra or bladder or from a combination of both.",
+      "Bladder causes are detrusor hyperactivity or hypoactivity.",
+      "Urethral causes are intrinsic urethral sphincter deficiency with or without urethral hypermobility."
+    ],
+    "surgical_options": [
+      "Open (Anterior repair, Transabdominal & Transvaginal suspension, Sling procedures)",
+      "Laparoscopic"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

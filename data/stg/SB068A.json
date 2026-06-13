@@ -1,0 +1,127 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB068A",
+  "procedure_code": "SB068A",
+  "condition": "Leg Pain / Radiculopathy",
+  "procedure_name": "Nerve root block",
+  "specialty": "Orthopedics, Neurosurgery (Nerve root block)",
+  "version": "1.1",
+  "source_files": [
+    "Nerve Repair Surgery, Exploration and Ulnar nerve Repair_Medco.pdf",
+    "Nerve Repair Surgery,Exploration and Ulnar nerve Repair_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in Orthopedics)",
+    "MCh/DNB/Equivalent (in Neurosurgery)",
+    "MCh/DNB/Equivalent (in Plastic surgery)"
+  ],
+  "clinical_indications": [
+    "Continuous leg pain (if the pathology is not severe)",
+    "Moderate stenosis",
+    "Facile cyst causing unilateral radiculopathy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_signs_symptoms",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "x_ray_affected_part_labelled",
+        "label": "X-ray of affected part labelled with patient ID, date and side (Left/Right)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure / Operative Notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary with follow-up advise at the time of discharge"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "MRI / EMG/ NCV of the affected part labelled with patient ID, date and side (Left/ Right) - confirming the diagnosis submitted?",
+        "expected": false
+      },
+      {
+        "q": "X-ray of affected part labelled with patient ID, date and side (Left/ Right) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Radiological investigations confirming the need of surgery; +/- NCV report submitted?",
+        "expected": false
+      },
+      {
+        "q": "Clinical photograph of affected part",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are Detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the Post procedure clinical photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission are missing or incomplete.",
+    "X-ray of affected part labelled with patient ID, date and side (Left/Right) is missing or incomplete, or incorrectly labelled.",
+    "The clinical notes and imaging reports submitted are not indicative of the procedure.",
+    "Detailed Indoor case papers (ICPs) are missing or incomplete.",
+    "Post-procedure clinical photograph is missing.",
+    "Detailed procedure / Operative Notes are missing or incomplete.",
+    "Discharge summary with follow-up advice at the time of discharge is missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Performed for continuous leg pain, if the pathology is not severe then the nerve root block has a very good outcome.",
+      "Moderate stenosis, facile cyst causing unilateral radiculopathy.",
+      "A nerve root block (or a facet block) is the placement of a needle and injection of a combination of local anesthetic and steroid into the sheath surrounding a nerve root in the spine.",
+      "A nerve root block may be Diagnostic (Discography) or Diagnostic & therapeutic (Radicular pain (Epidural steroid injection-Transforaminal inter laminar caudal) and Axial pain (Facet joint injection)).",
+      "Local anesthetics (Diagnostic par block), Steroids (Epidural steroid injection), Dye (Discography) are the assorted injections usually used in Nerve root procedure based on the objective.",
+      "In recent years, ultrasound (US)-guided nerve blocks have gained attention as it offers several advantages than those performed with fluoroscopy or CT."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

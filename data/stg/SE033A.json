@@ -1,0 +1,133 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE033A",
+  "procedure_code": "SE033A",
+  "condition": "Silicon Oil Removal",
+  "procedure_name": "SOR (Silicon Oil Removal)",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Vitreoretinal surgery_Medco.pdf",
+    "Vitreoretinal surgery_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma or equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "Patient has a history of undergoing vitreoretinal surgery with silicon oil insertion in the same eye",
+    "Recurrent retinal detachment (as a complication of silicon oil injection/removal)",
+    "Emulsification of silicone oil",
+    "Silicone oil in the anterior chamber",
+    "Keratopathy",
+    "Glaucoma",
+    "Chronic hypotony",
+    "Cataract",
+    "Adherence of oil droplets to an intraocular lens",
+    "Unexplained visual loss following removal of silicon oil"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "fundus_examination",
+        "label": "Fundus examination"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure/ operative notes"
+      },
+      {
+        "key": "iol_sticker_barcode",
+        "label": "Sticker/Barcode of the Intraocular lens (IOL) (if IOL used)"
+      },
+      {
+        "key": "intraoperative_photograph_patient_id_timestamp",
+        "label": "Intraoperative photograph with patient ID, time and date stamp (optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Patient has a history of undergoing vitreoretinal surgery with Silicon oil insertion in the same eye?",
+        "expected": true
+      },
+      {
+        "q": "Documentary evidence of presence of silicon oil on fundus examination/ B-scan is provided?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected Eye (R or L) with full face photograph is provided?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Clinical notes including history (diabetes/trauma), clinical symptoms (visual haze/ floaters/ cloudy vision/ photophobia/ shadow/ curtain effect/ cobwebs) and examination findings (fundus examination) are present?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "OT notes detail the steps of surgery performed (including steps indication removal of silicon oil) and the outcomes of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Documents show appropriate post-op care and follow-up advice?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient lacks a history of undergoing vitreoretinal surgery with Silicon oil insertion in the same eye.",
+    "No documentary evidence (from fundus examination or B-scan) of silicon oil presence provided at pre-authorization.",
+    "Clinical notes incomplete regarding detailed history or examination findings (fundus examination).",
+    "Affected eye not labelled R or L in the clinical photograph, or full face photograph not provided.",
+    "Procedure/operative notes missing at claim submission or lack detail on surgical steps for silicon oil removal and outcomes.",
+    "Fundus examination missing at pre-authorization."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "complications_of_silicon_oil_injection_removal": [
+      "Recurrent retinal detachment",
+      "Emulsification",
+      "Silicone oil in the anterior chamber",
+      "Keratopathy",
+      "Glaucoma",
+      "Chronic hypotony",
+      "Cataract",
+      "Adherence of oil droplets to an intraocular lens",
+      "Unexplained visual loss following removal"
+    ],
+    "investigations": [
+      "Fundus examination using direct/ indirect ophthalmoscope",
+      "B-scan"
+    ]
+  }
+}

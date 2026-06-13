@@ -1,0 +1,194 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO046A",
+  "procedure_code": "SO046A",
+  "condition": "Antenatal Complications",
+  "procedure_name": "Hospitalization for Antenatal Complications",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Hospitilization of antenatal complications_Medco.pdf",
+    "Hospitilization of antenatal complications_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Hyperemesis Gravidarum",
+    "Miscarriage and recurrent pregnancy loss",
+    "Ectopic pregnancy",
+    "Intrauterine fetal death",
+    "Multifetal pregnancy",
+    "Fetal growth disorders: Growth restriction and Macrosomia",
+    "Disorders of Amniotic fluid",
+    "Preterm Labor and Birth",
+    "Prelabor Rupture of the Membranes",
+    "Postterm Pregnancy",
+    "Red cell Alloimmunization",
+    "Antepartum hemorrhage",
+    "Hypertensive disorders: Gestational Hypertension",
+    "Hypertensive disorders: Chronic Hypertension",
+    "Hypertensive disorders: Chronic Hypertension with superimposed preeclampsia",
+    "Hypertensive disorders: Preeclampsia and Eclampsia",
+    "Diabetes in pregnancy: Pregestational Diabetes Mellitus (DM) – Type 1 & 2",
+    "Diabetes in pregnancy: Gestational Diabetes (GDM)",
+    "Diabetes in pregnancy: Diabetic Ketoacidosis (DKA)",
+    "Hematological disorders: Anemia in pregnancy",
+    "Hematological disorders: Sickle cell disease in pregnancy",
+    "Hematological disorders: Thalassemia's in pregnancy",
+    "Hematological disorders: Thrombocytopenia in pregnancy",
+    "Cardiac diseases in pregnancy",
+    "Hepatobiliary and gastrointestinal disorders: Intrahepatic cholestasis of pregnancy",
+    "Hepatobiliary and gastrointestinal disorders: Acute fatty liver of pregnancy",
+    "Hepatobiliary and gastrointestinal disorders: Hepatic diseases that occur in pregnancy",
+    "Hepatobiliary and gastrointestinal disorders: Preexisting chronic disease in pregnancy",
+    "Hepatobiliary and gastrointestinal disorders: Gallstones in pregnancy",
+    "Hepatobiliary and gastrointestinal disorders: Constipation and Diarrhea",
+    "Hepatobiliary and gastrointestinal disorders: Gastroesophageal reflux disease (GERD)",
+    "Hepatobiliary and gastrointestinal disorders: Appendicitis",
+    "Endocrine disorders and obesity: Thyroid disorders in pregnancy (hypothyroidism, hyperthyroidism, thyroid storm)",
+    "Endocrine disorders and obesity: Adrenal disorders and pregnancy",
+    "Endocrine disorders and obesity: Obesity in pregnancy",
+    "Respiratory, dermatological, and connective tissue disorders: Asthma",
+    "Respiratory, dermatological, and connective tissue disorders: Systemic Lupus Erythematosus (SLE) in pregnancy",
+    "Thromboembolic disorders: Thrombophilia",
+    "Thromboembolic disorders: Deep vein thrombosis",
+    "Thromboembolic disorders: Pulmonary embolism",
+    "Urinary tract and renal disorders: Urinary tract infections",
+    "Urinary tract and renal disorders: Acute renal failure in pregnancy",
+    "Urinary tract and renal disorders: Chronic renal diseases in pregnancy",
+    "Infections",
+    "Benign and Malignant Tumors of the Reproductive tract"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed clinical notes with history, symptoms, signs, examination findings, planned line for management, and advice for admission"
+      },
+      {
+        "key": "blood_pressure_documentation",
+        "label": "Blood pressure documentation"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete Blood Count"
+      },
+      {
+        "key": "urine_routine_and_microscopic_examination",
+        "label": "Urine routine and microscopic examination"
+      },
+      {
+        "key": "blood_glucose",
+        "label": "Blood glucose"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG Abdomen/pelvis"
+      },
+      {
+        "key": "oral_glucose_tolerance_test",
+        "label": "Oral Glucose Tolerance Test (OGTT)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "investigation_reports_if_done",
+        "label": "Investigation reports (if done)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes_if_applicable",
+        "label": "Detailed operative/procedure notes, if applicable"
+      },
+      {
+        "key": "blood_transfusion_notes_if_given",
+        "label": "Blood transfusion notes, if given"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history especially current obstetric history, symptoms, signs, physical examination including local examination, and planned line of treatment, advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical condition, evaluation findings, and/or imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available (if applicable)?",
+        "expected": true
+      },
+      {
+        "q": "Was the history, clinical findings, and investigations/imaging indicative of admission?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Pregnancy not confirmed by investigations and/or imaging.",
+    "Diagnosis or patient's condition not documented as requiring admission for further management.",
+    "Clinical notes missing or incomplete, lacking detailed obstetric history, symptoms, signs, examination findings, planned management, or admission advice.",
+    "Indoor Case Papers missing or incomplete at claim submission, lacking daily vitals or line of treatment.",
+    "Discharge summary missing or lacking follow-up advice at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre and indoor care areas including blood transfusion arrangements",
+    "min_doctor_qualification_desirable": "MBBS with specialized training",
+    "clinical_key_pointers": [
+      "Fatigue or weakness",
+      "Anorexia and indigestion",
+      "Palpitation",
+      "Bleeding per vaginum with pregnancy",
+      "Pain abdomen",
+      "History of trauma / lifting heavy weight",
+      "Breathing problems",
+      "Unexplained headaches",
+      "Excessive weight gain",
+      "Swelling in any part of the body",
+      "Increased thirst",
+      "Frequent urination",
+      "Extreme hunger",
+      "Unexplained weight loss",
+      "Irritability",
+      "Blurred vision",
+      "Incidental findings during routine antenatal examination"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "If woman presents with bleeding per vaginum, after P/A & P/S to confirm amount of bleeding & rule out local causes, all such cases to be referred to CHC or higher centre.",
+      "If non compliant or Hb < 9g%, parenteral iron sucrose therapy not administered, or if Hb < 7g%, patient to be referred to higher centre.",
+      "Refer to higher centre if any discrepancy between fundal height and period of gestation.",
+      "High risk pregnancy patients to be delivered at district hospital/medical college and preferably receive antenatal care at these centres."
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "alos_note": "Once diagnosis is established the case can be booked in the relevant package or further stay/admission should be decided based on the level of complications of the disease"
+  }
+}

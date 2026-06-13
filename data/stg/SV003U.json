@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV003U",
+  "procedure_code": "SV003U",
+  "condition": "Tetralogy of Fallot",
+  "procedure_name": "Surgical Correction of Tetralogy of Fallot Repair (Category - III Congenital Heart Disease)",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Tetralogy of Fallot Repair_Medco.pdf",
+    "Tetralogy of Fallot Repair_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "M.Ch. Cardiothoracic Surgery",
+    "DNB Cardiothoracic Surgery",
+    "equivalent Cardiothoracic Surgery"
+  ],
+  "clinical_indications": [
+    "All patients need surgical repair",
+    "Stable, minimally cyanosed: Total repair at 6–12 months of age or earlier according to the institutional policy (Class I)",
+    "Symptomatic children of <6 months of age with significant cyanosis or history of spells despite therapy: Palliation (by systemic-to-pulmonary artery shunt or stenting of the ductus arteriosus/right ventricular outflow tract or pulmonary valve balloon valvuloplasty) or total repair depending on anatomy and center's experience (Class I)",
+    "Lower threshold for earlier surgery if no requirement of transannular patch is anticipated",
+    "Patients having TOF with absent pulmonary valve who are stable: Medical management till 1 year of age followed by total correction with repair of pulmonary artery branch dilation/aneurysm (Class I)",
+    "Patients with anomalous left anterior descending artery from the right coronary artery crossing the right ventricular outflow tract, who are likely to need RV-to-pulmonary artery conduit (Class I): <10 kg weight with significant cyanosis: Aortopulmonary shunt",
+    "Patients with anomalous left anterior descending artery from the right coronary artery crossing the right ventricular outflow tract, who are likely to need RV-to-pulmonary artery conduit (Class I): >10 kg weight: Total repair using conduit, or double-barreled approach after 2 years of age, when the child weighs >10 kg."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of Tetralogy of Fallot Repair?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the detailed discharge summary mention the need for reoperation?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report is not suggestive of Tetralogy of Fallot Repair",
+    "Clinical notes missing, incomplete, or do not clearly indicate procedure",
+    "Indoor case papers not submitted",
+    "Procedure / Operative notes not submitted or are incomplete",
+    "Post procedure ECHO stills do not show repair of the defect",
+    "Detailed Discharge Summary is missing or does not mention follow-up date",
+    "Detailed discharge summary mentions the need for reoperation"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "TOF is the most common cyanotic congenital heart disease with a prevalence of 0.4/1000 live births constituting about 5% of all congenital heart defects. The clinical signs and symptoms seen in infants generally vary in accordance with the degree of right ventricular outflow tract obstruction.",
+      "Almost two-thirds of newborns with TOF are acyanotic at birth, but by 6 months of age, over half of them have cyanosis at rest. This occurs because of worsening infundibular stenosis which increases right-to-left shunting across the VSD.",
+      "Intermittent hypercyanotic spells are one of the defining features of TOF. Peak incidence of these episodes occurs between the 2nd and 6th months of life, and these become infrequent after 2 years of age.",
+      "Patients with untreated TOF have an estimated 1-year, 3-year, and 10-year survival of 66%, 49%, and 24%, respectively."
+    ],
+    "surgical_options": [
+      "Palliation (by systemic-to-pulmonary artery shunt or stenting of the ductus arteriosus/right ventricular outflow tract or pulmonary valve balloon valvuloplasty) or total repair",
+      "Total correction with repair of pulmonary artery branch dilation/aneurysm",
+      "Aortopulmonary shunt",
+      "Total repair using conduit, or double-barreled approach"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

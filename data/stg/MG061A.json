@@ -1,0 +1,145 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG061A",
+  "procedure_code": "MG061A",
+  "condition": "Hyperosmolar Non-ketotic coma",
+  "procedure_name": "Hyperosmolar Non-Ketotic coma",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Hyperosmolar Non-Ketotic coma_Medco.pdf",
+    "Hyperosmolar Non-Ketotic coma_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "DM/MD/DNB equivalent (in General Medicine, Endocrinology & Metabolism)"
+  ],
+  "clinical_indications": [
+    "Plasma glucose level greater than 600 mg/dL",
+    "Plasma effective osmolarity greater than 320 mOsm/L",
+    "Absence of significant ketoacidosis"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "plasma_glucose_level",
+      "operator": ">",
+      "value": "600 mg/dL",
+      "note": null
+    },
+    {
+      "field": "plasma_effective_osmolarity",
+      "operator": ">",
+      "value": "320 mOsm/L",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_indications_treatment_plan",
+        "label": "Clinical Notes (evaluation findings, indications, planned treatment)"
+      },
+      {
+        "key": "blood_glucose",
+        "label": "Blood Glucose"
+      },
+      {
+        "key": "serum_osmolarity",
+        "label": "Serum osmolarity"
+      },
+      {
+        "key": "urine_ketones",
+        "label": "Urine ketones"
+      },
+      {
+        "key": "hemogram",
+        "label": "Hemogram"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers with treatment details"
+      },
+      {
+        "key": "blood_glucose_post_treatment",
+        "label": "Post-treatment Blood glucose"
+      },
+      {
+        "key": "serum_osmolarity_post_treatment",
+        "label": "Post-treatment Serum osmolarity"
+      },
+      {
+        "key": "hba1c",
+        "label": "HbA1C"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the following Investigation reports submitted? 1. Blood glucose 2. Serum osmolarity 3. urine ketones 4. hemogram",
+        "expected": true
+      },
+      {
+        "q": "Was the serum osmolarity of patient greater than 320 mOsm/L?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor Case Papers with vital (BP and Pulse) and Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the following post treatment investigation reports submitted? 1. Blood glucose 2. Serum osmolarity 3. HbA1C",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Serum osmolarity not greater than 320 mOsm/L or not documented at pre-authorization.",
+    "Plasma glucose level not greater than 600 mg/dL or not documented at pre-authorization.",
+    "Absence of significant ketoacidosis not confirmed for diagnosis.",
+    "Clinical notes, evaluation findings, indications, or planned line of treatment not submitted.",
+    "Missing or incomplete pre-authorization investigation reports (Blood glucose, Serum osmolarity, urine ketones, hemogram).",
+    "Missing or incomplete detailed indoor case papers with vital (BP and Pulse) and treatment details at claim submission.",
+    "Missing or incomplete post-treatment investigation reports (Blood glucose, Serum osmolarity, HbA1C) at claim submission.",
+    "Detailed discharge summary not submitted or follow-up date not mentioned at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hyperosmolar hyperglycemic syndrome (HHS) is a clinical condition that arises from a complication of diabetes mellitus. This problem is most commonly seen in type 2 diabetes.",
+      "If an infectious process precedes HHS, signs, and symptoms include: Fever, Malaise, General weakness, Tachypnea, Tachycardia.",
+      "If the precipitating factor is a cardiac, vascular condition, signs and symptoms will include: Chest pain, Chest tightness, A headache, Dizziness, Palpitation.",
+      "The typical clinical presentation of patients with HHS is increased urination (polyuria) and increase water intake (polydipsia).",
+      "Weakness, malaise, and lethargy can also be part of the complaint.",
+      "Severe dehydration from HHS can also affect the skin and integumentary system. Typically, the skin and the oral mucosa are dry with a delayed capillary refill.",
+      "The most important distinguishing factor in HHS is the presence of neurological signs. Decreased cerebral blood flow from severe dehydration can cause: Focal neurological deficit, Disturbance in visual acuity, Delirium, Coma.",
+      "System-based physical assessment findings include: General appearance (ill-appearing with altered mental status); Cardiovascular (Tachycardia, orthostatic hypotension, weak and thready pulses); Respiratory Rate (Can be normal, tachypnea might be present if acidosis is profound); Skin (Delayed capillary refill, poor skin turgor, skin tenting might not be present even in severe dehydration because of obesity); Genitourinary (Decreased urine output); Central Nervous System (Focal neurological deficit, lethargy with low Glasgow Coma Score, comatose in severe cases)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

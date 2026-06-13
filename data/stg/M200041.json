@@ -1,0 +1,167 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M200041",
+  "procedure_code": "M200041",
+  "condition": "Kawasaki disease",
+  "procedure_name": "Kawasaki disease (Mucocutaneous lymph node syndrome)",
+  "specialty": "Pediatric Medical management",
+  "version": "1.1",
+  "source_files": [
+    "Kawasaki disease_Medco.pdf",
+    "Kawasaki disease_PPD.CPD.pdf"
+  ],
+  "alos": "7 - 10 days",
+  "min_doctor_qualification": [
+    "MD / DNB / DCH/ equivalent (Pediatric Medicine)"
+  ],
+  "clinical_indications": [
+    "Fever lasting 5 days and presence of at least four out of five symptoms: Conjunctivitis (usually bulbar, bilateral, non-purulent), Rash (just about anything except vesicles, bullae), Adenopathy (usually cervical, unilateral, >1.5cm), Strawberry tongue (or other changes like lip redness, dry fissured), Hand and feet edema/erythema (peeling later in course)",
+    "Incomplete Kawasaki disease suspected if: Fever of more than 5 days and 2-3 of above criteria OR ≤ 6 months old predominantly mostly under the age of 5 years and unexplained fever ≥ 7 days regardless of above criteria",
+    "Anemia for age",
+    "Positive echocardiogram"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "CRP",
+      "operator": "≥",
+      "value": "3.0 mg/dL",
+      "note": null
+    },
+    {
+      "field": "ESR",
+      "operator": "≥",
+      "value": "40 mm/hr",
+      "note": null
+    },
+    {
+      "field": "Platelet count",
+      "operator": ">",
+      "value": "450,000/cumm",
+      "note": "after the 7th day of fever, for thrombocytosis"
+    },
+    {
+      "field": "WBC count",
+      "operator": "≥",
+      "value": "15,000/mm³",
+      "note": "for leukocytosis"
+    },
+    {
+      "field": "Albumin",
+      "operator": "≤",
+      "value": "3.0 g/dL",
+      "note": null
+    },
+    {
+      "field": "Alanine Transferase (ALT)",
+      "operator": ">",
+      "value": "50 U/L",
+      "note": null
+    },
+    {
+      "field": "Urine WBC",
+      "operator": "≥",
+      "value": "10/hpf",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "crp_esr",
+        "label": "CRP / ESR"
+      },
+      {
+        "key": "cbc_lft_urinalysis",
+        "label": "CBC / LFT / Urinalysis"
+      },
+      {
+        "key": "echocardiography",
+        "label": "Echocardiography"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "crp_esr",
+        "label": "CRP / ESR"
+      },
+      {
+        "key": "cbc_lft_urinalysis",
+        "label": "CBC / LFT / Urinalysis"
+      },
+      {
+        "key": "all_investigation_reports",
+        "label": "All investigation reports"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is the fever with maculopapular rash?",
+        "expected": true
+      },
+      {
+        "q": "Is the age less than 5 years?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Did the patient have 5 days fever and presence of atleast 4 out of 5 symptoms (reference para 1.2 above)?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient laboratory show CRP ≥ 3 mg/dl or ESR > 40 mm/hr and 3 or more supplementary lab criteria: anemia for age, thrombocytosis (platelet > 450000/cumm), leukocytosis (WBC >15000/cumm), albumin ≤ 3 g/dL, Alanine Transferase (ALT) >50 U/L, Urine WBC > 10/hpf?",
+        "expected": true
+      },
+      {
+        "q": "Was there a positive echocardiogram indicating Kawasaki disease or complications?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Fever with maculopapular rash not documented or inconsistent with diagnosis.",
+    "Patient's age is 5 years or more without sufficient clinical justification.",
+    "The core diagnostic criteria (fever for 5 days and 4 out of 5 symptoms) are not met or poorly documented.",
+    "Mandatory lab reports (CRP, ESR, CBC, LFT, Urinalysis) are missing or show values inconsistent with Kawasaki disease.",
+    "Echocardiography results are missing, incomplete, or do not support the diagnosis or ongoing management of Kawasaki disease.",
+    "Planned line of treatment is not documented, or detailed indoor case papers/discharge summary are missing at respective stages."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Diagnosis requires fever lasting 5 days plus at least four of five specified symptoms (conjunctivitis, rash, adenopathy, strawberry tongue, hand/feet edema/erythema).",
+      "Incomplete Kawasaki disease is suspected with fever >5 days and 2-3 symptoms, or in infants ≤6 months with unexplained fever ≥7 days.",
+      "Treatment primarily involves Intravenous gamma globulin and Aspirin.",
+      "Diagnostic evaluation includes assessing CRP/ESR, and if elevated, checking for 3 or more additional lab findings (anemia for age, thrombocytosis, leukocytosis, low albumin, elevated ALT, pyuria) or a positive echocardiogram.",
+      "Serial clinical and laboratory re-evaluation, and echocardiogram if peeling develops, are recommended if initial CRP/ESR are not elevated."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "_comment": "This package (High Risk Newborn Post Discharge Care Package) is an add-on for follow up upto 1 year from discharge for Intensive Neonatal Care Package (MN003A), Advanced Neonatal Care Package (MN004A), or Critical Care Neonatal Package (MN005A).",
+  "stg_id": "MN007A",
+  "procedure_code": "MN007A",
+  "condition": "High Risk Newborn",
+  "procedure_name": "High Risk Newborn Post Discharge Care Package (Protocol Driven)",
+  "specialty": "Neo-natal Care",
+  "version": "1.1",
+  "source_files": [
+    "High risk Newborn post discharge care package_Medco.pdf",
+    "High risk Newborn post discharge care package_PPD.CPD.pdf"
+  ],
+  "alos": null,
+  "min_doctor_qualification": [
+    "Neonatologist",
+    "Developmental Pediatrician",
+    "Physiotherapists",
+    "Speech and Language therapists",
+    "Psychologists",
+    "Dieticians",
+    "Social workers",
+    "Ophthalmologist",
+    "ENT",
+    "Orthopedician",
+    "Neurologist"
+  ],
+  "clinical_indications": [
+    "Neonate identified as at-risk for neurodevelopmental disability before discharge from birth admission",
+    "Preterm <28 weeks",
+    "Weight <1000g, SGA, LGA",
+    "Apgar's<3 at 5 min and or HIE",
+    "Persistent prolonged hypoglycemia",
+    "Meningitis, shock needing Inotropes/vasopressor support",
+    "Neonatal Bilirubin encephalopathy",
+    "Major morbidities IVH, PVL",
+    "Abnormal neurology on discharge, Seizures",
+    "Twin to twin transfusion",
+    "Ventilation more than 24 hours, CLD",
+    "Surgical conditions, major malformations",
+    "Hypocalcemia",
+    "Inborn errors of metabolism and or genetic disorders",
+    "Infant of HIV+ve mother"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "discharge_summary_last_admission_with_follow_up_protocol",
+        "label": "Discharge summary of the last admission along with follow-up protocol"
+      },
+      {
+        "key": "clinical_examination_of_the_child",
+        "label": "Complete clinical examination of the child"
+      },
+      {
+        "key": "treatment_details",
+        "label": "Treatment details"
+      },
+      {
+        "key": "investigation_requirement_for_current_visit",
+        "label": "Any requirement of the investigation for the current visit (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "progress_notes_of_infant",
+        "label": "Progress notes of the infant by the treating doctor including key findings and advice for follow-up including investigations and screening"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Neonate categorized as High-risk newborn based on protocol and discharge summary with follow-up plan?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Progress notes contain clinical examination, screening, or investigations?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Neonate not categorized as High-risk newborn based on protocol, or discharge summary does not mention follow-up plan.",
+    "Discharge summary of last admission or follow-up protocol is missing, incomplete, or lacks necessary components (e.g., medical examination, neurobehavioral assessment, neuroimaging, ROP/hearing screening, congenital hypothyroidism/metabolic disorder screening, or assessment of parent coping/developmental environment).",
+    "Complete clinical examination of the child is missing, incomplete, or lacks necessary components (e.g., nutrition/growth assessment, immunization, neurological examination, development assessment, ophthalmologic assessment, hearing assessment, language/speech assessment, function assessment, or behavioral/cognitive/intelligence status).",
+    "Treatment details are missing or inadequate.",
+    "Progress notes of the infant are missing, incomplete, or do not include key findings, advice for follow-up, investigations, or screening."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Follow-up at District/Tertiary Hospital (SNCU/NICU), District Early Intervention Centre (DEIC)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "All health facilities caring for sick neonates must have a follow up program. It requires establishment of a multidisciplinary team.",
+      "The level of follow up can be based on anticipated severity of risk to neurodevelopment. The frequency of follow up and the type of tests depend on “intensity or level of follow up\" assigned. The schedule for follow up must be planned before discharge from birth admission.",
+      "Prior to discharge, a detailed medical and neurological assessment, neurosonogram, ROP screen and hearing screen should be initiated. A psychosocial assessment of the family should also be done.",
+      "The follow up protocol should include assessment of growth, nutrition, development, vision, hearing and neurological status.",
+      "Formal developmental assessment must be performed at least once in the first year and repeated yearly thereafter till six years of life. In Indian context, DASII is the best formal test for developmental assessment (till 2 year 6 months).",
+      "Ideally, the follow up should continue till late adolescence, at least till school as many cognitive problems, learning problems and behavioral problems that are more common in at-risk neonates are apparent only on longer follow up.",
+      "Early intervention programme (early stimulation) must be started in the SNCU/NICU once the neonate is medically stable.",
+      "Timely specific intervention must be ensured after detection of deviation of neurodevelopment from normal.",
+      "The mission of a neonatal follow up program is to provide a continuum of specialized care to sick babies discharged from NICUs. The neonate “at-risk” of neurodevelopmental disability must be identified before discharge from birth admission. A discharge summary must be provided to primary care provider and parents, the discharge summary should describe the prenatal and perinatal risk factors, neonate's hospital course and therapies that can increase the risk of neurodevelopmental disability.",
+      "Early stimulation in NICU includes: Optimizing lighting, reducing noise, gentle music, club painful procedures (allow suck sucrose/breast milk, hold hand), tactile stimulation (touch, gentle massage), Kangaroo mother care, non-nutritive sucking, passive exercises.",
+      "Specific interventions include: Motor impairment / Hypertonia – medications and physiotherapy, physiotherapy and occupational therapy, speech therapy, seizures, DDH and other Orthopedic, squint correction, behavior therapy and pharmacotherapy for behavioral disorders, therapy for learning disabilities."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Low-risk: Well baby clinic, follow up with pediatrician / primary care provider for screening growth and development.",
+      "Moderate risk: Follow up with neonatologist and developmental pediatrician (screen for developmental delay, manage intercurrent illnesses), involving developmental pediatrician, developmental therapist, radiologist, ophthalmologist, audiologist, physiotherapist, social worker, dietician.",
+      "High risk: Level II/III SNCU/NICU care, follow up with neonatologist (supervise and screen for developmental delay), involving team as for Moderate risk plus pediatric neurologist, geneticist, occupational therapist, speech therapist, endocrinologist, pediatric surgeon, orthopedician."
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "follow_up_protocol": {
+      "very_preterm_infants": [
+        "After 3-7 days of discharge to check adjustment in home environment.",
+        "Every 2 weeks until a body weight of 3 kg (6, 10, 14 week immunization visits to be covered during these visits).",
+        "At 3, 6, 9, 12, 15 and 18 months of corrected age and then every 6 months until 8 (based on unit`s protocol) years of age.",
+        "More visits if required."
+      ],
+      "infants_with_other_conditions": [
+        "Two weeks after discharge.",
+        "At 6, 10, 14 weeks of age.",
+        "At 6, 9, 12, 15 and 18 months of corrected/postnatal age, as applicable and then every 6 months until 8 (based on unit`s protocol) years of age.",
+        "More visits if required."
+      ]
+    },
+    "follow_up_components_schedule": [
+      "Parental concerns: At every visit.",
+      "Medical problems: At every visit.",
+      "Vaccination: As per IAP Schedule (2012).",
+      "Anthropometry (Wt~, HC*, TL): At every visit (corrected for gestational immaturity till 24 months for preterms).",
+      "Nutrition (Diet): Exclusive breast feeding, Weaning, Home diet.",
+      "MV drops: For preterm only, Vitamin D for all.",
+      "Iron: For preterm only (for term, till preterm), Yearly.",
+      "Cal/PO4: For preterm only (for term, till preterm), Yearly.",
+      "Formula: Shift to term formula at 2 kg weight.",
+      "Neurologic exam #: At every visit (Amiel Tison till 12 months of age).",
+      "Development test ^ (Screening): At each visit (History + TDSC/DOC).",
+      "Development test ^ (Formal testing): At 2.5 months (DASII), At 24 months (DASII) (formal cognitive development, IQ tested by 3 years of age).",
+      "Eye evaluation (ROP Screening): At 1 month age.",
+      "Eye evaluation (for vision, squint, optic atrophy): At 9 months, At 24 months.",
+      "Hearing: OAE at discharge. BERA for testing or confirmation at 3 months. Screen at each visit.",
+      "CT or MRI Brain: As clinically indicated.",
+      "USG brain (!): At 36-40 weeks corrected age.",
+      "Language (LEST): At 12 months, At 24 months.",
+      "Counselling: At every visit.",
+      "Biochemical screen (Hb, Urine): At 9 months, At 18 months, At 24 months (Hb, Urine, BP)."
+    ]
+  }
+}

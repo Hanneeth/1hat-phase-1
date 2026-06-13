@@ -1,0 +1,124 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU079A",
+  "procedure_code": "SU079A",
+  "condition": "Benign Prostatic Hyperplasia (BPH)",
+  "procedure_name": "Holmium Laser Prostatectomy",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Holmium Laser Prostatectomy_Medco.pdf",
+    "Holmium Laser Prostatectomy_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Benign Prostatic Hyperplasia (BPH) a non-malignant enlargement of the prostate",
+    "The procedure is used both for resection and enucleation of prostatic tissue"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_planned_treatment",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "usg_prostate_psa_uroflowmetry",
+        "label": "USG with Prostate size and Post Void Volume, Prostate-Specific Antigen (PSA), Uroflowmetry report confirming the diagnosis"
+      },
+      {
+        "key": "hospital_registration_for_holmium_laser",
+        "label": "Proof of hospital registration for holmium laser"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings, planned line of treatment and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG with Prostate size and Post Void Volume, Prostate-Specific Antigen (PSA), Uroflowmetry report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the hospital registered for holmium laser?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Histopathology report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing or do not include evaluation findings or planned line of treatment.",
+    "USG with Prostate size, Post Void Volume, Prostate-Specific Antigen (PSA), or Uroflowmetry report is missing or does not confirm the diagnosis.",
+    "Hospital is not registered or cannot provide proof of registration for holmium laser.",
+    "Detailed indoor case papers with daily vitals and treatment details are not available at claim stage.",
+    "Histopathology report is missing from the claim submission.",
+    "Clinical documentation (notes, USG, PSA, Uroflowmetry) is not indicative of Holmium Laser Prostatectomy, leading to a potential query on medical necessity."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities & registered for holmium laser.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Holmium Laser Prostatectomy is a minimally invasive treatment for an enlarged prostate.",
+      "Also called holmium laser enucleation of the prostate (HoLEP).",
+      "This procedure uses laser to remove tissue that is blocking urine flow through the prostate.",
+      "Also cuts the prostate tissue into easily removable fragments.",
+      "It is a minimally invasive technique that uses a holmium:yttrium-aluminium-garnet (YAG) laser.",
+      "Usually Potassium-titanyl-phosphate (KTP) and holmium lasers are used to cut and/or enucleate the prostate; these are widely used laser techniques.",
+      "HoLEP uses the excellent incisional and hemostatic properties of the holmium laser wavelength.",
+      "Lasers deliver heat to the prostate in various ways, causing tissue death by coagulative necrosis, with subsequent tissue contraction; however, laser coagulation of the prostate in this specific sense has met with limited results.",
+      "HoLEP removes the entire portion of the prostate that can block urine flow.",
+      "HoLEP also preserves removed tissue that can be examined in the laboratory for investigations.",
+      "HoLEP involves four steps: creation of bladder neck incisions, enucleation of the median lobe, enucleation of the lateral lobes off the prostatic capsule, and transurethral morcellation."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "In most cases, postoperative irrigation is not needed and the catheterization time is less than 24 hours.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

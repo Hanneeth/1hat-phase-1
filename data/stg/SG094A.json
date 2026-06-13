@@ -1,0 +1,103 @@
+{
+  "stg_id": "SG094A",
+  "procedure_code": "SG094A",
+  "condition": "Haemodialysis / Renal failure",
+  "procedure_name": "AV Fistula without prosthesis",
+  "specialty": "General Medicine/ Pediatric medical management/ General surgery",
+  "version": "1.1",
+  "source_files": [
+    "Haemodialysis, Renal failure, AV Fistula _Medco.pdf",
+    "Haemodialysis, Renal failure, AV Fistula _PPD.CPD.pdf"
+  ],
+  "alos": "daycare (Few complicated cases of AV fistula may need hospitalization >1 day)",
+  "min_doctor_qualification": [
+    "MBBS",
+    "Any trained nephrologist or physician",
+    "MS (Surgery) or equivalent"
+  ],
+  "clinical_indications": [
+    "eGFR < 30 ml/min, to preserve veins in the non-dominant arm for AV Fistula",
+    "eGFR < 15 ml/min, with anticipation of future dialysis and counselling for AV fistula",
+    "Need for vascular access for Haemodialysis"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "eGFR",
+      "operator": "<",
+      "value": "30 ml/min",
+      "note": "for preserving veins and planning AV fistula"
+    },
+    {
+      "field": "eGFR",
+      "operator": "<",
+      "value": "15 ml/min",
+      "note": "for anticipating dialysis and counselling for AV fistula"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "pathological_examination",
+        "label": "Pathological Examination (Complete Blood count, Blood urea, Serum Creatinine, GFR, serum electrolytes; monthly for chronic dialysis, quarterly for Serum Iron, ferritin, TIBC, TSAT, SGOT, SGPT, viral markers, calcium, phosphate)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes_indoor_case_papers",
+        "label": "Clinical Notes/ Indoor case papers"
+      },
+      {
+        "key": "discharge_summary_for_av_fistula",
+        "label": "Discharge summary for AV fistula"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with indications for AV Fistula?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Discharge summary for AV fistula?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes do not mention indications for AV Fistula creation",
+    "Pathological examination reports (CBC, Blood urea, Serum Creatinine, GFR, serum electrolytes) missing or incomplete",
+    "Planned line of treatment for AV fistula not documented",
+    "Discharge summary for AV fistula missing or incomplete at claim stage",
+    "eGFR not documented or not meeting the threshold for AV fistula planning"
+  ],
+  "additional_information": {
+    "icd_10_code": "N17.9, N18.3",
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": "MD/ DNB (Medicine); DM/ DNB (Nephrology) or equivalent",
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": "Preserve veins in the non-dominant arm for AV Fistula when eGFR < 30 ml/min",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Initial evaluation of all newly diagnosed cases (CKD)",
+      "Rapid disease progression (CKD)",
+      "New complication (CKD)",
+      "Discussion for Renal Replacement Therapy (RRT) (includes AV Fistula)"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": null
+  }
+}

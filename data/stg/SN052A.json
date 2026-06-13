@@ -1,0 +1,142 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN052A",
+  "procedure_code": "SN052A",
+  "condition": "Neural Tube defects",
+  "procedure_name": "Anterior Encephalocele",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Neural tube defects_Medco.pdf",
+    "Neural tube defects_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Neurosurgery) involvement of other specialty based on Etiology"
+  ],
+  "clinical_indications": [
+    "Swelling over nose",
+    "Hypertelorism",
+    "Nasal obstruction",
+    "Proptosis",
+    "Neurofibromatosis",
+    "Leaking encephalocele",
+    "Enlarged head",
+    "History of meningitis"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_signs_symptoms_indications_planned_management_admission_advice",
+        "label": "Clinical notes with signs, symptoms, indications, planned line of management and advice for admission"
+      },
+      {
+        "key": "clinical_picture",
+        "label": "Clinical picture"
+      },
+      {
+        "key": "plain_x_ray_skull",
+        "label": "Plain X-ray skull"
+      },
+      {
+        "key": "ct_mri_brain_spine",
+        "label": "CT/MRI Brain/Spine"
+      },
+      {
+        "key": "cranial_spinal_ultrasound_optional",
+        "label": "Cranial ultrasound / Spinal ultrasound (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photographs_optional",
+        "label": "Post-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history especially mother`s medication and antenatal history, signs & symptoms, planned line of treatment indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical picture and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT/MRI Brain/Spine report submitted indicative of diagnosis?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes with detailed history (including mother's medication and antenatal history), signs & symptoms, or planned line of treatment are missing or incomplete.",
+    "Clinical picture or imaging did not confirm the diagnosis.",
+    "Detailed Indoor Case Papers (ICPs) are missing or lack daily vitals and treatment details.",
+    "Detailed procedure or operative notes are missing or incomplete.",
+    "Discharge summary lacks essential follow-up advice.",
+    "Clinical presentation and imaging were not indicative of surgery."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Neural tube defects are a spectrum of disorders that can affect the brain or the spinal cord. They are caused by interaction of genetic and environmental factors and are prevented with folate supplementation.",
+      "Optimal care of a patient with spina bifida surgery (major/minor), meningocele and encephalocele in the long term requires a comprehensive coordinated plan of treatment, usually in a dedicated setting with facilities for neurosurgery, urology, orthopedic surgery, neurology and rehabilitation.",
+      "Follow-up should include periodic evaluation of status of any associated anomalies: Hydrocephalus, Tethered spinal cord, Chiari II malformation, Syringomyelia.",
+      "Any deterioration of function at any time needs to be investigated. Proper CSF diversion with endoscopic third ventriculostomy or ventriculo-peritoneal shunt has to be ensured, whenever necessary.",
+      "Multiple surgical procedures which usually include urological and orthopedic operations, Chiari decompression, tethered cord releases, or spinal fusions may be required in follow-up. Revision surgeries for wound infections and CSF leakage from the wound may be required in early postoperative period. Rehabilitation, with training in Clean Intermittent Catheterization (CIC) for bladder may be required in early postoperative period or in follow up."
+    ],
+    "surgical_options": [
+      "Reduction of herniation with preservation of viable brain tissue",
+      "Water-tight dural closure with adequate skin coverage",
+      "Repair of any cosmetic deformity",
+      "Cranial or craniofacial reconstruction",
+      "One-stage surgery",
+      "Two-stage surgery",
+      "Tessier's operation",
+      "Hemiorbital advancement",
+      "Repair of orbital encephalocele",
+      "Transpalatal repair",
+      "Repair of nasopharyngeal encephalocele",
+      "Ventriculo peritoneal shunt",
+      "Thecoperitoneal shunt"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "Advisable to follow up at the treating hospital at the end of one month after discharge. Further follow up can be done at district hospital by general surgeon at 3rd, 6th and 12th month follow up. Other follow up evaluations include: Urological evaluation with Ultrasonogram after one month, 3 months, 6 months and one year; MRI of spine/brain at 3rd to 6th month, if required; Additional surgical procedures and revision surgeries may be required. Follow-up frequency: One month after discharge at the treating hospital, 3 months, 6 months, 1 year, Two visits as and when required at treating hospital. Investigations: Ultrasonogram to assess Urological status at 1, 3, 6 months and 1 year follow-up (when indicated); MRI of Brain and/or Spine if necessary. Medication: Treatment of urinary or wound infections, with necessary antibiotics; Clean intermittent Catheterisation-Catheters if CIC is indicated.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Care at Tertiary Hospital. If necessary during follow-up, refer back to the treating surgeon.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

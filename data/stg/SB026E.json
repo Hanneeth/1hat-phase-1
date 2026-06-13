@@ -1,0 +1,155 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB026E",
+  "procedure_code": "SB026E",
+  "condition": "Arthrodesis",
+  "procedure_name": "Arthrodesis Hand",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Arthrodesis_Medco.pdf",
+    "Arthrodesis_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "End stage osteoarthritis",
+    "Other degenerative disorders",
+    "Rheumatoid arthritis",
+    "Osteonecrosis",
+    "Poliomyelitis",
+    "Cerebral palsy",
+    "Charcot-marie-tooth diseases",
+    "Club foot",
+    "Tuberculosis",
+    "Mechanical overuse",
+    "Trauma",
+    "Relieve joint pain after exhausting all options for non-surgical methods",
+    "Alternative to Arthroplasty when Arthroplasty is not desirable or is not possible"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailing_indication",
+        "label": "Clinical notes detailing indication"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      },
+      {
+        "key": "x_ray_labelled_affected_part",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "post_procedure_x_ray_labelled_affected_part",
+        "label": "Post procedure X-ray labelled with patient ID, date and side (Left/Right) of affected part"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray labelled with patient ID, date and side (Left/Right) of affected part confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Post procedure X-ray labelled with patient ID, date and side (Left/Right) of affected limb submitted?",
+        "expected": true
+      },
+      {
+        "q": "Invoice and bar code of implant submitted?",
+        "expected": false
+      },
+      {
+        "q": "Were Post-operative photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "X-ray report of affected part does not confirm diagnosis.",
+    "Clinical notes are missing, incomplete, or do not detail history, signs, symptoms, planned treatment, or indication for procedure.",
+    "Clinical photograph of affected part is missing.",
+    "X-ray labelled with patient ID, date, or side (Left/Right) of affected part is missing or does not confirm the diagnosis.",
+    "Detailed Indoor Case Papers (ICPs) are missing or lack daily vitals and treatment details.",
+    "Detailed Procedure / Operative Notes are missing.",
+    "Post procedure X-ray labelled with patient ID, date, or side (Left/Right) of affected limb is missing.",
+    "Post-operative photographs are missing.",
+    "Discharge summary is missing or lacks follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent (in Orthopedics); MCh/DNB/Equivalent (in Surgical Oncology – if applicable)",
+    "clinical_key_pointers": [
+      "Considered the gold standard for End stage osteoarthritis, Other degenerative disorders, Rheumatoid arthritis, Osteonecrosis, Poliomyelitis, Cerebral palsy, Charcot-marie-tooth diseases, Club foot, Tuberculosis, Mechanical overuse, Trauma.",
+      "Involves fusion or freezing of the joint in a permanent position to relieve joint pain after exhausting all non-surgical options.",
+      "It is an alternative to Arthroplasty when Arthroplasty Is not desirable or is not possible."
+    ],
+    "surgical_options": [
+      "Arthrodesis of Ankle, Shoulder, wrist, knee, Hand, Foot etc.",
+      "Ankle arthrodesis procedure consisting of the surgical fusion of the talocalcaneal (TC), talonavicular (TN), and calcaneocuboid (CC) joints in the foot.",
+      "Ankle joint arthrodesis post-surgery the joint will not allow for any movement.",
+      "Surgery procedures involves level of function and range of motion of all other joints of the extremity must be assessed preoperatively.",
+      "Bone grafting is also part of many arthrodesis process.",
+      "Triple arthrodesis surgical procedures were performed by removing large blocks of subchondral bone and correcting the angular deformities by inserting or removing wedges. The corrections were maintained by casting that often-required later manipulation for loss of position.",
+      "Wedges of bone may have to be removed from or added to the joints to achieve the desired correction."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "implants_used": [
+      "Ankle (Compression Assembly / Ilizarov)",
+      "Shoulder (Screw/Plate)",
+      "Wrist (Plate)"
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB035A",
+  "procedure_code": "SB035A",
+  "condition": "Patellectomy",
+  "procedure_name": "Patellectomy",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Patellectomy_Medco.pdf",
+    "Patellectomy_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Patellectomy is indicated as the last choice of treatment in certain situations including: Comminuted fractures, advanced chondromalacia, osteoarthritis, dislocations, infections, tumoral conditions",
+    "Partial patellectomy: when the fracture of the patella consists of one main proximal fragment, and enough reduction and stable fixation is unlikely to be achieved and partial patellectomy has to be considered",
+    "Patellectomy: Preservation of the patella is deemed necessary to preserve the extensor mechanism, is giving encouraging results in osteoarthritis of the knee joint, particularly when the process is confined to the patellofemoral segment. Also, the treatment of advanced chondromalacia and recurrent dislocation of the patella."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "x_ray_patella_justifying_procedure",
+        "label": "X-ray of the patella justifying the procedure with patient ID, date and side (Left/Right)"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "post_procedure_imaging_study_x_ray",
+        "label": "Post procedure imaging study (X Ray)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes."
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary."
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Did Post procedure imaging study (X Ray) of knee joint shows the removal of Patella?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or insufficient to justify pre-authorization",
+    "X-ray of the patella missing, or fails to justify the procedure, or is not correctly labelled with patient ID, date, or side (Left/Right) at pre-authorization",
+    "Clinical photograph of affected part missing at pre-authorization",
+    "Post Procedure clinical photograph missing at claim submission",
+    "Post procedure imaging study (X Ray) missing or does not show evidence of patella removal at claim submission",
+    "Detailed Procedure / Operative Notes missing or incomplete at claim submission",
+    "Detailed discharge summary missing or incomplete at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB in Orthopedics",
+    "clinical_key_pointers": [],
+    "surgical_options": [
+      "Partial patellectomy",
+      "Patellectomy (total)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

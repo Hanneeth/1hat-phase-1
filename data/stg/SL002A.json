@@ -1,0 +1,154 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL002A",
+  "procedure_code": "SL002A",
+  "condition": "Tympanic Perforation",
+  "procedure_name": "Tympanoplasty",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Tympanoplasty_Medco.pdf",
+    "Tympanoplasty_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MS (ENT)",
+    "DNB (ENT)",
+    "PG Diploma (ENT)"
+  ],
+  "clinical_indications": [
+    "Persistent ear discharge due to tympanic membrane perforation with conductive hearing loss.",
+    "Tympanic perforation without hearing loss or with sensorineural hearing loss may be considered for repair in the presence of need for water sports activity or hearing aid usage."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical notes (detailing signs, symptoms, ear examination findings, indications for doing the procedure & advice for admission)"
+      },
+      {
+        "key": "audiogram_report",
+        "label": "Audiogram report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "intra_operative_photograph",
+        "label": "Intra-operative photograph with time and date (optional)"
+      },
+      {
+        "key": "ossicular_prosthesis_invoice",
+        "label": "Invoice of the ossicular prosthesis used, if any"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes (including clinical symptoms such as decreased hearing, otalgia, perforation of tympanic membrane, etc., indications for doing the procedure & advise for admission)?",
+        "expected": true
+      },
+      {
+        "q": "Evidence of Audiogram?",
+        "expected": true
+      },
+      {
+        "q": "Does the patient complaint of ear discharge and functional hearing loss?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advice including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary available?",
+        "expected": true
+      },
+      {
+        "q": "Is the invoice of graft used?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient does not complain of ear discharge and functional hearing loss, or this is not documented.",
+    "Clinical notes for pre-authorization are missing details on signs, symptoms, ear examination findings, indications, or advice for admission.",
+    "Audiogram report is missing or incomplete at pre-authorization.",
+    "Operative notes are missing or fail to detail surgical steps and outcomes of the surgery.",
+    "Invoice for ossicular prosthesis used is missing.",
+    "Documents showing appropriate post-op care or follow-up advice are not available."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Tympanoplasty Surgery only if diagnosis made is backed by clinical signs, symptoms, and ear examination.",
+      "Tympanoplasty is a surgical technique to repair a defect in the tympanic membrane by placement of a graft using different techniques with or without ossicular reconstruction."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Active ear infection",
+      "Surgery in the only hearing ear needs caution."
+    ],
+    "signs_symptoms": [
+      "recurrent ear discharge",
+      "hearing loss",
+      "perforation of tympanic membrane",
+      "tinnitus (ringing in the ear)",
+      "giddiness"
+    ],
+    "etiology": [
+      "Infection of the middle ear - chronic suppurative otitis media (most common cause)",
+      "barotrauma (pressure exerted on ear drum associated with air travel)",
+      "foreign objects in ear",
+      "trauma to ear",
+      "following ear surgeries like tympanostomy tube placement",
+      "exploratory tympanotomy",
+      "failed tympanoplasty"
+    ],
+    "risk_factors": [
+      "Adults & children both but more common in children",
+      "frequent upper respiratory tract infections",
+      "allergic rhinitis"
+    ],
+    "investigations": [
+      "Pure tone audiometry to measure air bone gap (ABG) (i.e. the difference between air conduction threshold and bone conduction threshold) before and after surgery"
+    ],
+    "complications": [
+      "Recurrence of the perforation",
+      "tympanic membrane retraction",
+      "otorrhea",
+      "cholesteatoma development (skin disease/ cyst in the ear)",
+      "persistence or worsening of any conductive hearing loss",
+      "taste disturbance",
+      "facial nerve paralysis",
+      "sensorineural hearing loss"
+    ]
+  }
+}

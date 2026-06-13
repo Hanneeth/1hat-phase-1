@@ -1,0 +1,3954 @@
+{
+  "_comment": "KB-2 HBP 2022 — Cardiology. Deterministic fields set by kb2_extractor.py. Fill: mandatory_documents, aliases, stratification_criteria, additional_information.",
+  "scheme_id": "pmjay",
+  "specialty": "Cardiology",
+  "specialty_code": "MC",
+  "packages": [
+    {
+      "package_code": "MC001",
+      "package_name": "Right / Left Heart Catheterization",
+      "procedures": [
+        {
+          "procedure_code": "MC001A",
+          "procedure_name": "Right Heart Catheterization",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 12500,
+            "tier2": 14200,
+            "tier1": 15000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 12500,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC001A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "ecg",
+                "label": "ECG"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative Notes"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoices of catherter and other accesories used"
+              }
+            ]
+          },
+          "aliases": [
+            "RHC",
+            "Right Heart Cath",
+            "Swan-Ganz catheterization",
+            "Right-sided cardiac catheterization",
+            "Pulmonary artery catheterization",
+            "Diagnostic right heart catheterization",
+            "ICD-10 I97.89"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC001A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "MC001B",
+          "procedure_name": "Left Heart Catheterization",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 12500,
+            "tier2": 14200,
+            "tier1": 15000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 12500,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC001B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "ecg",
+                "label": "ECG"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative Notes"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoices of catherter and other accesories used"
+              }
+            ]
+          },
+          "aliases": [
+            "LHC",
+            "Left Heart Cath",
+            "Left-sided cardiac catheterization",
+            "Coronary angiography",
+            "Coronary arteriography",
+            "Diagnostic left heart catheterization",
+            "ICD-10 Z01.810"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC001B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC002",
+      "package_name": "Catheter directed Thrombolysis",
+      "procedures": [
+        {
+          "procedure_code": "MC002A",
+          "procedure_name": "For Deep vein thrombosis (DVT)",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 30800,
+            "tier2": 43800,
+            "tier1": 46200
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 30800,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC002A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "doppler_report",
+                "label": "Doppler establishing presence of DVT"
+              }
+            ],
+            "claim": [
+              {
+                "key": "postop_doppler_report",
+                "label": "Post procedure Colour Doppler of affected limb/part"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice of catheter used"
+              },
+              {
+                "key": "invoice_tpa",
+                "label": "Invoice of the thrombolytic drug (tPA) used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "CDT for DVT",
+            "Pharmacomechanical catheter-directed thrombolysis",
+            "DVT thrombolysis",
+            "Endovascular thrombolysis for deep vein thrombosis",
+            "Catheter-directed tPA for DVT",
+            "Deep venous thrombosis thrombolysis",
+            "ICD-10 I80.2"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC002A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "MC002B",
+          "procedure_name": "For Mesenteric Thrombosis",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 30800,
+            "tier2": 43800,
+            "tier1": 46200
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 30800,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC002B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "doppler_report",
+                "label": "Doppler establishing presence of mesenteric thrombosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "postop_doppler_report",
+                "label": "Post procedure Colour Doppler of affected limb/part"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice of catheter used"
+              },
+              {
+                "key": "invoice_tpa",
+                "label": "Invoice of the thrombolytic drug (tPA) used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "CDT for mesenteric ischemia",
+            "Catheter-directed thrombolysis for mesenteric thrombosis",
+            "Mesenteric arterial thrombolysis",
+            "Mesenteric venous thrombolysis",
+            "Endovascular thrombolysis for mesenteric thrombosis",
+            "ICD-10 K55.0"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC002B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "MC002C",
+          "procedure_name": "For Peripheral vessels",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 30800,
+            "tier2": 43800,
+            "tier1": 46200
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 30800,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC002C",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "doppler_report",
+                "label": "Doppler establishing presence of peripheral vessel thrombosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "postop_doppler_report",
+                "label": "Post procedure Colour Doppler of affected limb/part"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice of catheter used"
+              },
+              {
+                "key": "invoice_tpa",
+                "label": "Invoice of the thrombolytic drug (tPA) used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Peripheral arterial thrombolysis",
+            "Catheter-directed thrombolysis for peripheral vessels",
+            "Acute limb ischemia thrombolysis",
+            "Endovascular thrombolysis for peripheral occlusion",
+            "Peripheral intra-arterial thrombolysis",
+            "ICD-10 I74.3"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC002C, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC003",
+      "package_name": "Balloon Dilatation",
+      "procedures": [
+        {
+          "procedure_code": "MC003A",
+          "procedure_name": "Coarctation of Aorta",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 48300,
+            "tier2": 54900,
+            "tier1": 57900
+          },
+          "implant": [
+            {
+              "name": "Cardiac Balloon - Adult",
+              "cost_inr": 14000
+            },
+            {
+              "name": "Cardiac Balloon - Pediatric",
+              "cost_inr": 33000
+            }
+          ],
+          "pricing": {
+            "base_rate_inr": 48300,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "A",
+              "description": "Coarctation of Aorta",
+              "criterion": "[unable to extract — verify STG]",
+              "source": "procedure_name"
+            }
+          ],
+          "stg_ref": "MC003A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "echo",
+                "label": "ECHO report & stills"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT angiogram report & stills"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative Notes with images"
+              },
+              {
+                "key": "cag_report",
+                "label": "Post Procedure images / Angiogram"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Barcode of balloon used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Balloon angioplasty for coarctation of aorta",
+            "Percutaneous balloon aortoplasty",
+            "CoA balloon dilation",
+            "Endovascular repair of aortic coarctation",
+            "Coarctation ballooning",
+            "ICD-10 Q25.1"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC003A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        },
+        {
+          "procedure_code": "MC003B",
+          "procedure_name": "Pulmonary Artery Stenosis",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 48300,
+            "tier2": 54900,
+            "tier1": 57900
+          },
+          "implant": [
+            {
+              "name": "Cardiac Balloon - Adult",
+              "cost_inr": 14000
+            },
+            {
+              "name": "Cardiac Balloon - Pediatric",
+              "cost_inr": 33000
+            }
+          ],
+          "pricing": {
+            "base_rate_inr": 48300,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "A",
+              "description": "Pulmonary Artery Stenosis",
+              "criterion": "[unable to extract — verify STG]",
+              "source": "procedure_name"
+            }
+          ],
+          "stg_ref": "MC003B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "echo",
+                "label": "ECHO report & stills"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT angiogram report & stills"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative Notes with images"
+              },
+              {
+                "key": "cag_report",
+                "label": "Post Procedure images / Angiogram"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Barcode of balloon used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Balloon pulmonary angioplasty",
+            "Percutaneous balloon dilation of pulmonary artery",
+            "PA stenosis ballooning",
+            "BPA for pulmonary artery stenosis",
+            "ICD-10 I28.8"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC003B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC004",
+      "package_name": "Balloon Pulmonary / Aortic Valvotomy",
+      "procedures": [
+        {
+          "procedure_code": "MC004A",
+          "procedure_name": "Balloon Pulmonary Valvotomy",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 29300,
+            "tier2": 33300,
+            "tier1": 35100
+          },
+          "implant": [
+            {
+              "name": "Cardiac Balloon - Adult",
+              "cost_inr": 14000
+            },
+            {
+              "name": "Cardiac Balloon - Pediatric",
+              "cost_inr": 33000
+            }
+          ],
+          "pricing": {
+            "base_rate_inr": 29300,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "A",
+              "description": "Balloon Pulmonary Valvotomy",
+              "criterion": "[unable to extract — verify STG]",
+              "source": "procedure_name"
+            }
+          ],
+          "stg_ref": "MC004A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO report with stills"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative notes with still images"
+              },
+              {
+                "key": "echo_postop",
+                "label": "Post procedure stills of Echo with report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice of blade / balloon used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "BPV",
+            "Percutaneous balloon pulmonary valvuloplasty",
+            "Pulmonary balloon valvotomy",
+            "PBPV",
+            "Transcatheter pulmonary valve dilation",
+            "ICD-10 Q22.1"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC004A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        },
+        {
+          "procedure_code": "MC004B",
+          "procedure_name": "Balloon Aortic Valvotomy",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 29300,
+            "tier2": 33300,
+            "tier1": 35100
+          },
+          "implant": [
+            {
+              "name": "Cardiac Balloon - Adult",
+              "cost_inr": 14000
+            },
+            {
+              "name": "Cardiac Balloon - Pediatric",
+              "cost_inr": 33000
+            }
+          ],
+          "pricing": {
+            "base_rate_inr": 29300,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "A",
+              "description": "Balloon Aortic Valvotomy",
+              "criterion": "[unable to extract — verify STG]",
+              "source": "procedure_name"
+            }
+          ],
+          "stg_ref": "MC004B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO report with stills"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative notes with still images"
+              },
+              {
+                "key": "echo_postop",
+                "label": "Post procedure stills of Echo with report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice of blade / balloon used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "BAV",
+            "Percutaneous balloon aortic valvuloplasty",
+            "Aortic balloon valvotomy",
+            "PBAV",
+            "Transcatheter aortic valve dilation",
+            "ICD-10 I35.0"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC004B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC005",
+      "package_name": "Balloon Mitral Valvotomy",
+      "procedures": [
+        {
+          "procedure_code": "MC005A",
+          "procedure_name": "Balloon Mitral Valvotomy",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 44700,
+            "tier2": 50700,
+            "tier1": 53600
+          },
+          "implant": {
+            "name": "Balloon & Accessories",
+            "cost_inr": 55000
+          },
+          "pricing": {
+            "base_rate_inr": 44700,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC005A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO report with stills"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative notes with still images"
+              },
+              {
+                "key": "echo_postop",
+                "label": "Post procedure stills of Echo with report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice of blade / balloon used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "BMV",
+            "Percutaneous balloon mitral valvuloplasty",
+            "PBMV",
+            "PTMC",
+            "Percutaneous transvenous mitral commissurotomy",
+            "Mitral balloon valvotomy",
+            "ICD-10 I05.0"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC005A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC006",
+      "package_name": "Balloon Atrial Septostomy",
+      "procedures": [
+        {
+          "procedure_code": "MC006A",
+          "procedure_name": "Balloon Atrial Septostomy",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 30500,
+            "tier2": 34700,
+            "tier1": 36600
+          },
+          "implant": {
+            "name": "Balloon & Accessories",
+            "cost_inr": 55000
+          },
+          "pricing": {
+            "base_rate_inr": 30500,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC006A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO stills and reports showing TGA"
+              },
+              {
+                "key": "doppler_report",
+                "label": "Doppler stills and reports showing need of septostomy"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative notes with still images"
+              },
+              {
+                "key": "echo_postop",
+                "label": "Post procedure stills of ECHO with report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice of blade / balloon used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "BAS",
+            "Rashkind procedure",
+            "Balloon atrial septostomy for TGA",
+            "Percutaneous atrial septostomy",
+            "Atrial septostomy balloon dilation",
+            "ICD-10 Q20.3"
+          ],
+          "additional_information": {
+            "admission_criteria": "Transposition of the great arteries (TGA) requiring septostomy"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC006A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC007",
+      "package_name": "ASD Device Closure",
+      "procedures": [
+        {
+          "procedure_code": "MC007A",
+          "procedure_name": "ASD Device Closure",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 46200,
+            "tier2": 52400,
+            "tier1": 55400
+          },
+          "implant": {
+            "name": "ASD Device",
+            "cost_inr": 62000
+          },
+          "pricing": {
+            "base_rate_inr": 46200,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC007A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO report showing ASD"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative notes with still images"
+              },
+              {
+                "key": "echo_postop",
+                "label": "Post procedure stills of ECHO with report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice of blade / device used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Transcatheter ASD closure",
+            "Percutaneous ASD device closure",
+            "Atrial septal defect device closure",
+            "Amplatzer septal occluder for ASD",
+            "Endovascular ASD repair",
+            "ICD-10 Q21.1"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC007A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC008",
+      "package_name": "VSD Device Closure",
+      "procedures": [
+        {
+          "procedure_code": "MC008A",
+          "procedure_name": "VSD Device Closure",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 47400,
+            "tier2": 53900,
+            "tier1": 56900
+          },
+          "implant": {
+            "name": "VSD Device",
+            "cost_inr": 72000
+          },
+          "pricing": {
+            "base_rate_inr": 47400,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC008A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO report showing VSD"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative notes with still images"
+              },
+              {
+                "key": "echo_postop",
+                "label": "Post procedure stills of ECHO with report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice of blade / device used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Transcatheter VSD closure",
+            "Percutaneous VSD device closure",
+            "Ventricular septal defect device closure",
+            "Amplatzer ventricular septal occluder",
+            "Endovascular VSD repair",
+            "ICD-10 Q21.0"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC008A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC009",
+      "package_name": "PDA Device Closure",
+      "procedures": [
+        {
+          "procedure_code": "MC009A",
+          "procedure_name": "PDA Device Closure",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 40800,
+            "tier2": 46300,
+            "tier1": 48900
+          },
+          "implant": {
+            "name": "PDA Device",
+            "cost_inr": 30000
+          },
+          "pricing": {
+            "base_rate_inr": 40800,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC009A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO report showing PDA"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative notes with still images"
+              },
+              {
+                "key": "echo_postop",
+                "label": "Post procedure stills of ECHO with report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice of blade / device used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Transcatheter PDA closure",
+            "Percutaneous PDA device closure",
+            "Patent ductus arteriosus device closure",
+            "Amplatzer duct occluder for PDA",
+            "Endovascular PDA repair",
+            "ICD-10 Q25.0"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC009A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC010",
+      "package_name": "PDA stenting",
+      "procedures": [
+        {
+          "procedure_code": "MC010A",
+          "procedure_name": "PDA stenting",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 50400,
+            "tier2": 57200,
+            "tier1": 60400
+          },
+          "implant": [
+            {
+              "name": "Coronary Stent for PDA stenting - Bare Metal",
+              "cost_inr": 9373
+            },
+            {
+              "name": "Coronary Stent for PDA stenting - Drug Eluting",
+              "cost_inr": 34128
+            }
+          ],
+          "pricing": {
+            "base_rate_inr": 50400,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "A",
+              "description": "PDA stenting",
+              "criterion": "[unable to extract — verify STG]",
+              "source": "procedure_name"
+            }
+          ],
+          "stg_ref": "MC010A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO report showing PDA"
+              },
+              {
+                "key": "cag_report",
+                "label": "Angio showing PDA"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative notes with still images"
+              },
+              {
+                "key": "echo_postop",
+                "label": "Post procedure stills of ECHO with report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice of blade / barcode of stent used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Transcatheter PDA stenting",
+            "Ductal stenting",
+            "Patent ductus arteriosus stenting",
+            "Endovascular PDA stent placement",
+            "Percutaneous ductus arteriosus stenting",
+            "ICD-10 Q25.0"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC010A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC011",
+      "package_name": "PTCA, inclusive of diagnostic angiogram",
+      "procedures": [
+        {
+          "procedure_code": "MC011A",
+          "procedure_name": "PTCA, inclusive of diagnostic angiogram",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 50800,
+            "tier2": 57700,
+            "tier1": 60900
+          },
+          "implant": [
+            {
+              "name": "Coronary Stent for PDA stenting - Bare Metal",
+              "cost_inr": 9373
+            },
+            {
+              "name": "Coronary Stent for PDA stenting - Drug Eluting",
+              "cost_inr": 34128
+            }
+          ],
+          "pricing": {
+            "base_rate_inr": 50800,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "A",
+              "description": "PTCA",
+              "criterion": "[unable to extract — verify STG]",
+              "source": "procedure_name"
+            }
+          ],
+          "stg_ref": "MC011A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "ecg",
+                "label": "ECG"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO"
+              },
+              {
+                "key": "cag_report",
+                "label": "CAG stills showing blocks & Reports"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative notes with still images"
+              },
+              {
+                "key": "cag_report_postop",
+                "label": "Angiogram report showing stent & post Stent flow"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Barcode of the stents used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "PTCA",
+            "Percutaneous transluminal coronary angioplasty",
+            "PCI",
+            "Percutaneous coronary intervention",
+            "Coronary angioplasty and stenting",
+            "Coronary revascularization",
+            "ICD-10 I25.1"
+          ],
+          "additional_information": {
+            "remarks": "Procedure price updated"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC011A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC012",
+      "package_name": "Electrophysiological Study",
+      "procedures": [
+        {
+          "procedure_code": "MC012A",
+          "procedure_name": "Electrophysiological Study",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 34700,
+            "tier2": 39400,
+            "tier1": 41600
+          },
+          "implant": {
+            "name": "Steerable decapolar catheter, Quadripolar Catheter",
+            "cost_inr": 46000
+          },
+          "pricing": {
+            "base_rate_inr": 34700,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 1,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC012A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "ecg",
+                "label": "ECG"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO"
+              },
+              {
+                "key": "blood_reports",
+                "label": "Serum Electrolytes"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ep_study_report",
+                "label": "EP study report"
+              }
+            ]
+          },
+          "aliases": [
+            "EP study",
+            "EPS",
+            "Cardiac electrophysiology study",
+            "Intracardiac electrophysiologic study",
+            "Diagnostic EP study",
+            "ICD-10 Z01.81"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC012A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        },
+        {
+          "procedure_code": "MC012B",
+          "procedure_name": "Electrophysiological Study \nwith Radio Frequency Ablation",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 34700,
+            "tier2": 39400,
+            "tier1": 41600
+          },
+          "implant": {
+            "name": "Steerable decapolar catheter, Quadripolar Catheter, Radio Frequency Catheter",
+            "cost_inr": 76000
+          },
+          "pricing": {
+            "base_rate_inr": 34700,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 1,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC012B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "ecg",
+                "label": "ECG"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO"
+              },
+              {
+                "key": "blood_reports",
+                "label": "Serum Electrolytes"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ep_study_report",
+                "label": "EP study report"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Procedure / Operative Notes"
+              }
+            ]
+          },
+          "aliases": [
+            "EPS with RFA",
+            "EP study with radiofrequency ablation",
+            "Catheter ablation for arrhythmia",
+            "Radiofrequency catheter ablation",
+            "Cardiac ablation",
+            "ICD-10 I47.9"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC012B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC013",
+      "package_name": "Percutaneous Transluminal Septal Myocardial Ablation",
+      "procedures": [
+        {
+          "procedure_code": "MC013A",
+          "procedure_name": "Percutaneous Transluminal Septal Myocardial Ablation",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 42500,
+            "tier2": 48300,
+            "tier1": 51000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 42500,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC013A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "ecg",
+                "label": "ECG"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO"
+              },
+              {
+                "key": "cag_report",
+                "label": "CAG stills showing blaocks justifying the procedure"
+              }
+            ],
+            "claim": [
+              {
+                "key": "cag_report_postop",
+                "label": "Angiogram report with stills showing stent & post Stent flow"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Barcode / Invoice of the stent used"
+              }
+            ]
+          },
+          "aliases": [
+            "PTSMA",
+            "Alcohol septal ablation",
+            "Transcatheter septal ablation for HOCM",
+            "Percutaneous septal alcohol ablation",
+            "Hypertrophic cardiomyopathy septal ablation",
+            "ICD-10 I42.1"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC013A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC014",
+      "package_name": "Temporary Pacemaker implantation",
+      "procedures": [
+        {
+          "procedure_code": "MC014A",
+          "procedure_name": "Temporary Pacemaker implantation",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 24000,
+            "tier2": 27300,
+            "tier1": 28800
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 24000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC014A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "ecg",
+                "label": "ECG"
+              },
+              {
+                "key": "referral_letter",
+                "label": "Report by cardiologist necessitating procedure"
+              }
+            ],
+            "claim": [
+              {
+                "key": "xray",
+                "label": "X Ray showing the pacemaker in situ"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice / barcode of pacemaker"
+              }
+            ]
+          },
+          "aliases": [
+            "TPI",
+            "Temporary transvenous pacing",
+            "Temporary cardiac pacing",
+            "Transvenous temporary pacemaker insertion",
+            "TPM insertion",
+            "ICD-10 I49.9"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC014A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC015",
+      "package_name": "Single Chamber Permanent Pacemaker Implantation",
+      "procedures": [
+        {
+          "procedure_code": "MC015A",
+          "procedure_name": "Permanent Pacemaker Implantation - \nSingle Chamber",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 30700,
+            "tier2": 34800,
+            "tier1": 36800
+          },
+          "implant": {
+            "name": "Single Chamber Pacemaker",
+            "cost_inr": 45000
+          },
+          "pricing": {
+            "base_rate_inr": 30700,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC015A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "ecg",
+                "label": "ECG"
+              },
+              {
+                "key": "referral_letter",
+                "label": "Report by cardiologist necessitating procedure"
+              }
+            ],
+            "claim": [
+              {
+                "key": "xray",
+                "label": "X Ray showing the pacemaker in situ"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice / Barcode of designated pacemaker"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "PPI Single Chamber",
+            "Permanent pacemaker insertion - single chamber",
+            "Single chamber pacing system implantation",
+            "VVI pacemaker insertion",
+            "AAI pacemaker insertion",
+            "ICD-10 Z95.0"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC015A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC016",
+      "package_name": "Double Chamber Permanent Pacemaker Implantation",
+      "procedures": [
+        {
+          "procedure_code": "MC016A",
+          "procedure_name": "Permanent Pacemaker Implantation - \nDouble Chamber",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 41300,
+            "tier2": 46900,
+            "tier1": 49500
+          },
+          "implant": {
+            "name": "Double Chamber Pacemaker",
+            "cost_inr": 75000
+          },
+          "pricing": {
+            "base_rate_inr": 41300,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC016A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "ecg",
+                "label": "ECG"
+              },
+              {
+                "key": "referral_letter",
+                "label": "Report by cardiologist necessitating procedure"
+              }
+            ],
+            "claim": [
+              {
+                "key": "xray",
+                "label": "X Ray showing the pacemaker in situ"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice / Barcode of designated pacemaker"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "PPI Double Chamber",
+            "Permanent pacemaker insertion - dual chamber",
+            "Dual chamber pacing system implantation",
+            "DDD pacemaker insertion",
+            "Biventricular pacemaker insertion",
+            "ICD-10 Z95.0"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC016A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC017",
+      "package_name": "Peripheral Angioplasty",
+      "procedures": [
+        {
+          "procedure_code": "MC017A",
+          "procedure_name": "Peripheral Angioplasty",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 43200,
+            "tier2": 49000,
+            "tier1": 51800
+          },
+          "implant": {
+            "name": "Peripheral Stent - Bare Metal",
+            "cost_inr": 21000
+          },
+          "pricing": {
+            "base_rate_inr": 43200,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC017A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "echo",
+                "label": "ECHO"
+              },
+              {
+                "key": "doppler_report",
+                "label": "Doppler"
+              },
+              {
+                "key": "cag_report",
+                "label": "Angio stills showing blocks & Reports"
+              }
+            ],
+            "claim": [
+              {
+                "key": "cag_report_postop",
+                "label": "Post op. Angiogram report/ stills showing stent"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Implant / barcode of stent used"
+              }
+            ]
+          },
+          "aliases": [
+            "PTA",
+            "Percutaneous transluminal angioplasty for peripheral vessels",
+            "Peripheral artery angioplasty and stenting",
+            "Endovascular revascularization of peripheral artery",
+            "Lower extremity angioplasty",
+            "ICD-10 I70.2"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC017A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC018",
+      "package_name": "Bronchial artery Embolisation\n(for Haemoptysis)",
+      "procedures": [
+        {
+          "procedure_code": "MC018A",
+          "procedure_name": "Bronchial artery Embolisation \n(for Haemoptysis)",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 41000,
+            "tier2": 46600,
+            "tier1": 49200
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 41000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC018A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "xray",
+                "label": "Chest X-Ray"
+              },
+              {
+                "key": "ct_report",
+                "label": "HRCT chest with CT Pulmonary Angiogram"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Other investigations"
+              }
+            ],
+            "claim": [
+              {
+                "key": "cag_report",
+                "label": "Check Angiography of same bronchial artery after the procedure"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "blood_reports",
+                "label": "Hb"
+              },
+              {
+                "key": "blood_reports_creatinine",
+                "label": "Serum Creatinine"
+              }
+            ]
+          },
+          "aliases": [
+            "BAE",
+            "Bronchial artery embolization for hemoptysis",
+            "Endovascular embolization of bronchial artery",
+            "Transcatheter bronchial artery embolization",
+            "Hemoptysis endovascular therapy",
+            "ICD-10 R04.2"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC018A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC019",
+      "package_name": "Pericardiocentesis",
+      "procedures": [
+        {
+          "procedure_code": "MC019A",
+          "procedure_name": "Pericardiocentesis",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 15200,
+            "tier2": 17200,
+            "tier1": 18200
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 15200,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 1,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC019A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO report justifying need of procedure"
+              }
+            ],
+            "claim": [
+              {
+                "key": "patient_photo_intraop",
+                "label": "Intra procedure clinical photograph"
+              },
+              {
+                "key": "echo_postop",
+                "label": "Post procedure ECHO report"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Analysis of fluid removed"
+              }
+            ]
+          },
+          "aliases": [
+            "Pericardial tap",
+            "Pericardial fluid aspiration",
+            "ECHO-guided pericardiocentesis",
+            "Diagnostic pericardiocentesis",
+            "Therapeutic pericardiocentesis",
+            "ICD-10 I31.9"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC019A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC020",
+      "package_name": "Systemic Thrombolysis (for MI)",
+      "procedures": [
+        {
+          "procedure_code": "MC020A",
+          "procedure_name": "Systemic Thrombolysis (for MI)",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 22400,
+            "tier2": 25500,
+            "tier1": 26900
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 22400,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC020A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "ecg",
+                "label": "Serial ECGs showing MI"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Cardiac markers - CPK-MB, TROP I or TROP T"
+              }
+            ],
+            "claim": [
+              {
+                "key": "echo",
+                "label": "ECHO"
+              },
+              {
+                "key": "ecg_postop",
+                "label": "ECG"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Lab Investigation (TROP - T report)"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice / barcode of thrombolytic agent used"
+              }
+            ]
+          },
+          "aliases": [
+            "Thrombolysis for STEMI",
+            "Fibrinolytic therapy for myocardial infarction",
+            "IV thrombolysis for acute MI",
+            "Streptokinase therapy for MI",
+            "Tenecteplase for myocardial infarction",
+            "ICD-10 I21.9"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC020A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC021",
+      "package_name": "Embolization",
+      "procedures": [
+        {
+          "procedure_code": "MC021A",
+          "procedure_name": "Arteriovenous Malformation (AVM) in the Limbs",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 50800,
+            "tier2": 57700,
+            "tier1": 60900
+          },
+          "implant": {
+            "name": null,
+            "cost_inr": null,
+            "_note": "Implant=Yes in Excel but no data in PDF — verify manually"
+          },
+          "pricing": {
+            "base_rate_inr": 50800,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC021A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "cag_report",
+                "label": "Angio Report"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes detailing history and Admission notes showing vitals and examination findings"
+              }
+            ],
+            "claim": [
+              {
+                "key": "xray_postop",
+                "label": "Procedural image with coils in place"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice / bar code of used coil"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Peripheral AVM embolization",
+            "Endovascular embolization of limb AVM",
+            "Transcatheter coil embolization of AVM",
+            "Limb arteriovenous malformation endovascular therapy",
+            "ICD-10 Q27.3"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC021A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MC022",
+      "package_name": "Follow up - Cardiology",
+      "procedures": [
+        {
+          "procedure_code": "MC022A",
+          "procedure_name": "First Follow-up-  2-4 weeks after discharge - AT NETWORK HOSPITAL",
+          "billing_unit": "per_visit",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 0,
+            "tier2": 0,
+            "tier1": 0
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 0,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "follow_up",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "A",
+              "description": "First Follow-up-  2-4 weeks after discharge",
+              "criterion": "[unable to extract — verify STG]",
+              "source": "procedure_name"
+            }
+          ],
+          "stg_ref": "MC022A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "discharge_summary",
+                "label": "Post discharge summary"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "Dischage advice details"
+              },
+              {
+                "key": "clinical_notes_exam",
+                "label": "Clinical examination notes"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes_followup",
+                "label": "Treatment details"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investgation reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Cardiology follow-up",
+            "Post-discharge cardiology review",
+            "Outpatient cardiology visit",
+            "Follow-up consultation cardiology"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC022A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Follow-up Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "MC022B",
+          "procedure_name": "Second Follow-up- After 3 months",
+          "billing_unit": "per_visit",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 4400,
+            "tier2": 5000,
+            "tier1": 5000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 4400,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "follow_up",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC022B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "discharge_summary",
+                "label": "Post discharge summary"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "Dischage advice details"
+              },
+              {
+                "key": "clinical_notes_exam",
+                "label": "Clinical examination notes"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes_followup",
+                "label": "Treatment details"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investgation reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Cardiology follow-up",
+            "Post-discharge cardiology review",
+            "Outpatient cardiology visit",
+            "Follow-up consultation cardiology"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC022B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Follow-up Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "MC022C",
+          "procedure_name": "Third Follow-up- After 3 months",
+          "billing_unit": "per_visit",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2200,
+            "tier2": 2500,
+            "tier1": 2500
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 2200,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "follow_up",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC022C",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "discharge_summary",
+                "label": "Post discharge summary"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "Dischage advice details"
+              },
+              {
+                "key": "clinical_notes_exam",
+                "label": "Clinical examination notes"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes_followup",
+                "label": "Treatment details"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investgation reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Cardiology follow-up",
+            "Post-discharge cardiology review",
+            "Outpatient cardiology visit",
+            "Follow-up consultation cardiology"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC022C, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Follow-up Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "MC022D",
+          "procedure_name": "fourth Follow-up- After 3 months",
+          "billing_unit": "per_visit",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2200,
+            "tier2": 2500,
+            "tier1": 2500
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 2200,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "follow_up",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC022D",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "discharge_summary",
+                "label": "Post discharge summary"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "Dischage advice details"
+              },
+              {
+                "key": "clinical_notes_exam",
+                "label": "Clinical examination notes"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes_followup",
+                "label": "Treatment details"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investgation reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Cardiology follow-up",
+            "Post-discharge cardiology review",
+            "Outpatient cardiology visit",
+            "Follow-up consultation cardiology"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC022D, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Follow-up Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "MC022E",
+          "procedure_name": "FifthFollow-up - After 3 months",
+          "billing_unit": "per_visit",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2200,
+            "tier2": 2500,
+            "tier1": 2500
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 2200,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "follow_up",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MC022E",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "discharge_summary",
+                "label": "Post discharge summary"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "Dischage advice details"
+              },
+              {
+                "key": "clinical_notes_exam",
+                "label": "Clinical examination notes"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes_followup",
+                "label": "Treatment details"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investgation reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Cardiology follow-up",
+            "Post-discharge cardiology review",
+            "Outpatient cardiology visit",
+            "Follow-up consultation cardiology"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MC022E, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Follow-up Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MG031",
+      "package_name": "Endocarditis",
+      "procedures": [
+        {
+          "procedure_code": "MG031A",
+          "procedure_name": "Bacterial Endocarditis",
+          "billing_unit": "per_day",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "day1_only",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to routine ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without ventilator support",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU requiring ventilator support",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "MG031A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO"
+              },
+              {
+                "key": "blood_reports",
+                "label": "CBC"
+              }
+            ],
+            "claim": [
+              {
+                "key": "blood_culture_report",
+                "label": "Blood culture reports"
+              },
+              {
+                "key": "echo_postop",
+                "label": "Post treatment ECHO"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              },
+              {
+                "key": "clinical_notes_icp",
+                "label": "Detailed ICPs"
+              },
+              {
+                "key": "clinical_notes_treatment",
+                "label": "Treatment details"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Infective endocarditis - bacterial",
+            "Subacute bacterial endocarditis",
+            "Acute bacterial endocarditis",
+            "SBE medical management",
+            "ICD-10 I33.0"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (Yes) → day1_only",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "MG031B",
+          "procedure_name": "Fungal Endocarditis",
+          "billing_unit": "per_day",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "day1_only",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to routine ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without ventilator support",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU requiring ventilator support",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "MG031B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "echo",
+                "label": "ECHO"
+              },
+              {
+                "key": "blood_reports",
+                "label": "CBC"
+              }
+            ],
+            "claim": [
+              {
+                "key": "blood_culture_report",
+                "label": "Blood culture reports"
+              },
+              {
+                "key": "echo_postop",
+                "label": "Post treatment ECHO"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              },
+              {
+                "key": "clinical_notes_icp",
+                "label": "Detailed ICPs"
+              },
+              {
+                "key": "clinical_notes_treatment",
+                "label": "Treatment details"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Infective endocarditis - fungal",
+            "Candidal endocarditis",
+            "Aspergillus endocarditis",
+            "Fungal endocarditis medical management",
+            "ICD-10 B39.4"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (Yes) → day1_only",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MG036",
+      "package_name": "Atrial Fibrillation",
+      "procedures": [
+        {
+          "procedure_code": "MG036A",
+          "procedure_name": "Atrial Fibrillation",
+          "billing_unit": "per_day",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to routine ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without ventilator support",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU requiring ventilator support",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "MG036A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment"
+              },
+              {
+                "key": "ecg",
+                "label": "ECG"
+              },
+              {
+                "key": "blood_reports",
+                "label": "Sr Electrolytes"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ecg_postop",
+                "label": "Post treatment ECG"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              },
+              {
+                "key": "clinical_notes_icp",
+                "label": "Detailed ICPs"
+              },
+              {
+                "key": "clinical_notes_treatment",
+                "label": "Treatment details"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "AFib",
+            "AF",
+            "Paroxysmal atrial fibrillation",
+            "Persistent atrial fibrillation",
+            "Medical management of atrial fibrillation",
+            "ICD-10 I48.91"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MG037",
+      "package_name": "Cardiac Tamponade",
+      "procedures": [
+        {
+          "procedure_code": "MG037A",
+          "procedure_name": "Cardiac Tamponade",
+          "billing_unit": "per_day",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to routine ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without ventilator support",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU requiring ventilator support",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "MG037A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clincal notes"
+              },
+              {
+                "key": "echo",
+                "label": "2D echo"
+              }
+            ],
+            "claim": [
+              {
+                "key": "echo_postop",
+                "label": "Post treatment 2D echo"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Fluid Aspirated report"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Procedure notes"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Pericardial tamponade",
+            "Acute cardiac tamponade",
+            "Medical management of cardiac tamponade",
+            "Tamponade complicating procedure",
+            "ICD-10 I31.4"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MG038",
+      "package_name": "Congestive heart failure",
+      "procedures": [
+        {
+          "procedure_code": "MG038A",
+          "procedure_name": "Congestive heart failure",
+          "billing_unit": "per_day",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "day1_only",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to routine ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without ventilator support",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU requiring ventilator support",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "MG038A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes detailing history and Admission notes showing vitals and examination findings"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Any investigations done"
+              },
+              {
+                "key": "clinical_notes_plan",
+                "label": "Planned line of management"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes_icp",
+                "label": "Detailed ICPs"
+              },
+              {
+                "key": "clinical_notes_treatment",
+                "label": "Treatment details"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "CHF",
+            "Heart failure",
+            "Acute decompensated heart failure",
+            "Left ventricular failure",
+            "LVF",
+            "Medical management of heart failure",
+            "ICD-10 I50.9"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (Yes) → day1_only",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MG075",
+      "package_name": "High end radiological diagnostic \n(CT, MRI, Imaging including nuclear imaging)",
+      "procedures": [
+        {
+          "procedure_code": "MG075A",
+          "procedure_name": "High end radiological diagnostic \n(CT, MRI, Imaging including nuclear imaging)",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 5000,
+            "tier2": 5800,
+            "tier1": 5800
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 5000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 0,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "A",
+              "description": "High end radiological diagnostic",
+              "criterion": "[unable to extract — verify STG]",
+              "source": "procedure_name"
+            }
+          ],
+          "stg_ref": "MG075A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes detailing history and Admission notes showing vitals and examination findings"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Any investigations done"
+              },
+              {
+                "key": "clinical_notes_plan",
+                "label": "Planned line of management"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes_icp",
+                "label": "Detailed ICPs"
+              },
+              {
+                "key": "clinical_notes_treatment",
+                "label": "Treatment details"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "CT scan add-on",
+            "MRI scan add-on",
+            "High-end imaging",
+            "Nuclear imaging diagnostic",
+            "Advanced radiological diagnostic procedure"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MG075A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MG076",
+      "package_name": "High end histopathology (Biopsies) and advanced serology investigations",
+      "procedures": [
+        {
+          "procedure_code": "MG076A",
+          "procedure_name": "High end histopathology (Biopsies) and advanced serology investigations",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 5000,
+            "tier2": 5800,
+            "tier1": 5800
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 5000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 0,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "A",
+              "description": "High end histopathology",
+              "criterion": "[unable to extract — verify STG]",
+              "source": "procedure_name"
+            }
+          ],
+          "stg_ref": "MG076A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes detailing history and Admission notes showing vitals and examination findings"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Any investigations done"
+              },
+              {
+                "key": "clinical_notes_plan",
+                "label": "Planned line of management"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes_icp",
+                "label": "Detailed ICPs"
+              },
+              {
+                "key": "clinical_notes_treatment",
+                "label": "Treatment details"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Biopsy add-on",
+            "Advanced serology investigations",
+            "High-end histopathology",
+            "HPE add-on",
+            "Specialized diagnostic pathology"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MG076A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MG098",
+      "package_name": "PET scan",
+      "procedures": [
+        {
+          "procedure_code": "MG098A",
+          "procedure_name": "PET scan",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 0,
+            "tier2": 0,
+            "tier1": 0
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 0,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "whole_body",
+              "description": "Whole body",
+              "criterion": "Whole body PET scan",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "brain",
+              "description": "Brain",
+              "criterion": "Brain PET scan",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "gallium_68_peptide",
+              "description": "Gallium 68 Peptide",
+              "criterion": "Gallium 68 Peptide scan",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "cardiac",
+              "description": "Cardiac",
+              "criterion": "Cardiac PET scan",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "MG098A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes detailing history and Admission notes showing vitals and examination findings"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Any investigations done"
+              },
+              {
+                "key": "clinical_notes_plan",
+                "label": "Planned line of management"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes_icp",
+                "label": "Detailed ICPs"
+              },
+              {
+                "key": "clinical_notes_treatment",
+                "label": "Treatment details"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports including PETs scan report"
+              }
+            ]
+          },
+          "aliases": [
+            "Positron emission tomography",
+            "PET-CT scan",
+            "Diagnostic PET scan",
+            "Whole body PET",
+            "Nuclear medicine PET imaging"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MG098A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "PM039",
+      "package_name": "Palliative and supportive care for non-malignant  disease at advanced or end stage",
+      "procedures": [
+        {
+          "procedure_code": "PM039A",
+          "procedure_name": "Palliative care end stage disease",
+          "billing_unit": "per_day",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to routine ward",
+              "source": "domain_knowledge"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "domain_knowledge"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without ventilator support",
+              "source": "domain_knowledge"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU requiring ventilator support",
+              "source": "domain_knowledge"
+            }
+          ],
+          "stg_ref": "PM039A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Review notes of primary physician"
+              },
+              {
+                "key": "referral_letter",
+                "label": "Referal to Palliative Medicine"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary with detail treatment & interventions"
+              },
+              {
+                "key": "hospital_bill",
+                "label": "Final bill with payment receipt"
+              }
+            ]
+          },
+          "aliases": [
+            "End-of-life care",
+            "Terminal illness palliative care",
+            "Advanced disease supportive care",
+            "Palliative medical management",
+            "Hospice care equivalent",
+            "ICD-10 Z51.5"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    }
+  ]
+}

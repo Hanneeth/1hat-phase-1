@@ -1,0 +1,89 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB055B",
+  "procedure_code": "SB055B",
+  "condition": "Osteotomy",
+  "procedure_name": "Osteotomy small bone",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Osteotomy_Medco.pdf",
+    "Osteotomy_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "x_ray",
+        "label": "X-ray with patient ID, date and side (Left/ Right) - affected part justifying the procedure"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "post_procedure_x_ray",
+        "label": "Post procedure X-ray with patient ID, date and side (Left/Right)"
+      },
+      {
+        "key": "invoice_and_barcode_of_implant",
+        "label": "Invoice and barcode of implant (optional)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Missing X-ray with patient ID, date, and affected side for pre-authorization.",
+    "Missing clinical photograph of affected part for pre-authorization.",
+    "Missing Detailed Indoor case papers at claim submission.",
+    "Missing Procedure / operation notes at claim submission.",
+    "Missing Post-procedure X-ray with patient ID, date, and affected side at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Osteotomy literally means \"cutting of the bone.\"",
+      "Osteotomy can fix problems in many different bones and joints such as Hip, Knee, Spine, Jaw, Big toe, Chin."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "One advantage of the procedure is that, by preserving knee anatomy, a successful osteotomy may delay the need for a joint replacement for several years. Another advantage is that there are no restrictions on physical activities after an osteotomy.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

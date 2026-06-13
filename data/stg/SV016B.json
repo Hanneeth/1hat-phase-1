@@ -1,0 +1,158 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV016B",
+  "procedure_code": "SV016B",
+  "condition": "Aortic Aneurysm",
+  "procedure_name": "Aortic Aneurysm Repair using Left Heart Bypass",
+  "specialty": "CTVS, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Aortic Aneurysm Repair_Medco.pdf",
+    "Aortic Aneurysm Repair_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MCh",
+    "DNB",
+    "Equivalent (in Cardiothoracic Surgery, Vascular Surgery)"
+  ],
+  "clinical_indications": [
+    "Ascending aorta: Acute dissection (emergency)",
+    "Ascending aorta: Symptomatic aneurysms",
+    "Ascending aorta: Asymptomatic large aneurysms",
+    "Aortic arch: Symptomatic aneurysms",
+    "Aortic arch: Large Aneurysms",
+    "Aortic arch: Documented progressive enlargement",
+    "Aortic arch: Potential source of emboli in patient with embolic cerebral events",
+    "Descending aorta: Symptomatic aneurysms",
+    "Descending aorta: Asymptomatic large aneurysms",
+    "Descending aorta: Documented progressive enlargement",
+    "Descending aorta: Aneurysms associated with chronic type B dissection"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication of graft requirement, and planned line of management"
+      },
+      {
+        "key": "electrocardiogram_ecg",
+        "label": "Electrocardiogram (ECG)"
+      },
+      {
+        "key": "chest_xray",
+        "label": "Chest X-ray"
+      },
+      {
+        "key": "_2d_echo",
+        "label": "2D ECHO"
+      },
+      {
+        "key": "ct_mri",
+        "label": "CT/MRI"
+      },
+      {
+        "key": "optional_etiology_based_investigations",
+        "label": "Optional based on Etiology (Transthoracic Echocardiogram (TTE), Coronary angiography, Lung function test, Serum Urea and creatinine, Duplex scan, Aortography)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "graft_details_barcode_invoice",
+        "label": "Graft details - barcode/invoice (if artificial graft used)"
+      },
+      {
+        "key": "post_op_investigations",
+        "label": "Post-op investigations (Chest X-ray / USG Chest/Abdomen, CT scan (optional))"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the clinical condition and imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical condition, size of the aneurysm and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was graft detail (barcode/invoice) available in case of artificial graft?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical condition, size of the aneurysm, or imaging not indicative of surgery.",
+    "Missing clinical notes with evaluation findings, graft requirement indication, or planned management.",
+    "Graft details (barcode/invoice) missing for artificial graft.",
+    "Detailed procedure / operative notes not available.",
+    "Detailed discharge summary with follow-up advice not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital with equipped facilities for cardiopulmonary bypass",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "An aneurysm is defined as a permanent localized dilatation of an artery by at least 50% compared to normal.",
+      "A true aneurysm involves all layers of the arterial wall.",
+      "A false or pseudoaneurysm usually has an outer wall consisting of adventitia, organized thrombus, and surrounding structures.",
+      "A mycotic aneurysm is any aneurysm caused as a result of infection.",
+      "Aneurysms can be further classified by location: ascending, arch, descending, abdominal",
+      "Aneurysms are classified according to shape (fusiform or saccular).",
+      "Aneurysms may be classified according to complicating pathology: (ruptured, dissecting).",
+      "Risk factors for aneurysm formation include: Age (up to 90% of patients are >60 years of age), Hypertension, atherosclerosis, smoking, Connective tissue disorders (Ehlers-Danlos syndrome, Marfan syndrome, Turner syndrome, Loeys-Dietz syndrome), Cystic medial degeneration, Aortitis (Takayasu's arteritis most commonly involves the arch), Bacterial infection (most commonly Staphylococcus aureus, Staphylococcus epidermidis, Salmonella, Streptococcus), Trauma is a rare cause of true aneurysms, but iatrogenic trauma (surgery or intervention) is a common cause of pseudoaneurysms",
+      "About 1/3 of patients are asymptomatic: the aneurysm is an incidental finding on CXR, or Transthoracic Echocardiogram (TTE) or cardiac catheterization",
+      "About half of patients present with anterior chest pain",
+      "Acute onset pain suggests dissection or impending rupture",
+      "Hoarseness from arch aneurysms stretching recurrent laryngeal nerve",
+      "Examination is frequently unremarkable but 10–20% of patients have associated abdominal aneurysms",
+      "The role of imaging in chronic aneurysms is to establish and monitor the size of the aneurysm, and define the anatomy and comorbidity",
+      "CT is the most widely used modality, but MRI is a useful adjunct",
+      "Additional assessment includes echocardiography and coronary angiography"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Advanced age (>85 years)",
+      "Incurable malignancy or other terminal illness"
+    ]
+  }
+}

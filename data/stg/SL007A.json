@@ -1,0 +1,124 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL007A",
+  "procedure_code": "SL007A",
+  "condition": "Epistaxis",
+  "procedure_name": "Epistaxis treatment - packing",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Epistaxis_Medco.pdf",
+    "Epistaxis_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Acute bleeding from the nose after physical trauma/ barotrauma/nose picking/ physical exertion.",
+    "Acute bleeding from the nose in hypertensive / hematological disorders.",
+    "Acute bleeding from the nose without any obvious cause.",
+    "Bleeding not controlled by bidigital compression, short term tab labetalol for hypertension, or chemical/electrocauterization of bleeder."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes clearly indicating symptoms and signs"
+      },
+      {
+        "key": "lab_investigations",
+        "label": "Lab investigations (Complete Blood count, Haemoglobin, Coagulation profile)"
+      },
+      {
+        "key": "local_examination_report",
+        "label": "Report of local examination by anterior rhinoscopy/ endoscopy identifying the source of bleeding available"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers available indicating Signs & symptoms, Physical & local examination, Investigations performed, Screening for coagulation disorders/ anticoagulation medications/ hematological malignancies, Appropriate treatment given based on the cause of bleeding"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph of patient and the affected part"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary with appropriate discharge advise"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Do the clinical notes clearly indicate symptoms and signs?",
+        "expected": true
+      },
+      {
+        "q": "Have the Lab investigations (Complete Blood count, Haemoglobin, Coagulation profile) been done?",
+        "expected": true
+      },
+      {
+        "q": "Is the report of local examination by anterior rhinoscopy/ endoscopy identifying the source of bleeding available?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Has the patient been screened for coagulation disorders/ anticoagulation medications/ hematological malignancies?",
+        "expected": true
+      },
+      {
+        "q": "Are the reports of coagulation profile, Haemoglobin level and Complete blood count performed available?",
+        "expected": true
+      },
+      {
+        "q": "Are indoor case papers available indicating signs, symptoms, examination, investigations performed, and appropriate treatment given based on the cause of bleeding?",
+        "expected": true
+      },
+      {
+        "q": "Is the patient's discharge summary available with appropriate discharge advise?",
+        "expected": true
+      },
+      {
+        "q": "Is the clinical photograph of the patient and the affected part available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes not clearly indicating symptoms and signs.",
+    "Lab investigation reports (Complete Blood count, Haemoglobin, Coagulation profile) not uploaded or incomplete.",
+    "Report of local examination by anterior rhinoscopy/endoscopy identifying the source of bleeding not available.",
+    "Patient not screened for coagulation disorders/anticoagulation medications/hematological malignancies.",
+    "Indoor case papers incomplete, missing details on signs/symptoms, examination, investigations, screening for disorders, or treatment given.",
+    "Clinical photograph of patient and the affected part not uploaded.",
+    "Discharge summary with appropriate discharge advice not available."
+  ],
+  "additional_information": {
+    "icd_10_code": "R04.0",
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "PG Diploma/ M.S. /DNB/ equivalent (in ENT)",
+    "clinical_key_pointers": [
+      "The diagnosis made should be backed by clinical and/or investigation findings and all required reports shall be uploaded.",
+      "Look for Red Flag signs: Features suggestive of neoplasia, Persistent bleeding despite nasal packing, Altered blood counts/ coagulation profile, Recurrent profuse bleeding (to be managed at Tertiary level)."
+    ],
+    "surgical_options": [
+      "Arterial ligation (sphenopalatine / anterior ethmoidal artery) if bleeding persists despite nasal packing.",
+      "Selective embolization is an alternative to surgery."
+    ],
+    "pre_op_preparation": "Ensure patent airway/ avoid aspiration by head down/lateral positioning. Restore hemodynamic stability by intravenous fluid replacement/transfusion. Control bleeding/bleeder by bidigital compression of nose for 10 minutes in Trotter's position (cotton pledgets soaked in 4% xylocaine with adrenaline may be used), short term tab labetalol for uncontrolled hypertension, or chemical/electrocauterization of bleeder in Little's area.",
+    "post_op_care": "Antibiotic prophylaxis and hospitalization is recommended after nasal packing. H2blockers/ PPI to be given in case of blood aspiration to avoid gastritis. Continued nasal lubrication for 2 weeks with liquid paraffin. Repeat anterior rhinoscopy/ endoscopy to know/confirm the cause of bleeding. Oral hematinics to be considered if needed.",
+    "fitness_criteria": null,
+    "comorbidity_management": "Screen for coagulation disorders/anticoagulant medications/hematological malignancies. Manage uncontrolled hypertension with short term tab labetalol.",
+    "referral_criteria": "Recurrent profuse bleeding (to be managed at Tertiary level). Consider Juvenile Nasopharyngeal Angiofibroma (JNA) in teenage boys and Aneurysmal bleeding (especially following trauma) to be ruled out by Digital Subtraction Angiography (DSA); these are to be managed at tertiary level.",
+    "quality_assessment_parameters": [
+      "Recurrence of episodes.",
+      "Improvement in haemoglobin level over a period of time."
+    ],
+    "contraindications": []
+  }
+}

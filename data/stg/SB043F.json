@@ -1,0 +1,140 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB043F",
+  "procedure_code": "SB043F",
+  "condition": "Osteosarcoma",
+  "procedure_name": "Single Stage Amputation (Hand)",
+  "specialty": "Surgical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Osteosarcoma Guidelines.pdf"
+  ],
+  "alos": "5",
+  "min_doctor_qualification": [
+    "MS or DNB (Orthopaedics) or equivalent with specialized training in musculoskeletal oncology (MCH Surgical oncology/ Fellowship in orthopedic oncology)"
+  ],
+  "clinical_indications": [
+    "TNM 8th ed, Stages I-III and selected Stage IV Extremity Osteosarcoma",
+    "Neoadjuvant/Adjuvant chemotherapy (Except low grade osteosarcoma)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with documentation of relevant history"
+      },
+      {
+        "key": "bone_imaging",
+        "label": "Bone imaging (local and chest x-ray)"
+      },
+      {
+        "key": "blood_investigations",
+        "label": "Blood investigations- CBC,LFT, RFT, RBS"
+      },
+      {
+        "key": "routine_biochemistry",
+        "label": "Routine Biochemistry"
+      },
+      {
+        "key": "serological_investigations",
+        "label": "Serological investigations- alkaline phosphatase, lactate dehydrogenase"
+      },
+      {
+        "key": "mri_affected_part",
+        "label": "MRI of the affected part"
+      },
+      {
+        "key": "core_needle_biopsy",
+        "label": "Core needle biopsy"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "cect_chest",
+        "label": "CECT chest"
+      },
+      {
+        "key": "bone_scan_f18_pet_scan",
+        "label": "Bone scan/ F18 PET Scan"
+      },
+      {
+        "key": "echo_ecg_gfr_audiometry",
+        "label": "ECHO, ECG, GFR, Audiometry"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative Notes"
+      },
+      {
+        "key": "picture_gross_specimen",
+        "label": "Picture of the gross specimen of the part removed"
+      },
+      {
+        "key": "clinical_photograph_surgical_site",
+        "label": "Clinical photograph of the surgical site showing scar"
+      },
+      {
+        "key": "hpe_report",
+        "label": "HPE report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Increased levels of alkaline phosphatase and Lactate dehydrogenase?",
+        "expected": true
+      },
+      {
+        "q": "Local part X-Ray/MRI/ Bone scan/ PET-CT shows osteosarcoma?",
+        "expected": true
+      },
+      {
+        "q": "Biopsy report shows High Grade osteosarcoma?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Increased levels of alkaline phosphatase and Lactate dehydrogenase not documented or outside expected range",
+    "Local part X-Ray/MRI/ Bone scan/ PET-CT does not show osteosarcoma",
+    "Biopsy report does not show High Grade osteosarcoma",
+    "Clinical notes with relevant history are missing or incomplete at pre-authorization",
+    "Bone imaging (local and chest x-ray) is missing or incomplete at pre-authorization",
+    "Indoor case papers are missing at claim submission",
+    "Procedure / Operative Notes are missing or incomplete at claim submission",
+    "Picture of the gross specimen of the part removed is missing at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Chemotherapy unit (adequate infrastructure for drug level monitoring especially for MAP regimen i.e. adequate facilities for admission for every cycle and adequate facilities to monitor serum methotrexate levels and to manage renal toxicities); LINEAC; well-equipped OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Physiotherapy rehabilitation post-operatively, follow-up every 6 months for first 5 years and annual follow-up after every 5 years with clinical evaluation (examination of local area), radiological evaluation (X-ray of the local part and Chest) and functional evaluation (using special scores like Musculoskeletal Tumor Society (MSTS) scoring, etc.)",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "If surgeon is not able to achieve negative surgical margins, limb salvage must not be done",
+      "If the function of salvaged limb is inferior to amputation and prosthesis then limb salvage should not be done",
+      "Relative contraindications include – neurovascular involvement, persistent infection, disease progression and un united pathological fractures"
+    ]
+  }
+}

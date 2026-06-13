@@ -1,0 +1,143 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU066D",
+  "procedure_code": "SU066D",
+  "condition": "Urethral Stricture",
+  "procedure_name": "Urethroplasty - Transpubic",
+  "specialty": "Urology/ Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Urethral Dilatation, Urethroplasty & Follow Up _Medco.pdf",
+    "Urethral Dilatation, Urethroplasty & Follow Up _PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [],
+  "clinical_indications": [
+    "A stricture of the urethra",
+    "Urethral strictures",
+    "Pelvic fracture urethral injury (PFUI)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "rgu_mcu_report",
+        "label": "Anterograde urethrography/Retrograde urethrography (RGU)/Micturating cystourethrography (MCU)"
+      },
+      {
+        "key": "discharge_summary_last_urethroplasty",
+        "label": "Discharge Summary of last Urethroplasty performed (not required)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure / Operative notes"
+      },
+      {
+        "key": "detailed_clinical_notes_current_visit",
+        "label": "Detailed clinical notes of the current visit (not required)"
+      },
+      {
+        "key": "intra_procedure_clinical_photograph",
+        "label": "Intra procedure clinical photograph"
+      },
+      {
+        "key": "post_procedure_usg_uroflowmetry_report",
+        "label": "Post procedure USG/ Uroflowmetry report (not required)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes_dilators_size",
+        "label": "Detailed procedure / operative notes detailing size of dilators used (not required)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the Anterograde urethrography/ Retrograde urethrography (RGU) / Micturating cystourethrography (MCU) Investigation reports submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Discharge Summary of last Urethroplasty performed submitted?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / operative notes detailing size of dilators used?",
+        "expected": false
+      },
+      {
+        "q": "Are the detailed clinical notes of the current visit submitted?",
+        "expected": false
+      },
+      {
+        "q": "Intra procedure clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post procedure USG/ Uroflowmetry report submitted?",
+        "expected": false
+      },
+      {
+        "q": "Is the Discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Anterograde urethrography/Retrograde urethrography (RGU)/Micturating cystourethrography (MCU) report not indicative of Urethroplasty procedure",
+    "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission not provided at pre-authorization",
+    "Anterograde urethrography/Retrograde urethrography (RGU)/Micturating cystourethrography (MCU) reports not submitted at pre-authorization",
+    "Detailed Indoor case papers (ICPs) not provided at claim submission",
+    "Detailed procedure / Operative notes not submitted at claim submission",
+    "Intra procedure clinical photograph not submitted at claim submission",
+    "Detailed discharge summary not submitted at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary level facilities",
+    "min_doctor_qualification_desirable": "MS/DNB/ Equivalent (in Urology/ Pediatric Surgery)",
+    "clinical_key_pointers": [
+      "Urethroplasty is a surgical approach for the management of urethral stricture disease. It may also involve reconstruction of the surrounding tissues.",
+      "Open surgical urethral reconstruction is the gold standard treatment for urethral stricture disease."
+    ],
+    "surgical_options": [
+      "Urethroplasty procedures are varied and depend upon the location, cause, and length of the stricture."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [
+      "A major barrier in urethral monitoring after urethroplasty is that there is also no consensus regarding the definition of urethroplasty success or failure."
+    ],
+    "contraindications": []
+  }
+}

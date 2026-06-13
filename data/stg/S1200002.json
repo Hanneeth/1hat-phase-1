@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1200002",
+  "procedure_code": "S1200002",
+  "condition": "Aortic stenosis",
+  "procedure_name": "Balloon Aortic Valvotomy",
+  "specialty": "Cardiology",
+  "version": "1.1",
+  "source_files": [
+    "Balloon Aortic Valvotomy_Medco.pdf",
+    "Balloon Aortic Valvotomy_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "DM/DNB/ equivalent(Cardiology)"
+  ],
+  "clinical_indications": [
+    "In infants with critical valvular AS with duct dependent circulation",
+    "Children with isolated valvular AS with LV dysfunction, irrespective of valve gradient",
+    "Resting peak gradient of more than 50 mmHg on catheterization or more than 64 mmHg on echo",
+    "Symptomatic with peak gradient > 40 mmHg on catheterization"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "resting_peak_gradient",
+      "operator": ">",
+      "value": "50 mmHg",
+      "note": "on catheterization"
+    },
+    {
+      "field": "resting_peak_gradient",
+      "operator": ">",
+      "value": "64 mmHg",
+      "note": "on echo"
+    },
+    {
+      "field": "symptomatic_peak_gradient",
+      "operator": ">",
+      "value": "40 mmHg",
+      "note": "on catheterization"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_planned_treatment",
+        "label": "Clinical notes with planned line of treatment"
+      },
+      {
+        "key": "detailed_echo_report",
+        "label": "Detailed Echo report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes_indication",
+        "label": "Procedure / Operative notes with indication of procedure"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "invoice_balloon_used",
+        "label": "Invoice of balloon used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Echo report suggestive of Aortic stenosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the Post procedure still of ECHO show increase in Aortic valve area?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo report not suggestive of Aortic stenosis at pre-authorization",
+    "Resting peak gradient or symptomatic peak gradient not meeting clinical thresholds as per guidelines",
+    "Clinical notes missing or lacking planned line of treatment",
+    "Post-procedure ECHO does not show an increase in Aortic valve area",
+    "Invoice for balloon used not submitted",
+    "Detailed Discharge Summary missing or not mentioning date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath Lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Aortic stenosis is a congenital or acquired reduction in the area of the aortic valve, resulting in obstruction of the blood flow from the left ventricle to the aorta. Aortic stenosis accounts for 2-5% of all congenital heart defects and is a potentially life-threatening disorder. Degenerative etiology is present in majority of cases after age of 60 years.",
+      "Patients with mild aortic stenosis are usually asymptomatic. Patients become symptomatic when AS becomes severe, defined by aortic valve area less than 1.0 cm2 (0.6 cm2/m2) and echocardiography is procedure of choice for evaluation. The symptoms are chest pain, syncope and dyspnoea.",
+      "Common Signs and Symptoms of Aortic Stenosis include: Symptoms (Exertional Dyspnea, Angina, Exertional Syncope, Sudden death) and Signs (Ejectional systolic murmur, Slow-rising carotid pulse, Narrow pulse pressure, Thrusting apex beat, Signs of pulmonary venous congestion (eg. Crepitations)).",
+      "Balloon valvuloplasty has evolved as procedure of choice in severe non-calcific isolated valvular aortic stenosis, particularly in children and adolescent. A re-intervention is required in majority of patients in long term."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

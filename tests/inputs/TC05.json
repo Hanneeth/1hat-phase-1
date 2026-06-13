@@ -1,0 +1,161 @@
+{
+  "_test_id": "TC05",
+  "_description": "Near-empty wallet (₹8,000 remaining) with planned cholecystectomy. Tests WALLET_INSUFFICIENT flag and copayment_required=True in Phase 5.",
+  "_expected_status": "CONDITIONAL",
+  "_expected_specialty": "SG",
+  "_expected_flags_include": [
+    "WALLET_INSUFFICIENT",
+    "FINANCIAL_ESTIMATE_APPROXIMATE"
+  ],
+  "_expected_flags_exclude": [
+    "PUB_RESERVED_BLOCK"
+  ],
+  "session_id": "IRIS-TC05-20260612",
+  "created_at": "2026-06-12T11:30:00+05:30",
+  "patient": {
+    "patient_id": "P005"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Recurrent right upper quadrant colicky pain after fatty food for 8 months, 3 episodes of jaundice, one episode of acute cholecystitis last month",
+    "duration_days": 240,
+    "history_of_present_illness": "Patient has been experiencing recurrent right upper quadrant pain for 8 months, triggered by fatty food. She has had 3 documented episodes of jaundice and one hospitalisation for acute cholecystitis last month which resolved with IV antibiotics. USG has confirmed multiple gallstones. Now presenting for elective laparoscopic cholecystectomy after interval.",
+    "provisional_diagnosis": "Cholelithiasis with chronic calculous cholecystitis",
+    "planned_procedure": "Laparoscopic cholecystectomy",
+    "weight_kg": 68,
+    "height_cm": 158,
+    "vitals": {
+      "bp_systolic_mmhg": 118,
+      "bp_diastolic_mmhg": 76,
+      "pulse_bpm": 82,
+      "spo2_pct": 99,
+      "temperature_f": 98.6,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": null
+    },
+    "examination_findings": {
+      "general": "Conscious, oriented, mildly icteric sclera, no pallor",
+      "cvs": "S1 S2 heard, no murmurs",
+      "rs": "Clear air entry bilateral",
+      "abdomen": "Soft, mild tenderness in right hypochondrium, Murphy sign negative today, liver not enlarged, no palpable gallbladder",
+      "cns": "No focal deficits",
+      "local": null
+    },
+    "investigations": [
+      {
+        "type": "usg",
+        "result_summary": "Multiple calculi in gallbladder (largest 1.4cm), gallbladder wall thickened 4mm, no CBD dilatation, no pericholecystic fluid",
+        "structured_values": [
+          {
+            "parameter": "gallstone_count",
+            "value": "multiple",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "largest_stone",
+            "value": 1.4,
+            "unit": "cm",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "GB_wall_thickness",
+            "value": 4,
+            "unit": "mm",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "CBD_diameter",
+            "value": 5,
+            "unit": "mm",
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-10"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "LFT: Total bilirubin 1.8 mg/dL, SGOT 42 U/L, SGPT 58 U/L, ALP 142 U/L. Hb 10.8 g/dL, WBC 9400/cumm. PT-INR 1.1.",
+        "structured_values": [
+          {
+            "parameter": "total_bilirubin",
+            "value": 1.8,
+            "unit": "mg/dL",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "SGPT",
+            "value": 58,
+            "unit": "U/L",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "ALP",
+            "value": 142,
+            "unit": "U/L",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "Hb",
+            "value": 10.8,
+            "unit": "g/dL",
+            "flag": "L",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-11"
+      }
+    ],
+    "comorbidities": [
+      "anaemia"
+    ],
+    "past_medical_history": "Cholecystitis hospitalisation last month. Anaemia on iron supplementation.",
+    "past_surgical_history": "Lower segment caesarean section 3 years ago",
+    "current_medications": [
+      "Iron supplements",
+      "Ursodeoxycholic acid 300mg BD"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "none",
+      "diet": "vegetarian"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Surgical consultation notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo on bed",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Kavitha Sundaram",
+      "registration_number": "TN-MED-56789",
+      "qualification": "MS General Surgery",
+      "specialty_code": "SG"
+    },
+    "notes": "Patient wallet nearly exhausted from prior claims this year (₹8,000 remaining). Co-payment discussion needed before proceeding. Patient has been counselled."
+  }
+}

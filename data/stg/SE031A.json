@@ -1,0 +1,110 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Retinal Cryopexy/ : Retinal Cryopexy_Medco.pdf (clinical + mandatory docs) + Retinal Cryopexy_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "SE031A",
+  "procedure_code": "SE031A",
+  "condition": "Retinal Tears and Disorders",
+  "procedure_name": "Retinal Cryopexy",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Retinal Cryopexy_Medco.pdf",
+    "Retinal Cryopexy_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD Ophthalmology",
+    "MS Ophthalmology",
+    "DNB Ophthalmology",
+    "PG Diploma Ophthalmology",
+    "equivalent in Ophthalmology"
+  ],
+  "clinical_indications": [
+    "Retinal breaks or detachments",
+    "Retinal ischemia (retinal tissue that lacks oxygen)",
+    "Neovascularization (proliferation of blood vessels in the retina)",
+    "Coats' disease (abnormal retinal blood vessels that cause loss of vision)",
+    "Retinoblastoma (intraocular tumors)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_indication_for_procedure",
+        "label": "Clinical notes with indication for procedure"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Operative/ procedure notes"
+      },
+      {
+        "key": "intraoperative_photograph_with_patient_id_time_and_date_optional",
+        "label": "Intraoperative photograph with Patient ID, time and date (optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes, clinical symptoms, examination (fundus examination/ B-scan, etc.) available?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected Eye whether R or L with full face photograph?",
+        "expected": true
+      },
+      {
+        "q": "Detailed admission notes?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT/procedure notes detail the steps of surgery performed and was the surgery successful?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Was the intra operative photograph submitted (optional)?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical symptoms (like floaters, flashes of light), history, examination findings, or investigations (B-scan/Fundus examination) do not suggest a retinal tear.",
+    "Clinical notes with indication for procedure are missing or incomplete at pre-authorization.",
+    "Admission notes are missing at pre-authorization.",
+    "Clinical photo of Affected Eye (R or L) or full face photograph not submitted at pre-authorization.",
+    "Operative/procedure notes are missing or do not detail the steps of surgery performed or confirm surgery success at claim submission.",
+    "Documents showing appropriate post-operative care and follow-up advice are not available at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Retinal Cryopexy only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination and does not respond to conservative medical therapy.",
+      "Retinal cryopexy/ cryotherapy is the use of extreme cold therapy primarily used for the treatment of retinal tears and other retinal conditions such as Retinopathy of Prematurity (Stage 4 & 5) which if left untreated may lead to retinal detachment. This procedure helps create a scar tissue preventing further extension of the tear."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "After treatment of retinal tear, there is a high risk of developing additional tears in future. Hence, continued monitoring and follow-up is important.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

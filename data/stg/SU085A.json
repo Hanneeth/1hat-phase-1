@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU085A",
+  "procedure_code": "SU085A",
+  "condition": "Penectomy, Penile prosthesis insertion (For Benign Condition)",
+  "procedure_name": "Penile prosthesis insertion",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Penectomy, Penile prosthesis insertion (For Benign Condition)_Medco.pdf",
+    "Penectomy, Penile prosthesis insertion (For Benign Condition)_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB/ or equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Proliferative lesion involving penis",
+    "Recurrent Infection",
+    "Ulcer that might bleed",
+    "A reddish and velvet rash",
+    "Benign/carcinoma",
+    "Fournier gangrene which includes complications due to Diabetes."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure."
+      },
+      {
+        "key": "previous_penectomy_history",
+        "label": "Previous history of penectomy done"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "barcode_invoice_implant_used",
+        "label": "Barcode/invoice of the implant used"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Previous history of penectomy done submitted?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes and previous history of penectomy indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Indoor case papers with daily vitals and line of treatment available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Barcode/invoice of the implant submitted for Penile prosthesis insertion procedure if done?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary with follow-up advise at the time of discharge available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or previous history of penectomy not indicative of procedure for penile prosthesis insertion",
+    "Clinical notes for pre-authorization missing or incomplete",
+    "Previous history of penectomy not submitted at pre-authorization",
+    "Detailed Indoor case papers with daily vitals and line of treatment missing at claim submission",
+    "Detailed Procedure / Operative Notes missing at claim submission",
+    "Barcode/invoice of the implant missing at claim submission",
+    "Discharge summary with follow-up advise missing at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proliferative lesion involving penis",
+      "Recurrent Infection",
+      "Ulcer that might bleed",
+      "A reddish and velvet rash"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

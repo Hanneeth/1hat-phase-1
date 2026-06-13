@@ -1,0 +1,179 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG039D",
+  "procedure_code": "SG039D",
+  "condition": "Cholecystectomy (Except Radical/Revision)",
+  "procedure_name": "Cholecystectomy - With Exploration of CBD - Lap.",
+  "specialty": "General Surgery / Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Cholecystectomy_Medco.pdf",
+    "Cholecystectomy_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS General Surgery",
+    "DNB General Surgery",
+    "MCh Pediatric Surgery"
+  ],
+  "clinical_indications": [
+    "Biliary Colic",
+    "Acute Cholecystitis: pain in right hypochondrium or epigastrium, fever, vomiting and leukocytosis.",
+    "Acute Pancreatitis: Sever unrelenting pain in epigastrium radiating to the back associated with vomiting, abdominal distension and obstipation.",
+    "Choledocholithiasis: Epigastric or right upper quadrant pain with jaundice and fever. There may be history of itching with dark urine and pale stools. In some patients choledocholithiasis may be incidentally detected on evaluation of gall stone disease.",
+    "Cholangitis: Pain in abdomen with jaundice and fever with chills."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "gall_bladder_calculi",
+      "operator": "present",
+      "value": "true",
+      "note": "USG showing presence of calculi in gall bladder"
+    },
+    {
+      "field": "symptoms_right_hypochondrium_epigastrium",
+      "operator": "present",
+      "value": "true",
+      "note": "Patient having complain of right hypochondrium or epigastrium"
+    },
+    {
+      "field": "previous_cholecystectomy",
+      "operator": "present",
+      "value": "false",
+      "note": "Cholecystectomy done in the past"
+    },
+    {
+      "field": "cbd_stones",
+      "operator": "present",
+      "value": "true",
+      "note": "MRCP or USG showing large (>1cm) or multiple CBD stones if CBD exploration is planned"
+    },
+    {
+      "field": "lft_abnormal",
+      "operator": "present",
+      "value": "true",
+      "note": "Elevated serum bilirubin, transaminase and alkaline phosphate"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "usg_upper_abdomen",
+        "label": "USG upper abdomen"
+      },
+      {
+        "key": "lft",
+        "label": "LFT (Liver function test)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "operative_notes",
+        "label": "Operative notes"
+      },
+      {
+        "key": "pre_anesthesia_check_up_report",
+        "label": "Pre-anesthesia check-up report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "intraoperative_photo_gross_specimen",
+        "label": "Intraoperative photograph and Pictures of gross specimen removed"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report (can be submitted within 7 days of discharge)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "USG Upper Abdomen - confirming presence of gall stone?",
+        "expected": true
+      },
+      {
+        "q": "LFT - elevated serum bilirubin, transaminase and alkaline phosphate?",
+        "expected": true
+      },
+      {
+        "q": "USG showing presence of calculi in gall bladder?",
+        "expected": true
+      },
+      {
+        "q": "Patient having complain of right hypochondrium or epigastrium?",
+        "expected": true
+      },
+      {
+        "q": "Cholecystectomy done in the past?",
+        "expected": false
+      },
+      {
+        "q": "USG Upper Abdomen - MRCP or USG showing large (>1cm) or multiple CBD stones if CBD exploration is also planned?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed operative notes with indications and outcomes of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is pre-anesthesia check-up report available?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Is the picture(s) of intra-operative and gross specimen removed available?",
+        "expected": true
+      },
+      {
+        "q": "In case CBD stones detected during surgery, or suspected before surgery, intra-operative photograph / video of stones being taken out of CBD should be provided?",
+        "expected": true
+      },
+      {
+        "q": "Histopathology report of the specimen removed (can be submitted within 7 days of discharge)?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "USG not showing presence of calculi in gall bladder",
+    "Patient not complaining of right hypochondrium or epigastrium",
+    "Cholecystectomy done in the past",
+    "Clinical notes missing detailed history, signs & symptoms, or indication for procedure",
+    "USG report not confirming presence of gall stone",
+    "LFT not provided or not showing elevated serum bilirubin, transaminase and alkaline phosphate",
+    "Intraoperative photograph and pictures of gross specimen removed missing",
+    "Documentation (MRCP or USG) of large (>1cm) or multiple CBD stones missing or insufficient when CBD exploration is planned",
+    "Intra-operative photograph / video of stones being taken out of CBD not provided when CBD stones were detected"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Laparoscopic facility with trained specialties in laparoscopic surgeries for performing laparoscopic surgeries.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

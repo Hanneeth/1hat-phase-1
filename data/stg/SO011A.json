@@ -1,0 +1,149 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO011A",
+  "procedure_code": "SO011A",
+  "condition": "Caesarean Hysterectomy",
+  "procedure_name": "Caesarean hysterectomy",
+  "specialty": "Obstetrics & Gynaecology",
+  "version": "1.1",
+  "source_files": [
+    "Caesarean Hysterectomy Guidelines_Medco.pdf",
+    "Caesarean Hysterectomy Guidelines_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS/ DNB / PG Diploma in Obstetrics & Gynaecology (OBS&GYN)",
+    "MS/ DNB in General Surgery with documented reasons for non-availability of a qualified OBS&GYN specialist"
+  ],
+  "clinical_indications": [
+    "Absolute disproportion- Small maternal pelvis",
+    "Chorioamnionitis (amniotic infection syndrome)",
+    "Maternal pelvic deformity",
+    "Eclampsia and HELLP syndrome",
+    "Fetal asphyxia or fetal acidosis",
+    "Umbilical cord prolapse",
+    "Placenta previa",
+    "Abnormal lie and presentation",
+    "HELLP syndrome--H- hemolysis (breakdown of red blood cells)",
+    "EL- elevated liver enzymes (liver function)",
+    "LP- low platelets counts"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_life_saving_reason",
+        "label": "Clinical notes clearly indicating reason(s) for being a life-saving procedure and performing caesarean hysterectomy"
+      },
+      {
+        "key": "lab_investigations",
+        "label": "Lab investigations (Complete Blood count, Blood sugar- fasting and post prandial, Renal function test, liver function test, Urine- routine and microscopy)"
+      },
+      {
+        "key": "usg_abdomen_pregnancy_report",
+        "label": "Ultrasonography (USG) Abdomen (Pregnancy USG report / scan)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed Operative notes"
+      },
+      {
+        "key": "discharge_summary_follow_up",
+        "label": "Discharge summary with follow up advise"
+      },
+      {
+        "key": "delivery_note_birth_outcomes",
+        "label": "Delivery note (including birth outcomes)"
+      },
+      {
+        "key": "pictures_specimen_removed_gross",
+        "label": "Pictures of specimen removed (Gross)"
+      },
+      {
+        "key": "histopathology_report_specimen_removed",
+        "label": "Histopathology report of the specimen removed"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is gender female?",
+        "expected": true
+      },
+      {
+        "q": "Is age within reproductive age?",
+        "expected": true
+      },
+      {
+        "q": "Is Gravid Uterus indicated?",
+        "expected": true
+      },
+      {
+        "q": "Is Parity >= 2?",
+        "expected": true
+      },
+      {
+        "q": "Is youngest child more than 5 years of age?",
+        "expected": true
+      },
+      {
+        "q": "Has hysterectomy never been done in the past?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the patient have a definitive indication for undergoing Caesarean Delivery (e.g., Absolute disproportion, Chorioamnionitis, Maternal pelvic deformity, Eclampsia, HELLP syndrome, Fetal asphyxia, Umbilical cord prolapse, Placenta previa, Abnormal lie/presentation)?",
+        "expected": true
+      },
+      {
+        "q": "Is there documentary evidence of indication of caesarean either from USG report of Gravid uterus or other reports like Non-Stress Test (NST)?",
+        "expected": true
+      },
+      {
+        "q": "Do detailed operative notes include indications for caesarean hysterectomy and outcomes of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Does the delivery note include outcomes of pregnancy?",
+        "expected": true
+      },
+      {
+        "q": "Does the discharge summary include follow-up advise & status of the child at the time of delivery and at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Are the picture(s) of gross specimen removed consistent with the Histopathology report of the specimen removed?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing or do not clearly indicate the life-saving reason for caesarean hysterectomy.",
+    "USG Abdomen (Pregnancy USG report / scan) is missing or incomplete at pre-authorization.",
+    "The patient's gender is not female or age is outside reproductive age, as per system pop-ups.",
+    "Gravid Uterus not indicated, or Parity is less than 2, as per system pop-ups.",
+    "Detailed operative notes are missing or do not include indications for caesarean hysterectomy and outcomes of the procedure.",
+    "Gross specimen pictures or Histopathology report are missing or inconsistent."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The diagnosis made should be backed by clinical or Ultrasonography (USG) findings and all required reports shall be uploaded",
+      "Since the procedure is performed as an emergency life-saving procedure, there should be sufficient documentary indication and evidence to support it as an Emergency."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

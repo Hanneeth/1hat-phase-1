@@ -1,0 +1,128 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS003A",
+  "procedure_code": "SS003A",
+  "condition": "Gastroesophageal Reflux Disease (GERD)",
+  "procedure_name": "Anti GERD Surgery",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "GERD Surgery_Medco.pdf",
+    "GERD Surgery_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "DNB",
+    "MCh.",
+    "Equivalent (in Pediatric surgery)"
+  ],
+  "clinical_indications": [
+    "Diagnosis backed by clinical manifestation.",
+    "Infants (Less than 1 year of age): Vomiting",
+    "Infants (Less than 1 year of age): Poor Weight gain",
+    "Infants (Less than 1 year of age): Irritability",
+    "Infants (Less than 1 year of age): Feeding refusal or dysphagia",
+    "Infants (Less than 1 year of age): Recurrent Pneumonia",
+    "Infants (Less than 1 year of age): Asthma and upper airway symptoms",
+    "Infants (Less than 1 year of age): Apnea or apparent life threating events",
+    "Children: Regurgitation",
+    "Children: Heart burn and retrosternal chest pain",
+    "Children: Dysphagia",
+    "Children: Asthma or chronic cough",
+    "Children: Recurrent Pneumonia",
+    "Children: Anemia and hematemesis"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "upper_gi_endoscopy",
+        "label": "Upper GI Endoscopy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photograph",
+        "label": "Intra-operative photograph"
+      },
+      {
+        "key": "pre_anesthesia_check_up_report",
+        "label": "Pre-anesthesia check-up report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes indicate detailed history, signs & symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did the endoscopy report show presence and severity of esophagitis or complications like ulcer, stricture, Barrett's esophagus?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Is pre-anesthesia check-up report available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Did the Intra operative procedure clinical photograph suggest that the procedure was performed for GERD surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes lack detailed history, signs & symptoms, or indication for procedure.",
+    "Upper GI endoscopy report is missing or incomplete.",
+    "Endoscopy report does not show presence and severity of esophagitis or complications (ulcer, stricture, Barrett's esophagus).",
+    "Intra-operative procedure clinical photograph does not suggest that the procedure was performed for GERD surgery.",
+    "Detailed procedure / operative notes are missing or incomplete.",
+    "Discharge summary does not include follow-up advice at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Anti GERD Surgery only if diagnosis made is backed by clinical manifestation."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

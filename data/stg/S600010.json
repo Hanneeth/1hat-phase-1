@@ -1,0 +1,213 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S600010",
+  "procedure_code": "S600010",
+  "condition": "Management of Chest injury with fracture of Long bone",
+  "procedure_name": "Management of Chest injury with fixation of Single Long bone",
+  "specialty": "Polytrauma, Orthopedics, Neurosurgery, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Management of Chest injury with fracture of Long bone_Medco.pdf",
+    "Management of Chest injury with fracture of Long bone_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MS/DNB/Equivalent (Orthopedic surgery)",
+    "MCh/DNB/Equivalent (Neurosurgery / CTVS Surgery)"
+  ],
+  "clinical_indications": [
+    "Evidence of chest injury (e.g., rib fractures, sternal fracture, pulmonary contusion, hemothorax, pneumothorax, flail chest)",
+    "Evidence of single long bone fracture",
+    "Respiratory compromise (saturation <95% or <98% with oxygen, RR >30, abnormal CXR/auscultation)",
+    "Signs of high velocity accident / polytrauma",
+    "Hemodynamic instability (unresponsive hypotension SBP<60mm Hg, rapid exsanguination from chest tube, persistent hypotension)",
+    "Blunt Cardiac Injury (trauma to cardiac box, hemopericardium, elevated CVP, tachyarrhythmias, raised cardiac trop T & I)",
+    "Great Vessel Injury (widened mediastinum, loss of Aortic Knob Contour, shift of ET tube/trachea, first rib fracture, acute left sided hemothorax, retro-cardiac density)",
+    "Flail Chest (3 or more ribs fractured at two or more places, resulting in hypoventilation, poor pulmonary drainage, atelectasis)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "saturation_room_air",
+      "operator": "<",
+      "value": "95% or 98%",
+      "note": "with oxygen"
+    },
+    {
+      "field": "respiratory_rate",
+      "operator": ">",
+      "value": "30 per minute",
+      "note": null
+    },
+    {
+      "field": "unresponsive_hypotension_sbp",
+      "operator": "<",
+      "value": "60mm Hg",
+      "note": null
+    },
+    {
+      "field": "rapid_exsanguination_chest_tube",
+      "operator": ">",
+      "value": "1500ml",
+      "note": null
+    },
+    {
+      "field": "persistent_hypotension_sbp",
+      "operator": "<",
+      "value": "60mm Hg",
+      "note": null
+    },
+    {
+      "field": "initial_blood_output_chest_tube",
+      "operator": ">",
+      "value": "1.5L",
+      "note": null
+    },
+    {
+      "field": "blood_output_chest_tube_rate",
+      "operator": ">",
+      "value": "250ml",
+      "note": "over 3 hours"
+    },
+    {
+      "field": "blood_output_chest_tube_total",
+      "operator": ">",
+      "value": "1.5L",
+      "note": "over 24 hours"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_injury_surgery",
+        "label": "Clinical Notes detailing the injury and need for surgery"
+      },
+      {
+        "key": "mlc_fir_copy",
+        "label": "Medico legal case report/ FIR copy of accident"
+      },
+      {
+        "key": "limb_xray_ct_report",
+        "label": "X-ray/ CT report of fractured limb"
+      },
+      {
+        "key": "ct_chest_film_report",
+        "label": "CT chest film and report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Detailed Procedure/Operative notes"
+      },
+      {
+        "key": "post_op_chest_xray_report",
+        "label": "Post op X-ray film and report of chest"
+      },
+      {
+        "key": "implant_invoice_barcode",
+        "label": "Invoice/Barcode of implant, if used"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Do clinical notes detail the accident, signs & symptoms, indication for surgery and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was the Medico legal report/ FIR copy of the accident submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did X-ray/ CT report suggest fracture of one long bone?",
+        "expected": true
+      },
+      {
+        "q": "Did X-ray/ CT report suggest fracture of more than one long bone?",
+        "expected": false
+      },
+      {
+        "q": "Was CT chest report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the post op X-ray film show repair of chest injury and fixation with implant?",
+        "expected": true
+      },
+      {
+        "q": "Was the Barcode of implant, if used submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "CT chest report not suggestive of chest injury.",
+    "X-ray/CT report does not suggest fracture of a single long bone.",
+    "Clinical notes do not detail the accident, signs & symptoms, indication for surgery, or planned line of treatment.",
+    "Medico legal case report/FIR copy of the accident is missing or incomplete.",
+    "Post-operative X-ray film does not show repair of chest injury and fixation with implant.",
+    "Barcode of implant is missing, if an implant was used."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operational Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Primary Survey and resuscitation",
+      "Secondary Survey (adequate exposure, penetrating injury, air leaking/sucking, abrasions/tenderness, paradoxical respiratory movements, crepitus/surgical emphysema, dullness/hyper resonance on percussion, reduced/absent air entry)",
+      "Emergency intubation, Intercostal tube drainage, Thoracotomy (initial management)",
+      "Rib fractures (most common chest injury; significance of 1-3 ribs fracture for brachial plexus/vascularity, 4-9 ribs fracture for liver/spleen/diaphragm/kidney/lung/bronchus/heart/pleura)",
+      "Always palpate the sternum, clavicle and spine",
+      "X-ray findings for bony thorax fractures, foreign bodies, lung fields (pneumothorax, hemothorax, lung contusion), mediastinum (widening, pneumomediastinum or shifting)",
+      "CT Chest Indications (saturation, CXR changes, respiratory rate, chest auscultation/palpation abnormality, high velocity accident / poly trauma)",
+      "Main Pillars of management (adequate analgesia, prevention for atelectasis, pulmonary toilet)",
+      "Hemothorax / Pneumothorax - Tube thoracostomy",
+      "Flail Chest (when 3 or more ribs fractured at two or more places, unilateral or bilateral; results in hypoventilation, poor pulmonary drainage and atelectasis)",
+      "Sternal Fracture (conservative management, fixation if fractured segment unstable, may require ventilation)",
+      "Blunt Cardiac Injury (trauma to 'Cardiac Box', hemopericardium, hypotension, elevated CVP, decreased heart sounds/new murmur, new onset tachyarrhythmias, raised Cardiac trop T & I; echocardiography investigation of choice)",
+      "Great Vessel Injury (Aorta & branches, Pulmonary artery & veins, Vena cava & Azygos veins)",
+      "Surgical Emphysema (leakage of air into subcutaneous space, blotted appearance; history indicates side; if started from neck suspect airway injury; X-ray chest for pneumothorax; conservative management if no pneumothorax)",
+      "Penetrating Chest Trauma (assess hemodynamic stability; if unstable, emergency tube thoracostomy and echo; wound dressing and shift to OR for exploration if sucking wound present)",
+      "Emergency Thoracotomy Indications (unresponsive hypotension (SBP<60mm Hg), rapid exsanguination from indwelling chest tube (>1500ml), traumatic arrest with witnessed cardiac activity after penetrating thoracic injuries, persistent hypotension (SBP <60 mm Hg) with diagnosed cardiac tamponade/air embolism)"
+    ],
+    "surgical_options": [
+      "Emergency intubation",
+      "Intercostal tube drainage",
+      "Thoracotomy (for unstable chest wall, other procedures, inability to wean from ventilator)",
+      "Fixation of unstable sternal fracture",
+      "Endovascular stenting / Open repair for Great Vessel Injury",
+      "Emergency Room Thoracotomy"
+    ],
+    "pre_op_preparation": "Primary Survey and resuscitation; Emergency intubation, Intercostal tube drainage, Thoracotomy (as initial management steps).",
+    "post_op_care": "Adequate Analgesia (NSAIDs, Intravenous Opiates, Epidural, Intercostal Rib Block); Prevention for Atelectasis (Incentive Spirometry); Pulmonary Toilet (Chest Physiotherapy and coughing out Sputum); Lung protective ventilation strategies with adequate PEEP and low tidal volume (for Flail Chest management).",
+    "fitness_criteria": "Hemodynamically stable (as a decision point for further evaluation)",
+    "comorbidity_management": "Age >65 with even a single rib fracture should be admitted and observed.",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

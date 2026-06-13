@@ -1,0 +1,153 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO045A",
+  "procedure_code": "SO045A",
+  "condition": "Examination under anesthesia (EUA)",
+  "procedure_name": "EUA for (minor girls / unmarried sexually inactive / victims of sexual abuse)",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Examination under Anesthesia (EUA)_Medco.pdf",
+    "Examination under Anesthesia (EUA)_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO or equivalent (Obstetrics & Gynecology)",
+    "MCh/DNB/Equivalent in Pediatric Surgery (if applicable)"
+  ],
+  "clinical_indications": [
+    "Patient cannot be adequately examined without sedation or general anesthesia (e.g., for reasons of physical or psychological discomfort)",
+    "To provide information that will help guide a subsequent surgical procedure",
+    "For genitourinary complaints that cannot be addressed with external evaluation and using the knee-chest examination, or in situations of suspected genitourinary pathology",
+    "Vaginal stenosis",
+    "Vaginal discharge",
+    "Vaginal bleeding",
+    "Pelvic pain",
+    "Trauma",
+    "Cystic or solid masses",
+    "Suspected congenital anomalies",
+    "Acute sexual abuse with a penetrating injury"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "vaginal_examination_notes",
+        "label": "Vaginal examination"
+      },
+      {
+        "key": "vaginal_swab",
+        "label": "Vaginal swab (in cases of sexual assault)"
+      },
+      {
+        "key": "informed_consent",
+        "label": "Informed consent from parents/adult patient"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG abdomen/pelvis (optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "medicolegal_case_documentation",
+        "label": "Medicolegal case documentation (in cases of sexual assault)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes including vitals, history, symptoms, signs, physical examination, examination for injuries (in sexual assault cases), local examination of genital parts/other orifices, informed consent, planned line of treatment, and advice for admission available?",
+        "expected": true
+      },
+      {
+        "q": "Was vaginal swab done in sexual assault cases?",
+        "expected": true
+      },
+      {
+        "q": "Was the indication for procedure documented?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was medicolegal case documented in case of sexual assault?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Indication for procedure not documented",
+    "Detailed Clinical notes missing or incomplete (lacking vitals, history, examination findings, consent, or planned line of treatment)",
+    "Vaginal swab not done or documented in sexual assault cases",
+    "Detailed Indoor Case Papers (ICPs) missing or lacking daily vitals and treatment details",
+    "Detailed procedure/operative notes not available",
+    "Medicolegal case documentation missing in cases of sexual assault",
+    "Discharge summary missing or lacking follow-up advice"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Medical professionals who perform genital examinations should be appropriately trained and experienced.",
+      "Trans-vaginal ultrasound scans, examinations under anaesthetic and evaluations for suspected sexual assault should only be performed by medical professionals who have satisfactorily completed relevant training or are under relevant clinical supervision.",
+      "Digital or instrumental vaginal examinations are unlikely to be indicated for a girl or young woman who states that she is NOT sexually active. If a visual inspection of the vaginal vestibule does not reveal the required information and further examination is deemed medically necessary, then an instrumental examination may be performed (with anaesthesia if necessary) by a trained and experienced medical professional.",
+      "To examine a minor or unmarried, informed consent from the parent or guardian is required.",
+      "It is important to obtain the history from the parent or parents, with the patient also being integrally involved in the process as age-appropriate.",
+      "In all three circumstances (minor girls, unmarried sexually inactive, victims of sexual abuse), it is mandatory to seek an Informed Consent/refusal for examination and evidence collection.",
+      "Consent should be taken for the following purposes: examination, sample collection for clinical and forensic examination, treatment and police intimation.",
+      "Section 164 (A) of the Criminal Procedure Code lays out following legal obligations of the health worker in cases of sexual violence: Examination of a case of rape shall be conducted by a registered medical practitioner (RMP) employed in a hospital run by the government or a local authority and in the absence of such a practitioner, by any other RMP.",
+      "Examination to be conducted without delay and a reasoned report to be prepared by the RMP.",
+      "Record consent obtained specifically for this examination.",
+      "Exact time of start and close of examination to be recorded.",
+      "RMP to forward report without delay to Investigating Officer (IO), and in turn IO to Magistrate.",
+      "Survivors of sexual violence may present to health care services with varying signs and symptoms: Severe abdominal pain, Burning micturition, Sexual dysfunction, Dyspareunia, Menstrual disorders, Urinary tract infections, Unwanted pregnancy, Miscarriage of an existing foetus, Exposure to sexually transmitted infections (including HIV/AIDS), Pelvic inflammatory disease, Infertility, Unsafe abortion, Mutilated genitalia, Self-mutilation as a result of psychological trauma."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

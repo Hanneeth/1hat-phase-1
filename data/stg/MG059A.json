@@ -1,0 +1,154 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG059A",
+  "procedure_code": "MG059A",
+  "condition": "Diabetic ketoacidosis",
+  "procedure_name": "Diabetic ketoacidosis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Diabetic ketoacidosis_Medco.pdf",
+    "Diabetic ketoacidosis_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Polyurea",
+    "Polydipsia",
+    "Polyphagia",
+    "Unexplained weight loss"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "plasma_glucose",
+      "operator": ">=",
+      "value": "200 mg/dl",
+      "note": "Random or casual plasma glucose"
+    },
+    {
+      "field": "plasma_glucose",
+      "operator": ">",
+      "value": "126 mg/dl",
+      "note": "Fasting plasma glucose"
+    },
+    {
+      "field": "urine_ketone_level",
+      "operator": ">",
+      "value": "3",
+      "note": "Ketone level in urine"
+    },
+    {
+      "field": "serum_ketone",
+      "operator": "positive",
+      "value": "1:2 dilution",
+      "note": "Serum ketone"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "blood_glucose_rbs",
+        "label": "Blood glucose (RBS) report"
+      },
+      {
+        "key": "sr_bicarbonate_report",
+        "label": "Sr. Bicarbonate report"
+      },
+      {
+        "key": "abg_report",
+        "label": "Arterial blood gas (ABG) report"
+      },
+      {
+        "key": "urine_ketone_report",
+        "label": "Urine Ketone report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers and treatment given details"
+      },
+      {
+        "key": "post_procedure_blood_glucose",
+        "label": "Post procedure blood glucose (fasting and PP) report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Random or casual plasma glucose ≥200 mg/dl or fasting plasma glucose > 126 mg/dl?",
+        "expected": true
+      },
+      {
+        "q": "Was the ketone level in urine > 3?",
+        "expected": true
+      },
+      {
+        "q": "Was the serum ketone positive with 1:2 dilution?",
+        "expected": true
+      },
+      {
+        "q": "Was evidence of Acidosis (ABG) available?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the Random or casual plasma glucose ≥200 mg/dl or fasting plasma glucose > 126 mg/dl?",
+        "expected": true
+      },
+      {
+        "q": "Was the ketone level in urine > 3?",
+        "expected": true
+      },
+      {
+        "q": "Was the serum ketone positive with 1:2 dilution?",
+        "expected": true
+      },
+      {
+        "q": "Was evidence of Acidosis (ABG) available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Plasma glucose level not meeting diagnostic criteria (random/casual < 200 mg/dl or fasting ≤ 126 mg/dl).",
+    "Urine ketone level not meeting diagnostic criteria (≤ 3).",
+    "Serum ketone test not positive with 1:2 dilution.",
+    "Arterial Blood Gas (ABG) report not providing clear evidence of acidosis.",
+    "Mandatory Clinical Notes, evaluation findings, indications, or planned line of treatment not submitted at pre-authorization.",
+    "Mandatory Sr. Bicarbonate report missing at pre-authorization.",
+    "Mandatory Arterial Blood Gas (ABG) report missing at pre-authorization.",
+    "Mandatory Urine Ketone report missing at pre-authorization.",
+    "Mandatory Detailed Indoor case papers and treatment given details missing at claim submission.",
+    "Mandatory Post-procedure blood glucose (fasting and PP) report missing at claim submission.",
+    "Mandatory Detailed discharge summary missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB equivalent (in General Medicine, Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Proceed with Diabetic ketoacidosis only if diagnosis made is backed by clinical manifestation."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

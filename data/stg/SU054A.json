@@ -1,0 +1,93 @@
+{
+  "_comment": "The source document pair contains one PDF for 'Bladder Neck incision - Endoscopic' (Medco file) and another PDF (PPD.CPD file) which is mislabeled and contains content for 'Bilateral Orchidectomy for hormone ablation'. Therefore, all extracted information for Bladder Neck incision - Endoscopic is sourced solely from 'Bladder Neck incision - Endoscopic_Medco.pdf'. The source document lists two HBP codes for this procedure: HBP 1.0 code S700068 and HBP 2.0 code SU054A. SU054A is used as the primary procedure_code for this object.",
+  "stg_id": "SU054A",
+  "procedure_code": "SU054A",
+  "condition": "Bladder Neck Obstruction / Contracture",
+  "procedure_name": "Bladder Neck incision - Endoscopic",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Bladder Neck incision - Endoscopic_Medco.pdf",
+    "Bladder Neck incision - Endoscopic_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Primary bladder neck obstruction",
+    "Bladder neck contracture"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "post_void_residual_volume",
+      "operator": ">",
+      "value": "50 Ml",
+      "note": "Indicates conditions related to the bladder or ureter, such as bladder damage or a blockage in the urinary tract."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indication for procedure/surgery, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "uroflowmetry_usg_kub_pvr_tests",
+        "label": "Uroflowmetry/ USG-KUB/PVR tests"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "post_procedure_endoscopic_photograph",
+        "label": "Post Procedure endoscopic photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes and USG-KUB/PVR reports indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes and USG-KUB/PVR reports are not indicative of surgery.",
+    "Mandatory pre-authorization documents (clinical notes, Uroflowmetry/USG-KUB/PVR tests) are missing or incomplete.",
+    "Post-procedure endoscopic photograph is not submitted at the time of claim.",
+    "Detailed procedure/operation notes are missing or incomplete at the time of claim."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MCh/Equivalent (in Urology)",
+    "clinical_key_pointers": [
+      "Bladder neck incision (BNI) Endoscopic is a surgical process involves making a cut through the neck of bladder using an electric “spike\" passed through a telescope along your urethra, to correct the flow of urine with neck stenosis or a urethral stricture. It is treated with the help of an incision made in the bladder neck. Under the procedure, the surgeon will track any obstruction in the bladder neck, so as to remove it."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": [
+      "Bladder irrigation through the catheter to flush out any clots or bleeding; catheter will be removed after one night.",
+      "Drugs to improve urine flow by relaxing the thickened muscle at the neck of bladder (e.g., tamsulosin, doxazosin, terazosin)."
+    ],
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SM001A",
+  "procedure_code": "SM001A",
+  "condition": "Extraction of Impacted Tooth Under LA / GA",
+  "procedure_name": "Extraction of impacted tooth under LA /GA",
+  "specialty": "Oral Maxillo Facial Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Extraction of Impacted Tooth Under LA ,GA_MEDICO.pdf",
+    "Extraction of Impacted Tooth Under LA ,GA_PPD.CPD.pdf"
+  ],
+  "alos": "Ambulatory",
+  "min_doctor_qualification": [
+    "MDS (Oral Maxillo-facial surgery)"
+  ],
+  "clinical_indications": [
+    "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+    "Significant swelling, pain, and infection that come with impacted wisdom teeth.",
+    "Impacted wisdom teeth damaging nearby gums, teeth, and bone.",
+    "Jaw pain and tenderness, redness and swelling of the gums around the tooth due to impaction.",
+    "Bad breath or a bad taste when biting down on food due to impaction.",
+    "Risk for cysts or tumors forming around the impacted tooth.",
+    "Malocclusion due to impacted teeth.",
+    "Functionless tooth.",
+    "Advanced caries, Advanced Periodontal Disease, Doubtful teeth.",
+    "Teeth involved in untreated fracture presenting more than 3 days after injury.",
+    "Vertical fracture, Dislocation, Subluxation.",
+    "Periapical Infection, Infected fracture line.",
+    "Acute pericoronitis."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, indications for doing the procedure)"
+      },
+      {
+        "key": "pre_op_photo_extraoral_intraoral",
+        "label": "Pre-op photo (extraoral and intraoral)"
+      },
+      {
+        "key": "radiological_imaging_impacted_tooth",
+        "label": "Radiological imaging of Impacted tooth"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_consent",
+        "label": "Indoor case papers & Consent (informed written)"
+      },
+      {
+        "key": "procedure_operative_anesthesia_notes",
+        "label": "Procedure note/ operative note & Anesthesia notes (where applicable)"
+      },
+      {
+        "key": "barcode_implants_used",
+        "label": "Barcode of Implants used submitted?"
+      },
+      {
+        "key": "investigation_reports_post_procedure",
+        "label": "Investigation reports (post procedure)"
+      },
+      {
+        "key": "photograph_affected_treated_part",
+        "label": "Photograph of affected part/Treated part."
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Dental Clinical notes (including clinical signs & symptoms such as difficulty in breathing, examination findings, indications for doing the procedure & advise for admission) submitted ??",
+        "expected": true
+      },
+      {
+        "q": "Radiological Imaging showing the Impacted tooth (intraoral and extraoral) submitted ?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Post-op Radiological imaging of the affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post-op photos (intraoral and extraoral) and of the extracted tooth (in 2 planes) submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Signs, symptoms, examination, or X-ray did not confirm the presence of impacted teeth.",
+    "Detailed Dental Clinical notes (including clinical signs & symptoms, examination findings, indications, and advice for admission) missing or incomplete.",
+    "Radiological imaging (intraoral and extraoral) of the impacted tooth not submitted or not clearly showing the impaction.",
+    "Operative notes missing details of surgical steps or outcomes of the surgery.",
+    "Documents showing appropriate post-op care or follow-up advice are missing.",
+    "Barcode of implants used not submitted (if applicable)."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Extraction of Impacted Tooth under LA /GA: It is minor surgical procedure of extraction of tooth (wisdom tooth/3rd Molar /or any other tooth in the Jaw bones).",
+      "Wisdom Teeth otherwise known as your third molars, are the last teeth to grow in and often arrive between the age of 17 and 25. They serve no purpose as our diet today consists of softer foods and we have the ability to cut food into small pieces we can easily chew. Often the wisdom teeth either fail to come through in proper alignment or they fail to emerge all the way through the gumline. This causes the impacted wisdom teeth that are trapped between the gum tissue and jawbone."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Immunosuppression from disease (uncontrolled diabetes, kidney problem, heart disease etc.)",
+      "Pregnant women from middle of the 3rd trimester.",
+      "Communicable disease patients (such as TB)"
+    ]
+  }
+}

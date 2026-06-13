@@ -1,0 +1,166 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP008A",
+  "procedure_code": "MP008A",
+  "condition": "Medical Management for Raised intracranial pressure",
+  "procedure_name": "After Decompressive craniotomy / After Shunt procedure / After other emergency neuro surgical procedures / For ICP monitoring",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Medical Management for Raised intracranial pressure_Medco.pdf",
+    "Medical Management for Raised intracranial pressure_PPD.CPD.pdf"
+  ],
+  "alos": "10-14 days",
+  "min_doctor_qualification": [
+    "MD/DNB/DCH/Equivalent (Pediatric)",
+    "MD/DNB/Equivalent (Neurology)",
+    "DNB/Equivalent (Critical care)",
+    "MCh/DNB/Equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "All patients with an modified Glasgow Coma Score (m-GCS) ≤8 are likely candidates for raised ICP.",
+    "Persistent elevation of ICP above 20 mm Hg for greater than 5 minutes in a patient who is not being stimulated should be treated immediately.",
+    "Indications for ICP Monitoring (GCS Score: 3-8 after resuscitation) with Abnormal Admission Head CT Scan (Hematoma, Contusion, Edema, Herniation, Compressed basal cisterns).",
+    "Indications for ICP Monitoring (GCS Score: 3-8 after resuscitation) with Normal Admission Head CT Scan PLUS 2 or more of the following: Age > 40 years, Motor posturing, Systolic blood pressure < 90 mm Hg."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "m-GCS",
+      "operator": "<=",
+      "value": "8",
+      "note": "likely candidates for raised ICP"
+    },
+    {
+      "field": "ICP",
+      "operator": ">",
+      "value": "20 mm Hg",
+      "note": "persistent elevation for >5 mins"
+    },
+    {
+      "field": "GCS Score",
+      "operator": "3-8",
+      "value": "3-8",
+      "note": "after resuscitation, for ICP monitoring"
+    },
+    {
+      "field": "ICP",
+      "operator": ">",
+      "value": "22 mm Hg",
+      "note": "Brain Trauma Foundation guideline threshold for treatment"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including history, evaluation findings including BP monitoring, vitals monitoring, Intracranial pressure monitoring, and planned line of management"
+      },
+      {
+        "key": "pediatric_glasgow_coma_scale_documentation",
+        "label": "Pediatric Glasgow coma scale documentation"
+      },
+      {
+        "key": "ct_mri_scan",
+        "label": "CT/MRI scan"
+      },
+      {
+        "key": "lumbar_puncture",
+        "label": "Lumbar puncture"
+      },
+      {
+        "key": "fundoscopy_report",
+        "label": "Fundoscopy report"
+      },
+      {
+        "key": "intra_operative_post_op_monitoring_documents",
+        "label": "Intra-operative and post-op monitoring documents for recent/last surgery done (if applicable)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs) mentioning the treatment details"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports (if required)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings especially neurological examination, Pediatric Glasgow coma scale score, vital monitoring (BP, pulse, RR, HR, ICP), planned treatment line, and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Intra-operative and post-op monitoring documents for recent/last surgery done available (if applicable)?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and imaging confirm of the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient present with clinical signs and symptoms of raised Intra Cranial Pressure (ICP) such as headache, vomiting, seizure, blurring of vision, pupillary dilatation?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging/investigations support the diagnosis of raised Intra Cranial Pressure (ICPs)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers (ICPs) with daily vitals and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice warnings signs of headache, vomiting, seizure, blurring of vision mentioned at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or incomplete (history, neurological exam, Pediatric GCS, vitals, planned treatment line, admission advice).",
+    "CT/MRI scan not submitted.",
+    "Pediatric Glasgow coma scale documentation is missing or incomplete.",
+    "Intracranial pressure monitoring data (if applicable) for recent/last surgery not available.",
+    "Clinical signs and symptoms of raised ICP (headache, vomiting, seizure, blurring of vision, pupillary dilatation) not documented or not supporting the diagnosis.",
+    "Imaging/investigations not supporting the diagnosis of raised ICP.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details not submitted at claim stage.",
+    "Discharge summary missing follow-up advice or warning signs of headache, vomiting, seizure, blurring of vision."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital (Pediatric/Neurosurgical intensive care unit)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Raised intracranial pressure (ICP, > 20 mm Hg) is often seen in children with acute brain injury of various neurological or non-neurological etiologies and often complicates the clinical picture and management; it may progress into herniation syndrome and death.",
+      "The most common etiologies of raised ICP in the pediatric intensive care unit (PICU) of developing countries are due to infections (ie, meningitis, encephalitis), hydrocephalus, hypoxic/ ischemic brain injury, intraparenchymal bleed of vitamin K deficiency, metabolic encephalopathy, brain tumors, cerebral infarction, and traumatic brain injury (TBI).",
+      "Symptoms and signs of raised ICP are neither sufficiently sensitive nor specific; hence identifying patients at risk of developing raised ICP is crucial for preventing secondary brain injury.",
+      "In conscious patients' irritability, headache, vomiting, confusion and decreased alertness, and neck retraction may be the presenting features. Tense fontanelle on palpation and papilledema, are reliable signs of raised ICP, but the latter is usually absent in acute conditions.",
+      "In unconscious/comatose patients, raised ICP should be suspected in all patients with head injury, meningitis, encephalitis, liver disease and diabetes mellitus. The clinical features highly specific of raised ICP are generally seen late, when brain herniation is imminent or has already set in (abnormal posturing, abnormal pupillary dilatation, hypertension, bradycardia, irregular breathing, sixth nerve palsy and papilledema).",
+      "Abnormal pupillary dilatation and posturing (decerebration or decortication) can occur in the absence of raised ICP.",
+      "Neurosurgical patients are a special subset of patients requiring postoperative care. Timely detection of systemic and neurological changes allows early diagnostic and therapeutic interventions.",
+      "Cause of Postoperative Intracranial hypertension: Mass lesion (hematoma) / Edema, Increased cerebral blood volume (vasodilation), Disturbances of CSF dynamics.",
+      "Clinical signs of IC-HTNa: pupillary dilatation (unilateral or bilateral), asymmetric pupillary reaction to light, decerebrate or decorticate posturing (usually contralateral to blown pupil), progressive deterioration of the neurologic exam not attributable to extracranial factors."
+    ],
+    "surgical_options": [
+      "Decompressive craniectomy (for focal mass lesion with midline shift, or as third tier therapy)",
+      "EVD insertion and CSF drainage (for hydrocephalus)",
+      "Temporal lobectomy (third tier therapy)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "Immediate goal of management is to prevent/reverse herniation and to maintain good cerebral perfusion pressure (CPP). Therapeutic measures include stabilization of airway, breathing and circulation, along with neutral neck position, head end elevation by 30°, adequate sedation and analgesia, minimal stimulation, and hyperosmolar therapy (mannitol or 3% saline). Short-term hyperventilation to achieve PCO2≈30 mm Hg if impending herniation is suspected. CPP targeted therapy (CPP ≥ 60 mm Hg) is associated with better clinical outcome.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment. Call neurosurgery stat as indicated once neuroimaging results are available (e.g., for focal mass lesion, diffuse brain edema/swelling, hydrocephalus).",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

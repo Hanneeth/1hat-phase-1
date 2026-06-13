@@ -1,0 +1,109 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M200040",
+  "procedure_code": "M200040",
+  "condition": "Juvenile Myasthenia",
+  "procedure_name": "Juvenile Myasthenia",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Juvenile Myasthenia_Medco.pdf",
+    "Juvenile Myasthenia_PPD.CPD.pdf"
+  ],
+  "alos": "2 days (Once diagnosis is established the case can be booked in the relevant package, further stay/admission should be decided based on the level of complications of the disease)",
+  "min_doctor_qualification": [
+    "MD / DNB / DCH/ equivalent (Pediatric Medicine)",
+    "DM/DNB/ equivalent (Neurology)"
+  ],
+  "clinical_indications": [
+    "Variable ptosis",
+    "Diplopia",
+    "Ophthalmoplegia",
+    "Facial weakness",
+    "Rapid fatigue of muscles distinguishing myasthenia from other neuromuscular disorders, with progressive worsening over the day or with repetitive activity",
+    "Dysphagia",
+    "Poor head control",
+    "Extremity weakness",
+    "Involvement of respiration and swallowing musculature"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_vitals_findings_treatment_plan",
+        "label": "Clinical notes showing vitals, examination findings, planned line of treatment and advice for admission"
+      },
+      {
+        "key": "nerve_conduction_studies_achr_testing",
+        "label": "Evidence of decremental response on repetitive nerve conduction studies (EMG/ENMG) / Prostigmine/Tensilon test – documentation of transient improvement in condition / Ach receptor antibody testing – positive"
+      },
+      {
+        "key": "thyroid_profile_optional",
+        "label": "Thyroid profile (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps_treatment_details",
+        "label": "Detailed ICPs with detailed line of treatment"
+      },
+      {
+        "key": "patient_progress_documentation",
+        "label": "Progress of the patient in terms of clinical condition; decreases fatigue/vision improvement"
+      },
+      {
+        "key": "detailed_discharge_summary_followup",
+        "label": "Detailed Discharge summary with follow-up advise at the time of discharge"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is there a h/o rapid fatigue of muscles ie repeated activities increases the weakness/ evening ptosis/vision problems in the evening?",
+        "expected": true
+      },
+      {
+        "q": "Is there evidence of decremental response on repetitive nerve conduction studies (EMG/ENMG) / documentation of transient improvement with Prostigmine/Tensilon test / positive Ach receptor antibody testing?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is progress documented in terms of decreased fatigue/vision improvement?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "History of rapid muscle fatigue (repeated activities increasing weakness/evening ptosis/vision problems in the evening) not documented.",
+    "Clinical notes, vitals, examination findings, planned line of treatment, or advice for admission are missing or incomplete.",
+    "Nerve conduction studies (EMG/ENMG), Prostigmine/Tensilon test, or Ach receptor antibody testing results are not provided, or do not show decremental response, transient improvement, or positive antibody test.",
+    "Detailed Indoor Case Papers (ICPs) with treatment details are missing or incomplete.",
+    "Documentation of patient progress (decreases fatigue/vision improvement) is absent or insufficient.",
+    "Detailed discharge summary or follow-up advice is missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Myasthenia gravis (MG) is an autoimmune disease in which antibodies are directed at the postsynaptic membrane of the neuromuscular junction, leading to varying degrees of muscle weakness and fatigability.",
+      "Where MG presents before 19 years of age, it is termed juvenile myasthenia gravis (JMG).",
+      "JMG mostly presents in late infancy and childhood. Commonly affected muscles are eyes, face and swallowing.",
+      "Proceed with JMG only if diagnosis made is backed by clinical manifestation.",
+      "JMG is primarily a clinical diagnosis with classical patterns of fluctuating weakness and fatigability.",
+      "Detection of antibodies to the acetylcholine receptor (AChR) supports the diagnosis of JMG."
+    ],
+    "surgical_options": [
+      "Thymectomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

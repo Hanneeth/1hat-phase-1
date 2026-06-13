@@ -1,0 +1,238 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG040C",
+  "procedure_code": "MG040C",
+  "condition": "Respiratory failure due to any cause",
+  "procedure_name": "Respiratory failure due to any cause (Pneumonia, asthma, Chronic Obstructive Pulmonary Disease (COPD), Acute Respiratory Distress Syndrome (ARDS), foreign body, poisoning, head injury, etc.)",
+  "specialty": "General Medicine",
+  "version": "1.1",
+  "source_files": [
+    "Respiratory failure due to any cause_Medco.pdf",
+    "Respiratory failure due to any cause_PPD.CPD.pdf"
+  ],
+  "alos": "4 -7 days (2-3 days ICU)",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Respiratory failure secondary to pneumonia",
+    "Respiratory failure secondary to asthma",
+    "Respiratory failure secondary to Chronic Obstructive Pulmonary Disease (COPD)",
+    "Respiratory failure secondary to Acute Respiratory Distress Syndrome (ARDS)",
+    "Respiratory failure secondary to foreign body aspiration",
+    "Respiratory failure secondary to poisoning",
+    "Respiratory failure secondary to head injury",
+    "Indication for admission for management of respiratory failure based on clinical signs, symptoms, physical examination, and investigations."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "SpO2",
+      "operator": "<",
+      "value": "90%",
+      "note": "Threshold for starting oxygen therapy and a pop-up trigger in TMS"
+    },
+    {
+      "field": "Heart Rate",
+      "operator": ">",
+      "value": "100/min",
+      "note": "Abnormal HR/Rhythm pop-up trigger in TMS"
+    },
+    {
+      "field": "Heart Rate",
+      "operator": "<",
+      "value": "45/min",
+      "note": "Abnormal HR/Rhythm pop-up trigger in TMS"
+    },
+    {
+      "field": "Respiratory Rate",
+      "operator": ">",
+      "value": "20/min",
+      "note": "Abnormal Respiratory rate pop-up trigger in TMS"
+    },
+    {
+      "field": "Respiratory Rate",
+      "operator": "<",
+      "value": "12/min",
+      "note": "Abnormal Respiratory rate pop-up trigger in TMS"
+    },
+    {
+      "field": "FEV 1",
+      "operator": "<",
+      "value": "80%",
+      "note": "If PFT available, pop-up trigger in TMS"
+    },
+    {
+      "field": "ABG",
+      "operator": "suggestive of",
+      "value": "Acute respiratory failure",
+      "note": "Pop-up trigger in TMS"
+    },
+    {
+      "field": "FiO2",
+      "operator": ">",
+      "value": "0.5",
+      "note": "For Severe Community Acquired Pneumonia (CAP)"
+    },
+    {
+      "field": "pH",
+      "operator": "<",
+      "value": "7.3",
+      "note": "For Severe Community Acquired Pneumonia (CAP)"
+    },
+    {
+      "field": "Lactate",
+      "operator": ">",
+      "value": "4 mmolL-1",
+      "note": "For Severe Community Acquired Pneumonia (CAP)"
+    },
+    {
+      "field": "CRP",
+      "operator": ">",
+      "value": "150 mgL-1",
+      "note": "For Severe Community Acquired Pneumonia (CAP)"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_apache_score",
+        "label": "Clinical notes with APACHE score"
+      },
+      {
+        "key": "cbc",
+        "label": "CBC"
+      },
+      {
+        "key": "chest_x_ray",
+        "label": "Chest X-ray"
+      },
+      {
+        "key": "abg",
+        "label": "ABG (if available)"
+      },
+      {
+        "key": "ecg",
+        "label": "ECG"
+      },
+      {
+        "key": "ncct_head",
+        "label": "NCCT Head"
+      },
+      {
+        "key": "fundus_examination",
+        "label": "Fundus examination"
+      },
+      {
+        "key": "clinical_photo_patient_on_bed",
+        "label": "Clinical photograph of the patient on bed"
+      }
+    ],
+    "claim": [
+      {
+        "key": "still_photo_patient_undergoing_treatment_ventilatory_support",
+        "label": "Still photograph of the patient undergoing the treatment (+/- ventilatory support)"
+      },
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers having treatment and management"
+      },
+      {
+        "key": "relevant_investigations_serial_abgs",
+        "label": "Relevant investigations including serial ABGs (ABG if Available)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is HR/ Rhythm abnormal (>90-100 or <45-50/ min)?",
+        "expected": true
+      },
+      {
+        "q": "Is Respiratory rate abnormal (>20 or <12/min)?",
+        "expected": true
+      },
+      {
+        "q": "Is SpO2 < 90%?",
+        "expected": true
+      },
+      {
+        "q": "Is ABG (if available) suggestive of Acute respiratory failure?",
+        "expected": true
+      },
+      {
+        "q": "Does Chest X-ray have abnormal findings?",
+        "expected": true
+      },
+      {
+        "q": "Is Fundus examination suggestive of Papilloedema (where applicable)?",
+        "expected": true
+      },
+      {
+        "q": "Is PFT available (where applicable) and FEV 1 < 80%?",
+        "expected": true
+      },
+      {
+        "q": "Is there a history of trauma (In case of head injury)?",
+        "expected": true
+      },
+      {
+        "q": "Is there a history of poisoning (In cases of poisoning)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was there documentary evidence of record & monitoring of vitals (Respiratory rate, SpO2, Heart rate, chest examination, abnormal breath sounds)?",
+        "expected": true
+      },
+      {
+        "q": "Is medication/ treatment chart available?",
+        "expected": true
+      },
+      {
+        "q": "Do discharge documents show discharge/referral criteria (if applicable), counselling on control of risk factors, and post discharge treatment advice including follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Do documents show a need for admission to HDU/ ICU (+/- BIPAP/ ventilator)?",
+        "expected": true
+      },
+      {
+        "q": "Is there documentary evidence to show monitoring in HDU/ ICU/ BIPAP/ ventilator?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "SpO2 not documented or documented above 90% threshold without justification for respiratory failure",
+    "Clinical notes missing or APACHE score not documented",
+    "ABG (if available) not suggestive of acute respiratory failure",
+    "Chest X-ray findings not documented or documented as normal despite clinical suspicion of respiratory failure",
+    "Missing documentary evidence of vital sign monitoring (Respiratory rate, SpO2, Heart rate, chest examination, abnormal breath sounds)",
+    "Detailed discharge summary missing, incomplete, or lacking post discharge advice/counselling"
+  ],
+  "additional_information": {
+    "icd_10_code": "396.0",
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/ DNB/ equivalent (Medicine or Pulmonology)/ Diploma in Tuberculosis and Chest Disease (DTCD)",
+    "clinical_key_pointers": [
+      "Proceed for admission for management of respiratory failure only if indicated.",
+      "The diagnosis made should be backed by clinical signs, symptoms, physical examination, investigations.",
+      "Look for underlying causes in hypercapnia, headache, bounding pulse, tremor/ flap, papilloedema, coma.",
+      "Refer to a higher center if there is no relief from treatment/ mechanical ventilation is needed/life threatening features."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "No relief OR Need for mechanical ventilation OR life threatening features: Stabilize CAB, transfer to higher center",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

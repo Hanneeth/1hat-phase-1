@@ -1,0 +1,117 @@
+{
+  "stg_id": "SU074A",
+  "procedure_code": "SU074A",
+  "condition": "Urethral Caruncle",
+  "procedure_name": "Excision of Urethral Caruncle",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Excision of Urethral Caruncle_Medco.pdf",
+    "Excision of Urethral Caruncle_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MCh equivalent in Urology",
+    "DNB equivalent in Urology"
+  ],
+  "clinical_indications": [
+    "Induration",
+    "Failure to respond to conservative therapy",
+    "Atypical appearance",
+    "Growth over time"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_and_management_plan",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "cystourethroscopy_report",
+        "label": "Cystourethroscopy report (if applicable)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/procedure notes"
+      },
+      {
+        "key": "histopathology_examination_report",
+        "label": "Histopathology examination report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was Clinical notes including evaluation findings, indication for procedure, and planned line of management submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Cystourethroscopy report (if applicable) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical finding, indications, plan of treatment and Cystourethroscopy report (in applicable cases) indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the detailed Operative notes / procedure notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Histopathology examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary with all the details submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes including evaluation findings, indication for procedure, and planned line of management not submitted at pre-authorization",
+    "Cystourethroscopy report (if applicable) not submitted at pre-authorization",
+    "Histopathology examination report not submitted at claim submission",
+    "Clinical finding, indications, plan of treatment or Cystourethroscopy report (if applicable) not indicative of procedure"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Excision of Urethral Caruncle only if diagnosis made is backed by clinical manifestation:",
+      "Urethral caruncle (UC) is a benign fleshy outgrowth at the urethral meatus. A small single quadrant urethral prolapse typically affecting the posterior urethral meatus. They are purple or red in colour, exophytic protrusions of oedematous mucosa which can be friable. They can become thrombosed or may look purple or black",
+      "Patients may be asymptomatic and could find this as an incidental finding or they may present with symptoms such as Dysuria",
+      "Patients may be asymptomatic and could find this as an incidental finding or they may present with symptoms such as Bleeding per vagina",
+      "Patients may be asymptomatic and could find this as an incidental finding or they may present with symptoms such as Hematuria",
+      "Patients may be asymptomatic and could find this as an incidental finding or they may present with symptoms such as A mass protruding through vagina",
+      "Patients may be asymptomatic and could find this as an incidental finding or they may present with symptoms such as Acute retention of urine"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "management": "Cystourethroscopy should be performed, to exclude bladder and urethral abnormalities. Also rule out other pathologies i.e. carcinoma, diverticulum, abscess etc."
+  }
+}

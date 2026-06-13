@@ -1,0 +1,92 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Chronic Cough & Wheezing/ : Chronic cough Wheezing_Medco.pdf (clinical + mandatory docs) + Chronic cough Wheezing_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "MP019A",
+  "procedure_code": "MP019A",
+  "condition": "Chronic Cough",
+  "procedure_name": "Chronic Cough",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Chronic cough Wheezing_Medco.pdf",
+    "Chronic cough Wheezing_PPD.CPD.pdf"
+  ],
+  "alos": "1 day (Once diagnosis is established the case can be booked in the relevant package, further stay/admission should be decided based on the level of complications of the disease)",
+  "min_doctor_qualification": [
+    "MD/DNB/DCH/ equivalent (Pediatric Medicine)",
+    "DM/DNB/ equivalent (Pulmonology)"
+  ],
+  "clinical_indications": [
+    "Daily cough lasting for four or more weeks in children 14 years and younger.",
+    "Specific cough associated with clinical features suggestive of an underlying etiology such as chest pain, dyspnea, digital clubbing, feeding problems, failure to thrive, hemoptysis, episode of choking, and abnormal pulmonary auscultation.",
+    "Nonspecific cough, typically a dry cough, for which no underlying etiology is identifiable after a thorough assessment."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "cough_duration",
+      "operator": ">=",
+      "value": "4 weeks",
+      "note": "in children less than 14 years"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_vitals_exam_planned_treatment_admission_advice",
+        "label": "Clinical notes showing vitals, examination findings, planned line of treatment and advice for admission"
+      },
+      {
+        "key": "mandatory_investigations",
+        "label": "Chest X-ray, Complete blood count, Erythrocyte Sedimentation rate, Chest CT / HRCT, Spirometry, Sputum examination/gastric aspirate, Tuberculin test"
+      },
+      {
+        "key": "optional_etiology_based_investigations",
+        "label": "Optional based on etiology and availability: Renal function test, Serum Electrolytes, barium esophagram / Ph manometry, BAL (bronchoalveolar lavage), Sweat chloride test, Allergy testing (elevated immunoglobulin E), Angiography, 2D ECHO, Bronchoscopy/Nasopharyngoscopy/Endoscopy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is cough present daily for ≥4 weeks in children less than 14 years?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Cough duration or patient age not meeting the required criteria for chronic cough (daily cough for ≥4 weeks in children less than 14 years) without proper justification.",
+    "Clinical notes for pre-authorization are missing or incomplete, lacking details on vitals, examination findings, planned line of treatment, or admission advice.",
+    "Mandatory investigations for pre-authorization (Chest X-ray, CBC, ESR, CT/HRCT, Spirometry, Sputum examination/gastric aspirate, Tuberculin test) are missing or incomplete.",
+    "Optional etiology-based investigations not provided when clinically indicated or available for pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) with treatment details are missing or incomplete for claim submission.",
+    "Detailed discharge summary is missing or incomplete for claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Chronic cough in children 14 years and younger is typically defined as a daily cough lasting four or more weeks.",
+      "Causes of chronic cough in children are categorized into Pulmonary causes (e.g., Aspiration, Asthma, Chronic endobronchial suppurative disease, Chronic pneumonia, Eosinophilic lung disease, Inhaled retained foreign body, Interstitial lung disease, Mechanical inefficiency, Noninfective bronchitis, Postinfection, Space-occupying lesions) and Extrapulmonary causes (e.g., Cardiac, Ear disease, Esophageal disorders, Medications, Habit cough, Somatic cough disorder, Upper airway pathology). Each category has specific risk factors/mechanisms and major evaluation methods.",
+      "Specific cough 'pointers' are signs and symptoms observed in history (e.g., chronic wet/productive cough, hemoptysis, wheeze, dyspnea, recurrent pneumonia, symptoms from neonatal period, onset after choking, characteristic cough patterns, disproportionate thoughts/anxiety about symptoms), examination (e.g., digital clubbing, chest wall abnormality, wheezing/crepitations, hypoxia), and routine investigations/tests (e.g., abnormal chest radiography, abnormal spirometry) that suggest an underlying etiology."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

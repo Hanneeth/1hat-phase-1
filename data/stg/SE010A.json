@@ -1,0 +1,145 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE010A",
+  "procedure_code": "SE010A",
+  "condition": "Dacryocystorhinostomy",
+  "procedure_name": "Canaliculo Dacryocystorhinostomy with Silicon Tube / Stent",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Dacryocystorhinostomy _Medco.pdf",
+    "Dacryocystorhinostomy _PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma in Ophthalmology"
+  ],
+  "clinical_indications": [
+    "Diagnosis made is backed by clinical signs, symptoms, ophthalmic examination and does not respond to conservative medical therapy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      },
+      {
+        "key": "dye_disappearance_test",
+        "label": "Dye disappearance test"
+      },
+      {
+        "key": "tear_meniscus_height_measurement",
+        "label": "Tear meniscus height measurement"
+      },
+      {
+        "key": "probing_irrigation",
+        "label": "Probing & irrigation"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Operative/ Procedure notes"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "intraoperative_photograph",
+        "label": "Intraoperative photograph with time and date (Optional)"
+      },
+      {
+        "key": "invoice_barcode_sticker_of_implant",
+        "label": "Invoice/ barcode/ sticker of implant"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes, clinical symptoms (especially long standing epiphora) and examination (visual acuity, dye disappearance test, probing and irrigation)?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected part with Proper labelling of Affected Eye whether R or L with full face photograph?",
+        "expected": true
+      },
+      {
+        "q": "Detailed admission notes?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and was the surgery successful?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Was the intra operative photograph submitted (Optional)?",
+        "expected": true
+      },
+      {
+        "q": "For procedures requiring silicon tube/ stent/ implant - Barcode/ sticker of the stent/ tube/ implant used available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical examination does not suggest chronic or long-standing epiphora (excessive watering from eye).",
+    "Investigations do not confirm chronic dacryocystitis or the need for DCR.",
+    "Clinical photograph of affected part is missing, not properly labelled (R or L), or full face photograph is missing.",
+    "OT notes do not detail the steps of surgery performed or do not confirm successful surgery.",
+    "Documents for appropriate post-op care and follow-up advice are missing.",
+    "Missing barcode/sticker for silicon tube/stent/implant used."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Dacryocystorhinostomy (DCR) is a procedure done to manage Chronic dacryocystitis due to nasolacrimal duct obstruction.",
+      "Chronic dacryocystitis is an inflammatory condition of the lacrimal sac most commonly associated with partial or complete obstruction of the nasolacrimal duct.",
+      "The most common presenting complaint is Epiphora (excessive watering of eye), along with swelling & tenderness, irritation, mucous discharge, and momentary blurring of vision.",
+      "Causes include anatomical problems, chronic nasal infections, obstruction from a tumor, trauma to the nose, conjunctivitis, nose polyps, and unknown reasons.",
+      "Risk factors include all ages, all social strata, with women being more susceptible due to narrower nasolacrimal ducts.",
+      "Differential diagnoses include Bacterial conjunctivitis, Pre-septal cellulitis, Miebomitis, Blepharitis, and Canaliculitis.",
+      "Diagnosis involves history of chronic watering and matting of eyelashes, and ocular examination including visual acuity, external eye examination, slit lamp biomicroscopy, Fluorescein Dye Disappearance test, diagnostic probing and syringing.",
+      "Management involves Dacryocystorhinostomy (DCR), intubation, and adjunctive pharmacotherapy like mitomycin-C and canalicular trephining, with External DCR being a preferred treatment over endoscopic DCR due to higher success rate.",
+      "Advanced investigations at super specialty hospitals may include Diagnostic nasal endoscopy, Culture and sensitivity of discharge, and CT scan to identify facial skeletal anomalies, fractures, foreign bodies, or rule out occult malignancy/mass.",
+      "Advanced management options at super specialty level include External DCR, Endoscopic endonasal revision, Endoscopic guided secondary intubations, Canalicular trephining and use of stents, Laser assisted DCR, Conjunctival DCR with tubes, Balloon assisted DCR revision, Balloon dacryoplasty and canaliculoplasty."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Lacrimal obstruction at multiple sites",
+      "Failed Dacryocystorhinostomy",
+      "Complications of chronic dacryocystitis like recurrent acute exacerbations or orbitalcellulitis.",
+      "Chronic dacryocystitis associated with systemic diseases like sarcoidosis or wegenersgranulomatosis",
+      "Chronic dacryocystitis associated with suspected dacryolithiasis.",
+      "Chronic dacryocystitis where there is a suspicion of a lacrimal sac tumor"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Micro-laryngeal surgery/ : Micro-laryngeal surgery_Medco.pdf (clinical + mandatory docs) + Micro-laryngeal surgery_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL024A",
+  "procedure_code": "SL024A",
+  "condition": "Laryngeal disorders",
+  "procedure_name": "Microlaryngeal surgery with or without laser",
+  "specialty": "ENT, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Micro-laryngeal surgery_Medco.pdf",
+    "Micro-laryngeal surgery_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MS (ENT)",
+    "DNB (ENT)",
+    "Equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Benign vocal fold lesions (e.g., nodules, polyp, cyst, sulcus vocalis)",
+    "Respiratory papilloma",
+    "Vocal fold paralysis, vocal fold scarring, Vocal fold leukoplakia",
+    "Early glottic/ supraglottic cancer, Laryngeal stenosis",
+    "Evaluation and removal of various lesions of the vocal folds"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth_details",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, planned line of treatment & advise for admission)"
+      },
+      {
+        "key": "laryngoscopy_emg_report",
+        "label": "Laryngoscopy findings/Laryngeal electromyography confirming the diagnosis and indication for surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/Operative notes"
+      },
+      {
+        "key": "histopathology_report_if_applicable",
+        "label": "Histopathology report (In all applicable cases)"
+      },
+      {
+        "key": "post_procedure_clinical_intraprocedural_photo",
+        "label": "Post procedure clinical/Intraprocedural photograph of the affected part"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes and laryngoscopy report indicative of the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes and/or laryngoscopy report not indicative of the micro-laryngeal surgery procedure",
+    "Clinical notes missing or lacking details of signs, symptoms, examination findings, planned treatment, or advice for admission at pre-authorization",
+    "Laryngoscopy findings or Laryngeal electromyography report missing or not confirming diagnosis/indication for surgery at pre-authorization",
+    "Histopathology report missing when applicable",
+    "Post-procedure clinical or intraprocedural photograph of the affected part not submitted"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination."
+    ],
+    "surgical_options": [
+      "Cold Surgery",
+      "Laser Surgery",
+      "Combination of Cold and Laser Surgery"
+    ],
+    "pre_op_preparation": "Maximize non-surgical treatments prior to surgery, including smoking cessation, voice therapy, and reflux management.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Trismus",
+      "Cervical spinal fixation or any other condition which prevents neck extension"
+    ]
+  }
+}

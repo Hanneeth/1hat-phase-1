@@ -1,0 +1,128 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG097B",
+  "procedure_code": "SG097B",
+  "condition": "Stoma Management",
+  "procedure_name": "Stoma Management follow up of Colostomy",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Stoma Management_Medco.pdf",
+    "Stoma Management_PPD.CPD.pdf"
+  ],
+  "alos": "daycare",
+  "min_doctor_qualification": [
+    "MS/Equivalent (in General Surgery)",
+    "MCh/Equivalent (in Surgical Gastroenterologist, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Appliance management (high output stoma bag +/- straight drainage)",
+    "Observation and protection of peristomal skin",
+    "Wound management if applicable",
+    "Patient education",
+    "Psychological support",
+    "Provision of consumables (Colostomy bags, adhesive, clips etc.)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "time_since_last_booking",
+      "operator": ">=",
+      "value": "2 months",
+      "note": "Initial booking only after 15 days of Colostomy surgery; subsequent bookings every 2 months till stoma closure."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary of the last admission"
+      },
+      {
+        "key": "clinical_notes_current_visit",
+        "label": "Clinical notes including examination findings of the current visit"
+      },
+      {
+        "key": "investigation_requirement_current_visit_optional",
+        "label": "Any requirement of the investigation for the current visit (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "photographic_evidence_stoma_complication_if_any",
+        "label": "Photographic evidence of stoma complication, if any"
+      },
+      {
+        "key": "invoice_receipt_consumables_optional",
+        "label": "Invoice/receipt of consumables (optional) if colostomy bag changed"
+      },
+      {
+        "key": "signed_statement_consumables_received",
+        "label": "Signed statement from pt. that s/he has received the consumables: Ileostomy / Colostomy - bags, adhesive, clips etc. for 2 months"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Previous admission discharge summary – condition, treatment details and follow-up advice?",
+        "expected": true
+      },
+      {
+        "q": "Current visit - Examination of stoma, any complications, follow-up advice along with treatment or investigations?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Clinical notes of the patient by the treating doctor including key findings and advice for follow-up including investigations and any referrals to multidisciplinary teams as indicated?",
+        "expected": true
+      },
+      {
+        "q": "Invoice/receipt of consumables (optional) if colostomy bag changed?",
+        "expected": true
+      },
+      {
+        "q": "Signed statement from patient that s/he has received the consumables: Ileostomy / Colostomy - bags, adhesive, clips etc. for 2 months?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "The pre-authorization request was submitted earlier than 15 days post-surgery, or less than 2 months from the last follow-up, without valid justification.",
+    "Signed statement from patient confirming receipt of consumables (bags, adhesive, clips etc. for 2 months) is missing or incomplete.",
+    "Clinical notes of the current visit do not document examination findings or follow-up advice.",
+    "Photographic evidence of stoma complication is not provided despite being indicated."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Appliance management (high output stoma bag +/- straight drainage)",
+      "Observation and protection of peristomal skin",
+      "Wound management if applicable",
+      "Patient education",
+      "Psychological support and referral (e.g. social work or psychologist)",
+      "For ileostomy or ascending colostomy: Increase daily fluid intake by 500 to 750 mL beyond recommended average intake to prevent dehydration or electrolyte imbalance.",
+      "For ileostomy or ascending colostomy: Take fiber supplements or antimotility agents for persistent high ostomy output (>1.5 L/day).",
+      "For ileostomy or ascending colostomy: Consume small quantities of food items with high insoluble fiber content to prevent food blockage proximal to the stoma.",
+      "For ileostomy or ascending colostomy: Take medications in dosage forms of quick dissolution (eg, liquids, gelatin capsules, and uncoated tablets) and avoid time-released and enteric-coated medications, as well as very large tablets, to avoid drug malabsorption.",
+      "For descending or sigmoid colostomy: Encourage sufficient fiber (20 to 35 g/day) and fluids (at least 1.5 to 2 L/day) to prevent constipation. Manage constipation with laxatives, stoma disimpaction, or colonic irrigation (for distal colostomy patients only).",
+      "Signs and symptoms of dehydration (thirst, lethargy, muscle weakness and cramps, dry mucous membranes, hypotension, increased heart rate, weight loss, decreased urine output, nausea).",
+      "Comorbidities and their management.",
+      "Medications.",
+      "Fluid balance.",
+      "Surgical interventions - consider remaining length of functional bowel."
+    ],
+    "surgical_options": [
+      "A surgical revision of an ostomy may be necessary when an ostomy becomes dysfunctional, such as in cases of symptomatic parastomal herniation, severe stomal stenosis, or stomal ischemia or retraction to below the fascia."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Comorbidities and their management.",
+    "referral_criteria": "Psychological support and refer accordingly, for example social work or psychologist",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

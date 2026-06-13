@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE026A",
+  "procedure_code": "SE026A",
+  "condition": "Glaucoma and Melanoma of the iris",
+  "procedure_name": "Iridectomy",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Iridectomy_Medco.pdf",
+    "Iridectomy_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma/ equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "Closed-angle glaucoma- primary or secondary to prior ocular surgery (peripheral iridectomy)",
+    "Melanoma of the iris (Malignant tumor of the iris)",
+    "Prior to cataract surgery in some cases (preparatory iridectomy)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph_affected_eye",
+        "label": "Clinical Photograph of the affected eye"
+      },
+      {
+        "key": "tonometry_report",
+        "label": "Tonometry report"
+      },
+      {
+        "key": "gonioscopy_report",
+        "label": "Gonioscopy report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "procedure_operative_note",
+        "label": "Procedure/ operative note"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report (incase of Melanoma of iris)"
+      },
+      {
+        "key": "intraoperative_photograph_patient_id_time_date",
+        "label": "Intraoperative photograph with patient ID, time and date (Optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the clinical examination suggest presence of Closed angle Glaucoma/ Melanoma as the reason for conducting Iridectomy?",
+        "expected": true
+      },
+      {
+        "q": "If the clinical examination did not suggest presence of Closed angle Glaucoma/ Melanoma, were other reasons for conducting Iridectomy specified?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Clinical notes including clinical symptoms, indications (such as closed angle Glaucoma/ Melanoma of iris, etc.) and examination/ investigations (Tonometry/ Gonisocopy)?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected Eye whether R or L with full face photograph?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical examination did not suggest presence of Closed angle Glaucoma/ Melanoma as the reason for conducting Iridectomy, and no other reasons were specified.",
+    "Iridectomy performed without documented clinical signs, symptoms, ophthalmic examination, or prior conservative medical therapy failure.",
+    "Clinical photograph of the affected eye is missing R/L labelling or a full face photograph.",
+    "Mandatory Tonometry report or Gonioscopy report missing at pre-authorization.",
+    "Operative notes do not detail the steps of surgery performed or outcomes.",
+    "Histopathology report missing despite Melanoma of iris being indicated."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Availability of Ophthalmic Laser equipment (if laser iridectomy is being performed)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Iridectomy only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination and does not respond to conservative medical therapy.",
+      "Iridectomy is a procedure involving removal of a small, full-thickness piece of the iris. In recent years, lasers have also been used to perform iridectomies."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG016B",
+  "procedure_code": "SG016B",
+  "condition": "Meckel's Diverticulum",
+  "procedure_name": "Excision Meckel's Diverticulum",
+  "specialty": "General Surgery, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Diverticulectomy_Medco.pdf",
+    "Diverticulectomy_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MS/Equivalent (in General Surgery)",
+    "MCh/Equivalent (Pediatric surgery, Surgical Gastroenterologist)"
+  ],
+  "clinical_indications": [
+    "Symptomatic Meckel's diverticulum",
+    "Complications: obstruction, intussusception, diverticulitis, perforation, gastrointestinal bleeding",
+    "Incidentally found Meckel Diverticulum in patient <40 years of age",
+    "Incidentally found Meckel diverticulum longer than 2 cm",
+    "Incidentally found Meckel Diverticulum with presence of a fibrous band",
+    "Incidentally found Meckel Diverticulum with evidence of heterotopic mucosa"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "patient_age",
+      "operator": "<",
+      "value": "40 years",
+      "note": "for incidentally found Meckel Diverticulum"
+    },
+    {
+      "field": "diverticulum_length",
+      "operator": ">",
+      "value": "2 cm",
+      "note": "for incidentally found Meckel Diverticulum"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_procedure_planned_management",
+        "label": "Clinical notes including evaluation findings, indication of procedure and planned line of management"
+      },
+      {
+        "key": "imaging_reports",
+        "label": "Barium X-ray / Upper GI Endoscopy / USG/CECT/MRI Abdomen / Meckel scan (99mTcpertechnetate Scintigraphy – gastrointestinal bleeding) / Double balloon Enteroscopy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination_report",
+        "label": "Histopathological examination report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned lined of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes with photographs available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathological examination report available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation or imaging not indicative of surgery.",
+    "Missing or incomplete clinical notes at pre-authorization.",
+    "Missing or incomplete imaging reports (Barium X-ray/Upper GI Endoscopy/USG/CECT/MRI Abdomen/Meckel scan) at pre-authorization.",
+    "Surgery performed for asymptomatic Meckel's diverticulum without meeting incidental resection criteria (age <40 years, length >2cm, fibrous band, or heterotopic mucosa).",
+    "Missing detailed procedure / operative notes at claim submission.",
+    "Missing histopathological examination report at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Meckel diverticulum is the most common congenital anomaly of the small intestine which occurs due to persistent intestinal end of vitellointestinal duct. Being congenital, it has all the layers of the bowel. Hence, a true diverticulum.",
+      "Rule of 2 for Meckel's diverticulum: Incidence: 2%, Location: 2 feet proximal to ileoceacal junction, Length: 2 inches long, Ectopic tissue: 2 types—gastric and pancreatic, Presentation: 2 years or below 2 years is the most common age, Male: female ratio—1:2.",
+      "Clinical Manifestation: usually clinically silent but can be found incidentally; patients can present with colicky abdominal pain, vomiting, and diarrhea from a broad range of complications that include obstruction, intussusception, diverticulitis, and perforation; patients can also present with gastrointestinal bleeding, although this is more common in children; in adults, the most common type of complication is intestinal obstruction; may be an incidental finding during laparotomy.",
+      "Evaluation: no gold standard diagnostic evaluation. 99mTc-labelled pertechnetate given IV, may localise the heterotopic gastric mucosa in the Meckel's diverticulum in about 90% of patients."
+    ],
+    "surgical_options": [
+      "Simple diverticulectomy (excision of the diverticulum at its base)",
+      "Segmental small bowel resection and primary anastomosis, depending on the size."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

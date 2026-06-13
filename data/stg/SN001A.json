@@ -1,0 +1,153 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN001A",
+  "procedure_code": "SN001A",
+  "condition": "Depressed Fracture",
+  "procedure_name": "Depressed Fracture",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Depressed fracture_Medco.pdf",
+    "Depressed fracture_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MCh Neurosurgery",
+    "DNB Neurosurgery",
+    "Equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Open (compound) fractures",
+    "Depressed fracture thickness > of calvaria",
+    "Evidence of dural penetration",
+    "Significant intracranial hematoma",
+    "Depression >= 1cm",
+    "Frontal sinus involvement",
+    "Wound infection or gross contamination",
+    "Gross cosmetic deformity"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "depressed_fracture_thickness",
+      "operator": ">",
+      "value": "of calvaria",
+      "note": null
+    },
+    {
+      "field": "depression_depth",
+      "operator": ">=",
+      "value": "1cm",
+      "note": "For surgical management, inverse of non-surgical criteria"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailing_injury",
+        "label": "Clinical Notes detailing the injury"
+      },
+      {
+        "key": "ct_report_of_brain",
+        "label": "CT report of brain"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_showing_scar",
+        "label": "Post Procedure clinical photograph showing scar"
+      },
+      {
+        "key": "post_procedure_ct_report_with_film",
+        "label": "Post Procedure CT report with film"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes – details of accident, signs & symptoms, evaluation findings, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was CT brain report suggestive of Depressed fracture?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was post procedure clinical photograph showing scar submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was post procedure CT report with film submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "CT brain report not suggestive of depressed fracture",
+    "Clinical notes detailing injury missing or incomplete at pre-authorization",
+    "Detailed Indoor case papers missing or incomplete at claim submission",
+    "Post procedure clinical photograph showing scar missing at claim submission",
+    "Post procedure CT report with film missing or inconclusive at claim submission",
+    "Detailed Discharge Summary missing at claim submission or missing follow-up date"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operational Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Depressed skull fractures result from high-energy direct blow, often to the frontoparietal region. They can be open (skin laceration or communication with paranasal sinuses/middle ear) or closed, and may involve associated intracranial injuries like epidural hematoma, dural tears, and seizures.",
+      "CT scan is the gold standard for diagnosis of skull fractures, with thinly sliced bone windows (1-1.5 mm) and sagittal reconstruction being useful.",
+      "Skull films are suboptimal for basilar skull fractures and generally not beneficial when a CT scan is obtained.",
+      "MRI is ancillary for ligamentous and vascular injuries; bony injuries are better visualized with CT.",
+      "Complete neurological examination, baseline laboratory analyses, and tetanus toxoid (for open fractures) are part of the diagnostic workup.",
+      "Indications for CT in TBI include: Witnessed LOC (Loss of Consciousness).",
+      "Indications for CT in TBI include: Definite Amnesia.",
+      "Indications for CT in TBI include: Disorientation with a Glasgow Coma Scale score (GCS) of 13-15.",
+      "Indications for CT in TBI include: GCS <15 at 2 hours after injury.",
+      "Indications for CT in TBI include: Suspected open or depressed fracture.",
+      "Indications for CT in TBI include: Any signs of basilar skull fracture (Raccoon eye, Battle sign, Otorrhea or Rhinorrhea).",
+      "Indications for CT in TBI include: Vomiting of > 2 episodes.",
+      "Indications for CT in TBI include: Age > 65 years.",
+      "Indications for CT in TBI include: LOC for > 5 minutes.",
+      "Indications for CT in TBI include: Mechanism of injury (as a general trigger)."
+    ],
+    "surgical_options": [
+      "Surgery to elevate depressed skull fractures is preferred in: Open (compound) fractures.",
+      "Surgery to elevate depressed skull fractures is preferred in: Depressed fracture thickness > of calvaria.",
+      "Surgery to elevate depressed skull fractures is preferred in: Those fractures not meeting criteria for non-surgical management."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Seizure medications are recommended if the chance of developing seizures is higher than 20%. Open fractures, if contaminated, may require antibiotics in addition to tetanus toxoid.",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

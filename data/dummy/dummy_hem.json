@@ -1,0 +1,102 @@
+{
+  "_comment": "IRIS test data — HEM stub. 6 hospital profiles covering major pipeline branch points. Keyed by hospital_id. Loaded by stubs/hem_stub.py.",
+
+  "H001": {
+    "_scenario": "Happy path baseline — private Tier-1, NABH Full, Chennai, comprehensive specialty list. Used by most test cases.",
+    "hospital_id": "H001",
+    "name": "Apollo Hospitals Chennai",
+    "type": "private",
+    "city_tier": "tier1",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "is_aspirational_district": false,
+    "accreditation": "nabh_full",
+    "scheme": "pmjay",
+    "empanelled_specialties": [
+      "SG", "MC", "SB", "MG", "SO", "SU", "BM", "SN",
+      "MR", "SC", "MO", "SE", "SP", "ST", "MM", "MN",
+      "OT", "IR", "SS", "SM", "SV", "SL", "PM", "IN",
+      "HD", "HM", "HP", "ER"
+    ]
+  },
+
+  "H002": {
+    "_scenario": "Public hospital, aspirational district, NQAS accreditation, Tier-2, limited specialties. Tests public hospital document relaxation (CAM Annexure 7) and aspirational district flag.",
+    "hospital_id": "H002",
+    "name": "Government Medical College Hospital Tiruchirappalli",
+    "type": "public",
+    "city_tier": "tier2",
+    "state": "Tamil Nadu",
+    "district": "Tiruchirappalli",
+    "is_aspirational_district": true,
+    "accreditation": "nqas",
+    "scheme": "pmjay",
+    "empanelled_specialties": [
+      "SG", "MG", "SO", "BM", "SN", "SU", "MN", "MM", "SE", "SB", "ER"
+    ]
+  },
+
+  "H003": {
+    "_scenario": "Private Tier-3, no accreditation, only General Surgery and General Medicine empanelled. Tests specialty gate failure (e.g. SB/Orthopaedics not available → zero candidates → USP path).",
+    "hospital_id": "H003",
+    "name": "Sri Venkateswara Hospital",
+    "type": "private",
+    "city_tier": "tier3",
+    "state": "Tamil Nadu",
+    "district": "Vellore",
+    "is_aspirational_district": false,
+    "accreditation": "none",
+    "scheme": "pmjay",
+    "empanelled_specialties": [
+      "SG", "MG"
+    ]
+  },
+
+  "H004": {
+    "_scenario": "Private hospital in NE state (Assam), Tier-3. Tests NE state enhancement batch override — private hospital in NE gets 5 days/request instead of 2.",
+    "hospital_id": "H004",
+    "name": "Guwahati Medical Centre",
+    "type": "private",
+    "city_tier": "tier3",
+    "state": "Assam",
+    "district": "Guwahati",
+    "is_aspirational_district": false,
+    "accreditation": "none",
+    "scheme": "pmjay",
+    "empanelled_specialties": [
+      "SG", "MG", "SO", "SU", "SB", "MN", "ER"
+    ]
+  },
+
+  "H005": {
+    "_scenario": "Private Tier-2, NABH Entry accreditation, Madurai. Tests mid-tier pricing path and NABH Entry incentive.",
+    "hospital_id": "H005",
+    "name": "Meenakshi Mission Hospital Madurai",
+    "type": "private",
+    "city_tier": "tier2",
+    "state": "Tamil Nadu",
+    "district": "Madurai",
+    "is_aspirational_district": false,
+    "accreditation": "nabh_entry",
+    "scheme": "pmjay",
+    "empanelled_specialties": [
+      "SG", "MC", "SB", "MG", "SO", "SU", "BM", "SN", "SE", "SS", "SL", "ER"
+    ]
+  },
+
+  "H006": {
+    "_scenario": "Hospital with scheme=cmchis (not pmjay). HARD BLOCK test — Phase 0 must return SCHEME_NOT_SUPPORTED block flag immediately.",
+    "hospital_id": "H006",
+    "name": "Christian Medical College Vellore",
+    "type": "private",
+    "city_tier": "tier1",
+    "state": "Tamil Nadu",
+    "district": "Vellore",
+    "is_aspirational_district": false,
+    "accreditation": "nabh_full",
+    "scheme": "cmchis",
+    "empanelled_specialties": [
+      "SG", "MC", "SB", "MG", "SO", "SU", "BM", "SN", "MR", "SC", "MO", "SE"
+    ]
+  }
+}

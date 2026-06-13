@@ -1,0 +1,148 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO041A",
+  "procedure_code": "SO041A",
+  "condition": "Benign cystic ovarian masses (e.g., functional cysts, mature cystic teratomas, endometriomas, serous and mucinous cystadenomas, para-ovarian cysts)",
+  "procedure_name": "Laparoscopic cystectomy",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Laparoscopic cystectomy_Medco.pdf",
+    "Laparoscopic cystectomy_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Benign cystic ovarian masses in premenopausal women",
+    "Functional cysts (follicular, haemorrhagic, and corpus luteum cysts)",
+    "Mature cystic teratomas (dermoids)",
+    "Endometriomas",
+    "Serous and mucinous cystadenomas",
+    "Para-ovarian cyst",
+    "Benign ovarian tumour more than 7 cm"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "benign ovarian tumour size",
+      "operator": ">",
+      "value": "7 cm",
+      "note": "requires removal"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG Abdomen/pelvis"
+      },
+      {
+        "key": "ca_125_tumor_marker",
+        "label": "CA 125 Tumor marker"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      },
+      {
+        "key": "doppler_ultrasound",
+        "label": "Doppler Ultrasound (optional)"
+      },
+      {
+        "key": "ct_mri_scan_pelvis",
+        "label": "CT/MRI scan pelvis (optional)"
+      },
+      {
+        "key": "other_tumor_markers",
+        "label": "Other Tumor markers based on etiology (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports_if_done",
+        "label": "Investigation reports if done"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological Examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did physical examination, imaging and investigation confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was there an evidence of cysts/tumor on Ultrasound report?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was malignancy ruled out in suspicious lesions?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Physical examination, imaging, or investigation did not support the diagnosis or indication for surgery.",
+    "Ovarian tumor size not documented, or documented <= 7 cm without clear justification for surgical removal.",
+    "Malignancy not explicitly ruled out for suspicious lesions at claim stage.",
+    "Mandatory documents for pre-authorization (e.g., Detailed Clinical notes, USG Abdomen/pelvis, CA 125 Tumor marker, Planned line of treatment) are missing or incomplete.",
+    "Mandatory documents for claim submission (e.g., Detailed indoor case papers, Detailed procedure/operative notes, Histopathological Examination, Detailed Discharge Summary) are missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary hospital; laparoscopic facility for laparoscopic procedures.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Laparoscopic ovarian cystectomy has now evolved to become the gold standard of surgical management of benign cystic ovarian masses in premenopausal women.",
+      "The optimal surgical goal is to remove the entire cyst intact. The cyst should be removed inside a laparoscopic bag so that inadvertent spillage into the peritoneal cavity may be avoided.",
+      "Ovarian conservation is generally the goal in a premenopausal woman with a benign ovarian cyst requiring surgical excision. The advantage is preservation of viable ovarian tissue and thus fertility and hormone production.",
+      "Ovarian cysts can occur at any stage in life from foetal life through menopause. They can be symptomatic or asymptomatic and found incidentally on clinical exam or on imaging.",
+      "It is important to differentiate between benign and malignant enlargements of the ovary to institute timely and effective treatment without undue delay."
+    ],
+    "surgical_options": [
+      "Ovarian cystectomy",
+      "Ovariotomy",
+      "Laparoscopic dissection of the cyst (in a young woman)",
+      "Hysterectomy with bilateral removal of adnexa (in an older woman)"
+    ],
+    "pre_op_preparation": "The initial workup should include a medical history, physical exam, serial beta-HCG, Complete Blood Count, and ultrasound imaging. Depending on the presentation, physicians may also elect to check serial hematocrits and cervical cultures if a haemorrhagic cyst or abscess is suspected.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "The presence of a known malignancy has traditionally been considered an absolute contraindication."
+    ]
+  }
+}

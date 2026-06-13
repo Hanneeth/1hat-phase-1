@@ -1,0 +1,117 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV005C",
+  "procedure_code": "SV005C",
+  "condition": "Tricuspid Valve",
+  "procedure_name": "Single Valve Tricuspid Valve Procedure",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Tricuspid valve_Medco.pdf",
+    "Tricuspid valve_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Severe tricuspid regurgitation (TR) in patients undergoing left-sided valve surgery (AHA/ACC 2014, ESC 2012 guidelines)",
+    "Mild, moderate or severe TR in patients undergoing left-sided valve surgery with concomitant tricuspid valve repair, if tricuspid annulus dilation (transthoracic echocardiogram > 40 mm or 21 mm/m2 indexed for body surface area, or intraoperative > 70 mm)",
+    "Mild, moderate or severe TR in patients undergoing left-sided valve surgery with concomitant tricuspid valve repair, if previous history of right heart failure",
+    "Severe tricuspid regurgitation refractory to medical treatment (for isolated tricuspid valve surgery)",
+    "Symptomatic and severe isolated tricuspid regurgitation without right ventricular dysfunction (ESC 2012 guidelines)",
+    "Asymptomatic or minimally symptomatic severe primary tricuspid regurgitation with progressive moderate or greater RV dilation and/or systolic dysfunction (weak recommendation, AHA/ACC 2014 guidelines)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "barcode_of_implant",
+        "label": "Barcode of implant, if used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of Tricuspid Stenosis/ Tricuspid Regurgitation?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair/ replacement of the valve?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the barcode of implant used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not suggestive of Tricuspid Stenosis or Tricuspid Regurgitation",
+    "Clinical notes missing detailed history, signs, symptoms, or indication for procedure",
+    "Post-procedure ECHO stills not showing repair/replacement of the valve",
+    "Barcode of implant not submitted when an implant was used",
+    "Detailed Discharge Summary not submitted or missing date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Tricuspid Stenosis (TS) causes: Rheumatic heart disease (often with mitral stenosis), large vegetations in infective endocarditis, carcinoid syndrome, systemic diseases (SLE, APLA syndrome), permanent pacing and ICD leads causing sub-valvular structures, benign tumors (atrial myxomas).",
+      "TS clinical features: Reduced exertional capacity, fatigue, exertional syncope, hepatic congestion, leg edema, ascites, deterioration of liver function tests, anasarca. Physical exam may show 'Giant a waves' in JVP, 'slow y descent', low frequency presystolic mid-diastolic murmur at lower left sternal border (4th intercostal space). Lungs are clear in isolated TS.",
+      "Tricuspid Regurgitation (TR) causes: Primary (intrinsic valvular apparatus abnormalities) or secondary (right ventricular dilatation, annular dilation, leaflet tethering due to RV pressure/volume overload, more common).",
+      "TR clinical features: Right-sided heart failure symptoms (painful hepatosplenomegaly, ascites, peripheral edema), pulsations in neck from distended and pulsatile jugular veins, exercise intolerance. Physical exam may show jugular venous distension with prominent V wave (increases with inspiration - Kussmaul's sign), S3 gallop (dilated RV), pansystolic murmur (high pitched, loudest 4th intercostal space parasternal, increases with inspiration, exercise, leg raising; decreases with standing, Valsalva). Also ascites, cachexia, jaundice, atrial fibrillation, peripheral edema, RV heave, S4 gallop (increases with inspiration). Underlying condition features like pulmonary hypertension or infective endocarditis may also be present."
+    ],
+    "surgical_options": [
+      "Valvotomy (using 1, 2, or 3 balloons)",
+      "Valve surgery (repair vs. replacement)",
+      "Valve replacement (open vs. transcatheter)",
+      "Valve replacement (bioprosthetic vs. mechanical valves - no difference in outcomes established)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

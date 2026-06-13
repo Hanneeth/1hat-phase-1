@@ -1,0 +1,174 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Renal Transplantation/ : Renal transplantation_MEDCO.pdf (clinical + mandatory docs) + Renal transplantation_PPD_CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "OT001A",
+  "procedure_code": "OT001A",
+  "condition": "Renal Transplantation",
+  "procedure_name": "Transplant surgery, including donor nephrectomy",
+  "specialty": "Organ and Tissue Transplant",
+  "version": "1.1",
+  "source_files": [
+    "Renal transplantation_MEDCO.pdf",
+    "Renal transplantation_PPD_CPD.pdf"
+  ],
+  "alos": "7 days - donor, 10-14 days - recipient",
+  "min_doctor_qualification": [
+    "MS in General Surgery",
+    "DNB in General Surgery",
+    "MCh in General Surgery",
+    "MS in Urology Surgery",
+    "DNB in Urology Surgery",
+    "MCh in Urology Surgery",
+    "Fellowship in Transplant Surgery with 2 years training",
+    "Equivalent qualification with 2 years training in Transplant Surgery"
+  ],
+  "clinical_indications": [
+    "End-stage kidney disease (ESKD) in children, as the treatment of choice due to superior patient survival rate compared with chronic dialysis and better growth and developmental outcomes.",
+    "End stage renal failure in adults, as the treatment of choice."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with planned line of management"
+      },
+      {
+        "key": "notto_id",
+        "label": "NOTTO (National organ and tissue transplant organization) ID of the recipient and / donor"
+      },
+      {
+        "key": "donor_work_up_summary_sheet",
+        "label": "Donor work-up summary sheet"
+      },
+      {
+        "key": "recipient_work_up_summary_sheet",
+        "label": "Recipient work-up summary sheet"
+      },
+      {
+        "key": "cross_match_report",
+        "label": "Cross-match report with donor and recipient photo-ID proof"
+      },
+      {
+        "key": "undertaking_signed_by_donor",
+        "label": "Undertaking signed by donor (in living donor transplant)"
+      },
+      {
+        "key": "hospital_authorization_letter",
+        "label": "Hospital authorization letter on recipient and donor with details of the surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph"
+      },
+      {
+        "key": "investigation_reports_if_done",
+        "label": "Investigation reports (if done)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes all vitals, detailed history, symptoms, signs, physical examination, indication for surgery, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Were the following documents available NOTTO ID, donor/recipient work-up summary sheet/cross-match report, informed consent of donor (in living donor transplant), hospital authorization letter?",
+        "expected": true
+      },
+      {
+        "q": "Were DSA and biopsy reports submitted (if applicable)?",
+        "expected": true
+      },
+      {
+        "q": "Is the hospital registered under HOTA/NOTTO ACT?",
+        "expected": true
+      },
+      {
+        "q": "Has the hospital transplant committee approved the case?",
+        "expected": true
+      },
+      {
+        "q": "Is the patient suffering from end stage kidney disease and/or not responding to dialysis?",
+        "expected": true
+      },
+      {
+        "q": "Documentation of no absolute contraindications for doing the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the Donor medically fit to undergo the Transplant Donor Nephrectomy?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details (including drug and dosage for induction/treatment rejection – if applicable)?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailedprocedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Hospital not registered under HOTA/NOTTO Act.",
+    "Hospital transplant committee has not approved the case.",
+    "Patient is not suffering from end-stage kidney disease, or is responding to dialysis.",
+    "Absolute contraindications for the procedure are documented.",
+    "Donor is not medically fit to undergo Transplant Donor Nephrectomy.",
+    "Missing NOTTO ID of recipient and/or donor at pre-authorization.",
+    "Missing donor work-up summary sheet at pre-authorization.",
+    "Missing recipient work-up summary sheet at pre-authorization.",
+    "Missing cross-match report or donor/recipient photo-ID proof at pre-authorization.",
+    "Missing undertaking signed by donor for living donor transplant at pre-authorization.",
+    "Missing hospital authorization letter on recipient and donor at pre-authorization.",
+    "Missing clinical photograph at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facility should be registered as per HOTA Act (THE HUMAN ORGANS TRANSPLANTATION ACT)for intervention procedures. Care at a Tertiary Hospital. The Hospital should have the required infrastructure of transplantation like Normo-thermic perfusion system, vascular access, pre-transplant work-up, dialysis, transplant immunology (HLA & cross match), transplant pathology and post-transplant care.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "PEDIATRIC POPULATION: Kidney transplantation is the treatment of choice for children with end-stage kidney disease (ESKD) because of its superior patient survival rate compared with chronic dialysis. In addition, it is associated with better growth and developmental outcomes. The most common cause of ESKD in children who undergo transplantation is congenital malformations of the kidney and urinary tract (40 percent), followed by glomerular disorders (25 percent) and hereditary/genetic kidney diseases (15 percent), particularly focal glomerulosclerosis in black patients.",
+      "Preemptive transplantation: Children frequently undergo primary or preemptive transplantation, in which transplantation is the first mode of treatment for end-stage kidney disease (ESKD).",
+      "ADULT POPULATION: Accurate immunosuppression management is critical to maintain long term transplant function and minimize complications.",
+      "ADULT POPULATION: There is an increased risk of infections and cancer, and both can progress rapidly as patients are immunosuppressed."
+    ],
+    "surgical_options": [
+      "The endoscopic (laparoscopic) approach is the preferred technique for living-donor nephrectomy in established kidney transplant programs. Nevertheless, open surgery, preferably by a mini-incision approach, can still be considered a valid option, despite increased pain in the post-operative period.",
+      "Endoscopic living-donor nephrectomy (ELDN) includes: Pure or hand-assisted trans peritoneal laparoscopy; Pure or hand-assisted retroperitoneal approach; Laparo-Endoscopic Single Site Surgery (LESS); Natural Orifice Transluminal Endoscopic Surgery-assisted (NOTES); Laparo-Endoscopic Single Site Surgery and robotic-assisted trans peritoneal or retroperitoneal approach."
+    ],
+    "pre_op_preparation": "Prior to kidney transplantation, it is advisable that the recipient undergo the following evaluation and preparation to reduce complications, and increase allograft and patient survival: Detection of anti-Human Leukocyte Antigen (HLA) antibodies to the donor; Correction of any significant urinary tract abnormality; Detection and treatment of any infection prior to transplantation; Completion of routine childhood immunizations, including varicella vaccine; Review of whether nephrectomy would be beneficial long-term. Recommendations for matching donor and recipient: Determine the ABO blood group and the human leukocyte antigen A, B, C and DR phenotypes for all candidates awaiting kidney transplantation (Strong); Test both the donor and recipient for human leukocyte antigen DQ. Human leukocyte antigen DP testing may be performed for sensitised patients (Strong); Perform thorough testing for HLA antibodies before transplantation (Strong); Perform adequate cross-match tests to avoid hyper-acute rejection, before each kidney and combined kidney/pancreas transplantation (Strong). Pre-transplant evaluation includes: Problem list, Medication list, Medical history, Immunization history, Physical exam, Stool occult blood, Pap smear (women), Chest x-ray, Tuberculin test, ECG, Abdominal ultrasound, CBC, Chem screen, INR, APTT, Infectious serologies, PSA (men ≥40 years), Urine analysis + culture, Mammogram (women ≥40 years), Eye exam (diabetic patients ≥50 years), Dental exam, Social service consult, Dietary consult, Patient and family education, Financial counseling, Histocompatibility testing, Special studies and specialty consults as indicated. Note: 2D ECHO is a very important test needed to identify if the patient is low risk or high risk for cardiac. End stage renal disease patients who have been on dialysis for a long time invariably have high PA pressures with LVH with valvular dysfunction with poor cardiac contractility, if these findings are severe they are at a high risk of...",
+    "post_op_care": "Renal allograft dysfunction is the most common complication of kidney transplantation, which can lead to graft loss. Causes vary with immediate, early, and late post-transplant periods. Diagnosis involves thorough history, physical exam, laboratory/imaging studies, and/or renal allograft biopsy. Patients with allograft dysfunction immediately (<1 week) post-transplant commonly present with low urine output or failure of serum creatinine to decrease; some may require dialysis in the first week. An algorithm is provided for evaluating renal allograft dysfunction >1 week post-transplant.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "PEDIATRIC: Uncontrolled extrarenal malignancies; Systemic sepsis; Severe irreversible multisystem organ system failure not correctable by organ transplant; Severe cardiac or pulmonary dysfunction in a patient who is not a candidate for multiorgan transplantation; Life-threatening disorder of extrarenal origin that is not correctable by organ transplant; Elevated levels of circulating antiglomerular basement membrane antibodies.",
+      "PEDIATRIC (Preemptive Transplant not recommended if): Need for pretransplant nephrectomies (i.e., malignant renovascular hypertension, chronic pyelonephritis, or nephrotic syndrome with the associated complications due to hypercoagulability); ESKD from autoimmune disease with persistently high titres of autoantibody (ie, anti-glomerular basement membrane disease); Ongoing active infections; Underlying kidney disease is still active and associated with rapidly progressive disease (ie, haemolytic uremic syndrome or crescentic glomerulonephritis); If the patient or his/her caregivers are not yet able to cope with the regimented care necessary for the transplant recipient as exhibited by nonadherence to his/her CKD care.",
+      "ABSOLUTE: Active infections (patients suspended from waiting list while being treated, controlled chronic viral infections not contraindications); Active cancer (2-5 year period without recurrence required); Active drug misuse (if treated, may not be long term contraindication); Uncontrolled psychiatric disease (if treated, may not be long term contraindication); Active non-concordance with treatment (if demonstrable concordance shown, patient can be put on waiting list); Short life expectancy (projected survival with renal transplant less than five years); Major organ comorbidity (such as severe cardiac or respiratory disease).",
+      "RELATIVE: Systemic autoimmune disease (e.g., vasculitis, lupus, patient monitored for disease activity and considered when in remission); AL amyloidosis (assess if disease in remission and no cardiac amyloid); Primary hyperoxaluria (metabolic liver defect, liver and kidney transplant possible); Cirrhosis (may require assessment for simultaneous liver and kidney transplant); Obesity (some centres will not transplant a patient with BMI >35); Recurrent disease (failure of previous renal transplant due to early recurrence)."
+    ]
+  }
+}

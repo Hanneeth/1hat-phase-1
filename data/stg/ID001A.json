@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "ID001A",
+  "procedure_code": "ID001A",
+  "condition": "Laboratory tests for COVID-19 infection",
+  "procedure_name": "Laboratory Tests for COVID-19 Infection (PCR/RT-PCR for nasal swab and throat swabs)",
+  "specialty": "Infectious Diseases",
+  "version": "1.1",
+  "source_files": [
+    "Laboratory tests for COVID-19 infection_Medco.pdf",
+    "Laboratory tests for COVID-19 infection_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "All symptomatic Influenza Like Illness (ILI) in containment zones or hotspots.",
+    "Asymptomatic direct and high-risk contacts with co-morbidities (lung disease, heart disease, liver disease, kidney disease, diabetes, neurological disorders, blood disorders) of a confirmed case to be tested once between day 5 and day 10 of coming into contact in containment zones or hotspots.",
+    "All symptomatic ILI patients presenting in a healthcare setting and suspected of having COVID-19 infection.",
+    "Asymptomatic patients who are hospitalized or seeking hospitalization in high-risk groups (patients undergoing chemotherapy, immunosuppressed patients including those who are HIV+, patients diagnosed with malignant disease, transplant patients, elderly patients (>65 yrs of age) with co-morbidities (lung disease, heart disease, liver disease, kidney disease, diabetes, neurological disorders, blood disorders)).",
+    "Asymptomatic patients undergoing aerosol generating surgical / non-surgical interventions (elective/emergency surgical procedures like neurosurgery, ENT surgery, dental procedures etc.; non-surgical interventions like bronchoscopy, upper GI endoscopy and dialysis etc.).",
+    "All samples of suspect COVID-19 to be first tested by E gene screening assay (TrueNat Step 1 assay).",
+    "Positive samples from E gene screening assay to be subjected to RdRp gene confirmatory assay (TrueNat Step 2 assay)."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_physician_prescription",
+        "label": "Clinical notes / physician's prescription indicating signs/ symptoms and the need for testing"
+      },
+      {
+        "key": "covid_19_laboratory_screening_testing_form",
+        "label": "Covid-19 laboratory screening/ testing form duly signed by the prescribing physician/ doctor"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (in case of hospitalization)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary (in case of hospitalization)"
+      },
+      {
+        "key": "all_laboratory_investigation_reports",
+        "label": "All laboratory investigation reports (including COVID-19 test report)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes/ physician's prescription giving history & indication for testing?",
+        "expected": true
+      },
+      {
+        "q": "Covid-19 laboratory screening/ testing form duly signed by the prescribing physician/ doctor?",
+        "expected": true
+      },
+      {
+        "q": "Are the indications mentioned in the laboratory test form for COVID-19 commensurate with the extant ICMR guidelines/ Gol/ State government guidelines?",
+        "expected": true
+      },
+      {
+        "q": "Is the laboratory test for COVID-19 being conducted in the ICMR/ Gol/ State government approved lab for COVID-19 testing?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "In case of hospitalization, do the documents (clinical notes, physical examination reports, laboratory reports) available detail the need for admission?",
+        "expected": true
+      },
+      {
+        "q": "In case of hospitalization, Discharge summary is available?",
+        "expected": true
+      },
+      {
+        "q": "Report of the laboratory test for COVID-19 infection?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Indications for testing in the laboratory test form are not commensurate with extant ICMR/GoI/State government guidelines.",
+    "Laboratory test for COVID-19 was not conducted in an ICMR/GoI/State government approved lab.",
+    "Clinical notes or physician's prescription missing or not adequately detailing history and indication for testing.",
+    "COVID-19 laboratory screening/testing form missing or not duly signed by the prescribing physician/doctor.",
+    "Report of the laboratory test for COVID-19 infection missing at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "ICMR/ Government approved laboratory for COVID-19 testing, Availability of Oximeter.",
+    "min_doctor_qualification_desirable": "MD/ DNB/ equivalent in Medicine/ Pulmonology/ Diploma in Tuberculosis and Chest Disease (DTCD)",
+    "clinical_key_pointers": [
+      "('Strategy for COVID-19 testing in India', Version 5, dated 18.05.2020, New Additional Strategies for COVID-19 Testing dated 23.06.2020, issued by ICMR- https://icmr.gov.in)",
+      "*ILI case is defined as one with acute respiratory infection with fever ≥ 38°C AND cough.",
+      "Where available, it is advised to use real time RT-PCR as the frontline test for diagnosis of SARS-CoV-2.",
+      "Revised Guidelines for TrueNat testing for COVID-19 dated 19.05.2020 & New Additional Strategies for COVID-19 Testing dated 23.06.2020, issued by ICMR, https://icmr.gov.in",
+      "No further RT-PCR based confirmation is required for samples that are positive after step 2 of the TrueNat assay.",
+      "All positive and negative results must be reported to ICMR portal in real time manner.",
+      "Signs & symptoms of COVID-19 infection (As per Clinical Management Protocol for Covid-19, MoH&FW, Version 3, 13.06.2020, https://mohfw.gov.in )- These may be fever, cough, fatigue, shortness of breath, expectoration, Myalgia, Rhinorrhea, sore throat, diarrhea. mild, moderate or severe illness. Severe illness may present with severe pneumonia, Acute Respiratory Distress Syndrome (ARDS), sepsis and septic shock; Loss of smell (anosmia) or loss of taste (ageusia) preceding the onset of respiratory symptoms. Children may not have fever or cough as frequently as adults.",
+      "Risk factors for severe disease: Age more than 60 years (increasing with age).",
+      "Risk factors for severe disease: Underlying non-communicable diseases (NCDs): diabetes, hypertension, cardiac disease, chronic lung disease, cerebro-vascular disease, chronic kidney disease, immune-suppression and cancer."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

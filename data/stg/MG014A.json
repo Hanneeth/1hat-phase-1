@@ -1,0 +1,113 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG014A",
+  "procedure_code": "MG014A",
+  "condition": "Liver Abscess",
+  "procedure_name": "Liver Abscess",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Liver abscess_Medco.pdf",
+    "Liver abscess_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Clinical presentations consistent with Liver Abscess (e.g., fever, chills, abdominal pain restricted to the right upper quadrant, hepatic tenderness)",
+    "Laboratory findings indicative of Liver Abscess (e.g., anemia, leukocytosis, high erythrocyte sedimentation rate, elevated C-reactive protein level, hypoalbuminemia, hyperbilirubinemia, elevated alanine aminotransferase (ALAT) and alkaline phosphatase (AP) levels)",
+    "Imaging (Ultrasound or Computed Tomography) confirming the presence of Liver Abscess",
+    "Positive amebic serology for amebic Liver Abscess or microbiological findings for pyogenic Liver Abscess"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "liver_function_test",
+        "label": "Liver Function Test"
+      },
+      {
+        "key": "pretreatment_usg_abdomen",
+        "label": "Pretreatment USG Abdomen"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers with treatment/aspiration details"
+      },
+      {
+        "key": "post_treatment_usg_abdomen_report",
+        "label": "Post treatment USG Abdomen report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the liver function test report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the pretreatment USG Abdomen submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was detailed Indoor Case Papers with vital (BP and Pulse) and treatment/fluid aspiration details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post treatment USG Abdomen report of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the detailed discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or USG Abdomen report not indicative of liver abscess",
+    "Liver Function Test report missing during pre-authorization",
+    "Pretreatment USG Abdomen report missing or unclear at pre-authorization",
+    "Detailed Indoor Case Papers missing or incomplete at claim submission",
+    "Post-treatment USG Abdomen report missing at claim submission",
+    "Discharge summary missing follow-up details"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "DNB / MD (General Medicine / Pediatric Medicine/Radio diagnosis); MS General surgery.",
+    "clinical_key_pointers": [
+      "Liver abscess (LA) is an uncommon but potentially life-threatening disease with significant morbidity and mortality.",
+      "The majority of these abscesses are categorized into pyogenic or amoebic, although a minority is caused by parasites and fungi.",
+      "Most amoebic infections are caused by Entamoeba histolytica.",
+      "The pyogenic abscesses are usually polymicrobial, but some organisms are seen more commonly in them, such as E.coli, Klebsiella, Streptococcus, Staphylococcus, and anaerobes."
+    ],
+    "surgical_options": [
+      "Abscess puncture and drainage (implied for pyogenic LA)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "Follow-up advice mentioned in the detailed discharge summary.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

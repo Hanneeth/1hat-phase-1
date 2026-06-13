@@ -1,0 +1,99 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU092A",
+  "procedure_code": "SU092A",
+  "condition": "Vesicovaginal Fistula (VVF) / Uterovaginal fistula",
+  "procedure_name": "Hysterectomy as part of VVF / Uterovaginal fistula repair",
+  "specialty": "Urology/ Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Hysterectomy as part of VVF or UVF repair_Medco.pdf",
+    "Hysterectomy as part of VVF or UVF repair_PPD.CPD.pdf"
+  ],
+  "alos": "Daycare",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/ or Equivalent (in Urology, Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Total abdominal hysterectomy is the most common cause of ureteral injury.",
+    "As a result of Genitourinary endoscopic procedures, Hysterectomy and other Gynaecology & Obstetric Surgeries, Colorectal and vascular surgeries."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "cystoscopy_vaginoscopy_ct_ivp_reports",
+        "label": "Cystoscopy/Vaginoscopy/CT - IVP/IVP +/- cystogram Reports"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report (In all applicable cases)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes submitted?"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was reports of Cystoscopy/Vaginoscopy/CT - IVP/IVP +/- cystogram report confirming the diagnosis submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical notes and Cystoscopy/Vaginoscopy/CT - IVP/IVP +/- cystogram reports indicative of procedure?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes do not provide sufficient detail on history, indications, symptoms, signs, examination findings, or advice for admission.",
+    "Cystoscopy/Vaginoscopy/CT - IVP/IVP +/- cystogram reports are missing or do not confirm the diagnosis.",
+    "Histopathology report is missing (if applicable).",
+    "Detailed indoor case papers are missing daily vitals or treatment details.",
+    "Operative notes are missing or do not detail the surgical steps and findings."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MCh/Equivalent (in Urology)",
+    "clinical_key_pointers": [
+      "There is increased risk of fistula development, most post-hysterectomy vesicovaginal fistulas occur after an apparently uncomplicated total abdominal hysterectomy for benign disease."
+    ],
+    "surgical_options": [
+      "Repair via Vaginal incision (e.g., using fat pad or muscle patch for large fistulas or those resulting from pelvic radiation)",
+      "Repair via Abdominal incision (for fistulas close to ureter in bladder, or patched with a fat pad taken from the stomach)",
+      "Transvaginal reconstruction (for fistulas near the infratrigonal area, bladder neck, or post-hysterectomy fistulas, usually without excising the fistula tract)",
+      "Laparoscopic surgery (combined transvaginal and transabdominal approach with omentum fixation for extensive fistulas after radiation therapy)",
+      "Endoscopic surgery (effective in the treatment of Uterovaginal fistula)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

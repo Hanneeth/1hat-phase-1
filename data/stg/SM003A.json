@@ -1,0 +1,124 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SM003A",
+  "procedure_code": "SM003A",
+  "condition": "Ankylosis of TMJ",
+  "procedure_name": "Release /Reconstruction of TMJ Ankylosis of each side under GA",
+  "specialty": "Oral & Maxillofacial Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Ankylosis of TMJ_MEDICO.pdf",
+    "Ankylosis of TMJ_PPD.CPD.pdf"
+  ],
+  "alos": "3 Days",
+  "min_doctor_qualification": [
+    "MDS (Oral Maxillofacial surgery)"
+  ],
+  "clinical_indications": [
+    "Non-Displaced favorable fracture",
+    "Significant loss of overlying soft tissue",
+    "Grossly comminuted fracture",
+    "Edentulous mandibular fractures",
+    "Mandibular fracture in children",
+    "Coronoid Fracture",
+    "Condylar fracture"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, clinical photographs (intraoral & extraoral) indications for doing the procedure & advise for admission)"
+      },
+      {
+        "key": "x_ray_affected_part",
+        "label": "X-ray: of the affected part in 2 planes (Lateral oblique/OPG/PA Mandible. CBCT/CT/OPG)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_consent",
+        "label": "Indoor case papers & Consent (informed written)"
+      },
+      {
+        "key": "procedure_note_operative_note_anesthesia_notes",
+        "label": "Procedure note/ operative note & Anesthesia notes"
+      },
+      {
+        "key": "barcode_implant_used",
+        "label": "Barcode of Implant(s) used submitted?"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Oral maxillo facial clinical notes (including clinical signs & symptoms such as difficulty in breathing, examination findings, indications for doing the procedure & advise for admission)? Yes",
+        "expected": true
+      },
+      {
+        "q": "X-ray report of Mandible/ TMJ showing the fracture/ankylosis of the region? Yes",
+        "expected": true
+      },
+      {
+        "q": "Did the signs, symptoms, examination, and X-ray confirm the presence of fracture of jaw or TM joint ankylosis? Yes",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery? Yes",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up? Yes",
+        "expected": true
+      },
+      {
+        "q": "Post-operative x ray in at least 2 planes of the affected part submitted? Yes",
+        "expected": true
+      },
+      {
+        "q": "Barcode of Implant(s) used? - Yes",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Signs, symptoms, examination, or X-ray do not confirm the presence of fracture of jaw or TM joint ankylosis for pre-authorization.",
+    "Clinical notes for pre-authorization are incomplete or do not detail signs, symptoms, examination findings, clinical photographs, indications, or advice for admission.",
+    "X-ray of the affected part in 2 planes (Lateral oblique/OPG/PA Mandible or CBCT/CT/OPG) not submitted for pre-authorization.",
+    "Indoor case papers or consent form missing/incomplete for claim submission.",
+    "Procedure note, operative note, or anesthesia notes missing/incomplete for claim submission.",
+    "Barcode of implant(s) used not submitted for claim submission.",
+    "OT notes do not detail the steps of surgery performed or outcomes of the surgery for claim submission.",
+    "Documents showing appropriate post-operative care or follow-up advice are not available for claim submission.",
+    "Post-operative X-ray in at least 2 planes of the affected part not submitted for claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination & radiological imaging.",
+      "Fixation of Jaw: It is surgical procedure performed for fixation of fracture.",
+      "Fracture is defined as a break in structural and natural continuity of bone",
+      "Mandibular Fracture: is fracture involved in jaw/mandible. The type of mandibular fracture can be such as: Simple, compound/open, comminuted, greenstick, pathologic, multiple, impacted etc."
+    ],
+    "surgical_options": [
+      "Restoration of bone fragments",
+      "Reduction of Occlusion: Reduction (Open, Closed)",
+      "Fixation",
+      "Immobilization (Arch bars, SS Wires, Cap Splints, IMF screws, external fixators)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Fixation of jaw/TM joint fixation of both jaws are contraindicated for patients with comprised pulmonary function with severe asthma or severe COPD, poorly controlled seizures, psychiatric and neurological disorders, severe nausea or eating disorder."
+    ]
+  }
+}

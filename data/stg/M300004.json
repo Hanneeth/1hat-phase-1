@@ -1,0 +1,504 @@
+{
+  "stg_id": "M300004",
+  "procedure_code": "M300004",
+  "condition": "Advanced Neonatal Care Package",
+  "procedure_name": "Advanced Neonatal Care Package: Babies with birthweight of 1200-1499 g or Babies of any birthweight with at least one of the following conditions: Any condition requiring invasive ventilation longer than 24 hours; Hypoxic Ischemic encephalopathy requiring Therapeutic Hypothermia; Cardiac rhythm disorders needing intervention (the cost of cardiac surgery or implant will be covered under cardiac surgery packages); Sepsis with complications such as meningitis or bone and joint infection, DIC or shock; Renal failure requiring dialysis; Inborn errors of metabolism. Mother's stay and food in the hospital for breastfeeding, family centred care and (Kangaroo Mother Care) KMC is mandatory and included in the package rate.",
+  "specialty": "Neo-natal Care",
+  "version": "1.1",
+  "source_files": [
+    "Advanced nenonatal care package_Medco.pdf",
+    "Advanced nenonatal care package_PPD.CPD.pdf"
+  ],
+  "alos": "15-30 days",
+  "min_doctor_qualification": [
+    "DM/DNB/Equivalent (in Neonatology)",
+    "referral for other specialties based on diagnosis"
+  ],
+  "clinical_indications": [
+    "Babies with birthweight of 1200-1499 g",
+    "Babies of any birthweight with any condition requiring invasive ventilation longer than 24 hours",
+    "Babies of any birthweight with Hypoxic Ischemic encephalopathy requiring Therapeutic Hypothermia",
+    "Babies of any birthweight with Cardiac rhythm disorders needing intervention (cost of cardiac surgery or implant covered under cardiac surgery packages)",
+    "Babies of any birthweight with Sepsis with complications such as meningitis or bone and joint infection, DIC or shock",
+    "Babies of any birthweight with Renal failure requiring dialysis",
+    "Babies of any birthweight with Inborn errors of metabolism"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "birthweight",
+      "operator": "between",
+      "value": "1200-1499 g",
+      "note": "If birthweight is the primary indication"
+    },
+    {
+      "field": "invasive_ventilation_duration",
+      "operator": ">",
+      "value": "24 hours",
+      "note": "If invasive ventilation is the primary indication"
+    },
+    {
+      "field": "hie_therapeutic_hypothermia_required",
+      "operator": "is",
+      "value": "true",
+      "note": "If Hypoxic Ischemic encephalopathy is the primary indication"
+    },
+    {
+      "field": "cardiac_rhythm_disorder_intervention_required",
+      "operator": "is",
+      "value": "true",
+      "note": "If Cardiac rhythm disorders are the primary indication"
+    },
+    {
+      "field": "sepsis_with_complications",
+      "operator": "is",
+      "value": "true",
+      "note": "If Sepsis with complications is the primary indication"
+    },
+    {
+      "field": "renal_failure_dialysis_required",
+      "operator": "is",
+      "value": "true",
+      "note": "If Renal failure requiring dialysis is the primary indication"
+    },
+    {
+      "field": "inborn_errors_of_metabolism_present",
+      "operator": "is",
+      "value": "true",
+      "note": "If Inborn errors of metabolism is the primary indication"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_line_of_management",
+        "label": "Clinical notes including evaluation findings and planned line of management"
+      },
+      {
+        "key": "ballard_scoring",
+        "label": "Ballard scoring (Mandatory if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "birth_weight",
+        "label": "Birth weight (Mandatory if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "gestation_age",
+        "label": "Gestation age (Mandatory if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "respiratory_support_silverman_score_need_surfactant_chest_xray_cpap_mv",
+        "label": "Respiratory support - Silverman score need for Surfactant/Chest X-ray/CPAP/MV (Mandatory if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "retinopathy_of_prematurity_rop_screening",
+        "label": "Retinopathy of Prematurity (ROP) screening (Mandatory if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "neurosonogram",
+        "label": "Neurosonogram (Mandatory if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "total_parenteral_nutrition_tpn",
+        "label": "Total Parenteral Nutrition (TPN) – based on availability (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "two_d_echo_patent_ductus_arteriosus",
+        "label": "2D ECHO (Patent Ductus Arteriosus) (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "need_for_nsg_ventricular_dilatation",
+        "label": "Need for NSG - ventricular dilatation (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "need_for_pda_closure_paracetamol_ibuprofen_indomethacin",
+        "label": "Need for PDA closure - Paracetamol/Ibuprofen/Indomethacin (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "x_ray_erect_abdomen_usg_abdomen_stool_for_occult_blood_necrotizing_enterocolitis",
+        "label": "X-ray erect abdomen, USG Abdomen, stool for occult blood (Necrotizing Enterocolitis) (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "septic_screen_sepsis_bw",
+        "label": "Septic screen (Sepsis) (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "total_serum_bilirubin_jaundice",
+        "label": "Total Serum Bilirubin (Jaundice) (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "complete_blood_count_anemia_of_prematurity",
+        "label": "Complete Blood count (anemia of prematurity) (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "serum_calcium_electrolytes_alkaline_phosphatase_parathyroid_hormone_osteopenia_of_prematurity",
+        "label": "Serum Calcium/Electrolytes/Alkaline Phosphatase /Parathyroid hormone – (osteopenia of prematurity) (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "caffeine_administration_apnea_of_prematurity",
+        "label": "Caffeine administration – (Apnea of prematurity) (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "gerd_gerd_study_barium_swallow",
+        "label": "GERD - (GERD study/barium swallow) (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "hearing_assessment",
+        "label": "Hearing assessment (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "thyroid_profile",
+        "label": "Thyroid profile (Optional if birthweight 1200-1499 g is the indication)"
+      },
+      {
+        "key": "chest_x_ray_ventilation",
+        "label": "Chest X-ray (Mandatory if invasive ventilation > 24 hours is the indication)"
+      },
+      {
+        "key": "arterial_blood_gas_analysis_ventilation",
+        "label": "Arterial Blood Gas analysis (Mandatory if invasive ventilation > 24 hours is the indication)"
+      },
+      {
+        "key": "pre_post_ductal_saturation_pulse_oximetry",
+        "label": "Pre & post ductal saturation (pulse oximetry) (Mandatory if invasive ventilation > 24 hours is the indication)"
+      },
+      {
+        "key": "eeg_ventilation",
+        "label": "EEG (Optional if invasive ventilation > 24 hours is the indication)"
+      },
+      {
+        "key": "septic_screen_ventilation",
+        "label": "Septic screen (Optional if invasive ventilation > 24 hours is the indication)"
+      },
+      {
+        "key": "two_d_echo_ventilation",
+        "label": "2DECHO (Optional if invasive ventilation > 24 hours is the indication)"
+      },
+      {
+        "key": "complete_blood_count_hie",
+        "label": "Complete blood count (Mandatory if Hypoxic Ischemic encephalopathy is the indication)"
+      },
+      {
+        "key": "electrolytes_renal_function_test_hie",
+        "label": "Electrolytes/Renal function test (Mandatory if Hypoxic Ischemic encephalopathy is the indication)"
+      },
+      {
+        "key": "coagulation_profile_hie",
+        "label": "Coagulation profile (Mandatory if Hypoxic Ischemic encephalopathy is the indication)"
+      },
+      {
+        "key": "liver_function_test_hie",
+        "label": "Liver function test (Mandatory if Hypoxic Ischemic encephalopathy is the indication)"
+      },
+      {
+        "key": "arterial_blood_gases_abg_hie",
+        "label": "Arterial blood gases (ABG) (Mandatory if Hypoxic Ischemic encephalopathy is the indication)"
+      },
+      {
+        "key": "cranial_ultrasonography_hie",
+        "label": "Cranial Ultrasonography (Mandatory if Hypoxic Ischemic encephalopathy is the indication)"
+      },
+      {
+        "key": "hie_scoring",
+        "label": "HIE scoring (Mandatory if Hypoxic Ischemic encephalopathy is the indication)"
+      },
+      {
+        "key": "amplitude_integrated_electro_encephalography_aeeg",
+        "label": "Amplitude integrated electro-encephalography (aEEG) (Optional if Hypoxic Ischemic encephalopathy is the indication)"
+      },
+      {
+        "key": "mri_brain",
+        "label": "MRI Brain (Optional if Hypoxic Ischemic encephalopathy is the indication)"
+      },
+      {
+        "key": "electrocardiogram_ecg_continuous_ecg_monitoring",
+        "label": "Electrocardiogram (ECG) (Continuous ECG monitoring – Recommended) (Mandatory if Cardiac rhythm disorders needing intervention is the indication)"
+      },
+      {
+        "key": "two_d_echo_suspicion_of_underlying_heart_defect",
+        "label": "2DECHO – if suspicion of underlying heart defect (Optional if Cardiac rhythm disorders needing intervention is the indication)"
+      },
+      {
+        "key": "chest_x_ray_sepsis",
+        "label": "Chest X-ray (Mandatory if Sepsis with complications is the indication)"
+      },
+      {
+        "key": "septic_screen_sepsis_complications",
+        "label": "Septic screen (Mandatory if Sepsis with complications is the indication)"
+      },
+      {
+        "key": "blood_culture_sepsis",
+        "label": "Blood Culture (Mandatory if Sepsis with complications is the indication)"
+      },
+      {
+        "key": "cerebrospinal_fluid_csf_analysis_meningitis",
+        "label": "Cerebrospinal fluid (CSF) analysis - Meningitis (Based on etiology if Sepsis with complications is the indication)"
+      },
+      {
+        "key": "joint_fluid_analysis_x_ray_usg_infected_part_bone_or_joint_infection",
+        "label": "Joint fluid analysis, X-ray and USG of the infected part - Bone or joint infection (Based on etiology if Sepsis with complications is the indication)"
+      },
+      {
+        "key": "dic_or_shock_coagulation_profile_procalcitonin",
+        "label": "DIC or shock - Coagulation profile, procalcitonin (Based on etiology if Sepsis with complications is the indication)"
+      },
+      {
+        "key": "serum_creatinine_dialysis",
+        "label": "Serum Creatinine (Mandatory if Renal failure requiring dialysis is the indication)"
+      },
+      {
+        "key": "urine_output_dialysis",
+        "label": "Urine Output (Mandatory if Renal failure requiring dialysis is the indication)"
+      },
+      {
+        "key": "blood_urea_dialysis",
+        "label": "Blood urea (Mandatory if Renal failure requiring dialysis is the indication)"
+      },
+      {
+        "key": "serum_electrolytes_dialysis",
+        "label": "Serum electrolytes (Mandatory if Renal failure requiring dialysis is the indication)"
+      },
+      {
+        "key": "arterial_blood_gas_abg_dialysis",
+        "label": "Arterial Blood Gas (ABG) (Mandatory if Renal failure requiring dialysis is the indication)"
+      },
+      {
+        "key": "urine_sodium_dialysis",
+        "label": "Urine Sodium (Mandatory if Renal failure requiring dialysis is the indication)"
+      },
+      {
+        "key": "urine_creatinine_dialysis",
+        "label": "Urine Creatinine (Mandatory if Renal failure requiring dialysis is the indication)"
+      },
+      {
+        "key": "usg_kub_region_renal_doppler",
+        "label": "USG KUB region/Renal doppler (Mandatory if Renal failure requiring dialysis is the indication)"
+      },
+      {
+        "key": "voiding_cysto_urethrography",
+        "label": "Voiding cysto-urethrography (Optional if Renal failure requiring dialysis is the indication)"
+      },
+      {
+        "key": "complete_blood_count_iem",
+        "label": "Complete blood count (neutropenia and thrombocytopenia seen in propionic and methylmalonic acidemia) (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "arterial_blood_gas_electrolytes_iem",
+        "label": "Arterial blood gas and electrolytes (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "blood_glucose_iem",
+        "label": "Blood glucose (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "plasma_ammonia_iem",
+        "label": "Plasma ammonia (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "arterial_blood_lactate_iem",
+        "label": "Arterial blood lactate (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "liver_function_tests_iem",
+        "label": "Liver function tests (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "urine_ketones_iem",
+        "label": "Urine ketones (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "urine_reducing_substances_iem",
+        "label": "Urine reducing substances (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "serum_uric_acid_iem",
+        "label": "Serum uric acid (low in molybdenum cofactor deficiency) (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "gas_chromatography_mass_spectrometry_gcms_of_urine",
+        "label": "Gas chromatography mass spectrometry (GCMS) of urine (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "plasma_amino_acids_acyl_carnitine_profile_tandem_mass_spectrometry_tms",
+        "label": "Plasma amino acids and acyl carnitine profile by tandem mass spectrometry (TMS) (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "high_performance_liquid_chromatography_hplc",
+        "label": "High performance liquid chromatography (HPLC) (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "lactate_pyruvate_ratio",
+        "label": "Lactate/pyruvate ratio: in cases with elevated lactate (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "urinary_orotic_acid",
+        "label": "Urinary orotic acid (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "enzyme_assay",
+        "label": "Enzyme assay (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "mri_iem",
+        "label": "MRI (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "magnetic_resonance_spectroscopy_mrs",
+        "label": "Magnetic resonance spectroscopy (MRS) (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "electroencephalography_eeg_iem",
+        "label": "Electroencephalography (EEG) (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "plasma_very_long_chain_fatty_acid_vlcfa_levels",
+        "label": "Plasma very long chain fatty acid (VLCFA) levels (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "mutation_analysis_when_available",
+        "label": "Mutation analysis when available (Mandatory if Inborn errors of Metabolism is the indication)"
+      },
+      {
+        "key": "csf_amino_acid_analysis",
+        "label": "CSF amino acid analysis (Mandatory if Inborn errors of Metabolism is the indication)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "investigations_reports_if_done",
+        "label": "Investigations reports (if done)"
+      },
+      {
+        "key": "detailed_procedure_notes_and_indication_if_any",
+        "label": "Detailed Procedure notes and indication (if any)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the neonate born at birth weight 1200-1499 grams documented?",
+        "expected": true
+      },
+      {
+        "q": "Was ABG/Chest X-ray with ventilator settings at 24 hours report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did Cord blood analysis / APGAR Score / Need for resuscitation / HIE scoring (sarnat/levene/thompsom) confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the indication for therapeutic hypothermia documented?",
+        "expected": true
+      },
+      {
+        "q": "Was a murmur documented/Electrocardiogram report confirming the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was Electrocardiogram report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did deranged coagulation profile with or without thrombocytopenia/CSF analysis, Aspiration of swelling, USG/X-RAY of the part confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was CSF analysis/Aspiration of swelling, USG/X-ray of the part/coagulation profile/platelet report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Serum creatinine / blood urea elevated?",
+        "expected": true
+      },
+      {
+        "q": "Was the indication of dialysis requirement documented?",
+        "expected": true
+      },
+      {
+        "q": "Did history, clinical evaluation and investigations (Ammonia lactate/Blood sugar with urine ketones/Chest X-ray reports) confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Were Ammonia lactate/Blood sugar with urine ketones/Chest X-ray reports submitted?",
+        "expected": true
+      },
+      {
+        "q": "Documentation of poor feeding/level of consciousness/seizures/h/o IEM in the family/h/o unknown intellectual disability in sibling?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Investigations report (if done) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the indication for procedure documented (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Birth weight not documented within 1200-1499g range, if this is the primary indication.",
+    "ABG/Chest X-ray with ventilator settings at 24 hours report not submitted, if invasive ventilation is the primary indication.",
+    "Indication for therapeutic hypothermia not documented, if HIE is the primary indication.",
+    "Electrocardiogram report not submitted or murmur not documented, if cardiac rhythm disorder is the primary indication.",
+    "Required specific investigation reports (e.g., CSF analysis, coagulation profile, USG/X-ray of affected part, Ammonia lactate, Blood sugar with urine ketones/Chest X-ray reports) not submitted, if relevant complication/condition is the primary indication.",
+    "Indication of dialysis requirement not documented, or Serum creatinine/blood urea not elevated, if renal failure is the primary indication.",
+    "Documentation of poor feeding/level of consciousness/seizures/history of IEM in family/sibling not present, if inborn errors of metabolism is the primary indication."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Babies with birthweight of 1200-1499 g (Prenatal consultation, Parental education, Determining parental wishes when viability is questionable, Defining limits of parental choice; need for caregiver-parent teamwork)",
+      "Delivery room care (Define limits of resuscitative efforts, Respiratory support, Low tidal volume ventilation strategy, Prevention of heat and water loss, Early surfactant therapy)",
+      "Ventilation strategy (Low tidal volume, short inspiratory time, Avoid hyperoxia and hypocapnia, Early surfactant therapy as indicated, Define indications for high-frequency ventilation)",
+      "Fluids (Early use of humidified incubators to limit fluid and heat losses, Judicious use of fluid bolus therapy for hypotension, Careful monitoring of fluid and electrolyte status, Use of double-lumen umbilical venous catheters for fluid support)",
+      "Nutrition (Initiation of parenteral nutrition shortly after birth, Early initiation of trophic feeding with maternal milk, Advancement of feeding density to provide adequate calories for healing and growth)",
+      "Cardiovascular support (Maintenance of blood pressure within standard range, Use of dopamine for support as indicated, Corticosteroids for unresponsive hypotension)",
+      "PDA (Avoidance of excess fluid administration, Consider medical therapy when hemodynamically significant PDA is present, Consider surgical ligation after failed medical therapy)",
+      "Infection control (Scrupulous hand hygiene, use of bedside alcohol gels, Limiting blood drawing, skin punctures, Protocol for CVL insertion and care, minimize dwell time, Minimal entry into CVLs, no use of fluids prepared in NICU)"
+    ],
+    "surgical_options": [
+      "Surgical ligation after failed medical therapy (for PDA)",
+      "Permanent pacemaker implantation (for Complete AV block)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Discuss with cardiac centre +/- Echo by PEC/cardiologist whilst awaiting retrieval (for Significant congenital heart disease, urgent action)"
+    ],
+    "quality_assessment_parameters": [
+      "Retinopathy of prematurity assessment",
+      "Hearing assessment",
+      "Neurodevelopmental assessment",
+      "Kangaroo Mother Care (KMC is mandatory and included in the package rate)"
+    ],
+    "contraindications": [
+      "Peritoneal Dialysis cannot be done in babies with necrotizing enterocolitis",
+      "Peritoneal Dialysis cannot be done in babies who underwent abdominal surgery",
+      "Peritoneal Dialysis cannot be done in babies with severe respiratory compromise as it may worsen with abdominal distension"
+    ]
+  }
+}

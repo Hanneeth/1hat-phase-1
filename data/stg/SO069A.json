@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO069A",
+  "procedure_code": "SO069A",
+  "condition": "Molar pregnancy requiring Chemotherapy",
+  "procedure_name": "Follow up cases of Molar pregnancy requiring chemotherapy",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Follow-up case of Molar pregnancy requiring Chemotherapy_Medco.pdf",
+    "Follow-up case of Molar pregnancy requiring Chemotherapy_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/ Equivalent (OB&GYN)"
+  ],
+  "clinical_indications": [
+    "Patient presents with persistent Vaginal bleeding and elevation of serum beta-hCG levels after uterine evacuation",
+    "History of the following in preceding pregnancy/h/o uterine evacuation of a diagnosed mole/evacuation for missed abortion/other type of pregnancy termination:",
+    "Abnormal vaginal bleeding generally in early pregnancy but in exceptional cases diagnosis could be delayed to later in pregnancy.",
+    "Uterus size large for gestational age",
+    "Pain from large benign theca-lutein cysts",
+    "Vaginal passage of grape-like vesicles",
+    "Exaggerated pregnancy symptoms like hyperemesis",
+    "Hyperthyroidism",
+    "Early preeclampsia",
+    "Pelvic/Abdominal Ultrasound scan showing a vascular or honeycomb appearance / snowstorm appearance of mixed echogenicity & ovaries containing multiple large theca-lutein cysts",
+    "High levels of serum beta-hCG (often exceeding 100,000 IU/L)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "serum beta-hCG levels",
+      "operator": ">",
+      "value": "100,000 IU/L",
+      "note": "often exceeding, indicative of procedure"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes (including history, symptoms, signs, physical examination, B-HCG levels trend, history of molar pregnancy, indication for procedure and advice for admission, and serial number of cycle being administered)"
+      },
+      {
+        "key": "beta_hcg_report_essential",
+        "label": "Investigation report (beta-hCG level) (essential)"
+      },
+      {
+        "key": "usg_abdomen_first_cycle_essential",
+        "label": "USG abdomen (essential for first chemotherapy cycle)"
+      },
+      {
+        "key": "ct_mri_optional",
+        "label": "CT/MRI (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_chemo_drug",
+        "label": "Detailed indoor case papers (clearly indicating the chemotherapy drug administered)"
+      },
+      {
+        "key": "discharge_summary_follow_up_advice",
+        "label": "Discharge summary with follow-up advice"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes all vitals, detailed history, symptoms, signs, physical examination, investigation report B-HCG levels, trend of serum B-HCG levels must be documented, indication for procedure and advice for admission available?",
+        "expected": true
+      },
+      {
+        "q": "Does the clinical note contain serial number of cycle being administered?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers available clearly indicating the chemotherapy drug administered?",
+        "expected": true
+      },
+      {
+        "q": "Is discharge summary available with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient history of molar pregnancy not documented or documented as 'No'.",
+    "Clinical presentation, physical examination, or supporting investigations (high beta-hCG levels) not indicative of the procedure.",
+    "Trend of beta-hCG levels not documented.",
+    "Serial number of chemotherapy cycle not mentioned in clinical notes.",
+    "Indoor case papers do not clearly indicate the chemotherapy drug administered."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facility",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Gestational trophoblastic disease (GTD) is a tumor originating from the trophoblast (abnormal placenta), which surrounds the blastocyst and develops into the chorion and amnion. It is composed of a spectrum of premalignant to malignant disorders. The most common form of GTD is hydatidiform mole, also known as molar pregnancy.",
+      "Follow-up is done to confirm the success of treatment given and to identify women with persistent or malignant GTD, such patients may require adjuvant chemotherapy or rarely surgery.",
+      "The risk of persistent or recurrent GTD is greatest in the first 12 months after evacuation especially within the first 6 months.",
+      "A number of chemotherapy regimens are used for treating the disease, like methotrexate, actinomycin D. The commonest regime is methotrexate with leucovorin. Alternative regimes may use Actinomycin D or multidrug therapy.",
+      "The indications mentioned are more pronounced in complete molar pregnancy and less in partial mole."
+    ],
+    "surgical_options": null,
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "package_usage_notes": "Repeat booking for the same package will be made. The number of times patient will require hospitalization will depend on the trend of Beta-HCG levels. Number of cycles being booked should be clearly mentioned."
+  }
+}

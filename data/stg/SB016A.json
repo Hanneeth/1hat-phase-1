@@ -1,0 +1,110 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB016A",
+  "procedure_code": "SB016A",
+  "condition": "Comminuted Fracture - Olecranon of Ulna / Fracture Head radius / Fracture intercondylar Humerus + olecranon osteotomy",
+  "procedure_name": "Fracture intercondylar Humerus + olecranon osteotomy",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Comminuted Fracture - Ulna, Head radius, intercondylar Humerus_Medco.pdf",
+    "Comminuted Fracture - Ulna, Head radius, intercondylar Humerus_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years' experience"
+  ],
+  "clinical_indications": [
+    "Fixation of an olecranon fracture is indicated if there is extensor mechanism weakness, intra-articular displacement or instability of the ulnahumeral joint.",
+    "Plate and screw fixation in unstable fracture with significant comminution or a fracture line exiting distal to the semilunar notch and fracture-dislocations"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "fracture displacement (Type II olecranon)",
+      "operator": ">=",
+      "value": "3mm",
+      "note": "for Type II fractures of Olecranon of Ulna"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailing_indication",
+        "label": "Clinical notes detailing indication"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      },
+      {
+        "key": "x_ray_labelled_preop",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) - affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "post_procedure_x_ray_labelled",
+        "label": "Post procedure X-ray labelled with patient ID, date and side (Left/Right) - affected part"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice and barcode of implant"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical presentation, X ray report indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical presentation or X-ray report not indicative of the procedure",
+    "Clinical notes detailing indication missing or incomplete",
+    "Clinical photograph of affected part missing",
+    "Pre-operative X-ray missing or not labelled with patient ID, date, and side (Left/Right)",
+    "Indoor case papers missing or incomplete",
+    "Procedure / operation notes missing or incomplete",
+    "Post-procedure X-ray missing or not labelled with patient ID, date, and side (Left/Right)",
+    "Invoice and barcode of implant missing",
+    "Post-procedure clinical photograph missing",
+    "Discharge summary missing or lacking follow-up advice"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": "MS/DNB or Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "The comminuted fractures of Olecranon of Ulna are relatively common injuries in adults.",
+      "These injuries are frequently associated with concomitant elbow injuries, most frequently to the radial head and coronoid.",
+      "Based on fracture comminution, displacement, and stability of the ulna-humeral joint, there are three types of fractures: Type I fractures are nondisplaced. Type II fractures are displaced at least 3mm Type III injuries the fracture is displaced, and the ulna-humeral joint is unstable."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

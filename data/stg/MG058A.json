@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG058A",
+  "procedure_code": "MG058A",
+  "condition": "Diabetic Foot",
+  "procedure_name": "Diabetic Foot",
+  "specialty": "General Medicine",
+  "version": "1.1",
+  "source_files": [
+    "Diabetic Foot_Medco.pdf",
+    "Diabetic Foot_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "To obtain wound healing and closure as early as possible in patients with Diabetic Foot Disease",
+    "To achieve complete remission and non-recurrence to lower the chances of amputations in patients with DFD"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_eval_findings_indications_plan",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "complete_blood_count_glucose_hba1c_report",
+        "label": "Complete Blood count, Blood glucose level, HbA1C Report"
+      },
+      {
+        "key": "photograph_affected_foot",
+        "label": "Photograph of affected foot"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor Case papers along with treatment details"
+      },
+      {
+        "key": "post_treatment_glucose_level",
+        "label": "Post treatment glucose level"
+      },
+      {
+        "key": "post_treatment_photograph_affected_foot",
+        "label": "Post treatment photograph of affected foot"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Complete Blood count, blood glucose, HbA1C report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the photograph of affected foot submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the pre and post treatment photograph of affected foot suggestive of Diabetic foot?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor Case Papers with Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post treatment blood glucose submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post treatment photograph of affected foot submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Pre-treatment photograph of affected foot missing or not suggestive of Diabetic Foot.",
+    "Post-treatment photograph of affected foot missing or not suggestive of Diabetic Foot.",
+    "Clinical notes missing, incomplete, or lacking evaluation findings, indications, or planned treatment.",
+    "Complete Blood count, Blood glucose level, or HbA1C Report missing or incomplete at pre-authorization.",
+    "Detailed Indoor Case papers with treatment details missing or incomplete at claim submission.",
+    "Post-treatment glucose level not submitted at claim submission.",
+    "Detailed Discharge Summary missing or lacking date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "DNB/MS/MD/DM or equivalent (in General Medicine/Endocrinology/General surgery)",
+    "clinical_key_pointers": [
+      "Identification of historical and/or physical findings of Diabetic Foot can improve the prognosis and lead to a favourable outcome through appropriate treatment and early referral.",
+      "Early detection and effective management of diabetic foot ulcers can reduce complications, including preventable amputations and possible mortality.",
+      "A thorough patient examination is required, covering general history, neuropathic and peripheral vascular symptoms, smoking history, general physical examination (height, weight), and detailed foot examination (skin, neurological, vascular, musculoskeletal, and footwear).",
+      "The tuning fork and monofilament tests are important in diagnosing loss of protective sensation (LOPS)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Glycaemic control: Aim to maintain blood glucose between 140 and 180 mg/dl, individualized glycaemic targets, and HbA1c monitoring at least twice a year. Diet, exercise, and education form the foundation of T2DM therapy.\nInfection management: Use of appropriate antimicrobial therapy based on wound category, with specialist advice. May include agents against Gram-positive cocci (e.g., MRSA) and anti-anaerobic agents based on culture and sensitivity.",
+    "referral_criteria": "Referral to appropriate level of care as required for treatment under PMJAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

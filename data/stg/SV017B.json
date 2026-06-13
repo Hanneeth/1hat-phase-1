@@ -1,0 +1,140 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code. Note: Provided file names 'Aortic root replacement surgery_Medco.pdf' and 'Aortic root replacement surgery_PPD.CPD.pdf' are inconsistent with the document content which is for 'Aortoiliac Occlusive Disease'. Data is extracted based on document content.",
+  "stg_id": "SV017B",
+  "procedure_code": "SV017B",
+  "condition": "Aortoiliac Occlusive Disease",
+  "procedure_name": "Aorto femoral bypass - U/L",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Aortic root replacement surgery_Medco.pdf",
+    "Aortic root replacement surgery_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/Equivalent (in Cardiothoracic & Vascular Surgery; Vascular Surgery)"
+  ],
+  "clinical_indications": [
+    "Chronic limb-threatening ischemia (CLTI), characterized by pain with rest, presence of gangrene, or lower limb ulceration for greater than two weeks in the setting of peripheral artery disease, requiring urgent intervention to prevent further necrosis and formation of gangrene."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication of graft requirement, and planned line of management"
+      },
+      {
+        "key": "duplex_ultrasonography",
+        "label": "Duplex ultrasonography"
+      },
+      {
+        "key": "ankle_brachial_index_test",
+        "label": "Ankle-brachial index (ABI) test"
+      },
+      {
+        "key": "mr_ct_angiography",
+        "label": "MR/CT Angiography"
+      },
+      {
+        "key": "prothrombin_time_aptt_platelet_count_optional",
+        "label": "Prothrombin time (PT), Activated partial thromboplastin time (aPTT), and Platelet count (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "post_operative_duplex_ultrasound",
+        "label": "Post-operative Duplex Ultrasound"
+      },
+      {
+        "key": "graft_details_barcode_invoice",
+        "label": "Graft details - barcode/invoice (if artificial graft used)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Duplex ultrasound/CT/MR Angiogram report suggestive of Aortoiliac occlusive disease?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation, severity, and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation, severity, and imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are incomplete or missing vital information regarding history, symptoms, signs, physical examination, indication for procedure, planned treatment, or admission advice.",
+    "Duplex ultrasound, CT, or MR angiogram report is not suggestive of Aortoiliac occlusive disease.",
+    "Detailed Indoor Case Papers (ICPs) are missing or lack daily vitals and treatment details.",
+    "Graft details (barcode/invoice) are missing if an artificial graft was used.",
+    "Imaging documentation was not indicative of surgery.",
+    "Clinical presentation or severity was not indicative of surgery."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Aortoiliac occlusive disease (AIOD) is a variant of peripheral artery disease affecting the infrarenal aorta and iliac arteries. In the same manner as peripheral artery disease, AIOD is typically caused by atherosclerosis.",
+      "The presentation of AOID can range from asymptomatic to limb-threatening emergencies.",
+      "Patients are commonly seen with complaints of cramping pain, occurring during and after exercise and relieved by rest. This condition is known as claudication.",
+      "Leriche syndrome comprises chronic, lower extremity ischemia resulting from aortoiliac obstruction that is characterized by intermittent buttock claudication, absent femoral pulses, and sexual impotence.",
+      "Patients may present on an emergent visit due to sequelae of severe stenosis or an acute embolic event, causing chronic limb-threatening ischemia.",
+      "The diagnostic criteria for chronic limb-threatening ischemia (CLTI) are pain with rest, presence of gangrene, or lower limb ulceration for greater than two weeks in the setting of peripheral artery disease.",
+      "A detailed history and physical examination are vital to determine the severity of the disease and distinguish it from other diagnoses.",
+      "Ankle-brachial index (ABI) is generally the first screening test for the diagnosis of arterial diseases. An index of less than 0.9 is indicative of arterial disease.",
+      "Duplex ultrasonography is the initial screening tool. Computed tomography (CT) angiogram or Magnetic Resonance angiogram is used for anatomic delineation.",
+      "Blood testing should also be obtained to identify underlying risk factors. Lipid profile, HbA1c, lipoprotein A, and serum homocysteine levels may identify the etiology.",
+      "In the setting of thrombosis, past or present, prothrombin time (PT), activated partial thromboplastin time (aPTT), and platelet count should be obtained.",
+      "Onset and presenting severity dictate the treatment and management of AIOD.",
+      "Diagnosis of chronic limb-threatening ischemia (CLTI) needs urgent intervention to prevent further necrosis and formation of gangrene.",
+      "Patient risk, limb staging, and anatomic pattern (PLAN) can assist in the staging of disease.",
+      "Complications of untreated AOID include weakness, fatigue, impotence, and sexual dysfunction as a result of decreased blood flow.",
+      "Heart failure, myocardial infarction, gangrene, and amputation are also increased in unmanaged AOID.",
+      "Surgical and endovascular treatment risks include thrombosis of the graft, wound infection, bleeding, and complications from anesthesia."
+    ],
+    "surgical_options": [
+      "Aortoiliac bypass",
+      "Aortobifemoral bypass (AFB)",
+      "Axillo-femoral bypass graft",
+      "Percutaneous transluminal angioplasty (PTA), which can be with or without stent placement",
+      "Thromboendarterectomy (TEA)",
+      "Open surgical revascularization bypasses the area of stenosis or occlusion through the use of a vascular conduit."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

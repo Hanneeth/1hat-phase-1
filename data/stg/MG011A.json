@@ -1,0 +1,112 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG011A",
+  "procedure_code": "MG011A",
+  "condition": "Diarrhoea",
+  "procedure_name": "Dysentery",
+  "specialty": "General Medicine/ Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Diarrohea_Medco.pdf",
+    "Diarrohea_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "> 3 days of watery stool per day",
+    "Dysentery - blood in stools",
+    "Pain in Abdomen / Abdominal cramps",
+    "Bloating",
+    "Fever (+/-)",
+    "Bloody stool in case of Dysentery"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "duration",
+      "operator": ">",
+      "value": "3 days",
+      "note": "of watery stool per day"
+    },
+    {
+      "field": "blood_in_stool",
+      "operator": "=",
+      "value": "present",
+      "note": "for dysentery diagnosis"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_indications",
+        "label": "Clinical notes with indications"
+      },
+      {
+        "key": "planned_line_of_management",
+        "label": "Planned line of management"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the degree of Dehydration mentioned in clinical notes?",
+        "expected": false
+      },
+      {
+        "q": "Was the duration of diarrhoea mentioned?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Stool examination report submitted?",
+        "expected": false
+      },
+      {
+        "q": "Is the discharge summary available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Duration of diarrhoea not mentioned for Dysentery during pre-authorization",
+    "Evidence of blood in stool not found in clinical notes or history for Dysentery",
+    "Clinical notes with indications missing at pre-authorization stage",
+    "Planned line of management missing at pre-authorization stage",
+    "Discharge summary not available at claim stage",
+    "Indoor case papers missing at claim stage"
+  ],
+  "additional_information": {
+    "icd_10_code": "R19.7",
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/ DNB/ equivalent (Medicine/ Pediatrics)",
+    "clinical_key_pointers": [
+      "> 3 days of watery stool per day",
+      "Acute Diarrhoea < 14 days, Chronic Diarrhoea >28 days",
+      "Pain in Abdomen / Abdominal cramps",
+      "Bloating",
+      "Fever (+/-)",
+      "Bloody stool in case of Dysentery"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Severe malnutrition/HIV; Severe dehydration; Hypernatremic (Na >145 mmol/L)/hyponatremic dehydration (Na <135 mmol/L); Dysentery with age <1 yr/ measles in past 6 weeks/dehydration/sick; Dysentery with no improvement on antibiotics; Persistent diarrhea with dehydration; Persistent diarrhea with serious systemic infection such as pneumonia, sepsis, infants <4 months of age, or when there is no improvement with treatment over 5 days; Urgent referral to hospital (for severe dehydration); Mother to continue rehydration by giving frequent sips of ORS during transport or use NG tube when possible in patients with poor drinking",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

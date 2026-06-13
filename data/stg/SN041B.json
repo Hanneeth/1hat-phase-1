@@ -1,0 +1,171 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN041B",
+  "procedure_code": "SN041B",
+  "condition": "Extradural Spinal Tumors",
+  "procedure_name": "Spine - Extradural Tumor with fixation",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Extradural Spinal Tumors_Medco.pdf",
+    "Extradural Spinal Tumors_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Neurosurgery)",
+    "MS/DNB/Equivalent (in Orthopedics)"
+  ],
+  "clinical_indications": [
+    "Extradural tumors causing spinal cord compression by epidural growth, extrinsic spinal cord compression, cauda equina compression, or intradural invasion.",
+    "Symptoms including pain (nonspecific, local, progressive, increasing at night), radicular pain, paraesthesia, limb paresis, spinal deformity, bowel/bladder disturbance.",
+    "In children, red flag symptoms like limp, fever, bruising.",
+    "Signs including spinal tenderness, spine deformity - sensory disturbance, limb weakness, or other myelopathy features.",
+    "Indication for spinal fixation, often due to instability caused by the tumor or surgical intervention (e.g., Hemangioma in case of instability)."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings",
+        "label": "Clinical notes including evaluation findings"
+      },
+      {
+        "key": "etiology_ct_mri_brain_spine",
+        "label": "CT/MRI Brain/Spine (Based on Etiology)"
+      },
+      {
+        "key": "etiology_pet_scan",
+        "label": "Positron emission tomography (PET) scan (Based on Etiology)"
+      },
+      {
+        "key": "etiology_chest_xray",
+        "label": "Chest X-ray (Based on Etiology)"
+      },
+      {
+        "key": "etiology_mammography",
+        "label": "Mammography (Based on Etiology)"
+      },
+      {
+        "key": "etiology_ultrasound_abdomen",
+        "label": "Ultrasound of abdomen (Based on Etiology)"
+      },
+      {
+        "key": "etiology_bone_scan",
+        "label": "Bone scan (Based on Etiology)"
+      },
+      {
+        "key": "etiology_ct_mri_other_regions_if_symptomatic",
+        "label": "CT/MRI of other regions if symptomatic (Based on Etiology)"
+      },
+      {
+        "key": "indication_of_implant_requirement",
+        "label": "Indication of implant requirement"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "post_op_ct_spine",
+        "label": "Post-op CT Spine"
+      },
+      {
+        "key": "implant_details_barcode_invoice",
+        "label": "Implant details (barcode/invoice)"
+      },
+      {
+        "key": "histopathological_biopsy_report",
+        "label": "Histopathological/Biopsy report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did history, physical examination, and radiological investigations confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was post-op CT Spine report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Implant details (invoice/barcode) if applicable",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, grading, or radiological investigations not indicative of surgery.",
+    "Indication for implant not clearly documented at pre-authorization.",
+    "Missing implant details (barcode/invoice) at claim stage.",
+    "Missing/incomplete radiological investigations (CT/MRI, PET, X-ray, Bone scan) for etiology at pre-authorization.",
+    "Histopathological/Biopsy report not submitted at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Extradural tumors are usually metastatic and most often arise in the vertebral bodies.",
+      "Metastatic lesions can cause spinal cord compression either by epidural growth that results in extrinsic spinal cord or cauda equina compression or, less frequently, by intradural invasion.",
+      "The most common tumors arising in the extradural space are metastases.",
+      "Several uncommon primary tumors can also arise in the extradural space."
+    ],
+    "surgical_options": [
+      "Hemangioma: Surgical resection and stabilization (if unstable)",
+      "Osteoid Osteoma: Surgery (Burr down excision or marginal resection) for pain relief, NSAID contraindication, or progressive deformity",
+      "Osteoblastoma: Surgical resection",
+      "Giant cell tumor: Enbloc resection +/- Embolization",
+      "Chondroblastoma: Curettage or excision",
+      "Malignant Primary Spine Tumours: Wide or marginal excision, surgical excision, en bloc excision (depending on tumor type) often combined with radiotherapy/chemotherapy/proton beam therapy"
+    ],
+    "pre_op_preparation": "Surgical fitness work-up including CBC, LFT, RFT, BT, CT, PT, INR, Serum Electrolytes, HIV, HBsAG, HCV etc.; Radiological investigation including X-ray, CT scan for bone details, MRI scan with contrast, Bone scan; Metastasis workup including Chest X-ray, Mammography, Ultrasound of abdomen, Blood tests -PSA, CT/MRI of other regions if symptomatic; Biopsy (for initial assessment or if surgery is not anticipated), CT/C-arm guided biopsy.",
+    "post_op_care": null,
+    "fitness_criteria": "Surgical fitness work-up required for assessment.",
+    "comorbidity_management": null,
+    "referral_criteria": "Clinicians are guided to decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

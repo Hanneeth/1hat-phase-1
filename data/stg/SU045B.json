@@ -1,0 +1,97 @@
+{
+  "_comment": "One file per procedure_code. Distilled from Augmentation cystoplasty_Medco.pdf (clinical + mandatory docs) and Augmentation cystoplasty_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "SU045B",
+  "procedure_code": "SU045B",
+  "condition": "Augmentation cystoplasty",
+  "procedure_name": "Augmentation cystoplasty",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Augmentation cystoplasty_Medco.pdf",
+    "Augmentation cystoplasty_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [],
+  "clinical_indications": [
+    "Lack of adequate bladder capacity or detrusor compliance",
+    "Neuropathic causes (e.g., Spinal cord injuries, multiple sclerosis)",
+    "Non-neuropathic causes (e.g., Detrusor instability, chronic cystitis including Tuberculosis and schistosomiasis, Interstitial cystitis)",
+    "Neurogenic bladder with congenital anomalies",
+    "Inability to hold urine",
+    "Spasticity (stiffness) of the bladder",
+    "Shrinking of the bladder caused by any treatments"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_eval_plan",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "ivp_ctivp_mri_cystogram",
+        "label": "Intravenous pyelogram (IVP) /CT IVP/MRI, Cystogram"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_daily_vitals_treatment_details",
+        "label": "Indoor case papers with daily vitals and treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "intraoperative_still_images_post_procedure_imaging",
+        "label": "Intraoperative still images/ Post procedure Imaging"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Intravenous pyelogram (IVP) /CT IVP/MRI, Cystogram report suggestive for the need of procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical notes and cystogram indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the Intra-operative still images/Post-procedure Images suggestive of the procedure done?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and cystogram not indicative of the procedure.",
+    "Intravenous pyelogram (IVP) /CT IVP/MRI, Cystogram report not suggestive of the need for the procedure.",
+    "Intra-operative still images/Post-procedure Images not clearly showing the procedure performed.",
+    "Lack of adequate bladder capacity or detrusor compliance not documented as per clinical indications.",
+    "Clinical manifestations (inability to hold urine, spasticity, shrinking bladder) not documented to support diagnosis."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MCh/DNB equivalent (in Urology/Pediatric surgery)",
+    "clinical_key_pointers": [
+      "is a surgery used in patients with lack of adequate bladder capacity or detrusor compliance.",
+      "This procedure provides a safe, functional reservoir that allows for urinary continence and prevention of upper tract deterioration."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

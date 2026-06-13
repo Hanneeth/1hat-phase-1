@@ -1,0 +1,143 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO059B",
+  "procedure_code": "SO059B",
+  "condition": "Vulvo vaginal Cyst",
+  "procedure_name": "Vulvo vaginal Cyst Drainage",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Vulvo vaginal Cyst_Medco.pdf",
+    "Vulvo vaginal Cyst_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MBBS with relevant experience and training"
+  ],
+  "clinical_indications": [
+    "Infected large cysts",
+    "First episode of an acute abscess",
+    "Provide immediate relief prior to scheduling an enucleation procedure"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed clinical notes with history, symptoms, signs, examination findings, indication for procedure and advice for admission"
+      },
+      {
+        "key": "cbc_cue",
+        "label": "Complete blood count (CBC), Complete urine examination (CUE)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      },
+      {
+        "key": "optional_fluid_for_culture_sensitivity_gram_staining",
+        "label": "(Optional) If cyst was aspirated earlier, fluid for: culture & sensitivity, Gram staining"
+      },
+      {
+        "key": "optional_mri_for_huge_cyst",
+        "label": "(Optional) MRI (in case of huge cyst to assess the extent)"
+      },
+      {
+        "key": "optional_blood_glucose",
+        "label": "(Optional) Blood glucose"
+      },
+      {
+        "key": "optional_usg_of_affected_part",
+        "label": "(Optional) USG of the affected part"
+      },
+      {
+        "key": "optional_c_reactive_protein_crp",
+        "label": "(Optional) C-reactive protein (CRP)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative/ procedure notes"
+      },
+      {
+        "key": "investigation_report_if_required",
+        "label": "Investigation report (if required)"
+      },
+      {
+        "key": "culture_sensitivity_aspirated_fluid",
+        "label": "Culture & sensitivity report of aspirated fluid"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical examination ± imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical examination indicative of procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was Histopathology report for enucleated tissue / Culture & sensitivity report of aspirated fluid submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient did not present with fever, foul smelling, or pus discharge from the cyst, despite drainage being claimed.",
+    "Patient did not present with fever (no pus discharge) with fluctuant tense tender swelling, despite drainage being claimed.",
+    "Mandatory clinical notes and admission details are missing or incomplete at pre-authorization.",
+    "Diagnosis not confirmed by clinical examination or imaging at pre-authorization.",
+    "Culture and sensitivity report of aspirated fluid is missing or inadequate at claim submission.",
+    "Detailed operative/procedure notes are missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre with Anesthetist and Anesthesia facility",
+    "min_doctor_qualification_desirable": "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)",
+    "clinical_key_pointers": [
+      "Clinical and histologic overlap with cysts found in the vulva and vagina, with common vulvar cysts including Bartholin's gland cysts, epidermal inclusion cysts, and mucous cysts of the vulva."
+    ],
+    "surgical_options": [
+      "Marsupialization",
+      "Enucleation",
+      "Drainage"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

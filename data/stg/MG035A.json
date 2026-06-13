@@ -1,0 +1,103 @@
+{
+  "_comment": "This package MG035A also covers HBP 1.0 codes: M100060, M200081, M200089.",
+  "stg_id": "MG035A",
+  "procedure_code": "MG035A",
+  "condition": "Acute Transverse Myelitis",
+  "procedure_name": "Acute transverse myelitis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Acute Transverse Myelitis_Medco.pdf",
+    "Acute Transverse Myelitis_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [],
+  "clinical_indications": [
+    "Transverse myelitis (TM) is an inflammatory condition across the spinal cord, along one or more levels and in the absence of compression.",
+    "Patient presenting acutely with weakness, sensory impairments, or bowel and bladder changes."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indications_treatment_plan",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "hemogram",
+        "label": "Hemogram"
+      },
+      {
+        "key": "biochemistry",
+        "label": "Biochemistry"
+      },
+      {
+        "key": "mri_ct_spinal_cord_report",
+        "label": "MRI/CT Spinal cord"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_given",
+        "label": "Detailed Indoor case papers with treatment given"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the following investigation reports submitted? a. Hemogram b. Biochemistry c. MRI/CT Spinal cord",
+        "expected": true
+      },
+      {
+        "q": "Were the following imaging report submitted? a. MRI/CT Spinal cord",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor case papers with vital (BP and Pulse) and Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient history and examination notes not suggestive of episode of lesion of spinal cord/myelopathy.",
+    "Clinical Notes (including evaluation findings, indications, or planned line of treatment) not submitted or incomplete.",
+    "Hemogram or Biochemistry reports not submitted.",
+    "MRI/CT Spinal cord imaging report not submitted.",
+    "Detailed Indoor case papers (including vitals or treatment details) not submitted or incomplete.",
+    "Detailed Discharge Summary (or date of follow-up) not submitted or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "DNB / MD or equivalent in(General Medicine / Pediatric Medicine). DM/DNB in Neurology",
+    "clinical_key_pointers": [
+      "Transverse myelitis (TM) is an inflammatory condition across the spinal cord, along one or more levels and in the absence of compression. Idiopathic acute TM is rare and with improvements in diagnostic tools and longer follow-up, the etiology which may include post-infectious, multiple sclerosis, or neuromyelitis optica often becomes clearer. The patient may present acutely with weakness, sensory impairments, or bowel and bladder changes. A careful history, physical examination, and appropriate diagnostic studies including blood tests and an MRI scan may help determine the diagnosis and etiology. Following the acute management, which may include use of steroids, immunosuppressive drugs, and plasma exchange, a comprehensive medical rehabilitation program is important to optimize recovery from the resultant impairments and disabilities and manage associated complications. Complications such as paralysis, autonomic dysfunction, neuropathic and musculoskeletal pain, spasticity, contractures, neurogenic bladder and bowels, skin breakdown, and psychological issues will benefit from the expertise of the physiatrist.",
+      "Patients with TM may present in the ambulatory clinic, urgent care center, or hospital setting with complaints of weakness of the limbs, sensory impairments, pain, and difficulties with the bowel and bladder. Weakness may affect only the lower limbs or all four limbs with varying severity. It may be complete, incomplete, or may present as one of the spinal cord syndromes. The clinical spinal level usually corresponds to the lesion, but lower limb findings do not preclude a lesion at the cervical level. Sensory complaints may include hypersensitivity, numbness, tingling, coldness, burning, or as a circumferential constriction. Pain is a common symptom in one third to one half of patients and may be central or localized, aching or radicular in character. Bowel frequency or constipation may occur, and bladder symptoms include increased frequency, retention, and incontinence.",
+      "The physical examination should be broadly systemic as well as focused on neurological findings such as motor weakness, changes in sensation (pinprick, light touch, vibration, position sense, or temperature), tone, muscle stretch reflexes, coordination, and bowel and bladder functioning. Changes affecting the brain, such as cognitive dysfunction and cranial nerve and visual abnormalities, are generally not seen with idiopathic TM. Fever, tachycardia, and tachypnea may indicate an infectious etiology. Infections, autoimmune, and other conditions that cause acute inflammation of the spinal cord may also manifest in the other body systems. Respiratory, cardiovascular, gastrointestinal, and genitourinary tracts as well as the musculoskeletal and integumentary systems should be assessed accordingly. The findings will assist in determining the level of spinal involvement, guide diagnostic testing, and help rule out other diagnoses.",
+      "Several anti-inflammatory drugs have been tried for TM without clear success. Although there is insufficient evidence for corticosteroid efficacy, intravenous methylprednisolone is often used to prevent further damage to the spinal cord as a result of swelling. During the acute phase, it may lead to faster recovery and less disability, and is well tolerated. Cyclophosphamide exerts an immunosuppressive and immunomodulatory effect through suppression of cell-mediated and humoral immunity (on the T cells and B cells). Cyclophosphamide together with methylprednisolone may help in lupus-related TM. However, there appears to be an absence of any beneficial effect of immunosuppressive drugs (cyclophosphamide, azathioprine, intravenous immune globulin) in patients with idiopathic acute TM. Plasma exchange to remove autoreactive antibodies and other toxic molecules from plasma may be effective with a good clinical response, especially within 20 days of onset and when nonresponsive to high-dose corticosteroids. The monoclonal antibody rituximab can be effective in decreasing relapses in TM due to NMO."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

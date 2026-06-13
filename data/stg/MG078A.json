@@ -1,0 +1,129 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG078A",
+  "procedure_code": "MG078A",
+  "condition": "Alcoholic Liver Disease",
+  "procedure_name": "Alcoholic Liver Disease",
+  "specialty": "General Medicine",
+  "version": "1.1",
+  "source_files": [
+    "Alcoholic Liver Disease_Medco.pdf",
+    "Alcoholic Liver Disease_PPD.CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "MBBS",
+    "DNB equivalent in General Medicine",
+    "MD equivalent in General Medicine"
+  ],
+  "clinical_indications": [
+    "Liver function tests (LFT)",
+    "Prothrombin time (PT)",
+    "Serum albumin",
+    "Serum electrolytes",
+    "Imaging Test (USG, CT Scan and MRI Scan) if advanced ARLD suggested by symptoms or LFT",
+    "Liver Biopsy if advanced ARLD suggested by symptoms or LFT",
+    "Endoscopy to check for varices if advanced ARLD suggested by symptoms or LFT"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_alcohol_history_vitals_examination",
+        "label": "Clinical notes detailing history of alcohol consumption and admission notes showing vitals and examination findings."
+      },
+      {
+        "key": "investigation_reports_diagnosis_lft_pt_serum_albumin_electrolytes",
+        "label": "Investigation reports establishing diagnosis - LFT/ Prothrombin time/ Serum albumin/ Serum electrolytes"
+      },
+      {
+        "key": "other_relevant_investigations_usg_ct_mri_liver_biopsy_endoscopy",
+        "label": "Other relevant investigations of USG/CT/MRI/Liver Biopsy/Endoscopy (if required)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers (ICPs)"
+      },
+      {
+        "key": "treatment_details",
+        "label": "Treatment details"
+      },
+      {
+        "key": "investigations_reports_lft_pt_serum_albumin_electrolytes_claim",
+        "label": "Investigations reports (LFT/ Prothrombin time/ Serum albumin/ Serum electrolytes)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailing history of alcohol consumption and Admission notes showing vitals and examination findings.",
+        "expected": true
+      },
+      {
+        "q": "Were the investigation reports establishing diagnosis - LFT/ Prothrombin time/ Serum albumin/ Serum electrolytes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the other investigations USG/CT/MRI/Liver Biopsy/Endoscopy if required are submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the investigations reports LFT/ Prothrombin time/ Serum albumin/Serum electrolytes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is a detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's history and investigation not suggestive of the Alcoholic Liver Disease diagnosis.",
+    "Clinical notes detailing history of alcohol consumption, admission notes, vitals, or examination findings are missing or incomplete at pre-authorization.",
+    "Mandatory investigation reports (LFT, Prothrombin time, Serum albumin, Serum electrolytes) are missing or incomplete at pre-authorization.",
+    "Other relevant investigations (USG, CT, MRI, Liver Biopsy, Endoscopy) are missing or incomplete when required for pre-authorization.",
+    "Detailed indoor case papers (ICPs) are missing or incomplete at claim submission.",
+    "Treatment details are missing or incomplete at claim submission.",
+    "Detailed discharge summary is missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Care Facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Alcohol-related liver disease (ARLD) refers to liver damage caused by excess alcohol intake.",
+      "There are several stages of severity and a range of associated symptoms.",
+      "There are 3 main stages of ARLD:",
+      "  - Alcoholic fatty liver disease: build-up of fats in the liver causing alcoholic fatty liver disease. First stage of ARLD. Rarely causes symptoms, but is an important warning sign.",
+      "  - Alcoholic hepatitis: Characterized by recent onset of jaundice with or without other signs of liver decompensation (i.e. ascites and/or encephalopathy) in patients with ongoing alcohol abuse.",
+      "  - Cirrhosis: Stage of ARLD where the liver has become significantly scarred and considered as the final stage of this disease.",
+      "ARLD does not usually cause any symptoms until the liver has been severely damaged.",
+      "When severe, symptoms can include: Feeling sick, Weight loss, Loss of appetite, Yellowing of the eyes and skin (jaundice), Swelling in the ankles and tummy, Confusion or drowsiness, Vomiting blood or passing blood in your stools."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

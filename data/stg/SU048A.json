@@ -1,0 +1,125 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU048A",
+  "procedure_code": "SU048A",
+  "condition": "Bladder Diverticulectomy",
+  "procedure_name": "Open bladder diverticulectomy with / without ureteric re-implantation",
+  "specialty": "Urology / Pediatric surgery",
+  "version": "1.1",
+  "source_files": [
+    "Bladder Diverticulectomy_Medco.pdf",
+    "Bladder Diverticulectomy_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Urinary tract infections",
+    "Bladder stones",
+    "Urine flowing backwards into the kidneys (\"reflux\")",
+    "Bladder tumors",
+    "Trouble peeing"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "imaging_report_diverticula",
+        "label": "USG / CT/MRI/MCU showing diverticula report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers with treatment given"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative/procedure notes"
+      },
+      {
+        "key": "intraoperative_clinical_photograph",
+        "label": "Intraoperative clinical photograph"
+      },
+      {
+        "key": "post_operative_usg_abdomen_report",
+        "label": "Post-operative USG abdomen report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG / CT /MRI abdomen/MCU report showing diverticula submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Discharge Summary of last admission for Bladder diverticulectomy surgery submitted?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the indoor case papers and treatment given detail submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the detailed procedure/operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were Intraoperative clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post-operative USG abdomen report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the current visit clinical notes with evaluation findings submitted?",
+        "expected": false
+      },
+      {
+        "q": "Was the Detailed Discharge Summary with all the details submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "USG / MRI / CT scan report not suggestive of need for Bladder diverticulectomy.",
+    "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission missing or incomplete at pre-authorization.",
+    "USG / CT/MRI/MCU report showing diverticula missing at pre-authorization.",
+    "Detailed operative/procedure notes missing or incomplete at claim submission.",
+    "Intraoperative clinical photograph missing at claim submission.",
+    "Detailed Discharge Summary missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Bladder Diverticulectomy only if diagnosis made is backed by clinical manifestation:"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

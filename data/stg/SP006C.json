@@ -1,0 +1,98 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SP006C",
+  "procedure_code": "SP006C",
+  "condition": "Disfigurement following congenital deformity",
+  "procedure_name": "Tissue Expander for disfigurement following congenital deformity",
+  "specialty": "Plastic & Reconstructive Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Tissue Expander for disfigurement_Medco.pdf",
+    "Tissue Expander for disfigurement_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MCh - Plastic Surgery",
+    "DNB - Plastic Surgery",
+    "MCh - Reconstructive Surgery",
+    "DNB - Reconstructive Surgery"
+  ],
+  "clinical_indications": [
+    "Burns, Injuries (for disfigurement)",
+    "Breast reconstruction (for disfigurement)",
+    "Treatment of male pattern baldness (in face, head, and neck)",
+    "Reconstruction of contralateral defects of the forehead and nose using unilateral forehead flaps",
+    "Management of neck contractures with flaps developed with an implant in the supra platysmal plane",
+    "Correction of congenital microtia (using tissue expanders for local skin coverage over cartilaginous graft framework)",
+    "Cleft lip repair"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_original_event",
+        "label": "Detailed clinical notes of original clinical event having led to disfigurement or confirming details/ Investigations of congenital event"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical Photograph of the affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "invoice_barcode_expander",
+        "label": "Invoice/barcode of the expander used"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_affected_part",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes of original clinical event having led to disfigurement details indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes of original clinical event are not indicative of the procedure or are incomplete.",
+    "Clinical photograph of the affected part is missing or unclear at pre-authorization.",
+    "Invoice or barcode of the expander used is missing at claim submission.",
+    "Post-procedure clinical photograph of the affected part is missing or unclear at claim submission.",
+    "Detailed procedure or operative notes are missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "alos_clarification": "Patient will require admission and operation twice ALOS for one admission-5 days",
+    "procedure_description": "Tissue expansion involves the phenomenon of skin and soft tissue expansion, as seen in pregnancy, slow-growing tumors, and fluid collections, where local tissue expands in response to tension. It provides skin with a near-perfect match in color and texture, minimal donor site morbidity, and scarring. It can be used in various parts of the body to provide sensory function or adnexal characteristics to tissues. Expanders are silicone envelopes with self-sealing injection ports, into which saline is progressively injected at weekly intervals to enlarge the expander and increase tension on overlying and adjacent tissues. Skin expansion allows generation of additional precious tissue, thinning the flap, and increasing its vascularity. Surgeons have multiple shapes and sizes of implants available, with selection often based on the pocket achieved during dissection, estimated preoperatively with BMI, breast shape/position, and physical examination."
+  }
+}

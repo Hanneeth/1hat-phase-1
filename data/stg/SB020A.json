@@ -1,0 +1,102 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB020A",
+  "procedure_code": "SB020A",
+  "condition": "Ankle Fractures",
+  "procedure_name": "Open Reduction Internal Fixation",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Ankle Fracture_Medco.pdf",
+    "Ankle Fracture_PPD.CPD.pdf"
+  ],
+  "alos": "5days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "To restore and maintain stability and alignment of the joint, if possible, with normal anatomy of the ankle mortise.",
+    "Optimize functional recovery and prevent post-traumatic arthritis.",
+    "If treating an ankle fracture with surgery, consider operating on the day of injury or the next day."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_indication_surgery",
+        "label": "Clinical notes with indication for surgery"
+      },
+      {
+        "key": "xray_labelled_affected_limb",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) - affected limb."
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "post_op_xray_labelled_affected_part",
+        "label": "Post op X-ray is labelled with patient ID, date and side (Left/Right) showing affected part."
+      },
+      {
+        "key": "barcode_invoice_implant_optional",
+        "label": "Barcode/Invoice of implant (Optional)"
+      },
+      {
+        "key": "detailed_operative_note",
+        "label": "Detailed operative note"
+      },
+      {
+        "key": "discharge_summary_followup_advice",
+        "label": "Discharge Summary including follow up advice"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Does the Post-op X-ray / CT of Ankle shows the presence of implant?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Post-op X-ray / CT of Ankle does not show the presence of implant.",
+    "Pre-authorization clinical notes are missing or do not clearly state the indication for surgery.",
+    "Pre-authorization X-ray is missing or not correctly labelled with patient ID, date, or side (Left/Right) for the affected limb.",
+    "Clinical photograph of affected part (pre-auth) is missing or unclear.",
+    "Post-procedure clinical photograph is missing or unclear.",
+    "Post-op X-ray is missing or not correctly labelled with patient ID, date, or side (Left/Right) for the affected part.",
+    "Detailed operative note is missing or lacks sufficient detail on surgical steps or implant details.",
+    "Discharge Summary is missing or does not include follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB in Orthopedics",
+    "clinical_key_pointers": [
+      "History of inversion injury",
+      "Pain, swelling, deformity of the ankle.",
+      "Movements are decreased.",
+      "Drawer's test, inversion and eversion stress tests may be positive.",
+      "Note the color and condition of the skin.",
+      "Examine the entire leg.",
+      "Skin integrity, assessment of circulation and sensation, should be precisely documented at presentation."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

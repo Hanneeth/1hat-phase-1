@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV0031",
+  "procedure_code": "SV0031",
+  "condition": "Supravalvular Aortic Stenosis",
+  "procedure_name": "Surgical Correction of Supravalvular AS repair (Category - III Congenital Heart Disease)",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Supravalvular AS repair_Medco.pdf",
+    "Supravalvular AS repair_PPD.CPD.pdf"
+  ],
+  "alos": "12days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Symptomatic patients with peak instantaneous gradient ≥64 mmHg and/or mean gradient ≥50 mmHg on echo-Doppler (Class I)",
+    "Patients with mean Doppler gradient <50 mmHg, if they have any of the following (Class I): Symptoms attributable to obstruction (exertional dyspnea, angina, and syncope)",
+    "Patients with mean Doppler gradient <50 mmHg, if they have any of the following (Class I): Left ventricular systolic dysfunction attributable to obstruction",
+    "Patients with mean Doppler gradient <50 mmHg, if they have any of the following (Class I): Severe left ventricular hypertrophy attributable to obstruction",
+    "Patients with mean Doppler gradient <50 mmHg, if they have any of the following (Class I): Evidence of myocardial ischemia due to coronary ostial involvement",
+    "Asymptomatic patients with mean Doppler gradient ≥50 mmHg may be considered for surgery when the surgical risk is low (Class IIb)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "peak_instantaneous_gradient",
+      "operator": "≥",
+      "value": "64 mmHg",
+      "note": "for symptomatic patients"
+    },
+    {
+      "field": "mean_doppler_gradient",
+      "operator": "≥",
+      "value": "50 mmHg",
+      "note": "for symptomatic patients"
+    },
+    {
+      "field": "mean_doppler_gradient",
+      "operator": "≥",
+      "value": "50 mmHg",
+      "note": "for asymptomatic patients with low surgical risk"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain detailed history, signs & symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Echo/Doppler report suggestive of Supravalvular Aortic Stenosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Post procedure still of ECHO shows repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge Summary mentions date of follow-up?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report is not suggestive of Supravalvular Aortic Stenosis",
+    "Clinical notes missing detailed history, signs & symptoms, or indication for procedure",
+    "Post procedure ECHO still does not show repair of the defect",
+    "Detailed Discharge Summary does not mention date of follow-up",
+    "Indoor case papers not submitted at claim stage",
+    "Procedure / Operative notes not submitted at claim stage"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Aortic stenosis (AS) is most often due to stenosis of the aortic valve (80%-85%), but can also be due to obstruction below the valve (subvalvular, 15%, mostly due to discrete membrane) or above the valve (supravalvular, least common).",
+      "AS is more common in males.",
+      "The aortic valve can be unicuspid or bicuspid in patients with valvular AS.",
+      "Patients with unicuspid aortic valve present commonly in neonatal period with critical stenosis, whereas patients with bicuspid valve present more commonly during childhood.",
+      "Supravalvular stenosis is often associated with Williams–Beuren syndrome.",
+      "All patients with AS must be advised to maintain good oro-dental hygiene."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

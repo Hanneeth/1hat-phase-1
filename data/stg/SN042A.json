@@ -1,0 +1,137 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN042A",
+  "procedure_code": "SN042A",
+  "condition": "Intradural Spinal Tumors",
+  "procedure_name": "Spine - Intradural Tumor",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Intradural Spinal Tumors_Medco.pdf",
+    "Intradural Spinal Tumors_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Neurosurgery)",
+    "MS/DNB/Equivalent (in Orthopedics)"
+  ],
+  "clinical_indications": [
+    "Pain followed by progressive neurological deficits",
+    "Upper cervical and foramen magnum tumors: suboccipital pain, distal hand weakness with atrophy of hand muscles",
+    "Rarely raised ICP and hydrocephalus",
+    "Thoracic lesions: long tract signs with corticospinal involvement, lower limb weakness and spasticity; sensory ataxia; late bowel and bladder involvement",
+    "Filum ependymoma: low back pain, asymmetrical radicular pain to both lower limb, pain on recumbency"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings"
+      },
+      {
+        "key": "ct_mri_spine",
+        "label": "CT/MRI Spine"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "post_op_ct_spine",
+        "label": "Post-op CT Spine"
+      },
+      {
+        "key": "histopathological_biopsy_report",
+        "label": "Histopathological/Biopsy report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain detailed history, signs & symptoms, evaluation findings, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "History, physical examination, and radiological investigations confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Clinical presentation and radiological investigations indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Post-op CT Spine report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary with follow-up advise submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing detailed history, signs & symptoms, evaluation findings, indication for procedure, or planned line of treatment.",
+    "History, physical examination, or radiological investigations fail to confirm the diagnosis.",
+    "Clinical presentation or radiological investigations are not indicative of surgery.",
+    "Detailed Indoor Case Papers (ICPs) lacking daily vitals or treatment details.",
+    "Detailed procedure/operative notes are missing.",
+    "Post-op CT Spine report not submitted.",
+    "Histopathological/Biopsy report missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Intradural extramedullary spinal cord tumors (IESCT) constitute approximately two thirds of spine tumors.",
+      "The most commonly encountered types of IESCT are schwannomas and meningiomas, with myxopapillary ependymomas encountered less frequently."
+    ],
+    "surgical_options": [
+      "Aim is total excision of tumor",
+      "Intraoperative nerve monitoring is useful",
+      "Aggressive filum terminale ependymoma may require postoperative radiotherapy",
+      "Multiple levels can be decompressed"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

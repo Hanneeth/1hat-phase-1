@@ -1,0 +1,143 @@
+{
+  "stg_id": "SU070A",
+  "procedure_code": "SU070A",
+  "condition": "Post. Urethral Valve",
+  "procedure_name": "Post. Urethral Valve fulguration",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Post. Urethral Valve fulguration_Medco.pdf",
+    "Post. Urethral Valve fulguration_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MCh equivalent in Urology/Pediatric surgery",
+    "DNB equivalent in Urology/Pediatric surgery"
+  ],
+  "clinical_indications": [
+    "Urinary tract infection (UTI)",
+    "Diurnal enuresis in boys older than 5 years",
+    "Secondary diurnal enuresis",
+    "Voiding pain or dysfunction",
+    "Abnormal urinary stream"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings and planned line of treatment and advice for admission."
+      },
+      {
+        "key": "vcug_report",
+        "label": "Voiding cystourethrogram (VCUG) report to confirm stenosis of posterior urethral valve."
+      },
+      {
+        "key": "usg_uroflowmetry_report",
+        "label": "USG/Uroflowmetry report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "post_procedure_usg_report",
+        "label": "Post procedure Imaging (USG) report"
+      },
+      {
+        "key": "intra_procedure_clinical_photograph",
+        "label": "Intra procedure clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure / operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Voiding cystourethrogram (VCUG) report to confirm stenosis of posterior urethral valve submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG/Uroflowmetry report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical notes and Voiding cystourethrogram (VCUG) report to confirm stenosis of posterior urethral valve are indicative of the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure Imaging (USG) report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intra procedure clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed procedure / operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and Voiding cystourethrogram (VCUG) report are not indicative of the procedure for Posterior Urethral Valve fulguration.",
+    "Missing or incomplete Clinical notes including evaluation findings, planned line of treatment, or advice for admission at pre-authorization.",
+    "Voiding cystourethrogram (VCUG) report confirming stenosis of posterior urethral valve is missing or incomplete at pre-authorization.",
+    "USG/Uroflowmetry report is missing or incomplete at pre-authorization.",
+    "Detailed indoor case papers with daily vitals and treatment details are not available at claim submission.",
+    "Post-procedure Imaging (USG) report is missing at claim submission.",
+    "Intra-procedure clinical photograph is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Post. Urethral Valve fulguration only if diagnosis made is backed by clinical manifestation"
+    ],
+    "surgical_options": [
+      "Fulguration of Valves",
+      "Vesicostomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "Long term follow ups with the Specialist is important.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "clinical_symptoms": [
+      "Post. Urethral Valve (PVU) fulguration is bladder obstruction in males that can manifest along a spectrum of severity, ranging from disease incompatible with postnatal to almost entire life.",
+      "There are 3 types of PUV: Type I - Valves representing folds extending inferiorly from the verumontanum to the membranous urethra (~95% of PUVs); Type II - Bicuspid valves as leaflets radiating from the verumontanum proximally to the bladder neck; Type III - Valves as concentric diaphragms within the prostatic urethra, either above or below the verumontanum (~5% of PUVs)"
+    ],
+    "diagnosis": [
+      "Prenatal diagnosis through TIFFA scan",
+      "After birth: Palpable urinary bladder, high serum creatinine after 24 hrs.",
+      "Ultrasound KUB and Voiding Cystourethrography (VCU/MCGU) confirms the diagnosis"
+    ],
+    "management_summary": "Require long term management from early infancy into adulthood to avoid bladder dysfunction and deterioration of both upper and lower urinary tracts. End stage renal disease in Post Urethral Valves management depends on the severity of the valve and pressure effects on the upper tracts as it is an irreversible change."
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "stg_id": "MN009A",
+  "procedure_code": "MN009A",
+  "condition": "Retinopathy of prematurity",
+  "procedure_name": "Advanced Surgery for Retinopathy of Prematurity",
+  "specialty": "Neo-natal Care/Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Retinopathy of prematurity_Medco.pdf",
+    "Retinopathy of prematurity_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MS/MD/ DNB/ equivalent (Ophthalmology) with specialist training in Retina/ ROP"
+  ],
+  "clinical_indications": [
+    "Infants meeting screening criteria: Gestation < 34 weeks or Birth weight < 2000 grams, or any preterm infant with risk factors (Cardiorespiratory support, Chronic lung disease, Exchange transfusion, Poor post-natal weight gain, Prolonged oxygen requirement, Blood transfusion, Intraventricular haemorrhage, Respiratory distress syndrome, Sepsis, Apnea)",
+    "Laser photocoagulation is not successful in all cases of advanced disease",
+    "Cases referred to centers dealing with advanced retinal surgery due to serious sequelae despite meticulous management",
+    "Retinal detachment has occurred, requiring complex vitreoretinal surgery by an expert to prevent blindness"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "Previous ROP treatment outcome",
+      "operator": "is",
+      "value": "Laser photocoagulation not successful",
+      "note": "in cases of advanced disease"
+    },
+    {
+      "field": "Retinal condition",
+      "operator": "is",
+      "value": "retinal detachment",
+      "note": "requiring complex vitreoretinal surgery"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "indirect_ophthalmoscopy_examination",
+        "label": "Indirect ophthalmoscopy examination"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_icps",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "intra_procedure_photograph_optional",
+        "label": "Intra-procedure photograph(optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes and Ophthalmoscopy reports / stills showing extent of ROP and need for procedure.",
+        "expected": true
+      },
+      {
+        "q": "Was the neonateborn at less than 34 weeks of gestation/ low birth weight <2000 grams / any risk factor as mentioned above)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Operative Notes (for advanced surgery) available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the indication of surgery documented?",
+        "expected": true
+      },
+      {
+        "q": "Was intra-operative photograph submitted (optional)?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Indirect ophthalmoscopy report not suggestive of diagnosis or not indicative of need for procedure/surgery.",
+    "Clinical notes and Ophthalmoscopy reports/stills missing or not adequately showing extent of ROP and need for procedure.",
+    "Neonate not born at less than 34 weeks of gestation, or not low birth weight (<2000 grams), or without documented risk factors for ROP.",
+    "Detailed Operative Notes for advanced surgery missing or incomplete.",
+    "Indication of surgery not documented for the procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at District/Tertiary Hospital (SNCU/NICU), Eye hospital/SNCU-NICU/District Early Intervention Centre (DEIC) for follow up",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Retinopathy of Prematurity (ROP) is a retinal disorder of low birth weight premature infants.",
+      "ROP can be mild with no visual defects, or it may become aggressive with new vessel formation (neo-vascularisation) and progress to retinal detachment and blindness.",
+      "The stimulus for the abnormal growth of blood vessels comes from the peripheral immature retina.",
+      "International Classification of ROP (ICROP) is used for classifying ROP.",
+      "ROP is categorised based on: Severity of the disease into stages (0-5), Location of the disease into 3 zones (Zone 1-3), Extent of the disease based on clock hours (1-12) and the presence of plus disease.",
+      "Initial screen for infants at 4 weeks (30 days) of birth. For infants with period of gestation less than 28 weeks or weighing less than 1200 gms, first screening to be done at 2-3 weeks after birth.",
+      "Recommended follow up intervals for infants at risk: 2-3 week intervals until retina is fully vascularised if no signs of ROP. Specific intervals (e.g. 1-2 weeks, 1 week or less, 2-3 weeks) for different zones and stages if ROP is present."
+    ],
+    "surgical_options": [
+      "Laser therapy: Principle is to remove the stimulus for growth of abnormal new blood vessels by ablating the peripheral avascular retina to reduce retinal detachment and blindness. This abolishes hypoxic drive (mediated by VEGF) leading to regression of established ROP.",
+      "Treatment of advanced disease: Laser photocoagulation is not successful in all cases. Such cases should be referred to centers dealing with advanced retinal surgery. Complex vitreoretinal surgery by an expert can prevent blindness once retinal detachment has occurred."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

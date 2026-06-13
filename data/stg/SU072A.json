@@ -1,0 +1,83 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU072A",
+  "procedure_code": "SU072A",
+  "condition": "Hypospadias",
+  "procedure_name": "Hypospadias Repair - Follow Up",
+  "specialty": "Urology, Pediatric Surgery, Plastic & Reconstructive Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Hypospadias repair Follow up_Medco.pdf",
+    "Hypospadias repair Follow up_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [],
+  "clinical_indications": [
+    "Follow-up visit usually after a week of the Hypospadias repair surgery",
+    "Purpose is to remove stunt (If applicable) and examine any infection and progress post-surgery"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_current_visit_detailed_history_signs_symptoms_indication_for_procedure",
+        "label": "Clinical notes of current visit detailed history, signs & symptoms, indication for procedure"
+      },
+      {
+        "key": "discharge_summary_last_admission_for_hypospadias_repair_surgery",
+        "label": "Discharge Summary of last admission for Hypospadias repair surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_clinical_notes_discharge_summary_current_visit",
+        "label": "Detailed clinical notes/discharge summary of current visit"
+      },
+      {
+        "key": "post_procedure_usg_ufm_urine_routine_report",
+        "label": "Post procedure USG / UFM / Urine Routine report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did physical examination detect structural abnormalities or ventral penile curvature?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Did physical examination detect structural abnormalities or ventral penile curvature?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Physical examination findings of structural abnormalities or ventral penile curvature for original hypospadias not documented",
+    "Clinical notes of current visit with detailed history, signs & symptoms, indication for procedure missing or incomplete at pre-authorization",
+    "Discharge Summary of last admission for Hypospadias repair surgery missing at pre-authorization",
+    "Detailed clinical notes/discharge summary of current visit missing or incomplete at claim submission",
+    "Post procedure USG / UFM / Urine Routine report missing at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Care facilities",
+    "min_doctor_qualification_desirable": "MCh / DNB or equivalent in (Urology/Pediatric surgery/Plastic surgery)",
+    "clinical_key_pointers": [
+      "Opening of the urethra at a location other than the tip of the penis",
+      "Downward curve of the penis (chordee)",
+      "Hooded appearance of the penis because only the top half of the penis is covered by foreskin",
+      "Abnormal spraying during urination",
+      "Follow-up visit: Usually after a week of the Hypospadias repair surgery. Purpose is to remove stunt (If applicable) and examine any infection and progress post-surgery."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

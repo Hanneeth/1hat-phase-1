@@ -1,0 +1,94 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU021D",
+  "procedure_code": "SU021D",
+  "condition": "Pyeloplasty, Pyeloureterostomy, Pyelopyelostomy",
+  "procedure_name": "Pyeloureterostomy - Laparoscopic",
+  "specialty": "Urology/ Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Pyeloplasty, Pyeloureterostomy, Pyelopyelostomy_Medco.pdf",
+    "Pyeloplasty, Pyeloureterostomy, Pyelopyelostomy_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MCh/ DNB equivalent (in Urology/ Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Symptoms from obstruction, such as recurrent flank pain, nausea, and vomiting",
+    "Recurrent urinary tract infections",
+    "Pyelonephritis",
+    "Ipsilateral nephrolithiasis",
+    "Deterioration in renal function",
+    "Retrocaval ureter (RCU)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_treatment_plan",
+        "label": "Clinical notes including evaluation findings and planned line of treatment and advice for admission"
+      },
+      {
+        "key": "ivp_ct_dtpa_renal_scan_report",
+        "label": "Intravenous pyelogram (IVP) /CT/CT-IVP/DTPA Renal scan report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "intra_procedure_clinical_photograph",
+        "label": "Intra procedure clinical photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes and Intravenous pyelogram (IVP) /CT/CT-IVP/DTPA Renal scan report are indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes and Intravenous pyelogram (IVP) /CT/CT-IVP/DTPA Renal scan report are not indicative of the procedure.",
+    "Clinical notes including evaluation findings and planned line of treatment and advice for admission not submitted at pre-authorization.",
+    "Intravenous pyelogram (IVP) /CT/CT-IVP/DTPA Renal scan report not submitted at pre-authorization.",
+    "Intra procedure clinical photograph not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pyeloplasty: A surgical reconstruction of renal pelvis, to drain and decompress renal pelvis due to Uretero-pelvic junction obstruction (UPJ).",
+      "Pyeloplasty: If an indwelling ureteral stent is left in place, it is usually removed cystoscopically 4-6 weeks after the procedure.",
+      "Pyeloplasty: Generally, perform imaging studies approximately 6-8 weeks after the procedure to assess renal function and to help rule out residual obstruction.",
+      "Pyeloureterostomy: reconnecting the donor ureter to either the recipient ureter (ureteroureterostomy) or bladder (ureteroneocystostomy), or creating an anastomosis between the renal pelvis and recipient native ureter.",
+      "Pyelopyelostomy: Intrinsic defect at the uretero-pelvic junction (UPJ) is not necessarily present and so, dismembered pyeloplasty would not be necessary. laparoscopic transposition pyelo-pyelostomy (LTP) to treat UPJO."
+    ],
+    "surgical_options": [
+      "Open pyeloplasty",
+      "Laparoscopic pyeloplasty"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

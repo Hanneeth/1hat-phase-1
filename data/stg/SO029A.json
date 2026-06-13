@@ -1,0 +1,145 @@
+{
+  "stg_id": "SO029A",
+  "procedure_code": "SO029A",
+  "condition": "Imperforate Hymen",
+  "procedure_name": "Hymenectomy for imperforate hymen",
+  "specialty": "Obstetrics & Gynecology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Imperforate hymen_Medco.pdf",
+    "Imperforate hymen_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (Obstetrics & Gynecology)",
+    "MCh/DNB/Equivalent (in Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Vaginal bulge of thin hymenal tissue with a dark or bluish hue caused by hematocolpos at puberty",
+    "Dilated uterus (hematometra)",
+    "Distended tubes with fimbrial ends closed by adhesions (hematosalpinx) in late/neglected cases",
+    "Pelvic or abdominal pain (cyclic or acute)",
+    "Abdominal mass, urinary retention, dysuria, constipation, and dyschezia",
+    "Hydrocolpos or mucocolpos in neonatal period, presenting as a bulging, translucent, or yellow mass at the introitus",
+    "Symptomatic prepubertal patient",
+    "Periodic lower abdominal pain (may be continuous), primary amenorrhea and urinary symptoms (e.g., frequency, dysuria, retention of urine)",
+    "Physical examination revealing a bulging hymen",
+    "Ultrasonography revealing hematocolpos"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "patient_symptomatic_prepubertal",
+      "operator": "is",
+      "value": "true",
+      "note": "Surgical intervention is necessary only in symptomatic prepubertal patients"
+    },
+    {
+      "field": "diagnosis_confirmation",
+      "operator": "is",
+      "value": "true",
+      "note": "If physical examination reveals a bulging hymen AND ultrasonography reveals hematocolpos"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "usg_pelvis",
+        "label": "USG pelvis"
+      },
+      {
+        "key": "mri",
+        "label": "MRI (Optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed clinical notes, including history, symptoms, signs, physical examination (including local examination), indication for procedure, advice for admission, and planned line of treatment, available?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient present with periodic lower abdominal pain (which may be continuous), primary amenorrhea, or urinary symptoms (such as frequency, dysuria, or retention of urine)?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG pelvis confirming the diagnosis of imperforate hymen with hematocolpos?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical evaluation and imaging indicative of surgery documented?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers (ICPs) with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure/operative notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge available?",
+        "expected": true
+      },
+      {
+        "q": "Were the USG pelvis findings indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical evaluation and/or imaging not documented as indicative of surgery.",
+    "Patient not documented as symptomatic (e.g., lacking periodic lower abdominal pain, primary amenorrhea, or urinary symptoms).",
+    "USG pelvis report missing or not confirming the diagnosis of imperforate hymen with hematocolpos.",
+    "Detailed clinical notes or planned line of treatment missing or incomplete at pre-authorization.",
+    "Detailed procedure/operative notes missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Imperforate hymen is due to failure of disintegration of the central cells of the Müllerian eminence that projects into the urogenital sinus."
+    ],
+    "surgical_options": [
+      "Surgical management of clinically significant hymenal variations involves excision of the hymenal tissue and rarely is associated with long-term sequelae.",
+      "Surgical intervention is necessary only in symptomatic prepubertal patients."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

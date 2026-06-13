@@ -1,0 +1,106 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG033A",
+  "procedure_code": "SG033A",
+  "condition": "Pilonidal Sinus",
+  "procedure_name": "Management of Pilonidal Sinus",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Pilonidal Sinus_Medco.pdf",
+    "Pilonidal Sinus_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (Surgical Gastroenterologist)"
+  ],
+  "clinical_indications": [
+    "Acute pilonidal disease characterized by the presence of an abscess, requiring Incision & Drainage",
+    "Chronic pilonidal disease requiring surgical excision (e.g., primary repair, secondary intention, marsupialization)",
+    "Complex and recurrent chronic pilonidal disease where other surgical techniques have failed, requiring flap-based procedures"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure and planned line of management"
+      },
+      {
+        "key": "clinical_photograph_optional",
+        "label": "Clinical Photograph (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photographs_optional",
+        "label": "Post-operative photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination_report_for_chronic_cases",
+        "label": "Histopathological examination report for chronic cases"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical evaluation indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical evaluation confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical evaluation not indicative of surgery for Pilonidal Sinus",
+    "Diagnosis of Pilonidal Sinus not confirmed by clinical evaluation",
+    "Clinical notes missing or incomplete, lacking detailed history, signs & symptoms, planned line of treatment, or indication for procedure at pre-authorization",
+    "Histopathological examination report for chronic cases not submitted at claim stage",
+    "Detailed procedure/operative notes missing or incomplete at claim stage",
+    "Discharge summary missing or lacking follow-up advice at the time of discharge"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pilonidal sinus is a skin condition in the midline of the natal cleft. A primary pit forms in the midline, caused by a hair follicle that has become infected, into which loose hairs enter to create a track or abscess. While the natal cleft is the most common site of disease, other areas of the body such as the umbilicus and interdigital spaces can be affected.",
+      "Pilonidal sinus can present acutely as a pilonidal abscess, asymptomatically as a small pit or nontender lump, or as a discharging lesion with or without pain or a lump.",
+      "The two main features of the chronic sinus are: a midline primary pit (or more than one) at the base of the natal cleft, which is epithelial lined and usually not inflamed and may have a hair (or several hair fragments) inserted into it that can be pulled out; a secondary opening which, if present, is usually on one side and cranial to the primary pit. It may be a scar of a previous opening. If open, it may discharge pus or blood and be lined by granulation tissue. There may be a palpable track leading from the midline pit. More than one secondary opening means the sinus track has branches."
+    ],
+    "surgical_options": [
+      "Incision & Drainage (for acute abscess)",
+      "Excision and primary repair (with consideration for off-midline closure)",
+      "Excision with healing by secondary intention",
+      "Excision with marsupialization",
+      "Rhomboid (limberg) flap",
+      "Karydakis flap",
+      "Bascom's cleft-lift procedure V-Y advancement flap",
+      "Z-plasty"
+    ],
+    "pre_op_preparation": "Elimination of hair from the gluteal cleft and surrounding skin, by shaving or laser epilation, may be used for both acute and chronic pilonidal disease in the absence of abscess as a primary or adjunct treatment measure.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU020A",
+  "procedure_code": "SU020A",
+  "condition": "Ureterolithotomy",
+  "procedure_name": "Open Ureterolithotomy- Follow Up",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Ureterolithotomy Follow Up_Medco.pdf",
+    "Ureterolithotomy Follow Up_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MCh Urology",
+    "DNB Urology",
+    "Equivalent (in Urology)"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_previous_surgery_follow_up_daycare_advice",
+        "label": "Clinical notes detailing signs and symptoms, previous surgery/procedure, follow-up visit details, advise for daycare procedure"
+      },
+      {
+        "key": "discharge_summary_last_ureterolithotomy",
+        "label": "Discharge Summary of last Ureterolithotomy performed"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_clinical_notes_current_visit",
+        "label": "Detailed clinical notes of the current visit"
+      },
+      {
+        "key": "post_procedure_usg_report",
+        "label": "Post procedure USG report"
+      },
+      {
+        "key": "urine_routine_report",
+        "label": "Urine Routine report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes detailing signs and symptoms, previous surgery/procedure, follow-up visit details, advise for daycare procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Discharge Summary of last Ureterolithotomy performed available?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed clinical notes of the current visit submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are post procedure USG submitted?",
+        "expected": true
+      },
+      {
+        "q": "Urine Routine reports submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes detailing signs and symptoms, previous surgery/procedure, follow-up visit details, advise for daycare procedure not submitted or incomplete.",
+    "Discharge Summary of last Ureterolithotomy performed not available or incomplete.",
+    "Detailed clinical notes of the current visit not submitted or incomplete.",
+    "Post procedure USG not submitted or incomplete.",
+    "Urine Routine reports not submitted or incomplete.",
+    "Detailed discharge summary of last admission for Ureterolithotomy not suggestive of follow-up procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": "N20.0",
+    "special_empanelment": "Availability of Laparoscopic surgery and care at tertiary facilities.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ureterolithotomy Open. & Lap.: refers to the open or laparoscopic surgical removal of a stone from the ureter. Symptoms: renal colic, pain is typically intermittent/constant, radiation of pain into the ipsilateral groin or testicle varies from severe, sharp/stabbing pain to a dull ache. Urine analysis and urine microscopy is positive for occult blood. Follow up: A CT urogram usually performed 3-6 months postoperatively to rule out a stricture or residual stones, also, Ultrasound can be used to evaluate for silent hydronephrosis. Evaluate for metabolic risk factors, and further stone formation."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "A CT urogram usually performed 3-6 months postoperatively to rule out a stricture or residual stones, also, Ultrasound can be used to evaluate for silent hydronephrosis. Evaluate for metabolic risk factors, and further stone formation.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Anuria",
+      "Fever with chills and rigors",
+      "Suspected renal failure",
+      "Persistent haematuria"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG083A",
+  "procedure_code": "SG083A",
+  "condition": "Lung Hydatid Cyst",
+  "procedure_name": "Lung Hydatid Cyst removal",
+  "specialty": "Pediatric Surgery/ General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Lung hydatid cyst_Medco.pdf",
+    "Lung hydatid cyst_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (in Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Presence of lung hydatid cyst, as surgery is the gold standard treatment of choice of any size",
+    "Symptoms such as cough, chest pain, breathlessness, expectoration, fever, hemoptysis, or anaphylactic phenomena",
+    "Cyst greater than 5 cm in diameter leading to bronchial compression",
+    "Cyst rupture leading to sudden onset of chest pain, hemoptysis, cough, fever or rarely a salty taste in the mouth"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "ct_mri_chest",
+        "label": "CT/MRI Chest"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_specimen_photographs",
+        "label": "Intra-operative or specimen Photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination_report",
+        "label": "Histopathological examination report"
+      },
+      {
+        "key": "postoperative_chest_xray_or_ct",
+        "label": "Postoperative Chest X-ray or CT"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detail history, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "CT/MRI Chest report confirms the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative X-ray/CT Chest report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Histopathology examination report available?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary includes follow-up advice?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes do not detail history, signs & symptoms, planned line of treatment, or indication for procedure",
+    "CT/MRI Chest report does not confirm the diagnosis",
+    "Imaging report (CT/MRI Chest) is not indicative of surgery",
+    "Detailed Indoor case papers (ICPs) with daily vitals and treatment details are missing or incomplete",
+    "Detailed procedure / operative notes are missing or incomplete",
+    "Histopathological examination report is not available"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hydatid disease involves the lungs (20-30%) by various mechanisms",
+      "The right lung is more commonly involved than the left",
+      "Cysts in the lungs are usually solitary and mostly unilateral",
+      "Lower lobe of the lungs is the most common site of pulmonary involvement, and there is a predilection for the posterior segments and the right lung",
+      "A lung hydatid cyst most commonly produces symptoms of cough followed by chest pain, breathlessness, expectoration, fever, hemoptysis, and anaphylactic phenomena",
+      "Uncomplicated small, peripherally located cysts often remain asymptomatic and are discovered incidentally on chest radiography",
+      "Usually, cysts greater than 5 cm in diameter leads to bronchial compression",
+      "Cyst rupture may lead to sudden onset of chest pain, hemoptysis, cough, and fever or rarely a salty taste in the mouth"
+    ],
+    "surgical_options": [
+      "Enucleation (Ugon method)",
+      "Pericystectomy (PerezFontana method)",
+      "Cystotomy with capitonnage (Barrett's method)",
+      "Cystostomy with closure of the bronchial openings and capitonnage (Posadas method)",
+      "Cystostomy with the closure of the bronchial openings alone",
+      "Open aspiration by Figuera technique",
+      "Segmental resection",
+      "Lobectomy"
+    ],
+    "pre_op_preparation": "Preoperative initiation of Albendazole therapy is recommended.",
+    "post_op_care": "Post-operative initiation of Albendazole therapy is recommended.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

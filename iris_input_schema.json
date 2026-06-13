@@ -1,0 +1,151 @@
+{
+  "_comment": "IRIS Phase 1 input schema. One object = one admission session. Phase 0 stubs populate 'patient' and 'hospital'. MEDCO fills 'clinical'.",
+
+  "session_id": "IRIS-20260612-TN001234",
+  "created_at": "2026-06-12T09:30:00+05:30",
+
+  "patient": {
+    "_comment": "Populated by verify_bis() stub. Do not edit manually in production.",
+
+    "patient_id": "PMJAY-TN-458729301045",
+    "family_id": "FAM-TN-458729301",
+    "name": "Ravi Kumar",
+    "age": 58,
+    "gender": "M",
+    "home_state": "Tamil Nadu",
+    "home_district": "Chennai",
+
+    "wallet": {
+      "family_balance_inr": 350000,
+      "vay_vandana_balance_inr": null,
+      "policy_year_start": "2025-04-01"
+    },
+
+    "past_claims": [
+      {
+        "_comment": "From BIS claim history. Used for Special Conditions Rule check (E26) and diagnostic add-on cap tracking (E33).",
+        "procedure_code": "SG019A",
+        "admission_date": "2025-08-15",
+        "package_amount_inr": 18000,
+        "status": "paid"
+      }
+    ]
+  },
+
+  "hospital": {
+    "_comment": "Populated by check_hospital_empanelment() stub. Do not edit manually in production.",
+
+    "hospital_id": "EHCP-TN-CHN-0041",
+    "name": "Apollo Hospitals Chennai",
+    "type": "private",
+    "city_tier": "tier1",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "is_aspirational_district": false,
+    "accreditation": "nabh_full",
+    "scheme": "cmchis",
+
+    "empanelled_specialties": ["SG", "MC", "SB", "MG", "SO", "SU", "BM", "SN"],
+
+    "_accreditation_enum_note": "none | bronze | nabh_entry | nabh_full | nqas",
+    "_scheme_enum_note": "cmchis (TN) | national | state_other",
+    "_type_enum_note": "private | public"
+  },
+
+  "clinical": {
+    "_comment": "Filled by MEDCO in IRIS UI before raising pre-auth in TMS.",
+
+    "is_emergency": true,
+    "is_medico_legal": false,
+
+    "chief_complaints": "Chest pain radiating to left arm, sweating, breathlessness since 4 hours",
+
+    "duration_days": 0,
+
+    "provisional_diagnosis": "Acute STEMI — inferior wall",
+
+    "planned_procedure": null,
+    "_planned_procedure_note": "null if unknown at admission. Free text if known e.g. 'Primary PTCA'. IRIS uses this as a hint in Phase 2 candidate generation.",
+
+    "vitals": {
+      "_comment": "Used in Phase 1 for ER severity (stable vs unstable cardiopulmonary status → ER002A vs ER002B).",
+      "bp_systolic_mmhg": 88,
+      "bp_diastolic_mmhg": 58,
+      "pulse_bpm": 115,
+      "spo2_pct": 91,
+      "temperature_f": 98.4,
+      "rr_per_min": 24,
+      "gcs": 15
+    },
+
+    "investigations": [
+      {
+        "_comment": "Each entry = one investigation type. result_summary drives Phase 2 clinical entity extraction and Phase 3.5 stratification. document_available drives Phase 9 document gap analysis.",
+        "type": "ecg",
+        "result_summary": "ST elevation in leads II, III, aVF — inferior STEMI pattern",
+        "document_available": true
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "Troponin I 2.8 ng/mL elevated, CK-MB 48 U/L elevated",
+        "document_available": false
+      },
+      {
+        "type": "echo",
+        "result_summary": null,
+        "document_available": false
+      }
+    ],
+
+    "_investigation_type_enum": [
+      "ecg", "echo", "xray", "ct", "mri", "usg",
+      "blood_reports", "urine_report", "stool_report",
+      "cag_report", "eeg", "abg_chart", "csf",
+      "hpe", "fnac", "other"
+    ],
+
+    "comorbidities": ["type2_diabetes", "hypertension"],
+    "_comorbidities_note": "Free-text list of active conditions. Used in Phase 7 comorbidity resolution — engine checks if each comorbidity is absorbed in surgical package or needs separate package.",
+
+    "non_clinical_documents_in_hand": [
+      {
+        "_comment": "Non-investigation documents MEDCO physically has right now. Drives Phase 9 gap analysis for universal and conditional doc requirements.",
+        "key": "clinical_notes",
+        "label": "Admission / clinical notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Photo of patient on hospital bed",
+        "available": true
+      },
+      {
+        "key": "mlc_fir",
+        "label": "MLC copy with number + FIR",
+        "available": false
+      },
+      {
+        "key": "treating_doctor_prescription",
+        "label": "Treating doctor prescription advising hospitalisation",
+        "available": true
+      }
+    ],
+
+    "_non_clinical_doc_key_enum": [
+      "clinical_notes", "patient_photo", "mlc_fir",
+      "treating_doctor_prescription", "self_declaration",
+      "referral_letter", "informed_consent",
+      "notto_recipient_id", "notto_donor_id",
+      "tumour_board_approval"
+    ],
+
+    "treating_doctor": {
+      "name": "Dr. Suresh Babu",
+      "registration_number": "TN-MED-12345",
+      "qualification": "MD DM Cardiology",
+      "specialty_code": "MC"
+    },
+
+    "notes": "Patient brought by family. BP crashing on arrival. IV fluids started. Cardiology team called. Likely needs primary PTCA."
+  }
+}

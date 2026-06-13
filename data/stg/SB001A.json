@@ -1,0 +1,103 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB001A",
+  "procedure_code": "SB001A",
+  "condition": "Fracture",
+  "procedure_name": "Fracture - Conservative Management - Without plaster",
+  "specialty": "Orthopedics/Emergency Room Packages",
+  "version": "1.1",
+  "source_files": [
+    "Fracture - Conservative Management - Without plaster_Medco.pdf",
+    "Fracture - Conservative Management - Without plaster PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years' experience"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "xray_affected_part_preauth",
+        "label": "X-ray of affected part labelled with patient ID, date and side (Left/Right)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "xray_affected_part_post_procedure",
+        "label": "Post procedure X-ray labelled with patient ID, date and side (Left/Right) of affected part"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the X-ray of affected part labelled with patient ID, date and side (Left/ Right) submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the Detailed Indoor Case Papers (ICPs)submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure X-ray labelled with patient ID, date and side (Left/ Right) of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advise submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or X-ray submitted for pre-authorization are not indicative of Fracture - Conservative Management - Without plaster.",
+    "Pre-procedure X-ray of affected part is missing or incorrectly labelled (patient ID, date, or side).",
+    "Post-procedure X-ray of affected part is missing or incorrectly labelled (patient ID, date, or side).",
+    "Detailed Procedure / Operative Notes are missing or incomplete.",
+    "Discharge summary is missing or lacking follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB or Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "The fracture healing involves a combination of inflammatory, vascular, anabolic and catabolic events to allow eventual return of function."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

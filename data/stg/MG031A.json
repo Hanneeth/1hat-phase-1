@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG031A",
+  "procedure_code": "MG031A",
+  "condition": "Endocarditis",
+  "procedure_name": "Bacterial Endocarditis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Endocarditis_Medco.pdf",
+    "Endocarditis_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [],
+  "clinical_indications": [
+    "Definitive diagnosis of endocarditis made in patients with two major criteria, one major and three minor criteria, or five minor criteria (as per Duke Criteria)",
+    "Positive blood culture for microorganism consistent with infectious endocarditis (viridans Streptococcus, Streptococcus bovis, gram-negative HACEK bacilli, Staphylococcus aureus, or community-acquired enterococci in the absence of a primary focus)",
+    "Recovery of a microorganism consistent with infectious endocarditis from blood cultures drawn more than 12 hours apart",
+    "Recovery of a microorganism consistent with infectious endocarditis from all of three or most of four or more blood cultures, with first and last drawn more than one hour apart",
+    "Single positive blood culture for Coxiella burnetii or phase 1 immunoglobulin G antibody titer greater than 1:800",
+    "Positive echocardiography (oscillating intracardiac mass on valve or supporting structures, or in the path of regurgitant jets, or on implanted material in the absence of an alternative anatomic explanation; intracardiac abscess; new partial dehiscence of prosthetic valve)",
+    "New valvular regurgitation (increase or change in preexisting murmur not sufficient)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "complete_hemogram_report",
+        "label": "Complete Hemogram report"
+      },
+      {
+        "key": "detailed_2d_echo_report",
+        "label": "Detailed 2D-Echo, M-Mode/ color Doppler/Trans esophageal echocardiography report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers with treatment details"
+      },
+      {
+        "key": "blood_culture_report",
+        "label": "Blood culture report"
+      },
+      {
+        "key": "post_treatment_imaging",
+        "label": "Post treatment Chest X-ray/2D Echo/12 Lead EKG/Transesophageal (Echocardiography)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the complete hemogram report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the 2D-Echo, M-Mode/ color Doppler/Trans esophageal echocardiography suggestive of vegetations?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor case papers with vital (BP and Pulse) and Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the blood culture report of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post treatment echo/ colour doppler report of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "2D-Echo/M-Mode/color Doppler/Trans esophageal echocardiography report not suggestive of vegetations",
+    "Clinical notes, evaluation findings, indications for procedure, or planned line of treatment missing or incomplete at pre-authorization",
+    "Complete hemogram report missing at pre-authorization",
+    "Blood culture report missing at claim submission",
+    "Detailed discharge summary missing or does not include follow-up date"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "DNB / MD/DM (General Medicine / Pediatric Medicine/Cardiology)",
+    "clinical_key_pointers": [
+      "Infectious endocarditis results from bacterial or fungal infection of the endocardial surface of the heart and is associated with significant morbidity and mortality.",
+      "Risk factors include the presence of a prosthetic heart valve, structural or congenital heart disease, intravenous drug use, and a recent history of invasive procedures.",
+      "Endocarditis should be suspected in patients with unexplained fevers, night sweats, or signs of systemic illness.",
+      "Diagnosis is made using the Duke criteria, which include clinical, laboratory, and echocardiographic findings.",
+      "Antibiotic treatment of infectious endocarditis depends on whether the involved valve is native or prosthetic, as well as the causative microorganism and its antibiotic susceptibilities.",
+      "Common blood culture isolates include Staphylococcus aureus, viridans Streptococcus, enterococci, and coagulase-negative staphylococci.",
+      "Valvular structural and functional integrity may be adversely affected in infectious endocarditis, and surgical consultation is warranted in patients with aggressive or persistent infections, emboli, and valvular compromise or rupture."
+    ],
+    "surgical_options": [
+      "The structural and functional integrity of cardiac valves may be damaged by infection. This may lead to valvular regurgitation or flow obstruction in valves with large vegetations.",
+      "Surgery may need to be considered in selected patients; the benefits are greatest in patients with the most indications.",
+      "Surgical intervention should be considered in patients with fungal infection, infection with aggressive antibiotic-resistant bacteria or bacteria that respond poorly to antibiotics, left-sided infectious endocarditis caused by gram-negative bacteria, persistent infection with positive blood cultures after one week of antibiotic therapy, or one or more embolic events during the first two weeks of antibiotic therapy."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

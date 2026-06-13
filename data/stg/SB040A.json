@@ -1,0 +1,159 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB040A",
+  "procedure_code": "SB040A",
+  "condition": "Bone Tumour (malignant) including GCT",
+  "procedure_name": "Bone Tumour Excision (malignant) including GCT + Joint replacement",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Bone Tumour Excision, Excision of Osteochondroma, Exostosis_Medco.pdf",
+    "Bone Tumour Excision, Excision of Osteochondroma, Exostosis_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Excision of malignant bone tumors (e.g., Osteosarcoma, Ewing's sarcoma, Chondrosarcoma, Multiple myeloma, Neuroblastoma, Lymphoma of bone).",
+    "Excision of Giant Cell tumors (GCT) with potential for aggressive behavior and capacity to metastasize.",
+    "Excision of tumor to lessen the risk of breaking a bone weakened by its presence."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_planned_treatment",
+        "label": "Clinical notes with planned line of Treatment"
+      },
+      {
+        "key": "x_ray_mri_labelled_affected_part",
+        "label": "X-ray/MRI labelled with patient ID, date and side (Left/Right) of affected part"
+      },
+      {
+        "key": "biopsy_report",
+        "label": "Biopsy report"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "histopathology_excised_tissue",
+        "label": "Histopathology of excised tissue"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice and bar code of implant"
+      },
+      {
+        "key": "post_procedure_x_ray_labelled_affected_part",
+        "label": "Post procedure X-ray labelled with patient ID, date and side (Left/Right) of affected part"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "X-ray/MRI labelled with patient ID, date and side (Left/Right) of affected part confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was Biopsy report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed procedure / Operative Notes mentioned?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathology examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Invoice/barcode of implant submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post procedure X-ray labelled with patient ID, date and side (Left/ Right) of affected Part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were Post-operative photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Post-procedure X-ray for malignant bone tumor excision does not show the implant used.",
+    "Biopsy report not submitted at pre-authorization.",
+    "Invoice and barcode of implant not submitted with the claim.",
+    "Post-procedure clinical photographs not submitted with the claim.",
+    "X-ray/MRI not labelled with patient ID, date, or side (Left/Right) of affected part at pre-authorization.",
+    "Histopathology examination report of excised tissue not submitted with the claim."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/ Equivalent (in Orthopedics)",
+    "clinical_key_pointers": [
+      "Bone tumor excision is a surgical treatment/removal to treat bone tumors both benign and malignant in nature.",
+      "Types of malignant bone tumors: Osteosarcoma and Ewing's sarcoma (common below 30 years), Chondrosarcoma (common after 30 years), Multiple myeloma (most common marrow cell tumor), Neuroblastoma, Lymphoma of bone.",
+      "Excision of the tumor may also be advisable to lessen the risk of breaking a bone weakened by a tumor's presence.",
+      "Malignant tumors removed through surgery often used in combination with radiation and chemical therapies to control the metastasis/reoccurrence.",
+      "Giant Cell tumors (GCT) are benign tumors with potential for aggressive behavior and capacity to metastasize.",
+      "GCT histogenesis remains unclear.",
+      "Ninety percent of GCT exhibits the typical epiphyseal location.",
+      "GCT has three stages that correlate with tumor local aggressiveness and risk of local recurrence: Stage I - latent, Stage II - active, Stage III - aggressive.",
+      "Local recurrence rate for GCT ranged from 20% to 50% averaging 33%.",
+      "Evidence shows pulmonary metastases for GCT."
+    ],
+    "surgical_options": [
+      "For malignant tumors: limb salvage surgery, bone replacement with metallic implant or transplanted bone tissue.",
+      "For GCT: Surgical resection, Reconstructing the defect after curettage, Cementing the defect using polymethylmethacrylate (PMMA), Bone grafting, Use of steinmann pins."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

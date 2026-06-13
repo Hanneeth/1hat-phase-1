@@ -1,0 +1,143 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "ST008A",
+  "procedure_code": "ST008A",
+  "condition": "Emergency tendons repair ± Peripheral Nerve repair / reconstructive surgery",
+  "procedure_name": "Emergency tendons repair ± Peripheral Nerve repair / reconstructive surgery",
+  "specialty": "Polytrauma, Orthopedics, Neurosurgery, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Emergency tendons & Peripheral Nerve repair_Medco.pdf",
+    "Emergency tendons & Peripheral Nerve repair_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MS/DNB/Equivalent (Orthopedic surgery)",
+    "MCh/DNB/Equivalent (Neurosurgery / Reconstructive Surgery)"
+  ],
+  "clinical_indications": [
+    "Clean cuts with underlying tendon injury (early repair from Emergency OT advised for optimal results)",
+    "Contaminated wounds with underlying tendon injury, after adequate wound debridement (repair considered after 48 hours re-assessment)",
+    "Gross tissue loss and exposed tendons, after adequate wound debridement and soft tissue cover (delayed repair of tendon injuries considered)",
+    "Root avulsion or laceration injury to the plexus suspected, or open injury, retained foreign body, or vascular injury requiring vessel repair (urgent surgical exploration indicated)",
+    "Sharp transections of the brachial plexus (primary repair allowed to optimize nerve regeneration)",
+    "Failure to regain neurologic function satisfactorily after 3-6 months post-injury (delayed exploration may be indicated)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_injury_need",
+        "label": "Clinical Notes detailing the injury and need for surgery"
+      },
+      {
+        "key": "mlc_fir_copy",
+        "label": "Medico legal case report/FIR copy of accident, if due to accident"
+      },
+      {
+        "key": "nerve_conduction_emg_report_optional",
+        "label": "Nerve conduction velocity Electromyography (EMG) report (Optional)"
+      },
+      {
+        "key": "mri_report_optional",
+        "label": "MRI report (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "intra_operative_photograph_optional",
+        "label": "Intra operative photograph (optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the clinical notes suggestive of tendon injury with or without nerve repair?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes details of accident, signs & symptoms, indication for surgery, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was the Medico legal report/ FIR copy of the accident submitted, if the injury was due to accident?",
+        "expected": true
+      },
+      {
+        "q": "Was the nerve conductional velocity report/ EMG report/ MRI report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intra-operative photo submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes not suggestive of tendon injury with or without nerve repair.",
+    "Clinical notes missing details of accident, signs & symptoms, indication for surgery, or planned line of treatment.",
+    "Medico legal report/FIR copy of accident missing when injury due to accident.",
+    "Optional investigative reports (e.g., nerve conduction velocity, EMG, MRI) not submitted when clinically indicated for pre-authorization review.",
+    "Detailed Discharge Summary not submitted or does not mention date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operational Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Patient usually presents with c/o inability to bend or extend a finger",
+      "To be ruled out in cuts involving fingers, palm and dorsum of hand, wrist and forearm",
+      "Mechanism of injury to be noted",
+      "Look whether it's a clean or contaminated wound",
+      "FDS, FDP, FPL, FCR, FCU to be tested and zones of flexor tendon injury to be noted",
+      "APL, EPB, ECRL, ERCB, EPL, EI, EDC, EDM, EhCU to be tested and zones of extensor tendon injury to be noted",
+      "Vascularity of the affected finger/hand to be documented by capillary refill or pinprick",
+      "X-ray of the involved part to rule out fractures and foreign body",
+      "Associated vascular or nerve injury to be documented",
+      "Obtaining a thorough history in a patient with possible NPI is necessary to identify the injury mechanism, associated fractures, and other concomitant trauma to the neck, shoulder, and chest cage.",
+      "Careful inspection of the patient can provide important clues to the extent of the injury.",
+      "Considerable bruising and swelling may indicate deep trauma with possible vascular injury, which can be confirmed by evaluating the radial, ulnar, and brachial pulses.",
+      "A detailed neurologic examination is warranted to ascertain the location of the lesion.",
+      "Findings on initial examination are supplemented with advanced imaging and electrophysiological evaluation to determine the prognosis of neurologic recovery further."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": "Give thorough wound wash after administering adequate analgesia; Provide prophylactic antibiotics",
+    "post_op_care": "Advice strict hand elevation; The patient should be closely followed with serial examinations, imaging studies, and electrophysiological testing.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Patient is not medically or psychologically cleared for surgery",
+      "Local wounds or infections obstruct the surgical approach"
+    ]
+  }
+}

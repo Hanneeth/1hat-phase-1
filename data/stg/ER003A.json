@@ -1,0 +1,107 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "ER003A",
+  "procedure_code": "ER003A",
+  "condition": "Animal bites (Excluding Snake Bite)",
+  "procedure_name": "Animal bites (Excluding Snake Bite)",
+  "specialty": "Emergency Room Packages",
+  "version": "1.1",
+  "source_files": [
+    "Animal bites (Excluding Snake Bite)_Medco.pdf",
+    "Animal bites (Excluding Snake Bite)_PPD.CPD.pdf"
+  ],
+  "alos": "3 Days",
+  "min_doctor_qualification": [
+    "MD/DNB or Equivalent in Emergency Medicine/General medicine"
+  ],
+  "clinical_indications": [
+    "Exposure to an animal bite (excluding snake bite) requiring Post Exposure Prophylaxis (PEP) as per the national guidelines decision tree."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_classification_findings_indications_treatment_plan",
+        "label": "Clinical Notes including classification of bites, evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "pre_clinical_photograph",
+        "label": "Pre-clinical photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "clinical_notes_with_treatment_details_vaccine_doses_dates",
+        "label": "Clinical Notes with complete treatment details including no. of doses of vaccine with dates (as needed)"
+      },
+      {
+        "key": "invoice_barcode_sticker_vaccine",
+        "label": "Invoice / bar code sticker of the vaccine (If its applicable)"
+      },
+      {
+        "key": "discharge_summary_follow_up_advice",
+        "label": "Discharge summary and follow-up advice"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including classification of bites, evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the pre-clinical photograph submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers and including no. of doses of vaccine with dates (as needed) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Invoice / bar code sticker of the vaccine submitted? (If its applicable)",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Classification of animal bite or pre-clinical photograph not indicative of the procedure.",
+    "Pre-authorization request missing clinical notes with bite classification, evaluation findings, indications, or treatment plan.",
+    "Pre-authorization request missing pre-clinical photograph.",
+    "Claim submission missing detailed indoor case papers or incomplete treatment details including vaccine doses and dates.",
+    "Claim submission missing invoice or barcode sticker for the vaccine (if applicable).",
+    "Claim submission missing discharge summary with follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MBBS",
+    "clinical_key_pointers": [
+      "Proceed for treatment only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "The most common animals globally responsible for human rabies deaths are dogs (97%), cats (2%), mongoose, jackals, and other wild animals (1%).",
+      "Bite wounds from cats and dogs can occur without provocation, but provoked bites, such as disturbing animals while they are eating, are more common.",
+      "Unprovoked bites by wild or sick-appearing animals (dogs, cats, raccoons, foxes and bats) further raise underlying concerns about likelihood of rabies exposure.",
+      "A major concern in all bite wounds is subsequent infection caused by bacteria, and, more rarely, viruses. Depending on the animal, various species of bacteria are found in the animal mouth, and many resulting infections are polymicrobial.",
+      "Local infection and cellulitis are the leading causes of morbidity; sepsis is a potential complication of bite wounds.",
+      "Rabies is primarily a disease of terrestrial and airborne mammals, including dogs, wolves, foxes, coyotes, jackals, cats, bobcats, lions, mongooses, skunks, badgers, bats, monkeys and humans. The dog has been, and still is, the main reservoir of rabies in India."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV029A",
+  "procedure_code": "SV029A",
+  "condition": "Diaphragmatic Hernia",
+  "procedure_name": "Diaphragmatic Repair",
+  "specialty": "CTVS, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Diaphragmatic Repair_Medco.pdf",
+    "Diaphragmatic Repair_PPD.CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Pediatric surgery, CTVS, Surgical Gastroenterology)",
+    "MS/DNB/Equivalent in General Surgery"
+  ],
+  "clinical_indications": [
+    "Presence of a diaphragmatic hernia (protrusion of abdominal contents into the thoracic cavity through a defect in the diaphragm) confirmed by imaging (e.g., CT).",
+    "Patient presenting with symptoms such as dyspnea on exertion, chest discomfort, decreased air entry, or abdominal complaints (recurrent abdominal pain, postprandial fullness, vomiting, obstructive gastrointestinal symptoms).",
+    "Asymptomatic diaphragmatic hernia revealed upon imaging studies, requiring management.",
+    "Need for surgical repair as the management, with mesh repair considered if primary closure is not possible."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_implant_indication_planned_management",
+        "label": "Clinical notes including evaluation findings, indication of implant requirement (if applicable), and planned line of management"
+      },
+      {
+        "key": "chest_xray_ap_lateral",
+        "label": "Chest X ray AP/ Lateral"
+      },
+      {
+        "key": "usg_cect_abdomen_thorax",
+        "label": "USG/ CECT Abdomen/Thorax"
+      },
+      {
+        "key": "endoscopy_optional",
+        "label": "Endoscopy (Optional)"
+      },
+      {
+        "key": "barium_study_optional",
+        "label": "Barium study (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative / procedure notes"
+      },
+      {
+        "key": "post_op_xray_chest_abdomen_report",
+        "label": "Post-op Xray Chest/Abdomen report"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "implant_details_invoice_barcode_if_applicable",
+        "label": "Implant details (invoice/barcode) if applicable"
+      },
+      {
+        "key": "fir_documentation_in_case_of_trauma",
+        "label": "FIR documentation (in case of trauma)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain detailed history, especially history of trauma, signs & symptoms, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient present with dyspnea on exertion, chest discomfort/ decreased air entry, abdominal complaints/ asymptomatic?",
+        "expected": true
+      },
+      {
+        "q": "Did the imaging confirm diaphragmatic hernia?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Did the Post procedure X-ray Chest/Abdomen show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Are implant invoice/barcode details available if applicable?",
+        "expected": true
+      },
+      {
+        "q": "Is FIR documentation available if applicable (in case of trauma)?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical condition or imaging was not indicative of surgery",
+    "Clinical notes are incomplete or do not clearly state evaluation findings, implant requirement (if applicable), or planned line of management",
+    "Missing Chest X-ray (AP/Lateral) at pre-authorization",
+    "Missing USG/CECT Abdomen/Thorax at pre-authorization",
+    "Missing detailed operative/procedure notes at claim submission",
+    "Missing post-operative X-ray Chest/Abdomen report at claim submission",
+    "Missing implant details (invoice/barcode) at claim submission if an implant was used",
+    "Missing FIR documentation in cases of trauma at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A diaphragmatic hernia (DH) is a protrusion of abdominal contents into the thoracic cavity as a result of a defect within the diaphragm.",
+      "Types of Diaphragmatic hernia include Congenital (refer to relevant PMJAY guidance document) and Acquired.",
+      "Acquired diaphragmatic hernia (ADH) is rare; diaphragmatic rupture from thoracoabdominal trauma occurs in approximately 0.8 to 3.6% of cases, with relatively low incidence of herniation.",
+      "Common etiologies for acquired diaphragmatic hernias in adulthood are traumatic diaphragmatic rupture (penetrating injury 65%, blunt trauma 35%), hiatus hernia (refer to relevant PMJAY guidance document), and iatrogenic causes.",
+      "Clinical presentation of ADH can vary, including respiratory (shortness of breath, chest pain), abdominal (recurrent abdominal pain, postprandial fullness, vomiting, obstructive gastrointestinal symptoms), and sometimes cardiac symptoms.",
+      "Some spontaneous cases of DH may remain asymptomatic and only revealed upon imaging studies.",
+      "Physical examination may reveal absence of breath sounds over the lower chest area, with bowel sounds being audible.",
+      "Imaging, especially Computed Tomography (CT), is vital for diagnosis of acquired diaphragmatic hernia."
+    ],
+    "surgical_options": [
+      "Management following appropriate resuscitation is surgical repair.",
+      "If primary closure is not possible, mesh repair may be an alternative.",
+      "Surgical repair may utilize open (abdominal, thoracic, or thoracic-abdominal approach) or laparoscopic approach, depending on the timing of clinical diagnosis."
+    ],
+    "pre_op_preparation": "Treatment of acquired diaphragmatic hernia in the acute setting requires appropriate resuscitation of the patient.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "complications": [
+      "Diaphragmatic rupture",
+      "Acute obstructive symptoms",
+      "Respiratory failure incarceration",
+      "Strangulation",
+      "Cardiac tamponade"
+    ]
+  }
+}

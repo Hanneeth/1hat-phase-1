@@ -1,0 +1,110 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB048A",
+  "procedure_code": "SB048A",
+  "condition": "Tenolysis",
+  "procedure_name": "Tenolysis",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Tenolysis_Medco.pdf",
+    "Tenolysis_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Tenolysis is a surgical procedure used to remove adhesions that inhibit active flexion of digits.",
+    "The diagnosis of flexor tendon adhesions is active finger flexion is substantially less than passive flexion.",
+    "Tendon adhesions will occur whenever the surface of a tendon is damaged either through the injury itself, be it laceration or crush, or by surgical manipulation.",
+    "When these adhesions cannot be mobilized by an adequate course of hand therapy, tenolysis should be considered.",
+    "Tenolysis is indicated when the passive range of motion (ROM) is significantly greater than the active ROM at the same joint following fracture, flexor tendon repair, grafting, or tendon sheath infection.",
+    "There is no absolute indication for flexor tenolysis. The decision should be made in a motivated patient who has access to adequate postoperative hand therapy. It should be based on healed fractures and osteotomies, mature soft tissue coverage, intact tendons and gliding tissues, and a full range of passive flexion, and preferably extension of the affected joints."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes_agent_used_for_lysis_of_tendon",
+        "label": "Detailed procedure/operative notes including agent used for lysis of tendon"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes include history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part is clear and relevant?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Details of agents used for lysis of tendon submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure/operative notes include agent used for lysis of tendon?",
+        "expected": true
+      },
+      {
+        "q": "Post procedure clinical photograph is clear and relevant?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Details of agents used for lysis of tendon not submitted or not mentioned in operative notes.",
+    "Clinical notes missing history, signs, symptoms, evaluation findings, indication for procedure, planned line of management, or advice for admission.",
+    "Clinical photograph of affected part is missing or unclear.",
+    "Post procedure clinical photograph is missing or unclear.",
+    "Detailed Indoor Case Papers (ICPs) are missing or incomplete.",
+    "Detailed Discharge Summary is missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Flexor Tenolysis surgery for flexor digitorum profundus and superficialis adhesions is a common procedure performed by hand surgeons.",
+      "Releasing these adhered tendons can greatly improve hand function and improve quality of life."
+    ],
+    "surgical_options": [
+      "The procedure begins with exposure of the full length of the flexor tendon and provides the best operative window to the flexor tendon and pully system.",
+      "After exposure, both flexor tendons from underlying structures, and all tendon adhesions are lysed. Most critical aspect of flexor tenolysis is to respect the pulley system for the flexor tendons."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

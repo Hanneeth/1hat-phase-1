@@ -1,0 +1,131 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB022B",
+  "procedure_code": "SB022B",
+  "condition": "Dorsal and lumbar spine fixation",
+  "procedure_name": "Dorsal and lumbar spine fixation - Posterior",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Dorsal and lumbar spine fixation_Medco.pdf",
+    "Dorsal and lumbar spine fixation_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Thoracic and lumbosacral spine to provide stability",
+    "To restore anatomic alignment in the treatment of fractures, degenerative disease, and infection and tumors",
+    "To correct congenital deformities such as scoliosis",
+    "Substantial angulation",
+    "Pain",
+    "Progression",
+    "Pulmonary dysfunction",
+    "Neurologic compromise",
+    "Congenital scoliosis",
+    "Neuromuscular scoliosis",
+    "Degenerative scoliosis",
+    "Idiopathic scoliosis"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_pre_admission_plan",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "pre_op_x_ray_films",
+        "label": "X-ray films labelled with patient ID, date and side (Left/ Right) -affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_op_x_ray_films",
+        "label": "Post-procedure X-ray films labelled with patient ID, date and side (Left/Right) -affected part"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "invoice_and_barcode_of_implant",
+        "label": "Invoice and barcode of implant"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission",
+        "expected": true
+      },
+      {
+        "q": "X-ray films labelled with patient ID, date and side (Left/ Right) -affected part",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Indoor case papers (ICPs)",
+        "expected": true
+      },
+      {
+        "q": "Did the post procedure X-ray films labelled with patient ID, date and side (Left/ Right) confirms the surgery/ implant?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Invoice and barcode of implant",
+        "expected": true
+      },
+      {
+        "q": "Does the Post Procedure X Ray/MRI, show the fixation with the implant?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Post-procedure X-ray/MRI does not clearly show the fixation with the implant.",
+    "Clinical notes lack complete history, signs, symptoms, evaluation, indication, or planned management for pre-authorization.",
+    "Pre-operative X-ray films are missing or not properly labelled with patient ID, date, or affected side.",
+    "Post-operative X-ray films are missing or do not confirm the surgery/implant.",
+    "Invoice and barcode for the implant are missing or incomplete.",
+    "Detailed procedure/operative notes are not available or are incomplete.",
+    "Discharge summary lacks essential follow-up advice at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Almost 50% of Spinal injuries of the thoracolumbar region are unstable and can result in significant disability deformity and neurological deficit."
+    ],
+    "surgical_options": [
+      "Posterior Approach: Posterior short segment fixation Including the proximal and distal adjacent normal vertebrae is the most commonly performed surgery for most thoracolumbar fractures."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

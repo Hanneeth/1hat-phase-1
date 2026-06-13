@@ -1,0 +1,92 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU016A",
+  "procedure_code": "SU016A",
+  "condition": "Urinary tract calculus",
+  "procedure_name": "Extracorporeal shock - wave Lithotripsy (ESWL) stone, with or without stent (one side)",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "ESWL & ESWL Follow Up_Medco.pdf",
+    "ESWL & ESWL Follow Up_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Extracorporeal shock wave lithotripsy (ESWL) is a non-invasive method for the treatment of urinary tract calculus in adult."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "ivp_ncct_ct_ivp_reports",
+        "label": "Intravenous pyelogram (IVP) / Non-contrast computed tomography (NCCT)/CT-IVP reports"
+      },
+      {
+        "key": "ehcp_registration",
+        "label": "Empaneled Healthcare Providers (EHCP) registered for ESWL"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "usg_xray_kub_post_procedure",
+        "label": "Was the USG / X-RAY KUB along with Patient ID and Date shows Implant submitted?"
+      },
+      {
+        "key": "intra_operative_photograph",
+        "label": "Intra operative photograph"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Detailed Procedure/Operative notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes and Intravenous pyelogram (IVP) / Non-contrast computed tomography (NCCT)/CT-IVP are indicative of procedure (for ESWL Procedure)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes and Intravenous pyelogram (IVP) / Non-contrast computed tomography (NCCT)/CT-IVP are not indicative of ESWL procedure at pre-authorization.",
+    "Intravenous pyelogram (IVP) / Non-contrast computed tomography (NCCT)/CT-IVP reports missing or inadequate at pre-authorization.",
+    "Empaneled Healthcare Provider (EHCP) not registered for ESWL at pre-authorization.",
+    "Post-procedure USG / X-RAY KUB along with Patient ID and date report not submitted or does not show stone fragmentation/status at claim.",
+    "Intra operative photograph not submitted at claim stage.",
+    "Detailed Procedure/Operative notes missing or incomplete at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Extracorporeal shock wave lithotripsy (ESWL) is a non-invasive method for the treatment of urinary tract calculus in adult. This method causes inoperable disintegration and destruction of calculus in urinary and biliary system, applying to the calculus extracorporeal wave produced through the tissues of the body transmitted and focused shock waves."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

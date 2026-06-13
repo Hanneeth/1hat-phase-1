@@ -1,0 +1,123 @@
+{
+  "_comment": "This STG covers procedure code SU091A, which encompasses older HBP 1.0 codes S700135, S700136, S700137, S700138 for Ilio-Inguinal lymphadenectomy.",
+  "stg_id": "SU091A",
+  "procedure_code": "SU091A",
+  "condition": "Malignant conditions of male and female genitalia, and the skin requiring lymphadenectomy",
+  "procedure_name": "Ilio-Inguinal lymphadenectomy",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Ilio-Inguinal lymphadenectomy_Medco.pdf",
+    "Ilio-Inguinal lymphadenectomy_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MS/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Carcinoma of the penis",
+    "Carcinoma of Urethra, scrotum, and testis with scrotal invasion"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_planned_treatment",
+        "label": "Clinical notes with planned line of treatment"
+      },
+      {
+        "key": "diagnostic_report",
+        "label": "USG/CT/MRI / FNAC/Biopsy report confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes including history, symptoms, signs, vitals, examination findings, planned line of treatment and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the USG/CT/MRI report confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the Clinical notes and USG/CT/MRI report submitted are suggestive for the surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathological report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes (history, symptoms, signs, vitals, examination findings, planned line of treatment, advice for admission) are incomplete or missing at pre-authorization.",
+    "USG/CT/MRI / FNAC/Biopsy report does not confirm the diagnosis at pre-authorization.",
+    "Clinical notes and/or USG/CT/MRI report are not suggestive of the surgery.",
+    "Detailed Indoor case papers are missing or incomplete at claim submission.",
+    "Detailed Procedure / Operative Notes are missing or incomplete at claim submission.",
+    "Histopathology report is missing or incomplete at claim submission.",
+    "Discharge summary with follow-up advice is missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary care hospital",
+    "min_doctor_qualification_desirable": "MCh/Equivalent (in Urology)",
+    "clinical_key_pointers": [
+      "Ilio-Inguinal lymphadenectomy is most performed surgical procedure for several malignant conditions of male and female genitalia, and the skin.",
+      "Lymph node metastasis is the most important prognostic indicator for survival in squamous cell carcinoma of the penis.",
+      "Lymphadenectomy in penile cancer offers a chance for cure in low nodal burden disease.",
+      "Open inguinal lymphadenectomy is the gold standard treatment of metastatic inguinal lymph nodes.",
+      "Patients with low-stage nodal metastasis can achieve durable survival with surgery alone."
+    ],
+    "surgical_options": [
+      "Open inguinal lymphadenectomy (OIL)",
+      "Laparoscopically assisted ilio-inguinal lymphadenectomy (LIIL)",
+      "Video endoscopic inguinal lymphadenectomy (VEIL)",
+      "Radical Inguinal Lymphadenectomy",
+      "Superficial Inguinal Lymph node Dissection (SILD)",
+      "Modified inguinal lymphadenectomy",
+      "Dynamic sentinel node biopsy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

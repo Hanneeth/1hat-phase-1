@@ -1,0 +1,118 @@
+{
+  "_comment": "HBP 1.0 code S600005 and HBP 2.0 code ST006A refer to the same procedure. S600005 is used as the primary procedure_code. The checklist item from Part III, §3.2 regarding 'CT chest report' is assumed to be a typo for 'CT pelvis report' given the context of the document.",
+  "stg_id": "S600005",
+  "procedure_code": "S600005",
+  "condition": "Pelviacetabular fracture",
+  "procedure_name": "Internal fixation of pelviacetabular fracture",
+  "specialty": "Polytrauma",
+  "version": "1.1",
+  "source_files": [
+    "Internal fixation of pelviacetabular fracture _Medco.pdf",
+    "Internal fixation of pelviacetabular fracture _PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MS General Surgery",
+    "DNB General Surgery",
+    "MS Orthopedic surgery",
+    "DNB Orthopedic surgery"
+  ],
+  "clinical_indications": [
+    "Diagnosis of pelviacetabular fracture requiring internal fixation."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_injury_need_for_surgery",
+        "label": "Clinical Notes detailing the injury and need for surgery"
+      },
+      {
+        "key": "medico_legal_case_report_fir_optional",
+        "label": "Medico legal case report/ FIR copy of accident if due to road traffic accidents (optional)"
+      },
+      {
+        "key": "xray_ct_report_pelvis",
+        "label": "X-ray/ CT report of pelvis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "post_op_clinical_photograph_optional",
+        "label": "Post-op clinical photograph of patient (optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes – details of accident, signs & symptoms, indication for surgery?",
+        "expected": true
+      },
+      {
+        "q": "Did X-ray/ CT report suggest pelviacetabular fracture?",
+        "expected": true
+      },
+      {
+        "q": "Was X-ray/ CT pelvis report suggestive of pelviacetabular fracture?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the post op clinical photograph show repair of injury?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "X-ray/ CT report of pelvis is missing or does not confirm pelviacetabular fracture.",
+    "Clinical notes are missing or do not detail accident, signs, symptoms, or indication for surgery.",
+    "Detailed discharge summary is missing or does not mention the date of follow-up.",
+    "Procedure/ Operation notes are missing or incomplete.",
+    "Post-op clinical photograph (if submitted) does not show repair of injury."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operation Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pelvic acetabular fracture is a common kind of fracture, mostly caused by high energy injuries.",
+      "It is associated with high mortality and disability rates.",
+      "The fatality rate is as high as 13.4%, and more than half of patients have other complications¹.",
+      "At the same time, pelvic fractures are associated with high rates of disability.",
+      "The aim of surgical treatment of pelvic acetabular fractures is to restore the symmetry and stability of the pelvic ring structure and the anatomical structure of acetabular.",
+      "Open reduction internal fixation is often used for the treatment of such fractures, but open surgery is in cases of serious injury, more bleeding, and high risk of infection.",
+      "With the development of minimally invasive technology and the concept of the bone channel structure, the percutaneous lag screw technique for the treatment of pelvic and acetabular fractures has been applied in clinical practice and has proven to be effective.",
+      "However, the anatomical structure of the pelvis and acetabulum is complex, and there are many important nerves and vessels adjacent to it.",
+      "Traditional fluoroscopy screw placement is prone to screw malposition, and even minor angle changes may lead to screw perforation and damage of nerve vessels."
+    ],
+    "surgical_options": [
+      "Open reduction internal fixation",
+      "Percutaneous lag screw technique"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

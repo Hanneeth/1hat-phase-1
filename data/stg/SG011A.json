@@ -1,0 +1,156 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Pancreatic pseudocyst/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG011A",
+  "procedure_code": "SG011A",
+  "condition": "Pancreatic pseudocyst",
+  "procedure_name": "CystoJejunostomy - Open",
+  "specialty": "General/Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Pancreatic pseudocyst_Medco.pdf",
+    "Pancreatic pseudocyst_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MCh/DNB/Equivalent (Pediatric Surgery, Surgical Gastroenterology)"
+  ],
+  "clinical_indications": [
+    "Enlargement of the cyst to more than 6 cm",
+    "Setting in of complications",
+    "Symptoms (epigastric pain, mass, nausea, vomiting, feeling of bloating, deep ache in the abdomen, jaundice, chest pain, anorexia, weight loss, ascites, gastrointestinal hemorrhage)",
+    "Concerns about possible malignancy",
+    "Increase in size of cyst",
+    "Severe pain",
+    "No response to conservative line of treatment",
+    "Pseudocyst is persistent over 6 weeks or causing symptoms",
+    "Pancreatic pseudocysts with associated major ductal disruption or a transected pancreas require operative therapy with cyst enterostomy",
+    "Cyst confined to the body and tail of the pancreas (for cysto-jejunostomy or cystogastrostomy)",
+    "Large cysts (for cystojejunostomy using Roux-en-Y loop)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "cyst_size",
+      "operator": ">",
+      "value": "6 cm",
+      "note": "for drainage/surgery"
+    },
+    {
+      "field": "persistence_duration",
+      "operator": ">",
+      "value": "6 weeks",
+      "note": "for surgical treatment"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "wbc_amylase_reports",
+        "label": "White blood cell count, serum amylase reports"
+      },
+      {
+        "key": "usg_cect_mri_abdomen",
+        "label": "USG/CECT/MRI Abdomen"
+      },
+      {
+        "key": "ercp_optional",
+        "label": "Endoscopic Retrograde Cholangiopancreatography (ERCP) (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photographs_optional",
+        "label": "Post-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did USG/CECT/MRI Abdomen confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the radiographic imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative photographs submitted (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Was imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Radiographic imaging not indicative of surgery",
+    "Clinical notes missing detailed history, signs & symptoms, or planned line of treatment",
+    "USG/CECT/MRI Abdomen not confirming the diagnosis",
+    "White blood cell count or serum amylase reports missing at pre-authorization",
+    "Cyst size not documented or below 6 cm for drainage/surgery",
+    "Pseudocyst not persistent for over 6 weeks when surgery is indicated",
+    "Detailed ICPs missing daily vitals or treatment details at claim submission",
+    "Detailed procedure/operative notes not available at claim submission",
+    "Discharge summary missing or lacking follow-up advice at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A pancreatic pseudocyst is a collection of amylase-rich fluid around the pancreas as a result of acute or chronic pancreatitis bound to the pancreas by inflammatory tissue. Fluid collection in the first 4 weeks is an acute fluid collection. After 4 weeks, it becomes an pseudocyst. Fluid is enclosed by a wall of fibrous granulation tissue and is called a pseudocyst. Pancreatic pseudocysts are the most common cystic lesions of the pancreas; accounting for 75-80% of such masses."
+    ],
+    "surgical_options": [
+      "Percutaneous drainage (only in infected pseudocysts)",
+      "Endoscopic drainage",
+      "Surgical drainage",
+      "Transmural drainage (Cystogastrostomy or Cystoduodenostomy)",
+      "Cysto-jejunostomy",
+      "Cystogastrostomy",
+      "Distal pancreatectomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU008A",
+  "procedure_code": "SU008A",
+  "condition": "Nephrostomy - Percutaneous ultrasound guided",
+  "procedure_name": "Nephrostomy - Percutaneous ultrasound guided",
+  "specialty": "Urology, Pediatric Surgery, Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "Nephrostomy Percutaneous ultrasound guided_Medco.pdf",
+    "Nephrostomy Percutaneous ultrasound guided_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Interventional radiology/Urology, Pediatric Surgery)",
+    "MD/Equivalent (in Radiology)"
+  ],
+  "clinical_indications": [
+    "Obstructive uropathy",
+    "Benign causes: Impacted ureteric/pelvis calculi with secondary hydronephrosis (HN), HN associated with pregnancy, Pelvic ureteric junction obstruction, Ureteric stricture disease, Retroperitoneal fibrosis, Urosepsis, Pyonephrosis.",
+    "Malignant causes: HN secondary to carcinoma cervix/prostate, HN secondary to tumor of urinary tract.",
+    "For providing route of access: antegrade ureteral stent placement, Chemotherapy, antifungal, antibiotic therapy, benign stricture dilatation, stone retrieval, endopyelotomy.",
+    "For diagnostic procedures: Whitaker test, antegrade pyelography, biopsy."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "usg_report_confirming_diagnosis",
+        "label": "USG report confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG suggestive of diagnosis and need for the PCN procedure submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes not submitted or do not include evaluation findings and planned line of treatment.",
+    "USG report not submitted or does not confirm the diagnosis and need for the PCN procedure.",
+    "Detailed indoor case papers with daily vitals and treatment details not available.",
+    "Detailed Procedure / Operative Notes not submitted.",
+    "Detailed discharge summary not submitted.",
+    "Clinical notes or USG report not indicative of the procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Percutaneous nephrostomy (PCN) is a common interventional procedure for upper urinary diversion and decompression of the renal collecting system, In spite of it being a basic urological procedure, it remains technically challenging to insert it in the right way and in the right place. PCN can be done under fluoroscopy, ultrasound (USG) or computed tomography guidance."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

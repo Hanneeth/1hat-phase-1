@@ -1,0 +1,145 @@
+{
+  "_comment": "Derived from Cervical Elongation_Medco.pdf and Cervical Elongation_PPD.CPD.pdf. Both PDFs contain the same clinical information in Part I. Part II and III for processing guidelines were taken from Cervical Elongation_PPD.CPD.pdf.",
+  "stg_id": "SO013A",
+  "procedure_code": "SO013A",
+  "condition": "Cervical Elongation",
+  "procedure_name": "Surgeries for Prolapse - Sling Surgeries",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Cervical Elongation_Medco.pdf",
+    "Cervical Elongation_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO or equivalent (Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "The operation is indicated in congenital or nulliparous prolapse without cystocele where the cervix is pulled up mechanically through abdominal route",
+    "Previous operation for Prolapsed failed"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG Abdomen/pelvis"
+      },
+      {
+        "key": "pap_smear",
+        "label": "Pap smear (Optional)"
+      },
+      {
+        "key": "indication_of_implant_requirement",
+        "label": "Indication of implant requirement"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "investigation_reports_if_done",
+        "label": "Investigation reports (if done)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "implant_barcode",
+        "label": "Implant barcode"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was there a documentation of previous prolapsed operation failure (upload previous operative notes)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      },
+      {
+        "q": "Barcode of the Sling used if applicable?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Evidence of pregnancy is present.",
+    "Surgery performed less than 6 weeks post-delivery or post-abortion.",
+    "Suspected lower genital tract malignancy.",
+    "Short sigmoid mesocolon is present.",
+    "Clinical presentation and imaging did not confirm the diagnosis.",
+    "Documentation of previous prolapsed operation failure is missing for revision surgery."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Abdominal sling operations have been designed for young women suffering from second or third degree uterine prolapse, and who are desirous of retaining their childbearing and menstrual functions."
+    ],
+    "surgical_options": [
+      "Abdominal",
+      "Laparoscopic",
+      "Abdominal wall cervicopexy (Purandare`s operation)",
+      "Shirodkar's abdominal sling operation",
+      "Khanna's abdominal sling operation"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Pregnancy",
+      "Less than 6 weeks post-delivery or post abortion",
+      "Suspected lower genital tract malignancy",
+      "Short sigmoid mesocolon"
+    ]
+  }
+}

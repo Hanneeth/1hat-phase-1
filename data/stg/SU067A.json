@@ -1,0 +1,137 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU067A",
+  "procedure_code": "SU067A",
+  "condition": "Urethral Stricture (post-urethroplasty)",
+  "procedure_name": "Urethroplasty Follow Up",
+  "specialty": "Urology/ Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Urethral Dilatation, Urethroplasty & Follow Up _Medco.pdf",
+    "Urethral Dilatation, Urethroplasty & Follow Up _PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [],
+  "clinical_indications": [
+    "Urethroplasty- Follow up: Is very important because most Urethral strictures recure with in first year or two after surgery.",
+    "Within 3 months of initial surgery, patients have their urinary flow checked and under a cystoscopy to check the re-scarring.",
+    "At this stage patients usually advised to come for a follow up after 12 months."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission (not required)"
+      },
+      {
+        "key": "rgu_mcu_report",
+        "label": "Anterograde urethrography/Retrograde urethrography (RGU)/Micturating cystourethrography (MCU) (not required)"
+      },
+      {
+        "key": "discharge_summary_last_urethroplasty",
+        "label": "Discharge Summary of last Urethroplasty performed"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs) (not required)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure / Operative notes (not required)"
+      },
+      {
+        "key": "detailed_clinical_notes_current_visit",
+        "label": "Detailed clinical notes of the current visit"
+      },
+      {
+        "key": "intra_procedure_clinical_photograph",
+        "label": "Intra procedure clinical photograph (not required)"
+      },
+      {
+        "key": "post_procedure_usg_uroflowmetry_report",
+        "label": "Post procedure USG/ Uroflowmetry report"
+      },
+      {
+        "key": "detailed_procedure_operative_notes_dilators_size",
+        "label": "Detailed procedure / operative notes detailing size of dilators used (not required)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary (not required)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the Anterograde urethrography/ Retrograde urethrography (RGU) / Micturating cystourethrography (MCU) Investigation reports submitted?",
+        "expected": false
+      },
+      {
+        "q": "Was Discharge Summary of last Urethroplasty performed submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with daily vitals and treatment details available?",
+        "expected": false
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes submitted?",
+        "expected": false
+      },
+      {
+        "q": "Are the detailed procedure / operative notes detailing size of dilators used?",
+        "expected": false
+      },
+      {
+        "q": "Are the detailed clinical notes of the current visit submitted?",
+        "expected": true
+      },
+      {
+        "q": "Intra procedure clinical photograph submitted?",
+        "expected": false
+      },
+      {
+        "q": "Post procedure USG/ Uroflowmetry report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary submitted?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Discharge Summary of last Urethroplasty not submitted at pre-authorization for follow-up",
+    "Detailed clinical notes of the current visit not submitted at claim stage",
+    "Post procedure USG/ Uroflowmetry report not submitted at claim stage",
+    "Anterograde urethrography/Retrograde urethrography (RGU)/Micturating cystourethrography (MCU) reports submitted at pre-authorization (when not required)",
+    "Detailed Indoor case papers (ICPs) submitted at claim stage (when not required)"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary level facilities",
+    "min_doctor_qualification_desirable": "MS/DNB/ Equivalent (in Urology/ Pediatric Surgery)",
+    "clinical_key_pointers": [
+      "Urethroplasty- Follow up: Is very important because most Urethral strictures recure with in first year or two after surgery.",
+      "Within 3 months of initial surgery, patients have their urinary flow checked and under a cystoscopy to check the re-scarring. At this stage patients usually advised to come for a follow up after 12 months. Uroflowmetry play a key role in the follow-up of these patients."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Follow up: Some non-invasive testing includes: Uroflowmetry (provides quantitative data such as maximum and average flow rates in mL/second, voiding curves, and voided volume in mL). Ultrasound post-void residual (PVR) (provides objective data regarding bladder emptying, an elevated PVR correlates with obstructive voiding).",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

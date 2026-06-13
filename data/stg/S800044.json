@@ -1,0 +1,168 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S800044",
+  "procedure_code": "S800044",
+  "condition": "Hydrocephalus",
+  "procedure_name": "Ventricular Puncture",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "External Ventricular Drainage (EVD)-Ventricular Puncture_Medco.pdf",
+    "External Ventricular Drainage (EVD)-Ventricular Puncture_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent in (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Therapeutic (To relieve raised ICP)",
+    "Hydrocephalus (communicating and non-communicating)",
+    "Surgical Mass lesions",
+    "Infections (pyogenic and tuberculous)",
+    "Chiari Malformations",
+    "Subarachnoid hemorrhage resulting in acute hydrocephalus",
+    "Shunt failure due to mechanical disruption or infection",
+    "Brain relaxation in the OT, etc.",
+    "Intracranial Pressure monitoring"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_evaluation",
+        "label": "Clinical Evaluation"
+      },
+      {
+        "key": "ct_mri_brain",
+        "label": "CT/MRI brain"
+      },
+      {
+        "key": "cerebrospinal_fluid_analysis",
+        "label": "Cerebrospinal Fluid (CSF) Analysis"
+      },
+      {
+        "key": "coagulation_profile",
+        "label": "Coagulation Profile"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photographs",
+        "label": "Post-operative photographs (optional)"
+      },
+      {
+        "key": "ct_brain_preop_postop",
+        "label": "CT brain (Preop & Post op)"
+      },
+      {
+        "key": "histopathology_examination",
+        "label": "Histopathology examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes including history, symptoms, signs, vitals, examination findings, planned line of treatment and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient present with vomiting, altered sensorium, drowsiness, seizure, generalized tonic-clonic convulsions, headache?",
+        "expected": true
+      },
+      {
+        "q": "Was indication for procedure/surgery documented?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was the patient on/presented with/evidence of: On anticoagulation therapy?",
+        "expected": false
+      },
+      {
+        "q": "Was the patient on/presented with/evidence of: Scalp infection?",
+        "expected": false
+      },
+      {
+        "q": "Was the patient on/presented with/evidence of: Brain Abscess?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was CT brain pre and post-surgery report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing or incomplete, or do not include history, symptoms, signs, vitals, examination findings, planned line of treatment, or advice for admission.",
+    "Patient did not present with vomiting, altered sensorium, drowsiness, seizure, generalized tonic-clonic convulsions, or headache without proper justification.",
+    "Indication for procedure/surgery not documented.",
+    "Clinical presentation or imaging not indicative of surgery.",
+    "Patient is on anticoagulation therapy without documented justification.",
+    "Scalp infection is present without documented justification.",
+    "Brain abscess is present without documented justification.",
+    "Detailed Indoor case papers with daily vitals and line of treatment are missing or incomplete.",
+    "Detailed procedure / Operative Notes are not available.",
+    "Discharge summary with follow-up advise at the time of discharge is missing or incomplete.",
+    "Pre- and post-surgery CT brain reports are missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "clinical_key_pointers_uncertain": "The 'Clinical key pointers' section in the Medco document is explicitly titled and refers to 'External Ventricular Drains (EVDs)' only. No specific key pointers for 'Ventricular Puncture' were found.",
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "post_op_care_uncertain": "The 'Complications of EVD' and 'Removal of the EVD' sections in the Medco document are specific to EVD. No separate post-operative care instructions were found for 'Ventricular Puncture'.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Concurrent use of anticoagulant drugs",
+      "Bleeding disorders",
+      "Scalp infection",
+      "Brain abscess"
+    ],
+    "contraindications_uncertain": "The 'Contraindications' section in the Medco document is listed generally and not explicitly differentiated between EVD and Ventricular Puncture. These contraindications are considered applicable to both procedures given the context."
+  }
+}

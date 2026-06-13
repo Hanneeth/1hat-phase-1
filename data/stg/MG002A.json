@@ -1,0 +1,128 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG002A",
+  "procedure_code": "MG002A",
+  "condition": "Severe Sepsis",
+  "procedure_name": "Severe Sepsis",
+  "specialty": "General Medicine / Pediatric Medicine",
+  "version": "1.1",
+  "source_files": [
+    "Severe Sepsis_Medco.pdf",
+    "Severe Sepsis_PPD.CPD.pdf"
+  ],
+  "alos": "6-9 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Fever or with or without rashes",
+    "Diarrhea",
+    "Poor feeding",
+    "Excessive vomiting",
+    "Lethargy",
+    "Cold / bluish",
+    "Rapid or shallow breathing",
+    "Decrease responsiveness",
+    "Stiff neck",
+    "Stridor",
+    "Convulsion",
+    "Decrease Urine output",
+    "Abdominal swelling"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "fever",
+      "operator": ">",
+      "value": "38.3 Degrees Celsius",
+      "note": null
+    },
+    {
+      "field": "pulse oximetry saturation",
+      "operator": "<",
+      "value": "95%",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete Blood count"
+      },
+      {
+        "key": "planned_line_of_management",
+        "label": "Planned line of management"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "culture_reports_blood_urine",
+        "label": "Culture reports- Blood & Urine"
+      },
+      {
+        "key": "biochemistry_renal_liver_function_tests",
+        "label": "Biochemistry- Renal Function Test & Liver Function Test reports"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the patient admitted with fever > 38.3 Degrees Celsius?",
+        "expected": true
+      },
+      {
+        "q": "Are there any changes in Pulse Oximetry, show < 95% Saturation?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do the signs, symptoms and investigations (such as blood/ urine routine/ culture and biochemistry) confirm severe sepsis/ septic shock?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary available with discharge advise?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Fever not documented or below 38.3 Degrees Celsius",
+    "Pulse Oximetry saturation not documented or >= 95%",
+    "Clinical notes missing at pre-authorization",
+    "Complete Blood Count missing at pre-authorization",
+    "Planned line of management missing at pre-authorization",
+    "Indoor case papers missing at claim submission",
+    "Culture reports (Blood & Urine) missing at claim submission",
+    "Biochemistry (Renal Function Test & Liver Function Test) reports missing at claim submission",
+    "Signs, symptoms, or investigations do not confirm severe sepsis",
+    "Discharge summary missing or does not include discharge advice"
+  ],
+  "additional_information": {
+    "icd_10_code": "A41.9, R65.21",
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD / DNB (Medicine) / DM/DNB (Pediatric)",
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Shock does not improve after 2nd fluid bolus, Signs of fluid overload, No facility for continuous monitoring, Before referral counsel the parents and inform referring facility",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

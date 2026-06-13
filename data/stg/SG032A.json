@@ -1,0 +1,129 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG032A",
+  "procedure_code": "SG032A",
+  "condition": "Hemorrhoids",
+  "procedure_name": "Hemorrhoidectomy without Stapler (includes all other modalities such as Laser, but does not include banding)",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Hemorrhoidectomy_Medco.pdf",
+    "Hemorrhoidectomy_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS General Surgery",
+    "DNB General Surgery"
+  ],
+  "clinical_indications": [
+    "Grade III/IV hemorrhoids"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "hemorrhoid_grade",
+      "operator": "in",
+      "value": [
+        "Grade III",
+        "Grade IV"
+      ],
+      "note": "Hemorrhoidectomy is indicated for Grade III/IV hemorrhoids."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_examination",
+        "label": "Clinical Examination"
+      },
+      {
+        "key": "proctoscopy",
+        "label": "Proctoscopy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_op_clinical_photographs",
+        "label": "Intra-op clinical photographs"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes include detailed history, signs & symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Per rectal examination and proctoscopy report confirms hemorrhoid with or without bleeding points?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Indoor Case Papers (ICPs) with daily vitals and line of treatment available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / operative notes available?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary includes follow-up advice?",
+        "expected": true
+      },
+      {
+        "q": "Intra-operative photographs submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Indication for surgery not clearly mentioned in clinical notes.",
+    "Proctoscopy report not submitted or does not confirm diagnosis of hemorrhoids.",
+    "Clinical notes lacking detailed history, signs, or symptoms.",
+    "Intra-operative clinical photographs missing or unclear.",
+    "Discharge summary missing follow-up advice or not detailed."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hemorrhoids are dilated veins occurring in relation to the anus (commonly known as piles).",
+      "Hemorrhoids develop due to: Downward displacement or prolapse of the anal cushions",
+      "Loss of anchoring connective tissue in the anal cushions",
+      "Abnormal dilatation of veins in the internal hemorrhoidal venous plexus",
+      "Benign prostatic hyperplasia – chronic straining",
+      "Chronic constipation – straining at stools",
+      "Carcinoma of rectum – compression / thrombosis of superficial rectal veins"
+    ],
+    "surgical_options": [
+      "Open Haemorrhoidectomy (Milligan - Morgan Operation)",
+      "Closed haemorrhoidectomy (Hill-Ferguson operation)",
+      "Stapler Hemorrhoidectomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU003B",
+  "procedure_code": "SU003B",
+  "condition": "Nephrectomy (for Benign conditions)",
+  "procedure_name": "Nephrectomy For Benign pathology - Lap.",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Nephrectomy (for Benign conditions) _Medco.pdf",
+    "Nephrectomy (for Benign conditions)_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MCh Urology",
+    "DNB Urology",
+    "MCh Pediatric Surgery",
+    "DNB Pediatric Surgery",
+    "Equivalent (in Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Recurrent/Severe infection",
+    "Severe renal haemorrhage",
+    "Interactable pain",
+    "Polycystic renal diseases",
+    "Tuberculosis",
+    "Dysplastic kidney",
+    "Severely hypertensive patients, BP control is suboptimal despite optimal fluid removal and use of multiple antihypertensive agents",
+    "Multicystic kidneys",
+    "Reflux nephropathy",
+    "Obstructive uropathy",
+    "Xanthogranulomatous pyelonephritis",
+    "Calculus disease",
+    "Protein-losing nephropathy",
+    "Severe traumatic injury"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_treatment_plan",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "imaging_reports_surgery_need",
+        "label": "USG/CT scan, +/- FNAC/Biopsy /IVP (for Open.) confirming the need for surgery reports"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "intra_operative_photograph",
+        "label": "Intra operative Photograph"
+      },
+      {
+        "key": "post_procedure_xray_report",
+        "label": "Post procedure X ray report"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG/CT scan, +/- FNAC/Biopsy /IVP (for Open.) confirming the need for surgery reports submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intra operative Photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure X ray submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathology report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or imaging (USG/CT scan, FNAC/Biopsy/IVP) are not indicative of the proposed nephrectomy procedure for benign conditions.",
+    "Clinical notes including evaluation findings and planned line of treatment not submitted for pre-authorization.",
+    "USG/CT scan, +/- FNAC/Biopsy /IVP reports confirming the need for surgery not submitted for pre-authorization.",
+    "Intra operative Photograph not submitted at claim submission.",
+    "Histopathology report not submitted at claim submission, preventing confirmation of benign pathology."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care and availability of Laparoscopic surgery facility.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Nephrectomy: Surgical removal of a kidney, either to treat various kidney diseases or to remove a normal healthy kidney from a donor as part of a kidney transplant procedure.",
+      "Simple nephrectomy: is the surgical removal of a kidney.",
+      "Open Nephrectomy: A surgical procedure involves a transperitoneal incision or an extraperitoneal incision, depending on the size, location of the tumour, and the patient's habitus.",
+      "Laparoscopic Nephrectomy: is a minimally invasive surgery, both transperitoneal and retroperitoneal techniques can be used. laparoscopic nephrectomy compared with open nephrectomy, which is associated with significant morbidity and mortality."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

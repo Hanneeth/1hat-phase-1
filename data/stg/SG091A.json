@@ -1,0 +1,102 @@
+{
+  "_comment": "Distilled from Skin Flaps - Rotation Flaps and Tissue Reconstruction Flap_Medco.pdf and _PPD.CPD.pdf",
+  "stg_id": "SG091A",
+  "procedure_code": "SG091A",
+  "condition": "Skin Flaps - Rotation Flaps/Tissue Reconstruction Flap",
+  "procedure_name": "Skin Flaps - Rotation Flaps",
+  "specialty": "Plastic & Reconstructive Surgery/General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Skin Flaps - Rotation Flaps and Tissue Reconstruction Flap_Medco.pdf",
+    "Skin Flaps - Rotation Flaps and Tissue Reconstruction Flap_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent in Plastic Surgery/ Reconstructive Surgery/General Surgery"
+  ],
+  "clinical_indications": [
+    "To cover defects with exposed bone, tendon, cartilage, vessels or other vital structures.",
+    "A functioning flap can also be done to provide a lost function at the recipient site such as functioning gracilis muscle transfer in facial nerve palsy or brachial plexus palsy."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_original_pathology",
+        "label": "Clinical notes detailing original pathology"
+      },
+      {
+        "key": "previous_surgery_report_indication",
+        "label": "Previous surgery report and indication of current procedure"
+      },
+      {
+        "key": "evidence_confirmed_diagnosis_leprosy",
+        "label": "Evidence of confirmed diagnosis of Leprosy (If applicable) (Not applicable for this procedure)"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/Operative notes"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_affected_part",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are the Clinical notes detailing original pathology and Clinical photograph indicative of the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes detailing original pathology or clinical photograph are not indicative of the procedure.",
+    "Clinical notes detailing original pathology not submitted at pre-authorization.",
+    "Previous surgery report and indication for current procedure not submitted at pre-authorization.",
+    "Clinical photograph not submitted at pre-authorization.",
+    "Detailed Indoor case papers not submitted at claim submission.",
+    "Detailed procedure/Operative notes not provided at claim submission.",
+    "Post procedure clinical photograph of the affected part not submitted at claim submission.",
+    "Discharge summary report not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "A flap consists of any tissue that survives based on its own blood supply. The tissue components such as skin, muscle, bone etc can be included in the flap.",
+      "They can be classified as local, regional or distant depending on their contiguity from the defect to be covered.",
+      "Advantages: good color and texture match can be provided, provides pliable tissue therefore, good for covering joints as it does not restrict motion across the joint, can be used to cover exposed bone and critical structures as it has its own blood supply, better functional and cosmetic outcomes."
+    ],
+    "surgical_options": [
+      "Local flap: tissue that is taken from an adjacent area to the defect. It can be transferred as a rotation, transposition or an advancement flap.",
+      "Regional flap: the donor area is located near to the defect but not in immediate proximity.",
+      "Distant flap: the donor area is in a different part of the body. It can be transferred as pedicled or a free flap. In a pedicled flap, the flap remains attached to the donor site at its base. Whereas, in a free flap, it is completely detached from the donor site and is reattached at the recipient site by anastomosis of the vessels."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

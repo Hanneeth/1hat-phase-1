@@ -1,0 +1,91 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU046A",
+  "procedure_code": "SU046A",
+  "condition": "Deflux for VUR followup",
+  "procedure_name": "Deflux for VUR followup",
+  "specialty": "Urology",
+  "version": null,
+  "source_files": [
+    "Deflux for VUR_Medco.pdf",
+    "Deflux for VUR_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MCh in Urology",
+    "DNB in Urology",
+    "Equivalent in Urology",
+    "MCh in Pediatric Surgery",
+    "DNB in Pediatric Surgery",
+    "Equivalent in Pediatric Surgery"
+  ],
+  "clinical_indications": [
+    "Febrile episodes",
+    "Anorexia",
+    "Vomiting",
+    "Dysuria"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "discharge_summary_last_deflux_vur",
+        "label": "Discharge summary of last admission for Deflux for VUR"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_clinical_papers",
+        "label": "Detailed clinical papers along with the treatment given"
+      },
+      {
+        "key": "detailed_procedure_notes",
+        "label": "Detailed procedure notes"
+      },
+      {
+        "key": "intravenous_urography",
+        "label": "Intravenous urography (IVU)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the earlier discharge summary indicative of follow-up procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Earlier discharge summary not indicative of a follow-up procedure for Deflux for VUR.",
+    "Detailed clinical notes for pre-authorization are incomplete, missing history, indications, symptoms, signs, examination findings, or advice for admission.",
+    "Discharge summary from the last Deflux for VUR admission is not provided at pre-authorization.",
+    "Intravenous urography (IVU) report is missing at the time of claim submission.",
+    "Clinical diagnosis of Deflux for VUR followup is not backed by specified clinical manifestations (febrile episodes, anorexia, vomiting, dysuria)."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Deflux for VUR only if diagnosis made is backed by clinical manifestation"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

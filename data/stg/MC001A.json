@@ -1,0 +1,112 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MC001A",
+  "procedure_code": "MC001A",
+  "condition": "Right Heart Catheterization",
+  "procedure_name": "Right Heart Catheterization (New Package)",
+  "specialty": "Cardiology",
+  "version": "1.1",
+  "source_files": [
+    "Right Left Heart Catheterization_Medco.pdf",
+    "Right Left Heart Catheterization_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "DM Cardiology",
+    "DNB Cardiology",
+    "equivalent (Cardiology)"
+  ],
+  "clinical_indications": [
+    "Evaluation and management of suspected coronary artery disease",
+    "Evaluation of and management of valvular dysfunction",
+    "Evaluation of and management of congenital heart disease",
+    "Cardiac biopsy: To evaluate suspected cardiac transplant rejection or secondary cardiomyopathies"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_treatment_plan_indication",
+        "label": "Clinical Notes with planned line of treatment and indication for procedure"
+      },
+      {
+        "key": "ecg",
+        "label": "ECG"
+      },
+      {
+        "key": "echo_report_stills",
+        "label": "Echo report with stills"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "invoices_catheter_accessories",
+        "label": "Invoices of catheter and other accessories used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the ECG of the patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Echo report of patient with stills submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice of catheter and other accessories used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes, treatment plan, or indication for procedure not submitted or incomplete",
+    "ECG not submitted at pre-authorization stage",
+    "Echo report with stills not submitted at pre-authorization stage",
+    "Procedure/Operation notes missing or not detailed at claim submission",
+    "Detailed discharge summary missing or does not mention date of follow-up",
+    "Invoices for catheter and other accessories used not submitted"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Cardiac catheterization is a procedure used to access, delineate and record pressure of different chambers and vasculature of heart, using hollow catheters and inject radio-opaque dye to visualize anatomy, as shown on image intensifier.",
+      "Cardiac catheterization is generally a supplementary test preceded by appropriate non-invasive tests.",
+      "Right heart catheterization (venous or flow-directed catheter): The catheter is inserted through femoral vein and then advanced to the right ventricle and the pulmonary artery. The catheter is used to measure the pressure levels in the right ventricle and the pulmonary artery. A contrast medium is injected through the catheter so that the right chamber, the circulation of blood and the function of the cardiac valves can be examined."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

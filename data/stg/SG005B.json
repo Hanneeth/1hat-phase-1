@@ -1,0 +1,119 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG005B",
+  "procedure_code": "SG005B",
+  "condition": "Vagotomy",
+  "procedure_name": "Vagotomy + Pyloroplasty",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Vagotomy_Medco.pdf",
+    "Vagotomy_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS / DNB/ equivalent (General Surgery)"
+  ],
+  "clinical_indications": [
+    "Sudden, sharp and severe pain in upper abdomen",
+    "Spreading of pain to rest of abdomen",
+    "Pain gets worse after oral ingestion",
+    "Feeling of giddiness and fainting",
+    "Fever and Weakness",
+    "History of stomach ulceration not responding to medical therapy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "x_ray_ct_scan",
+        "label": "X ray / CT Scan"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "treatment_detail",
+        "label": "Treatment detail"
+      },
+      {
+        "key": "intra_operative_photograph",
+        "label": "Intra operative photograph"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      },
+      {
+        "key": "histopathological_report",
+        "label": "Histopathological report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "X-ray / CT scan showing gastric outlet obstruction or perforation",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the intra operative photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathological report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "No evidence for recurrent stomach ulceration.",
+    "Clinical notes are incomplete, lacking detailed history, signs & symptoms, or indication for procedure.",
+    "X-ray / CT scan does not show gastric outlet obstruction or perforation as an indication.",
+    "Detailed Indoor Case Papers (ICPs) are incomplete, missing daily vitals or line of treatment.",
+    "Intra operative photograph not submitted.",
+    "Histopathological report not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Sudden, sharp and severe pain in upper abdomen",
+      "Spreading of pain to rest of abdomen",
+      "Pain gets worse after oral ingestion",
+      "Feeling of giddiness and fainting",
+      "Fever and Weakness",
+      "History of stomach ulceration not responding to medical therapy"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB027A",
+  "procedure_code": "SB027A",
+  "condition": "Disarticulation",
+  "procedure_name": "Disarticulation - Hind quarter",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Disarticulation_Medco.pdf",
+    "Disarticulation_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Trauma beyond repair",
+    "Irreparable loss of the blood supply",
+    "Malignancy: high- and low-grade malignant bone and soft-tissue tumours",
+    "Severe contracture",
+    "Infection",
+    "Congenital deformities",
+    "Burns",
+    "Thermal/electrical injury",
+    "Frostbite",
+    "Peripheral Vascular disease",
+    "Complications from diabetes"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_justifying_diagnosis_and_indication",
+        "label": "Clinical notes justifying the diagnosis and indication for proceeding with surgery along with planned line of treatment"
+      },
+      {
+        "key": "xray_mri_pet_affected_limb",
+        "label": "X-ray/MRI/PET labelled with patient ID, date and side (Left/Right) -affected limb"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of the affected part showing the gangrene/injury/severe anatomical deformity"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case Papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post-procedure clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Does the Post-op clinical photograph show the amputation/Disarticulation?",
+        "expected": true
+      },
+      {
+        "q": "The detailed procedure notes mention the reason for Disarticulation/ Amputation are submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Post-operative clinical photograph does not clearly show amputation/disarticulation.",
+    "Detailed procedure notes do not mention the reason for disarticulation/amputation.",
+    "Clinical notes justifying diagnosis and indication for surgery with planned line of treatment are missing or incomplete.",
+    "X-ray/MRI/PET of affected limb is missing, not labelled with patient ID/date, or incorrectly labelled for side (Left/Right).",
+    "Clinical photograph of the affected part is missing or does not clearly show gangrene/injury/severe anatomical deformity.",
+    "Detailed Indoor Case Papers (ICPs) are missing or incomplete.",
+    "Detailed Procedure / Operative Notes are missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "The forequarter amputation also called as Inter scapula thoracic amputation involves the surgical removal of one entire upper extremity and shoulder gridle, including scapula and a portion of the clavicle",
+      "Hindquarter amputation is synonymous with hemipelvectomy, disarticulation of the innominate bone, inter-ilio-abdominal amputation, sacroiliac disarticulation, trans iliac amputation, inter pelvi-abdominal amputation and trans pelvic amputation.",
+      "Shoulder disarticulation and forequarter amputation are usually related to malignancy or severe trauma."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

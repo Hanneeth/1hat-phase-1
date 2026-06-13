@@ -1,0 +1,99 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU044",
+  "procedure_code": "SU044",
+  "condition": "Partial Cystectomy- Follow Up",
+  "procedure_name": "Partial Cystectomy Follow Up",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Partial Cystectomy Follow Up_Medco.pdf",
+    "Partial Cystectomy Follow Up_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MCh/DNB equivalent in Urology, Pediatric Surgery"
+  ],
+  "clinical_indications": [
+    "Painless hematuria",
+    "Recurrent cystitis (specially in elder population)",
+    "Pain flanks and lower back",
+    "Frequent feeling of urination"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_examination_findings_previous_surgery_procedure_daycare_advice",
+        "label": "Clinical notes detailing examination findings, previous surgery/procedure, advise for daycare procedure."
+      },
+      {
+        "key": "discharge_summary_last_admission_partial_cystectomy_procedure",
+        "label": "Discharge Summary of last admission for Partial cystectomy procedure"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_clinical_notes_current_visit",
+        "label": "Detailed clinical notes of the current visit"
+      },
+      {
+        "key": "post_procedure_usg_report",
+        "label": "Post procedure USG report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes detailing examination findings, previous surgery/procedure, advise for daycare procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge Summary of last admission for Partial cystectomy procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical notes and discharge Summary of last admission for Partial cystectomy are indicative of follow-up visit?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed clinical notes of the current visit submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure USG submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes detailing examination findings, previous surgery/procedure, or advice for daycare procedure missing at pre-authorization.",
+    "Discharge Summary of last admission for Partial cystectomy procedure missing at pre-authorization.",
+    "Detailed clinical notes of the current visit missing at claim submission.",
+    "Post procedure USG report missing at claim submission.",
+    "Clinical notes and/or discharge Summary of last admission are not indicative of a follow-up visit for Partial Cystectomy."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Partial Cystectomy only if diagnosis made is backed by clinical manifestation",
+      "Partial or segmental cystectomy is a bladder-preserving treatment that involves full-thickness surgical removal of the bladder tumor and surrounding bladder wall.",
+      "Partial cystectomy is used to treat both malignant and benign conditions of the bladder.",
+      "Its primary malignant indication is for solitary, primary, muscle-invasive, or high-grade bladder cancer that does not involve specific regions of the bladder such as the bladder trigone, vesical neck, or posterior urethra and that can be resected with adequate surgical margins (1-2 cm).",
+      "The classically described indication for partial cystectomy is for the removal of an adenocarcinoma or urachal carcinoma that develops in the dome of the bladder."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG004A",
+  "procedure_code": "MG004A",
+  "condition": "Dengue",
+  "procedure_name": "Dengue fever",
+  "specialty": "General Medicine/ Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Dengue_Medco.pdf",
+    "Dengue_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Diagnosis of Dengue fever based on symptoms including fever and two of the following: Nausea, Vomiting, Rash, Myalgia, Headache, Retro Orbital pain, Arthralgia, Hemorrhagic manifestation, AND absence of warning signs for severe dengue."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete Blood Count (CBC)"
+      },
+      {
+        "key": "ns1_antigen",
+        "label": "NS1 Antigen"
+      },
+      {
+        "key": "peripheral_blood_film",
+        "label": "Peripheral blood film"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_vitals_monitoring",
+        "label": "Indoor case papers including monitoring of vitals"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete Blood Count (CBC)"
+      },
+      {
+        "key": "all_other_investigation_reports",
+        "label": "All other investigation reports"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the clinical notes mention Fever with chills, sweating, headache, body ache, vomiting, rash on the body?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient have high fever (temp > 102 degree)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Did CBC show Thrombocytopenia, platelets < 1 lakh/cumm?",
+        "expected": true
+      },
+      {
+        "q": "Was Dengue NS1 / IgM report positive?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing documentation of fever with chills, sweating, headache, body ache, vomiting, or rash on the body.",
+    "Patient's recorded temperature is not greater than 102 degrees Fahrenheit.",
+    "Dengue NS1 or IgM report is negative or not provided.",
+    "Platelet count is documented as >= 1 lakh/cumm, inconsistent with the general expectation for PM-JAY dengue claims."
+  ],
+  "additional_information": {
+    "icd_10_code": "A90",
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/ DNB/ equivalent (Medicine/ Pediatrics)",
+    "clinical_key_pointers": [
+      "Nausea and vomiting",
+      "Rash",
+      "Myalgia",
+      "Headache",
+      "Retro Orbital pain",
+      "Arthralgia",
+      "Hemorrhagic manifestation"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": "Clinical:\n- No fever for 48 hours\n- Improvement in clinical status (general well-being, appetite, haemodynamic status, urine output, respiratory distress)\nLaboratory:\n- Increasing trend of platelet count\n- Stable haematocrit without intravenous fluids",
+    "comorbidity_management": null,
+    "referral_criteria": "Reasons for referral (for dengue with warning signs or severe dengue):\n- Cold extremities, restlessness\n- Acute abdominal pain\n- Decreased urine output\n- Bleeding and hemoconcentration\n- Rising PCV & thrombocytopenia without clinical symptoms",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE029A",
+  "procedure_code": "SE029A",
+  "condition": "Retinal Laser Photocoagulation",
+  "procedure_name": "Retinal Laser Photocoagulation (For retinal tear repair Per Eye Per Sitting)",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "PM JAY/Standard Treatment Guideline/master/Retinal laser photocoagulation/Retinal laser photocoagulation_Medco.pdf",
+    "PM JAY/Standard Treatment Guideline/master/Retinal laser photocoagulation/Retinal laser photocoagulation_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma/ equivalent (in Ophthalmology)",
+    "specialist training in Retina"
+  ],
+  "clinical_indications": [
+    "Proliferative diabetic retinopathy",
+    "Diabetic macular edema",
+    "Retinal ischemia",
+    "Retinal neovascularization",
+    "Retinal tears",
+    "Retinoblastoma",
+    "Retinopathy of prematurity (ROP)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "procedure_notes_operative_notes",
+        "label": "Procedure notes/ Operative notes"
+      },
+      {
+        "key": "intra_procedure_photograph_with_time_and_date",
+        "label": "Intra-Procedure photograph with time and date (optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes including history (of diabetes/ trauma), family history, clinical symptoms (floaters, vision loss), examination (fundus examination using direct/ indirect ophthalmoscope &B-scan)?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected part with Proper labelling of Affected Eye whether R or L with full face photograph.",
+        "expected": true
+      },
+      {
+        "q": "Detailed admission notes?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient history, symptoms (dark spots/ floaters in the vision) and clinical examination correlate with the findings suggesting the need for retinal laser photocoagulation?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT/procedure notes detail the steps performed and was the intervention successful?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Was the intra procedure photograph submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient history, symptoms, or clinical examination findings do not correlate with the need for retinal laser photocoagulation.",
+    "Detailed clinical notes missing or incomplete at pre-authorization.",
+    "Clinical photo of affected part missing or improperly labelled (R or L) or full face photograph missing at pre-authorization.",
+    "Admission notes missing or incomplete at pre-authorization.",
+    "OT/procedure notes missing or do not detail steps performed or intervention success at claim submission.",
+    "Documents for post-op care and follow-up advice missing at claim submission.",
+    "Intra-procedure photograph not submitted at claim submission (if applicable for non-optional cases or for optional if submitted)."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Laser treatment only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination.",
+      "Loss of vision (painless in case of diabetic retinopathy), dark painless floaters"
+    ],
+    "surgical_options": [
+      "Panretinal",
+      "Focal",
+      "Grid"
+    ],
+    "pre_op_preparation": "Fundus examination (Direct/ Indirect ophthalmoscope), slit lamp examination, B-scan ultrasound",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

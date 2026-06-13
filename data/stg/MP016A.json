@@ -1,0 +1,122 @@
+{
+  "_comment": "ALOS has been simplified to '2 days', with additional context moved to additional_information.alos_note. The HBP 2.0 code MP016A is used as the primary key.",
+  "stg_id": "MP016A",
+  "procedure_code": "MP016A",
+  "condition": "Acute ataxia",
+  "procedure_name": "Acute ataxia",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Acute ataxia_Medco.pdf",
+    "Acute ataxia_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MD/DNB/DCH/equivalent (Pediatric Medicine)",
+    "DM/DNB/equivalent (Neurology)"
+  ],
+  "clinical_indications": [
+    "Diagnosis of acute ataxia supported by clinical manifestations such as: Staggered gait (poor balance)",
+    "Diagnosis of acute ataxia supported by clinical manifestations such as: Refusal to walk",
+    "Diagnosis of acute ataxia supported by clinical manifestations such as: Unsteady and/or clumsy movements",
+    "Diagnosis of acute ataxia supported by clinical manifestations such as: Impaired sitting balance",
+    "Diagnosis of acute ataxia supported by clinical manifestations such as: Altered mental status",
+    "Diagnosis of acute ataxia supported by clinical manifestations such as: Impaired hand coordination",
+    "Diagnosis of acute ataxia supported by clinical manifestations such as: Dysarthria or dysphagia",
+    "Diagnosis of acute ataxia supported by clinical manifestations such as: Ocular symptoms (visual disturbances/nystagmus)",
+    "Diagnosis of acute ataxia supported by clinical manifestations such as: Vomiting",
+    "Diagnosis of acute ataxia supported by clinical manifestations such as: Intentional tremor and difficulty in forming speech"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "symptom_evolution_time",
+      "operator": "<",
+      "value": "72 hours",
+      "note": "for Acute Ataxia definition"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes showing vitals, examination findings, planned line of treatment and advice for admission"
+      },
+      {
+        "key": "nerve_conduction_test_mri_ct",
+        "label": "Nerve conduction test (ENMG)/MRI/CT"
+      },
+      {
+        "key": "viral_serology",
+        "label": "Viral serology"
+      },
+      {
+        "key": "optional_tests_etiology_availability",
+        "label": "Optional based on etiology and availability: Toxicological testing, blood glucose, metabolic evaluation, Cerebrospinal fluid examination, Viral serology, Urinalysis, Serum Electrolytes, Vitamins, Complete blood count, liver function test"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "nerve_conduction_test_mri_ct_viral_serology_optional",
+        "label": "Nerve conduction test (ENMG)/MRI/CT/Viral serology (Optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is the h/o Ataxia with a symptom evolution time of less than 72 hours documented?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "History of Ataxia with symptom evolution time of 72 hours or more documented",
+    "Symptom evolution time for Ataxia not documented",
+    "Clinical notes missing or incomplete, lacking detailed history, signs/symptoms, or planned treatment at pre-authorization",
+    "Nerve conduction test (ENMG), MRI, or CT scan report missing at pre-authorization",
+    "Viral serology report missing at pre-authorization",
+    "Detailed Indoor Case Papers (ICPs) missing or lacking treatment details and patient progress at claim submission",
+    "Detailed discharge summary missing or incomplete, lacking follow-up advice at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ataxia refers to a disturbance in the smooth performance of voluntary motor acts and is usually the result of cerebellar dysfunction.",
+      "Acute Ataxia is typically defined as ataxia for less than 72 hours, with particular attention to specific diagnoses and relevant diagnostic testing.",
+      "Acute ataxia suggests an infectious or postinfectious, endocrinologic, toxic, traumatic, vascular, or psychogenic process, and chronic symptoms suggest a metabolic, neoplastic, or degenerative process.",
+      "The most common causes of acute ataxia in childhood are postinfectious acute cerebellar ataxia and drug intoxications.",
+      "The key to assessment of acute ataxia in children is a thorough physical examination which may reveal many possible associated findings and shed light on the location of the primary pathology."
+    ],
+    "surgical_options": [
+      "Tumor",
+      "Intracranial hemorrhage",
+      "Arterial dissection",
+      "Hydrocephalus",
+      "Cerebellar abscess (large)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "alos_note": "Once diagnosis is established the case can be booked in the relevant package, further stay/admission should be decided based on the level of complications of the disease",
+    "medical_management_options": [
+      "Drug toxicity – remove the underlying inducing agent",
+      "Acute labyrinthitis, Meningitis, Cerebellar abscess (small) – Antibiotics",
+      "Acute Cerebellitis (viral) – supportive management, steroids"
+    ]
+  }
+}

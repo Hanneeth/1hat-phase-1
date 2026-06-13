@@ -1,0 +1,87 @@
+{
+  "_test_id": "TC15",
+  "_description": "Cosmetic rhinoplasty — purely aesthetic, not medically indicated. Phase 2 returns zero candidates (not in HBP). Phase 6 flags EXCLUSION_COSMETIC_RISK. Tests zero-candidates USP path AND exclusion detection.",
+  "_expected_status": "CONDITIONAL",
+  "_expected_specialty": null,
+  "_expected_flags_include": [
+    "EXCLUSION_COSMETIC_RISK",
+    "USP_RECOMMENDED"
+  ],
+  "_expected_flags_may_include": [
+    "NO_CANDIDATES_FOUND"
+  ],
+  "_expected_flags_exclude": [
+    "PUB_RESERVED_BLOCK",
+    "WALLET_INSUFFICIENT"
+  ],
+  "session_id": "IRIS-TC15-20260612",
+  "created_at": "2026-06-12T16:30:00+05:30",
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Patient requesting rhinoplasty for cosmetic reshaping of nose — not satisfied with appearance, no functional complaints",
+    "duration_days": 0,
+    "history_of_present_illness": "Patient has no nasal obstruction, no breathing difficulty, no trauma history, no congenital anomaly. Seeking purely cosmetic rhinoplasty for aesthetic improvement. No functional impairment documented.",
+    "provisional_diagnosis": "Elective cosmetic rhinoplasty — aesthetic indication only, no functional or traumatic cause",
+    "planned_procedure": "Open rhinoplasty for cosmetic nasal reshaping",
+    "weight_kg": 74,
+    "height_cm": 170,
+    "vitals": {
+      "bp_systolic_mmhg": 124,
+      "bp_diastolic_mmhg": 78,
+      "pulse_bpm": 80,
+      "spo2_pct": 98,
+      "temperature_f": 98.4,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": null
+    },
+    "examination_findings": {
+      "general": "Healthy young adult, no significant findings",
+      "cvs": "S1 S2 heard, no murmurs",
+      "rs": "Clear bilateral, no nasal obstruction on examination",
+      "abdomen": "Soft, non-tender",
+      "cns": "No focal deficits",
+      "local": "Nose: No septal deviation, no nasal polyps, nasal airway patent bilaterally, no structural defect. Dorsal hump present — cosmetic concern only."
+    },
+    "investigations": [],
+    "comorbidities": [],
+    "past_medical_history": "None",
+    "past_surgical_history": "None",
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "none",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "ENT/Plastic surgery consultation notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Rajan Suresh",
+      "registration_number": "TN-MED-66666",
+      "qualification": "MS ENT",
+      "specialty_code": "SL"
+    },
+    "notes": "Purely cosmetic procedure — EXCLUDED under PM-JAY Annexure 6 item 5. No trauma, no congenital functional impairment. Exception does NOT apply. Phase 6 must flag EXCLUSION_COSMETIC_RISK. Phase 2 expected to return zero candidates (cosmetic rhinoplasty not in HBP). USP path does NOT apply to cosmetic procedures — USP_RECOMMENDED flag should still note this."
+  }
+}

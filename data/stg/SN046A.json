@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN046A",
+  "procedure_code": "SN046A",
+  "condition": "Carpal Tunnel Syndrome",
+  "procedure_name": "Carpal Tunnel Release",
+  "specialty": "Neurosurgery, Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Carpal Tunnel Syndrome_Medco.pdf",
+    "Carpal Tunnel Syndrome_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent in Orthopedics",
+    "MCh/DNB/Equivalent in Neurosurgery"
+  ],
+  "clinical_indications": [
+    "Most common entrapment neuropathy of the upper extremity.",
+    "Patient experience pain and paresthesias in the distribution of the median nerve, which includes the palmar aspect of the thumb, index and middle fingers, and radial half of the ring finger.",
+    "Symptoms return regularly and problems associated with painful sensations increase despite trying non-surgical treatments such as splints or corticosteroid injections.",
+    "Acute carpal tunnel syndrome with sudden and severe pain.",
+    "Symptoms of carpal tunnel syndrome have lasted 6 months or longer with no relief."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_confirming_diagnosis",
+        "label": "Clinical notes confirming the diagnosis"
+      },
+      {
+        "key": "usg_imaging_with_labels",
+        "label": "Ultrasound imaging (USG) labelled with patient ID, date and side (Left/ Right) of affected limb"
+      },
+      {
+        "key": "nerve_conduction_velocity_ncv",
+        "label": "Nerve Conduction Velocity (NCV)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "intra_operative_photograph_optional",
+        "label": "Intra-operative photograph (optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history especially accident history, signs & symptoms, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and Nerve Conduction Velocity (NCV) report confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical evaluation or imaging not indicative of surgery.",
+    "Clinical presentation or NCV report did not confirm diagnosis.",
+    "Clinical notes confirming diagnosis missing or inadequate.",
+    "Ultrasound imaging missing, unlabelled, or not showing affected limb details.",
+    "Nerve Conduction Velocity (NCV) report missing or inadequate.",
+    "Detailed Indoor Case Papers (ICPs) missing, incomplete, or lacking daily vitals and treatment details.",
+    "Detailed Procedure / Operative Notes missing or inadequate.",
+    "Detailed discharge summary missing, incomplete, or lacking follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Most common entrapment neuropathy of the upper extremity.",
+      "Patient experience pain and paresthesias: in the distribution of the median nerve, which includes The palmar aspect of the thumb, Index and middle fingers, and Radial half of the ring finger.",
+      "Patients with typical symptoms of carpal tunnel syndrome do not need additional testing. But Ultrasonography and Nerve Conduction Velocity (NCV) Tests are useful to atypical cases and rule out other causes.",
+      "Surgery is usually only considered If symptoms return regularly and problems associated with the painful sensations increase despite trying non-surgical treatments such as splints or corticosteroid injections.",
+      "Acute carpal tunnel syndrome with sudden and severe pain, or the symptoms of carpal tunnel syndrome have lasted 6 months or longer with no relief."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

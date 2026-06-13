@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU034A",
+  "procedure_code": "SU034A",
+  "condition": "Ureteral Stent Management (Removal)",
+  "procedure_name": "DJ Stent Removal",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "DJ Stent Removal_Medco.pdf",
+    "DJ Stent Removal_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "To help in reducing renal colic or to allow drainage when infection is present or when a stone prevents urine flow adequately.",
+    "Stents are commonly placed after surgery for stones (ureteroscopy) to allow healing and to ensure that swelling does not block the drainage of urine after the procedure.",
+    "Urological and non-urological indications: Bilateral Calculus obstruction",
+    "Bilateral lower ureteric reimplants",
+    "Malignant ureteral obstruction",
+    "After bilateral uretero-renoscopy (URS)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_planned_treatment",
+        "label": "Clinical notes with planned line of treatment"
+      },
+      {
+        "key": "discharge_summary_previous_dj_stent_insertion",
+        "label": "Discharge Summary of previous of DJ Stent insertion"
+      },
+      {
+        "key": "pre_procedure_imaging_showing_dj_stent_xray_usg_kub",
+        "label": "Pre procedure imaging showing DJ stent (X-ray/USG KUB)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history especially previous surgery, symptoms, signs, physical examination including local examination, indication for procedure, advise for admission, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Discharge Summary of DJ Stenting submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did X-ray/USG KUB imaging show the presence of DJ stent?",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge summary of previous DJ Stent insertion submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes with planned line of treatment not submitted or incomplete.",
+    "Discharge Summary of previous DJ Stent insertion not submitted or incomplete.",
+    "Pre-procedure imaging (X-ray/USG KUB) not showing the presence of DJ stent, or imaging not submitted.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details not available or incomplete.",
+    "Detailed Procedure / Operative Notes not available or incomplete.",
+    "Discharge Summary with follow-up advice not submitted at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MCh/Equivalent in Urology",
+    "clinical_key_pointers": [
+      "Ureteral stents are placed temporarily into the ureter to drain urine from the kidney into bladder. The stent allows drainage around a stone or can speed up healing after stone surgery.",
+      "A double-J stent is a ureteral stent with curving ends that prevent the stent slipping into the bladder or the kidney. Usually after several days or few weeks these stents will be removed."
+    ],
+    "surgical_options": [
+      "After the purpose of stents is over, patients are subjected to DJ stent removal.",
+      "Usually the stents are removed one after the another, there are several methods of removing single DJ stent."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

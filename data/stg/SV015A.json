@@ -1,0 +1,142 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV015A",
+  "procedure_code": "SV015A",
+  "condition": "Aortic Arch Aneurysm",
+  "procedure_name": "Aortic Arch Replacement using bypass",
+  "specialty": "CTVS, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Aortic Arch Replacement_Medco.pdf",
+    "Aortic Arch Replacement_PPD.CPD.pdf"
+  ],
+  "alos": "12-14 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Presence of Aortic Arch Aneurysm requiring replacement"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication of graft requirement, and planned line of management"
+      },
+      {
+        "key": "cxr_chest",
+        "label": "CXR Chest"
+      },
+      {
+        "key": "ecg_electrocardiogram",
+        "label": "ECG (Electrocardiogram)"
+      },
+      {
+        "key": "2decho",
+        "label": "2DECHO"
+      },
+      {
+        "key": "ct_mri",
+        "label": "CT/MRI"
+      },
+      {
+        "key": "duplex_scan_optional",
+        "label": "Duplex scan (Optional)"
+      },
+      {
+        "key": "angiography_optional",
+        "label": "Angiography (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "intraoperative_neurologic_monitoring_if_applicable",
+        "label": "Intraoperative neurologic monitoring if applicable"
+      },
+      {
+        "key": "graft_details_barcode_invoice_if_artificial_graft_used",
+        "label": "Graft details barcode/invoice (if artificial graft used)"
+      },
+      {
+        "key": "post_op_investigations",
+        "label": "Post-op investigations"
+      },
+      {
+        "key": "ct_angiography_optional",
+        "label": "CT angiography (Optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the clinical condition and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Does the severity and imaging indicate surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was graft detail (barcode/invoice) available in case of artificial graft?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical condition, severity, or imaging not indicative of surgery for aortic arch replacement",
+    "Graft details (barcode/invoice) not provided for artificial graft used",
+    "Pre-authorization documents (Clinical notes, CXR, ECG, 2DECHO, CT/MRI) are incomplete or do not adequately support the diagnosis/planned treatment",
+    "Detailed Procedure/Operative notes are missing or lack critical details about the surgical steps",
+    "Intraoperative neurologic monitoring documentation is missing if applicable"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital with equipped facilities for bypass",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Aortic arch aneurysm can result from atherosclerosis, trauma, congenital disorder, Takayasu's arteritis, or infection. Atherosclerosis is the most common cause of aortic arch aneurysm.",
+      "Usually asymptomatic, may have been detected radiologically.",
+      "Change in voice.",
+      "Respiratory difficulty.",
+      "Hemoptysis",
+      "Dysphagia",
+      "In case of aorto-arteritis, the patient may have additional limb claudication or constitutional symptoms"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

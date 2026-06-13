@@ -1,0 +1,163 @@
+{
+  "_comment": "Distilled from PTCA, Systemic thrombolysis, CABG, IABP_Medco.pdf and PTCA, Systemic thrombolysis, CABG, IABP_PPD.CPD.pdf",
+  "stg_id": "SV032A",
+  "procedure_code": "SV032A",
+  "condition": "Low Cardiac Output Syndrome",
+  "procedure_name": "Low Cardiac Output syndrome requiring IABP insertion post - operatively",
+  "specialty": "Cardiology/ Cardiothoracic Vascular Surgery",
+  "version": "1.1",
+  "source_files": [
+    "PTCA, Systemic thrombolysis, CABG, IABP_Medco.pdf",
+    "PTCA, Systemic thrombolysis, CABG, IABP_PPD.CPD.pdf"
+  ],
+  "alos": "7-10 days (including Stay for CABG)",
+  "min_doctor_qualification": [
+    "M.Ch. or DNB (cardiovascular thoracic surgery) or equivalent"
+  ],
+  "clinical_indications": [
+    "Patient has a recent history of CABG",
+    "Patient developed deterioration in Cardiovascular Status Post CABG",
+    "Used as an add on package to CABG",
+    "Clinical notes justify poor hemodynamics and high usage of inotropic agents"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "iabp_incidence_rate_hospital",
+      "operator": "<=",
+      "value": "15%",
+      "note": "Incidence of IABP use in this hospital in the last one year"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "electrocardiogram_ecg",
+        "label": "Electrocardiogram (ECG)"
+      },
+      {
+        "key": "chest_x_ray",
+        "label": "Chest X-ray"
+      },
+      {
+        "key": "2d_echo",
+        "label": "2D ECHO"
+      },
+      {
+        "key": "cardiac_enzymes",
+        "label": "Cardiac enzymes (Troponins T/ I (if not available then CPK-MB)"
+      },
+      {
+        "key": "routine_biochemistry",
+        "label": "Routine Biochemistry (Haemogram, urea, creatinine, electrolytes, sugar, fasting lipids, Liver function test, Urinalysis)"
+      },
+      {
+        "key": "patient_photograph",
+        "label": "Patient Photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "still_image_of_patient_undergoing_procedure",
+        "label": "Still image of the patient undergoing the procedure with date & time"
+      },
+      {
+        "key": "2d_echo_post_procedure",
+        "label": "2D ECHO (post procedure)"
+      },
+      {
+        "key": "serial_ecgs",
+        "label": "Serial ECGs"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "barcode_of_iabp_used",
+        "label": "Barcode of IABP used"
+      },
+      {
+        "key": "post_op_chest_x_ray_showing_sternal_sutures",
+        "label": "Post op Chest X-ray showing sternal sutures"
+      },
+      {
+        "key": "clinical_notes_indoor_case_papers_showing_poor_hemodynamics_high_usage_of_inotropic_agents",
+        "label": "Clinical notes / Indoor case papers showing poor hemodynamics and high usage of inotropic agents"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Patient has a recent history of CABG- Yes",
+        "expected": true
+      },
+      {
+        "q": "Patient developed deterioration in Cardiovascular Status Post CABG- Yes",
+        "expected": true
+      },
+      {
+        "q": "Used as an add on package to CABG- Yes",
+        "expected": true
+      },
+      {
+        "q": "Is the incidence of IABP use >15% in this hospital in the last one year- No",
+        "expected": false
+      },
+      {
+        "q": "Do the clinical notes justify poor hemodynamics and high usage of inotropic agents- Yes",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do the documents show history of recent CABG?",
+        "expected": true
+      },
+      {
+        "q": "Is there a documentary evidence showing left ventricular ejection failure/ deterioration?",
+        "expected": true
+      },
+      {
+        "q": "Do the clinical notes/ indoor case papers justify poor hemodynamics and high usage of inotropic agents?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient does not have a recent history of CABG.",
+    "Patient has not developed deterioration in Cardiovascular Status Post CABG.",
+    "IABP not used as an add-on package to CABG.",
+    "Incidence of IABP use in the hospital is greater than 15% in the last one year.",
+    "Clinical notes do not justify poor hemodynamics and high usage of inotropic agents.",
+    "Barcode of IABP used not uploaded at claim.",
+    "Clinical notes / Indoor case papers showing poor hemodynamics and high usage of inotropic agents not uploaded at claim.",
+    "Post op Chest X-ray showing sternal sutures not uploaded at claim."
+  ],
+  "additional_information": {
+    "icd_10_code": "R57.0",
+    "special_empanelment": "Cardiac catheterization lab, Cardiac Care Unit & qualified Cardiologist (for PTCA/ PCI/ IABP)/ qualified cardiothoracic surgeon (for CABG)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Severe Aortic regurgitation",
+      "Suspected or known aortic dissection",
+      "Severe Aorto-iliac Occlusive disease"
+    ]
+  }
+}

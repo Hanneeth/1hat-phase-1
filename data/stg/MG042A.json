@@ -1,0 +1,101 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Lower GI bleeding/ : Lower GI bleeding_Medco.pdf (clinical + mandatory docs) + Lower GI bleeding_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG042A",
+  "procedure_code": "MG042A",
+  "condition": "Lower GI hemorrhage",
+  "procedure_name": "Lower GI hemorrhage",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Lower GI bleeding_Medco.pdf",
+    "Lower GI bleeding_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Diagnosis of Lower GI hemorrhage backed by clinical manifestation of bleeding emanating from a source distal to the ligament of Treitz.",
+    "Common symptoms include: Bright red blood from the anus (streaks of blood or larger clots), Melena (black sticky stool) with foul smell, Belly pain, Light headedness, Fainting, Chest discomfort, Nausea, Difficulty breathing."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indications_treatment_plan",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "cbc_platelets_reports",
+        "label": "CBC, Platelets reports"
+      },
+      {
+        "key": "fecal_tagging_colonoscopy_reports",
+        "label": "Fecal tagging / Colonoscopy reports"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor Case Papers and Treatment details"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the CBC, Platelets reports submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Fecal tagging / Colonoscopy submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the patient had complaints of presence of blood in stool?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the Detailed ICPs with all the Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's clinical notes do not document complaints of blood in stool.",
+    "Clinical Notes including evaluation findings, indications for the procedure, or planned line of treatment are missing or incomplete at pre-authorization.",
+    "CBC or Platelets reports are missing at pre-authorization.",
+    "Fecal tagging or Colonoscopy reports are missing at pre-authorization.",
+    "Detailed Indoor Case Papers or Treatment details are missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Colonoscopy",
+    "min_doctor_qualification_desirable": "MD/DNB Equivalent (in General Medicine / Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Proceed with Lower GI hemorrhage only if diagnosis made is backed by clinical manifestation: LGIB historically has been defined as bleeding that emanates from a source distal to the ligament of Treitz."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

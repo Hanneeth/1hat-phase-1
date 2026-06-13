@@ -1,0 +1,133 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG086A",
+  "procedure_code": "SG086A",
+  "condition": "Ulcer",
+  "procedure_name": "Debridement of Ulcer",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Debridement of Ulcer_Medco.pdf",
+    "Debridement of Ulcer_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)"
+  ],
+  "clinical_indications": [
+    "Surgical debridement in ulcers associated with necrotic tissue or slough to remove dead (necrotic) tissue or foreign material from and around a wound to expose healthy tissue."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "ulcer_duration",
+      "operator": ">=",
+      "value": "6 weeks",
+      "note": "for chronic wounds/ulcers"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication of procedure and planned line of management"
+      },
+      {
+        "key": "clinical_photographs_affected_part",
+        "label": "Clinical Photographs of the affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_procedure_photographs",
+        "label": "Post-procedure photographs"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned lined of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation/assessment ± photograph indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical evaluation ± photograph indicative of procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or lacking details on history, signs, symptoms, planned treatment, and indication for procedure.",
+    "Clinical photograph of affected part missing or insufficient to assess condition.",
+    "Clinical presentation/assessment (or photograph) not indicative of procedure.",
+    "Detailed Indoor case papers (ICPs) missing or lacking daily vitals and treatment details.",
+    "Detailed Procedure / Operative Notes missing or incomplete.",
+    "Post-procedure photographs missing or insufficient.",
+    "Detailed discharge summary missing or lacking follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Wounds can be classified as acute or chronic (present for at least 6 weeks), and further as arterial, venous, trophic, malignant, etc.",
+      "An ulcer is a discontinuity of an epithelial surface.",
+      "Debridement is the process of removing dead (necrotic) tissue or foreign material from and around a wound to expose healthy tissue."
+    ],
+    "surgical_options": [
+      "Surgical debridement in ulcers associated with necrotic tissue or slough."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": [
+      "Clean the wound with physiological normal saline or tapwater only (antiseptics delay wound healing).",
+      "Daily dressing: Gauze adheres to the woundbed and it may remove viable tissue from the wound surface on removal, resulting in delayed wound healing.",
+      "Occlusive (moisture retentive) dressings (Hydrocolloid gel) for clean and shallow ulcers without pus discharge or infection.",
+      "Calcium alginate dressing for bleeding wounds and wounds with a cavity.",
+      "Encourage daily bath; avoid walking bare foot or using slippers with interdigital bars.",
+      "Reduce standing or excessive walking; wear elastic stockings.",
+      "Elevation of leg and foot end of the bed while sleeping and leg exercises to activate the calf muscle pump in leg ulcers."
+    ],
+    "fitness_criteria": null,
+    "comorbidity_management": [
+      "Identify and treat predisposing factors such as Diabetes mellitus, Peripheral arterial or venous disease, Severe anaemia, Protein deficiency, Rheumatoid arthritis, Systemic vasculitis, Cushing's syndrome, Systemic steroid therapy.",
+      "Identify microorganism and treat accordingly; send pus/discharge for culture and sensitivity.",
+      "Exhibit appropriate antibiotics; Tubercular ulcer is treated with antitubercular drug for a minimum period of 6 months."
+    ],
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

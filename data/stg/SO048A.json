@@ -1,0 +1,115 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO048A",
+  "procedure_code": "SO048A",
+  "condition": "Need for Prenatal Diagnosis of Genetic Disorders",
+  "procedure_name": "Chorionic villus sampling",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Chorionic villus sampling_Medco.pdf",
+    "Chorionic villus sampling_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO or equivalent (in Obstetrics & Gynecology)",
+    "(DM/Equivalent in Genetics) 1 Year training in maternal fetal medicine/PDCC/Equivalent certificate course"
+  ],
+  "clinical_indications": [
+    "Prenatal diagnosis of genetic disorders especially in prenatal screen positive women"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "prenatal_screen",
+      "operator": "is",
+      "value": "positive",
+      "note": "indicating need for fetal genetic analysis"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_admission_advice",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "nt_early_tiffa_scan_reports",
+        "label": "Nuchal translucency (NT) and Early TIFFA (Targeted imaging for fetal anomalies) scan reports"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the prenatal screen of the women positive indicating need for fetal genetic analysis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Did the NT/Early TIFFA scan reports submitted show any abnormality and indicative of performing the procedure?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Prenatal screen of the women was not positive or did not indicate a need for fetal genetic analysis",
+    "NT/Early TIFFA scan reports did not show any abnormality or were not indicative of performing the procedure",
+    "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission are missing or incomplete at pre-authorization",
+    "Nuchal translucency (NT) and Early TIFFA scan reports are missing or incomplete at claim submission",
+    "Detailed procedure/operative notes are missing or incomplete at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary hospital, procedure done under ultrasound guidance. Facility should be registered as per PCPNDT law for intervention procedures.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Chorionic Villus Sampling (CVS) is performed for prenatal diagnosis of genetic disorders especially in prenatal screen positive women.",
+      "The procedure is carried out transcervically (TC) and transabdominally.",
+      "This procedure is of low risks, technically easier and cytogenetic results are obtained within 24-48 hours",
+      "Time: Transcervical 10-13 weeks, Transabdominal 10 weeks to term",
+      "Materials for study: Trophoblast cells",
+      "Karyotype result: Direct preparation: 24-48 hours. Culture: 10-14 days",
+      "Fetal loss: 0.5-1%",
+      "Accuracy: Accurate; may need amniocentesis for confirmation",
+      "Termination of pregnancy when indicated: 1st trimester—safe",
+      "Maternal effects following termination of pregnancy: Very little",
+      "Complications: Fetal loss (1-2%)",
+      "Complications: Oromandibular limb deformities",
+      "Complications: Vaginal bleeding",
+      "False-positive results (2–3%) are there due to placental mosaics and maternal cell contamination. In such a situation, amniocentesis should be performed to confirm the diagnosis.",
+      "Limb reduction deformity (LRD) is low when CVS is performed after 9 completed weeks of gestation."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Cervical myoma",
+      "Acutely angulated uterus",
+      "Uterine malformations or in presence of infections, such as the genital herpes or cervicitis",
+      "In presence of vaginal bleeding"
+    ]
+  }
+}

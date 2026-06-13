@@ -1,0 +1,158 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS017A",
+  "procedure_code": "SS017A",
+  "condition": "Sacrococcygeal teratoma",
+  "procedure_name": "Surgery for Sacrococcygeal Teratoma",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Sacrococcygeal Teratoma_Medco.pdf",
+    "Sacrococcygeal Teratoma_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MCh or equivalent (in Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Mass extending off the caudal end of the fetus in utero",
+    "External sacral mass present at birth when a large tumor is detected protruding from the sacral region (could be asymptomatic or present with signs of obstruction of the rectum or bladder)",
+    "Concomitant mass palpable per abdomen",
+    "Weakness, pain or paralysis",
+    "Urinary dribbling",
+    "Constipation",
+    "Abdominal pain",
+    "Symptoms associated to Hydrops fetalis",
+    "mucin discharge from a sinus hidden within the anal corrugations"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "ct_mri_primary_site",
+        "label": "CT/MRI of the primary site"
+      },
+      {
+        "key": "serum_levels_afp_bhcg",
+        "label": "Serum levels of alpha-fetoprotein (AFP) and beta human chorionic gonadotropin (beta-hCG)"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "mri_primary_site",
+        "label": "MRI of the primary site"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph"
+      },
+      {
+        "key": "histopathology_examination_report",
+        "label": "Histopathology examination report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "CT/MRI of the primary site?",
+        "expected": true
+      },
+      {
+        "q": "Serum levels of alpha-fetoprotein (AFP) and beta human chorionic gonadotropin (beta-hCG)?",
+        "expected": true
+      },
+      {
+        "q": "Is Clinical photograph available?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge available?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative clinical Photograph?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT/MRI report (grading the Sacrococcygeal teratoma) submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient did not present with external sacral mass or intraabdominal palpable mass as indicated in the clinical notes.",
+    "CT/MRI of the primary site or serum levels of AFP/beta-hCG did not confirm sacrococcygeal teratoma as per submitted reports.",
+    "Histopathological report was not submitted at claim stage.",
+    "Clinical notes are missing or lacking detailed history, signs & symptoms, or indication for procedure at pre-authorization.",
+    "CT/MRI of the primary site report was not provided at pre-authorization.",
+    "Serum levels of alpha-fetoprotein (AFP) and beta human chorionic gonadotropin (beta-hCG) reports were not provided at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and line of treatment are not available at claim stage.",
+    "Detailed procedure / Operative Notes are not available at claim stage.",
+    "Discharge summary with follow-up advice is not available at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Sacrococcygeal teratoma (SCT) is the most common germ cell tumor in infancy and early childhood.",
+      "SCTs are generally benign tumors.",
+      "Malignant elements can be present, and their frequency increases with the postnatal age of the patient.",
+      "Sacrococcygeal teratomas are classified according to the American Academy of Pediatrics Surgical Section:",
+      "Type I - the tumor is predominantly external with a very minimal internal component. Type I is rarely associated with malignancy.",
+      "Type II - the tumor is predominantly external but has some internal extension into the presacral space.",
+      "Type III – the tumor is visible externally but is predominantly located in the pelvic area with some extension into the abdomen.",
+      "Type IV - the tumor is not visible externally and is located in the presacral space. Type IV has the highest rate of malignancy."
+    ],
+    "surgical_options": [
+      "In most cases, surgical resection is undertaken postnatally",
+      "Resection always involves resection of the tumor along with the coccyx",
+      "Surgical excision could be of local (inverted V-shaped or Chevron or posterior sagittal incision) or abdominosacral approach",
+      "Abdominosacral approach for lesions palpated per abdomen",
+      "Sacral route with posterior sagittal incision for tumors with size <5 cm and located more in the midline.",
+      "Sacral route with inverted V-shaped or Chevron incision for larger or eccentrically located masses"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral to Oncologist (if required)",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

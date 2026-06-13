@@ -1,0 +1,138 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "ST009A",
+  "procedure_code": "ST009A",
+  "condition": "Nerve Plexus Injury",
+  "procedure_name": "Nerve plexus injury repair",
+  "specialty": "Polytrauma, Orthopedics, Neurosurgery, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Nerve plexus injury _Medco.pdf",
+    "Nerve plexus injury _PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent in (Orthopedic surgery)",
+    "MCh/DNB/Equivalent in (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Urgent surgical exploration of the plexus if a root avulsion or laceration injury to the plexus is suspected.",
+    "Urgent surgical exploration of the plexus in cases of open injury, retained foreign body, or vascular injury requiring vessel repair.",
+    "Sharp transections of the brachial plexus allowing for primary repair of the transected ends to optimize nerve regeneration.",
+    "Delayed exploration indicated at three to six months after injury if the patient fails to regain neurologic function satisfactorily."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailing_injury_and_need_for_surgery",
+        "label": "Clinical Notes detailing the injury and need for surgery"
+      },
+      {
+        "key": "medico_legal_case_report_fir_copy_of_accident_if_due_to_accident",
+        "label": "Medico legal case report/ FIR copy of accident, if the injury was due to accident"
+      },
+      {
+        "key": "nerve_conduction_velocity",
+        "label": "Nerve conduction velocity (Optional)"
+      },
+      {
+        "key": "electromyography_emg_report",
+        "label": "Electromyography (EMG) report (Optional)"
+      },
+      {
+        "key": "mri_report",
+        "label": "MRI report (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "intra_operative_photograph",
+        "label": "Intra operative photograph (Optional)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes – details of accident, signs & symptoms, indication for surgery, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was the Medico legal report/ FIR copy of the accident submitted, if the injury was due to accident?",
+        "expected": true
+      },
+      {
+        "q": "Was the nerve conductional velocity report/ EMG report/ MRI report submitted?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intra-operative photo submitted?",
+        "expected": false
+      },
+      {
+        "q": "Are the detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes not suggestive of nerve plexus injury.",
+    "Clinical notes detailing injury and need for surgery missing or inadequate.",
+    "Medico legal report or FIR copy missing when injury is due to accident.",
+    "Nerve conduction velocity report, EMG report, or MRI report not submitted when indicated.",
+    "Indoor case papers missing or incomplete at claim submission.",
+    "Procedure/Operation notes missing or lacking detail at claim submission.",
+    "Detailed discharge summary not submitted or missing follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operational Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Obtaining a thorough history in a patient with possible NPI is necessary to identify the injury mechanism, associated fractures, and other concomitant trauma to the neck, shoulder, and chest.",
+      "Careful inspection of the patient can provide important clues to the extent of the injury.",
+      "Considerable bruising and swelling may indicate deep trauma with possible vascular injury, which can be confirmed by evaluating the radial, ulnar, and brachial pulses.",
+      "A detailed neurologic examination is warranted to ascertain the location of the lesion.",
+      "Findings on initial examination are supplemented with advanced imaging and electrophysiological evaluation to determine the prognosis of neurologic recovery further."
+    ],
+    "surgical_options": [
+      "Urgent surgical exploration for root avulsion, laceration injury, open injury, retained foreign body, or vascular injury requiring vessel repair.",
+      "Primary repair of sharply transected brachial plexus ends to optimize nerve regeneration.",
+      "Conservative treatment for low-energy mechanism Brachial plexus injury with favorable prognosis for spontaneous recovery.",
+      "Delayed exploration (3 to 6 months after injury) if the patient fails to regain neurologic function satisfactorily."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "The patient should be closely followed with serial examinations, imaging studies, and electrophysiological testing.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Patient not medically or psychologically cleared for surgery.",
+      "Local wounds or infections obstructing the surgical approach."
+    ]
+  }
+}

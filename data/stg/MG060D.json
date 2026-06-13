@@ -1,0 +1,128 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code. Note: TMS 3.2 Q2 'Was the clinical notes and serum calcium report indicative of the procedure?' is marked as expected: false for hyponatremia/hypernatremia due to serum calcium report not being a mandatory document for these conditions as per the document's table, indicating it would not be 'indicative' for these specific procedures.",
+  "stg_id": "MG060D",
+  "procedure_code": "MG060D",
+  "condition": "Electrolyte Imbalance",
+  "procedure_name": "Hypernatremia",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Electrolyte Imbalance_Medco.pdf",
+    "Electrolyte Imbalance_PPD.CPD.pdf"
+  ],
+  "alos": null,
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Serum sodium levels greater than 145 mmol/L",
+    "Symptoms of hypernatremia (tachypnea, sleeping difficulty, feeling restless)",
+    "Unreplaced fluid loss through the skin and gastrointestinal tract",
+    "Osmotic diuresis",
+    "Hypertonic saline administration"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "serum sodium",
+      "operator": ">",
+      "value": "145 mmol/L",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indications_planned_treatment",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "other_serum_electrolytes",
+        "label": "Other Serum Electrolytes"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor case papers with treatment details"
+      },
+      {
+        "key": "post_treatment_serum_electrolytes",
+        "label": "Post treatment serum electrolytes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the serum calcium report submitted?",
+        "expected": false
+      },
+      {
+        "q": "Was the serum electrolyte report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the patient's blood report suggestive of electrolyte imbalance?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical notes and serum calcium report indicative of the procedure?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor Case Papers with Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post treatment serum calcium report submitted?",
+        "expected": false
+      },
+      {
+        "q": "Was the post treatment serum electrolytes report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes regarding evaluation findings, indications, or planned line of treatment are missing or incomplete.",
+    "Pre-treatment other serum electrolytes report is missing or does not indicate hypernatremia (e.g., serum sodium <= 145 mmol/L).",
+    "Detailed indoor case papers with treatment details are missing or incomplete.",
+    "Post-treatment other serum electrolytes report is missing or does not show improvement.",
+    "Detailed discharge summary is missing or does not include the date of follow-up.",
+    "Patient's blood report is not suggestive of electrolyte imbalance (specifically hypernatremia)."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "DNB / MD (General Medicine / Pediatric Medicine/Endocrinology and Metabolism)",
+    "clinical_key_pointers": [
+      "Electrolytes are essential for basic life functioning such as maintaining electrical neutrality in the cells, generation, and conduction of action potentials in the nerves and muscles.",
+      "Sodium, potassium, and chloride are the significant electrolytes along with magnesium, calcium, phosphate, and bicarbonates. Electrolytes come from our food and fluids.",
+      "These electrolytes can have an imbalance, leading to either high or low levels, disrupting normal bodily functions and potentially leading to life-threatening complications.",
+      "Hypernatremia is diagnosed when serum sodium levels are greater than 145 mmol/L and can present with symptoms like tachypnea, sleeping difficulty, and feeling restless.",
+      "Rapid sodium corrections can have serious consequences like cerebral edema and osmotic demyelination syndrome."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care as required for treatment under PMJAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "_test_id": "TC11",
+  "_description": "Total knee replacement (SB — Orthopaedics) at H003 which only has SG and MG empanelled. Phase 2 pre-filters by empanelled_specialties. No SB packages survive the pre-filter. Zero candidates → USP_RECOMMENDED flag.",
+  "_expected_status": "CONDITIONAL",
+  "_expected_specialty": null,
+  "_expected_flags_include": [
+    "USP_RECOMMENDED",
+    "NO_CANDIDATES_FOUND"
+  ],
+  "_expected_flags_exclude": [
+    "PUB_RESERVED_BLOCK",
+    "WALLET_INSUFFICIENT"
+  ],
+  "session_id": "IRIS-TC11-20260612",
+  "created_at": "2026-06-12T14:30:00+05:30",
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H003"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Bilateral knee pain 3 years, severely limiting walking, cannot climb stairs, failed conservative management",
+    "duration_days": 1095,
+    "history_of_present_illness": "Severe bilateral knee osteoarthritis for 3 years, predominantly right side. Has tried physiotherapy, analgesics, and intra-articular injections with no lasting relief. Orthopaedic surgeon has recommended total knee replacement right side. Patient admitted to this hospital which does not have Orthopaedics empanelment.",
+    "provisional_diagnosis": "Bilateral knee osteoarthritis Kellgren-Lawrence Grade 4 — severe",
+    "planned_procedure": "Total knee replacement right side (TKR)",
+    "weight_kg": 74,
+    "height_cm": 170,
+    "vitals": {
+      "bp_systolic_mmhg": 124,
+      "bp_diastolic_mmhg": 78,
+      "pulse_bpm": 80,
+      "spo2_pct": 98,
+      "temperature_f": 98.4,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": null
+    },
+    "examination_findings": {
+      "general": "Conscious, oriented, ambulant with walking aid",
+      "cvs": "S1 S2 heard, no murmurs",
+      "rs": "Clear bilateral",
+      "abdomen": "Soft, non-tender",
+      "cns": "No focal deficits",
+      "local": "Right knee: gross deformity (varus), effusion, crepitus, range of motion 10-80 degrees, severely restricted and painful. Left knee: similar but milder."
+    },
+    "investigations": [
+      {
+        "type": "xray",
+        "result_summary": "Bilateral knee X-ray: Complete joint space obliteration right knee, severe varus deformity, osteophytes, subchondral cysts — KL Grade 4. Left knee KL Grade 3.",
+        "structured_values": [
+          {
+            "parameter": "KL_grade_right",
+            "value": 4,
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "joint_space_right",
+            "value": "obliterated",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "varus_deformity",
+            "value": "15_degrees",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-10"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No significant medical history",
+    "past_surgical_history": "None",
+    "current_medications": [
+      "Diclofenac 50mg BD (on demand)",
+      "Pantoprazole 40mg OD"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "none",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Orthopaedic consultation notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Suresh Srinivas",
+      "registration_number": "TN-MED-22222",
+      "qualification": "MS Orthopaedics",
+      "specialty_code": "SB"
+    },
+    "notes": "H003 (Sri Venkateswara Hospital) is NOT empanelled for Orthopaedics (SB). Phase 2 will return zero candidates. USP path should be recommended."
+  }
+}

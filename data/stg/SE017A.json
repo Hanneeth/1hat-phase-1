@@ -1,0 +1,136 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE017A",
+  "procedure_code": "SE017A",
+  "condition": "Rhegmatogenous Retinal Detachment",
+  "procedure_name": "Scleral buckling surgery",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Scleral buckling surgery_Medco.pdf",
+    "Scleral buckling surgery_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD Ophthalmology",
+    "MS Ophthalmology",
+    "DNB Ophthalmology",
+    "PG Diploma Ophthalmology",
+    "equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "Scleral buckling is an ophthalmic surgical technique used for repair of rhegmatogenous (retinal break/ tear) retinal detachments.",
+    "Usually considered for young, phakic patients with tear(s) anterior to the equator."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_indication",
+        "label": "Clinical notes with indication for surgery"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph_affected_eye",
+        "label": "Clinical Photograph of the affected eye"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Operative/ procedure notes"
+      },
+      {
+        "key": "microbiology_report_host_tissue",
+        "label": "Microbiology report of the host tissue"
+      },
+      {
+        "key": "investigation_reports_fundus_bscan",
+        "label": "Investigation reports- Fundus examination/ B-scan"
+      },
+      {
+        "key": "intraoperative_photograph_with_patient_id_time_date_optional",
+        "label": "Intraoperative photograph with Patient ID, time and date(optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Do the clinical symptoms (like shadow/ curtain effect in vision), history, examination findings, investigations (B-scan/ Fundus examination), suggest Retinal detachment?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Clinical notes (with h/o myopia, diabetes, trauma to head/ eye, retinal detachment in the other eye; previous scleral buckling surgery in the same eye (in case of scleral buckle removal), etc.), clinical symptoms (floaters, flashes, visual distortion, etc.) and visual acuity?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected eye with Proper labelling of Affected Eye whether R or L with full face photograph.",
+        "expected": true
+      },
+      {
+        "q": "Detailed admission notes?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and was the surgery successful?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Was the intra operative photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are relevant investigation reports submitted like B-scan / Fundus examination?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical symptoms (like shadow/ curtain effect in vision), history, examination findings, or investigations (B-scan/ Fundus examination) do not suggest Retinal detachment.",
+    "Clinical notes do not clearly indicate the need for scleral buckling surgery.",
+    "Clinical photograph of the affected eye is missing or not properly labelled (R/L) or full face photograph is missing.",
+    "Missing or incomplete investigation reports (Fundus examination/ B-scan) at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination.",
+      "Scleral buckling is an ophthalmic surgical technique used for repair of rhegmatogenous (retinal break/ tear) retinal detachments.",
+      "Retinal detachment (RD) is a condition in which the neurosensory retina is separated from the retinal pigment epithelium. May lead to permanent loss of vision if left untreated.",
+      "Types of retinal detachment include- rhegmatogenous, exudative, tractional, combined tractional- rhegmatogenous, and macular hole-associated detachment.",
+      "Rhegmatogenous retinal detachment (RRD) is the most common amongst these. The pathogenesis of RRD involves vitreoretinal tractional forces that result in a full-thickness retinal break. Liquefied vitreous gel then enters the subretinal space through the break, causing separation of the neurosensory retina from the underlying retinal pigment epithelium.",
+      "Total Retinal Detachment refers to separation of the entire retina & subtotal RD refers to detachment of most of it.",
+      "Risk factors: Include high myopia, trauma to the eye or head, advanced diabetics, RD in the other eye, underlying hereditary vitreoretinopathy, previous intraocular surgeries, and previous viral retinitis.",
+      "Signs & Symptoms: Floaters, photopsia (visual distortion), and/or a “curtain” defect that obscures part of the visual field; Visual acuity (VA) ranges from excellent to poor, depending on whether the macula is still attached. Patients in whom macula is also detached, vision usually is decreased; Intra-ocular pressure (IOP) can be high or low (Schwartz-Matsuo syndrome).",
+      "Investigations: 360-degree fundus examination using Indirect ophthalmoscopy; B-scan ultrasound (if fundus view is obscured for reasons such as dense cataract or vitreous hemorrhage)."
+    ],
+    "surgical_options": [
+      "Various management techniques include: Barrier laser retinopexy in select situations (subclinical retinal detachment), pneumatic retinopexy, primary scleral buckle, primary pars plana vitrectomy (PPV) with intraocular tamponade or combined scleral buckle and vitrectomy."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Not suitable for patients with a giant retinal tear or proliferative vitreoretinopathy (PVR)."
+    ]
+  }
+}

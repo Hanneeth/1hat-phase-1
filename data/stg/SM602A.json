@@ -1,0 +1,107 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SM602A",
+  "procedure_code": "SM602A",
+  "condition": "Osteomyelitis",
+  "procedure_name": "Sequestrectomy*",
+  "specialty": "Oral Maxillo Facial Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Sequestrectomy_MEDCO.pdf",
+    "Sequestrectomy_PPD.CPD.pdf"
+  ],
+  "alos": "Ambulatory",
+  "min_doctor_qualification": [
+    "MDS (Oral Maxillo-facial surgery)"
+  ],
+  "clinical_indications": [
+    "Chronic Osteomyelitis"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, clinical photographs (intraoral & extraoral) indications for doing the procedure & advise for admission)"
+      },
+      {
+        "key": "x_ray_ct_necrotic_area",
+        "label": "X-ray of the necrotic area in 2 planes or CT."
+      },
+      {
+        "key": "histopathology_microbiology_investigation_necrotic_tissue",
+        "label": "Histopathology/Microbiology Investigation of necrotic tissue"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_note_operative_note_anesthesia_notes",
+        "label": "Procedure note/ operative note & Anesthesia notes where applicable."
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are the Clinical notes (detailing signs, symptoms, examination findings, clinical photographs (intraoral & extraoral) indications for doing the procedure & advise for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the X-ray report of necrotic area submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Signs, symptoms, examination, x-ray, or histopathology do not confirm the presence of osteomyelitis/necrotic tissue in the oral cavity region.",
+    "Clinical notes (detailing signs, symptoms, examination findings, clinical photographs (intraoral & extraoral) indications for doing the procedure & advise for admission) are missing or incomplete.",
+    "X-ray of the necrotic area in 2 planes or CT is missing or incomplete.",
+    "Histopathology/Microbiology Investigation of necrotic tissue is missing or incomplete.",
+    "Indoor case papers are missing or incomplete.",
+    "Procedure note/ operative note or Anesthesia notes are missing or incomplete.",
+    "Detailed Discharge summary is missing or incomplete.",
+    "OT notes do not detail the steps of surgery performed and outcomes of the surgery.",
+    "Documents for appropriate post-op care or follow-up advice are not available."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Not performed in infants below 3years."
+    ],
+    "complications": [
+      "Neoplastic transformation",
+      "Progressive diffuse sclerosis",
+      "Discontinuity defects: defects can be spontaneous"
+    ]
+  }
+}

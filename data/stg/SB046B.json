@@ -1,0 +1,96 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "SB046B",
+  "procedure_code": "SB046B",
+  "condition": "Tendon Grafting / Repair",
+  "procedure_name": "Tendon repair",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Tendon Grafting-Repair-Tendon Release-Tenotomy_Medco.pdf",
+    "Tendon Grafting-Repair-Tendon Release-Tenotomy_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Injuries to tendons such as rotator cuff, Achilles tendon, and flexor tendons of the hand requiring surgical repair"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "clinical_photo_affected_part_preauth",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "post_procedure_clinical_photo_affected_part",
+        "label": "Post Procedure clinical photograph of affected part"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Does the Clinical notes, clinical photograph of affected part justifying the need for the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the Clinical notes, clinical photograph of affected part justifying the need for the procedure?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or clinical photograph of affected part do not justify the medical necessity of the procedure at pre-authorization.",
+    "Clinical notes at pre-authorization lack adequate detail regarding history, signs, symptoms, evaluation findings, or indication for the procedure.",
+    "Post-procedure clinical photograph of affected part is missing or unclear at claim submission.",
+    "Procedure / operation notes at claim submission lack sufficient detail on surgical steps or outcomes."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "While tendons anchor every muscle of the body to bone, the most common injuries involve the rotator cuff tendons, Achilles tendon, and flexor tendons of the hand.",
+      "At present, injuries to these tissues are treated by surgical repair and/or conservative approaches, including biophysical modalities such as physical rehabilitation and cryotherapy.",
+      "Unfortunately, the healing tissue forms fibrovascular scar and possesses inferior mechanical and biochemical properties as compared to native T/L.",
+      "Therefore, tissue engineers have sought to improve upon the natural healing response by augmenting the injured tissue with cells, scaffolds, bioactive agents, and mechanical stimulation."
+    ],
+    "surgical_options": [
+      "Open, arthroscopic, percutaneous approaches",
+      "Stitch techniques (e.g. Masson-Allen, Kessler, Krackow)",
+      "Tendon anchoring (e.g. suture anchors/transosseous, single/double-row)",
+      "Suture material (caliber, absorbability)",
+      "Scaffold augmentation (e.g. fibrin clot, PRP, decellularized allografts)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

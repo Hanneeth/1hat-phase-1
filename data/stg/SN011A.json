@@ -1,0 +1,140 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN011A",
+  "procedure_code": "SN011A",
+  "condition": "Brain Abscess",
+  "procedure_name": "Abscess Tapping",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Brain abscess_Medco.pdf",
+    "Brain abscess_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "Mch/DNB/Equivalent (in Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Abscess on Radiology with size < 2.5 cm.",
+    "Largest abscess for aspiration when multiple are present.",
+    "Deep seated stereotactic aspiration."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "abscess_size_on_radiology",
+      "operator": "<",
+      "value": "2.5 cm",
+      "note": "Aspiration/Tapping indicated for smaller abscesses."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_plan",
+        "label": "Clinical notes with signs, symptoms, indications, planned line of management and advice for admission"
+      },
+      {
+        "key": "clinical_evaluation",
+        "label": "Clinical Evaluation"
+      },
+      {
+        "key": "cect_mri_brain",
+        "label": "CECT/MRI brain"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "ct_brain_preop_postop",
+        "label": "CT brain (Preop & Post op)"
+      },
+      {
+        "key": "histopathology_examination",
+        "label": "Histopathology examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes including history, symptoms, signs, vitals, examination findings, planned line of treatment and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient present with headache/giddiness/convulsion/severe vomiting/ heaviness of head/ fever?",
+        "expected": true
+      },
+      {
+        "q": "Did CECT/MRI Brain confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Histopathology examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was CT brain pre and post-surgery report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing or incomplete regarding history, symptoms, signs, vitals, examination findings, planned line of treatment, or advice for admission.",
+    "Patient's clinical presentation or imaging was not indicative of brain abscess requiring surgical intervention.",
+    "CECT/MRI Brain report does not confirm the diagnosis of brain abscess at pre-authorization.",
+    "Mandatory documents for claim submission (ICPs, operative notes, histopathology report, or pre/post-op CT brain) are missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Focal intracranial infection initiated as an area of cerebritis and evolves into a collection of pus surrounded by a vascularized capsule.",
+      "Pathogenesis: Contiguous spread (Middle ear, Mastoid, PNS), Hematogenous (Lung abscess, Skin Osteomyelitis, Pelvic infections, Cyanotic Heart Disease), Trauma (Dural breach and Foreign body entering into the cranial cavity).",
+      "Etiological: Bacterial/pyogenic, Fungal, Tubercular.",
+      "Stages of infection: Early cerebritis (1-3 days), Late cerebritis (4-9 days), Early capsular Formation (10-13 days), Late capsule Formation (14 days and later).",
+      "Clinical presentation: Headache, Fever, Focal Neurological Deficits, Altered mental status sensorium, Seizures, Nausea/vomiting, Nuchal rigidity, Papilledema."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

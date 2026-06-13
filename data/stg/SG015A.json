@@ -1,0 +1,143 @@
+{
+  "stg_id": "SG015A",
+  "procedure_code": "SG015A",
+  "condition": "Duplication Cysts",
+  "procedure_name": "Operation for Duplication of Intestine",
+  "specialty": "Operation for Duplication of Intestine (General/Pediatric Surgery)",
+  "version": "1.1",
+  "source_files": [
+    "Duplication Cysts_Medco.pdf",
+    "Duplication Cysts_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MCh Pediatric Surgery",
+    "DNB Pediatric Surgery",
+    "Equivalent Pediatric Surgery",
+    "MCh Surgical Gastroenterology",
+    "DNB Surgical Gastroenterology",
+    "Equivalent Surgical Gastroenterology"
+  ],
+  "clinical_indications": [
+    "Presence of alimentary tract duplications (congenital malformations) anywhere from mouth to anus, which are most commonly cystic (80%) and located on the mesenteric aspect of the small or large intestine.",
+    "Presenting as a mass or with symptoms related to the location and size of the cyst.",
+    "Esophageal duplication cysts: presenting as mediastinal mass or sub mucosal lesion on endoscopy.",
+    "Esophageal duplication cysts: causing compression of adjacent structures (tracheobronchial tree, esophageal wall) leading to nonproductive cough, stridor, tachypnea, cyanosis, wheezing, chest pain, dysphagia, vomiting, or regurgitation.",
+    "Esophageal duplication cysts: rarely causing cardiac arrhythmias, retrosternal or thoracic back pain, cyst rupture, or bleeding leading to secondary mediastinitis.",
+    "Gastric duplication cysts: presenting with diffuse abdominal pain, epigastric pain, vomiting, weight loss, gastric outlet obstruction, ulcerated antral mass, or failure to thrive.",
+    "Bronchogenic duplication cysts: presenting with dysphagia, chest pain, cough, shortness of breath, or abdominal pain.",
+    "Small bowel duplication cysts: presenting with abdominal pain and vomiting.",
+    "Duodenal cysts (a subtype of small bowel duplication cysts): causing pancreatitis, infection, weight loss, and GI bleeding from ulceration of ectopic gastric mucosa within the cyst.",
+    "Jejunal duplication cysts (a subtype of small bowel duplication cysts): causing abdominal bloating, constipation, intussusception, volvulus, and partial small bowel obstruction.",
+    "Ileal duplication cysts (a subtype of small bowel duplication cysts): presenting with abdominal pain, small bowel obstruction, a palpable abdominal mass, or hematochezia.",
+    "Colonic cysts (large bowel duplication cysts): presenting as abdominal pain to the point of an acute abdomen, obstruction, and/or bleeding."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "ct_mri",
+        "label": "CT/MRI"
+      },
+      {
+        "key": "endoscopic_ultrasound_fine_needle_aspiration",
+        "label": "Endoscopic ultrasound ± fine needle aspiration"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative/procedure notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain detailed history, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Endoscopic ultrasound confirms duplication cysts?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs include daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / Operative Notes are available?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary includes follow-up advice?",
+        "expected": true
+      },
+      {
+        "q": "Histopathological examination report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Imaging (Endoscopic Ultrasound/CT/MRI) was not confirmatory of diagnosis.",
+    "Clinical notes lack detailed history, signs & symptoms, or indication for procedure at pre-authorization.",
+    "Endoscopic ultrasound or CT/MRI report not submitted at pre-authorization.",
+    "Histopathological examination report not submitted at claim submission.",
+    "Operative notes are missing or do not detail surgical steps.",
+    "Planned line of treatment not clearly documented at pre-authorization."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Alimentary tract duplications are congenital malformations that may be found anywhere from mouth to anus. The most common duplication is cystic (80%) and located on the mesenteric aspect of the small or large intestine whereas rest are tubular (20%). Duplications are lined by alimentary tract mucosa and usually share a common smooth muscle wall and blood supply with the adjacent gut. Cystic duplications may be associated with spinal cord and vertebral anomalies, and tubular duplications may be associated with urinary tract, spine, and central nervous system anomalies.",
+      "Types of duplications include: foregut duplication cysts, small bowel duplication cysts, and large bowel duplication cysts.",
+      "Foregut duplication cysts are categorized on the basis of their embryonic origin into esophageal, bronchogenic, and neuroenteric cysts. Gastrointestinal tract duplication cysts most commonly occur in the ileum, esophagus, and colon.",
+      "Patients may present with a mass or with symptoms related to the location and size of the cyst. Endoscopic ultrasound (EUS) has been widely used as a modality for the evaluation and diagnosis of duplication cysts. For the most part, the choice of operative approach is determined by the anatomy of the duplication and the extent to which it integrates with normal anatomic structures.",
+      "Esophageal duplication cyst: Single fluid filled structures that do not communicate with esophageal lumen. Most commonly present in mediastinum. Presenting as mediastinal mass or sub mucosal lesion on endoscopy. Compression of structures adjacent to the tracheobronchial tree present as nonproductive cough, stridor, tachypnea, cyanosis, wheezing or chest pain. Structures adjacent to the esophageal wall presenting as dysphagia, chest pain, vomiting, or regurgitation. Rarely symptoms such as cardiac arrhythmias, retrosternal or thoracic back pain, cyst rupture or bleeding leading to secondary mediastinitis. Diagnosis: Chest X-ray PA, CT/MRI, Endoscopic ultrasound ± fine needle aspiration (EUS with FNA).",
+      "Gastric duplication cyst: Can be asymptomatic but can also develop symptoms such as diffuse abdominal pain, epigastric pain, vomiting, weight loss, gastric outlet obstruction, ulcerated antral mass, or failure to thrive. Diagnosis: EUS guided FNA.",
+      "Bronchogenic duplication cysts: Can present with dysphagia, chest pain, cough, shortness of breath, or abdominal pain. Diagnosis: Endoscopic ultrasound ± fine needle aspiration (EUS with FNA).",
+      "Small bowel duplication cyst: Presenting symptoms include abdominal pain and vomiting. Associated with all three small bowel subtypes: Duodenal, jejunal, and ileal. Duodenal cysts can cause other complications such as pancreatitis, infection, weight loss, and GI bleeding from ulceration of the ectopic gastric mucosa within the cyst. Jejunal duplication cyst can cause abdominal bloating, constipation, intussusception, volvulus, and partial small bowel obstruction. Ileal duplication cysts may be asymptomatic or present with abdominal pain, small bowel obstruction, a palpable abdominal mass, or hematochezia. Diagnosis: CT/MRI, EUS.",
+      "Large bowel/rectal duplication cysts: Can be asymptomatic or present as abdominal pain to the point of an acute abdomen, obstruction, and/or bleeding. Diagnosis: CT, EUS, Contrast enema."
+    ],
+    "surgical_options": [
+      "Surgical removal or enucleation",
+      "Surgical resection"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

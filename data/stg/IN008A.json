@@ -1,0 +1,134 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "IN008A",
+  "procedure_code": "IN008A",
+  "condition": "Balloon test occlusion",
+  "procedure_name": "Balloon test occlusion",
+  "specialty": "Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "Balloon test occlusion_Medco.pdf",
+    "Balloon test occlusion_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "DM/Equivalent (in Interventional Neuroradiology)",
+    "MCh/DNB/Equivalent (in Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Aneurysm or pseudoaneurysm arising from the Internal Carotid artery (ICA) (treatment by permanent ICA occlusion [Hunterian ligation] planned",
+    "At risk for inadvertent ICA occlusion during a difficult open or endovascular surgical approach); cranial and cervical neoplasms with ICA involvement",
+    "Hemorrhage related to trauma, infection, or neoplasm",
+    "Arterial dissection when anticoagulant therapy is contraindicated",
+    "Carotid-cavernous fistula, which may not be treatable with arterial preservation"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "angiogram",
+        "label": "Angiogram"
+      },
+      {
+        "key": "ct_mri",
+        "label": "CT/MRI (optional)"
+      },
+      {
+        "key": "spect_single_photon_emission_computed_tomography",
+        "label": "SPECT (Single photon emission computed tomography) (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes_clinical_evaluation_brain_function",
+        "label": "Detailed Procedure / operative notes including: Clinical Evaluation of the brain function during the procedure"
+      },
+      {
+        "key": "detailed_procedure_operative_notes_eeg_monitoring",
+        "label": "Detailed Procedure / operative notes including: EEG (Electroencephalogram) monitoring during the procedure"
+      },
+      {
+        "key": "intra_procedure_photographs",
+        "label": "Intra-procedure photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings, indication of procedure, and planned lined of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical evaluation and imaging indicative of performing the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the diagnosis indicative of procedure to determine the course of therapy?",
+        "expected": true
+      },
+      {
+        "q": "Was neurological assessment/EEG monitoring documented during procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes lacking detailed history, signs & symptoms, evaluation findings, indication, or planned line of treatment.",
+    "Angiogram not provided or not confirming the diagnosis at pre-authorization.",
+    "Clinical evaluation or imaging not indicative of performing the procedure.",
+    "Detailed Indoor Case Papers (ICPs) missing daily vitals or treatment details.",
+    "Operative notes lacking documentation of Clinical Evaluation of brain function during procedure.",
+    "Operative notes lacking documentation of EEG (Electroencephalogram) monitoring during procedure.",
+    "Discharge summary not including follow-up advice at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital with facilities for interventional neuroradiology",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Balloon test occlusion (BTO) is an endovascular procedure in which a balloon is temporarily inflated in an artery in order to evaluate the potential for collateral circulation to compensate for its absence.",
+      "BTO can provide valuable information regarding the collateral circulation to the brain prior to therapeutic occlusion. If treatment of these lesions is desired, then accurate estimation of whether the artery is dispensable or not can influence treatment goals (e.g., feasibility of gross total resection) and even treatment planning (e.g., preoperative endovascular vessel sacrifice, revascularization strategy).",
+      "BTO is performed with the patient awake to permit assessment of neurological status. If the patient develops any signs and/or symptoms of transient neurological dysfunction (such as weakness, loss of sensation, speech problems, etc) during the BOT, the balloon is immediately deflated, upon which the indicators of poor collateral circulation usually resolve straightaway. Results can guide on the most appropriate course of therapy.",
+      "The BTO, along with adjunctive nuclear medicine blood flow measurements, serve to increase the pre-procedure probability that permanent occlusion will be tolerated without ischemic complication."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

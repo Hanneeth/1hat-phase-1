@@ -1,0 +1,113 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Empyema/ : Empyema_Medco.pdf (clinical + mandatory docs) + Empyema_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "MG018A",
+  "procedure_code": "MG018A",
+  "condition": "Empyema",
+  "procedure_name": "Empyema",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Empyema_Medco.pdf",
+    "Empyema_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "DNB / MD/MS (General Medicine / Pediatric Medicine / General surgery / Thoracic surgery)"
+  ],
+  "clinical_indications": [
+    "Presence of frank pus in the pleural space (defined as empyema)",
+    "Suspected parapneumonic effusion requiring imaging",
+    "Unilateral, markedly asymmetric pleural effusion with blunting of the costophrenic angle on chest imaging"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "hemogram_report",
+        "label": "Hemogram report"
+      },
+      {
+        "key": "chest_xray_ultrasound_cect_chest_report",
+        "label": "Chest X ray/Ultrasound chest/ CECT chest report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_clinical_papers",
+        "label": "Detailed Indoor clinical papers with treatment details"
+      },
+      {
+        "key": "post_treatment_chest_xray_drainage_details",
+        "label": "Post treatment Chest X ray report/Drainage under Ultrasound guidance/Intercostal tube drainage details (If applicable)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the complete hemogram report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Chest X ray/Ultrasound chest/ CECT chest report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical notes and chest X ray/Ultrasound chest/CECT, CT Chest indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor case papers with vital (BP and Pulse) and Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post treatment Chest X ray report/Drainage under Ultrasound guidance/Intercostal tube drainage details (If applicable) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or imaging reports (Chest X ray/Ultrasound chest/CECT, CT Chest) not sufficiently indicative of Empyema for the procedure.",
+    "Hemogram report missing or incomplete at pre-authorization.",
+    "Clinical notes at pre-authorization lacking evaluation findings, clear indications for the procedure, or planned line of treatment.",
+    "Detailed Indoor clinical papers missing vital signs (BP and Pulse) or complete treatment details at claim submission.",
+    "Post-treatment imaging (Chest X-ray) or drainage details (Ultrasound guidance/Intercostal tube drainage) not provided at claim submission.",
+    "Discharge summary missing or lacking mentioned follow-up date at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [
+      "Tube Thoracostomy",
+      "Video-assisted thoracoscopic surgery (VATS)",
+      "Open Thoracostomy & Decortication"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Surgical consultation should be a consideration when drainage via tube thoracostomy fails or in multi-loculated empyema.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

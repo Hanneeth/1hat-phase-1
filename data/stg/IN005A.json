@@ -1,0 +1,148 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Pre-operative tumor embolization/ : Pre-operative tumor embolization_Medco.pdf (clinical + mandatory docs) + Pre-operative tumor embolization_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "IN005A",
+  "procedure_code": "IN005A",
+  "condition": "Tumor (vascular head, neck, and brain)",
+  "procedure_name": "Pre-operative tumour embolization (per session)",
+  "specialty": "Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "Pre-operative tumor embolization_Medco.pdf",
+    "Pre-operative tumor embolization_PPD.CPD.pdf"
+  ],
+  "alos": "3 Days",
+  "min_doctor_qualification": [
+    "DM/Equivalent (in Interventional Neuroradiology)"
+  ],
+  "clinical_indications": [
+    "Moderate or highly hypervascular tumour such as Juvenile angiofibroma (JNA), Hemangiopericytoma, Metastatic lesions, Meningiomas etc.",
+    "Peri-operative embolization for vascular head, neck, and brain tumors as an effective and safe adjuvant to surgical resection.",
+    "To reduce intra-operative bleeding and operative times during surgical resection.",
+    "To decrease tumor vascularity either to facilitate surgical excision or for palliation."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_treatment_plan",
+        "label": "Clinical notes including evaluation findings, indication for embolization, and planned line of treatment"
+      },
+      {
+        "key": "ct_mri_brain_dsa",
+        "label": "CT/MRI Brain / Digital Subtraction Angiography (DSA)"
+      },
+      {
+        "key": "complete_blood_count_pt_inr",
+        "label": "Complete blood count, Prothrombin Time (PT)/ International Normalized ratio (INR)"
+      },
+      {
+        "key": "balloon_test_occlusion_bto_optional",
+        "label": "Balloon test occlusion (BTO) (Optional)"
+      },
+      {
+        "key": "histopathological_examination_report",
+        "label": "Histopathological Examination report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_procedure_photograph_stills_optional",
+        "label": "Intra-procedure photograph stills (optional)"
+      },
+      {
+        "key": "intra_procedural_mr_ct_angiography_optional",
+        "label": "Intra-procedural MR/CT angiography (optional)"
+      },
+      {
+        "key": "clinical_evaluation_brain_function_intra_operative_monitoring",
+        "label": "Clinical Evaluation of the brain function during the procedure (Intra-operative monitoring documentation)"
+      },
+      {
+        "key": "intra_operative_monitoring_eeg_provocative_testing_optional",
+        "label": "Intra-operative monitoring (Optional) Electroencephalography (EEG) Provocative testing (Amytal/WADA)"
+      },
+      {
+        "key": "post_procedural_dsa",
+        "label": "Post-procedural DSA"
+      },
+      {
+        "key": "embolic_agent_details_invoice_barcode",
+        "label": "Embolic agent details (invoice/barcode)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did Digital Subtraction Angiography (DSA) confirm diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the diagnosis and imaging indicative of performing the procedure/surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the patient having evidence of fever or sepsis?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the imaging indicative of procedure to determine the course of therapy?",
+        "expected": true
+      },
+      {
+        "q": "Was intra-operative monitoring (neurological assessment) documented and imaging submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Diagnosis and imaging not indicative of performing the procedure/surgery.",
+    "Patient presented with fever or sepsis without documented justification for proceeding with embolization.",
+    "Digital Subtraction Angiography (DSA) did not confirm diagnosis at pre-authorization.",
+    "Histopathological Examination report not submitted at pre-authorization.",
+    "Embolic agent details (invoice/barcode) missing at claim submission.",
+    "Intra-operative monitoring (neurological assessment) not documented or submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital with facilities for interventional neuroradiology (trained in neuro-endovascular techniques)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Tumor embolization refers to any procedure performed either percutaneously, through a direct puncture of the tumor, or via an endovascular approach (most commonly through the femoral artery) in which particles, liquid embolic agents, coils, gelfoam or other materials are injected with the goal of reducing the tumor vascularity.",
+      "Peri-operative embolization of vascular head, neck, and brain tumors is an effective and safe adjuvant to surgical resection.",
+      "Devascularization may help to reduce intra-operative bleeding and operative times and have thus become an integral part of the management of these tumors.",
+      "The goal of tumor embolization is to decrease tumor vascularity either to facilitate surgical excision or for palliation.",
+      "The location, presenting symptoms, patient characteristics, demographics as well as prognosis and outcome vary depending on tumor type, and it is important to clearly delineate the type of tumor for which the embolization procedure is being reported.",
+      "The goal of embolization should be to reduce the amount of tumor blush by approximately 80% or more.",
+      "The radiographic and clinical effects of embolization may be transient or permanent depending on the embolic material used.",
+      "The timing of embolization with respect to surgery is therefore important. Thus, surgical resection should be carried out 1–8 days after embolization in order to maximize the benefits of the embolization procedure.",
+      "However, surgery may sometimes need to be delayed for various reasons."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [
+      "The goal of embolization should be to reduce the amount of tumor blush by approximately 80% or more."
+    ],
+    "contraindications": [
+      "Fever or Sepsis"
+    ]
+  }
+}

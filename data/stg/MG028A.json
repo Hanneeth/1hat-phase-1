@@ -1,0 +1,132 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG028A",
+  "procedure_code": "MG028A",
+  "condition": "Acute Bronchitis",
+  "procedure_name": "Acute Bronchitis",
+  "specialty": "General Medicine",
+  "version": "1.1",
+  "source_files": [
+    "Acute Bronchitis_Medco.pdf",
+    "Acute Bronchitis_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Chest congestion",
+    "Persistent coughing",
+    "Shortness of Breath",
+    "Sore throat",
+    "Fever",
+    "Body ache"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "Wheezing sound",
+      "operator": "is",
+      "value": "present",
+      "note": "Pop-up scenario in TMS and PPD/CPD checklist"
+    },
+    {
+      "field": "History of cough duration",
+      "operator": ">",
+      "value": "18 days",
+      "note": "Pop-up scenario in TMS"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with indications and planned line of management"
+      },
+      {
+        "key": "x_ray_chest",
+        "label": "X ray Chest"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes"
+      },
+      {
+        "key": "cbc",
+        "label": "CBC"
+      },
+      {
+        "key": "x_ray_chest",
+        "label": "X Ray Chest"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did X ray (Chest) show any abnormality?",
+        "expected": true
+      },
+      {
+        "q": "Was Wheezing in chest mentioned in the clinical notes?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Did X ray (Chest) show any abnormality?",
+        "expected": true
+      },
+      {
+        "q": "Is presence of wheezing sound mentioned in the clinical notes?",
+        "expected": true
+      },
+      {
+        "q": "Was the patient treated with bronchodilators?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or incomplete for pre-authorization or claim",
+    "X-ray Chest not provided or does not show any abnormality",
+    "Wheezing sound not documented in clinical notes",
+    "History of cough not reported as more than 18 days",
+    "Patient not treated with bronchodilators at claim stage",
+    "CBC or Discharge Summary missing at claim stage"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "icd_10_code_uncertain": "The document lists '309-318; 300-06; 340' which appear to be non-standard or outdated ICD-9 codes rather than ICD-10 codes, despite being labeled ICD-10. Not extracting values that do not conform to expected ICD-10 format.",
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD / DNB or equivalent (Medicine/ Pulmonology)",
+    "clinical_key_pointers": [
+      "Chest congestion",
+      "Persistent coughing",
+      "Shortness of Breath",
+      "Sore throat",
+      "Fever",
+      "Body ache"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Consider acute exacerbation of asthma/COPD if there is a history of any of these 2 illnesses",
+    "referral_criteria": [
+      "Frank hemoptysis and/or Signs of respiratory failure [listed under in the history and evaluation sections]",
+      "CRB-65 score > 1",
+      "Oxygen saturation by pulse oximetry ≤ 92% (patients ≤50 yrs) OR <90% (patients >50 yrs)",
+      "Multi-lobar consolidation on chest X-ray",
+      "Confusion/disorientation",
+      "Hypothermia (core temperature <360C)"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

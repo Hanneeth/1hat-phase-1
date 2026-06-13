@@ -1,0 +1,47 @@
+{
+  "_comment": "State-scheme variant (Tamil Nadu CMCHIS). Same shape as pmjay.json but note the differences flagged below: TPA/insurer model, grade-tiered pricing (A1-A6), TN-specific code namespace, and a per-hospital specialty empanelment grid. Phase 2.",
+  "scheme_id": "cmchis",
+  "name": "Chief Minister's Comprehensive Health Insurance Scheme (Tamil Nadu)",
+  "authority": "State Health Agency Tamil Nadu",
+  "model": "tpa_insurer",
+  "converged_with": "pmjay",
+
+  "coverage": {
+    "sum_insured_inr": 500000,
+    "basis": "family_floater",
+    "period": "annual",
+    "ped_waiting_period_days": 0,
+    "excludes_opd": true
+  },
+
+  "pricing": {
+    "model": "fixed_package_rate",
+    "rate_tiering": "hospital_grade",
+    "hospital_grades": ["A1", "A2", "A3", "A4", "A5", "A6"],
+    "grade_uplift_variants": ["a1_plus_10", "a1_plus_20"],
+    "balance_billing_allowed": false
+  },
+
+  "code_namespaces": {
+    "high_end_transplant": "CMU*",
+    "general": "CM*",
+    "diabetic_foot": "DF*",
+    "trauma_nk48": ["TA*", "H1xxxx"],
+    "diagnostics": "DPU*"
+  },
+
+  "hospital_applicability": {
+    "_comment": "CMCHIS gates package eligibility per-hospital via a 47-specialty boolean grid (from tpa-hospitals.csv). Pre-auth MUST verify the hospital is flagged true for the requested specialty, and route DPU* diagnostic packages only to centres whose permitted list includes that code.",
+    "specialty_grid_source": "CMCHIS/hospital_empanelment_cmchis/tpa-hospitals-2026-06-09.csv",
+    "diagnostic_centre_source": "CMCHIS/hospital_empanelment_cmchis/diagnostic-centres-2026-06-09.csv",
+    "reserved_procedures_source": "CMCHIS/hospital_empanelment_cmchis/Govt Reserved procedures.xlsx"
+  },
+
+  "differences_from_pmjay": [
+    "Codes are TN-specific (CMU/CM/DF/TA/DPU) and DO NOT map to national HBP procedure codes — needs its own package master.",
+    "Rates vary by hospital grade A1-A6, not a single national rate.",
+    "Administered via TPA/insurer (tpa=MA), not the NHA trust/TMS model.",
+    "Package eligibility is gated per-hospital by a 47-specialty boolean grid.",
+    "NK48 injury-category packages and a separate Govt-Reserved list are TN-specific constructs."
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S800060",
+  "procedure_code": "S800060",
+  "condition": "Intracranial Aneurysm",
+  "procedure_name": "Aneurysm Clipping including angiogram",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Aneurysm clipping including angiogram_Medco.pdf",
+    "Aneurysm clipping including angiogram_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "Mch (Neurosurgery)",
+    "DNB (Neurosurgery)",
+    "Equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Diagnosis of intracranial aneurysm via MRA, CTA, or DSA.",
+    "Intracranial aneurysm of 3 mm diameter or greater.",
+    "Treatment of intracranial aneurysms that are prone to rupture, leading to hemorrhagic stroke or subarachnoid hemorrhage."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "aneurysm_diameter",
+      "operator": ">=",
+      "value": "3 mm",
+      "note": "detected by MRA, CTA, or DSA"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical Notes including evaluation findings, indication of implant, and planned line of management"
+      },
+      {
+        "key": "cta_mra_dsa_report",
+        "label": "CTA/MRA/ DSA (Digital Subtraction Angiography) report of brain establishing need for surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photo_scar_photo",
+        "label": "Post Procedure clinical photograph/scar photo (Optional)"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure/ Operation notes"
+      },
+      {
+        "key": "invoice_barcode_clips_used",
+        "label": "Invoice/barcode of clips used"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes include detailed history, signs & symptoms, planned line of management, indication for procedure, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Was CTA/MRA/DSA brain report of patient submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers (ICPs) with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the invoice/barcode of clips used submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "CTA/MRA/DSA brain report not suggestive of intracranial aneurysm or missing at pre-authorization.",
+    "Clinical notes missing or incomplete (lacks detailed history, signs & symptoms, planned line of management, indication for procedure, or admission advice).",
+    "Detailed Indoor Case Papers (ICPs) missing or lack daily vitals and treatment details at claim submission.",
+    "Detailed procedure / Operative Notes missing at claim submission.",
+    "Invoice/barcode of clips used not submitted at claim submission.",
+    "Discharge summary missing or lacks follow-up advice at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Intracranial aneurysms (IAs) are localized dilations of the cerebral arteries wall and are prone to rupture, resulting in bleeding. It is the leading cause of hemorrhagic stroke, responsible for 85% of subarachnoid hemorrhages (SAH).",
+      "Either brain magnetic resonance angiography (MRA) or CT angiography (CTA) may be used for diagnosis, with both detecting aneurysms of 3 mm in diameter or greater with a high degree of sensitivity."
+    ],
+    "surgical_options": [
+      "Conventional treatment options for IAs are either surgical or endovascular.",
+      "Surgical clipping refers to the practice of the exposure of the aneurysmal neck via craniotomy and the exclusion of the entire abnormal vascular wall from the circulation using single or multiple clips. Two principles apply in surgical clipping: isolating the lesion from active circulation and maintaining the integrity and patency of the parenting vessel."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

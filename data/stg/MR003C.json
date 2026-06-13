@@ -1,0 +1,144 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MR003C",
+  "procedure_code": "MR003C",
+  "condition": "Extremity Soft tissue sarcoma",
+  "procedure_name": "2D External Beam Radiotherapy (25 Fractions)",
+  "specialty": "Radiation Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Soft tissue sarcoma Guidelines.pdf"
+  ],
+  "alos": "1",
+  "min_doctor_qualification": [
+    "MD or DNB (Radiation oncology) or equivalent"
+  ],
+  "clinical_indications": [
+    "Neoadjuvant RT: limb sparing surgical resection is not possible.",
+    "Adjuvant RT: All high-grade lesions, all recurrent lesions, low grade lesions if deep seated / >=5cm / margin close or positive",
+    "Palliative RT: Metastatic disease where complete resection is not possible at all sites.",
+    "Intra-operative interstitial brachytherapy: all upfront resectable cases to be evaluated for this"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "size",
+      "operator": ">=",
+      "value": "5cm",
+      "note": "for low grade lesions to warrant adjuvant RT"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with documentation of relevant history"
+      },
+      {
+        "key": "rt_treatment_plan",
+        "label": "Planned line of treatment (documents confirming the Procedure indicated and details of RT treatment plan)"
+      },
+      {
+        "key": "bone_imaging",
+        "label": "Bone imaging (local and chest x-ray)"
+      },
+      {
+        "key": "blood_investigations",
+        "label": "Blood investigations- CBC,LFT, RFT, RBS"
+      },
+      {
+        "key": "routine_biochemistry",
+        "label": "Routine Biochemistry"
+      },
+      {
+        "key": "serological_investigations",
+        "label": "Serological investigations- alkaline phosphatase, lactate dehydrogenase"
+      },
+      {
+        "key": "mri_affected_part",
+        "label": "MRI of the affected part"
+      },
+      {
+        "key": "core_needle_biopsy",
+        "label": "Core needle biopsy"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "ncct_chest",
+        "label": "NCCT chest"
+      },
+      {
+        "key": "usg_abdomen_pelvis_axilla",
+        "label": "USG Abdomen, pelvis and axilla"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes",
+        "label": "Essential documents like clinical notes"
+      },
+      {
+        "key": "investigations",
+        "label": "Investigations (essential investigation list)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      },
+      {
+        "key": "detailed_discharge_summary_rt_doses",
+        "label": "Detailed Discharge Summary (with RT treatment and doses given)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Increased levels of alkaline phosphatase and Lactate dehydrogenase?",
+        "expected": true
+      },
+      {
+        "q": "MRI/ Bone scan/ PET-CT shows osteosarcoma?",
+        "expected": true
+      },
+      {
+        "q": "Biopsy report shows High Grade osteosarcoma?",
+        "expected": true
+      },
+      {
+        "q": "Soft tissue lump clinical features (Increasing in size, Size >5 cm, Deep to the deep fascia, Painful) that should be considered malignant until proved otherwise?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Increased levels of alkaline phosphatase and Lactate dehydrogenase not documented or outside expected range",
+    "MRI/ Bone scan/ PET-CT does not show osteosarcoma (potential typo, likely meant soft tissue sarcoma)",
+    "Biopsy report does not show High Grade osteosarcoma (potential typo, likely meant soft tissue sarcoma)",
+    "Soft tissue lump clinical features (increasing size, >5cm, deep to fascia, painful) not documented or not indicating malignancy",
+    "Clinical notes with relevant history are missing or incomplete at pre-authorization",
+    "RT treatment plan or planned line of treatment is missing or incomplete at pre-authorization",
+    "Detailed Discharge Summary (with RT treatment and doses given) is missing or incomplete at claim submission",
+    "Poor wound healing or poor general condition"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Chemotherapy unit; LINEAC; well-equipped OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Physiotherapy rehabilitation post-operatively, follow-up every 6 months for first 5 years and annual follow-up after every 5 years with clinical evaluation (examination of local area), radiological evaluation (X-ray of the local part and Chest) and functional evaluation (using special scores like Musculoskeletal Tumor Society (MSTS) scoring, etc.)",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Poor wound healing (relative)",
+      "Poor GC"
+    ]
+  }
+}

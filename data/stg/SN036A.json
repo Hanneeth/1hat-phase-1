@@ -1,0 +1,133 @@
+{
+  "stg_id": "SN036A",
+  "procedure_code": "SN036A",
+  "condition": "Cervical disc disease",
+  "procedure_name": "Micro discectomy",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Cervical disc disease_Medco.pdf",
+    "Cervical disc disease_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent in (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Patient present with severe cervical radiating pain, giddiness, numbness & weakness of hand",
+    "Disc bulge (C3-C7)",
+    "Prolapsed intervertebral disc"
+  ],
+  "clinical_indications_uncertain": "Indications for 'Micro discectomy (Cervical)' are not explicitly listed; inferred from 'Posterior Cervical Discectomy without implant' as it is a type of discectomy.",
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with evaluation findings, indication of procedure, and planned line of treatment"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph"
+      },
+      {
+        "key": "xray_mri_cervical_spine",
+        "label": "X-ray / MRI Cervical spine"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was there a Weakness of upper limb/wrist drop if posterior discectomy is planned?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical photograph and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT/MRI Brain/Spine report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Implant invoice/barcode available (if applicable)?",
+        "expected": false
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and/or imaging not indicative of surgery.",
+    "No weakness of upper limb/wrist drop documented despite micro discectomy (cervical) being planned.",
+    "Clinical notes with evaluation findings, indication of procedure, or planned line of treatment missing/incomplete at pre-authorization.",
+    "Clinical photograph or X-ray/MRI Cervical spine not submitted or unclear at pre-authorization.",
+    "Detailed Indoor case papers (ICPs) or Detailed Procedure/operative notes missing/incomplete at claim submission.",
+    "CT/MRI Brain/Spine report not submitted for claim processing.",
+    "Detailed discharge summary with follow-up advice missing/incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Cervical disc disorders encountered in practice include herniated nucleus pulposus (HNP), degenerative disc disease (DDD), and internal disc disruption (IDD).",
+      "HNP results from repetitive cervical stress or, rarely, from a single traumatic incident. Increased risk may accrue because of vibrational stress, heavy lifting, prolonged sedentary position, whiplash accidents, and frequent acceleration/deceleration.",
+      "DDD is part of natural aging, but it is also a consequence of poor nutrition, smoking, atherosclerosis, job-related activities, and genetics.",
+      "IDD can result from cervical trauma, including whiplash, cervical flexion/rotation injury, and repetitive use.",
+      "Cervical radiculopathy results from nerve root compression secondary to herniated disc material, stenosis, or proteoglycan-mediated chemical inflammation released from discs. Smoking and certain occupational activities also predispose patients to cervical radiculopathy.",
+      "Patients usually present with severe cervical radiating pain, giddiness, numbness & weakness of upper limbs",
+      "Discogenic pain without nerve root involvement is typically vague, diffuse and distributed axially.",
+      "Depending on whether primarily motor or sensory involvement is present, radicular pain is deep, dull, and achy or sharp, burning, and electric. Such radicular pain follows a dermatomal or myotomal pattern into the upper limb.",
+      "Cervical radicular pain most commonly radiates to the interscapular region, although pain can be referred to the occiput, shoulder, or arm as well. Neck pain does not necessarily accompany radiculopathy and frequently is absent.",
+      "If there is bowel or bladder disfunction, difficulty walking, severe muscle weakness, or severe pain that is not controlled by strong pain-relieving medications, surgery is absolutely indicated without non-operative trial."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

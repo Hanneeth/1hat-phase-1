@@ -1,0 +1,170 @@
+{
+  "_test_id": "TC09",
+  "_description": "5-year-old child with VSD planned for surgical repair. Tests PAEDIATRIC_DEVICE flag (Phase 8), paediatric implant age check (Phase 3), and cardiac surgery package matching (SV/MC specialty).",
+  "_expected_status": "READY_WITH_WARNINGS",
+  "_expected_specialty": "SV",
+  "_expected_flags_include": [
+    "PAEDIATRIC_DEVICE",
+    "CANDIDATES_GENERATED"
+  ],
+  "_expected_flags_exclude": [
+    "WALLET_INSUFFICIENT",
+    "PUB_RESERVED_BLOCK",
+    "NEONATAL_ESCALATION_RISK"
+  ],
+  "session_id": "IRIS-TC09-20260612",
+  "created_at": "2026-06-12T13:00:00+05:30",
+  "patient": {
+    "patient_id": "P003"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Recurrent chest infections since birth, failure to thrive, heart murmur detected at birth, breathlessness on exertion",
+    "duration_days": 1825,
+    "history_of_present_illness": "5-year-old male child with murmur detected at birth. Parents report recurrent respiratory infections (4-5 episodes per year). Child has poor weight gain (failure to thrive). Breathlessness on moderate exertion. Echocardiogram 6 months ago showed moderate VSD with left to right shunt. Cardiologist advised surgical repair before school age. Now admitted electively for VSD closure.",
+    "provisional_diagnosis": "Ventricular septal defect (VSD) — perimembranous, moderate size, with left to right shunt, haemodynamically significant",
+    "planned_procedure": "Surgical VSD closure under cardiopulmonary bypass",
+    "weight_kg": 14,
+    "height_cm": 102,
+    "vitals": {
+      "bp_systolic_mmhg": 90,
+      "bp_diastolic_mmhg": 60,
+      "pulse_bpm": 105,
+      "spo2_pct": 96,
+      "temperature_f": 98.4,
+      "rr_per_min": 22,
+      "gcs": 15,
+      "blood_glucose_mgdl": null
+    },
+    "examination_findings": {
+      "general": "Thin, malnourished-appearing child. Weight 14 kg (below 3rd centile for age). Height 102 cm.",
+      "cvs": "Pansystolic murmur grade 4/6 at left sternal border. Thrill palpable. Active precordium.",
+      "rs": "Bilateral clear air entry. No added sounds.",
+      "abdomen": "Soft, liver 2cm BCM (RVF signs), no splenomegaly",
+      "cns": "Alert, playful, developmentally appropriate for age",
+      "local": null
+    },
+    "investigations": [
+      {
+        "type": "echo",
+        "result_summary": "2D Echo: Perimembranous VSD 8mm, left to right shunt. LA/LV enlarged. Pulmonary pressure estimated 45 mmHg. No other structural defect. LVEF 62%.",
+        "structured_values": [
+          {
+            "parameter": "VSD_size",
+            "value": 8,
+            "unit": "mm",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "shunt_direction",
+            "value": "left_to_right",
+            "unit": null,
+            "flag": null,
+            "leads": null
+          },
+          {
+            "parameter": "pulmonary_pressure",
+            "value": 45,
+            "unit": "mmHg",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "LVEF",
+            "value": 62,
+            "unit": "%",
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-10"
+      },
+      {
+        "type": "ecg",
+        "result_summary": "ECG: Sinus rhythm, LVH pattern, P-mitrale, QRS 0.08s",
+        "structured_values": [
+          {
+            "parameter": "rhythm",
+            "value": "sinus",
+            "unit": null,
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "LVH",
+            "value": "present",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-10"
+      },
+      {
+        "type": "xray",
+        "result_summary": "Chest X-ray: Cardiomegaly (CTR 0.58), pulmonary plethora, prominent pulmonary vasculature",
+        "structured_values": [
+          {
+            "parameter": "CTR",
+            "value": 0.58,
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "pulmonary_plethora",
+            "value": "present",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-10"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "Recurrent respiratory infections since birth. Murmur since birth. Failure to thrive.",
+    "past_surgical_history": "None",
+    "current_medications": [
+      "Furosemide 1mg/kg OD",
+      "Spironolactone 1mg/kg OD"
+    ],
+    "allergies": [],
+    "personal_history": null,
+    "family_history": "No family history of congenital heart disease",
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "CTVS / Cardiology admission notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Photo of patient on hospital bed",
+        "available": true
+      },
+      {
+        "key": "echo",
+        "label": "Echocardiogram report and images",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Venkatesan Pillai",
+      "registration_number": "TN-MED-67890",
+      "qualification": "MCh Cardiothoracic and Vascular Surgery",
+      "specialty_code": "SV"
+    },
+    "notes": "Paediatric cardiac surgery case. Age 5 years = paediatric implant/device rules apply. Cardiac bypass circuit and consumables are paediatric-sized. Anaesthesia has been counselled on paediatric considerations."
+  }
+}

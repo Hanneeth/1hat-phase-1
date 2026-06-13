@@ -1,0 +1,177 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO021A",
+  "procedure_code": "SO021A",
+  "condition": "Intrauterine Transfusions",
+  "procedure_name": "Intrauterine Transfusions",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Intrauterine transfusions_Medco.pdf",
+    "Intrauterine transfusions_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (Obstetrics & Gynecology) with training in Foetal Medicine",
+    "MD/DNB/Equivalent in Radiologist with training in Foetal Medicine"
+  ],
+  "clinical_indications": [
+    "Elevated Middle Cerebral Artery peak systolic velocity (MCA-PSV): exceeding 1.5 Multiples of the Median (MoM) for that gestational age, as assessed through ultrasound",
+    "Fetal hemoglobin less than 9 gm% or haematocrit less than 30% for that gestational age, as assessed through foetal blood sampling",
+    "Development of hydrops foetalis, as seen in the ultrasound"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "mca_psv",
+      "operator": ">",
+      "value": "1.5 MoM",
+      "note": "for that gestational age"
+    },
+    {
+      "field": "fetal_hemoglobin",
+      "operator": "<",
+      "value": "9 gm%",
+      "note": "for that gestational age"
+    },
+    {
+      "field": "haematocrit",
+      "operator": "<",
+      "value": "30%",
+      "note": "for that gestational age, assessed through foetal blood sampling"
+    },
+    {
+      "field": "indirect_coombs_test_titre",
+      "operator": ">",
+      "value": "1:16",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed clinical notes with history, symptoms, signs, examination findings, indication for procedure, planned line for treatment and advice for admission"
+      },
+      {
+        "key": "ultrasound_report_fetal_signs_hemolytic_disease_gestation_age",
+        "label": "Ultrasound report for foetal signs of haemolytic disease & gestation age"
+      },
+      {
+        "key": "complete_blood_count_hemoglobin",
+        "label": "Complete blood count (CBC) (Hemoglobin)"
+      },
+      {
+        "key": "abo_rh_both_partners",
+        "label": "ABO Rh of both partners"
+      },
+      {
+        "key": "indirect_coombs_test_titre",
+        "label": "Indirect Coomb's test and titre"
+      },
+      {
+        "key": "color_doppler_study_mca_psv",
+        "label": "Color Doppler study of MCA-PSV"
+      },
+      {
+        "key": "urine_routine_microscopic_complete_examination_(optional)",
+        "label": "Urine routine, microscopic complete examination (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "fetal_blood_sampling_cordocentesis",
+        "label": "Fetal blood sampling/cordocentesis"
+      },
+      {
+        "key": "foetal_blood_haematocrit_mca_psv_post_transfusion_(optional)",
+        "label": "Foetal blood haematocrit and MCA-PSV post transfusion (optional)"
+      },
+      {
+        "key": "blood_transfusion_notes_(if_required)",
+        "label": "Blood transfusion notes (if required)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Detailed obstetric history documentation including pregnancy outcome (live/still born/abortion), prophylactic administration of anti-D immunoglobulin, previous pregnancy complicated by Haemolytic Disease of the Foetus & Newborn (HDFN), blood transfusion in the past, previous surgery or procedure performed in the past?",
+        "expected": true
+      },
+      {
+        "q": "Did the investigations/imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Is the gestation age more than 34 weeks?",
+        "expected": false
+      },
+      {
+        "q": "Was the congenital malformation ruled out in the foetus?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the history and investigations/imaging indicative of procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Gestation age is more than 34 weeks without proper justification",
+    "Congenital malformation not ruled out in the foetus",
+    "MCA-PSV measurement not provided or does not exceed 1.5 Multiples of the Median (MoM) as assessed by ultrasound",
+    "Fetal hemoglobin not less than 9 gm% or haematocrit not less than 30% from foetal blood sampling, or foetal blood sampling report is missing",
+    "Indirect Coomb's test with titre > 1:16 not provided",
+    "Ultrasound report not documenting hydrops foetalis"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Specialized foetal medicine unit, well-equipped for invasive Ultrasonography. Facility should be registered as per PCPNDT law for intervention procedures.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Overall indication for intrauterine transfusion is to manage foetal anaemia in alloimmunized mothers.",
+      "Transfusion is repeated at interval of 2 weeks up to 34 weeks, as per the need.",
+      "Route for intrauterine transfusion: Intravascular transfusion (IVT) (preferred method).",
+      "Route for intrauterine transfusion: Transfusion into the fetal peritoneal cavity (IPT): if early onset of foetal anaemia (18 weeks or under).",
+      "Route for intrauterine transfusion: Intra-cardiac Transfusion (ICT): in critical situations and early onset."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

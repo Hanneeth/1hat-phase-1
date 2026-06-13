@@ -1,0 +1,97 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV020A",
+  "procedure_code": "SV020A",
+  "condition": "Acute Limb Ischemia (ALI)",
+  "procedure_name": "Thrombo-embolectomy",
+  "specialty": "CTVS/ General Surgery/ Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Thromboembolectomy_Medco.pdf",
+    "Thromboembolectomy_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)",
+    "M.Ch./DNB/equivalent (Pediatric Surgery)",
+    "M.S./DNB/equivalent (General Surgery)"
+  ],
+  "clinical_indications": [
+    "Patient with ALI with a viable limb who is not suitable for thrombolysis should be taken up for thromboembolectomy."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "duplex_usg_report",
+        "label": "Duplex USG report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the duplex USG suggestive of acute limb ischemia?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT Angio report suggestive of acute limb ischemia?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing detailed history, signs & symptoms, or indication for procedure",
+    "Duplex USG report not submitted or not suggestive of acute limb ischemia",
+    "CT Angio report not submitted or not suggestive of acute limb ischemia",
+    "Detailed Procedure / Operative notes not submitted",
+    "Detailed Discharge Summary not submitted or missing date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic/ General Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A sudden decrease in limb perfusion that threatens limb viability defines acute limb ischemia (ALI) and represents a major vascular emergency. The clinical presentation is considered to be acute if it occurs within 14 days after symptom onset. In contrast to critical limb ischemia (CLI), also called chronic limb-threatening ischemia (CLTI), in which collateral blood supply is often present, ALI threatens limb viability in a very short interval, because there is insufficient time for new blood vessel growth to compensate for the loss of perfusion.",
+      "Symptoms develop in several minutes, to hours or days, and range from new or worsening intermittent claudication to severe rest pain, paresthesia, muscle weakness, paralysis and even gangrene.",
+      "The classical description of patients with ALI is grouped into a mnemonic known as the “6 Ps\": pain, pallor, paralysis, pulse deficit, paresthesia and poikilothermia.",
+      "Duplex ultrasound (DUS) is the first imaging choice to assess ALI. It is widely available, has a low cost, is non-invasive, non-irradiant and it takes a relative short time to perform. DUS is useful to assess the anatomic location and the degree of obstruction (complete vs. incomplete). CTA and MRA are high-resolution imaging tools available for the diagnosis of acute limb ischemia."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

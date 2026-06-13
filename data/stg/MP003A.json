@@ -1,0 +1,123 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP003A",
+  "procedure_code": "MP003A",
+  "condition": "Acute encephalitis syndrome/ Acute encephalitis",
+  "procedure_name": "Acute encephalitis (Infectious-uncomplicated)",
+  "specialty": "Pediatric Medical Management/ General Medicine",
+  "version": "1.1",
+  "source_files": [
+    "Acute encephalitis syndrome & Acute encephalitis_Medco.pdf",
+    "Acute encephalitis syndrome & Acute encephalitis_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MD / DNB/ equivalent (Medicine/ Pediatrics/ Neurology)"
+  ],
+  "clinical_indications": [
+    "Acute onset of fever (</= 5-7 days)",
+    "Mental confusion / Disorientation/ Delirium or coma",
+    "Febrile Seizures",
+    "Abnormal posturing",
+    "Paucity of limb movement",
+    "Fever, headache, vomiting, lethargy, unconsciousness",
+    "New onset of seizures (excluding simple febrile seizures)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "acute_onset_of_fever",
+      "operator": "<=",
+      "value": "5-7 days",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_indications",
+        "label": "Clinical notes with indications"
+      },
+      {
+        "key": "chest_x_ray",
+        "label": "Chest X Ray"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "csf_examination",
+        "label": "CSF examination"
+      },
+      {
+        "key": "ct_brain",
+        "label": "CT Brain"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Does the clinical note mention acute onset of fever (</= 5 – 7 days) ?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical note mention altered sensorium and onset of seizures?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the CSF examination performed?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Acute onset of fever not documented or outside the 5-7 days window in clinical notes",
+    "Altered sensorium and/or onset of seizures not documented in clinical notes",
+    "CSF examination not performed or not documented at claim stage",
+    "Discharge summary not available at claim stage",
+    "Clinical notes with indications not provided at pre-authorization",
+    "Chest X Ray not provided at pre-authorization",
+    "Planned line of treatment not provided at pre-authorization",
+    "Indoor case papers not provided at claim stage",
+    "CT Brain not provided at claim stage"
+  ],
+  "additional_information": {
+    "icd_10_code": "G04",
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Acute onset of fever (</=5-7 days)",
+      "Mental confusion / Disorientation/ Delirium or coma",
+      "Febrile Seizures",
+      "Abnormal posturing",
+      "Paucity of limb movement"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Parents have been explained the supportive care and physiotherapy to be continued at home",
+    "fitness_criteria": "Hemodynamically stable; Improvement in consciousness; Afebrile; Has started eating and drinking orally; Seizures have subsided",
+    "comorbidity_management": null,
+    "referral_criteria": "If any of the following signs are present, the child should be referred to tertiary care facility with PICU and facilities for mechanical ventilation: Glasgow Coma Scale < 8, Abnormal breathing pattern, Shock not responding to fluid bolus, Decerebrate or decorticate posturing, Seizures persisting despite benzodiazepine and phenytoin",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Lumbar puncture is contra-indicated or neuroimaging must be obtained before lumbar puncture if: Fundus papilledema, Platelet count < 50,000, Focal neurological deficits, Asymmetric/unreactive pupils, Decerebrate/decorticate posturing"
+    ]
+  }
+}

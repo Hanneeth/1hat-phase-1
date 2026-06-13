@@ -1,0 +1,111 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU081A",
+  "procedure_code": "SU081A",
+  "condition": "Prostate Cancer Diagnosis",
+  "procedure_name": "Transrectal Ultrasound guided prostate biopsy (minimum 12 core)",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Transrectal Ultrasound guided prostate biopsy_Medco.pdf",
+    "Transrectal Ultrasound guided prostate biopsy_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MCh Urology",
+    "DNB Urology",
+    "Equivalent in Urology"
+  ],
+  "clinical_indications": [
+    "Elevated prostate-specific antigen (PSA), High Gleason score.",
+    "Adenocarcinoma, Brachytherapy for prostate cancer, Cryotherapy for prostate cancer.",
+    "Deroofing or aspiration of ejaculatory ducts, prostatic cysts, or prostatic abscesses."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_management",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure"
+      },
+      {
+        "key": "usg_prostate_size_post_void_volume",
+        "label": "USG with prostate size and Post Void Volume establishing suspicion of malignancy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "histopathology_12_core_prostate_samples",
+        "label": "Histopathology showing reporting of minimum 12 core samples of prostate. (As applicable)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG report with prostate size and Post Void Volume establishing suspicion of malignancy submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Histopathology showing reporting of minimum 12 core samples of prostate submitted? (As applicable)",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge Summary submitted with the date of the follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes lacking evaluation findings, indication for procedure, or planned line of management.",
+    "USG report not establishing suspicion of malignancy or missing prostate size/Post Void Volume details.",
+    "Histopathology report for prostate not showing minimum 12 core samples or not submitted.",
+    "Detailed Procedure / Operative Notes missing.",
+    "Detailed indoor case papers not available or incomplete.",
+    "Discharge summary missing or follow-up date not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The precise way to find the cancer cell inside prostate gland is the surgical removal and histopathological examination of the entire gland is called the transrectal ultrasound (TRUS)-guided systematic biopsy.",
+      "One of the major limitations with the procedure is the amount of tissue sampled during prostate biopsy is limited and cancer cells can be missed",
+      "The 12-core extended systematic transrectal ultrasound (TRUS)-guided biopsy (TRUS-Gb) is currently an accepted standard method to detect tumors' Gleason grades."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

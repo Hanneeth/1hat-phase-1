@@ -1,0 +1,161 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO052A",
+  "procedure_code": "SO052A",
+  "condition": "Ectopic Pregnancy",
+  "procedure_name": "Medical management of ectopic pregnancy",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Ectopic pregnancy_Medco.pdf",
+    "Ectopic pregnancy_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS Obstetrics & Gynecology",
+    "MD Obstetrics & Gynecology",
+    "DNB Obstetrics & Gynecology",
+    "DGO (Equivalent)"
+  ],
+  "clinical_indications": [
+    "Confirmed tubal pregnancy measuring less than 35 mm and no foetal heartbeat",
+    "Gestation sac is unruptured",
+    "Concurrent intrauterine pregnancy ruled out",
+    "Serum HCG levels of 1500 mIU/mL or less",
+    "Patient is haemodynamically stable",
+    "No significant pain abdomen",
+    "Patient agrees to come for follow up",
+    "No contraindications to Methotrexate"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "tubal_pregnancy_size",
+      "operator": "<",
+      "value": "35 mm",
+      "note": "on ultrasonography, with no foetal heartbeat"
+    },
+    {
+      "field": "serum_hcg_level",
+      "operator": "<=",
+      "value": "1500 mIU/mL",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_for_admission",
+        "label": "Detailed Clinical notes with history, symptoms, signs, examination findings, planned line of treatment, and advice for admission"
+      },
+      {
+        "key": "serum_beta_hcg_titers",
+        "label": "Serum Beta human chorionic gonadotropin (hCG) titers"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG abdomen/pelvis"
+      },
+      {
+        "key": "culdocentesis_if_us_unavailable",
+        "label": "Culdocentesis – if ultrasound facility is not available (blood collection in pouch of douglas) (Optional)"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count"
+      },
+      {
+        "key": "liver_renal_function_tests",
+        "label": "Liver and renal function tests"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "serum_beta_hcg_follow_up",
+        "label": "Serum Beta Hcg level follow-up for medical management"
+      },
+      {
+        "key": "usg_abdomen_pelvis_optional",
+        "label": "USG abdomen/pelvis (optional)"
+      },
+      {
+        "key": "blood_transfusion_notes",
+        "label": "Blood transfusion notes (if blood transfusion was given)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did clinical presentation, increased hCG levels, and USG report confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Adnexal mass ≤ 3.5 cm in size on USG?",
+        "expected": true
+      },
+      {
+        "q": "Fetal cardiac activity is absent?",
+        "expected": true
+      },
+      {
+        "q": "B-hCG values < 1500 mIU/ml?",
+        "expected": true
+      },
+      {
+        "q": "Hemodynamically stable?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the clinical presentation, investigations/imaging and management indicative of surgery as applicable?",
+        "expected": false
+      },
+      {
+        "q": "Was serum hCG levels negative post medical management as applicable?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Adnexal mass > 3.5 cm on USG without justification for medical management.",
+    "Fetal cardiac activity is present without justification for medical management.",
+    "B-hCG values > 1500 mIU/ml without justification for medical management.",
+    "Patient not hemodynamically stable without justification for medical management.",
+    "Contraindications to Methotrexate (Liver/Renal Disease, Anaemia, Breast feeding) present without justification for medical management.",
+    "Clinical presentation, hCG levels, or USG report did not confirm ectopic pregnancy diagnosis at pre-authorization.",
+    "Serum hCG levels not negative post medical management at claim stage.",
+    "Missing serum Beta hCG levels follow-up for medical management at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability, laparoscopic facility for laparoscopic procedures.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ectopic pregnancy is an implantation of fertilized ovum outside the uterine cavity, commonly the fallopian tube.",
+      "SITES: Tubes-commonest site, Ovaries, Cervical, Abdominal.",
+      "SYMPTOMS AND SIGNS: Unruptured ectopic pregnancy: Symptoms of early pregnancy there may be spotting, Abdominal and pelvic pain. Ruptured ectopic pregnancy: Acute Abdominal and pelvic pain, Collapse and Weakness, Pallor, Abdominal distension, Fast, weak pulse (110 per min. or more), Hypotension, Rebound tenderness.",
+      "If rupture is diagnosed or even suspected patient has to be rushed to nearest centre where surgery with blood transfusion if needed can be done."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Liver/Renal Disease",
+      "Anaemia",
+      "Breast feeding (for Methotrexate)"
+    ]
+  }
+}

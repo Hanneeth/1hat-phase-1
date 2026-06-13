@@ -1,0 +1,144 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO073A",
+  "procedure_code": "SO073A",
+  "condition": "Biopsy- Cervical, Endometrial EA/ ECC; Vulvar; Polypectomy",
+  "procedure_name": "Biopsy- Cervical, Endometrial EA/ ECC; Vulvar; Polypectomy",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Biopsy- Cervical, Endometrial EA ECC; Vulvar; Polypectomy_Medco.pdf",
+    "Biopsy- Cervical, Endometrial EA ECC; Vulvar; Polypectomy_PPD.CPD.pdf"
+  ],
+  "alos": "Daycare",
+  "min_doctor_qualification": [
+    "MS OB&GYN",
+    "MD OB&GYN",
+    "DNB OB&GYN",
+    "Equivalent (OB&GYN)",
+    "MBBS with 6 months training in OBGYN"
+  ],
+  "clinical_indications": [
+    "Abnormality found during a PAP test/ VIA/VILI (Visual examination of the uterine cervix, after application of 5% acetic acid (VIA) and/or of Lugol's iodine (VILI))/Colposcopy",
+    "Positive test for Human Papillomavirus (HPV)",
+    "Overt growth seen on cervix",
+    "Abnormal uterine bleeding",
+    "Detection of precancerous hyperplasia and atypia",
+    "Follow-up of previously diagnosed endometrial hyperplasia",
+    "Abnormal Papanicolaou smear with atypical cells favoring endometrial origin",
+    "Endometrial Cancer diagnosis",
+    "Any patient who reports or is found to have a any grossly suspicious vulvar lesion such as a confluent, wartlike mass must be thoroughly evaluated to rule out malignancy.",
+    "Biopsy must be performed on any suspicious lesions of the vulva, asymptomatic or symptomatic.",
+    "Persistent ulceration or itchy area",
+    "Change in the colour, elevation, or surface of a lesion",
+    "Small polyp (<3cm size) with easily accessible thin pedicle"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "polyp_size",
+      "operator": "<",
+      "value": "3cm",
+      "note": "for polypectomy"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, symptoms, signs, examination findings, indication for procedure and advice for admission"
+      },
+      {
+        "key": "other_investigation_report",
+        "label": "Other investigation report (such as PAP test, HPV test, etc.)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers clearly indicating the need for performing the procedure"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "histopathology_form_submission",
+        "label": "Histopathology form confirming submission of specimen removed for histopathological examination"
+      },
+      {
+        "key": "discharge_summary_with_follow_up_advice",
+        "label": "Discharge summary with follow-up advice"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure and advice for admission available?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation, physical examination ± supporting investigations indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers available?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed procedure notes available with indications for the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is discharge summary available with follow-up advice at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was Histopathology form confirming submission of specimen removed for histopathological examination submitted",
+        "expected": true
+      },
+      {
+        "q": "Was there a correlation of biopsy lesion with histopathology report?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, physical examination, or supporting investigations are not indicative of the procedure.",
+    "Detailed Clinical notes with history, symptoms, signs, examination findings, indication for procedure, or advice for admission are missing or incomplete at pre-authorization.",
+    "Other investigation report (such as PAP test, HPV test) is missing at pre-authorization.",
+    "Detailed indoor case papers are missing or do not clearly indicate the need for performing the procedure at claim submission.",
+    "Detailed Procedure/Operative notes are missing at claim submission.",
+    "Histopathology form confirming submission of specimen is missing or does not confirm submission at claim submission.",
+    "Discharge summary with follow-up advice is missing at claim submission.",
+    "Biopsy lesion and histopathology report show no correlation.",
+    "Polyp size exceeds 3cm or pedicle is not easily accessible for polypectomy.",
+    "Procedure performed on a pregnant patient without strong suspicion of invasive cancer.",
+    "Procedure performed with active cervico-vaginal infection.",
+    "Procedure performed on a patient receiving anticoagulant therapy."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Secondary/ Tertiary care facility with a minor OT/ procedure room.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Biopsy- Cervical (Punch biopsy), Endometrial EA/ ECC; Vulvar; Polypectomy",
+      "Cervical biopsy can be done in several ways (Punch biopsy/ Cone biopsy/ Endocervical curettage (ECC)). This STG is applicable for Punch biopsy and endocervical curettage. For Cone Biopsy may refer to specific STG and corresponding package should be booked.",
+      "The tissue thus removed is sent for histopathology examination to test for abnormal/ precancerous/ cancerous conditions of cervix/ endometrium/vulva."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Pregnancy (relative contraindication), should only be performed in cases of strong suspicion of invasive cancer",
+      "Active cervico-vaginal infection",
+      "Patient is on anticoagulant therapy"
+    ]
+  }
+}

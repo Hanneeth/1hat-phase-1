@@ -1,0 +1,138 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE013A",
+  "procedure_code": "SE013A",
+  "condition": "Progressive Keratoconus or Corneal Ectasia",
+  "procedure_name": "Corneal Collagen Crosslinking",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Corneal surgeries_Medco.pdf",
+    "Corneal surgeries_PPD. CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MD/MS/ DNB/ PG Diploma or equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "Diagnosis made is backed by clinical signs, symptoms, ophthalmic examination and does not respond to conservative medical therapy",
+    "Progressive keratoconus or other corneal ectatic disorders as evidenced by Pentacam progression maps."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph_affected_eye",
+        "label": "Clinical Photograph of the affected eye"
+      },
+      {
+        "key": "pentacam_progression_maps",
+        "label": "Pentacam progression maps 3 to 6 months apart"
+      },
+      {
+        "key": "slit_lamp_examination",
+        "label": "Slit lamp examination"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Operative/procedure notes"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes including clinical signs, symptoms, examination findings suggestive of corneal/ scleral ulcer or history of corneal/ scleral ulcer and visual acuity?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Admission Notes?",
+        "expected": true
+      },
+      {
+        "q": "History of corneal grafting in the same eye?",
+        "expected": false
+      },
+      {
+        "q": "Clinical photo of Affected part with Proper labelling of Affected Eye whether R or L with full face photograph?",
+        "expected": true
+      },
+      {
+        "q": "Pentacam progression maps 3 to 6 months apart?",
+        "expected": true
+      },
+      {
+        "q": "Ultrasound B-scan?",
+        "expected": false
+      },
+      {
+        "q": "Slit lamp examination?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Is a detailed Discharge summary available?",
+        "expected": true
+      },
+      {
+        "q": "Histopathology/Microbiology report of the host tissue available?",
+        "expected": false
+      },
+      {
+        "q": "Details of donor cornea?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical signs, symptoms & examination not suggestive of corneal/ scleral ulcer.",
+    "Conservation management not tried before proceeding to surgery.",
+    "Affected eye not labelled R or L in the clinical photograph.",
+    "Missing detailed clinical notes, examination findings or visual acuity.",
+    "Missing Pentacam progression maps (3 to 6 months apart) at pre-authorization.",
+    "Missing Operative/procedure notes detailing surgical steps and outcomes."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Etiology: It happens as a result of an eye infection, severe dry eye, disorders of the eyelid or trauma to the eye.",
+      "Risk factors: Wearing contact lens, Having chicken pox or shingles, Using steroid eye drops, Having dry eye, Eyelid disorders that prevent proper functioning of the eyelid, Injury to the cornea, Systemic disease like Diabetes Mellitus.",
+      "Symptoms of corneal ulcers: Redness of the eye, Severe pain and soreness of the eye, Foreign body sensation in the eye, Tears/ pus or other discharge, Blurred vision, Sensitivity to light, Swelling of the eyelids, White spot on the cornea.",
+      "Investigations: Slit lamp microscopic examination, Fluorescein staining and examination under cobalt blue filter, Microbiological examination of the sample from cornea (incase infection is suspected).",
+      "Management - Conservative: Eye drops to control infection (Antifungal/ antibacterial/ antiviral)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

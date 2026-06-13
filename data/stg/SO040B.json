@@ -1,0 +1,116 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO040B",
+  "procedure_code": "SO040B",
+  "condition": "Pelvic inflammatory disease (PID)",
+  "procedure_name": "Laparotomy for benign disorders - PID",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Pelvic Inflammatory Disease (PID)_Medco.pdf",
+    "Pelvic Inflammatory Disease (PID)_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Pyoperitoneum (requiring laparotomy)",
+    "Resistant peritonitis (requiring laparotomy)",
+    "Intestinal obstruction (requiring laparotomy)",
+    "Ruptured tubo-ovarian abscess (requiring laparotomy)",
+    "Enlarging pelvic mass despite medical therapy (requiring laparotomy)",
+    "Primary unresponsiveness to medical treatment (for chronic PID)",
+    "Persistence or enlargement of adenexal mass after 4 - 6 months of treatment (for chronic PID)",
+    "Persistence or recurrence of pelvic pain on treatment (for chronic PID)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "lab_reports",
+        "label": "Hemogram with Erythrocyte sedimentation rate, liver function test, renal function test, serum electrolytes, blood culture"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG abdomen and pelvis (if adnexal mass)"
+      },
+      {
+        "key": "endocervical_swab_culture_optional",
+        "label": "Endocervical swab culture (Optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports (if done)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "blood_transfusion_notes",
+        "label": "Blood transfusion notes (if blood transfusion was given)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was clinical presentation, severity, imaging and investigations indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was the requirement of admission documented (severe illness or nausea and vomiting/HIV positive, unable to follow or tolerate an outpatient regimen and outpatient therapy failed, others)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical presentation, severity, imaging, and investigations not indicative of surgery for PID.",
+    "Requirement for inpatient admission not documented or justified based on severe illness, nausea, vomiting, HIV positive status, or outpatient therapy failure.",
+    "USG abdomen and pelvis (if adnexal mass present) not submitted or not confirming the diagnosis.",
+    "Mandatory laboratory investigations (Hemogram, ESR, LFT, RFT, serum electrolytes, blood culture) not submitted or incomplete.",
+    "Operative notes not detailing the surgical steps or findings for PID."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pelvic Inflammatory disease (PID) is a spectrum of infections involving female upper genital tract i.e. cervix, uterus, tubes, ovaries and pelvic peritoneum. The disease may have acute or chronic presentation.",
+      "Proceed with the PID, after diagnosis is confirmed by the clinical manifestations, and backed by the reasons for such symptoms."
+    ],
+    "surgical_options": [
+      "Colpotomy for drainage of midline pelvic abscess",
+      "Dilatation and evacuation of septic products of conception in post-abortal sepsis",
+      "Laparoscopy (if diagnosis is uncertain, no response to treatment, to reconfirm the diagnosis, obtain cultures from cul de sac and fallopian tubes and drain pus if necessary)",
+      "Total abdominal hysterectomy with bilateral salpingooophorectomy (for definitive surgery in chronic PID)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

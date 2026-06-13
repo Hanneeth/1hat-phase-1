@@ -1,0 +1,144 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB017A",
+  "procedure_code": "SB017A",
+  "condition": "Displaced Clavicle Fracture",
+  "procedure_name": "Displaced Clavicle Fracture",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Displaced Clavicle Fracture _Medco.pdf",
+    "Displaced Clavicle Fracture _PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years' experience"
+  ],
+  "clinical_indications": [
+    "Swelling, ecchymosis, and tenderness over the distal clavicle",
+    "Painful active and passive range of motion (ROM) of the shoulder",
+    "Neurologic examination observations of the shoulder and Upper limb documented",
+    "Radiographic evaluation includes true AP and axillary lateral views of the shoulder"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "fracture_displacement",
+      "operator": "is",
+      "value": "displaced",
+      "note": "Specifically for Type II fractures with a higher rate of nonunion; Type I and III non-displaced fractures are managed non-surgically."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "x_ray_pre_procedure",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "x_ray_post_procedure_with_implant",
+        "label": "Post-procedure X-ray labelled with patient ID, date and side (Left/Right) showing implant"
+      },
+      {
+        "key": "post_procedure_clinical_photographs",
+        "label": "Post-procedure clinical photographs"
+      },
+      {
+        "key": "operative_notes",
+        "label": "Detailed procedure / Operative Notes"
+      },
+      {
+        "key": "implant_invoice_barcode",
+        "label": "Invoice/barcode of Implant used"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary with follow-up advise at the time of discharge"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the X-ray labelled with patient ID, date and side (Left/Right) confirming the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post-procedure X-ray labelled with patient ID, date and side (Left/Right) showing implant",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the Post-procedure photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice/barcode of Implant used submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or X-ray report not indicative of a displaced clavicle fracture requiring surgery",
+    "Pre-procedure X-ray not labelled with patient ID, date, or side, or does not confirm the diagnosis",
+    "Post-procedure X-ray not submitted or not labelled with patient ID, date, or side, or not showing the implant",
+    "Invoice or barcode for the implant used is missing",
+    "Clinical notes missing details on physical examination, neurological assessment, or radiographic findings as per guidelines",
+    "Discharge summary missing follow-up advice"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/ or Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Most distal clavicle fractures result from a fall onto the distal clavicle or a direct blow.",
+      "Stable fracture patterns generally heal uneventfully with nonsurgical management.",
+      "Unstable fracture patterns are often associated with longer time to union and notable nonunion rates.",
+      "Most commonly, these fractures occur within the middle third of the clavicle and exhibit some degree of displacement, though many midshaft clavicle fractures can be treated nonsurgically.",
+      "Distal clavicle fractures are classified into types I-V based on their location relative to the coracoclavicular (CC) ligaments and displacement characteristics."
+    ],
+    "surgical_options": [
+      "Plate fixation (proven reliable and reproducible with high union rates and low complications)",
+      "Trans acromial wire fixation",
+      "Modified Weaver-Dunn procedure",
+      "Tension band",
+      "CC screw fixation",
+      "Arthroscopic treatment"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Cases may require referral to the appropriate level of care for treatment under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Nondisplaced Type I and Type III distal clavicle fractures (managed nonsurgically)"
+    ]
+  }
+}

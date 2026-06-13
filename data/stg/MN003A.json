@@ -1,0 +1,339 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MN003A",
+  "procedure_code": "MN003A",
+  "condition": "Intensive Neonatal Care",
+  "procedure_name": "Intensive Neonatal Care Package Babies with birthweight 1500-1799 g or Babies of any birthweight and at least one of the following conditions: • Need for mechanical ventilation for less than 24 hours or non-invasive respiratory support (CPAP, HFFNC) • Sepsis / pneumonia without complications • Hyperbilirubinemia requiring exchange transfusion • Seizures • Major congenital malformations (pre-surgical stabilization, not requiring ventilation) • Cholestasis significant enough requiring work up and in-hospital management • Congestive heart failure or shock Mother's stay and food in the hospital for breastfeeding, family centred care and (Kangaroo Mother Care) KMC is mandatory and included in the package rate",
+  "specialty": "Neo-natal Care",
+  "version": "1.1",
+  "source_files": [
+    "Intensive nenonatal care package_Medco.pdf",
+    "Intensive nenonatal care package_PPD.CPD.pdf"
+  ],
+  "alos": "5-10 days",
+  "min_doctor_qualification": [
+    "MD/DNB/DCH/Equivalent (in Pediatrics)"
+  ],
+  "clinical_indications": [
+    "Babies with birthweight 1500-1799 g",
+    "Babies of any birthweight and at least one of the following conditions:",
+    "Need for mechanical ventilation for less than 24 hours or non-invasive respiratory support (CPAP, HFFNC)",
+    "Sepsis / pneumonia without complications",
+    "Hyperbilirubinemia requiring exchange transfusion",
+    "Seizures",
+    "Major congenital malformations (pre-surgical stabilization, not requiring ventilation)",
+    "Cholestasis significant enough requiring work up and in-hospital management",
+    "Congestive heart failure or shock",
+    "Mother's stay and food in the hospital for breastfeeding, family centred care and (Kangaroo Mother Care) KMC is mandatory and included in the package rate"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "birthweight",
+      "operator": "between",
+      "value": "1500-1799 g",
+      "note": "one of the primary criteria for package eligibility"
+    },
+    {
+      "field": "mechanical_ventilation_duration",
+      "operator": "<",
+      "value": "24 hours",
+      "note": "for mechanical ventilation as a qualifying condition"
+    },
+    {
+      "field": "bilirubin_level_for_exchange_transfusion",
+      "operator": ">=",
+      "value": "5mg/dL above exchange levels",
+      "note": "one of the indications for exchange transfusion in hyperbilirubinemia"
+    },
+    {
+      "field": "cord_bilirubin",
+      "operator": ">=",
+      "value": "5 mg/dL",
+      "note": "one of the indications for exchange transfusion in Rh iso-immunization"
+    },
+    {
+      "field": "cord_hb",
+      "operator": "<=",
+      "value": "10 g/dL",
+      "note": "one of the indications for exchange transfusion in Rh iso-immunization"
+    },
+    {
+      "field": "bilirubin_level_at_24h",
+      "operator": ">",
+      "value": "10 mg/dL",
+      "note": "one of the indications for exchange transfusion"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings and planned line of management"
+      },
+      {
+        "key": "birth_weight",
+        "label": "Birth weight (if condition is birthweight 1500-1799g)"
+      },
+      {
+        "key": "gestation_age",
+        "label": "Gestation age (if condition is birthweight 1500-1799g)"
+      },
+      {
+        "key": "ballard_scoring",
+        "label": "Ballard scoring for determining maturity (if condition is birthweight 1500-1799g)"
+      },
+      {
+        "key": "respiratory_support_silverman_score",
+        "label": "Respiratory support - Silverman score need for Surfactant/Chest X-ray/CPAP/MV (if condition is birthweight 1500-1799g)"
+      },
+      {
+        "key": "rop_screening_documentation",
+        "label": "Retinopathy of Prematurity (ROP) screening (if condition is birthweight 1500-1799g) - First ROP screening venue/date documented on discharge summary"
+      },
+      {
+        "key": "pulse_oximetry",
+        "label": "Pulse oximetry (if condition is mechanical ventilation/non-invasive respiratory support)"
+      },
+      {
+        "key": "chest_xray",
+        "label": "Chest X-Ray (if condition is mechanical ventilation/non-invasive respiratory support, sepsis/pneumonia, congenital malformations, heart failure/shock)"
+      },
+      {
+        "key": "arterial_blood_gas",
+        "label": "Arterial Blood Gas (ABG) analysis (if condition is mechanical ventilation/non-invasive respiratory support, heart failure/shock)"
+      },
+      {
+        "key": "liver_function_test",
+        "label": "Liver function test (if condition is hyperbilirubinemia, cholestasis)"
+      },
+      {
+        "key": "coombs_test",
+        "label": "Coomb's test (Direct) (if condition is hyperbilirubinemia)"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count (if condition is hyperbilirubinemia, heart failure/shock)"
+      },
+      {
+        "key": "blood_grouping_mother_newborn",
+        "label": "Blood grouping (mother and newborn) (if condition is hyperbilirubinemia)"
+      },
+      {
+        "key": "hearing_assessment_bera",
+        "label": "Hearing assessment (BERA) (if condition is hyperbilirubinemia) - BERA screening planned before 3 months age with venue/date documented"
+      },
+      {
+        "key": "sr_electrolytes",
+        "label": "Sr Electrolytes (if condition is seizures, heart failure/shock)"
+      },
+      {
+        "key": "blood_sugar",
+        "label": "Blood Sugar (if condition is seizures, heart failure/shock)"
+      },
+      {
+        "key": "serum_calcium",
+        "label": "Serum Calcium (if condition is seizures)"
+      },
+      {
+        "key": "septic_screen",
+        "label": "Septic Screen (if condition is sepsis/pneumonia, seizures, cholestasis)"
+      },
+      {
+        "key": "cerebrospinal_fluid_examination",
+        "label": "Cerebrospinal fluid (CSF) examination (if condition is seizures)"
+      },
+      {
+        "key": "neurosonogram",
+        "label": "Neurosonogram (if condition is seizures, heart failure/shock)"
+      },
+      {
+        "key": "eeg",
+        "label": "Electroencephalogram (EEG) – based on availability (if condition is seizures)"
+      },
+      {
+        "key": "clinical_examination",
+        "label": "Clinical Examination (if condition is major congenital malformations)"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph (if condition is major congenital malformations)"
+      },
+      {
+        "key": "thyroid_profile",
+        "label": "Thyroid profile (if condition is cholestasis)"
+      },
+      {
+        "key": "usg_abdomen",
+        "label": "USG Abdomen (if condition is cholestasis)"
+      },
+      {
+        "key": "urine_for_bile_pigments",
+        "label": "Urine for bile pigments (if condition is cholestasis)"
+      },
+      {
+        "key": "hida_scan",
+        "label": "HIDA scan (based on the availability) (if condition is cholestasis)"
+      },
+      {
+        "key": "coagulation_parameters",
+        "label": "Coagulation parameters (prothrombin time, activated partial thromboplastin time) (if condition is heart failure/shock)"
+      },
+      {
+        "key": "electrolytes_blood_sugar_bun_creatinine_urinalysis",
+        "label": "Electrolytes, blood sugar, BUN/creatinine and urinalysis (if condition is heart failure/shock)"
+      },
+      {
+        "key": "functional_echocardiography",
+        "label": "Functional Echocardiography (if condition is heart failure/shock)"
+      },
+      {
+        "key": "electrocardiogram",
+        "label": "Electrocardiogram (if condition is heart failure/shock)"
+      },
+      {
+        "key": "serum_lactate",
+        "label": "Serum lactate (if condition is heart failure/shock)"
+      },
+      {
+        "key": "culture",
+        "label": "Culture (if condition is heart failure/shock)"
+      },
+      {
+        "key": "cross_matching_typing_blood",
+        "label": "Cross matching and typing of blood (if condition is heart failure/shock)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "investigations_reports",
+        "label": "Investigations reports (if done)"
+      },
+      {
+        "key": "detailed_procedure_notes_indication",
+        "label": "Detailed Procedure notes and indication (if any)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes including history, signs and symptoms, vitals, examination findings, planned line of treatment and advice for admission (refer the clinical criteria mentioned above)?",
+        "expected": true
+      },
+      {
+        "q": "Was the neonate born at birth weight 1500-1799 grams documented?",
+        "expected": true
+      },
+      {
+        "q": "Was the Silverman score/Chest X-ray/ABG documented to ventilatory support requirement?",
+        "expected": true
+      },
+      {
+        "q": "Was sepsis screen/blood culture/Chest X-ray report confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was TSB recorded on normogram /neurodevelopmental signs/proven sepsis indicative of exchange transfusion?",
+        "expected": true
+      },
+      {
+        "q": "Were the reports of Sr Electrolytes/Blood Sugar/Serum Calcium/Septic Screen/Cerebrospinal fluid (CSF) examination/Neurosonogram submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the patient hemodynamically stable (normal temperature, oxygenation, perfusion, blood sugar, HR, RR) documented?",
+        "expected": true
+      },
+      {
+        "q": "Did the TSB report document elevated direct fraction?",
+        "expected": true
+      },
+      {
+        "q": "Was ABG (metabolic acidosis)/lactate/Chest X-ray/2DECHO/urine output/hypotension/day of presentation/sudden development of cyanosis/type of shock documented?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Investigations report (if done) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the indication for procedure documented (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Birth weight not documented or outside the 1500-1799g range if that is the primary indication",
+    "Indication for ventilatory support not documented, or mechanical ventilation duration exceeds 24 hours without justification",
+    "Sepsis screen, blood culture, or Chest X-ray reports missing for sepsis/pneumonia cases",
+    "Indication for exchange transfusion not documented for hyperbilirubinemia cases",
+    "Required reports (Sr Electrolytes, Blood Sugar, Serum Calcium, Septic Screen, CSF examination, Neurosonogram) missing for seizure cases",
+    "Clinical photograph for major congenital malformations not indicative of surgery or ventilatory support was required",
+    "TSB report with elevated direct fraction not submitted for cholestasis",
+    "Investigations and clinical presentation do not confirm diagnosis of congestive heart failure/shock"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at District/Tertiary Hospital (SNCU/NICU)",
+    "min_doctor_qualification_desirable": "DM/DNB/Equivalent (in Neonatology), referral to Pediatric Surgeon (Major Congenital Malformations)",
+    "clinical_key_pointers": [
+      "Common causes for babies with birthweight 1500-1799 g: preterm labor/pre-labour rupture of membranes (chorioamnionitis), maternal illness (hypertension, diabetes, heart disease), pregnancy problems (placenta previa, placental abruption, cervical incompetence), multiple pregnancy/polyhydramnios",
+      "Common neonatal complications: Asphyxia necessitating resuscitation, Metabolic hypoglycemia, Mild respiratory distress, Feed intolerance / GERD, Sepsis, Anemia of prematurity, Neonatal Jaundice, Poor feeding, Hypothermia",
+      "Less common complications: infection, periventricular hemorrhage in the brain, bruising of the skin and patent ductus arteriosus",
+      "Care/Support: Feeding support (palladai or Nasogastric tube), Kangaroo mother Care, Thermal regulation, Nonnutritive suckling",
+      "Management for babies with birthweight 1500-1799 g: Treat underlying cause, Resuscitation if poor breathing at birth, Prevent hypothermia, Prevent hypoglycaemia, Start early feeds or IV 10% dextrose, Prevent apnoea, Monitor infant carefully and treat complications, Decide transfer to Level III care",
+      "NNPD defines respiratory distress as presence of any two of: RR >60/minute, Subcostal/intercostal recessions, Expiratory grunt/groaning. Also nasal flaring, suprasternal retractions, decreased air entry.",
+      "Grading severity of Respiratory Distress: Silverman Anderson score (preterm), Downe`s score (preterm and term)",
+      "Algorithm for initial management of respiratory distress (flowcharts provided)",
+      "Mechanical ventilation indications: Hypoxemia (PaO2 < 50 mmHg or O2 sat < 85%), Hypercarbia (PaCO2 < 60 mmHg and pH <7.2), Recurrent/severe apnea, Shallow/gasping irregular respiration, Failure of non-invasive support",
+      "CPAP Indications: Spontaneously breathing premature infant with respiratory distress, recurrent apneas not responding to medical management, post extubation, at-risk neonates for RDS, term neonates with respiratory distress and saturations <90% on hood oxygen, Apnea of prematurity, Term neonates with MAS, pneumonia, TTN",
+      "HFNC Indications: Post extubation support, aid in weaning from CPAP, alternative to CPAP in stable preterm neonates (for nasal trauma, nursing care, mother-infant bonding, kangaroo care, oral feeding), Apnea of prematurity",
+      "Neonatal sepsis definition: clinical signs/symptoms of septicemia, pneumonia or meningitis with pathogen isolation from sterile body fluids. Clinical sepsis: signs/symptoms of sepsis with negative blood/CSF culture.",
+      "Sepsis categories: Suspected sepsis (risk factors), Presumed/clinical sepsis (findings consistent with infection), Early onset sepsis (EOS) ≤ 72h, Late onset sepsis (LOS) > 72h",
+      "Hyperbilirubinemia requiring exchange transfusion: removes bilirubin and antibody coated erythrocytes, replaces with uncoated donor RBCs. Very rapid method for lowering dangerously high serum bilirubin.",
+      "Features of bilirubin encephalopathy (BE): Initial Phase (Lethargy, poor suck, hypotonia, high-pitched cry), Intermediate phase (irritability, variable tone, retrocollis/opisthotonos), Advanced phase (coma, absent suck, shrill cry, marked opisthotonos). BIND score helps identify early signs and severity.",
+      "Neonatal seizure definition: sudden paroxysmal depolarization of neurons resulting in transient alteration in sensory, motor, behavior or autonomic activity, with or without altered consciousness.",
+      "Seizure grouping: Epileptic seizures (with EEG changes), Non-epileptic seizures (without EEG correlate), EEG seizures (abnormal EEG activity without clinical correlation).",
+      "Important etiologies of neonatal seizures: HIE (38-48%), Neonatal Hypoglycaemia (3-7.5%), Hypocalcaemia (2.3-9%), CNS Infection (5.5-10.3%)",
+      "Major congenital malformations definition: abnormalities of body structure or function present at birth, of prenatal origin, medical/surgical/cosmetic significance, often require surgical repair or life threatening. (List of various malformations by body part provided on page 9)",
+      "Neonatal cholestasis (NC) definition: conjugated hyperbilirubinemia due to diminished bile flow. Conjugated hyperbilirubinemia: direct/conjugated bilirubin > 1.0 mg/dL if TSB <5.0 mg/dL, or >20% of TSB if TSB >5.0 mg/dL.",
+      "Cholestasis symptoms: Jaundice with dark yellow urine (with or without pale stools). Associated factors: Hepatosplenomegaly, Dehydration, Failure to thrive.",
+      "Diagnostic approach to Neonatal Cholestasis (flowchart provided).",
+      "Management for Cholestasis: treating underlying etiology. General Management: Medium chain Triglycerides (MCT) oil, Fat soluble Supplements (Vitamin A,D,E,K), Water soluble supplements (Twice RDA), Calcium, Phosphate, Zinc, Ursodeoxycholoic acid, Prophylactic phenobarbitone, Portal hypertension – propranolol, Pediatric Surgical consultation if required, End stage disease – Liver transplantation.",
+      "Shock definition: acute circulatory failure resulting in decreased tissue/organ perfusion, leading to depletion of oxygen/substrate in cells.",
+      "Shock phases: Compensated (pallor, tachycardia, cool peripheral skin, prolonged capillary refill time), Uncompensated (hypotension, very prolonged capillary refill time, tachycardia, cold skin, rapid breathing, reduced/absent urine output), Irreversible.",
+      "Non-specific signs of shock: lethargy, irritability, unresponsiveness to painful stimuli, generalized hypotonia, decreased deep tendon reflex.",
+      "Types of Shock (Causes provided on page 12): Cardiogenic, Hypovolemic, Distributive, Obstructive, Dissociative.",
+      "Suggested Treatment algorithm for Preterm and Term Newborns (flowcharts provided)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": "For referral to Pediatric Surgery (Major Congenital Malformations): Hemodynamically stable, RR < 60 beats/min, Temperature (normothermia), Oxygenation (maintaining saturation in desired range), Perfusion (normal Capillary refill time), Blood sugar (Normoglycemia)",
+    "comorbidity_management": null,
+    "referral_criteria": "Decide whether the infant needs to be transferred to a level III care",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "CPAP Contra-indications: Poor respiratory efforts, Recurrent or severe apnea requiring bag and mask ventilation, Congenital diaphragmatic hernia, Tracheoesophageal fistula, Choanal atresia, Cleft palate, Severe cardio-vascular instability, pH < 7.25 and PaCO2 > 60 mm of Hg",
+      "HFNC Contra-indications: Poor spontaneous efforts, Neonates with severe RDS, Recurrent or severe apnea requiring bag and mask ventilation, Congenital anomalies of the upper"
+    ]
+  }
+}

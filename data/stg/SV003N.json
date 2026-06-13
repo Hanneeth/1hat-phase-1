@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV003N",
+  "procedure_code": "SV003N",
+  "condition": "Ventricular Septal Defect",
+  "procedure_name": "Surgical Correction of Category - III Congenital Heart Disease - VSD Closure + Mitral Heart procedure",
+  "specialty": "Cardiology/ CTVS",
+  "version": "1.1",
+  "source_files": [
+    "VSD closure_Medco.pdf",
+    "VSD closure_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "DM/DNB/ equivalent (Cardiology)",
+    "M.Ch./DNB/ equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Small VSD (No symptoms, normal PA pressure, normal left heart chambers, no cusp prolapse): Annual follow-up till 10 years of age, then every 2-3 years.",
+    "Small VSD: Closure indicated if patient has an episode of endocarditis or develops cusp prolapse with aortic regurgitation or develops progressive significant right ventricular outflow tract obstruction.",
+    "Moderate VSD (Asymptomatic, normal pulmonary artery pressure with left heart dilation): Closure of VSD by 2-5 years of age.",
+    "Moderate VSD (Symptomatic, if controlled with medications): VSD closure by 1-2 years of age.",
+    "Large VSD (Poor growth/congestive heart failure not controlled with medications (furosemide/spironolactone or enalapril +/- digoxin)): As soon as possible.",
+    "Large VSD (Controlled heart failure): By 6 months of age.",
+    "VSD with aortic cusp prolapse: Any VSD with cusp prolapse and directly related aortic regurgitation that is more than trivial: Surgery whenever aortic regurgitation is detected."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "invoice_barcode_device_used",
+        "label": "Invoice/barcode of blade / device used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/Doppler report suggestive of Ventricular septal defect?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/color Doppler suggestive of other heart defect along with VSD?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice/barcode of blade / device used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report does not confirm Ventricular Septal Defect.",
+    "Clinical notes (detailed history, signs & symptoms, indication for procedure) are missing or insufficient.",
+    "Echo/Doppler report is missing or incomplete.",
+    "Echo/color Doppler report does not suggest other heart defect along with VSD, contrary to expectations for VSD Closure + Mitral Heart procedure.",
+    "Procedure/Operative notes are missing or incomplete.",
+    "Invoice/barcode of blade/device used is not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiac Catheterisation lab: No; CCU/ICCU: Yes; Qualified cardiologist (DM/DNB cardiology): No; Qualified cardiothoracic surgeon (MCh/DNB cardiovascular thoracic surgery): Yes",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ventricular septal defect (VSD) is the most common congenital cardiac anomaly in children and is the second most common congenital abnormality in adults, second only to a bicuspid aortic valve.",
+      "An abnormal communication between the right and left ventricles and shunt formation is the main mechanism of hemodynamic compromise in VSD.",
+      "While many VSDs close spontaneously, if they do not, large defects can lead to detrimental complications such as pulmonary arterial hypertension (PAH), ventricular dysfunction and an increased risk of arrhythmias",
+      "Ventricular septal defects especially small VSDs may be asymptomatic and detected incidentally.",
+      "Common symptoms: Dyspnea/ Breathlessness with feeding, Failure to thrive, Recurrent respiratory infections, Palpitations, Poor weight gain",
+      "Common signs: Pan-systolic best heard in the left lower sternal border, Prominent parasternal pulsations, Tachypnea, Signs of Eisenmenger syndrome in cases of shunt reversal (cyanosis, increased pulmonary vascular resistance, dyspnea on exertion, syncope, and increased susceptibility to infection)",
+      "Management: Approximately 85% to 90% of small isolated VSDs close spontaneously during the first year of life. Patients with small, asymptomatic VSDs with the absence of PAH have an excellent prognosis without any intervention. Otherwise, the management approach includes endocarditis prophylaxis and VSD closure."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

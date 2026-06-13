@@ -1,0 +1,143 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN019A",
+  "procedure_code": "SN019A",
+  "condition": "Atlanto-axial dislocation (AAD)",
+  "procedure_name": "Transoral surgery (Anterior) and CV Junction (Posterior Stabilization)",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Atlanto axial dislocation (AAD)_Medco.pdf",
+    "Atlanto axial dislocation (AAD)_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MCh Neurosurgery",
+    "DNB Neurosurgery",
+    "Equivalent in Neurosurgery"
+  ],
+  "clinical_indications": [
+    "Pyramidal sign (weakness & spasticity)",
+    "Stigmata of craniovertebral junction",
+    "Restricted neck movements",
+    "Torticollis",
+    "Sphincter disturbances, lower cranial nerve dysfunction, and respiratory distress",
+    "Myelopathy, respiratory failure, vertebral artery dissection, neurologic compromise, and rarely quadriplegia or death if left untreated"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_implant_indication_evaluation_diagnosis",
+        "label": "Clinical notes including indication of implant requirement, evaluation findings confirming the diagnosis"
+      },
+      {
+        "key": "ct_mri_cvj_cervical_spine_xray",
+        "label": "CT + MRI CVJ (Craniovertebral junction) + cervical spine - X ray"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_op_ct_cvj_report",
+        "label": "Post op CT-CVJ (Craniovertebral junction) report"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "implant_details_barcode_invoice",
+        "label": "Implant details (barcode/invoice)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings, indication for procedure/implant, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Implant invoice/barcode submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was post-op CT CVJ submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Evidence of Oral Malignancy present without justification",
+    "Evidence of active naso-oral bleeding present without justification",
+    "Clinical notes missing indication for implant requirement, evaluation findings, or diagnosis confirmation",
+    "CT + MRI CVJ (Craniovertebral junction) and/or cervical spine X-ray not submitted at pre-authorization",
+    "Planned line of treatment not provided at pre-authorization",
+    "Detailed Indoor Case Papers (ICPs) not submitted at claim stage or lacking daily vitals/treatment details",
+    "Post-op CT-CVJ (Craniovertebral junction) report not submitted at claim stage",
+    "Detailed procedure / operative notes not submitted at claim stage",
+    "Implant details (barcode/invoice) not submitted at claim stage",
+    "Detailed discharge summary not submitted at claim stage or lacking follow-up advice"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Atlantoaxial dislocation refers to a loss of stability between the atlas and axis (C1-C2), resulting in loss of normal articulation.",
+      "The atlantoaxial joints can lose stable articulation from traumatic, inflammatory, idiopathic, or congenital abnormalities.",
+      "The mechanism of injury typically remains unidentified with several theories proposed in the literature.",
+      "Although it occurs in all age groups, atlantoaxial dislocation is most often seen in adolescents.",
+      "The atlantoaxial dislocation can be a mobile and reducible type or a “fixed” or irreducible type. The dislocation can also be partially reducible."
+    ],
+    "surgical_options": [
+      "Posterior fusion procedure",
+      "Transorally released anteriorly before posterior fusion",
+      "Transoral odontoidectomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Oral Malignancy",
+      "Active naso-oral bleeding"
+    ]
+  }
+}

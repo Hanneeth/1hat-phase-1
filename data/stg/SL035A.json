@@ -1,0 +1,112 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Clinic based therapeutic interventions of ENT/ : Clinic based therapeutic interventions of ENT_Medco.pdf (clinical + mandatory docs) + Clinic based therapeutic interventions of ENT_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "SL035A",
+  "procedure_code": "SL035A",
+  "condition": "Clinic based therapeutic interventions of ENT",
+  "procedure_name": "Turbinate reduction",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Clinic based therapeutic interventions of ENT_Medco.pdf",
+    "Clinic based therapeutic interventions of ENT_PPD.CPD.pdf"
+  ],
+  "alos": "daycare",
+  "min_doctor_qualification": [
+    "MS/ DNB or equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Enlargement of the inferior turbinate causing a blocked nose or constant sensation of nasal congestion and stuffiness by compromising the internal nasal valve area",
+    "Persistent complaints despite medical management"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the day care procedure"
+      },
+      {
+        "key": "nasoendoscopy_radiology_audiometry_findings",
+        "label": "Nasoendoscopy/ radiology/ audiometry findings to justify the need for Procedure"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes detailing signs and symptoms, treatment given"
+      },
+      {
+        "key": "procedure_note_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "post_procedure_endoscopy_picture",
+        "label": "Post procedure endoscopy picture (IT reduction)"
+      },
+      {
+        "key": "discharge_summary_report",
+        "label": "Discharge summary report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the day care procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Nasoendoscopy/ radiology/ audiometry report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was clinical notes detailing signs and symptoms, treatment given are submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure endoscopy picture (IT reduction) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge summary report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or nasoendoscopy/radiology/audiometry report not indicative of the turbinate reduction procedure.",
+    "Clinical notes for pre-authorization missing or incomplete for turbinate reduction.",
+    "Nasoendoscopy/radiology/audiometry findings to justify turbinate reduction procedure missing at pre-authorization.",
+    "Post-procedure endoscopy picture for turbinate reduction not submitted.",
+    "Procedure note/operative note for turbinate reduction missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "The nasal turbinates are structures in the side walls of the nose that act to warm and humidify the air inhaled through the nose. Enlargement of the inferior turbinate may cause a blocked nose or constant sensation of nasal congestion and stuffiness by compromising the internal nasal valve area.",
+      "Surgery to shrink enlarged turbinate is called inferior turbinate reduction or turbinoplasty which is considered for patients with persistent complaints despite medical management."
+    ],
+    "surgical_options": [
+      "Radiofrequency turbinoplasty",
+      "Turbinoplasty with microdebrider",
+      "Laser assisted turbinate reduction",
+      "Partial inferior turbinectomy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

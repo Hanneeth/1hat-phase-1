@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M100016",
+  "procedure_code": "M100016",
+  "condition": "Chikungunya Fever",
+  "procedure_name": "Chikungunya Fever",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Chikungunya fever_Medco.pdf",
+    "Chikungunya fever_PPD.CPD.pdf"
+  ],
+  "alos": "3 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Diagnosis made is backed by clinical manifestation",
+    "Fever with chills and Rigors",
+    "Headache",
+    "Muscle pain",
+    "Joint swelling",
+    "Rashes",
+    "Photophobia (additional clinical symptom in pediatric patients)",
+    "Retro-orbital pain (additional clinical symptom in pediatric patients)",
+    "Vomiting (additional clinical symptom in pediatric patients)",
+    "Diarrhoea (additional clinical symptom in pediatric patients)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "IgM - ELISA test",
+      "operator": "is",
+      "value": "positive",
+      "note": "for Chikungunya"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "cbc_report",
+        "label": "CBC report"
+      },
+      {
+        "key": "igm_elisa_test_reports",
+        "label": "IgM - ELISA test reports for Chikungunya"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_cbc_report",
+        "label": "Post procedure CBC report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes – detailed history, signs & symptoms, detailed treatment line",
+        "expected": true
+      },
+      {
+        "q": "Was CBC report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is IgM - ELISA test report for Chikungunya report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the post procedure CBC report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "IgM - ELISA test report for Chikungunya is not positive or not submitted at pre-authorization",
+    "Clinical notes missing or incomplete (lacks detailed history, signs & symptoms, or treatment line)",
+    "CBC report missing at pre-authorization",
+    "Detailed Indoor case papers (ICPs) missing at claim submission",
+    "Post procedure CBC report missing at claim submission",
+    "Detailed Discharge summary missing or lacks follow-up advice at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Round a clock ICU trained doctors and Nurses should be available if patient is admitted to the ICU ward.",
+    "min_doctor_qualification_desirable": "MD / DNB (General Medicine / Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "is a debilitating, but non-fatal, viral illness that is spread by the bite of infected mosquitoes.",
+      "resembles dengue fever."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

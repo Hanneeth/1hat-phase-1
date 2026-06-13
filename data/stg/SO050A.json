@@ -1,0 +1,128 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO050A",
+  "procedure_code": "SO050A",
+  "condition": "Cervical Cerclage",
+  "procedure_name": "McDonald's stitch",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Cervical Cerclage_Medco.pdf",
+    "Cervical Cerclage_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS Obstetrics & Gynecology",
+    "MD Obstetrics & Gynecology",
+    "DNB Obstetrics & Gynecology",
+    "DGO Obstetrics & Gynecology"
+  ],
+  "clinical_indications": [
+    "History of mid-trimester spontaneous previous abortion (from 16 weeks of pregnancy onwards): painless cervical dilatation and escape of amniotic fluid followed by painless expulsion of the products of conception",
+    "Present pregnancy: Transvaginal ultrasound scan carried out between 16 and 24 weeks of pregnancy that show a cervical length of 25 mm or less.",
+    "Present pregnancy: During antenatal examination, dilated cervix and exposed, unruptured fetal membranes between 16 and 28 weeks of pregnancy",
+    "Examination findings during non-pregnant state: Bimanual examination reveal presence of unilateral or bilateral cervical tear",
+    "Examination findings during non-pregnant state: Passage number 6-8 Hegar dilator beyond the internal os without any resistance",
+    "Examination findings during non-pregnant state: Postmenstrual hysterocervicography shows funnel-shaped shadow."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "cervical_length",
+      "operator": "<=",
+      "value": "25 mm",
+      "note": "between 16 and 24 weeks of pregnancy"
+    },
+    {
+      "field": "cervical_dilatation",
+      "operator": "<=",
+      "value": "4 cm",
+      "note": "Should be less than or equal to for cerclage, as >4cm is a contraindication"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed clinical notes with history, symptoms, signs, indications & examination findings"
+      },
+      {
+        "key": "usg_report",
+        "label": "Investigations such as USG report (if available)"
+      },
+      {
+        "key": "antenatal_record",
+        "label": "Antenatal record of current pregnancy, if available"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "investigation_reports_usg",
+        "label": "Investigation reports including detailed USG scan"
+      },
+      {
+        "key": "procedural_operative_notes",
+        "label": "Detailed procedural / operative notes"
+      },
+      {
+        "key": "discharge_summary_cerclage_removal",
+        "label": "Detailed discharge summary, including advice on getting the cerclage removal at 37th week"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is a USG scan available ruling out congenital malformation in the foetus?",
+        "expected": true
+      },
+      {
+        "q": "Are there any signs of bleeding per vaginum?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "USG scan is not available or does not rule out congenital malformation in the foetus.",
+    "Signs of bleeding per vaginum are present.",
+    "Detailed clinical notes with history, symptoms, signs, indications, and examination findings are missing or incomplete at pre-authorization.",
+    "Antenatal record of current pregnancy is missing or incomplete at pre-authorization.",
+    "Detailed procedural/operative notes are missing or incomplete at claim submission.",
+    "Discharge summary is missing or does not include advice on cerclage removal at 37th week at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Prophylactic cerclage: done around 14 weeks of pregnancy or at least 2 weeks earlier than the lowest period of previous pregnancy loss.",
+      "Elective cerclage done when the cervix is dilated and there is bulging of the membranes.",
+      "The stitch should be removed at 37th week or earlier if labor pain starts or features of abortion appear."
+    ],
+    "surgical_options": [
+      "McDonald's stitch",
+      "Shirodkar's stitch"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [
+      "Proportion of Cerclage done in the hospital to the number of Deliveries performed in the hospital?",
+      "Proportion of Cerclage done in the hospital to the number of high-risk pregnancies delivered in the hospital?"
+    ],
+    "contraindications": [
+      "Scan showing congenital anomaly in the foetus",
+      "Intrauterine infection",
+      "Ruptured membranes",
+      "Presence of vaginal bleeding",
+      "Severe uterine irritability indicated by periodic uterine contractions",
+      "Cervical dilatation > 4 cm."
+    ]
+  }
+}

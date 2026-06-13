@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN038A",
+  "procedure_code": "SN038A",
+  "condition": "Lumbar spinal stenosis",
+  "procedure_name": "Spine Decompression & Fusion",
+  "specialty": "Neurosurgery, Orthopedics - Spine Decompression & Fusion",
+  "version": "1.1",
+  "source_files": [
+    "Spine Decompression and Fusion, Spine deformity correction_Medco.pdf",
+    "Spine Decompression and Fusion, Spine deformity correction_PPD.CPD.pdf"
+  ],
+  "alos": "6 days",
+  "min_doctor_qualification": [],
+  "clinical_indications": [
+    "Degenerative lumbar spinal stenosis, due to hypertrophy of the ligamentum flavum and facet joints, is a narrowing of the lateral root canal of the spine.",
+    "It may result in nerve root ischemia and neurogenic claudication.",
+    "Typical symptoms of unilateral or bilateral leg pain and neurogenic claudication may only be brought on by ambulation and spinal posture and neurological deficits may be absent on clinical examination. It is a leading cause of disability and discomfort.",
+    "Surgical decompression is an effective option in patients with moderate-to-severe symptoms."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_confirming_diagnosis",
+        "label": "Clinical notes confirming the diagnosis"
+      },
+      {
+        "key": "mri_affected_part_with_id_date_side",
+        "label": "MRI with patient ID, date and side (Left/Right) of affected part justifying surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "post_op_x_ray_showing_fusion_with_id_date_side",
+        "label": "Post op X-ray with film showing fusion with patient ID, date and side (Left/Right) of affected part"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "MRI with patient ID, date and side (Left/Right) of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray with film with patient ID, date and side (Left/Right) of affected part submitted?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Post op X-ray with film showing implant labelled with patient ID, date and side (Left/ Right) of affected part submitted?",
+        "expected": false
+      },
+      {
+        "q": "Post op X-ray with film showing fusion with patient ID, date and side (Left/Right) of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Invoice and barcode of implant submitted?",
+        "expected": false
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and imaging not indicative of surgery",
+    "Clinical notes confirming diagnosis missing or incomplete",
+    "MRI of affected part with patient ID, date, or side labelling missing/unreadable",
+    "Detailed Indoor Case Papers (ICPs) missing or incomplete",
+    "Detailed Procedure / Operation Notes missing",
+    "Post-operative X-ray showing fusion with patient ID, date, or side labelling missing/unreadable",
+    "Detailed discharge summary missing or incomplete"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics; MCh/DNB/Equivalent in Neurosurgery",
+    "clinical_key_pointers": [
+      "Decompression surgery is an increasingly common operation for the treatment of lumbar spinal stenosis.",
+      "Degenerative lumbar spinal stenosis, due to hypertrophy of the ligamentum flavum and facet joints, is a narrowing of the lateral root canal of the spine.",
+      "It may result in nerve root ischemia and neurogenic claudication.",
+      "Typical symptoms of unilateral or bilateral leg pain and neurogenic claudication may only be brought on by ambulation and spinal posture and neurological deficits may be absent on clinical examination. It is a leading cause of disability and discomfort."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

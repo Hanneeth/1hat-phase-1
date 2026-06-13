@@ -1,0 +1,121 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV003F",
+  "procedure_code": "SV003F",
+  "condition": "Arch interruption Repair",
+  "procedure_name": "Surgical Correction of Category III Congenital Heart Disease - Arch interruption Repair without VSD closure",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Arch interruption repair_Medco.pdf",
+    "Arch interruption repair_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Interrupted aortic arch (IAA) is an anomaly that can be considered the most severe form of aortic coarctation.",
+    "IAA involves an anatomical and luminal disruption between the ascending and descending aorta.",
+    "IAA is a ductus dependent lesion, requiring blood flow via the ductus arteriosus to distal parts.",
+    "Associated lesions may include: posterior malalignment of the conal septum, left ventricular outflow tract obstruction, transposition of the great arteries, truncus arteriosus, aortopulmonary window, single ventricle, aortic valve atresia, right-sided ductus, and double-outlet right ventricle.",
+    "Clinical features indicating need for surgery (typically appearing after ductus arteriosus closes): tachypnea, feeding difficulties, respiratory distress, cyanosis, anuria, leading to shock and death.",
+    "Physical exam reveals absent pulses with a difference in blood pressure between the right arm and lower extremities.",
+    "Oxygen discrepancy between the left and right side of the body may also be present."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "barcode_of_implant",
+        "label": "Barcode of implant, if used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the echo/Doppler report suggestive of interrupted aortic arch?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the indoor case papers submitted",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the barcode of implant used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not suggestive of interrupted aortic arch or diagnosis unclear.",
+    "Clinical notes missing or lacking detailed history, signs, symptoms, or indication for procedure.",
+    "Post-procedure ECHO stills do not clearly show repair of the defect.",
+    "Detailed Discharge Summary missing or does not mention date of follow-up.",
+    "Barcode of implant not submitted, if an implant was used in the procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [
+      "Repair using native arterial tissue.",
+      "Repair using a homograft.",
+      "Repair using an autograft.",
+      "Repair using prosthetic vascular graft or patch."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV003C",
+  "procedure_code": "SV003C",
+  "condition": "Congenital Heart Disease (D-TGA, large VSD, pulmonary stenosis)",
+  "procedure_name": "Rastelli Procedure",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Rastelli procedure_Medco.pdf",
+    "Rastelli procedure_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Patients presenting with D-TGA, a large VSD, and pulmonary stenosis."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "diagnosis",
+      "operator": "is",
+      "value": "D-TGA, a large VSD, and pulmonary stenosis",
+      "note": "as per Echo/Doppler report"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Do the clinical notes detail history, signs & symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of D-TGA, a large VSD, and pulmonary stenosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report is not suggestive of D-TGA, a large VSD, and pulmonary stenosis, or the report is missing.",
+    "Clinical notes are missing or do not detail history, signs & symptoms, and indication for the procedure.",
+    "Post-procedure ECHO stills do not show repair of the defect, or are missing.",
+    "Detailed Discharge Summary is missing or does not mention the date of follow-up.",
+    "Indoor case papers or Procedure/Operative notes are missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The Rastelli procedure is indicated in patients presenting with D-TGA, a large VSD, and pulmonary stenosis. During this procedure, the VSD is closed using a baffle. By doing so, oxygenated blood from the left ventricle is directed into the aorta. A conduit is then placed from the right ventricle to the pulmonary artery thus shunting deoxygenated blood into the pulmonary artery.",
+      "The Rastelli repair requires cardiopulmonary bypass and aortic cross-clamping. The ventricular septal defect is visualized through a right ventriculotomy. Obstructive right ventricular muscle is excised, and a large intra-ventricular baffle is sutured into place closing the ventricular septal defect and redirecting left ventricular outflow to the more anteriorly placed aortic valve. A valved homograft conduit is utilized to achieve right ventricular to pulmonary artery continuity. Transesophageal echocardiography is utilized to help assess adequacy of repair. Cardiopulmonary bypass time and aortic cross-clamp time required to complete repair is usually moderate to long."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

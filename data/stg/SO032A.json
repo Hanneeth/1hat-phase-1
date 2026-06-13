@@ -1,0 +1,134 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO032A",
+  "procedure_code": "SO032A",
+  "condition": "Vesicovaginal fistula",
+  "procedure_name": "Vaginal repair for vesico-vaginal fistula",
+  "specialty": "Obstetrics & Gynecology/ Urology",
+  "version": "1.1",
+  "source_files": [
+    "Vesico vaginal fistula_Medco.pdf",
+    "Vesico vaginal fistula_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)",
+    "MCh/DNB/Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Continuous escape of urine per vaginum (true incontinence)",
+    "Associated pruritus vulvae"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "cystoscopy_cystourethroscopy",
+        "label": "Cystoscopy/Cystourethroscopy"
+      },
+      {
+        "key": "complete_urine_examination_cue",
+        "label": "Complete Urine Examination (CUE)"
+      },
+      {
+        "key": "usg_abdomen_pelvis_optional",
+        "label": "USG Abdomen/pelvis (Optional)"
+      },
+      {
+        "key": "voiding_cystourethrogram_optional",
+        "label": "Voiding Cystourethrogram (Optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports_if_required",
+        "label": "Investigation reports (If required)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and/or imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, physical examination, and/or imaging not indicative of surgery.",
+    "Detailed Clinical notes missing or incomplete for pre-authorization.",
+    "Cystoscopy/Cystourethroscopy report missing or inadequate.",
+    "Complete Urine Examination (CUE) report missing or inadequate.",
+    "Planned line of treatment not clearly documented.",
+    "Detailed indoor case papers missing or lacking daily vitals and treatment details for claim.",
+    "Detailed procedure/Operative Notes missing or inadequate for claim.",
+    "Discharge summary missing or lacking follow-up advice at discharge for claim."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "In Vesicovaginal fistula (VVF), there is a communication between the bladder and the vagina and the urine escapes into the vagina causing true incontinence. This is the commonest type of genitourinary fistula."
+    ],
+    "surgical_options": [
+      "Transvaginal repair is the preferred method of repair in most of the cases",
+      "Latzko technique for repair of uncomplicated post hysterectomy VVF",
+      "Interposition grafts can be used for tissue bulk and as a source of neovascularity",
+      "The abdominal approach (especially O’Conor technique) should be reserved for situations in which access to the fistula is limited"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

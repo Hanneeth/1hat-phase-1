@@ -1,0 +1,114 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV001E",
+  "procedure_code": "SV001E",
+  "condition": "Congenital Heart Disease",
+  "procedure_name": "Systemic - Pulmonary Artery shunt",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Systemic pulmonary artery shunt_Medco.pdf",
+    "Systemic pulmonary artery shunt_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch. (Cardiothoracic Surgery)",
+    "DNB (Cardiothoracic Surgery)",
+    "Equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "To increase blood flow to the lungs in Tricuspid atresia and other univentricular conditions where bidirectional Glenn and Fontan shunts can only be performed after the decline in pulmonary vascular resistance which may take months",
+    "To increase blood flow to the lungs in PA (pulmonary atresia)",
+    "To increase blood flow to the lungs in TOF (Tetralogy of Fallot)",
+    "To increase blood flow to the lungs in Neonatal Ebstein's with functional PA-rare",
+    "Complete repair not possible due to Anatomical-aberrant coronary anatomy (left anterior descending coronary artery crosses the right ventricular (RV) outflow tract in TOF - approximately 5%)",
+    "Complete repair not possible due to Physiological-prematurity, intracerebral bleed, or other contraindications to CPB (Cardiopulmonary Bypass)",
+    "Hypoplastic left heart syndrome",
+    "To encourage growth of pulmonary arteries in PA (pulmonary atresia)",
+    "To encourage growth of pulmonary arteries in Ventricular septal defect (VSD) with aortopulmonary collaterals",
+    "To encourage growth of pulmonary arteries in Inadequate pulmonary arteries"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of cyanotic congenital heart disease?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show systemic pulmonary artery shunt?",
+        "expected": true
+      },
+      {
+        "q": "Is Detailed Discharge Summary with follow-up advice available",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient Echo/Doppler report does not show cyanotic congenital heart disease at pre-authorization stage",
+    "Clinical notes are missing, incomplete, or lack detailed history, signs & symptoms, or indication for procedure",
+    "Echo/Doppler report is missing or not suggestive of cyanotic congenital heart disease at pre-authorization stage",
+    "Procedure / Operative notes are missing at claim submission stage",
+    "Post procedure stills of ECHO are missing or do not show systemic pulmonary artery shunt at claim submission stage",
+    "Detailed Discharge Summary is missing or does not include follow-up advice at claim submission stage"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The systemic to pulmonary artery shunts are done as palliative procedures for a variety of complex cyanotic congenital heart diseases.",
+      "The spectrum may range from simple tetralogy of Fallots (TOFs)/pulmonary atresia (PA) to complex univentricular hearts with major associated surgical problems.",
+      "The systemic to pulmonary artery shunt provide the first line of management in these critically ill cyanotic neonates.",
+      "The main aim of the palliative surgery is to increase pulmonary blood flow in a controlled manner to alleviate cyanosis and improve exercise tolerance in the patients.",
+      "Palliative shunts are not commonly done for most cases as initial corrective procedures are increasingly performed during infancy.",
+      "It has mainly been possible due to improved extracorporeal circulation methods, modern perioperative supportive care, and refinements in operative technique.",
+      "Nevertheless, certain subsets of patients require this initial palliative surgery when cardiac disorders are not amenable to final corrective surgery."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

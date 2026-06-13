@@ -1,0 +1,108 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M100014",
+  "procedure_code": "M100014",
+  "condition": "Malaria",
+  "procedure_name": "Malaria",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Malaria_Medco.pdf",
+    "Malaria_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Diagnosis made is backed by clinical manifestation",
+    "Fever",
+    "Chills with Sweats",
+    "Headaches",
+    "Nausea and vomiting",
+    "Body aches",
+    "General malaise"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "mp_test_result",
+      "operator": "==",
+      "value": "positive",
+      "note": "Malaria Parasite test result"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "peripheral_smear_rmt_test_report",
+        "label": "Peripheral smear/RMT test report"
+      },
+      {
+        "key": "blood_report_cbc_mp_platelet",
+        "label": "Blood report (CBC, MP, Platelet.)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_paper",
+        "label": "Detailed Indoor case paper"
+      },
+      {
+        "key": "post_treatment_blood_investigation_report",
+        "label": "Post treatment Blood investigation report (CBC, MP, Platelet etc.)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the patient have any of the symptoms like fever with or without chills or sweating, severe breathlessness, internal or external bleeding, convulsions followed by coma, decreased urine output, acute dyspnoea?",
+        "expected": true
+      },
+      {
+        "q": "Is the MP test positive?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was patient treated with IV antimalarial, IV fluids, IV Dextrose, Steroids NSAIDS?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "MP test result not documented as positive.",
+    "Patient's clinical presentation lacking documented symptoms such as fever, chills, headaches, nausea, vomiting, body aches, or general malaise.",
+    "Treatment provided not including IV antimalarial, IV fluids, IV Dextrose, or Steroids/NSAIDS as required.",
+    "Peripheral smear/RMT test report not submitted at pre-authorization.",
+    "Blood report (CBC, MP, Platelet) not submitted at pre-authorization.",
+    "Detailed Indoor case paper not submitted at claim submission.",
+    "Post-treatment Blood investigation report (CBC, MP, Platelet etc.) not submitted at claim submission.",
+    "Detailed discharge summary not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD / DNB (General Medicine / Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Proceed with Malaria only if diagnosis made is backed by clinical manifestation"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

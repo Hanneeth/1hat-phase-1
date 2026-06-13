@@ -1,0 +1,143 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG085C",
+  "procedure_code": "SG085C",
+  "condition": "Cystic Swellings/ Cyst excision",
+  "procedure_name": "Other cutaneous swellings Excision",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Cystic swellings-Cyst excision_Medco.pdf",
+    "Cystic swellings-Cyst excision_PPD.CPD.pdf"
+  ],
+  "alos": "1-2 Days",
+  "min_doctor_qualification": [
+    "MS (General Surgery)",
+    "DNB (General Surgery)",
+    "Equivalent (General Surgery)"
+  ],
+  "clinical_indications": [
+    "Presence of a painless, subcutaneous, mobile mass (suggestive of lipoma)",
+    "Presence of a soft, fluctuant swelling containing fluid (suggestive of cyst)",
+    "Presence of a spherical cystic swelling fixed to skin with a punctum (suggestive of sebaceous cyst)",
+    "Presence of a cyst lined by squamous epithelium containing desquamated cells (suggestive of dermoid cyst)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_photographs",
+        "label": "Clinical photographs"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      },
+      {
+        "key": "xray_usg_ct_mri_region_of_interest",
+        "label": "(Optional) X-ray/USG/CT/MRI region of interest"
+      },
+      {
+        "key": "thyroid_scan_thyroglossal_cyst",
+        "label": "(Optional) Thyroid scan (thyroglossal cyst)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photographs",
+        "label": "Post-operative photographs"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain detailed history, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photographs confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Clinical evaluation/picture indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Histopathological examination submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical evaluation/picture not indicative of surgery for the condition.",
+    "Clinical notes missing detailed history, signs & symptoms, planned line of treatment, or indication for procedure.",
+    "Clinical photographs do not confirm the diagnosis or are missing.",
+    "Histopathological examination report missing at claim stage.",
+    "Optional imaging (X-ray/USG/CT/MRI) not provided when clinically indicated for complex or larger swellings.",
+    "Optional Thyroid scan not provided when clinically indicated for suspected thyroglossal cyst."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "LIPOMA: Lipomas are slow-growing mesenchymal tumors, nearly always benign, adipose tumors that are most often found in the subcutaneous tissues. It is also called 'universal tumor' because it can occur anywhere in the body where there is fat. Although most lipomas are <5cm in size, giant lipomas >10cm have also been reported in different parts of the body that rarely occur in head and neck region. Most placements of areas of lipomas are the arm, shoulder, back, legs, forehead and face. These tumors usually present painless, subcutaneous, mobile mass. Subcutaneous-commonest type. Soft to firm lobular swelling. 'Slip' sign positive-a pathognomonic sign. Semifluctuant swelling. 'Smart' dimple sign on movement of the skin.",
+      "CYSTS: A cyst is a soft fluctuant swelling containing fluid. True cysts are lined by endothelium or epithelium. They contain clear serous fluid, mucoid material, pus, blood, lymph or toothpaste like material. The false cysts do not have lining epithelium.",
+      "DERMOID CYST: This is a cyst lined by squamous epithelium containing desquamated cells. The contents are thick and sometimes toothpaste-like which is a mixture of sweat, sebum and desquamated epithelial cells and sometimes even hair.",
+      "SEBACEOUS CYST: Sebaceous glands are present in the skin. These glands secrete sebum which keeps the skin soft and oily. The duct of the sebaceous gland mainly opens into the hair follicle and rarely may open directly on to the skin. If the duct or the mouth of the sebaceous gland becomes blocked, the gland becomes distended with its own secretion and forms a sebaceous cyst. So this is a retention cyst and is most accurately called 'epidermoid cyst' since such cyst is lined by superficial squamous cells. Common sites: Anywhere in the body with plenty of sebaceous glands; never in palm or sole. Clinical features: Typical cystic swelling, spherical, 5mm to 5cm. Smooth surface, bluish/blackish spot/punctum. Fixed to skin, overlying skin cannot be lifted off. Cystic consistency. Indentation due to pressure. Fluctuation test positive if large. Free from underlying structures. Transillumination test almost always negative. Usually not tender; if tender, infected."
+    ],
+    "surgical_options": [
+      "NONEXCISIONAL TECHNIQUES (Steroid injections and liposuction for lipomas)",
+      "EXCISIONAL TECHNIQUES: ENUCLEATION (Small lipomas)",
+      "EXCISION (Larger lipomas through incisions)",
+      "Excision of the cyst (for dermoid cysts)",
+      "Total excision of the cyst (for sebaceous cysts)"
+    ],
+    "pre_op_preparation": "For infected cysts, preliminary antibiotic treatment should be given and excision is only possible when the infection has subsided.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Ureteric reimplantation/ : Ureteric reimplantation_Medco.pdf (clinical + mandatory docs) + Ureteric reimplantation_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code.",
+  "stg_id": "SU030A",
+  "procedure_code": "SU030A",
+  "condition": "Ureteric reimplantation",
+  "procedure_name": "Ureteric reimplantation (Open)",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Ureteric reimplantation_Medco.pdf",
+    "Ureteric reimplantation_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/equivalent (in Urology, Pediatric surgery)"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_procedure_planned_management",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "ct_ivp_mri_urogram_mcu_report",
+        "label": "CT-Intravenous pyelogram (IVP) /MRI Urogram + Micturating Cysto-urethrogram (MCU) CT-IVP/MRI Urogram report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_operative_notes_procedure_notes",
+        "label": "Detailed Operative notes / Procedure notes"
+      },
+      {
+        "key": "intra_operative_clinical_photograph",
+        "label": "Intra-operative Clinical Photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings, indication for procedure, and planned line of management submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT-Intravenous pyelogram (IVP) /MRI Urogram + Micturating Cysto-urethrogram (MCU) CT-IVP/MRI Urogram report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure/Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intra-operative clinical photograph submitted? (Optional)",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical manifestations (strong, persistent urge to urinate, burning sensation, urine inconsistency, cloudy urine, or flank/abdomen pain) not documented to support diagnosis.",
+    "Patient does not present with a documented history of UTI or urinary inconsistence, without justification for proceeding with the procedure.",
+    "CT-Intravenous pyelogram (IVP)/MRI Urogram or Micturating Cysto-urethrogram (MCU) report not submitted or incomplete at pre-authorization stage.",
+    "Detailed Operative notes/Procedure notes not submitted or incomplete at claim submission stage.",
+    "Intra-operative Clinical Photograph not submitted, or missing critical details (e.g., patient ID, procedure context)."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Strong, persistent urge to urinate",
+      "Burning sensation when urinating",
+      "Urine Inconsistency",
+      "Cloudy urine",
+      "Pain in side (flank) or abdomen"
+    ],
+    "surgical_options": [
+      "Open"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

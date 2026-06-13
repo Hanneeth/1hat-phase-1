@@ -1,0 +1,160 @@
+{
+  "_comment": "Distilled from PTCA, Systemic thrombolysis, CABG, IABP_Medco.pdf and PTCA, Systemic thrombolysis, CABG, IABP_PPD.CPD.pdf",
+  "stg_id": "MC011A",
+  "procedure_code": "MC011A",
+  "condition": "Coronary Artery Disease",
+  "procedure_name": "PTCA, inclusive of diagnostic angiogram",
+  "specialty": "Cardiology/ Cardiothoracic Vascular Surgery",
+  "version": "1.1",
+  "source_files": [
+    "PTCA, Systemic thrombolysis, CABG, IABP_Medco.pdf",
+    "PTCA, Systemic thrombolysis, CABG, IABP_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "DM/DNB (Cardiology) or equivalent"
+  ],
+  "clinical_indications": [
+    "Diffuse retrosternal chest pain, heaviness or constriction radiating to arm or neck or back, with sweating with/without ST elevation in ECG",
+    "History of coronary artery disease (CAD)/ multiple risk factors for MI",
+    "Artery diameter > 3.5 mm & legion length < 18mm & non-diabetic (for Bare Metal Stents)",
+    "Beneficiaries needing non-cardiac surgery within 8 weeks of angioplasty (for Bare Metal Stents)",
+    "Diabetic beneficiaries (for Drug Eluting Stents)",
+    "Small Arteries (for Drug Eluting Stents)",
+    "Long Lesions (for Drug Eluting Stents)",
+    "Left Main Complex Lesions (for Drug Eluting Stents)",
+    "Venous Graft (Post CABG) (for Drug Eluting Stents)",
+    "Chronic Total Occlusion (for Drug Eluting Stents)",
+    "In-stent restenosis (for Drug Eluting Stents)",
+    "Primary PCI In STEMI for Culprit Vessel (for Drug Eluting Stents)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "stenosis",
+      "operator": ">=",
+      "value": "70%",
+      "note": "in one or more of the main coronary artery"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "electrocardiogram_ecg",
+        "label": "Electrocardiogram (ECG)"
+      },
+      {
+        "key": "2d_echo",
+        "label": "2D ECHO"
+      },
+      {
+        "key": "coronary_angiography_stills_reports",
+        "label": "Coronary Angiography stills & reports (showing blockage)"
+      },
+      {
+        "key": "cardiac_enzymes",
+        "label": "Cardiac enzymes (Troponins T/ I (if not available then CPK-MB)"
+      },
+      {
+        "key": "routine_biochemistry",
+        "label": "Routine Biochemistry (Haemogram, urea, creatinine, electrolytes, sugar, fasting lipids, Liver function test, Urinalysis)"
+      },
+      {
+        "key": "patient_photograph",
+        "label": "Patient Photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "still_image_of_patient_undergoing_procedure",
+        "label": "Still image of the patient undergoing the procedure with date & time"
+      },
+      {
+        "key": "angiogram_stills_report_showing_stent_post_stent_flow",
+        "label": "Angiogram stills & report showing stent & post stent flow"
+      },
+      {
+        "key": "serial_ecgs_post_procedure",
+        "label": "Serial ECGs (Post Procedure)"
+      },
+      {
+        "key": "cardiac_enzymes_post_procedure",
+        "label": "Cardiac enzymes (Troponins T/ I (if not available then CPK-MB) (Post Procedure)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "barcode_of_stent_used",
+        "label": "Barcode of the stent(s) used (Bare metal/ Drug eluting stent)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Consent duly signed by Patient & treating Cardiologist- Yes",
+        "expected": true
+      },
+      {
+        "q": "Stenosis of >/=70% in one or more of the main coronary artery - Yes",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the patient have indications (documentary evidence, physical examination) of PTCA/ PCI i.e. h/o Diffuse retrosternal chest pain, heaviness or constriction radiating to arm or neck or back, with sweating with/without ST elevation in ECG; +/- history of coronary artery disease (CAD)/ multiple risk factors for MI?",
+        "expected": true
+      },
+      {
+        "q": "Do procedure notes detail the steps of PTCA/ PCI performed with Angiogram stills showing stent & post stent flow, barcode of stent (Bare-metal/ drug eluting) & outcomes of Procedure done?",
+        "expected": true
+      },
+      {
+        "q": "Are indications for using Bare metal/ Drug eluting stent (DES) mentioned? For ref. these may include: Artery diameter > 3.5 mm & legion length < 18mm & non-diabetic; If beneficiaries needs non- cardiac surgery within 8 weeks of angioplasty; Diabetic beneficiaries; Small Arteries, Diameter < 3mm; Long Lesions; Left Main Complex Lesions; Venous Graft (Post CABG); Chronic Total Occlusion; In-stent restenosis; Primary PCI In STEMI for Culprit Vessel in STEMI",
+        "expected": true
+      },
+      {
+        "q": "Are the clinical notes and discharge documents available to show monitoring of vitals (BP, Heart Rate), appropriate post-op care, medications- Gp2b/3a Antagonists, Unfractionated Heparin, Anti-platelets (unless contraindicated), anti-thrombotics (unless contraindicated), anti-ischemic, High Dose Statins, ACE inhibitors, Beta blocker & advise including for follow-up?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Consent not signed by Patient and treating Cardiologist.",
+    "Stenosis of main coronary artery documented below 70% without justification.",
+    "Angiogram stills not showing stent and post stent flow.",
+    "Barcode of stent(s) not available or illegible.",
+    "Stent type not justified as per clinical indications provided.",
+    "Clinical notes/discharge summary not showing proper monitoring of vitals, post-op care or medications.",
+    "Coronary Angiography stills & reports (showing blockage) not uploaded at pre-auth.",
+    "Cardiac enzymes (Troponins T/ I or CPK-MB) not uploaded at pre-auth."
+  ],
+  "additional_information": {
+    "icd_10_code": "I20.9, I21.3, I20.0",
+    "special_empanelment": "Cardiac catheterization lab, Cardiac Care Unit & qualified Cardiologist (for PTCA/ PCI/ IABP)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for PTCA only if diagnosis made is backed by clinical signs, symptoms & investigation findings",
+      "Look for other causes of chest pain as well (ongoing or within 12 hours): Dissection of Aorta, Pleuritis/ pneumonitis/ embolism/ pneumothorax, pericardial rub, neuralgia or herpes",
+      "Refer the patient to angioplasty (PTCA/ PCI)/ thrombolysis capable hospital, if required",
+      "Prefer CABG over PTCA/PCI if patient is having diabetes mellitus with multi-vessel disease or left main disease"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

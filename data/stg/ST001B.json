@@ -1,0 +1,133 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "ST001B",
+  "procedure_code": "ST001B",
+  "condition": "Head Injury (Depressed Fracture)",
+  "procedure_name": "Conservative Management of Head Injury - Depressed Fracture",
+  "specialty": "Polytrauma, Orthopedics, Neurosurgery, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Conservative Management of Head Injury_Medco.pdf",
+    "Conservative Management of Head Injury_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MS/DNB/Equivalent (Orthopedic surgery)",
+    "MCh/DNB/Equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Diagnosed depressed skull fracture",
+    "No evidence of dural penetration and no significant intracranial hematoma",
+    "Depression <1cm",
+    "No frontal sinus involvement",
+    "No wound infection or gross contamination",
+    "No gross cosmetic deformity",
+    "Simple depressed fractures in neurologically intact persons treated expectantly"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "depression_depth",
+      "operator": "<",
+      "value": "1cm",
+      "note": "for non-surgical management of depressed fracture"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_gcs",
+        "label": "Clinical Notes detailing the injury with admission Glasgow coma scale score"
+      },
+      {
+        "key": "ct_head",
+        "label": "CT head"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "post_op_ct_head",
+        "label": "Post-op CT head"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes – details of accident, signs & symptoms, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was X-ray/ CT skull report submitted?",
+        "expected": false
+      },
+      {
+        "q": "Was CT/ X-ray skull report suggestive of Depressed fracture?",
+        "expected": true
+      },
+      {
+        "q": "Was CT head report of patient submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "CT head report of patient not submitted at pre-authorization.",
+    "Patient intubated with GCS 9 or more without clear indication documented.",
+    "Clinical notes detailing accident, signs, symptoms, or planned line of treatment missing/incomplete at pre-authorization.",
+    "CT/X-ray skull report not suggestive of depressed fracture for a ST001B (Depressed Fracture) claim.",
+    "Depression depth not documented or exceeds 1cm without justification for conservative management.",
+    "Evidence of dural penetration, significant intracranial hematoma, frontal sinus involvement, wound infection/contamination, or gross cosmetic deformity found, making conservative management inappropriate for depressed fracture.",
+    "Indoor case papers missing at claim submission.",
+    "Detailed Procedure/Operation notes missing at claim submission.",
+    "Detailed Discharge Summary missing or does not mention date of follow-up at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operational Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The brain is surrounded by cerebrospinal fluid (CSF), enclosed in meningeal covering, and protected inside the skull.",
+      "The fascia and muscles of the scalp provide additional cushioning to the brain.",
+      "Test results have shown that 10 times more force is required to fracture cadaveric skull with overlaying scalp than the one without."
+    ],
+    "surgical_options": [
+      "Elevation of depressed skull fractures for open (compound) fractures.",
+      "Elevation of depressed fractures with thickness > of calvaria.",
+      "Elevation for fractures not meeting criteria for non-surgical management (e.g., dural penetration, intracranial hematoma, frontal sinus involvement, infection, gross cosmetic deformity)."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

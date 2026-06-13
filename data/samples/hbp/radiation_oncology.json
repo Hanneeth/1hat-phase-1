@@ -1,0 +1,61 @@
+{
+  "_comment": "Worked example of the 'base + incremental-with-cap' shape (radiotherapy): a base course at a fixed rate, then each additional fraction priced separately up to a hard cap. This is what a flat per_X rate cannot express.",
+  "scheme_id": "pmjay",
+  "specialty": "Radiation Oncology",
+  "specialty_code": "MR",
+  "packages": [
+    {
+      "package_code": "MR001",
+      "package_name": "2D External Beam Radiotherapy (Telecobalt / linear accelerator)",
+      "procedures": [
+        {
+          "procedure_code": "MR001A",
+          "procedure_name": "2D External Beam Radiotherapy — Radical (full course)",
+          "billing_unit": "one_time",
+          "quantity_basis": "none",
+          "rates_inr": { "tier3": 12100, "tier2": null, "tier1": 27300 },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 12100,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "reserved_public_only": false,
+          "stg_ref": "MR001A",
+          "additional_information": {
+            "note": "Billed as one full radical course package, not per fraction. Additional fractions beyond the course use MR001D.",
+            "rate_caveat": "Exact tier mapping is ambiguous from the PDF extraction (figures 12100 / 23100 / 27300 appear in the row); confirm against the clean HBP 2022 master Excel."
+          },
+          "source_refs": {
+            "rates_inr / base_rate_inr": "HBP-2022.pdf master rows MR001A (Radical 23100 ... 27300; 12100 also printed in row)",
+            "additional_information.rate_caveat": "PDF extraction of HBP-2022.pdf — tier columns not cleanly separable for this row"
+          }
+        },
+        {
+          "procedure_code": "MR001D",
+          "procedure_name": "2D External Beam Radiotherapy — additional fractions",
+          "billing_unit": "per_fraction",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 0,
+            "increment": { "extra_unit_rate_inr": 500, "max_extra_units": 18, "cap_inr": 9000 },
+            "quantity_cap": { "max": 18, "per_window": "course", "on_overflow": "not_payable" },
+            "sequence": null
+          },
+          "reserved_public_only": false,
+          "stg_ref": "MR001D",
+          "additional_information": {
+            "note": "Each additional fraction beyond the base course is paid at Rs.500/fraction, up to 18 additional fractions (cap Rs.9000). Booked on top of MR001A."
+          },
+          "source_refs": {
+            "pricing.increment": "HBP-2022.pdf master row MR001D — 'Additional fractions - 18, Max upto (Every additional fraction at Rs.500 per fraction)'; row shows 500 (18) and 9000",
+            "billing_unit": "HBP-2022.pdf — per-fraction incremental pricing"
+          }
+        }
+      ]
+    }
+  ]
+}

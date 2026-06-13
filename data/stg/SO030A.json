@@ -1,0 +1,144 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO030A",
+  "procedure_code": "SO030A",
+  "condition": "Vaginal prolapse",
+  "procedure_name": "Anterior & Posterior Colpoperineorrhaphy",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Vaginal prolapse_Medco.pdf",
+    "Vaginal prolapse_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 days",
+  "min_doctor_qualification": [
+    "MS",
+    "MD",
+    "DNB",
+    "DGO"
+  ],
+  "clinical_indications": [
+    "Stage I & II prolapse, if symptomatic (e.g., small cystocele with significant Stress Urinary Incontinence, constant dragging sensation due to cervical descent, small rectocele with definite pocket on P/R and splinting is required by the patient to defecate)",
+    "Stage III/ IV prolapse even if asymptomatic (risk of generally obstructive voiding leading to post void residual urine and recurrent UTI, ureteral kinking and dilatation may lead to impaired renal function)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph (optional)"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG abdomen/pelvis"
+      },
+      {
+        "key": "pap_smear",
+        "label": "Pap smear"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Detailed operative/procedure notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "histopathological_report",
+        "label": "Histopathological report (optional)"
+      },
+      {
+        "key": "blood_transfusion_notes",
+        "label": "Blood transfusion notes (if blood transfusion was given)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history especially previous obstetric history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical presentation, composite examination (pelvic examination), and investigations confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical evaluation, severity and imaging/investigations indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was imaging and investigations indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes (history, examination findings, planned treatment) incomplete or missing at pre-authorization",
+    "Diagnosis not confirmed by clinical presentation, examination, or investigations",
+    "Clinical evaluation, severity, or imaging/investigations not indicative of surgery",
+    "USG abdomen/pelvis not provided at pre-authorization",
+    "Pap smear not provided at pre-authorization",
+    "Detailed indoor case papers (ICPs) with vitals and treatment details missing or incomplete at claim submission",
+    "Detailed procedure / operative notes missing or incomplete at claim submission",
+    "Discharge summary with follow-up advice missing or incomplete at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Vaginal prolapse is a sub-broad category of Genital prolapse. Vaginal prolapse can occur independently without uterine descent",
+      "Cystocele - The cystocele is formed by laxity and descent of the upper two-thirds of the anterior vaginal wall. As the bladder base is closely related to this area, there is herniation of the bladder through the lax anterior wall.",
+      "Rectocele - There is laxity of the middle-third of the posterior vaginal wall and the adjacent rectovaginal septum. As a result, there is herniation of the rectum through the lax area.",
+      "The symptoms are variable. Even with minor degree, the symptoms may be pronounced, paradoxically there may not be any appreciable symptom even in severe degree. However, the following symptoms are usually associated:",
+      "(a) Feeling of something coming down per vaginum, especially while she is moving about. There may be variable discomfort on walking when the mass comes outside the introitus.",
+      "(b) Backache or dragging pain in the pelvis. The above two symptoms are usually relieved on lying down.",
+      "(c) Dyspareunia.",
+      "(d) Urinary symptoms (in presence of cystocele): Difficulty in passing urine, more the strenuous effort, the less effective is the evacuation. The patient has to elevate the anterior vaginal wall for evacuation of the bladder. Incomplete evacuation may lead to frequent desire to pass urine. Urgency and frequency of micturition may also be due to cystitis. Painful micturition is due to infection. Stress incontinence is usually due to associated urethrocele. Retention of urine may rarely occur.",
+      "(e) Bowel symptom (in presence of rectocele): Difficulty in passing stool. The patient has to push back the posterior vaginal wall in position to complete the evacuation of feces. Fecal incontinence may be associated.",
+      "(f) Excessive white or blood-stained discharge per vaginum is due to associated vaginitis or decubitus ulcer.",
+      "Diagnosis is clinical, confirmed by Per-speculum (P/S), Per-vaginum (P/V), and rectovaginal examination."
+    ],
+    "surgical_options": [
+      "Cystocele - Anterior colporrhaphy",
+      "Rectocele - Perineorrhaphy/Colpoperineorrhaphy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU071A",
+  "procedure_code": "SU071A",
+  "condition": "Hypospadias repair",
+  "procedure_name": "Hypospadias repair - Single stage",
+  "specialty": "Urology, Pediatric Surgery, Plastic & Reconstructive Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Hypospadias repair_Medco.pdf",
+    "Hypospadias repair_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [],
+  "clinical_indications": [
+    "Opening of the urethra at a location other than the tip of the penis",
+    "Downward curve of the penis (chordee)",
+    "Hooded appearance of the penis because only the top half of the penis is covered by foreskin",
+    "Abnormal spraying during urination",
+    "Hypospadias is usually a condition present at birth in which Surgery is typically recommended between the first 6 months to 2 years after birth."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes - detailed history, signs & symptoms, indication for procedure and planned line of treatment"
+      },
+      {
+        "key": "cystoscopy_urethrogram_report",
+        "label": "Cystoscopy/Urethrogram report (If applicable)"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "post_operative_clinical_photograph",
+        "label": "Post-operative clinical photograph (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Cystoscopy/Urethrogram report (If applicable) submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed operative notes with indications and outcomes of the procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed discharge summary with the date of the follow-up mentioned?",
+        "expected": true
+      },
+      {
+        "q": "Did physical examination detect structural abnormalities or ventral penile curvature?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing evaluation findings, signs & symptoms, indication for procedure, or planned line of treatment.",
+    "Cystoscopy/Urethrogram report not submitted when applicable.",
+    "Physical examination did not detect structural abnormalities or ventral penile curvature despite claim.",
+    "Detailed indoor case papers with daily vitals or treatment details not available.",
+    "Detailed operative notes lacking indications, outcomes, or full procedure details.",
+    "Discharge summary missing the date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": "MCh / DNB equivalent in (Urology, Pediatric surgery, Plastic surgery)",
+    "clinical_key_pointers": [
+      "Main goals is to build a new Urethra",
+      "Strengthen the penis",
+      "Build a new opening at the tip of the penis",
+      "This procedure require follow-up surgeries, sometimes soon after the first surgery, in other instances many years or decades later."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

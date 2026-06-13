@@ -1,0 +1,46 @@
+{
+  "_comment": "Scheme-wide standardized query / rejection / audit-flag catalog (NOT per procedure). Built from the Claims Adjudication Manual. Per-procedure query risks live in each STG's common_queries[]; this file is the master list those reference. Powers QueryPredictor scoring and DeviationDetector.",
+  "scheme_id": "pmjay",
+
+  "preauth_rejection_reasons": [
+    { "code": "delayed_intimation", "label": "Delayed pre-auth intimation" },
+    { "code": "fraudulent_preauth", "label": "False / fraudulent pre-authorization" },
+    { "code": "exclusion", "label": "Outside scope of cover (scheme exclusion)" },
+    { "code": "reserved_package", "label": "Government-reserved package booked by private hospital" },
+    { "code": "not_empanelled_specialty", "label": "Hospital not empanelled for this specialty" },
+    { "code": "package_diagnosis_mismatch", "label": "Mismatch of package and disease / diagnosis / treatment / gender / age" },
+    { "code": "query_not_answered", "label": "Query replies not received within TAT" },
+    { "code": "hospitalization_not_justified", "label": "Need for hospitalization not justified by clinical findings" },
+    { "code": "insufficient_wallet", "label": "Insufficient family wallet balance" }
+  ],
+
+  "claim_rejection_reasons": [
+    { "code": "cash_bill", "label": "Cash bill generated / amount paid by patient" },
+    { "code": "delayed_query_reply", "label": "Documentation: delayed / no query reply" },
+    { "code": "delayed_claim_submission", "label": "Documentation: delayed / non-submission of claim" },
+    { "code": "incomplete_after_queries", "label": "Documentation: incomplete submission after multiple queries" },
+    { "code": "unclear_overwritten_docs", "label": "Documentation: unclear / overwritten documents" },
+    { "code": "fraudulent_claim", "label": "False / fraudulent claim" },
+    { "code": "opd_to_ipd", "label": "OPD converted into IPD (admission not justified)" },
+    { "code": "exclusion", "label": "Outside scope of cover (scheme exclusion)" },
+    { "code": "not_empanelled_specialty", "label": "Package selection: hospital not empanelled for specialty" },
+    { "code": "package_diagnosis_mismatch", "label": "Package selection: mismatch of package and disease / diagnosis / treatment / gender / age" }
+  ],
+
+  "audit_red_flags": [
+    { "code": "days_billed_gt_stay", "label": "Claim paid for more days than actual hospitalization" },
+    { "code": "photo_contradiction", "label": "Pre/post-op photographs contradict the claim" },
+    { "code": "photo_reuse", "label": "Same patient photo reused across multiple claims (esp. dialysis)" },
+    { "code": "stable_in_icu", "label": "Stable patient kept in ICU to inflate rate" },
+    { "code": "same_handwriting_icp", "label": "All indoor case papers in the same handwriting" },
+    { "code": "unsigned_reports", "label": "Investigation reports not signed / stamped by doctor" },
+    { "code": "prolonged_stay", "label": "Prolonged hospitalization not clinically justified" },
+    { "code": "no_investigation_reports", "label": "No diagnostic / investigation reports" },
+    { "code": "discharged_from_icu", "label": "Patient discharged directly from ICU" },
+    { "code": "amount_over_cap", "label": "Claimed amount over the package cap" },
+    { "code": "icp_discrepancy", "label": "Major discrepancies in indoor case papers" },
+    { "code": "duplicate_or_other_patient_docs", "label": "Duplicate documents / documents belonging to another patient" },
+    { "code": "missing_stg_docs", "label": "Missing mandatory STG documents" },
+    { "code": "unspecified_package_abuse", "label": "Surgical treatment booked under 'Unspecified' instead of the correct package code" }
+  ]
+}

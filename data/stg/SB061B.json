@@ -1,0 +1,117 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB061B",
+  "procedure_code": "SB061B",
+  "condition": "Corrective Surgery for foot deformities",
+  "procedure_name": "Corrective Surgery for foot deformities (Other foot deformities)",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Corrective Surgery for foot deformities_Medco.pdf",
+    "Corrective Surgery for foot deformities_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years' experience"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_planned_surgery_treatment",
+        "label": "Clinical notes with planned line of Surgery/Treatment"
+      },
+      {
+        "key": "xray_mri_labelled",
+        "label": "X-ray/MRI labelled with patient ID, date and side (Left/Right) of affected part"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "post_procedure_xray_labelled",
+        "label": "Post procedure X-ray labelled with patient ID, date and side (Left/Right) of affected part"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Detailed Clinical notes – all vitals, history signs & symptoms, physical examination including local examination, indication for procedure, advise for admission, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was the X-ray labelled with patient ID, date and side (Left/Right) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical photograph of affected part submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure/Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the post procedure X-ray labelled with patient ID, date and side (Left/Right) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post Procedure clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes do not include all vitals, history, signs & symptoms, physical examination, indication for procedure, admission advice, or planned line of treatment.",
+    "X-ray/MRI report (pre- or post-procedure) is not labelled with patient ID, date, or affected side (Left/Right).",
+    "Clinical photograph of the affected part (pre- or post-procedure) is missing.",
+    "Detailed indoor case papers with daily vitals and treatment details are not available at claim submission.",
+    "Procedure/Operative notes are missing or incomplete.",
+    "Clinical notes and X-ray reports are not indicative of the requested procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB or Equivalent in Orthopedics",
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

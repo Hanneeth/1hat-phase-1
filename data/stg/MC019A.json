@@ -1,0 +1,131 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MC019A",
+  "procedure_code": "MC019A",
+  "condition": "Pericardiocentesis",
+  "procedure_name": "Pericardiocentesis",
+  "specialty": "Cardiology/ General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Pericardiocentesis_Medco.pdf",
+    "Pericardiocentesis_PPD.CPD.pdf"
+  ],
+  "alos": "1 Days",
+  "min_doctor_qualification": [
+    "MD/ DM/DNB/ equivalent (Cardiology)",
+    "MS/DNB/ equivalent (General Surgery)"
+  ],
+  "clinical_indications": [
+    "Pericardial effusion developing in any clinical condition primarily involving pericardium (commonly viral or bacterial)",
+    "Pericardial effusion secondary to systemic disorders such as malignancies, pulmonary tuberculosis, chronic renal failure, thyroid diseases, and autoimmune diseases",
+    "Cardiac tamponade, a medical emergency where fluid is accumulated under pressure in the pericardial cavity, resulting in compression of cardiac chambers and impeding cardiac filling",
+    "Symptoms including dyspnoea on exertion progressing to orthopnoea, chest pain and/or fullness",
+    "Local compression symptoms such as nausea (diaphragm), dysphagia (oesophagus), hoarseness (recurrent laryngeal nerve) and hiccups (phrenic nerve)",
+    "Non-specific symptoms including cough, weakness, fatigue, anorexia and palpitations",
+    "Signs of tamponade including elevated jugular venous pressure, pulsus paradoxus, hypotension and diminished heart sounds",
+    "Transthoracic echocardiography is the most important tool for diagnosis, grading, guidance of pericardial fluid aspiration, and follow up of a patient with pericardial effusion."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "echocardiography_findings",
+      "operator": "suggestive_of",
+      "value": "pericardial_effusion_or_cardiac_tamponade",
+      "note": "Based on Echo/color Doppler report."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_color_doppler_report_with_stills",
+        "label": "Echo/ color Doppler report with stills"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_color_doppler_report",
+        "label": "Post procedure echo/colour Doppler report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "analysis_of_fluid_removed",
+        "label": "Analysis of fluid removed"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ color doppler report suggestive of Pericardial effusion/ Cardiac tamponade?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the post procedure echo/ colour doppler report confirm decrease in volume of pericardial fluid?",
+        "expected": true
+      },
+      {
+        "q": "Is there a detailed discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the analysis report of removed pericardial fluid submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/color Doppler report not suggestive of pericardial effusion or cardiac tamponade",
+    "Clinical notes are missing or do not detail history, signs & symptoms, or indication for the procedure",
+    "Procedure/Operative notes are missing or not detailed",
+    "Post-procedure echo/colour Doppler report does not confirm a decrease in the volume of pericardial fluid",
+    "Detailed Discharge Summary is missing or does not mention the date of follow-up",
+    "Analysis report of removed pericardial fluid is missing"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath lab/ General Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pericardial effusion etiology: commonly viral or bacterial, or secondary to malignancies, pulmonary tuberculosis, chronic renal failure, thyroid diseases, and autoimmune diseases.",
+      "In developed world, idiopathic is commonest etiology followed by tumour, while in developing countries like India, tuberculosis remains a leading cause besides idiopathic.",
+      "Cardiac tamponade is a medical emergency where fluid accumulated under pressure in pericardial cavity, compressing cardiac chambers and impeding filling.",
+      "Tamponade can develop without large pericardial effusion. Clinicians should correlate echocardiographic findings (right ventricular/atrial collapse, respiratory variation of mitral/tricuspid flow) with clinical signs (hypotension, pulsus paradoxus).",
+      "Transthoracic echocardiography is the most important tool for diagnosis, grading, guidance of pericardial fluid aspiration (pericardiocentesis), and follow-up.",
+      "Rapid pericardiocentesis is a life-saving procedure in cardiac tamponade.",
+      "A significant proportion of patients with pericardial effusion are asymptomatic, often an incidental finding on X-ray or echocardiogram.",
+      "Classic symptoms include dyspnoea on exertion progressing to orthopnoea, chest pain and/or fullness.",
+      "Additional occasional symptoms due to local compression may include nausea (diaphragm), dysphagia (oesophagus), hoarseness (recurrent laryngeal nerve) and hiccups (phrenic nerve).",
+      "Non-specific symptoms include cough, weakness, fatigue, anorexia and palpitations.",
+      "Physical examination may be normal in patients without haemodynamic compromise.",
+      "When tamponade develops, classic signs include elevated jugular venous pressure, pulsus paradoxus, hypotension and diminished heart sounds."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

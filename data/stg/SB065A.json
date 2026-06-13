@@ -1,0 +1,93 @@
+{
+  "_comment": "The document lists HBP 1.0 codes S500074, S100015 and HBP 2.0 code SB065A. The primary procedure code for this object is SB065A.",
+  "stg_id": "SB065A",
+  "procedure_code": "SB065A",
+  "condition": "Bursitis",
+  "procedure_name": "Excision of bursa",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Excision of bursa_Medco.pdf",
+    "Excision of bursa_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Patients who do not respond to conservative treatment for bursitis",
+    "Symptoms of bursitis persist after conservative treatment"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes detailing findings confirming the diagnosis"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of the affected part"
+      },
+      {
+        "key": "xray_affected_part",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) - affected part justifying the indication"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post-procedure clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did X-ray report confirm the diagnosis of bursitis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "X-ray report did not confirm the diagnosis of bursitis.",
+    "Clinical notes do not contain findings confirming the diagnosis.",
+    "Clinical photograph of the affected part is missing or unclear at pre-authorization.",
+    "X-ray of the affected part is not labelled with patient ID, date, or side (Left/Right), or does not justify the indication.",
+    "Conservative treatment failure prior to considering surgical intervention is not documented.",
+    "Post-procedure clinical photograph or detailed operative notes are missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB in Orthopedics",
+    "clinical_key_pointers": [
+      "Olecranon and prepatellar bursitis are common conditions.",
+      "They are caused by repetitive minor trauma, acute trauma, and inflammatory diseases such as gout and rheumatoid arthritis.",
+      "The patients usually complain about pain and swelling.",
+      "Most of the aseptic bursitis cases responded to conservative treatment such as ice, rest, anti-inflammatory drugs, aspiration, and local corticosteroid and lidocaine injections."
+    ],
+    "surgical_options": [
+      "Aspiration and irrigation",
+      "Incision and drainage",
+      "Total excision through an open or endoscopic total excision",
+      "Open or endoscopic total excision"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Refer for orthopedic consultation to consider surgical intervention when symptoms do not resolve after conservative treatment.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

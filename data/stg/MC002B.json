@@ -1,0 +1,131 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MC002B",
+  "procedure_code": "MC002B",
+  "condition": "Mesentric Thrombosis",
+  "procedure_name": "Catheter Directed Thrombolysis-Mesentric Thrombosis",
+  "specialty": "Cardiology/Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "CDT Mesentric thrombolysis_Medco.pdf",
+    "CDT Mesentric thrombolysis_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "DM/ DNB/ Equivalent (Cardiology)",
+    "Fellowship/Training/ Equivalent (Interventional Radiology)"
+  ],
+  "clinical_indications": [
+    "High index of suspicion, early diagnosis and prompt revascularization is cornerstone of management.",
+    "Endovascular therapy is preferred over surgical intervention in proven AMI without bowel infarction.",
+    "Persistent worsening of abdominal pain beyond 48 h of systemic anticoagulation and high risk of bowel infarction at admission are indications to switch over to endovascular therapies."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "abdominal_pain_worsening_and_bowel_infarction_risk",
+      "operator": "after",
+      "value": "48 h of systemic anticoagulation",
+      "note": "Persistent worsening of abdominal pain and high risk of bowel infarction are indications to switch to endovascular therapies."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_treatment_plan",
+        "label": "Clinical Notes with planned line of treatment"
+      },
+      {
+        "key": "doppler_ct_angiogram_report",
+        "label": "Doppler Report/CT angiogram report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "post_procedure_doppler_ct_angiogram",
+        "label": "Post procedure colour doppler/ CT Angiogram of affected vessel"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "invoices_catheter_used",
+        "label": "Invoices of catheter used"
+      },
+      {
+        "key": "invoice_thrombolytic_drug_used",
+        "label": "Invoice of thrombolytic drug used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical Notes with planned line of treatment-detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the Doppler Report/CT Angiogram indicative of Mesentric occlusion?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure colour doppler/ CT Angiogram show recanalization of affected vessel?",
+        "expected": true
+      },
+      {
+        "q": "Is detailed discharge summary with follow-up period submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice of catheter used submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is Invoice of thrombolytic drug used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Colour doppler/CT Angiogram not indicative of Mesenteric occlusion for pre-authorization.",
+    "Clinical notes for pre-authorization missing or incomplete regarding detailed history, signs & symptoms, or indication for procedure.",
+    "Post-procedure colour doppler/CT Angiogram not submitted or not demonstrating recanalization of affected vessel for claim submission.",
+    "Invoice for catheter used or thrombolytic drug used not submitted with the claim.",
+    "Detailed discharge summary with follow-up period not submitted for claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath lab/ Interventional Radiology lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Vascular pathologies of the small and large bowel can be of venous or arterial etiology.",
+      "Mesenteric ischemia is classified as acute (caused by thromboembolism or hypoperfusion) or chronic and can produce total or partial occlusion.",
+      "The development of imaging technology has gradually increased the diagnostic rate of venous or arterial mesenteric ischemia.",
+      "Four different aetiological forms of Acute Mesentric Ischemia (AMI) have been identified: Embolic (EAMI), Thrombotic (TAMI), Venous (VAMI) and Non-Occlusive Mesentric Ischemia (NOMI).",
+      "If left untreated, total occlusive AMI will cause mesenteric infarction, intestinal necrosis, an overwhelming inflammatory response and death.",
+      "Early intervention can halt and reverse this process leading to a full recovery while failure to recognize AMI before intestinal necrosis has developed is responsible for the high mortality of the disease.",
+      "Symptoms may vary from insidious onset of vague generalized discomfort to sudden onset of localized, severe and constant abdominal pain with vomiting and diarrhea.",
+      "Although melena, hematemesis or hematochezia occur in only about 15% of the cases, occult blood is present in 50% of the cases.",
+      "Fever and peritoneal signs are suggestive of progression of the infarction, and hypotension with systolic blood pressure of less than 90 mmHg along with ascites formation are associated with poor prognosis.",
+      "Contrast enhanced CT scan is the diagnostic modality of choice."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP048A",
+  "procedure_code": "MP048A",
+  "condition": "Platelet function disorders",
+  "procedure_name": "Platelet function disorders",
+  "specialty": "General Medicine/Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Platelet Function Disorders_Medco.pdf",
+    "Platelet Function Disorders_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days (can be extended)",
+  "min_doctor_qualification": [
+    "MBBS",
+    "DNB/MD equivalent in General Medicine",
+    "MD/DNB/DCH/ equivalent (Pediatric Medicine)",
+    "DM/DNB/ equivalent (Hematology)"
+  ],
+  "clinical_indications": [
+    "Platelet dysfunction due to congenital or acquired etiologies encountered in clinical practice.",
+    "Presence of bleeding symptoms such as easy bruising, nosebleeds, heavy periods, bleeding gums, bleeding into the gut, or excessive bleeding during surgery/after minor injuries.",
+    "Diagnosis supported by abnormal findings in Complete Blood Count (CBC), Prothrombin Time (PT), Partial Thromboplastin Time (PTT), and Platelet Function Tests (e.g., closure time assay, viscoelastometry, bleeding time, platelet aggregometry/lumiaggregometry, flow cytometry)."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "prothrombin_time",
+      "operator": ">",
+      "value": "1.1 INR",
+      "note": "Suggestive of diagnosis"
+    },
+    {
+      "field": "partial_thromboplastin_time",
+      "operator": ">",
+      "value": "35 seconds",
+      "note": "Suggestive of diagnosis"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes detailing history and admission notes showing vitals and examination findings"
+      },
+      {
+        "key": "relevant_investigations_preauth",
+        "label": "Relevant investigations like CBC, Prothrombin Time (PT), Partial Thromboplastin Time (PTT) and Platelet Function Test"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers (ICPs)"
+      },
+      {
+        "key": "treatment_details",
+        "label": "Treatment details"
+      },
+      {
+        "key": "relevant_investigations_claim",
+        "label": "Relevant investigations report - CBC/ Prothrombin Time (PT)/ Partial Thromboplastin Time (PTT) / Platelet Function Test"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are the clinical notes detailing infectious history or sickness contact and admission notes showing vitals and examination findings submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the investigations reports - CBC/ Prothrombin Time (PT)/ Partial Thromboplastin Time (PTT) / Platelet Function Test submitted and found abnormal?",
+        "expected": true
+      },
+      {
+        "q": "Were patient's history and Investigation reports (Prothrombin Time (PT) > 1.1 INR / Partial Thromboplastin Time (PTT) > 35 seconds) suggestive of the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the relevant investigations (CBC/ Prothrombin Time (PT)/ Partial Thromboplastin Time (PTT) / Platelet Function Test) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is a detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's history and investigation reports (Prothrombin Time > 1.1 INR and/or Partial Thromboplastin Time > 35 seconds) are missing or do not support the diagnosis without adequate justification.",
+    "Clinical notes detailing history, admission, vitals, or examination findings are missing or incomplete for pre-authorization.",
+    "Relevant investigations (CBC, PT, PTT, Platelet Function Test) are missing or do not show abnormal results as required during pre-authorization or claim submission.",
+    "Mandatory claim documents (detailed indoor case papers, treatment details, discharge summary) are missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Secondary Care Facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Platelets play a crucial role in hemostasis. Platelet dysfunction due to congenital and acquired etiologies is one of the most common causes of bleeding encountered in clinical practice.",
+      "A child may have less than the normal number of platelets (thrombocytopenia), or a normal number of platelets that don't function properly (thrombasthenia).",
+      "Inherited genetic disorders of platelet function can be divided into five groups: Disorders of platelet adhesion (Bernard-Soulier Syndrome), Disorders of platelet aggregation (Glanzmann Thrombasthenia), Disorders of platelet secretion (Gray Platelet Syndrome, Delta storage pool deficiency), Disorders of platelet procoagulant activity (Scott Syndrome), and Combined abnormalities of number and function.",
+      "Acquired platelet dysfunction disorders can be due to medical conditions like Cirrhosis, Multiple myeloma, Kidney disease, Systemic lupus erythematosus (lupus), and drugs such as aspirin, nonsteroidal anti-inflammatory drugs (NSAIDs), and antiplatelet drugs (e.g., clopidogrel).",
+      "Symptoms include easy bruising, nosebleeds, heavy periods, bleeding gums when baby teeth fall out, bleeding into the gut, and excessive bleeding during surgery or after minor injuries.",
+      "Diagnosis involves Complete Blood Count (CBC) measuring red blood cell, hemoglobin, hematocrit, white blood cell count, and platelet count (normal range provided).",
+      "Diagnosis also involves Prothrombin Time (PT) (normal 0.8 to 1.1 INR) and Partial Thromboplastin Time (PTT) (normal 25 to 35 seconds).",
+      "Further diagnosis uses Platelet Function Tests: Closure time assay, Viscoelastometry, Bleeding time, Platelet aggregometry/Lumiaggregometry, Flow cytometry.",
+      "Treatment involves stopping or avoiding drugs that cause bleeding, treating the underlying associated disease, and using medications or platelet transfusion."
+    ],
+    "surgical_options": null,
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Treating the underlying associated disease (e.g., dialysis for kidney failure).",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

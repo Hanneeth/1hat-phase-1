@@ -1,0 +1,185 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG029A",
+  "procedure_code": "MG029A",
+  "condition": "Acute Exacerbation of Chronic Obstructive Pulmonary Disease (COPD)",
+  "procedure_name": "Acute exacerbation of COPD",
+  "specialty": "General Medicine",
+  "version": "1.1",
+  "source_files": [
+    "Acute exacerbation of COPD_Medco.pdf",
+    "Acute exacerbation of COPD_PPD.CPD.pdf"
+  ],
+  "alos": "4 -7 days (2-3 days ICU)",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Severe symptoms, sudden worsening of resting dyspnoea",
+    "Fall in oxygen saturation, cyanosis, confusion, drowsiness",
+    "Failure of an exacerbation to respond to initial medical management",
+    "Presence of serious co-morbidities (heart failure, newly occurring arrhythmias, etc.)",
+    "Cyanosis",
+    "Respiratory rate >30/min",
+    "Heart rate >110/min",
+    "Systolic blood pressure <90 mm Hg",
+    "SpO2 <90%",
+    "SpO2 <88% despite therapy",
+    "Paradoxical respiratory movements",
+    "Altered sensorium",
+    "Asterixis",
+    "High risk comorbid conditions (arrhythmia, congestive cardiac failure, poorly controlled diabetes, renal or liver failure)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "respiratory_rate",
+      "operator": ">",
+      "value": "20/min",
+      "note": "from PPD pre-auth checklist and TMS pop-up"
+    },
+    {
+      "field": "heart_rate",
+      "operator": ">",
+      "value": "90 bpm",
+      "note": "from PPD pre-auth checklist and TMS pop-up"
+    },
+    {
+      "field": "systolic_bp",
+      "operator": "<",
+      "value": "90 mm Hg",
+      "note": "from PPD pre-auth checklist and TMS pop-up"
+    },
+    {
+      "field": "fev1",
+      "operator": "<",
+      "value": "80%",
+      "note": "if PFT available, from TMS pop-up"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "investigation_reports_spirometry_pft",
+        "label": "Investigation reports- Spirometry/ PFT (If available)"
+      },
+      {
+        "key": "chest_x_ray",
+        "label": "Chest X-ray"
+      },
+      {
+        "key": "patient_photograph",
+        "label": "Patient photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers having treatment and management including SpO2 monitoring"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "all_investigations_reports_serial_abg",
+        "label": "All investigations reports including serial ABG if patient admitted in ICU/HDU"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailing past history of COPD, risk factors (if any), signs and symptoms and admission criteria (severe symptoms, sudden worsening dyspnoea, fall in oxygen saturation, cyanosis, confusion, drowsiness, failure to respond to initial medical management, presence of serious co-morbidities) available?",
+        "expected": true
+      },
+      {
+        "q": "Vitals of acute exacerbation: Respiratory rate > 20/ min?",
+        "expected": true
+      },
+      {
+        "q": "Vitals of acute exacerbation: Heart rate > 90 bpm?",
+        "expected": true
+      },
+      {
+        "q": "Vitals of acute exacerbation: Systolic BP < 90 mm Hg?",
+        "expected": true
+      },
+      {
+        "q": "Spirometry/ PFT reports, if available, indicating airway obstruction?",
+        "expected": true
+      },
+      {
+        "q": "Chest X-ray available?",
+        "expected": true
+      },
+      {
+        "q": "Planned line of management documented?",
+        "expected": true
+      },
+      {
+        "q": "Photograph of the patient on bed (Routine ward/ HDU/ICU) available?",
+        "expected": true
+      },
+      {
+        "q": "History of COPD documented?",
+        "expected": true
+      },
+      {
+        "q": "FEV1 < 80% (if PFT available) documented?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Documents (clinical notes and physical examination reports) available detail the need for admission (admission criteria)?",
+        "expected": true
+      },
+      {
+        "q": "Was there documentary evidence of record & monitoring of vitals (SpO2, Heart rate, chest examination, abnormal breath sounds, features of Cor pulmonale (loud P2, elevated JVP, edema) in advanced cases, chest x-ray?",
+        "expected": true
+      },
+      {
+        "q": "Is medication/ treatment chart available? Was the patient given Steroids, Inhalers/ nebulization, antibiotics as required & supplemental oxygen (if indicated) for mild exacerbation or severe exacerbation?",
+        "expected": true
+      },
+      {
+        "q": "Do the discharge documents show the discharge / referral criteria, counselling on control of risk factors, post discharge treatment advice including follow-up (preferably 1 week)?",
+        "expected": true
+      },
+      {
+        "q": "If the patient is in HDU/ ICU +/- BIPAP/ ventilator, do the documents show a need for admission to HDU/ ICU (+/- BIPAP/ ventilator)?",
+        "expected": true
+      },
+      {
+        "q": "If the patient is in HDU/ ICU +/- BIPAP/ ventilator, is there documentary evidence to show monitoring in HDU/ICU/BIPAP/ ventilator?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Respiratory rate not documented or documented as <= 20/min",
+    "Heart rate not documented or documented as <= 90 bpm",
+    "Systolic BP not documented or documented as >= 90 mm Hg",
+    "PFT not available, or FEV1 documented as >= 80% without justification",
+    "Clinical notes missing details of past COPD history, risk factors, signs/symptoms, or specific admission criteria",
+    "Lack of documentary evidence for the need or monitoring of HDU/ICU/BIPAP/ventilator"
+  ],
+  "additional_information": {
+    "icd_10_code": "J44.9",
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/ DNB/ equivalent (Medicine)/ Pulmonology/ Diploma in Tuberculosis and Chest Disease (DTCD)",
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Refer to higher centre for further management if Red flag signs for exacerbation are present (altered sensorium, SpO2 <88% despite therapy, heart rate >110 bpm, systolic blood pressure <90 mm Hg, high risk comorbid conditions). Refer if inadequate response to treatment, onset of new complications, or suspicion of alternative diagnosis.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

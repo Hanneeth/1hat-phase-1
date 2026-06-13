@@ -1,0 +1,131 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG096D",
+  "procedure_code": "SG096D",
+  "condition": "Lymph Node Biopsy",
+  "procedure_name": "Cervical (Neck) Biopsy",
+  "specialty": "General Surgery, Pediatric Surgery, Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Lymph node biopsy_Medco.pdf",
+    "Lymph node biopsy_PPD.CPD.pdf"
+  ],
+  "alos": "Daycare",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO or equivalent (Obstetrics & Gynecology)",
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Confirm suspected reactive hyperplasia",
+    "Infective",
+    "Autoimmune (e.g. SLE)",
+    "Drug reactions",
+    "Diagnose a specific infection",
+    "Viral (e.g. CMV)",
+    "Bacterial (e.g. TB)",
+    "Parasitic (e.g. toxoplasmosis)",
+    "Fungal (e.g. cryptococcus)",
+    "Diagnose a neoplastic infiltration",
+    "Primary lymphoma (e.g. HL or NHL)",
+    "Confirm transformation of a LG to a HG lymphoma (e.g. FL to DLBCL)",
+    "Metastatic tumour",
+    "Known primary",
+    "Unknown primary"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_supporting_investigations",
+        "label": "Clinical notes with supporting investigations"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "other_investigation_reports_if_done",
+        "label": "Other Investigation reports if done"
+      },
+      {
+        "key": "detailed_procedure_notes",
+        "label": "Detailed procedure notes"
+      },
+      {
+        "key": "post_procedure_photographs_optional",
+        "label": "Post-procedure photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological Examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical presentation, physical examination ± supporting investigations indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation indicative of procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was Histopathological examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, physical examination, or supporting investigations not indicative of the procedure.",
+    "Detailed clinical notes (vitals, history, symptoms, signs, physical examination, indication for procedure, planned line of treatment) missing or incomplete at pre-authorization.",
+    "Clinical photograph missing or not applicable without justification at pre-authorization.",
+    "Detailed indoor case papers with daily vitals and treatment details missing or incomplete at claim submission.",
+    "Detailed procedure notes missing or incomplete at claim submission.",
+    "Histopathological examination report missing at claim submission.",
+    "Detailed discharge summary with follow-up advice missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Fine-needle aspiration biopsy (FNAB) is a safe and minimally invasive outpatient procedure, triaging reactive from neoplastic lymph nodes which require further management/referral, and diagnosing infectious lesions that require treatment.",
+      "Indications for FNAB are dependent on the patient, the lymph node and on the diseases prevalent in the population."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

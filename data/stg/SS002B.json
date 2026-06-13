@@ -1,0 +1,139 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS002B",
+  "procedure_code": "SS002B",
+  "condition": "Ankyloglossia",
+  "procedure_name": "Ankyloglossia Major",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Ankyloglossia_Medco.pdf",
+    "Ankyloglossia_PPD.CPD.pdf"
+  ],
+  "alos": "1-2 Days",
+  "min_doctor_qualification": [
+    "MCh/ equivalent (in Pediatric surgery/Plastic Surgery)"
+  ],
+  "clinical_indications": [
+    "Inability to lift the tongue to the upper dental alveolus",
+    "Impaired protrusion of the tongue",
+    "Impaired side-to-side movement of the tongue",
+    "Notched or heart shape to the tongue when it is protruded",
+    "Abnormally short frenulum, inserting at or near the tip of the tongue",
+    "Breastfeeding difficulty",
+    "Articulation problems",
+    "Mechanical/social problems"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_indications",
+        "label": "Clinical notes with indications"
+      },
+      {
+        "key": "grading_ankyloglossia",
+        "label": "Grading of ankyloglossia"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "pre_post_operative_photograph",
+        "label": "Pre & Post-operative photograph"
+      },
+      {
+        "key": "evidence_failed_conservative_management",
+        "label": "Documentary evidence of failed/ non-indicated conservative management of ankyloglossia in patient aged >/= 2 years"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical notes mentioning about grading of ankyloglossia submitted?",
+        "expected": true
+      },
+      {
+        "q": "On intraoral examination, short lingual frenum and restricted tongue movements were observed?",
+        "expected": true
+      },
+      {
+        "q": "Is the reason(s) for performing the procedure/ surgery mentioned?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise available at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Were the pre and post-operative clinical photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Documentary evidence of failed/ non-indicated conservative management of ankyloglossia in patient aged >/= 2 years?",
+        "expected": true
+      },
+      {
+        "q": "On intraoral examination, short lingual frenum and restricted tongue movements were observed?",
+        "expected": true
+      },
+      {
+        "q": "Is the reason(s) for performing the procedure/ surgery mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes not detailing history, signs & symptoms, or indication for procedure at pre-authorization.",
+    "Clinical notes not mentioning grading of ankyloglossia at pre-authorization.",
+    "Short lingual frenum and restricted tongue movements not documented on intraoral examination.",
+    "Reason(s) for performing the procedure/surgery not mentioned.",
+    "Pre and post-operative clinical photographs not submitted at claim stage.",
+    "For patients aged >= 2 years, documentary evidence of failed/non-indicated conservative management is missing at claim stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ankyloglossia, or tongue-tie, is a congenital anomaly in which a short, lingual frenulum or a highly-attached genioglossus muscle restricts tongue movement (ie, restrictive lingual frenulum)."
+    ],
+    "surgical_options": [
+      "Frenotomy - simple release, or \"clipping,\" of the frenulum. This procedure is often performed for infants with breastfeeding difficulty, with or without local anesthesia.",
+      "Frenuloplasty — release of ankyloglossia with plastic repair. It is reserved for ankyloglossia that is not relieved by simple division of the frenulum, posterior tongue-ties, and revision cases. Frenuloplasty requires general anesthesia, sometimes by mask but more commonly with oro- or nasotracheal intubation."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

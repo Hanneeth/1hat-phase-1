@@ -1,0 +1,151 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL034C",
+  "procedure_code": "SL034C",
+  "condition": "ORIF of Maxilla, Mandible, Zygoma, Head & Neck, Orbital Fracture",
+  "procedure_name": "Open reduction and internal fixation of Maxilla / Mandible / Zygoma",
+  "specialty": "Oral Maxillofacial Surgery/ENT",
+  "version": "1.1",
+  "source_files": [
+    "ORIF Maxilla Mandible Zygoma Head Neck Orbital Fracture _Medco.pdf",
+    "ORIF Maxilla Mandible Zygoma Head Neck Orbital Fracture _PPD.CPD.pdf"
+  ],
+  "alos": "1Day",
+  "min_doctor_qualification": [
+    "MDS (Oral Maxillo-facial surgery)"
+  ],
+  "clinical_indications": [
+    "Displacement of condyle into the middle cranial fossa (with/without fracture).",
+    "Pediatric Fracture.",
+    "Lateral extracapsular displacement of condyle (with/without fracture).",
+    "Impossibility of obtaining proper occlusion by Closed Technique.",
+    "Adult Condylar fracture associated with comminuted fracture at and above the Le Fort 1 level."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, clinical photographs (intraoral & extraoral), indications, advice for admission, procedure / operative notes, post procedure photograph of affected part)"
+      },
+      {
+        "key": "xray_imaging",
+        "label": "X-ray of Paranasal sinus (PNS) with Water's view/ mandible latera Oblique, antero- posterior for Mandible Fracture/ mandible lateral oblique, Submento vertex or CBCT/CT/OPG. (Xray in 2 planes)."
+      },
+      {
+        "key": "cbct_scan_if_required",
+        "label": "CBCT (Cone beam computed Tomography) of Maxilla/mandible/TMJ (for additional fractures or if surgeon prescribed)"
+      },
+      {
+        "key": "mlc_fir_for_traumatic_injuries",
+        "label": "MLC/FIR for traumatic injuries and circumstances of the incident"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (including Informed written consent)"
+      },
+      {
+        "key": "procedure_note_anesthesia_notes",
+        "label": "Procedure note/ operative note & Anesthesia Notes"
+      },
+      {
+        "key": "barcode_implants",
+        "label": "Barcode of Implants used"
+      },
+      {
+        "key": "post_operative_xray",
+        "label": "Post-operative X-Ray"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Oral & Maxillofacial clinical notes (including clinical signs & symptoms such as difficulty in breathing, examination findings, indications for doing the procedure & advise for admission)?",
+        "expected": true
+      },
+      {
+        "q": "X-ray report of Maxilla/mandible/zygoma/TM joint/Head & neck showing fractures or multiple fractures?",
+        "expected": true
+      },
+      {
+        "q": "Optional documents: CBCT of maxilla/mandible/zygoma/Head & Neck if suggested by doctors?",
+        "expected": true
+      },
+      {
+        "q": "Did the signs, symptoms, examination and detailed Oral maxillofacial clinical notes confirm the presence of Maxilla/Mandible/Zygoma/Facio-Maxillary Injury/Orbital fracture?",
+        "expected": true
+      },
+      {
+        "q": "X-Ray/OPG-Orthopantomography confirm the presence of Maxilla/Mandible/Zygoma/Facio-Maxillary Injury/Orbital fracture?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Barcode of Implant(s) used available?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative radiographic imaging of the treated area?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes (signs, symptoms, indications) are missing or do not support the diagnosis.",
+    "X-ray/OPG/CBCT (if indicated) reports are missing or do not confirm the presence of fracture.",
+    "MLC/FIR (for traumatic injuries) is missing.",
+    "Operative notes are missing or lack details of surgical steps and outcomes.",
+    "Barcode of implant(s) is missing at the claim stage.",
+    "Post-operative radiographic imaging or discharge summary is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "ORIF: It is surgical procedure performed to maintain the proper occlusion until the internal fixation of the fracture is achieved. Oral and maxillofacial fractures are common injuries among multiple trauma patients. Mid-face fractures are considered serious medical problems rather than all other maxillofacial injuries due to their complexity of management. An appropriate surgical treatment plan is essential to re construct the mid-face aperture esthetically and functionally. Favorable results are provided to interdisciplinary approaches and appropriate surgical treatments."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "No absolute contraindications.",
+      "Fracture of Mandible /Maxilla and zygoma are contraindicated for patients with comprised pulmonary function with severe asthma or severe COPD, poorly controlled seizures, psychiatric and neurological disorders, severe nausea or eating disorder."
+    ],
+    "complications": [
+      "Bacterial Infection, either from the hardware or incision.",
+      "Uncontrolled Bleeding, Allergic reaction to anesthesia, nerve or blood vessel damage, tendon/ligament damage",
+      "Incomplete or abnormal bone healing, nonunion, malunion",
+      "metal hardware moving out of place, hardware fracture/ failure",
+      "Mobility",
+      "muscle spasms or damage, arthritis, tendonitis.",
+      "Audible popping and snapping.",
+      "Chronic pain due to hardware(screws/wiring/implants)",
+      "Scar, keloid"
+    ]
+  }
+}

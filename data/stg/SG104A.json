@@ -1,0 +1,132 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG104A",
+  "procedure_code": "SG104A",
+  "condition": "Circumcision - Lesion or any other clinical condition",
+  "procedure_name": "Circumcision - Lesion or any other clinical condition",
+  "specialty": "General Surgery/Pediatric Surgery/Urology",
+  "version": "1.1",
+  "source_files": [
+    "Circumcision Lesion or any other clinical condition_MEDCO.pdf",
+    "Circumcision Lesion or any other clinical condition_PPD_CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/DNB/equivalent (Gen Surgery)",
+    "DNB/MCh/equivalent (Pediatric surgery)",
+    "DNB/MCh/equivalent (Urology)"
+  ],
+  "clinical_indications": [
+    "Phimosis and Paraphimosis.",
+    "Presence of a long redundant foreskin with or without preputial adhesions.",
+    "Varying degree of irritation around the genitalia, especially the foreskin.",
+    "Varying degree of balanitisor balanoposthitis.",
+    "Suspected penile cancer"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history",
+        "label": "Clinical notes detailing history."
+      },
+      {
+        "key": "admission_notes_vitals_exam",
+        "label": "Admission notes showing vitals and examination findings"
+      },
+      {
+        "key": "pre_procedural_photograph_lesion",
+        "label": "Pre procedural photograph demonstrating the lesion (optional with informed consent)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "post_procedure_photograph",
+        "label": "Post procedure photograph (optional with informed consent)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was patient's Clinical history and examination indicative of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the procedure indicated as a preventive measure or for religious reasons?",
+        "expected": false
+      },
+      {
+        "q": "Are the Clinical notes detailing history submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the Admission notes showing vitals and examination findings submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the pre procedural photograph demonstrating the lesion (optional with informed consent) submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the post procedure photograph (optional with informed consent) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical history and examination not indicative of the procedure.",
+    "Procedure indicated as a preventive measure or for religious reasons.",
+    "Clinical notes detailing history missing or incomplete at pre-authorization.",
+    "Admission notes showing vitals and examination findings missing or incomplete at pre-authorization.",
+    "Detailed Indoor case papers (ICPs) missing or incomplete at claim submission.",
+    "Detailed Procedure / operation notes missing or incomplete at claim submission.",
+    "Detailed discharge summary missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Secondary care facilities.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Circumcision is the surgical removal of the prepuce (foreskin) covering the tip of the penis.",
+      "Phimosis is the condition when a prepuce (foreskin) can't be retracted from the tip of the penis because of a narrowed preputial opening. Physiologic phimosis occurs naturally in newborn males whereas Pathologic phimosis is the inability to retract the foreskin after it was previously retractable or after puberty, usually secondary to distal scarring of the foreskin.",
+      "Paraphimosis is the condition when the prepuce (foreskin) is retracted but can't move back up. This is due to entrapment of a retracted foreskin behind the coronal sulcus and is a disease of uncircumcised or partially circumcised males. It can prevent normal blood flow in the penis, and may cause serious problems."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "This STG does not include circumcision as a preventive procedure and religious circumcision."
+    ]
+  }
+}

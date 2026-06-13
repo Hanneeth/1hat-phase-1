@@ -1,0 +1,96 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN063A",
+  "procedure_code": "SN063A",
+  "condition": "Conservative management of high cervical injury",
+  "procedure_name": "Conservative management of Complex Spine Injury",
+  "specialty": "Polytrauma/Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Conservative management of high cervical injury (Complex and Simple Spinal Injury)_MEDCO-converted.pdf",
+    "Conservative management of high cervical injury (Complex and Simple Spinal Injury)_PPD_CPD-converted.pdf"
+  ],
+  "alos": "14 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (Neurosurgery)",
+    "MS/DNB/equivalent (Gen Surgery)"
+  ],
+  "clinical_indications": [
+    "Presence of problems walking, loss of control of bladder or bowels, inability to move the arms or legs, feelings of spreading numbness or tingling in the extremities, unconsciousness, headache, pain/pressure/stiffness in the back or neck area, signs of shock, or unnatural positioning of the head.",
+    "Spinal cord injury confirmed by diagnostic tools such as X-ray, CT, or MRI.",
+    "Patient's injury type, neurologic status, risk of displacement, body habitus, eventual deformity, and compliance indicate suitability for conservative management as the most appropriate treatment modality.",
+    "Non-surgical care using methods like skeletal skull traction, cervical braces, or halo vest is indicated."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_vitals_examination",
+        "label": "Detailed clinical notes with history and admission notes showing vitals and examination findings"
+      },
+      {
+        "key": "xray_ct_mri_reports",
+        "label": "Relevant Investigations such as X-ray and CT +/- MRI"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the patient's CT+/- MRI report indicative of the procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the patient's CT+/- MRI report indicative of the procedure?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's CT+/- MRI report not indicative of the procedure.",
+    "Detailed clinical notes with history and admission notes showing vitals and examination findings not submitted or incomplete.",
+    "Relevant Investigations (X-ray and CT +/- MRI) reports not submitted or insufficient.",
+    "Detailed Indoor case papers (ICPs) not submitted.",
+    "Detailed procedure/operative notes not submitted.",
+    "Detailed discharge summary not submitted or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Spinal Cord Injury can severely impair or cease the conduction of sensory and motor signals, as well as functions of the autonomic nervous system.",
+      "Symptoms of a spinal cord injury include problems walking, loss of control of the bladder or bowels, inability to move the arms or legs, feelings of spreading numbness or tingling in the extremities, unconsciousness, headache, pain, pressure, and stiffness in the back or neck area, signs of shock, and unnatural positioning of the head.",
+      "Diagnostic Tools: X-ray, CT and MRI.",
+      "Classification of Spinal Injuries: ASIA CLASSIFICATION (American Spinal Injury Association) assessment protocol to quantify severity of spinal cord injury.",
+      "ASIA Grade definitions: A (Complete), B (Incomplete - sensory only), C (Incomplete - motor < 3), D (Incomplete - motor >= 3), E (Normal).",
+      "Active physiological conservative management requires simultaneous scrupulous care of the injured spine, multisystem neurogenic effects (respiratory, cardiovascular, urinary, gastrointestinal, dermatological, sexual and reproductive functions), psychological effects, physical rehabilitation, and modification of the environment.",
+      "Conservative treatment can be initial, an adjunct to surgery, or the definitive treatment.",
+      "Non-surgical care of cervical trauma includes skeletal skull traction, use of cervical braces, and use of Halo vest."
+    ],
+    "surgical_options": null,
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

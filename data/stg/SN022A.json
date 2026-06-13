@@ -1,0 +1,105 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN022A",
+  "procedure_code": "SN022A",
+  "condition": "Hydrocephalus",
+  "procedure_name": "Ventriculo - peritoneal Shunt Surgery",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Shunt surgery_Medco.pdf",
+    "Shunt surgery_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MCh (Neurosurgery)",
+    "DNB (Neurosurgery)",
+    "Equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Congenital hydrocephalus after aqueductal stenosis",
+    "Tumors leading to CSF blockage of the lateral ventricles, third ventricle, and those in the posterior fossa blocking the cerebral aqueduct or fourth ventricle",
+    "Communicating hydrocephalus secondary to meningitis or subarachnoid hemorrhage",
+    "Myelomeningocele causing hydrocephalus due to hindbrain malformation",
+    "Craniosynostosis causing hydrocephalus",
+    "Dandy-Walker syndrome with cystic deformity of the fourth ventricle, hypoplasia of the cerebellar vermis, and an enlarged posterior fossa",
+    "Arachnoid cysts causing hydrocephalus due to trapped CSF collection",
+    "Idiopathic intracranial hypertension leading to rise in intracranial pressure and potential vision loss",
+    "Normal-pressure hydrocephalus causing memory problems/dementia, gait dysfunction, and urinary incontinence"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_findings_planned_treatment",
+        "label": "Clinical Notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "ct_mri_report_brain",
+        "label": "CT/MRI report of brain"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_scar_photograph",
+        "label": "Post Procedure clinical photograph/ Scar photograph (Optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was CT/ MRI brain report of patient submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "CT/MRI brain report not submitted at pre-authorization.",
+    "Clinical notes detailing history, signs, symptoms, indication, and planned treatment not submitted at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) not submitted at claim submission.",
+    "Detailed Procedure/ Operation notes not submitted at claim submission.",
+    "Detailed Discharge Summary not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operational Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Congenital hydrocephalus after aqueductal stenosis is a genetic disorder which can cause deformations of the nervous system and is associated with mental retardation, abducted thumbs, and spastic paraplegia",
+      "Tumors leading to CSF blockage of the lateral ventricles, third ventricle, and those in the posterior fossa blocking the cerebral aqueduct or fourth ventricle",
+      "Communicating hydrocephalus secondary to meningitis or subarachnoid hemorrhage",
+      "Myelomeningocele causes the development of hydrocephalus because the flow of CSF is altered due to hindbrain malformation",
+      "Craniosynostosis occurs when the sutures of the skull close too early with sutures fusing before the brain stops growing and in rare occasions can cause hydrocephalus",
+      "Dandy-Walker syndrome presents with a cystic deformity of the fourth ventricle, hypoplasia of the cerebellar vermis, and an enlarged posterior fossa",
+      "Arachnoid cysts are a defect caused when CSF forms a collection that is trapped in the arachnoid membranes resulting in a block of the normal flow of CSF resulting in hydrocephalus",
+      "Idiopathic intracranial hypertension is a rare neurological disorder affecting approximately 1 in 100,000 people, usually women of childbearing age, causing a rise in intracranial pressure which can result in permanent loss of vision",
+      "Normal-pressure hydrocephalus caused a classic triad of memory problems/dementia, gait dysfunction, and urinary incontinence."
+    ],
+    "surgical_options": [
+      "Ventriculo-peritoneal (VPS) shunts",
+      "Ventriculo-atrial (VAS) shunts",
+      "Ventriculo-pleural shunt (VPLS)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

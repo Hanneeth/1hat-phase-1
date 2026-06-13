@@ -1,0 +1,177 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG002A",
+  "procedure_code": "SG002A",
+  "condition": "Oesophageal stricture",
+  "procedure_name": "Operations for Replacement of Oesophagus by Colon",
+  "specialty": "Operations for Replacement of Oesophagus by Colon (General/Pediatric Surgery)",
+  "version": "1.1",
+  "source_files": [
+    "Oesophageal Stricture_Medco.pdf",
+    "Oesophageal Stricture_PPD.CPD.pdf"
+  ],
+  "alos": "10-14 days",
+  "min_doctor_qualification": [
+    "MCh/ DNB/ Equivalent (Pediatric Surgery, Surgical Gastroenterology)"
+  ],
+  "clinical_indications": [
+    "Oesophageal stricture not responding to repeated dilatations (Gastrostomy + Esophagoscopy + Threading) over an extended period (six months or more).",
+    "Corrosive strictures of the oesophagus necessitating replacement by colon."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "response_to_dilatation",
+      "operator": "not responded",
+      "value": "repeated dilatations for 6+ months",
+      "note": "Patient does not respond to Gastrostomy + Esophagoscopy + Threading treatment."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "barium_contrast_swallow_upper_gi_endoscopy",
+        "label": "Barium contrast swallow / Upper Gastrointestinal Endoscopy"
+      },
+      {
+        "key": "x_ray_pa_lateral_views_optional",
+        "label": "X-ray (PA & lateral views) (optional)"
+      },
+      {
+        "key": "ct_mri_optional",
+        "label": "CT/MRI (optional)"
+      },
+      {
+        "key": "endoscopic_ultrasound_optional",
+        "label": "Endoscopic ultrasound (optional)"
+      },
+      {
+        "key": "oesophageal_ph_monitoring_optional",
+        "label": "Oesophageal pH monitoring (optional)"
+      },
+      {
+        "key": "oesophageal_manometry_optional",
+        "label": "Oesophageal manometry (optional)"
+      },
+      {
+        "key": "complete_blood_count_optional",
+        "label": "Complete blood count (optional)"
+      },
+      {
+        "key": "liver_function_test_optional",
+        "label": "Liver function test (optional)"
+      },
+      {
+        "key": "metabolic_profile_optional",
+        "label": "Metabolic profile (optional)"
+      },
+      {
+        "key": "histopathological_examination_optional",
+        "label": "Histopathological examination (optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "barium_contrast_swallow",
+        "label": "Barium contrast swallow"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Barium contrast swallow/Upper GI endoscopy report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the barium swallow test/upper GI endoscopy show constant narrowing on swallow with diagnosis of stricture?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient present with dysphagia for food or liquids?",
+        "expected": true
+      },
+      {
+        "q": "Was the indication of Replacement of Oesophagus by Colon documented?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advise provided?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical evaluation and imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Barium swallow test or upper GI endoscopy report did not show constant narrowing consistent with oesophageal stricture.",
+    "Patient's clinical presentation did not include dysphagia for food or liquids.",
+    "Indication for 'Replacement of Oesophagus by Colon' not explicitly documented.",
+    "Missing or incomplete clinical notes detailing history, symptoms, planned treatment, or procedure indication.",
+    "Missing or incomplete detailed indoor case papers (ICPs) or procedure/operative notes at claim submission.",
+    "Discharge summary lacking follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "An oesophageal stricture refers to the abnormal narrowing of the oesophageal lumen, which requires treatment. It is a serious sequela to many different disease processes and underlying etiologies, particularly in children.",
+      "In neonatal period or early infancy, oesophageal strictures may manifest as slow feeding and excessive regurgitation with or without cyanotic episodes.",
+      "Older children with oesophageal strictures often present with foreign body impaction of food in the esophagus or complain of dysphagia with solids, requiring oral drinks to push food bolus."
+    ],
+    "surgical_options": [
+      "Mechanical dilation of esophagus",
+      "Gastrostomy",
+      "Fundoplication",
+      "Oesophageal myotomy (achalasia)",
+      "Operations for Replacement of Oesophagus by Colon (Corrosive strictures)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

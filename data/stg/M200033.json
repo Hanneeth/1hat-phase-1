@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M200033",
+  "procedure_code": "M200033",
+  "condition": "Acute Viral Hepatitis",
+  "procedure_name": "Acute viral hepatitis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Acute viral hepatitis_Medco.pdf",
+    "Acute viral hepatitis_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [
+    {
+      "field": "serum_bilirubin_level",
+      "operator": ">",
+      "value": "2.5 mg/dl",
+      "note": null
+    },
+    {
+      "field": "serum_aminotransferase",
+      "operator": ">",
+      "value": "400U/L",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes detailing examination findings, previous surgery/procedure, follow-up visit details, investigations, Planned line of treatment"
+      },
+      {
+        "key": "usg_whole_abdomen",
+        "label": "USG Whole Abdomen"
+      },
+      {
+        "key": "lft_serum_bilirubin",
+        "label": "LFT (Liver function test), Serum Bilirubin"
+      },
+      {
+        "key": "serological_test_for_hepatitis",
+        "label": "Serological test for hepatitis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_paper",
+        "label": "Detailed Indoor case paper along with treatment details"
+      },
+      {
+        "key": "post_treatment_lft_serum_bilirubin",
+        "label": "Post treatment LFT (Liver function test), Serum Bilirubin"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is the detailed planned line of treatment mentioned in admission note?",
+        "expected": true
+      },
+      {
+        "q": "Does it show elevated plasma aminotransferase, serum bilirubin and alkaline phosphatase?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is the detailed Indoor case paper with daily vitals and line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary submitted with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Serum bilirubin level not documented or documented below 2.5 mg/dl without justification.",
+    "Serum aminotransferase not documented or documented below 400U/L without justification.",
+    "Clinical notes or detailed planned line of treatment not clearly mentioned in admission note.",
+    "LFT and serum bilirubin reports not submitted at pre-authorization.",
+    "Detailed Indoor case paper with daily vitals or line of treatment missing at claim submission.",
+    "Discharge summary missing or lacking follow-up advice at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD / DNB equivalent (in General Medicine, Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Low grade fever",
+      "Anorexia",
+      "Nausea and Vomiting",
+      "Fatigue",
+      "Malaise",
+      "Arthralgias",
+      "Headache",
+      "Photophobia",
+      "Dark urine, yellow tint to sclera and clay colored stool may be noticed from 1-5 days"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

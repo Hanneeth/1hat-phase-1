@@ -1,0 +1,188 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "IN007A",
+  "procedure_code": "IN007A",
+  "condition": "Acute ischemic stroke",
+  "procedure_name": "Intracranial thrombolysis / clot retrieval",
+  "specialty": "Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "Acute Ischemic stroke_Medco.pdf",
+    "Acute Ischemic stroke_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "DM/Equivalent (in Interventional Neuroradiology)",
+    "MCh/DNB/Equivalent (in Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Cerebral Thrombolysis &/or Clot Retrieval for removing a blood clot blocking blood flow to the brain for acute ischemic stroke.",
+    "Intravenous (IV) thrombolysis by administration of recombinant tissue plasminogen activator (rt-PA) for acute ischemic stroke.",
+    "Endovascular clot retrieval (ECR) for the removal of large clots occluding a brain vessel through an intra-arterial approach.",
+    "Ischaemic stroke with proven large vessel occlusion on CTA (internal carotid artery (ICA), middle cerebral artery (MCA) M1 segment or proximal M2 segment with significant clinical and perfusion deficit, basilar artery) for ECR eligibility.",
+    "Independent premorbid function (modified Rankin scale score 0-2) for ECR eligibility.",
+    "Intravenous thrombolysis commenced if eligible.",
+    "Accessible to clot retrieval assessment by neurointerventionist (requires remote picture archiving and communication system (PACS) access at all referral sites)."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "time_window_iv_thrombolysis",
+      "operator": "<=",
+      "value": "4.5 hours",
+      "note": "from stroke symptom onset"
+    },
+    {
+      "field": "time_window_ecr_broad",
+      "operator": "<=",
+      "value": "6 hours",
+      "note": "from stroke onset, broad clinical and imaging criteria applied"
+    },
+    {
+      "field": "time_window_ecr_basilar_artery",
+      "operator": "<=",
+      "value": "24 hours",
+      "note": "from stroke onset"
+    },
+    {
+      "field": "time_window_ecr_anterior_circulation",
+      "operator": "<=",
+      "value": "24 hours",
+      "note": "from stroke onset with favourable CT perfusion imaging"
+    },
+    {
+      "field": "premorbid_mrs_score",
+      "operator": "<=",
+      "value": "2",
+      "note": "independent premorbid function (modified Rankin Scale score 0-2)"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_neurological_evaluation",
+        "label": "Clinical notes especially neurological evaluation findings"
+      },
+      {
+        "key": "nihss_ranken_scale_documentation",
+        "label": "NIHSS/Ranken scale score documentation"
+      },
+      {
+        "key": "ct_mri_brain_dsa",
+        "label": "CT/MRI Brain / Digital Subtraction Angiography (DSA)"
+      },
+      {
+        "key": "blood_pressure_monitoring",
+        "label": "Blood pressure monitoring"
+      },
+      {
+        "key": "indication_thrombolytic_agent",
+        "label": "Indication of Thrombolytic agent requirement"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "angiogram_during_procedure",
+        "label": "Angiogram during procedure"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "post_op_ct_brain",
+        "label": "Post-op CT Brain"
+      },
+      {
+        "key": "thrombolytic_agent_details_documentation",
+        "label": "Thrombolytic agent details documentation"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history especially time of onset of symptoms signs & symptoms, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient present with hemiparesis, aphasia, dysarthria, loss of consciousness, cranial nerve palsy?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Thrombolytic agents invoice/barcode/documentation submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was post-op CT brain report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing details on symptom onset time, indication for procedure, or planned line of treatment.",
+    "Patient's clinical presentation (e.g., hemiparesis, aphasia, dysarthria, loss of consciousness, cranial nerve palsy) is not documented or does not support the diagnosis of acute ischemic stroke.",
+    "Pre-authorization imaging (CT/MRI Brain / DSA) did not confirm the diagnosis of acute ischemic stroke or is missing.",
+    "Intravenous thrombolysis was initiated beyond 4.5 hours of symptom onset without justification for ECR, or ECR was initiated beyond 6 hours (broad criteria) or 24 hours (basilar artery/anterior circulation with favorable CT perfusion) of stroke onset without justification.",
+    "Premorbid function (modified Rankin scale score) for ECR eligibility is not documented as 0-2.",
+    "Thrombolytic agent invoice/barcode/documentation is not submitted with the claim.",
+    "Post-operative CT Brain report is missing from the claim documents.",
+    "Discharge summary does not include follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": "I63, I64",
+    "special_empanelment": "Care at Tertiary Hospital.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A stroke or cerebrovascular accident (CVA) is an acute compromise of the cerebral perfusion or vasculature. Ischemic etiologies can further be divided into embolic, thrombotic, and lacunar.",
+      "Common risk factors for stroke include hypertension, diabetes, smoking, obesity, atrial fibrillation, and drug use.",
+      "Hypertension is the most common modifiable risk factor for stroke.",
+      "National Institutes of Health Stroke Scale (NIHSS) (Appendix 1) is routinely used to get the stroke rating scale baseline evaluation."
+    ],
+    "surgical_options": null,
+    "pre_op_preparation": "Preliminary Management includes: Assess and manage ABCs, initiate cardiac monitoring, maintain O2 saturation >94%, establish IV access, determine blood glucose and treat accordingly, determine time of symptom onset or last known normal and obtain family contact information, triage and rapid transfer to nearest district hospital with CT Scan facility or Stroke centre with facility for thrombolysis, and referral hospital to be notified to handle the referred patient.",
+    "post_op_care": "Follow-up at 2nd week, 1st month, 3rd month and 6th month as part of discharge planning. Stroke unit management includes medical and nursing staff control of blood pressure, diabetes, swallow assessment, DVT prophylaxis, antiplatelet drugs, and rehabilitation staff for acute and subacute/chronic phase.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

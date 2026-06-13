@@ -1,0 +1,107 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG013A",
+  "procedure_code": "MG013A",
+  "condition": "Chronic Hepatitis",
+  "procedure_name": "Chronic Hepatitis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Chronic Hepatitis_Medco.pdf",
+    "Chronic Hepatitis_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "DNB / MD (General Medicine / Pediatric Medicine)",
+    "DM / DNB (Gastroenterology & Hepatology)",
+    "DM / DNB equivalent in Hepatology"
+  ],
+  "clinical_indications": [
+    "Diagnosis of Chronic Hepatitis, characterized by varying degrees of hepatocellular necrosis and inflammation, and continuing disease without improvement for at least six months.",
+    "Presence of specific causes of chronic hepatitis (HBV, HCV, HEV, Autoimmune hepatitis, Drug/toxin induced, Nonalcoholic fatty liver disease, Chronic alcoholic liver diseases) confirmed by relevant investigations.",
+    "Clinical features and laboratory findings suggestive of chronic hepatitis or its complications (e.g., elevated liver enzymes, abnormal bilirubin, prolonged PT/INR, signs of hepatic encephalopathy)."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indications_planned_treatment",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "liver_function_test_alpha_fetoprotein_cbc_viral_hepatitis_markers_report",
+        "label": "Liver Function test, Alpha fetoprotein, CBC, Viral hepatitis markers report"
+      },
+      {
+        "key": "usg_abdomen_ct_liver_upper_gi_endoscopy_fibro_scan",
+        "label": "USG- Abdomen /Dual phase CT Liver/ Upper GI endoscopy/Fibro scan for assessing hepatic fibrosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_clinical_papers_treatment_details",
+        "label": "Detailed Indoor clinical papers along with treatment given details"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes, detailing history and Admission notes showing vitals (BP, Pulse) and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Liver Function test, Alpha fetoprotein, CBC, viral hepatitis markers report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG- Abdomen/Dual phase CT Liver/ Upper GI endoscopy/Fibro scan for assessing hepatic fibrosis submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the clinical notes and liver function test report suggestive of hepatitis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor case papers with treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted with the date of the follow-up mentioned?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or liver function test report not suggestive of chronic hepatitis.",
+    "Mandatory pre-authorization documents (Clinical Notes, LFT, Alpha fetoprotein, CBC, Viral hepatitis markers, USG/CT Liver/Upper GI endoscopy/Fibro scan) are missing or incomplete.",
+    "Detailed Indoor clinical papers or treatment details are missing or incomplete at claim submission.",
+    "Detailed Discharge Summary is missing or does not include the date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Chronic hepatitis is not a single disease, but rather a clinical and pathological syndrome, which has several causes and is characterized by varying degrees of hepatocellular necrosis and inflammation.",
+      "Chronic hepatitis is defined as continuing disease without improvement for at least six months, though diagnosis and therapy may begin earlier, especially in autoimmune hepatitis.",
+      "Causes include HBV, HCV, HEV, autoimmune hepatitis, chronic alcoholic liver diseases, non-alcoholic fatty liver disease (NFLD), obesity, T2DM, and drug/toxin-induced hepatitis.",
+      "Symptoms are typically mild and non-specific (malaise, fatigue), often progressing to cirrhosis without overt signs. Jaundice, dark urine, itching, poor appetite, and weight loss are rare except in severe exacerbations or autoimmune hepatitis.",
+      "Diagnosis involves urinalysis (for bilirubin), liver function tests (bilirubin, ALP, PT/INR), CBC (leukopenia, thrombocytopenia, anemia), BUN, creatinine, serum ammonia levels, and viral markers."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Treatment of chronic hepatitis focuses on managing complications like ascites and hepatic encephalopathy. Ascites treatment involves restricting salt consumption and diuretics. Hepatic encephalopathy treatment involves drugs to eliminate ammonia. Nonalcoholic steatohepatitis management includes losing weight, healthy diet, and drugs for diabetes/lipid levels, while avoiding contributing drugs/toxins.",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

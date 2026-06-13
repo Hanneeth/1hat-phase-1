@@ -1,0 +1,152 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SP005A",
+  "procedure_code": "SP005A",
+  "condition": "Scalp avulsion reconstruction",
+  "procedure_name": "Scalp avulsion reconstruction",
+  "specialty": "Plastic & Reconstructive Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Scalp avulsion reconstruction_Medco.pdf",
+    "Scalp avulsion reconstruction_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB - Plastic Surgery/ Reconstructive Surgery"
+  ],
+  "clinical_indications": [
+    "Scalp avulsion resulting from hair entrapment in a rotating machine",
+    "Commonly occurring in Indian females working with industrial and agricultural machines.",
+    "Scalp usually separates where the scalp skin is thin and the cleavage line most commonly located in loose areolar and relatively less vascular tissue.",
+    "The periosteum is frequently found to be intact and rarely patient present with skull bone fracture.",
+    "Patients might present with partial or total loss of one or both ears along with the scalp."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_preauth",
+        "label": "Clinical notes including evaluation findings, indications for the procedure, and planned line of treatment and advice for admission"
+      },
+      {
+        "key": "supporting_reports_clinical_photograph_preauth",
+        "label": "Supporting reports and Clinical photograph"
+      },
+      {
+        "key": "mlc_fir_report_preauth",
+        "label": "MLC/FIR report (If traumatic)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_claim",
+        "label": "Detailed Indoor Case papers with treatment given"
+      },
+      {
+        "key": "intra_procedure_clinical_photograph_optional_claim",
+        "label": "Intra procedure clinical photograph (optional)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_affected_part_claim",
+        "label": "Post procedure clinical photograph of the affected part"
+      },
+      {
+        "key": "detailed_procedure_operative_notes_claim",
+        "label": "Detailed procedure/Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary_claim",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical notes including evaluation findings, indications for the procedure, and planned line of treatment and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Supporting reports and Clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the MLC/FIR report (In case of traumatic) submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed Indoor case papers with treatment given submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the Intra procedure clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the detailed procedure/Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge summary report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes/clinical photograph not indicative of need for scalp avulsion reconstruction",
+    "Clinical notes missing or incomplete for pre-authorization",
+    "Supporting reports or clinical photograph missing for pre-authorization",
+    "MLC/FIR report missing for traumatic cases",
+    "Detailed Indoor Case papers missing or incomplete for claim submission",
+    "Post-procedure clinical photograph of the affected part missing for claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Scalp avulsion is a rare but severe injury and usually happens as an industrial accident.",
+      "Scalp avulsion resulting from hair entrapment in a rotating machine",
+      "Commonly occurring in Indian females working with industrial and agricultural machines.",
+      "In Indian settings when these patients coming late to the hospitals, where replantation is not possible and scalp reconstruction remains the only available option.",
+      "Reconstruction of large scalp defects present with some challenging problems.",
+      "Scalp avulsion injury leave distinctly a large area demanding large flap for cover.",
+      "Blood vessels are stretched and damaged because of avulsion injury; a flap with long pedicle is needed if we are to avoid the use of vein graft."
+    ],
+    "surgical_options": [
+      "Primary closure",
+      "Vacuum-assisted closure",
+      "Replantation",
+      "Skin grafting",
+      "Local flaps",
+      "Serial excision",
+      "Scalp extender surgery",
+      "Hair transplants",
+      "Tissue expansion",
+      "Coverage of exposed bone",
+      "Closure of large scalp defects",
+      "For Forehead Defects <50 cm²: Primary closure or local flap",
+      "For Forehead Defects <50 cm² (with Heavy trauma, osteomyelitis or osteoradionecrosis, previous radiation or radiation ulcer, previous local flap failure, and radical postoperative radiation): Scapular free flap",
+      "For Forehead Defects >50 cm²: Scapular free flap",
+      "For Forehead Defects >50 cm² (with a Scalp defect): Scapular free flap or latissimus free flap with STSG",
+      "For Scalp Defects <200 cm²: Primary closure or local flap",
+      "For Scalp Defects <200 cm² (with Heavy trauma, osteomyelitis or osteoradionecrosis, previous radiation or radiation ulcer, previous local flap failure, and radical postoperative radiation): Rectus abdominis or latissimus dorsi free flap (muscles only) with STSG",
+      "For Scalp Defects 200-600 cm²: Latissimus dorsi muscle free flap with STSG",
+      "For Scalp Defects >600 cm²: Two latissimus dorsi muscle free flaps with STSG"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

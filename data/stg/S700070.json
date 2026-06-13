@@ -1,0 +1,99 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S700070",
+  "procedure_code": "S700070",
+  "condition": "Bladder injury",
+  "procedure_name": "Bladder injury repair (with or without urethral injury)",
+  "specialty": "Urology, Pediatric surgery",
+  "version": "1.1",
+  "source_files": [
+    "Bladder injury repair_Medco.pdf",
+    "Bladder injury repair_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MCh/DNB or equivalent in (Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Hematuria invariably accompanies bladder injury. Patients often present with the triad of gross hematuria, suprapubic pain or tenderness, and difficulty urinating or inability to void.",
+    "Gross hematuria does not always occur, however; in approximately 10% of cases, the hematuria is microscopic."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_management",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "usg_ct_mri_report",
+        "label": "USG / CT scan / MRI report"
+      },
+      {
+        "key": "mlc_fir_report_if_traumatic",
+        "label": "MLC/ FIR report (if traumatic)"
+      },
+      {
+        "key": "cystogram_report_confirming_bladder_injury",
+        "label": "Cystogram report confirming the bladder injury"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "intraoperative_clinical_photograph",
+        "label": "Intraoperative clinical photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the USG / CT scan report suggestive of bladder injury?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the detailed Operative notes / procedure notes submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "USG / CT scan report not suggestive of bladder injury.",
+    "Clinical notes including evaluation findings, indication for procedure, and planned line of management are missing or incomplete.",
+    "USG / CT scan / MRI report is missing or inconclusive.",
+    "Cystogram report confirming bladder injury is missing or inconclusive.",
+    "Intraoperative clinical photograph is missing.",
+    "Detailed Operative notes / procedure notes are missing or lack necessary detail."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Lower abdominal pain",
+      "Hematuria (Blood in urine)",
+      "Difficulty in urination",
+      "Bruising at the site of injury",
+      "In trauma situations, blood at the urethral meatus is an absolute indication for retrograde urethrography.",
+      "Incase patients with posterior urethral injury associated bladder injury it is critical that no attempt at blind passage of a urethral catheter is made."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

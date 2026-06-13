@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU080A",
+  "procedure_code": "SU080A",
+  "condition": "Benign Prostatic Hyperplasia",
+  "procedure_name": "TURP-Transurethral Resection of the Prostate, BPH (Monopolar)",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Prostatetctomy,TURP of the Prostate for BPH_Medco.pdf",
+    "Prostatetctomy,TURP of the Prostate for BPH_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MCh in Urology",
+    "DNB in Urology",
+    "Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Acute urinary retention, Failed voiding trials",
+    "Recurrent gross hematuria",
+    "Renal insufficiency secondary to obstruction",
+    "Obstructive nephropathy,",
+    "Bladder stone formation,",
+    "2+ episodes of urinary retention,",
+    "Prostate abscess, difficulty with clean intermittent catheterization and obstructive azoospermia."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "urinary_retention_episodes",
+      "operator": ">=",
+      "value": "2",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "usg_prostate_size_pvr_psa_uroflowmetry_report",
+        "label": "USG with prostate size and Post Void Volume +/- PSA, +/- uroflowmetry report confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG with prostate size and Post Void Volume +/- PSA, +/- uroflowmetry report confirming the diagnosis and need for the surgery submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Histopathology report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or USG with prostate size, Post Void Volume, PSA, or uroflowmetry report are not indicative of the proposed procedure.",
+    "Clinical notes indicate fewer than 2 episodes of urinary retention for TURP procedure without clear justification.",
+    "USG report confirming diagnosis and need for surgery not submitted at pre-authorization.",
+    "Histopathology report for the resected tissue is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Transurethral resection of the prostate or TURP prostate is resected from an endoscopic approach, TURP also be used to unroof prostatic abscesses."
+    ],
+    "surgical_options": [
+      "Conventional monopolar TURP (M-TURP) is in practice. With the use of a bipolar generator, both the active and return electrodes are contained within the instrument."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

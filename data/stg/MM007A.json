@@ -1,0 +1,116 @@
+{
+  "_comment": "The document specifies HBP 1.0 codes M800002, M800009 and HBP 2.0 code MM007A for the same procedure. MM007A is used as the primary procedure code.",
+  "stg_id": "MM007A",
+  "procedure_code": "MM007A",
+  "condition": "Mental and Behavioural disorders due to psychoactive substance use",
+  "procedure_name": "Mental and Behavioural disorders due to psychoactive substance use",
+  "specialty": "Mental Disorders",
+  "version": "1.1",
+  "source_files": [
+    "Mental and Behavioural disorders due to psychoactive substance use_Medco.pdf",
+    "Mental and Behavioural disorders due to psychoactive substance use_PPD.CPD.pdf"
+  ],
+  "alos": "6-8 weeks",
+  "min_doctor_qualification": [
+    "MD Psychiatry",
+    "DNB Psychiatry",
+    "PG Diploma Psychiatry"
+  ],
+  "clinical_indications": [
+    "Failure of outpatient treatment",
+    "H/o withdrawal seizures/ delirium tremens",
+    "Co-morbid significant medical illness and/or psychiatric illness",
+    "Poly-substance use"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailed_history_chronicity",
+        "label": "Clinical notes with detailed history and chronicity"
+      },
+      {
+        "key": "admission_document_signed_psychiatrist",
+        "label": "Admission document signed by empanelled psychiatrist"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_treatment_notes",
+        "label": "Detailed treatment notes"
+      },
+      {
+        "key": "complete_hemogram",
+        "label": "Complete hemogram"
+      },
+      {
+        "key": "liver_function_test",
+        "label": "Liver function test"
+      },
+      {
+        "key": "serum_electrolytes",
+        "label": "Serum electrolytes"
+      },
+      {
+        "key": "random_blood_glucose",
+        "label": "Random blood glucose"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain detailed history, mini mental status test, indication for treatment and need of hospitalization?",
+        "expected": true
+      },
+      {
+        "q": "Was the admission document signed by an empanelled psychiatrist?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed treatment notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the following investigations done: Complete hemogram, Liver function test, Serum electrolytes, Random blood glucose?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient admission document not signed by an empanelled psychiatrist",
+    "Clinical notes missing detailed history, mini mental status test, indication for treatment, or need of hospitalization",
+    "Detailed treatment notes not submitted at claim stage",
+    "Mandatory investigations (complete hemogram, liver function test, serum electrolytes, random blood glucose) not performed or reports not submitted",
+    "Discharge summary missing or does not mention date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": "F10",
+    "special_empanelment": "As per the provisions of the Mental Health Act 2017",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The provisions under Mental Healthcare Act 2017 be referred for details on Admission & Discharge criteria."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Co-morbid medical illness or psychiatric illness and their treatment; Treatment of additional psychiatric disorder or substance use disorder; Consult with other medical specialists (like gastroenterology or medicine for haematemesis).",
+    "referral_criteria": [
+      "REFER TO SECONDARY CARE IF: H/o withdrawal seizures/hallucinations; Additional psychiatric disorder; Recurrent failed attempts at treatment",
+      "REFER TO TERTIARY CARE IF: H/o delirium tremens; Major medical problems; Additional substance use"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

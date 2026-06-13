@@ -1,0 +1,179 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV015B",
+  "procedure_code": "SV015B",
+  "condition": "Thoracoabdominal Aneurysm",
+  "procedure_name": "Thoracoabdominal aneurysm Repair using bypass",
+  "specialty": "CTVS, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Thoracoabdominal Aneurysm_Medco.pdf",
+    "Thoracoabdominal Aneurysm_PPD.CPD.pdf"
+  ],
+  "alos": "12 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Cardiothoracic Surgery, Vascular Surgery)"
+  ],
+  "clinical_indications": [
+    "Thoracoabdominal aneurysms (TAAs) develop in patients with atherosclerotic disease, chronic aortic dissection, and connective tissue disorders (e.g., Marfan syndrome, Ehler-Danlos syndrome)",
+    "Risk of rupture increases rapidly when aneurysmal diameter reaches or exceeds 6 cm",
+    "Presentation includes abdominal or back pain"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "aneurysmal_diameter",
+      "operator": ">=",
+      "value": "6 cm",
+      "note": "risk of rupture increases rapidly"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication of graft requirement, and planned line of management"
+      },
+      {
+        "key": "chest_xray",
+        "label": "Chest Xray"
+      },
+      {
+        "key": "electrocardiogram",
+        "label": "Electrocardiogram (ECG)"
+      },
+      {
+        "key": "2d_echo",
+        "label": "2D ECHO"
+      },
+      {
+        "key": "transthoracic_echocardiogram",
+        "label": "Transthoracic Echocardiogram (TTE)"
+      },
+      {
+        "key": "ct_mri_angiography",
+        "label": "CT/MRI/ Angiography"
+      },
+      {
+        "key": "lung_function_test",
+        "label": "Lung function test"
+      },
+      {
+        "key": "serum_urea_creatinine",
+        "label": "Serum Urea and creatinine"
+      },
+      {
+        "key": "coronary_angiography_optional",
+        "label": "Coronary angiography (optional based on Etiology)"
+      },
+      {
+        "key": "aortography_optional",
+        "label": "Aortography (optional based on Etiology)"
+      },
+      {
+        "key": "duplex_scan_optional",
+        "label": "Duplex scan (optional based on Etiology)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "clinical_evaluation_brain_function",
+        "label": "Clinical Evaluation of the brain function during the procedure (Intra-operative monitoring documentation)"
+      },
+      {
+        "key": "intra_operative_monitoring_nirs_optional",
+        "label": "Intra-operative monitoring (optional) Near infrared spectroscopy (NIRS)"
+      },
+      {
+        "key": "intra_operative_monitoring_eeg_optional",
+        "label": "Electroencephalography (EEG) (optional)"
+      },
+      {
+        "key": "graft_details_barcode_invoice",
+        "label": "Graft details - barcode/invoice (if artificial graft used)"
+      },
+      {
+        "key": "post_op_chest_xray_2decho",
+        "label": "Post-op investigations Chest X-ray/2DECHO"
+      },
+      {
+        "key": "post_op_ct_scan_optional",
+        "label": "Post-op investigations CT scan (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes all vitals, symptoms, signs, physical examination, indication for procedure, and planned line of treatment.",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical condition and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Does the severity and imaging indicate surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was graft detail (barcode/invoice) available in case of artificial graft?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical condition, severity, or imaging was not indicative of surgery.",
+    "Diagnosis not confirmed by clinical condition and imaging.",
+    "Artificial graft details (barcode/invoice) missing or incomplete at claim stage.",
+    "CT/MRI/Angiography not provided or insufficient for diagnosis/surgical planning.",
+    "Documentation of clinical evaluation of brain function during the procedure is missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital with equipped facilities for bypass",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Thoracoabdominal aneurysms (TAAs) develop in patients with atherosclerotic disease, chronic aortic dissection, and connective tissue disorders (e.g., Marfan syndrome, Ehler-Danlos syndrome).",
+      "Pathologic processes include chronic inflammation, remodeling of extracellular matrix, and depletion of vascular smooth muscle cells.",
+      "Elastin depletion in the media layer of the aortic wall is a common finding."
+    ],
+    "surgical_options": [
+      "Open surgical repair",
+      "Hybrid repair",
+      "Totally endovascular repair"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Medical therapy includes the reduction of risk factors for aneurysmal expansion (e.g., smoking, hypercholesterolemia) and tight blood pressure control predicated on the use of beta-blockers.",
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

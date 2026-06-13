@@ -1,0 +1,109 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MC010A",
+  "procedure_code": "MC010A",
+  "condition": "Patent Ductus Arteriosus (PDA)",
+  "procedure_name": "PDA Stenting",
+  "specialty": "Cardiology",
+  "version": "1.1",
+  "source_files": [
+    "PDA Stenting_Medco.pdf",
+    "PDA Stenting_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "DM/DNB/ Equivalent (Cardiology)"
+  ],
+  "clinical_indications": [
+    "Infants with critical congenital heart defects that are dependent on the patency of the ductus arteriosus (PDA) for survival, categorized into three groups:",
+    "Duct dependent Pulmonary Circulation: Conditions where pulmonary circulation is dependent on patency of ductus arteriosus (e.g., pulmonary atresia, critical RVOT/pulmonary stenosis, severe Ebstein's anomaly).",
+    "Duct dependent systemic circulation: Conditions where systemic circulation is dependent on patency of ductus arteriosus (e.g., hypoplastic left heart syndrome, interrupted aortic arch, critical LVOT obstruction, critical coarctation).",
+    "Admixture Lesions: TGA with ductus as only site for mixing of circulation.",
+    "Progressive acidosis, weak/impalpable leg pulses, or oliguria due to renal impairment if ductus constricts in these conditions."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_or_angiography_report",
+        "label": "Echo report or Angiography Report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "per_post_procedure_stills_showing_stent",
+        "label": "Per-procedure or Post procedure stills of angio or ECHO showing stent in place, with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "invoice_of_stent_used",
+        "label": "Invoice of stent used"
+      },
+      {
+        "key": "barcode_of_stent_used",
+        "label": "Barcode of stent used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are clinical notes detailed with history, signs, symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo report or Angiography report suggestive of duct-dependent congenital heart disease?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the Per procedure/ Post procedure still of angio/ ECHO show stent placement in PDA?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo report or Angiography report not indicative of duct-dependent congenital heart disease.",
+    "Clinical notes lack detailed history, signs, symptoms, or indication for the procedure.",
+    "Procedure/Operative notes missing or not detailed.",
+    "Per-procedure or Post-procedure stills (angio/ECHO) not submitted or not clearly showing stent placement in PDA.",
+    "Detailed Discharge Summary missing or does not mention date of follow-up.",
+    "Invoice or barcode of the stent used is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath Lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "These conditions require ductal patency to maintain perfusion either for pulmonary circulation or for complete or partial (lower part of body) systemic circulation.",
+      "If ductus constricts, progressive acidosis develops, leg pulses become weak, impalpable and oliguria develop due to renal impairment and become progressively compromised. Therefore, stenting of ductus is done till definitive management.",
+      "Clinical Features: Duct-dependent Systemic circulation presents with hypoxia and respiratory distress, severe heart failure, absent femoral pulses, severe metabolic acidosis.",
+      "Clinical Features: Duct-dependent Pulmonary circulation presents with cyanosis, tachypnoea, normal pulses, improvement in systemic saturation on 100% oxygen inhalation.",
+      "Success of the procedure depends on careful case selection based on the angiographic morphology of the ductus."
+    ],
+    "surgical_options": null,
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG043A",
+  "procedure_code": "MG043A",
+  "condition": "Addison's disease",
+  "procedure_name": "Addison's disease",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Addison's Disease_Medco.pdf",
+    "Addison's Disease_PPD.CPD.pdf"
+  ],
+  "alos": "2-5 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Lack of energy or motivation (fatigue)",
+    "Abnormal drowsiness or tiredness (lethargy)",
+    "Muscle weakness",
+    "Low mood (mild depression) or irritability",
+    "Loss of appetite and unintentional weight loss",
+    "The need to urinate frequently",
+    "Increased thirst",
+    "Craving salty foods",
+    "Hyperpigmentation",
+    "Hypotension",
+    "Nausea (feeling sick)",
+    "Vomiting (being sick)",
+    "Diarrhea",
+    "Abdominal, joint or back pain",
+    "Muscle cramps",
+    "Chronic exhaustion, which may cause depression"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "sr_cortisol_level",
+      "operator": "<",
+      "value": "normal",
+      "note": "Sr. Cortisol level lower than normal"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "sr_electrolyte_sr_cortisol",
+        "label": "Sr. Electrolyte, Sr. Cortisol"
+      },
+      {
+        "key": "blood_sugar_test",
+        "label": "Blood Sugar test"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "acth_stimulation_test_ct_abdomen",
+        "label": "ACTH stimulation test, Contrast-Enhanced CT Abdomen report"
+      },
+      {
+        "key": "post_treatment_blood_sugar_test_report",
+        "label": "Post treatment Blood sugar test report"
+      },
+      {
+        "key": "post_treatment_sr_cortisol_level_report",
+        "label": "Post treatment Sr. Cortisol level report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Sr. Cortisol level lower than normal?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Sr. Cortisol level not documented as lower than normal in pre-authorization documents.",
+    "Sr. Electrolyte or Sr. Cortisol report missing from pre-authorization documents.",
+    "Clinical notes missing or incomplete, or lacking evaluation findings, indications, or planned treatment.",
+    "ACTH stimulation test report or Contrast-Enhanced CT Abdomen report missing from claim submission documents.",
+    "Post-treatment Sr. Cortisol level report missing from claim submission documents.",
+    "Detailed Indoor case papers missing or incomplete, or lacking vitals or treatment details at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD / DNB/Equivalent (in General medicine, Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Proceed with Addison's disease only if diagnosis made is backed by clinical manifestation."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

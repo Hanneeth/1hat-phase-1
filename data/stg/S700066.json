@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S700066",
+  "procedure_code": "S700066",
+  "condition": "Bladder tumor / cancer",
+  "procedure_name": "Post TURBT - Check Cystoscopy (Per sitting) with cold-cup biopsy",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Post TURBT - Check Cystoscopy (Per sitting) with cold-cup biopsy _Medco.pdf",
+    "Post TURBT - Check Cystoscopy (Per sitting) with cold-cup biopsy _PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Diagnosis, staging, and treatment of superficial bladder tumors (in the context of a check post-TURBT)",
+    "Obtaining detrusor muscles for cancer staging (post-TURBT, to ensure adequacy or for re-staging)",
+    "Removal of malignant or test-positive tissues identified during cystoscopy",
+    "Identification of Carcinoma-in-situ (CIS) in grossly normal-appearing areas of the bladder",
+    "Biopsy procedure to rule out bladder cancer (as recommended by CT scan, if applicable)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "ct_scan_biopsy_recommendation",
+        "label": "CT Scan recommending the Biopsy procedure to rule out bladder cancer (If applicable)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes_treatment",
+        "label": "Detailed clinical notes and treatment given"
+      },
+      {
+        "key": "intra_procedure_still_photograph",
+        "label": "Intra procedure still photograph with patient ID and Date (Optional)"
+      },
+      {
+        "key": "histopathology_biopsy_report",
+        "label": "Histopathology/ biopsy report confirming the diagnosis of bladder cancer submitted? (If applicable)"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the CT Scan report recommending the Biopsy procedure to rule out bladder cancer submitted? (If applicable)",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the Clinical notes and treatment given details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intra procedure still photograph with patient ID and Date submitted? (Optional)",
+        "expected": true
+      },
+      {
+        "q": "Was the Histopathology/ biopsy report confirming the diagnosis of bladder cancer submitted? (If applicable)",
+        "expected": true
+      },
+      {
+        "q": "Were the Detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and imaging not indicative of the procedure.",
+    "Detailed clinical notes with history, indications, symptoms, signs, examination findings, and advice for admission not submitted at pre-authorization.",
+    "CT Scan report recommending biopsy to rule out bladder cancer not submitted at pre-authorization (if applicable).",
+    "Histopathology/biopsy report confirming bladder cancer diagnosis not submitted at claim submission (if applicable)."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Transurethral resection of bladder tumor (TURBT) is performed endoscopically and is the first-line procedure for diagnosis, staging, and treatment of most forms of superficial bladder tumors.",
+      "Obtaining detrusor muscles during transurethral resection of bladder tumor (TURBT) is vital for cancer staging.",
+      "TURBT specimens are sent to the histopathologist piecemeal and staging and adequacy of tumor clearance is based upon this.",
+      "Complete eradication of tumor is the first step of transurethral resection of bladder tumor (TURBT).",
+      "Deep cold-cup biopsy at transurethral resection of bladder tumors (TURBT) is not a routine evidence-based practice, and its ability to obtain more accurate pathological staging is not conclusive.",
+      "Deep cold-cup biopsy improves availability and presence of detrusor muscle for pathological assessment.",
+      "Routine TURBT is conducted using a loop electrode with the TURIS resectoscope (Olympus) using bipolar energy.",
+      "TUR or targeted cold-cup biopsy are performed to remove tissues that were identified as malignant lesion/test-positive using the White Light and/or Fluorescence Light source.",
+      "The cold cup biopsy samples are systematically obtained from eight pre-specified areas: The bladder trigone, right wall, left wall, posterior wall, dome, anterior wall, bladder neck, and prostatic urethra of both sides.",
+      "The cold-cup biopsy usually involves removal of bladder specimens with a cold cup forceps, sampling mostly mucosa and lamina propria layers with the intention to identify Carcinoma-in-situ (CIS) in grossly normal-appearing areas.",
+      "This procedure is most often performed in the surgical suite and requires rigid endoscopic access and the use of biopsy forceps and Bugbee electrodes to obtain tissue for histologic examination.",
+      "The biopsy forceps allows simultaneous tissue sampling and electrocoagulation of the biopsy site, thus eliminating the need for exchange of instruments through the flexible cystoscope."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

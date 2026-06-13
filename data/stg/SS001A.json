@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS001A",
+  "procedure_code": "SS001A",
+  "condition": "Cleft Lip and Cleft Palate",
+  "procedure_name": "Cleft Lip and Cleft Palate Surgery (Per Stage)",
+  "specialty": "Pediatric Surgery/ Oral & Maxillofacial Surgery/ Plastic & Reconstructive Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Cleft Lip and Cleft Palate_Medco.pdf",
+    "Cleft Lip and Cleft Palate_PPD.CPD.pdf"
+  ],
+  "alos": "3 Days",
+  "min_doctor_qualification": [
+    "MS/ DNB/ equivalent (General surgery)",
+    "DNB/MCh/ equivalent (Plastic surgery)",
+    "DNB/MCh/ equivalent (Pediatric surgery)"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_photography",
+        "label": "Clinical Photography"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed operative notes"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph"
+      },
+      {
+        "key": "pre_anesthesia_check_up_report",
+        "label": "Pre-anesthesia check-up report"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Clinical Photograph?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Is pre-anesthesia check-up report available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Post treatment clinical Photograph?",
+        "expected": true
+      },
+      {
+        "q": "Has the patient presented with congenital cleft lip and cleft palate which may be complete or incomplete or submucous / with or without cleft lip?",
+        "expected": true
+      },
+      {
+        "q": "Is there evidence of cleft palate on clinical photograph?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes (detailed history, signs & symptoms, indication for procedure) missing or incomplete at pre-authorization.",
+    "Clinical photograph at pre-authorization is missing or inadequate to show cleft lip/palate.",
+    "Claim submission lacks detailed Indoor Case Papers (ICPs) with daily vitals and line of treatment.",
+    "Pre-anesthesia check-up report is missing at claim submission.",
+    "Detailed procedure/Operative Notes are missing or do not adequately describe surgical steps at claim submission.",
+    "Post-procedure clinical photograph is missing at claim submission or does not demonstrate the post-treatment outcome.",
+    "Documentation does not clearly state if the patient has congenital cleft lip and cleft palate (complete/incomplete/submucous / with or without cleft lip).",
+    "Clinical photograph does not provide sufficient evidence of cleft palate."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Difficulty in feeding: new born child is not able to breast feed properly due to child's inability to suck efficiently. Nipples for bottle feeding present the same problem.",
+      "Difficulty in swallowing, as liquids or foods come out the nose.",
+      "Nasal speaking voice and various speech problems.",
+      "May have malformed and missing teeth."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

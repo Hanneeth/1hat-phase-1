@@ -1,0 +1,182 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SP007C",
+  "procedure_code": "SP007C",
+  "condition": "Hemangioma",
+  "procedure_name": "Excision",
+  "specialty": "Plastic & Reconstructive Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Vascular Anomalies_Medco.pdf",
+    "Vascular Anomalies_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MS/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (in Plastic Surgery, Pediatric Surgery, Vascular Surgery)"
+  ],
+  "clinical_indications": [
+    "Ulcerative, bleeding, and significantly protruding hemangiomas requiring surgical excision.",
+    "Vascular malformations requiring debulking/surgical excision.",
+    "Surgical excision for ulcerative, bleeding, and significantly protruding hemangiomas with limited or ineffective response to other treatments.",
+    "Larger or resistant lesions where surgical excision is preferred."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical photograph"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count"
+      },
+      {
+        "key": "coagulation_profile",
+        "label": "Coagulation profile"
+      },
+      {
+        "key": "usg_affected_part",
+        "label": "USG affected part"
+      },
+      {
+        "key": "doppler_study",
+        "label": "Doppler study"
+      },
+      {
+        "key": "ecg",
+        "label": "Electrocardiogram (ECG) (optional)"
+      },
+      {
+        "key": "blood_sugar_propranolol_patients",
+        "label": "Blood sugar estimation for patients on Propranolol (optional)"
+      },
+      {
+        "key": "mri_affected_part",
+        "label": "MRI affected part (optional)"
+      },
+      {
+        "key": "ct_angiogram_affected_bone",
+        "label": "CT angiogram affected bone (optional)"
+      },
+      {
+        "key": "digital_subtraction_angiography_embolotherapy",
+        "label": "Digital Subtraction Angiography (for patients planned for embolotherapy) (optional)"
+      },
+      {
+        "key": "sclerosing_agent_requirement_indication",
+        "label": "Indication of sclerosing agent requirement (if applicable)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photographs",
+        "label": "Post-operative photographs (optional)"
+      },
+      {
+        "key": "sclerosing_agent_details",
+        "label": "Sclerosing agent details (if applicable)"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – history (especially history include onset, timing, and progression of lesion growth, ulceration, bleeding, vision disturbance, and impact on function), signs & symptoms, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation, physical examination ± imaging confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Documentation of indication for sclerosing therapy (if applicable)?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge provided?",
+        "expected": true
+      },
+      {
+        "q": "Invoice of sclerosing agent used (if applicable)?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, evaluation findings, or imaging not indicative of excision procedure.",
+    "Clinical notes do not adequately describe the ulcerative, bleeding, or significantly protruding hemangioma necessitating excision.",
+    "Planned line of treatment does not clearly specify surgical excision.",
+    "Detailed Procedure / Operative Notes are missing or do not detail the excision steps.",
+    "Histopathological examination (if performed) is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Vascular anomalies can be divided into vascular tumours (or hemangioma) and vascular malformations based on their clinical behaviour and cellular characteristics.",
+      "Hemangiomas are benign tumors often not present at birth, but make their appearance during the first month. Malformations are always present at birth (but may present clinically at birth, childhood or adulthood), their growth is commensurate with the patient's and they never involute.",
+      "The most common vascular tumors consist of infantile hemangioma (IH), congenital hemangioma (CH), pyogenic granuloma, and kaposiform hemangioendothelioma (KHE).",
+      "IHs are common childhood tumors that undergo a characteristic pattern of proliferative growth phase followed by slow involution. IHs can also be focal, multifocal, or segmental based on their anatomic distribution.",
+      "CHs are rare and fully present at birth; they are categorized as rapidly involuting CH (RICH), non-involuting CH (NICH), or partially involuting CH (PICH) depending on their clinical behavior.",
+      "The majority are small, nonproblematic, and can be managed conservatively, unsightly sequelae and proximity to critical structures require surgical treatment.",
+      "Some hemangiomas may be associated with underlying syndromes or visceral involvement.",
+      "Malformations are divided into slow-flow lesions (Capillary, Venous, Lymphatic) or fast-flow anomalies (Arteriovenous malformation, arterial aneurysm etc.).",
+      "Combined vascular anomalies, most commonly lymphatic venous malformation, can also occur.",
+      "Clinical presentation: Red or bluish discoloration of skin, Swelling over the body which is compressible, Symptomatic lesions may develop ulceration, bleeding, vision disturbances, functional limitations, or disfigurement, May present with thromboembolic or haemorrhagic complications following sclerotherapy, surgery, trauma, prolonged immobilization, hormonal changes including pregnancy and menstruation, and sepsis.",
+      "Diagnosis is based on clinical history, physical examination, and, when unclear, assisted with ultrasound, doppler study or MRI."
+    ],
+    "surgical_options": [
+      "Medical therapy (steroids/propranolol)",
+      "Direct intralesional steroid injections",
+      "Surgical resection",
+      "Laser therapy (pulse dye laser/ Nd:YAG)",
+      "Injection of sclerosing agent or sclerotherapy",
+      "Embolization",
+      "Debulking/surgical excision"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package. Care at Tertiary Hospital.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "_comment": "DERIVED FILE — auto-generated from data/hbp/<specialty>.json shards. Do not hand-edit. This is the ONLY file the package picker scans. One thin row per billable procedure_code. The picker filters by specialty, then semantic-matches diagnosis/procedure text against procedure_name + package_name + aliases, shortlists 1-5 codes, then opens the code-wise detail files for those codes only. `base_rate_inr` here is a representative figure for display/ranking only — authoritative pricing lives in the shard's `pricing` block.",
+  "scheme_id": "pmjay",
+  "version": "HBP 2022",
+  "procedures": [
+    {
+      "procedure_code": "SE020A",
+      "package_code": "SE020",
+      "specialty": "Ophthalmology",
+      "specialty_code": "SE",
+      "package_name": "Cataract surgery",
+      "procedure_name": "Phacoemulsification with foldable IOL",
+      "aliases": ["cataract", "phaco", "phacoemulsification", "IOL", "lens opacity", "senile cataract"],
+      "billing_unit": "one_time",
+      "reserved_public_only": false,
+      "base_rate_inr": 4500,
+      "stg_ref": "SE020A"
+    },
+    {
+      "procedure_code": "SE020B",
+      "package_code": "SE020",
+      "specialty": "Ophthalmology",
+      "specialty_code": "SE",
+      "package_name": "Cataract surgery",
+      "procedure_name": "Small incision cataract surgery (SICS) with non-foldable IOL",
+      "aliases": ["cataract", "SICS", "small incision", "non-foldable IOL", "manual SICS"],
+      "billing_unit": "one_time",
+      "reserved_public_only": false,
+      "base_rate_inr": 5000,
+      "stg_ref": "SE020B"
+    },
+    {
+      "procedure_code": "MG072A",
+      "package_code": "MG072",
+      "specialty": "General Medicine / Nephrology",
+      "specialty_code": "MG",
+      "package_name": "Haemodialysis / Peritoneal Dialysis",
+      "procedure_name": "Haemodialysis",
+      "aliases": ["dialysis", "haemodialysis", "hemodialysis", "HD", "renal replacement", "CKD dialysis", "ESRD"],
+      "billing_unit": "per_session",
+      "reserved_public_only": false,
+      "base_rate_inr": 1500,
+      "stg_ref": "MG072A"
+    },
+    {
+      "procedure_code": "MG045A",
+      "package_code": "MG045",
+      "specialty": "General Medicine / Nephrology",
+      "specialty_code": "MG",
+      "package_name": "AKI / Renal failure",
+      "procedure_name": "AKI / Renal failure (medical management)",
+      "aliases": ["acute kidney injury", "AKI", "renal failure", "ARF", "kidney failure medical"],
+      "billing_unit": "per_day",
+      "reserved_public_only": false,
+      "base_rate_inr": 1800,
+      "stg_ref": "MG045A"
+    },
+    {
+      "procedure_code": "MR001A",
+      "package_code": "MR001",
+      "specialty": "Radiation Oncology",
+      "specialty_code": "MR",
+      "package_name": "2D External Beam Radiotherapy",
+      "procedure_name": "2D External Beam Radiotherapy — Radical (full course)",
+      "aliases": ["radiotherapy", "radiation", "EBRT", "external beam", "telecobalt", "radical RT"],
+      "billing_unit": "one_time",
+      "reserved_public_only": false,
+      "base_rate_inr": 12100,
+      "stg_ref": "MR001A"
+    },
+    {
+      "procedure_code": "MR001D",
+      "package_code": "MR001",
+      "specialty": "Radiation Oncology",
+      "specialty_code": "MR",
+      "package_name": "2D External Beam Radiotherapy",
+      "procedure_name": "2D External Beam Radiotherapy — additional fractions",
+      "aliases": ["additional fraction", "extra fraction", "radiotherapy top-up"],
+      "billing_unit": "per_fraction",
+      "reserved_public_only": false,
+      "base_rate_inr": 500,
+      "stg_ref": "MR001D"
+    },
+    {
+      "procedure_code": "MC022A",
+      "package_code": "MC022",
+      "specialty": "Cardiology",
+      "specialty_code": "MC",
+      "package_name": "Follow-up — Cardiology",
+      "procedure_name": "Cardiology follow-up visit (ordinal, post-primary)",
+      "aliases": ["cardiology follow-up", "cardiac follow up", "post-procedure review"],
+      "billing_unit": "per_visit",
+      "reserved_public_only": false,
+      "base_rate_inr": 0,
+      "stg_ref": "MC022A"
+    }
+  ]
+}

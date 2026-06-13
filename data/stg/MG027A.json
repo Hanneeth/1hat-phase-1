@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG027A",
+  "procedure_code": "MG027A",
+  "condition": "Pneumothorax",
+  "procedure_name": "Pneumothorax",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Pneumothroax_Medco.pdf",
+    "Pneumothroax_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Trauma",
+    "As a Complications with medical or surgical interventions (Biopsy etc.)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "symptoms",
+      "operator": "present",
+      "value": "acute pleuritic chest pain with shortness of breath",
+      "note": "Required for TMS pop-up"
+    },
+    {
+      "field": "diagnosis",
+      "operator": "indicative",
+      "value": "Pneumothorax",
+      "note": "Clinical notes, signs and symptoms, X ray report must be indicative"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "chest_x_ray_ct_scan_report",
+        "label": "Chest X ray/CT scan report"
+      },
+      {
+        "key": "cbc_blood_sugar_reports",
+        "label": "CBC, Blood Sugar (Fasting, PP and Random) reports"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details."
+      },
+      {
+        "key": "post_treatment_chest_x_ray_report",
+        "label": "Post treatment Chest X ray report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Chest X ray/CT report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the CBC, Blood sugar (Fasting, PP and Random) reports submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the detailed Indoor case papers with all the vitals and the treatment given submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Post treatment Chest X ray report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient does not present with acute pleuritic chest pain with shortness of breath.",
+    "Clinical notes, signs and symptoms, or X-ray report are not indicative of Pneumothorax.",
+    "Clinical Notes (including evaluation findings, indications for the procedure, and planned line of treatment) not submitted or incomplete at pre-authorisation.",
+    "Chest X-ray/CT scan report not submitted at pre-authorisation.",
+    "Detailed Indoor case papers (ICPs) with treatment details not submitted or incomplete at claim submission.",
+    "Post-treatment Chest X-ray report not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/ DNB equivalent (in General Medicine, Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "A primary pneumothorax occurs without an apparent cause and in the absence of significant lung disease.",
+      "Secondary pneumothorax occurs in the presence of existing lung pathology."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG101A",
+  "procedure_code": "SG101A",
+  "condition": "Caecopexy",
+  "procedure_name": "Caecopexy",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Caecopexy_Medco.pdf",
+    "Caecopexy_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "Mch/DNB/Equivalent (Gastroenterology Surgery)"
+  ],
+  "clinical_indications": [
+    "Patients who are stable with no bowel compromise",
+    "Patients who are hemodynamically unstable without bowel compromise (caecopexy may be performed in conjunction with a caecostomy tube placement or caecopexy alone)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "complete_blood_count_differential",
+        "label": "Complete blood count with differential"
+      },
+      {
+        "key": "ct_scan_abdominopelvic",
+        "label": "CT scan – abdominopelvic"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative/procedure notes"
+      },
+      {
+        "key": "intra_procedure_photographs",
+        "label": "Intra-procedure photographs"
+      },
+      {
+        "key": "histopathological_examination_optional",
+        "label": "Histopathological Examination (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did CT abdominopelvic scan confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was CT scan report indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and imaging are not indicative of surgery for caecal volvulus.",
+    "CT abdominopelvic scan did not confirm the diagnosis of caecal volvulus.",
+    "Detailed clinical notes, including the indication for procedure, planned line of treatment, or advice for admission, are missing or incomplete.",
+    "Detailed operative/procedure notes are missing or do not adequately detail surgical steps.",
+    "Intra-procedure photographs are missing.",
+    "Discharge summary is missing or lacks follow-up advice at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Volvulus occurs when portions of the bowel get entangled upon a mesenteric axis, causing impairment of blood supply or obstruction of the bowel lumen, due to redundant and loose mesentery twisting.",
+      "Caecal volvulus involves the terminal ileum and right colon.",
+      "Associated risk factors include advanced age, chronic constipation, and diets rich in high fibre.",
+      "Caecal volvulus most commonly occurs in the second and third decade of life.",
+      "Three types of caecal volvulus exist: Type 1 (clockwise axial twisting, right lower quadrant), Type 2 (twisting of cecum and terminal ileum, displaced to ectopic location), and Type 3 (caecal bascule, upward folding without axial twisting).",
+      "Type 1 and Type 2 account for approximately 80% of all caecal volvuli.",
+      "Clinical presentation often involves intestinal obstruction, acute onset severe abdominal pain, constipation, nausea, vomiting, and a tympanitic, markedly distended abdomen.",
+      "Evaluation includes complete blood count (CBC) with differential, comprehensive metabolic panel, and lactic acid.",
+      "Radiographic imaging (abdominal plain films, CT scan) helps differentiate from other pathologies; CT scan is diagnostic for caecal volvulus in ~90% of patients.",
+      "A mesentery torsion around the ileocolic vessels (whirl sign) on CT scan is pathognomonic for caecal volvulus.",
+      "Approximately 10% of caecal volvulus cases are diagnosed intraoperatively."
+    ],
+    "surgical_options": [
+      "Non-operative reduction (barium enema or colonoscopy) may be offered for caecal volvulus.",
+      "Surgical treatment varies based on patient stability and intraoperative findings.",
+      "For patients stable with bowel compromise, a right hemicolectomy or ileocolic resection followed by an ileocolic anastomosis.",
+      "For patients unstable with bowel compromise, a right hemicolectomy or ileocolic resection with an ileostomy creation, with later reversal after stabilization."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "complications": [
+      "Wound infection",
+      "Sepsis",
+      "Anastomotic leak",
+      "Colocutaneous fistula",
+      "Pelvic or abdominal abscess"
+    ]
+  }
+}

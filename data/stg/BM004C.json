@@ -1,0 +1,149 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "BM004C",
+  "procedure_code": "BM004C",
+  "condition": "Electrical Contact Burns",
+  "procedure_name": "Electrical burns: High voltage - with part of limb / limb loss; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary;",
+  "specialty": "Burns Management",
+  "version": "1.1",
+  "source_files": [
+    "Electrical Contact Burns_Medco.pdf",
+    "Electrical Contact Burns_PPD.CPD.pdf"
+  ],
+  "alos": "42 days",
+  "min_doctor_qualification": [
+    "M.Ch / DNB/ equivalent (in Plastic Surgery)"
+  ],
+  "clinical_indications": [
+    "Numbness or tingling",
+    "Weakness",
+    "Visible burns on the skin",
+    "Headache",
+    "Feeling disoriented",
+    "Low blood pressure",
+    "Seizures",
+    "Heart arrhythmias"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_circumstances_low_voltage",
+        "label": "Clinical notes mentioning the circumstances that led to low voltage electrical contact burns"
+      },
+      {
+        "key": "mlc_copy_with_number",
+        "label": "MLC copy with number"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      },
+      {
+        "key": "burn_percentage_rule_of_9",
+        "label": "Document showing % of burn through rule of 9"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_treatment_clinical_photograph",
+        "label": "Post treatment clinical photograph"
+      },
+      {
+        "key": "blood_test_cbc_sr_creatinine_platelet",
+        "label": "Blood test (CBC, Sr. creatinine, Platelet etc.)"
+      },
+      {
+        "key": "x_ray",
+        "label": "X ray"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure / operative notes"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes clearly mentioning the areas affected by burn with % of TBSA burn as per rule of 9?",
+        "expected": true
+      },
+      {
+        "q": "Was the Copy of MLC with number submitted?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of the affected part",
+        "expected": true
+      },
+      {
+        "q": "Did the Clinical notes mentioning the circumstances that led to low voltage electrical contact burns/ High voltage contact burn?",
+        "expected": true
+      },
+      {
+        "q": "Has the patient presented with either all or some burns of deep partial thickness or full thickness?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is there documentary evidence of indication of surgery submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed operative notes available with indications for surgery and outcomes of the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is discharge summary available with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Is the post treatment photograph available?",
+        "expected": true
+      },
+      {
+        "q": "Were all the lab test reports submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes do not mention the specific voltage (low or high) of the electrical contact burn, or the circumstances leading to it.",
+    "Patient's burns are not documented as deep partial thickness or full thickness, or documentation is missing.",
+    "Clinical notes do not clearly state the areas affected by burn with % TBSA as per Rule of 9.",
+    "MLC copy with number is missing or the number is not provided.",
+    "Documentary evidence for indication of surgery is not submitted at the claim stage.",
+    "Detailed operative notes are missing or do not contain sufficient information regarding indications for surgery and outcomes.",
+    "Discharge summary is missing or does not include follow-up advice.",
+    "All required lab test reports (e.g., CBC, Sr. creatinine, Platelet etc.) are not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Numbness or tingling",
+      "Weakness",
+      "Visible burns on the skin",
+      "Headache",
+      "Feeling disoriented",
+      "Low blood pressure",
+      "Seizures",
+      "Heart arrhythmias"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

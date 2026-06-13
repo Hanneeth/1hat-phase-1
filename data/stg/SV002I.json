@@ -1,0 +1,113 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV002I",
+  "procedure_code": "SV002I",
+  "condition": "Atrioventricular (AV) Canal Repair",
+  "procedure_name": "Partial AV Canal repair",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "AV canal repair_Medco.pdf",
+    "AV canal repair_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Partial or intermediate AVSD, stable, and with normal pulmonary artery pressures, ideal for surgical repair at 2-3 years of age (Class I).",
+    "Associated moderate or severe AV valve regurgitation may necessitate early surgery in partial or intermediate forms.",
+    "Surgery for moderate-to-severe left AV valve regurgitation is recommended (Class I).",
+    "Surgery for left ventricular outflow tract obstruction is reasonable with a peak systolic gradient of ≥50 mmHg, or at a lesser gradient if heart failure symptoms are present, or if concomitant moderate-to-severe atrioventricular or aortic regurgitation is present (Class IIa)."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure present and complete?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of AV canal defect?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report is missing, incomplete, or not suggestive of AV Canal defect at pre-authorization.",
+    "Clinical notes (detailing history, signs & symptoms, or indication for procedure) are missing or incomplete at pre-authorization.",
+    "Procedure / Operative notes are missing or incomplete at claim submission.",
+    "Post procedure ECHO stills with report are missing or do not demonstrate repair of the defect at claim submission.",
+    "Detailed Discharge Summary is missing or does not include date of follow-up at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "AV septal defects (AVSDs) account for 4%-5% of all congenital heart defects with estimated incidence of 0.19/1000 live births. These lesions can be divided into partial and complete forms.",
+      "Clinical manifestations and outcome of patients with AVSD depend on the size of VSD, degree of ventricular hypoplasia (if any), AV valve regurgitation, presence or absence of left ventricular outflow tract obstruction, and presence or absence of associated syndromes.",
+      "Down syndrome is present in 50% of patients with AVSD. Conversely, about 40%-45% of children with Down syndrome have CHD, and AVSD accounts for almost half of these, mostly in its complete form.",
+      "Patients with Down syndrome tend to develop early and more severe form of pulmonary vascular disease with irreversible changes appearing as early as 6 months of age.",
+      "The presence of preoperative left AV valve regurgitation is associated with increased risk of surgery and need for reoperations on follow-up.",
+      "Complete form of AVSD, if left untreated, has a survival of only 54% at 6 months and 35% at 12 months. Partial form of AVSD has a better survival with 50% alive at 20 years of age.",
+      "All patients with AVSD must be advised to maintain good oro-dental hygiene.",
+      "Diagnostic workup includes Clinical assessment, X-ray chest (Cardiomegaly, increased pulmonary vascular markings, prominent pulmonary artery conus), ECG (PR interval prolongation, complete AV block, left-axis deviation, q waves in I/aVL, atrial/ventricular hypertrophy), Echocardiography (key tool for diagnosis, size assessment of septal defects/ventricles, pulmonary artery pressures, AV valve regurgitation, associated lesions), and Cardiac catheterization (for pulmonary hypertension and suspected pulmonary vascular disease).",
+      "Important determinants of long-term prognosis include left AV valve stenosis/regurgitation (5%-10%), subaortic stenosis (5%), atrial arrhythmias, late-onset CHB, and issues related to Down syndrome (if present).",
+      "Partial AVSD: Separate annuli of right and left AV valve, primum ASD, common cleft of anterior leaflet of AV valve with variable degrees of regurgitation.",
+      "Intermediate AVSD: Two separate AV valves with primum ASD and small restrictive inlet VSD.",
+      "Complete AVSD: Large septal defect with atrial component (ostium primum defect) and ventricular component (inlet septal defect), common AV valve ring and valve. Often associated with large left-to-right shunt, pulmonary artery hypertension, and congestive heart failure.",
+      "Unbalanced AVSD: One ventricular chamber is hypoplastic, usually associated with complex congenital defects such as heterotaxy syndrome (isomerism)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Those presenting beyond 6 months of life with significant pulmonary hypertension and suspected elevated PVR should be referred to a higher center for further evaluation to assess operability.",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Patients with contraindications for cardiopulmonary bypass (Class IIb)."
+    ]
+  }
+}

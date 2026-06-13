@@ -1,0 +1,152 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU001B",
+  "procedure_code": "SU001B",
+  "condition": "Adrenalectomy",
+  "procedure_name": "Laparoscopic Adrenalectomy",
+  "specialty": "Urology/ Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Adrenaletomy_Medco.pdf",
+    "Adrenaletomy_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "MS/DNB or Equivalent (in Urology/ Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Malignancy/Suspicion of Malignancy: Adrenal masses, Neuroblastoma (Paediatric population), Large myelolipoma, Adrenocortical carcinoma. In rare conditions- Cushing's syndrome, Conn syndrome etc.",
+    "Tumor diameter: >6 cm ACC with no local invasion",
+    "Tumor diameter: > 6cm pheochromocytoma",
+    "Tumor diameter: >12 cm adrenal mass",
+    "Recommended in hormonally active tumors (aldosteronoma, pheochromocytomas, and cortisol-producing adrenal tumors)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "tumor_diameter",
+      "operator": ">",
+      "value": "6 cm",
+      "note": "ACC with no local invasion"
+    },
+    {
+      "field": "tumor_diameter",
+      "operator": ">",
+      "value": "6 cm",
+      "note": "pheochromocytoma"
+    },
+    {
+      "field": "tumor_diameter",
+      "operator": ">",
+      "value": "12 cm",
+      "note": "adrenal mass"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "imaging_report",
+        "label": "CT/MRI/FNAC/Biopsy/ MIBG (iodine meta-iodobenzylguanidine) scan/DOTONOC report"
+      },
+      {
+        "key": "lab_reports",
+        "label": "Sr. Cortisol, Sr. electrolytes, 24 Hr. Urinary catecholamine level/Sr. Urinary metanephrine normetanephrine"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report (Optional)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, history signs & symptoms, physical examination including local examination, indication for procedure, advise for admission, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was CT/MRI +/- FNAC/Biopsy/ MIBG (iodine meta-iodobenzylguanidine) scan/ DOTONOC scan reports submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Serum Cortisol, Serum electrolytes, 24 Hr. Urinary catecholamine level/Serum Urinary metanephrine normetanephrine submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Histopathology report submitted? (Optional)",
+        "expected": true
+      },
+      {
+        "q": "Post Procedure clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and CT/MRI/MIBG scan/DOTONOC scan report not indicative of surgery.",
+    "Detailed Clinical notes missing essential information (vitals, history, indications, symptoms, signs, examination findings, advice for admission, or planned line of treatment).",
+    "Required imaging reports (CT/MRI/FNAC/Biopsy/MIBG/DOTONOC) not submitted at pre-authorization.",
+    "Required laboratory reports (Sr. Cortisol, Sr. electrolytes, 24 Hr. Urinary catecholamine level/Sr. Urinary metanephrine normetanephrine) not submitted at pre-authorization.",
+    "Detailed indoor case papers with daily vitals and treatment details not available at claim submission.",
+    "Detailed procedure / operative notes not available at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Laparoscopic facility for laparoscopic procedures.",
+    "min_doctor_qualification_desirable": "MCh/Equivalent (in Urology /Pediatric surgery)",
+    "clinical_key_pointers": [
+      "Though minimally invasive techniques for adrenalectomy have been adopted in many surgical centers, there is a need to be, remain or become confident with open adrenalectomy."
+    ],
+    "surgical_options": [
+      "Transabdominal approach (anterior or lateral)",
+      "Retro-peritoneal approach (lateral or posterior)",
+      "Conventional (Transperitoneal, Retroperitoneal, Lateral, Anterior, Posterior)",
+      "Single port (Lateral transperitoneal, Posterior transperitoneal)",
+      "Robotic (Transperitoneal, Retroperitoneal, Lateral, Posterior)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Suspected or large adrenocortical tumors (>6–8 cm) (these typically warrant open surgery)"
+    ]
+  }
+}

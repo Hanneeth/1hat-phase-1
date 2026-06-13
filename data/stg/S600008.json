@@ -1,0 +1,208 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S600008",
+  "procedure_code": "S600008",
+  "condition": "Management of Visceral injury and fracture long bone",
+  "procedure_name": "Surgical intervention for Visceral injury and fixation of fracture of single long bone",
+  "specialty": "Polytrauma, Orthopedics, Neurosurgery, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Management of Visceral injury and fracture long bone_Medco.pdf",
+    "Management of Visceral injury and fracture long bone_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MS/DNB/Equivalent (Orthopedic surgery)",
+    "MCh/DNB/Equivalent (Neurosurgery/Surgical Gastroenterology)"
+  ],
+  "clinical_indications": [
+    "Patients who are hemodynamically unstable or who have diffused abdominal tenderness should be taken emergently for laparotomy (level 1).",
+    "Patients who are hemodynamically stable with an unreliable clinical examination (i.e., brain injury, spinal cord injury, intoxication, or need for sedation or anaesthesia) should have further diagnostic investigation performed for intraperitoneal injury or undergo exploratory laparotomy (level 1).",
+    "Absolute indications for exploratory laparotomy in abdominal injuries: Peritonitis, Evisceration, Impaled object, Hemodynamic instability (documented or suspected intra-abdominal source), Associated bleeding from natural orifice.",
+    "Exploratory laparotomy is indicated for patients with a positive DPL (Level 1).",
+    "Exploratory laparotomy is indicated in hemodynamically unstable patients with a positive FAST (Level 2)."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "dpl_aspiration",
+      "operator": ">=",
+      "value": "10 mL gross blood",
+      "note": "on aspiration"
+    },
+    {
+      "field": "dpl_rbc",
+      "operator": ">",
+      "value": "100,000 /mm3",
+      "note": "red blood cells"
+    },
+    {
+      "field": "dpl_wbc",
+      "operator": ">",
+      "value": "500 /mm3",
+      "note": "white blood cells"
+    },
+    {
+      "field": "dpl_bacteria",
+      "operator": "present",
+      "value": "true",
+      "note": "bacteria in DPL"
+    },
+    {
+      "field": "dpl_bile",
+      "operator": "present",
+      "value": "true",
+      "note": "bile in DPL"
+    },
+    {
+      "field": "dpl_food_particles",
+      "operator": "present",
+      "value": "true",
+      "note": "food particles in DPL"
+    },
+    {
+      "field": "hemoglobin_drop",
+      "operator": ">",
+      "value": "3 g/dL",
+      "note": "significant drop in hemoglobin"
+    },
+    {
+      "field": "leukocytosis",
+      "operator": "present",
+      "value": "true",
+      "note": "significant leukocytosis"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_injury_need_surgery",
+        "label": "Clinical Notes detailing the injury and need for surgery"
+      },
+      {
+        "key": "medico_legal_report_fir_accident",
+        "label": "Medico legal case report/ FIR copy of accident"
+      },
+      {
+        "key": "xray_ct_report_fractured_limb",
+        "label": "X-ray/ CT report of fractured limb"
+      },
+      {
+        "key": "ct_abdomen_film_report",
+        "label": "CT abdomen film and report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "post_op_clinical_photograph",
+        "label": "Post op clinical photograph (Optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes details of accident, signs & symptoms, indication for surgery, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was the Medico legal report/ FIR copy of the accident submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did X-ray/ CT report suggest fracture of one long bone?",
+        "expected": true
+      },
+      {
+        "q": "Did X-ray/ CT report suggest fracture of more than one long bone?",
+        "expected": false
+      },
+      {
+        "q": "Was CT abdomen report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the post op clinical photograph show repair of visceral injury?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are missing, incomplete, or do not detail the injury, signs/symptoms, indication for surgery, or planned line of treatment.",
+    "Medico legal case report or FIR copy of the accident is missing.",
+    "CT abdomen report is missing or not suggestive of visceral injury.",
+    "X-ray/CT report is missing or suggests fracture of more than one long bone instead of a single long bone.",
+    "Detailed Procedure/Operative notes are missing or incomplete.",
+    "Detailed Discharge Summary is missing or does not mention the date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operational Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "PENETRATING ABDOMINAL TRAUMA: Initial management",
+      "Assess patient for airway, adequate gas exchange, circulatory or neurologic dysfunction.",
+      "Assess number and sites of penetrating wounds.",
+      "Determine mode of injury",
+      "Treatment options: Airway (Administer 100%O2, Suction, Chin lift, Oral airway, Nasopharyngeal airway, Endotracheal intubation, Surgical airway)",
+      "Treatment options: Breathing (Needle decompression of chest, Chest tube(s), Ventilator, Thoracotomy or sternotomy)",
+      "Treatment options: Circulatory (Insert two large-bore IVs, draw unstable patient laboratory studies, consider large-bore central line, 1 to 2 L of warmed Ringer's lactate/ normal saline IV, blood transfusion with profound or persistent hypotension. Target BP of 90 mm Hg should not be exceeded until definitive control of the injury in the operating room. IV above and below diaphragm in penetrating torso trauma. Avoid IV placement such that the wound is between the IV site and the heart. Search for sites of blood loss if signs of hypovolemia occur. IV antibiotics)",
+      "Treatment options: Place nasogastric or orogastric tube and urinary catheter at earliest convenience.",
+      "Hemodynamically unstable patient with a penetrating wound to the chest may require chest tube(s) and thoracotomy in emergency department or operating room (CTVS opinion).",
+      "Chest tube may be diagnostic or therapeutic.",
+      "If patient is hemodynamically unstable after chest tubes, perform thoracotomy in emergency department OR",
+      "Thoracic cavity assessment: Tracheal deviation, neck veins, bilateral equal breath sounds, chest x-ray, chest tubes (bilateral if precise mechanism of injury not known)",
+      "A routine laparotomy is not indicated in hemodynamically stable patients with abdominal SWs without signs of peritonitis or diffuse abdominal tenderness (away from the wounding site) in centers with surgical expertise (level 2).",
+      "Serial physical examination is reliable in detecting significant injuries after penetrating trauma to the abdomen, if performed by experienced clinicians and preferably by the same team (level 2).",
+      "In patients selected for initial NOM, abdominopelvic CT should be strongly considered as a diagnostic tool to facilitate initial management decisions (level 2).",
+      "BLUNT ABDOMINAL TRAUMA: Initial management",
+      "Hemodynamically unstable patient with a penetrating wound to the chest may require chest tube(s) and thoracotomy in emergency department or operating room.",
+      "Exploratory laparotomy is indicated for patients with a positive DPL (Level 1 recommendation).",
+      "Focused Assessment with Sonography for Trauma (FAST) may be considered as the initial diagnostic modality to exclude hemoperitoneum (Level 1 recommendation).",
+      "When Diagnostic Peritoneal Lavage is used, clinical decisions should be made on the basis of the presence of gross blood on initial aspiration (i.e., 10 mL) or microscopic analysis of lavage effluent (Level 2 recommendation).",
+      "Exploratory laparotomy is indicated in hemodynamically unstable patients with a positive FAST. In hemodynamically stable patients with a positive FAST, follow-up CT scan permits nonoperative management of select injuries (Level 2 recommendation).",
+      "Surveillance studies (i.e., DPL, CT scan, repeat FAST) should be considered in hemodynamically stable patients with indeterminate FAST results (Level 2 recommendation).",
+      "CT scanning is recommended for the evaluation of hemodynamically stable patients with equivocal findings on physical examination, associated neurologic injury, or multiple extra-abdominal injuries. Patients with a negative CT scan should be admitted for observation (Level 3 recommendation).",
+      "CT scanning is the diagnostic modality of choice for nonoperative management of solid visceral injuries (Level 3 recommendation).",
+      "In hemodynamically stable patients, DPL and CT scanning are complementary diagnostic modalities (Level 3 recommendation).",
+      "Objective diagnostic testing (i.e., FAST, DPL, CT scanning) is indicated for patients with abnormal mentation, equivocal findings on physical examination, multiple injuries, concomitant chest injury, or hematuria (Level 3 recommendation).",
+      "Patients with seat belt sign should be admitted for observation and serial physical examination. The presence of intraperitoneal fluid on FAST or CT scan in a patient with seat belt sign suggests the presence of an intra-abdominal injury that may require surgery (Level 3 recommendation).",
+      "CT scanning is indicated for the evaluation of suspected renal injuries. In patients at high risk for intra-abdominal injury, a follow-up CT scan should be considered after a negative FAST (Level 3 recommendation).",
+      "In hemodynamically stable patients with a positive DPL, follow-up CT scan should be considered, especially in the presence of pelvic fracture or suspected injuries to the genitourinary tract, diaphragm, or pancreas (Level 3 recommendation)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

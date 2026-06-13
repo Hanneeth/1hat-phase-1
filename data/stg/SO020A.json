@@ -1,0 +1,129 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO020A",
+  "procedure_code": "SO020A",
+  "condition": "Pyometra",
+  "procedure_name": "Pyometra Drainage",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Pyometra Drainage_Medco.pdf",
+    "Pyometra Drainage_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "The diagnosis itself is an indication for drainage",
+    "As a part of the treatment of underlying pathology (malignancy or infective focus as tuberculosis or pyogenic)",
+    "Signs of infection (e.g. fever)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed clinical notes with history, symptoms, signs, examination findings, indication for procedure, planned line of treatment, and advice for admission"
+      },
+      {
+        "key": "ultrasound_abdomen_pelvis",
+        "label": "Ultrasound Abdomen/pelvis"
+      },
+      {
+        "key": "urine_routine_microscopic_examination",
+        "label": "Urine routine, microscopic examination"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete Blood Count"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative/ procedure notes"
+      },
+      {
+        "key": "usg_abdomen_pelvis_optional",
+        "label": "USG abdomen/pelvis (optional)"
+      },
+      {
+        "key": "culture_sensitivity_report_drained_pus_fluid",
+        "label": "Culture & sensitivity report of the drained pus/ fluid"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are Detailed Clinical notes available – all vitals, detailed history, symptoms, signs, physical examination including detailed pelvic examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical examination and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery/procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "History, clinical findings, or investigations not suggestive of pyometra requiring drainage",
+    "Detailed clinical notes (including history, symptoms, signs, examination findings, indication for procedure, planned line of treatment, and advice for admission) are missing or incomplete at pre-authorization",
+    "Ultrasound Abdomen/pelvis report is missing or not indicative of pyometra at pre-authorization",
+    "Culture & sensitivity report of the drained pus/fluid is missing at claim submission",
+    "Histopathological examination report is missing at claim submission",
+    "Detailed operative/procedure notes are missing or incomplete at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia equipment and anesthetist",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pyometra is the accumulation of purulent material in the uterine cavity. Its reported incidence is 0.01-0.5% in gynecologic patients; however, as far as elderly patients are concerned, its incidence is 13.6%.",
+      "The most common cause of pyometra: Malignant diseases of genital tract and the consequences of their treatment (radiotherapy).",
+      "Other causes are benign tumors: Leiomyoma, Endometrial polyps, Senile cervicitis, Cervical occlusion after surgery, Puerperal infections, Congenital cervical anomalies"
+    ],
+    "surgical_options": [
+      "The treatment of pyometra consists of: Dilating the cervix",
+      "Perform Dilatation & Curettage 1 – 2 weeks later to rule out carcinoma either of the body of the uterus or cervical canal",
+      "If the uterus gets perforated, immediate hysterectomy is indicated"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

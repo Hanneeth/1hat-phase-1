@@ -1,0 +1,108 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV001D",
+  "procedure_code": "SV001D",
+  "condition": "Congenital Heart Disease requiring Pulmonary Artery Banding",
+  "procedure_name": "Pulmonary Artery Banding",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Pulmonary artery banding_Medco.pdf",
+    "Pulmonary artery banding_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/ equivalent(Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Pulmonary overcirculation and left-to-right shunting who require reduction of pulmonary blood flow (PBF) as a staged approach to more definitive repair",
+    "Transposition of the great arteries (TGA) requiring training of the left ventricle (LV) as a staged approach to the arterial switch procedure",
+    "Multiple muscular ventricular septal defects (VSDs) with a \"Swiss cheese\" septum that is technically difficult to repair in the neonate or requires a ventriculotomy",
+    "Single or multiple VSDs with coarctation of the aorta or interrupted aortic arch",
+    "Single ventricle defects (eg, tricuspid atresia) that are associated with increased PBF in the neonate",
+    "Unbalanced atrioventricular canal (AVC) defects in which the LV is hypoplastic but the potential exists for a 2-ventricle repair with further growth and development",
+    "Cardiac defects that require a homograft conduit (eg, dextrotransposition of the great arteries [DTGA] with subpulmonic stenosis requiring a Rastelli-type repair) for complete repair",
+    "D-TGA that requires preparation of LV for an arterial switch procedure following initial late presentation or diagnosis in patients older than 1 month",
+    "D-TGA that requires preparation of LV for an arterial switch procedure following a previous Mustard or Senning procedure with the development of right ventricular failure or levo-transposition of the great arteries (L-TGA) that requires preparation of the LV prior to the arterial switch procedure"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show pulmonary artery banding?",
+        "expected": true
+      },
+      {
+        "q": "Is Detailed Discharge Summary with follow-up advice available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not submitted or does not show congenital heart disease requiring pulmonary artery banding.",
+    "Clinical notes are insufficient, lacking detailed history, signs & symptoms, or specific indication for Pulmonary Artery Banding.",
+    "Procedure/Operative notes are missing or do not detail the surgical steps for Pulmonary Artery Banding.",
+    "Post-procedure ECHO stills and report not submitted, or do not clearly demonstrate pulmonary artery banding.",
+    "Detailed Discharge Summary is missing or does not include follow-up advice for the patient post-procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Congenital heart defects with left-to-right shunting and unrestricted pulmonary blood flow (PBF) due to a drop in pulmonary vascular resistance result in pulmonary overcirculation. In the acute setting, this leads to pulmonary edema and CHF in the neonate.",
+      "Within the first year of life, this unrestricted flow and pressure can lead to medial hypertrophy of the pulmonary arterioles and fixed pulmonary hypertension.",
+      "Pulmonary artery banding creates a narrowing, or stenosing, of the Main pulmonary artery (MPA) that decreases blood flow to the branch pulmonary arteries and reduces PBF and pulmonary artery pressure.",
+      "In patients with cardiac defects that produce left-to-right shunting, this restriction of PBF reduces the shunt volume and consequently improves both systemic pressure and cardiac output.",
+      "A reduction of PBF also decreases the total blood volume returning to the left ventricular (or the systemic ventricle) and often improves ventricular function."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MM003A",
+  "procedure_code": "MM003A",
+  "condition": "Schizophrenia, schizotypal and delusional disorders",
+  "procedure_name": "Schizophrenia, schizotypal and delusional disorders",
+  "specialty": "Mental Disorders",
+  "version": "1.1",
+  "source_files": [
+    "Schizophrenia, schizotypal and delusional disorders_Medco.pdf",
+    "Schizophrenia, schizotypal and delusional disorders_PPD.CPD.pdf"
+  ],
+  "alos": "6-8 weeks",
+  "min_doctor_qualification": [
+    "MD Psychiatry",
+    "DNB Psychiatry",
+    "PG Diploma Psychiatry",
+    "equivalent (in Psychiatry)"
+  ],
+  "clinical_indications": [
+    "Presence of delusions (suspiciousness and fear without obvious explanation)",
+    "Hallucinations (talking, smiling or laughing to self)",
+    "Disorganized behaviour & poor self-care",
+    "Social and occupational dysfunction"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_chronicity",
+        "label": "Clinical notes with detailed history and chronicity"
+      },
+      {
+        "key": "admission_document_signed_psychiatrist",
+        "label": "Admission document signed by empanelled psychiatrist"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_treatment_notes",
+        "label": "Detailed treatment notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are clinical notes with detailed history, mini mental status test, and indication for treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the admission document signed by an empanelled psychiatrist?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed treatment notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient admission document not signed by an empanelled psychiatrist",
+    "Clinical notes missing detailed history, mini mental status test, or indication for treatment",
+    "Detailed treatment notes not submitted",
+    "Detailed Discharge Summary missing or without follow-up date"
+  ],
+  "additional_information": {
+    "icd_10_code": "F20-29",
+    "special_empanelment": "As per the provisions of Mental Health Act 2017",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The provisions under Mental Healthcare Act 2017 be referred for details on Admission & Discharge criteria."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Diagnostic confusion / suspicion of organic condition",
+      "Substantial risk of harm to self or others and catatonic symptoms",
+      "Comorbid substance use, depression/anxiety, intellectual disability",
+      "Poor symptom-control or functioning despite regular treatment or poor treatment adherence",
+      "Significant adverse effects: weight-gain, metabolic adverse effects, tardive dyskinesia",
+      "Questions regarding marriage, pregnancy, sexual dysfunction",
+      "Diagnostic confusion (at Tertiary Care Centers): Inpatient observation for clarification of history, thorough neurological / mental status examination, diagnostic psychometry, brain CT Scan or MRI, neurology consultation and urine toxicology screen",
+      "Poor outcome (at Tertiary Care Centers): Following psychosocial interventions may be offered in isolation or in combination depending on the context in inpatient, outpatient or day-boarding settings"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

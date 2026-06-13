@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG033B",
+  "procedure_code": "MG033B",
+  "condition": "Pancreatitis",
+  "procedure_name": "Chronic pancreatitis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Pancreatitis_Medco.pdf",
+    "Pancreatitis_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [],
+  "clinical_indications_uncertain": "The document provides clinical indications and diagnostic criteria specifically for 'Acute pancreatitis'. No distinct clinical indications are explicitly stated for 'Chronic pancreatitis'.",
+  "clinical_thresholds": [],
+  "clinical_thresholds_uncertain": "The document provides diagnostic thresholds specifically for 'Acute pancreatitis'. No distinct thresholds are explicitly stated for 'Chronic pancreatitis'.",
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "serum_amylase_lipase_lft_cbc_reports",
+        "label": "Serum Amylase, Lipase, LFT, CBC reports"
+      },
+      {
+        "key": "usg_abdomen_ct_abdomen_contrast_report",
+        "label": "USG Abdomen report/CT Abdomen (Contrast)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_paper_icps",
+        "label": "Detailed Indoor case paper (ICPs)"
+      },
+      {
+        "key": "post_treatment_plain_xray_erect_abdomen_usg_ct_abdomen",
+        "label": "Post treatment Plain X ray erect Abdomen/USG/CT abdomen"
+      },
+      {
+        "key": "serum_amylase_lipase_lft_cbc",
+        "label": "Serum Amylase, Lipase, LFT, CBC reports"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are all the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the reports related Serum Amylase, Lipase, LFT, CBC test submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the USG Abdomen report/CT Abdomen (Contrast) report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the report suggest raised plasma concentration of amylase and lipase?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is the detailed Indoor case papers with daily vitals and line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the post treatment Plain X ray erect Abdomen/USG/CT abdomen report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the reports related Serum Amylase, Lipase, LFT, CBC test submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary submitted with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Plasma concentration of amylase and lipase not reported as raised.",
+    "Clinical Notes missing evaluation findings, indications, or planned line of treatment.",
+    "Serum Amylase, Lipase, LFT, or CBC reports not submitted for pre-authorization.",
+    "USG Abdomen report or CT Abdomen (Contrast) not submitted for pre-authorization.",
+    "Detailed Indoor case papers with daily vitals or line of treatment not submitted for claim.",
+    "Post-treatment Plain X-ray erect Abdomen, USG, or CT abdomen report not submitted for claim."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD / DNB (General Medicine / Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "The common causes include gall bladder stone disease, alcoholism and idiopathic where no obvious cause is discernible.",
+      "Further investigations need to be done to document severity of acute pancreatitis. These include CBC, BUN & serum creatinine, blood gas analysis, C-reactive protein. Chest X-ray PA and ultrasound to demonstrate pleural effusion."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

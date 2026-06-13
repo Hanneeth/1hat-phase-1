@@ -1,0 +1,148 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Aortic Root Replacement Surgery/ : Aortic root replacement surgery_Medco.pdf (clinical + mandatory docs) + Aortic root replacement surgery_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV014A",
+  "procedure_code": "SV014A",
+  "condition": "Aortic Root Replacement Surgery",
+  "procedure_name": "Bentall procedure",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Aortic root replacement surgery_Medco.pdf",
+    "Aortic root replacement surgery_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/Equivalent (in Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Aortic valve dysfunction with aortic root aneurysm or dissection",
+    "Aortic root aneurysm with risk/presence of rupture, significant aortic regurgitation, coronary compromise, airway compression, and endocarditis",
+    "Acute aortic dissection (Type A, involving the ascending aorta) with complications such as organ malperfusion syndromes, acute aortic regurgitation, pericardial tamponade, or stroke",
+    "Connective tissue disorders (Marfan's syndrome, Ehlers-Danlos syndrome, Loeys-Dietz syndrome) involving the elastic aortic root",
+    "Bicuspid aortic valve with thoracic aortic dilatation",
+    "Inflammatory etiology (Giant cell arteritis, Takayasu arteritis) causing aneurysmal dilatation/aortic dissection",
+    "Cystic medial necrosis of large arteries",
+    "Acquired calcific valvular disease leading to aortic stenosis or mixed stenosis/regurgitation"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication of implant/graft requirement, and planned line of management"
+      },
+      {
+        "key": "chest_xray",
+        "label": "Chest Xray"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      },
+      {
+        "key": "ct_mri_angiogram",
+        "label": "CT/MRI/ Angiogram"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "implant_graft_details_barcode_invoice",
+        "label": "Implant/Graft (if artificial graft is used) details - barcode/invoice"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain all vitals, detailed history, symptoms, signs, physical examination, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Echo/ Doppler report confirms the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Post procedure still of ECHO shows repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Implant or graft (if artificial graft used) invoice/barcode details available?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary includes follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report does not confirm the diagnosis",
+    "Clinical presentation and imaging are not indicative of surgery",
+    "Clinical notes are incomplete or missing essential details (vitals, history, symptoms, signs, physical examination, indication, planned treatment, or advice for admission)",
+    "Post-procedure ECHO stills are missing or do not show repair of the defect",
+    "Implant or graft invoice/barcode details are missing (if artificial graft used)",
+    "Discharge summary is missing or lacks follow-up advice"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The surgical management of aortic root pathology is complicated and challenging, based on the anatomy of the aortic root leading to complex problems needing surgical correction.",
+      "Aortic root pathology can be caused by connective tissue disorders (Marfan's, Ehlers-Danlos, Loeys-Dietz syndromes), bicuspid aortic valve (BAV), inflammatory etiology (Giant cell arteritis, Takayasu arteritis), cystic medial necrosis (CMN), or acquired conditions like calcific valvular disease.",
+      "Acute aortic dissection is a high-risk aortic catastrophe (occurs in 5-30/1,000,000 patients annually).",
+      "Aortic dissection is classified as acute (<14 days from symptom onset) or chronic (>14 days).",
+      "Stanford University classification for aortic dissection: Type A (involves ascending aorta) or Type B (does not involve ascending aorta).",
+      "Devastating complications of aortic dissection include organ malperfusion syndromes, acute aortic regurgitation, pericardial tamponade, and stroke.",
+      "Surgery is the gold standard for acute care of type A aortic dissection.",
+      "Most patients with aortic root pathology are asymptomatic, except those presenting with endocarditis or aortic root destruction secondary to acute type A aortic dissection (severe chest pains, asymmetric pulses, congestive heart failure).",
+      "The age range of presentation is broad (twenties to eighties), dependent on the underlying pathology.",
+      "Certain patients may exhibit characteristic stigmata of connective tissue diseases like Marfan syndrome.",
+      "Workup for aortic root replacement includes echocardiography to estimate ventricular function, aortic valve function, and possibility of valve preservation.",
+      "Coronary catheterization may be performed in selected high-risk patients.",
+      "Thin slice computed tomography (CT) or magnetic resonance imaging (MRI) provides necessary anatomical information about the aneurysm.",
+      "A careful oral examination or dental consultation is important to prevent postoperative prosthetic valve infection."
+    ],
+    "surgical_options": [
+      "Composite valve-graft",
+      "Separate valve-graft",
+      "Xenograft tissue",
+      "Homograft",
+      "Pulmonary autograft (Ross procedure)",
+      "Valve-sparing aortic root replacement"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

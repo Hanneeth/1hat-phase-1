@@ -1,0 +1,148 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG055A",
+  "procedure_code": "SG055A",
+  "condition": "Filarial hydrocele",
+  "procedure_name": "Excision Filarial Scrotum",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Filarial hydrocele_Medco.pdf",
+    "Filarial hydrocele_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (in Plastic Surgery)"
+  ],
+  "clinical_indications": [
+    "Asymptomatic or present with fever with scrotal swelling (painless)",
+    "Fever with night sweats (usually evening rise in temperature)",
+    "Episodic attacks of fever with lymphadenitis and lymphangitis (acute presentation)",
+    "Adult worms may be felt subcutaneously (acute presentation)",
+    "Lymphatic obstruction due to worm or fibrosis causing massive lower limb oedema (non-pitting type)",
+    "Skin thickening, hydrocele, chyluria, chylous ascites, chylothorax (chronic presentation)",
+    "Interference with work",
+    "Interference with sexual function",
+    "Interference with micturition",
+    "Negative impact on the patient's family",
+    "Dragging pain",
+    "Susceptibility to trauma because of the patient's work or mode of transport",
+    "Possible effect on the testis of long-standing hydroceles"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "usg_scrotum_diagnosis_confirmation",
+      "operator": "is",
+      "value": "confirmed",
+      "note": "Diagnosis confirmed by USG Abdomen and Scrotum report showing filarial dance sign (FDS)"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_photographs",
+        "label": "Clinical photographs"
+      },
+      {
+        "key": "peripheral_blood_examination",
+        "label": "Peripheral blood examination"
+      },
+      {
+        "key": "usg_abdomen_and_scrotum",
+        "label": "USG Abdomen and scrotum"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photographs",
+        "label": "Post-operative Photographs"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Indication for surgery mentioned?",
+        "expected": true
+      },
+      {
+        "q": "USG scrotum report confirmed the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes contain detailed history, signs & symptoms, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Peripheral smear examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "USG Abdomen and scrotum report confirms diagnosis with filarial dance sign (FDS)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs with daily vitals and line of treatment present?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure / operative notes available?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary includes follow-up advice?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative photographs submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Indication for surgery not mentioned in clinical notes.",
+    "USG Abdomen and scrotum report missing or not confirming diagnosis with FDS.",
+    "Peripheral blood examination report missing or not supporting filariasis diagnosis.",
+    "Clinical photographs missing or insufficient for pre-authorization.",
+    "Post-operative photographs not submitted for claim processing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Lymphatic filariasis, commonly known as elephantiasis, is a neglected tropical disease. Infection occurs when filarial parasites are transmitted to humans through mosquitoes. Infection is usually acquired in childhood causing hidden damage to the lymphatic system.",
+      "The painful and profoundly disfiguring visible manifestations of the disease, lymphoedema, elephantiasis and scrotal swelling occur later in life and can lead to permanent disability."
+    ],
+    "surgical_options": [
+      "Surgical removal of grossly elephantoid skin and scrotal tissues (with or without reconstruction) with preservation of penis and testicles."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "medical_management": "Triple drug therapy – Diethylcarbamazine (DEC), Albendazole and Ivermectin"
+  }
+}

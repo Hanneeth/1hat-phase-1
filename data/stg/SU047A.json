@@ -1,0 +1,102 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU047A",
+  "procedure_code": "SU047A",
+  "condition": "Bladder Diverticulectomy",
+  "procedure_name": "Bladder Diverticulectomy follow up",
+  "specialty": "Urology / Pediatric surgery",
+  "version": "1.1",
+  "source_files": [
+    "Bladder Diverticulectomy_Medco.pdf",
+    "Bladder Diverticulectomy_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Urinary tract infections",
+    "Bladder stones",
+    "Urine flowing backwards into the kidneys (\"reflux\")",
+    "Bladder tumors",
+    "Trouble peeing"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "discharge_summary_last_admission",
+        "label": "Discharge Summary from last admission for Bladder diverticulectomy surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "current_visit_clinical_notes",
+        "label": "Current visit clinical notes with evaluation findings"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the USG / CT /MRI abdomen/MCU report showing diverticula submitted?",
+        "expected": false
+      },
+      {
+        "q": "Was the Discharge Summary of last admission for Bladder diverticulectomy surgery submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the indoor case papers and treatment given detail submitted?",
+        "expected": false
+      },
+      {
+        "q": "Were the detailed procedure/operative notes submitted?",
+        "expected": false
+      },
+      {
+        "q": "Were Intraoperative clinical photograph submitted?",
+        "expected": false
+      },
+      {
+        "q": "Was the Post-operative USG abdomen report submitted?",
+        "expected": false
+      },
+      {
+        "q": "Were the current visit clinical notes with evaluation findings submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary with all the details submitted?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes of the current visit or earlier discharge summary for bladder diverticulectomy not available for the follow-up case.",
+    "Discharge Summary from last admission for Bladder diverticulectomy surgery missing at pre-authorization.",
+    "Current visit clinical notes with evaluation findings missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Bladder Diverticulectomy only if diagnosis made is backed by clinical manifestation:"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP036A",
+  "procedure_code": "MP036A",
+  "condition": "Inborn Errors of Metabolism",
+  "procedure_name": "Inborn errors of metabolism",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Inborn Errors of Metabolism_Medco.pdf",
+    "Inborn Errors of Metabolism_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MD Pediatric",
+    "DNB Pediatric",
+    "DCH Pediatric"
+  ],
+  "clinical_indications": [
+    "Severe errors in carbohydrate metabolism presenting early (neonatal period) catastrophically, indistinguishable from septic neonates, with hypoglycemia, brady/and tachydysrhythmias, hypothermia or hyperpyrexia, seizures, and poor tone.",
+    "Severe errors in excretion pathways presenting with intoxication, with lethargy and altered mental status, seizures, vomiting, and vital sign abnormalities.",
+    "Errors in pathways involved in accessing stored energy, appearing well for prolonged periods of time and can be asymptomatic as long as they have an ongoing intake of carbohydrates.",
+    "Neurologic abnormalities (most common presentation, 80% of individuals) including developmental delay, loss of milestones, poor tone, poor suck, and seizure.",
+    "Gastrointestinal symptoms (second most common presentation) including vomiting, hepatomegaly, food intolerance, diarrhea, food aversion, exercise intolerance, and dehydration.",
+    "More than half of children have both neurologic and gastrointestinal abnormalities."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_evaluation_findings_planned_management",
+        "label": "Clinical notes including history, evaluation findings, and planned line of management"
+      },
+      {
+        "key": "cerebrospinal_fluid_examination",
+        "label": "Cerebrospinal fluid (CSF) examination"
+      },
+      {
+        "key": "liver_function_test",
+        "label": "Liver Function Test"
+      },
+      {
+        "key": "kidney_function_test",
+        "label": "Kidney Function Test"
+      },
+      {
+        "key": "arterial_blood_gas",
+        "label": "Arterial blood gas"
+      },
+      {
+        "key": "ammonia",
+        "label": "Ammonia"
+      },
+      {
+        "key": "urine_for_ketones_and_reducing_substance",
+        "label": "Urine for ketones and reducing substance"
+      },
+      {
+        "key": "usg",
+        "label": "USG"
+      },
+      {
+        "key": "ct_mri",
+        "label": "CT/MRI"
+      },
+      {
+        "key": "x_ray",
+        "label": "X Ray"
+      },
+      {
+        "key": "tandem_mass_spectrometer_tms",
+        "label": "Tandem Mass Spectrometer (TMS)"
+      },
+      {
+        "key": "gas_chromatography_mass_spectrometry_gcms",
+        "label": "Gas chromatography-mass spectrometry (GCMS)"
+      },
+      {
+        "key": "gene_testing",
+        "label": "Gene testing"
+      },
+      {
+        "key": "exome_sequencing",
+        "label": "Exome sequencing"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_icps_treatment_details",
+        "label": "Detailed ICPs mentioning the treatment details"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history especially prenatal, perinatal, family history, signs & symptoms, vital monitoring, planned treatment line, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical presentation and evaluation findings suggestive of Inborn Errors of Metabolism?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation, evaluation findings, and imaging/investigations suggestive of diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was investigations/imaging supportive of diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or incomplete regarding history, evaluation findings, planned treatment line, or advice for admission.",
+    "Clinical presentation, evaluation findings, or imaging/investigations not suggestive of Inborn Errors of Metabolism.",
+    "Mandatory investigative documents (e.g., Cerebrospinal fluid examination, LFT, KFT, Ammonia, USG, CT/MRI, Gene testing) are missing or not submitted.",
+    "Detailed ICPs with daily vitals and treatment details not submitted or incomplete at claim stage.",
+    "Investigations/imaging submitted are not supportive of the diagnosis at claim stage.",
+    "Discharge summary missing or lacking follow-up advice at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital",
+    "min_doctor_qualification_desirable": "might require a multidisciplinary approach",
+    "clinical_key_pointers": [
+      "Inborn errors of metabolism are a heterogeneous group of disorders that may be inherited or may occur as the result of spontaneous mutation.",
+      "These diseases involve failure of the metabolic pathways involved in either the break-down or storage of carbohydrates, fatty acids, and proteins.",
+      "They can present at any age, and therefore, a working knowledge of these diseases, their presentations, and their evaluation is critical for the emergency provider.",
+      "The management of patients with inborn errors of metabolism is extremely complex and challenging.",
+      "In many cases, there is no specific treatment and symptoms are managed as they arise.",
+      "The disorders are best managed by an interprofessional team that includes pharmacists, nurses, therapists, dietitians, and social workers.",
+      "Supportive therapy",
+      "Enzyme replacement therapy",
+      "Substrate reduction"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

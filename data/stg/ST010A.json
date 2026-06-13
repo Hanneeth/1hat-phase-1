@@ -1,0 +1,146 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code. Note: There is a conflict regarding 'Intra operative photograph' / 'Intra-operative photo submitted?'. Medco.pdf (Page 5) lists it as 'Yes' for mandatory submission at claim, while PPD.CPD.pdf (Page 6) lists it as 'Optional'. Following the rule to prefer PPD.CPD.pdf for processing/checklist fields, it is marked as (optional) in mandatory_documents.claim and thus not included in the checklist or common_queries as a strict requirement.",
+  "stg_id": "ST010A",
+  "procedure_code": "ST010A",
+  "condition": "Plexus injury along with Vascular injury repair",
+  "procedure_name": "Plexus injury along with Vascular injury repair",
+  "specialty": "Polytrauma, Orthopedics, Neurosurgery, General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Plexus injury along with Vascular injury repair _Medco.pdf",
+    "Plexus injury along with Vascular injury repair _PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent in (General Surgery)",
+    "MS/DNB/Equivalent in (Orthopedic surgery)",
+    "MCh/DNB/Equivalent in (Neurosurgery / Reconstructive Surgery)"
+  ],
+  "clinical_indications": [
+    "Urgent surgical exploration of the plexus is indicated if a root avulsion or laceration injury to the plexus is suspected or in cases of open injury, retained foreign body, or vascular injury requiring vessel repair.",
+    "Sharp transections of the brachial plexus allow for primary repair of the transected ends to optimize nerve regeneration.",
+    "If USG Doppler study shows monophasic/absent flow with echogenic thrombus, then EMERGENCY SURGERY.",
+    "Hard signs of arterial injury (needs immediate surgery): External arterial bleeding, Rapidly expanding hematoma, Palpable thrill, audible bruit, Obvious signs of arterial occlusion (Pain, pallor, pulselessness, paraesthesia, paralysis, poikilothermic)."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "usg_doppler_flow",
+      "operator": "is",
+      "value": "monophasic/absent flow with echogenic thrombus",
+      "note": "Indicates need for emergency surgery."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_details",
+        "label": "Clinical notes – details of accident, signs & symptoms, indication for surgery, and planned line of treatment?"
+      },
+      {
+        "key": "medico_legal_report_fir_copy_of_accident_submitted",
+        "label": "Medico legal report/ FIR copy of the accident submitted, if the injury was due to accident?"
+      },
+      {
+        "key": "nerve_conduction_emg_mri_mra_doppler_reports_submitted_optional",
+        "label": "Nerve conductional velocity report/ EMG report/ MRI report/ MRA/Doppler study report (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_submitted",
+        "label": "Indoor case papers submitted?"
+      },
+      {
+        "key": "intra_operative_photo_submitted_optional",
+        "label": "Intra-operative photo submitted? (optional)"
+      },
+      {
+        "key": "detailed_procedure_operation_notes_submitted",
+        "label": "Detailed Procedure/ Operation notes submitted?"
+      },
+      {
+        "key": "detailed_discharge_summary_with_follow_up_submitted",
+        "label": "Detailed Discharge Summary mentioning date of follow-up submitted?"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the clinical notes suggestive of nerve plexus injury and peripheral vascular injury?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes – details of accident, signs & symptoms, indication for surgery, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Was the Medico legal report/ FIR copy of the accident submitted, if the injury was due to accident?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure/ Operation notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes are not suggestive of nerve plexus injury or peripheral vascular injury, or lack details of accident, signs & symptoms, indication for surgery, or planned line of treatment.",
+    "Medico legal report/ FIR copy of accident is not submitted despite the injury being due to an accident.",
+    "Detailed Procedure/ Operation notes are missing or incomplete at claim stage.",
+    "Detailed Discharge Summary is missing or does not mention the date of follow-up at claim stage.",
+    "USG Doppler study indicated monophasic/absent flow with echogenic thrombus, but emergency surgery was not performed or its omission was not justified.",
+    "Hard signs of arterial injury were present, but immediate surgery was not performed or its omission was not justified."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operational Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Nerve Plexus Injury (NPI)",
+      "Obtaining a thorough history in a patient with possible NPI is necessary to identify the injury mechanism, associated fractures, and other concomitant trauma to the neck, shoulder, and chest cage.",
+      "Careful inspection of the patient can provide important clues to the extent of the injury.",
+      "Considerable bruising and swelling may indicate deep trauma with possible vascular injury, which can be confirmed by evaluating the radial, ulnar, and brachial pulses.",
+      "A detailed neurologic examination is warranted to ascertain the location of the lesion.",
+      "Findings on initial examination are supplemented with advanced imaging and electrophysiological evaluation to determine the prognosis of neurologic recovery further.",
+      "The surgical timing for the treatment of nerve plexus injury remains a topic of controversy.",
+      "Prognosis for low-energy mechanism Brachial plexus injury is more favorable compared to root avulsions or preganglionic injuries and can be treated conservatively to allow for spontaneous recovery.",
+      "The patient should be closely followed with serial examinations, imaging studies, and electrophysiological testing. Delayed exploration may be indicated at three to six months after injury if the patient fails to regain neurologic function satisfactorily.",
+      "PROTOCOL FOR VASCULAR INJURIES: Reduce any fractures.",
+      "Check for pulse: if palpable with good volume then continue serial monitoring, antioedema measures, reassess after 1 hour; if absent then check for other clinical signs of vascular compromise; rule out compartment syndrome then perform early fasciotomy and again reassess.",
+      "If clinical signs of vascular compromise are still positive then advise for emergency USG Doppler study of the extremity.",
+      "USG Doppler study: If normal – triphasic and normal flow, anechoic lumen then proceed with serial monitoring; If equivocal – biphasic flow, reduced flow then advise for CT ANGIOGRAM in doubtful cases.",
+      "Suspect peripheral vascular injury in: Penetrating injury (Gunshot, stab injuries, Intravenous drug abuse), Blunt trauma (Joint displacement, bone fracture or contusion adjacent to a major artery), Invasive procedures (Arteriography, Cardiac catheterization, Balloon angiography).",
+      "Clinical manifestation: Soft signs of arterial injury (consider arteriogram, serial examination, Doppler) - History of arterial bleeding at the scene, Proximity of penetrating wound or blunt trauma to major artery, Diminished unilateral distal pulse, Small non-pulsatile hematoma, Neurological deficit, Abnormal ankle-brachial index (<09), Abnormal flow velocity waveform in Doppler USG.",
+      "Physical examination: Palpable distal pulse - suggests proximal arterial injury is limited; Serial examinations are mandatory.",
+      "Diagnostic studies (To prevent unnecessary operation, Document presence of surgical lesion, Localize surgical lesion to plan operative management): Lesions (Contusion, Partial transection, Transection, AV fistula), Duplex scan.",
+      "Duplex scan: Real time B mode (Brightness) image and pulsed wave Doppler image (flow determination). It should be performed by a competent vascular technologist or surgeon."
+    ],
+    "surgical_options": [
+      "Sharp transections of the brachial plexus allow for primary repair of the transected ends to optimize nerve regeneration.",
+      "Non-operative management (appropriate for non-occlusive wall/intimal lesions).",
+      "Fasciotomy for compartment pressures > 30-35 mm of Hg (if suspect compartment syndrome with prolonged period of shock or arterial occlusion, or combined arterial + venous injuries, or need for arterial/venous ligation, or massive crush/swelling).",
+      "Options for peripheral vascular repairs: Lateral arteriography/venography, Patch angioplasty, Resection with end to end anastomosis, Resection with interposition graft, Extra anastomotic bypass, Ligation.",
+      "Adjuvant therapies for limb salvage: Intraluminal shunts, Extra anastomotic bypass around associated soft tissue injury, Intraarterial vasodilators such as papaverine or tolazoline to reverse spasm, Intravenous low molecular weight dextran 500 ml every 12 hours, Thrombolytic therapy with intra-arterial tPA."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "Monitor distal arterial pulses with portable Doppler unit. Continue IV antibiotics for 24 hours if significant contamination of wound or if interposition graft has been inserted for arterial or venous repair. Consider use of antiplatelets for 3 months whenever vein graft or synthetic graft has been inserted.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Surgery should be avoided if the patient is not medically or psychologically cleared for surgery or if local wounds or infections obstruct the surgical approach."
+    ]
+  }
+}

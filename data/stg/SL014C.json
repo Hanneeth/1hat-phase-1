@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL014C",
+  "procedure_code": "SL014C",
+  "condition": "Ant. Ethmoidal / sphenopalatine artery ligation",
+  "procedure_name": "Sphenopalatine artery ligation - Open",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Ant. Ethmoidal ,sphenopalatine artery ligation_Medco.pdf",
+    "Ant. Ethmoidal , sphenopalatine artery ligation_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MS/ DNB/ or equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Epistaxis is not an uncommon presentation in emergency department.",
+    "Patients are initially managed with nose compression, cauterization of visible bleeding spots in the nasal septal mucosa, anterior and posterior nasal packing.",
+    "Surgical ligation of major supplying arteries is a relatively simple technique to address intractable epistaxis.",
+    "Anterior ethmoidal artery and sphenopalatine artery are the vessels which are clipped/ coagulated/ ligated for anterior and posterior epistaxis respectively.",
+    "For diffuse source of bleeding, both arteries are ligated which is an alternative to embolization procedures performed in centers with available expertise of interventional radiologist and adequate infrastructure.",
+    "Anterior ethmoidal artery and sphenopalatine artery can be accessed by both open as well as endoscopic access.",
+    "In open technique, anterior ethmoidal artery is approached by Lynch incision and sphenopalatine artery by trans-maxillary approach.",
+    "Endoscopic access is preferred to open approaches due to access through natural orifice, magnified view of the anatomic structures and avoidance scar as well as soft tissue dissection."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure."
+      },
+      {
+        "key": "cect_scan_nose_paranasal_sinuses",
+        "label": "Contrast Enhanced Computerized Tomography (CECT) Scan of nose and paranasal sinuses"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "intraoperative_photograph_optional",
+        "label": "Intraoperative photograph (Optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/Operative notes"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_affected_part_optional",
+        "label": "Post procedure clinical photograph of the affected part (Optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical notes, detailing signs, symptoms, examination findings, planned line of treatment & advise for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Contrast Enhanced Computerized Tomography (CECT) Scan of nose and paranasal sinuses submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Intraoperative photograph submitted? (Optional)",
+        "expected": true
+      },
+      {
+        "q": "Were the detailed procedure/Operative notes",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure clinical photograph of the affected part submitted? (Optional)",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge summary report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes, CECT nose and paranasal sinuses not indicative of procedure for medical necessity",
+    "Clinical notes not detailing signs, symptoms, examination findings, planned line of treatment or advise for admission",
+    "Contrast Enhanced Computerized Tomography (CECT) Scan of nose and paranasal sinuses not submitted",
+    "Detailed Indoor case papers (ICPs) not submitted",
+    "Detailed procedure/Operative notes not submitted",
+    "Detailed discharge summary not submitted"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

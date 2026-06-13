@@ -1,0 +1,163 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "IN004A",
+  "procedure_code": "IN004A",
+  "condition": "Carotico-cavernous Fistula",
+  "procedure_name": "Carotico-cavernous Fistula (CCF) embolization with coils.",
+  "specialty": "Interventional Neuroradiology",
+  "version": "1.1",
+  "source_files": [
+    "Carotico-cavernous Fistula_Medco.pdf",
+    "Carotico-cavernous Fistula_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "DM/Equivalent (in Interventional Neuroradiology)",
+    "MCh/DNB/Equivalent (in Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Patients who fail or are not suitable for conservative management and compression therapy",
+    "Goal of treatment is to obliterate the fistula"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_eval_findings_indication_implant_planned_treatment",
+        "label": "Clinical notes including evaluation findings, indication of implant requirement and planned line of treatment"
+      },
+      {
+        "key": "clinical_photograph_affected_eye",
+        "label": "Clinical photograph of the affected eye"
+      },
+      {
+        "key": "ct_mri_brain",
+        "label": "CT/MRI Brain"
+      },
+      {
+        "key": "digital_subtraction_angiography_dsa",
+        "label": "Digital subtraction angiography (DSA)"
+      },
+      {
+        "key": "complete_blood_count_creatinine_prothrombin_time_inr",
+        "label": "Complete Blood Count, Creatinine, Prothrombin Time/INR"
+      },
+      {
+        "key": "orbital_ultrasound",
+        "label": "Orbital ultrasound (Optional)"
+      },
+      {
+        "key": "ivus_intravascular_ultrasound_monitoring",
+        "label": "IVUS (intravascular ultrasound) monitoring (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs_optional",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "check_angiogram_report",
+        "label": "Check Angiogram report"
+      },
+      {
+        "key": "ct_brain_optional_depending_on_clinical_condition",
+        "label": "CT Brain (optional depending on clinical condition)"
+      },
+      {
+        "key": "implant_details_invoice_barcode",
+        "label": "Implant details (invoice/barcode)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings, indication for procedure, planned line of treatment, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did Digital subtraction angiography (DSA) report confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation, history and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Invoice / barcode of used coil / catheter / other accessories submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was post-operative imaging report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Digital Subtraction Angiography (DSA) report does not confirm the diagnosis.",
+    "Clinical notes do not provide detailed history, evaluation findings, or planned line of treatment.",
+    "Clinical photograph of the affected eye is missing or not appropriately labeled.",
+    "Invoice or barcode for the used coils, catheter, or other accessories is missing at claim submission.",
+    "Clinical presentation, history, or imaging is not indicative of surgery without sufficient justification."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Carotid cavernous fistula (CCF) is an abnormal communication between the internal carotid artery (ICA) and the cavernous sinus.",
+      "Types: Direct CCF are often secondary to trauma (head trauma), presentation: acute/rapid. Indirect CCF are often post-menopausal, presentation: insidious.",
+      "Classification (Barrow classification characterizes fistulas according to angiographic features): Type A (direct connection between intracavernous ICA and cavernous sinus), Type B (dural shunt between intracavernous branches of ICA and cavernous sinus), Type C (dural shunts between meningeal branches of external carotid artery and cavernous sinus), Type D (type B + type C).",
+      "Clinical features: Pulsatile proptosis, Cranial nerve palsy (III, IV, Vc, VI), Loss of consciousness, Progressive visual loss, Headache, Vomiting, Neurodeficit, Chemosis, Raised intracranial pressure, Tinnitus, Subarachnoid hemorrhage, intracerebral hemorrhage, otorrhagia, epistaxis.",
+      "Management: The treatment of CCF takes into consideration the speed of flow through the fistula, its arterial supply, and the routes of venous drainage. General physical condition of the patient prior to formulating a therapeutic plan is equally important.",
+      "Endovascular Therapy for Direct Fistula: Trans-arterial therapy (Detachable balloon occlusion, Trans-arterial coil and material embolization, Covered stent graft placement, Parent artery occlusion), Transvenous treatment (Transvenous detachable coil embolization, Liquid embolizing agents).",
+      "Endovascular Therapy for Indirect Fistula: Trans-arterial therapy (Trans-arterial coil and material embolization), Transvenous treatment (Transvenous detachable coil embolization, Liquid embolizing agents)."
+    ],
+    "surgical_options": [
+      "Detachable balloon occlusion (trans-arterial)",
+      "Trans-arterial coil and material embolization",
+      "Covered stent graft placement",
+      "Parent artery occlusion",
+      "Transvenous detachable coil embolization",
+      "Liquid embolizing agents"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

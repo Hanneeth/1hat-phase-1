@@ -1,0 +1,214 @@
+{
+  "stg_id": "SO010A",
+  "procedure_code": "SO010A",
+  "condition": "Hysterectomy (except Caesarean & Radical Hysterectomy)",
+  "procedure_name": "Abdominal Hysterectomy",
+  "specialty": "Obstetrics & Gynaecology",
+  "version": "1.1",
+  "source_files": [
+    "Hysterectomy(except Caesarean & Radical Hysterectomy)_Medco.pdf",
+    "Hysterectomy(except Caesarean & Radical Hysterectomy)_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MS Obstetrics & Gynaecology",
+    "DNB Obstetrics & Gynaecology",
+    "PG Diploma Obstetrics & Gynaecology",
+    "equivalent (OBS&GYN)"
+  ],
+  "clinical_indications": [
+    "Symptomatic uterine fibroids not responding to medical management",
+    "Asymptomatic uterine fibroids greater than or equal to 14 weeks uterine size",
+    "Uterine fibroid causing hydroureteronephrosis",
+    "Rapidly enlarging uterine fibroids",
+    "Submucus myoma greater than 4cm",
+    "Heavy menstrual bleeding with documented failure of medical treatment",
+    "Endometriosis with documented failure of medical treatment",
+    "Endometriosis causing hydroureteronephrosis",
+    "Recurrent endometriosis after failed medical/conservative surgical management",
+    "Endometrial hyperplasia without atypia with documented failure of medical treatment",
+    "Endometrial hyperplasia with atypia",
+    "CIN II with poor compliance or CIN III",
+    "Adnexal masses (need for hysterectomy to be individualised and justified)",
+    "Recurrent post-menopausal bleeding (even in the absence of malignancy)",
+    "Recurrent Uterine Fibroids",
+    "Adenomyosis",
+    "Heavy periods",
+    "Vaginal prolapse",
+    "Pelvic inflammatory disease"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "fibroid_size",
+      "operator": ">",
+      "value": "5 cm",
+      "note": "Pop-up criteria for eligibility"
+    },
+    {
+      "field": "non_gravid_uterus_size",
+      "operator": ">",
+      "value": "12 weeks",
+      "note": "Pop-up criteria for eligibility, must be symptomatic"
+    },
+    {
+      "field": "simple_ovarian_cyst_size",
+      "operator": ">",
+      "value": "5 cm",
+      "note": "Pop-up criteria for eligibility"
+    },
+    {
+      "field": "medical_management_duration",
+      "operator": ">=",
+      "value": "4-6 months",
+      "note": "Documented failed prior medical management (including 2-3 months hormone therapy) or documented reasons for not being indicated"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes clearly indicating reason(s) for hysterectomy including medical management tried for at least 4-6 months (2-3 months hormone therapy) which failed, or reasons if not indicated"
+      },
+      {
+        "key": "lab_investigations",
+        "label": "Lab investigations (Complete Blood count, Blood sugar- fasting and post prandial, Renal function test, liver function test, Urine- routine and microscopy)"
+      },
+      {
+        "key": "electrocardiogram",
+        "label": "Electrocardiogram"
+      },
+      {
+        "key": "x_ray_chest",
+        "label": "X-ray chest"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "Ultrasonography (USG) Abdomen + Pelvis"
+      },
+      {
+        "key": "pap_smear_cervical_biopsy",
+        "label": "Pap smear & Cervical biopsy (Essential only in hysterectomy cases for benign cervical conditions)"
+      },
+      {
+        "key": "counselling_informed_consent",
+        "label": "Documentary evidence of appropriate counselling and informed consent form signed by the patient (especially when performing removal of ovaries)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed Operative notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary with follow up advise"
+      },
+      {
+        "key": "pictures_of_specimen_removed_gross",
+        "label": "Picture(s) of gross specimen of the Uterus removed"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report of the specimen removed"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is patient female?",
+        "expected": true
+      },
+      {
+        "q": "Is patient's age > 40 years? (If <40, are reasons for hysterectomy documented?)",
+        "expected": true
+      },
+      {
+        "q": "Is patient's parity >= 2?",
+        "expected": true
+      },
+      {
+        "q": "Is youngest child's age > 5 years?",
+        "expected": true
+      },
+      {
+        "q": "Has hysterectomy been done in the past?",
+        "expected": false
+      },
+      {
+        "q": "Are fibroids > 5 cm?",
+        "expected": true
+      },
+      {
+        "q": "Is non-gravid uterus size > 12 weeks and symptomatic?",
+        "expected": true
+      },
+      {
+        "q": "Are simple ovarian cysts > 5 cm?",
+        "expected": true
+      },
+      {
+        "q": "Is there documentary evidence of medical management tried for 4-6 months (2-3 months hormone therapy) which failed?",
+        "expected": true
+      },
+      {
+        "q": "If medical management not indicated, are reasons available?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the patient have h/o Recurrent Uterine Fibroids/ Endometriosis/ Adenomyosis/ Heavy periods/ Vaginal prolapse/ Pelvic inflammatory disease?",
+        "expected": true
+      },
+      {
+        "q": "Is there a documentary evidence of medical management tried for at least 4-6 months, of which at least 2-3 months (i.e. 2-3 cycles) should be of hormone therapy and it failed, or it was not indicated, with reason available? If failed, are the documents proving duration of treatment and failure available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes lack clear reasons for hysterectomy or documentation of failed medical management.",
+    "Mandatory lab investigations (CBC, Blood Sugar, RFT, LFT, Urine R/M) missing or incomplete at pre-authorization.",
+    "Electrocardiogram or X-ray chest reports missing at pre-authorization.",
+    "USG Abdomen + Pelvis report missing at pre-authorization.",
+    "Pap smear or cervical biopsy missing for hysterectomy cases due to benign cervical conditions.",
+    "Counselling documentation and informed consent form missing.",
+    "Patient's age less than 40 years without documented reasons for hysterectomy or a second opinion from a qualified gynaecologist (if applicable).",
+    "Medical management duration or type (hormone therapy) not matching guidelines, or reasons for not indicating medical management are missing/insufficient.",
+    "Indoor case papers missing at claim submission.",
+    "Detailed operative notes missing or incomplete at claim submission.",
+    "Discharge summary with follow-up advice missing or incomplete at claim submission.",
+    "Picture(s) of specimen removed (Gross) missing or incomplete at claim submission.",
+    "Histopathology report of specimen removed missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The diagnosis made should be backed by clinical or Ultrasonography (USG) findings and all required reports shall be uploaded.",
+      "In women aged less than 40 and/or low parity (</ = 2) it is mandatory to have a second opinion from a qualified gynaecologist. (However, in case of a public hospital, if only 1 (one) gynaecologist is posted then this condition may be relaxed for that public hospital only).",
+      "Documentary evidence of medical management tried for at least 4-6 months, of which at least 2-3 months (i.e. 2-3 cycles) should be of hormone therapy and it failed, or it was not indicated, with reasons. If failed, documents proving duration of treatment and failure."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": "Counselling and Informed Consent: Need for hysterectomy, alternative treatment options, risks and benefits, potential complications of the procedure, removal/conservation of ovaries & tubes, route of hysterectomy, possible need for post operative Hormone therapy in selected cases.",
+    "post_op_care": "Discharge summary with operative details, review for histopathology report, report if there is fever, bleeding or any other symptoms, avoid lifting heavy weight for 8 weeks, abstinence for eight weeks, adequate iron and calcium & Vitamin D3 supplements, evaluate need for hormones in very selected patients.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "White discharge per vaginum",
+      "Cervicitis",
+      "Non specific abdominal or pelvic pain",
+      "Minor degree of utero vaginal prolapse",
+      "Fibroids which are small (less than 5 cm) or Asymptomatic (less than 12 weeks size uterus)",
+      "Simple ovarian cyst less than or equal to 5 cm"
+    ]
+  }
+}

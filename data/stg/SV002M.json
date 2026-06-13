@@ -1,0 +1,160 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV002M",
+  "procedure_code": "SV002M",
+  "condition": "Sinus of Valsalva aneurysm",
+  "procedure_name": "Sinus of Valsalva aneurysm repair with aortic valve procedure",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Sinus of valsalva aneurysm repair_Medco.pdf",
+    "Sinus of valsalva aneurysm repair_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Ruptured sinus of Valsalva aneurysm",
+    "Significant aortic regurgitation",
+    "Ventricular septal defect",
+    "Non-ruptured sinus of Valsalva aneurysm associated with significant symptoms",
+    "Rapidly enlarging non-ruptured sinus of Valsalva aneurysm",
+    "Aneurysm greater than 5.5 cm (per 2010 American Guidelines for Thoracic Aortic Disease)",
+    "Aneurysm greater than 5 cm in those with bicuspid valves",
+    "Aneurysm greater than 4.5 cm in the setting of connective tissue disease",
+    "Growth rate of more than 0.5 cm/year"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "aneurysm_size",
+      "operator": ">",
+      "value": "5.5 cm",
+      "note": "General guideline"
+    },
+    {
+      "field": "aneurysm_size",
+      "operator": ">",
+      "value": "5 cm",
+      "note": "With bicuspid valves"
+    },
+    {
+      "field": "aneurysm_size",
+      "operator": ">",
+      "value": "4.5 cm",
+      "note": "In setting of connective tissue disease"
+    },
+    {
+      "field": "growth_rate",
+      "operator": ">",
+      "value": "0.5 cm/year",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      },
+      {
+        "key": "cardiac_ct_mri_report",
+        "label": "Cardiac CT/MRI report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "barcode_of_implant_if_used",
+        "label": "Barcode of implant, if used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the patient echo/ Doppler report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the cardiac Echo/ CT/MRI report suggestive of sinus of valve aneurysm?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the indoor case papers submitted",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the barcode of implant if used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Cardiac Echo/ CT/ MRI report not suggestive of sinus of Valsalva aneurysm.",
+    "Clinical notes incomplete or not submitted, missing detailed history, signs & symptoms, or indication for procedure.",
+    "Post-procedure ECHO stills do not show repair of the defect.",
+    "Barcode of implant not submitted when an implant was used.",
+    "Detailed Discharge Summary not submitted or does not mention date of follow-up.",
+    "Indoor case papers or detailed Procedure / Operative notes not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Sinus of Valsalva aneurysm (SOVA) is an abnormal dilatation of the aortic root located between the aortic valve annulus and the sinotubular junction. This occurs as a consequence of the weakness of the elastic lamina at the junction of the aortic media and the annulus fibrosis.",
+      "Patients that have sinus of Valsalva aneurysm may be completely asymptomatic or may present with non-specific complaints, such as dyspnea, chest pain, palpitations, or loss of consciousness.",
+      "Physical exam findings are usually not present unless an aneurysm is large or has ruptured. The classic finding on auscultation is a continuous sawing-like murmur that occurs over both heart sounds. There may be a diastolic descrescendo murmur suggestive of aortic regurgitation. In advanced stages, congestive heart failure may occur.",
+      "Cardiac computed tomography (ECG gated) is the investigation of choice for quantifying size and morphology of sinus of Valsalva aneurysm. Echocardiography, usually transesophageal, will demonstrate flow and hemodynamic significance if rupture is suspected. Cardiac MRI will demonstrate anatomy as well as hemodynamic significance as well."
+    ],
+    "surgical_options": [
+      "Ruptured sinus of Valsalva aneurysm traditionally requires surgical management, although endovascular closure devices have been used with good outcomes.",
+      "Surgical management of sinus of Valsalva aneurysm is preferred when there is significant aortic regurgitation or a ventricular septal defect."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "_comment": "One shard per specialty. Canonical code-wise detail. procedure_code is the primary key + FK into data/stg/<code>.json. New shape: typed `pricing` (deterministic money) + freeform `additional_information` (LLM-readable long-tail) + `source_refs` (provenance for every fact).",
+  "scheme_id": "pmjay",
+  "specialty": "Ophthalmology",
+  "specialty_code": "SE",
+  "packages": [
+    {
+      "package_code": "SE020",
+      "package_name": "Cataract surgery",
+      "procedures": [
+        {
+          "procedure_code": "SE020A",
+          "procedure_name": "Phacoemulsification with foldable IOL",
+          "billing_unit": "one_time",
+          "quantity_basis": "eye",
+          "rates_inr": { "tier3": 4500, "tier2": 5300, "tier1": 5700 },
+          "implant": { "name": "Foldable IOL", "cost_inr": 3000 },
+          "pricing": {
+            "base_rate_inr": 4500,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "reserved_public_only": false,
+          "stg_ref": "SE020A",
+          "additional_information": {
+            "alos": "day_care",
+            "min_doctor_qualification": "MD/MS/DNB/PG Diploma Ophthalmology",
+            "laterality_note": "Priced per eye; bilateral same-sitting follows the multi-procedure 100/50 rule"
+          },
+          "source_refs": {
+            "rates_inr / implant": "HBP-2022.pdf master row SE020A (Tier3/Tier2/Tier1 + Foldable IOL +3000)",
+            "billing_unit / quantity_basis": "HBP-2022.pdf (cataract is a one-time per-eye surgical package)",
+            "additional_information.alos / min_doctor_qualification": "Cataract Surgery (Phaco and SICS)_Medco.pdf — Intro + ALOS section"
+          }
+        }
+      ]
+    }
+  ]
+}

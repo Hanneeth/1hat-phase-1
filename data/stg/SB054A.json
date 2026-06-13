@@ -1,0 +1,149 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB054A",
+  "procedure_code": "SB054A",
+  "condition": "Spinal deformity",
+  "procedure_name": "Spine deformity correction",
+  "specialty": "Orthopedics - Spine deformity correction",
+  "version": "1.1",
+  "source_files": [
+    "Spine Decompression and Fusion, Spine deformity correction_Medco.pdf",
+    "Spine Decompression and Fusion, Spine deformity correction_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [],
+  "clinical_indications": [
+    "Spinal deformity is defined as abnormality in alignment, formation, or curvature of one or more segments of the spine.",
+    "The most common deformity in the pediatric population is adolescent idiopathic scoliosis, whereas in adults many patients present with de novo deformity secondary to degenerative disease.",
+    "Surgical correction is considered for severe curvature that interferes with organ function, causes pain, and/or shows signs of continuing to progress.",
+    "In general, surgical treatment is considered for kyphosis of 70 degrees or more and scoliosis of 45 degrees or more.",
+    "Curves of these magnitudes may interfere with organ function and tend to continue to progress if not surgically corrected.",
+    "Goals of surgical correction and stabilization are to: reduce pain, restore ability to stand erect, relieve pressure on organs such as the heart and lungs, prevent deformity from progressing."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "kyphosis",
+      "operator": ">=",
+      "value": "70 degrees",
+      "note": null
+    },
+    {
+      "field": "scoliosis",
+      "operator": ">=",
+      "value": "45 degrees",
+      "note": null
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_confirming_diagnosis",
+        "label": "Clinical notes confirming the diagnosis"
+      },
+      {
+        "key": "x_ray_affected_part_with_id_date_side",
+        "label": "X-ray with film with patient ID, date and side (Left/ Right) of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "post_operative_x_ray_showing_implant_with_id_date_side",
+        "label": "Post-operative X-ray with film showing implant labelled with patient ID, date and side (Left/ Right) of affected part"
+      },
+      {
+        "key": "invoice_and_barcode_of_implant",
+        "label": "Invoice and barcode of implant"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "MRI with patient ID, date and side (Left/Right) of affected part submitted?",
+        "expected": false
+      },
+      {
+        "q": "X-ray with film with patient ID, date and side (Left/Right) of affected part submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Post op X-ray with film showing implant labelled with patient ID, date and side (Left/ Right) of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post op X-ray with film showing fusion with patient ID, date and side (Left/Right) of affected part submitted?",
+        "expected": false
+      },
+      {
+        "q": "Invoice and barcode of implant submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and imaging not indicative of surgery",
+    "Clinical notes confirming diagnosis missing or incomplete",
+    "X-ray of affected part with patient ID, date, or side labelling missing/unreadable",
+    "Detailed Indoor Case Papers (ICPs) missing or incomplete",
+    "Detailed Procedure / Operation Notes missing",
+    "Post-operative X-ray showing implant with patient ID, date, or side labelling missing/unreadable",
+    "Invoice and barcode of implant missing",
+    "Detailed discharge summary missing or incomplete",
+    "Kyphosis threshold of < 70 degrees or scoliosis threshold of < 45 degrees without justification for surgery"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics; MCh/DNB/Equivalent in Neurosurgery",
+    "clinical_key_pointers": [
+      "Spinal deformity is defined as abnormality in alignment, formation, or curvature of one or more segments of the spine.",
+      "The most common deformity in the pediatric population is adolescent idiopathic scoliosis, whereas in adults many patients present with de novo deformity secondary to degenerative disease.",
+      "Surgical correction is considered for severe curvature that interferes with organ function, causes pain, and/or shows signs of continuing to progress.",
+      "In general, surgical treatment is considered for kyphosis of 70 degrees or more and scoliosis of 45 degrees or more. Curves of these magnitudes may interfere with organ function and tend to continue to progress if not surgically corrected.",
+      "The goals of surgical correction and stabilization are to: reduce pain, restore ability to stand erect, relieve pressure on organs such as the heart and lungs, prevent deformity from progressing."
+    ],
+    "surgical_options": [
+      "Osteotomy",
+      "Pedicle subtraction osteotomy",
+      "Vertebral column resection",
+      "Spinopelvic fixation"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

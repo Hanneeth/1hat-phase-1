@@ -1,0 +1,98 @@
+{
+  "_comment": "This STG covers both HBP 1.0 (S700088) and HBP 2.0 (SU053A) codes for the same procedure. Two JSON objects are generated accordingly, with 'S700088' as the primary key for this object.",
+  "stg_id": "S700088",
+  "procedure_code": "S700088",
+  "condition": "Bladder Neck Contracture",
+  "procedure_name": "Y V Plasty of Bladder Neck / Bladder Neck Reconstruction",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Y V Plasty of Bladder Neck or Bladder Neck Reconstruction_Medco.pdf",
+    "Y V Plasty of Bladder Neck or Bladder Neck Reconstruction_PPD.CPD.pdf"
+  ],
+  "alos": "4 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Incomplete emptying",
+    "Recurrent urinary tract infections, and dysuria.",
+    "Bladder neck contracture in adults following transurethral resection of the prostate, radical prostatectomy or pelvic irradiation."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "urethroscopy_cystoscopy_usg_reports",
+        "label": "Urethroscopy /Cystoscopy/USG reports confirming the need for surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Urethroscopy Cystoscopy + USG report confirming the bladder neck contracture submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes, Urethroscopy/Cystoscopy/USG report not indicative of the procedure or do not confirm bladder neck contracture.",
+    "Detailed Indoor case papers with daily vitals and treatment details missing or incomplete at claim submission.",
+    "Detailed Procedure / Operative Notes missing or insufficient at claim submission.",
+    "Discharge summary missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Bladder neck contracture BNC: Narrowing of the bladder neck when the prostate is still in situ.",
+      "Procedure: In the Y-V plasty technique: The scar is incised longitudinally (the base of the Y) into healthy urethra. (proximal aspect of the membranous urinary sphincter.) The Bladder Neck Contracture is incised anteriorly, and a V-shaped bladder flap is advanced into the BNC in a Y-V plasty fashion, a V-shaped flap of anterior bladder (the top of the Y) is advanced into the apex of the urethrotomy in a tension-free manner with long-lasting absorbable barbed suture. This creates a sufficient lumen while only requiring reconstruction of the anterior aspect of the bladder neck and urethra."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

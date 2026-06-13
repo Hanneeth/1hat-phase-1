@@ -1,0 +1,164 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO019A",
+  "procedure_code": "SO019A",
+  "condition": "Pregnancy complications requiring Dilation and Evacuation",
+  "procedure_name": "Dilation and Evacuation",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Dilation and Evacuation_Medco.pdf",
+    "Dilation and Evacuation_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Spontaneous/Incomplete abortion",
+    "Hydatidiform mole/Molar pregnancy",
+    "Missed abortion"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "uterine_size",
+      "operator": "below",
+      "value": "20 weeks",
+      "note": "for evacuation procedures"
+    },
+    {
+      "field": "gestational_age",
+      "operator": "between",
+      "value": "6-20 weeks",
+      "note": "for procedure performance"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed clinical notes with history, symptoms, signs, examination findings, indications, and advice for admission"
+      },
+      {
+        "key": "ultrasound_report",
+        "label": "Ultrasound report for establishing the diagnosis"
+      },
+      {
+        "key": "rh_abo_blood_grouping",
+        "label": "Rh ABO blood grouping"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count"
+      },
+      {
+        "key": "serum_hcg_levels",
+        "label": "Serum HCG levels (for hydatidiform mole)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Detailed operative/ procedure notes"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports (if required)"
+      },
+      {
+        "key": "histopathology_report_evacuated_tissue_optional",
+        "label": "Histopathology report of evacuated tissue (optional), however in certain conditions such as molar pregnancy or any other suspected pathology it should be available"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes (vitals, history, symptoms, signs, physical examination including local examination, indication, planned line of treatment, and advice for admission) complete?",
+        "expected": true
+      },
+      {
+        "q": "Does the Ultrasonography report provide gestation period / condition of the pregnancy and confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Did the ultrasound findings justify the need for the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is the uterine size below 20 weeks?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was histopathological examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Serum HCG levels report in hydatidiform mole etiology submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Ultrasound findings do not justify the need for the procedure",
+    "Uterine size is 20 weeks or above",
+    "Detailed clinical notes (history, symptoms, signs, examination, indication, planned treatment, advice for admission) are incomplete or missing",
+    "Ultrasound report does not provide gestation period or confirm diagnosis",
+    "Serum HCG levels report not submitted for hydatidiform mole etiology",
+    "Histopathology report for evacuated tissue not provided for molar pregnancy or other suspected pathology",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details are missing",
+    "Detailed operative/procedure notes are missing",
+    "Discharge summary with follow-up advice is missing"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Dilation and evacuation (D&E) is the most common procedure used to perform first trimester and second trimester abortions.",
+      "It is performed between 6-20 weeks of development.",
+      "Dilatation and Evacuation procedure is performed as a two-step process: Cervical dilatation and Evacuation of uterine content.",
+      "Uterine evacuation between 16 – 20 weeks uterine size should be done preferably under Ultrasound guidance."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "common_clinical_presentation": [
+      "Amenorrhea",
+      "Bleeding/Spotting per vaginum",
+      "Passage of vesicles in case of hydatidiform mole",
+      "Pain abdomen"
+    ]
+  }
+}

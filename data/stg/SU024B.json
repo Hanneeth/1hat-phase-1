@@ -1,0 +1,111 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU024B",
+  "procedure_code": "SU024B",
+  "condition": "Pyelolithotomy",
+  "procedure_name": "Pyelolithotomy (Lap.)",
+  "specialty": "Urology, Pediatric surgery",
+  "version": "1.1",
+  "source_files": [
+    "Pyelolithotomy_Medco.pdf",
+    "Pyelolithotomy_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MCh",
+    "DNB or Equivalent (in Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Considered in patients who have renal anomalies.",
+    "Considered in patients who are poorly compliant.",
+    "Considered in patients who have a large single renal-pelvic calculus."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indication_planned_management",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "ncct_ct_ivp",
+        "label": "Noncontrast head CT (NCCT) + CT Intravenous Pyelogram (CT IVP) confirming the indication"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_procedure_xray_usg_kub",
+        "label": "Post procedure X Ray / USG KUB showing the stone removed"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was Clinical notes including evaluation findings, indication for procedure, and planned line of management submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Noncontrast head CT (NCCT) + CT Intravenous Pyelogram (CT IVP) report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Clinical notes and Noncontrast head CT (NCCT) + CT Intravenous Pyelogram (CT IVP) report indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure/Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post procedure X Ray / USG KUB showing the stone removed along with Patient ID and Date submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or the Noncontrast head CT (NCCT) / CT Intravenous Pyelogram (CT IVP) report are not indicative of Pyelolithotomy procedure.",
+    "Mandatory clinical notes including evaluation findings, indication for procedure, and planned line of management are missing or incomplete.",
+    "The Noncontrast head CT (NCCT) + CT Intravenous Pyelogram (CT IVP) report is missing or does not confirm the indication for Pyelolithotomy.",
+    "Post-procedure X-Ray or USG KUB not showing the stone removed, or missing Patient ID and Date."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Availability of Laparoscopic surgery facility",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pyelolithotomy: is procedure of choice for stones within the renal pelvis, including stones that demonstrated minimal invasion into calyces and infundibulum.",
+      "After introducing extracorporeal shockwave lithotripsy (ESWL) and percutaneous nephropyelolithotomy (PCN), pyelolithotomy has become an uncommon surgery in most countries"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "An imaging study to confirm the removal of all stone particle, prescribing drugs and Patient education.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

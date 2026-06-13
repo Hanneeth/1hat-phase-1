@@ -1,0 +1,94 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M100011",
+  "procedure_code": "M100011",
+  "condition": "Acute febrile illness",
+  "procedure_name": "Acute febrile illness",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Acute febrile illness, Enteric fever, Pyrexia of unknown origin _Medco.pdf",
+    "Acute febrile illness, Enteric fever, Pyrexia of unknown origin _PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MD / DNB/Equivalent in General medicine",
+    "Pediatric Medicine"
+  ],
+  "clinical_indications": [
+    "Fever >= 38.3'C or >=101'F for more than 2 days",
+    "Headache, Dizziness, Pain in Muscles and Joints, Weakness",
+    "Patients presenting with AFI should be assessed for organ dysfunction at presentation and symptoms/signs suggestive of sepsis should be ruled out as management protocol will differ."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "fever",
+      "operator": ">=",
+      "value": "38.3°C",
+      "note": "or >=101°F for more than 2 days"
+    },
+    {
+      "field": "fever_duration",
+      "operator": ">",
+      "value": "2 days",
+      "note": "fever >= 38.3°C or >=101°F"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailed_history",
+        "label": "Clinical notes with detailing history"
+      },
+      {
+        "key": "cbc_esr_peripheral_smear_lft_report",
+        "label": "CBC, ESR, Peripheral smear, LFT report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor case papers, Treatment details"
+      },
+      {
+        "key": "post_treatment_cbc_esr_peripheral_smear_lft_reports",
+        "label": "Post treatment CBC, ESR, Peripheral smear, LFT reports"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the patient suffer from fever >= 38.3'C or >=101'F for more than 2 days?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Patient did not suffer from fever >= 38.3'C (or >=101'F) for more than 2 days.",
+    "Clinical notes with detailing history not submitted for pre-authorization.",
+    "CBC, ESR, Peripheral smear, or LFT report not submitted for pre-authorization.",
+    "Detailed Indoor case papers with vital and treatment details not submitted for claim submission.",
+    "Post treatment CBC, ESR, Peripheral smear, or LFT reports not submitted for claim submission.",
+    "Detailed Discharge Summary not submitted for claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MBBS",
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

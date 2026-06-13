@@ -1,0 +1,200 @@
+{
+  "_schema_version": "1.1",
+  "_comment": "IRIS Phase 1 input schema. One object = one admission session. Phase 0 stubs populate full patient + hospital from patient_id and hospital_id. MEDCO fills clinical block. In production, clinical block is populated by OCR extraction from admission documents.",
+
+  "session_id": "IRIS-20260612-TN001234",
+  "created_at": "2026-06-12T09:30:00+05:30",
+
+  "patient": {
+    "_comment": "In test mode: only patient_id needed. Stub loads rest from dummy_bis.json. In production: only patient_id needed. Phase 0 calls BIS API.",
+    "patient_id": "P001"
+  },
+
+  "hospital": {
+    "_comment": "In test mode: only hospital_id needed. Stub loads rest from dummy_hem.json. In production: only hospital_id needed. Phase 0 calls HEM API.",
+    "hospital_id": "H001"
+  },
+
+  "clinical": {
+    "_comment": "Filled by MEDCO or populated by OCR from admission documents. Every field here maps to a standard section of an Indian hospital admission note.",
+
+    "admission_date": "2026-06-12",
+    "_admission_date_note": "ISO date. Used in Phase 0 for backdated booking check. Private = 2 days, public = 5 days, NE states/islands private = 5 days.",
+
+    "bed_category": null,
+    "_bed_category_note": "null for surgical/fixed-medical. Mandatory for per-day packages. Enum: ward | hdu | icu_no_vent | icu_vent. Determines per-day rate (2100/3300/8500/9000 INR). Used in Phase 3 stratification.",
+
+    "is_emergency": true,
+    "is_medico_legal": false,
+
+    "chief_complaints": "Chest pain radiating to left arm, sweating, breathlessness since 4 hours",
+    "_chief_complaints_note": "OCR source: CC section of admission note. Free text.",
+
+    "duration_days": 0,
+    "_duration_note": "Duration of current illness in days. 0 = same day onset.",
+
+    "history_of_present_illness": "Patient was apparently well 4 hours ago when he developed sudden onset crushing central chest pain radiating to left arm and jaw, associated with profuse sweating, breathlessness, and nausea. No prior episodes. Brought to ER by family.",
+    "_hpi_note": "OCR source: HPI section of admission note. Richer narrative than chief_complaints. Used by Phase 3 LLM for STG eligibility matching — more context = better accuracy.",
+
+    "provisional_diagnosis": "Acute STEMI — inferior wall",
+    "_diagnosis_note": "OCR source: Provisional diagnosis line in admission note. Free text. Primary input to Phase 2 fuzzy search.",
+
+    "planned_procedure": null,
+    "_planned_procedure_note": "null if unknown at admission. Free text if known e.g. 'Primary PTCA'. Hint for Phase 2 candidate generation. OCR source: Treatment plan section if doctor has written it.",
+
+    "weight_kg": 72,
+    "_weight_note": "OCR source: General examination. Used in paediatric package selection and some STG weight-based thresholds. null if not recorded.",
+
+    "height_cm": 168,
+    "_height_note": "OCR source: General examination. Used for BMI calculation in some STG criteria. null if not recorded.",
+
+    "vitals": {
+      "_comment": "OCR source: Vitals chart / nursing notes at admission. Used in Phase 1 for emergency severity assessment. Used by Phase 3 LLM for STG threshold matching.",
+      "bp_systolic_mmhg": 88,
+      "bp_diastolic_mmhg": 58,
+      "pulse_bpm": 115,
+      "spo2_pct": 91,
+      "temperature_f": 98.4,
+      "rr_per_min": 24,
+      "gcs": 15,
+      "blood_glucose_mgdl": 210,
+      "_vitals_note": "All values are at time of admission. null for any not recorded."
+    },
+
+    "examination_findings": {
+      "_comment": "OCR source: Examination section of admission note. Structured by system. Used by Phase 3 LLM for STG clinical indication matching. null for any system not examined or not relevant.",
+      "general": "Patient conscious, oriented, pallor present, no icterus, no cyanosis, no clubbing, no pedal oedema",
+      "cvs": "S1 S2 heard, no murmurs, JVP raised, peripheral pulses weak",
+      "rs": "Bilateral clear air entry, no added sounds",
+      "abdomen": "Soft, non-tender, no organomegaly, no free fluid",
+      "cns": "No focal neurological deficits, pupils equal and reactive",
+      "local": null,
+      "_local_note": "Use for local examination findings e.g. wound description, limb examination, eye findings, ENT findings, orthopaedic findings."
+    },
+
+    "investigations": [
+      {
+        "_comment": "Each entry = one investigation type. result_summary is human-readable. structured_values is machine-readable (OCR extraction from report). Both used by Phase 3 LLM — structured_values preferred for threshold matching. document_available drives Phase 9 gap analysis.",
+        "type": "ecg",
+        "result_summary": "ST elevation in leads II, III, aVF — inferior STEMI pattern. Heart rate 115 bpm. Sinus tachycardia.",
+        "structured_values": [
+          {"parameter": "rhythm", "value": "sinus tachycardia", "unit": null, "flag": null},
+          {"parameter": "heart_rate", "value": 115, "unit": "bpm", "flag": "H"},
+          {"parameter": "ST_elevation", "value": "present", "unit": null, "leads": "II, III, aVF", "flag": "H"}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-12"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "Troponin I 2.8 ng/mL (elevated), CK-MB 48 U/L (elevated), Hb 12.4 g/dL, WBC 11200/cumm, platelets 2.1 lakh, creatinine 1.1 mg/dL, blood glucose 210 mg/dL",
+        "structured_values": [
+          {"parameter": "Troponin I", "value": 2.8, "unit": "ng/mL", "flag": "H"},
+          {"parameter": "CK-MB", "value": 48, "unit": "U/L", "flag": "H"},
+          {"parameter": "Hb", "value": 12.4, "unit": "g/dL", "flag": "N"},
+          {"parameter": "WBC", "value": 11200, "unit": "/cumm", "flag": "H"},
+          {"parameter": "platelets", "value": 2.1, "unit": "lakh/cumm", "flag": "N"},
+          {"parameter": "creatinine", "value": 1.1, "unit": "mg/dL", "flag": "N"},
+          {"parameter": "blood_glucose", "value": 210, "unit": "mg/dL", "flag": "H"}
+        ],
+        "document_available": false,
+        "report_date": null
+      },
+      {
+        "type": "echo",
+        "result_summary": null,
+        "structured_values": null,
+        "document_available": false,
+        "report_date": null
+      }
+    ],
+
+    "_investigation_type_enum": [
+      "ecg", "echo", "xray", "ct", "mri", "usg",
+      "blood_reports", "urine_report", "stool_report",
+      "cag_report", "eeg", "abg_chart", "csf",
+      "hpe", "fnac", "other"
+    ],
+
+    "comorbidities": ["type2_diabetes", "hypertension"],
+    "_comorbidities_note": "Active conditions at admission. Used in Phase 7 comorbidity resolution. Kept as flat string list for MVP.",
+
+    "past_medical_history": "Hypertension for 10 years, Type 2 DM for 5 years, both on regular oral medication. No prior cardiac events. No prior hospitalisations in the last 2 years.",
+    "_pmh_note": "OCR source: Past history section of admission note. Free text. Used by Phase 3 LLM for context — some STG criteria reference prior conditions or treatment duration.",
+
+    "past_surgical_history": "Appendicectomy 15 years ago, uneventful.",
+    "_psh_note": "OCR source: Past surgical history section. Free text. Relevant for Special Conditions Rule (Phase 3.7) — if patient had same procedure before.",
+
+    "current_medications": [
+      "Metformin 500mg BD",
+      "Glimepiride 1mg OD",
+      "Amlodipine 5mg OD",
+      "Aspirin 75mg OD",
+      "Atorvastatin 40mg OD"
+    ],
+    "_medications_note": "OCR source: Current medications section of admission note. String list. Some STG criteria reference whether patient is on specific medications e.g. anticoagulants, steroids.",
+
+    "allergies": ["Penicillin"],
+    "_allergies_note": "OCR source: Allergy section. Not used by pipeline logic in MVP but captured for completeness. Empty list if none known.",
+
+    "personal_history": {
+      "smoking": "ex-smoker, 20 pack years, stopped 5 years ago",
+      "alcohol": "occasional",
+      "diet": "mixed",
+      "_note": "OCR source: Personal history section. All values free text or null. Some STG criteria (e.g. COPD packages, liver disease packages) reference smoking/alcohol history."
+    },
+
+    "family_history": null,
+    "_family_history_note": "OCR source: Family history section of admission note. Free text or null. Not used by pipeline in MVP. Captured for completeness.",
+
+    "non_clinical_documents_in_hand": [
+      {
+        "_comment": "Non-investigation documents MEDCO physically has right now. Drives Phase 9 gap analysis.",
+        "key": "clinical_notes",
+        "label": "Admission / clinical notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Photo of patient on hospital bed",
+        "available": true
+      },
+      {
+        "key": "mlc_fir",
+        "label": "MLC copy with number + FIR",
+        "available": false
+      },
+      {
+        "key": "treating_doctor_prescription",
+        "label": "Treating doctor prescription advising hospitalisation",
+        "available": true
+      }
+    ],
+
+    "_non_clinical_doc_key_enum": [
+      "clinical_notes",
+      "patient_photo",
+      "mlc_fir",
+      "self_declaration",
+      "treating_doctor_prescription",
+      "referral_letter",
+      "informed_consent",
+      "notto_recipient_id",
+      "notto_donor_id",
+      "tumour_board_approval",
+      "past_hospitalisation_records",
+      "implant_sticker"
+    ],
+
+    "treating_doctor": {
+      "name": "Dr. Suresh Babu",
+      "registration_number": "TN-MED-12345",
+      "qualification": "MD DM Cardiology",
+      "specialty_code": "MC",
+      "_specialty_code_note": "2-letter HBP specialty code. e.g. MC=Cardiology, SG=General Surgery, SB=Orthopaedics."
+    },
+
+    "notes": "Patient brought by family. Haemodynamically unstable on arrival. IV fluids, oxygen, aspirin loading dose given. Cardiology team at bedside. Likely needs emergency primary PTCA. Consent obtained from family.",
+    "_notes_note": "Free text catch-all for anything not captured above. MEDCO or OCR pipeline populates this with miscellaneous admission note content."
+  }
+}

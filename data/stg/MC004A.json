@@ -1,0 +1,106 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MC004A",
+  "procedure_code": "MC004A",
+  "condition": "Pulmonary Valve Stenosis",
+  "procedure_name": "Balloon Pulmonary Valvotomy",
+  "specialty": "Cardiology",
+  "version": "1.1",
+  "source_files": [
+    "Balloon Pulmonary Valvotomy_Medco.pdf",
+    "Balloon Pulmonary Valvotomy_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "DM/DNB/ equivalent (Cardiology)"
+  ],
+  "clinical_indications": [
+    "Newborn with severe valvular PS with duct dependent circulation",
+    "Infant or children with RV dysfunction with valvular PS regardless of valve gradient",
+    "Valvular PS with peak gradient > 64 mmHg"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "valvular_ps_peak_gradient",
+      "operator": ">",
+      "value": "64 mmHg",
+      "note": "for valvular PS"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_planned_treatment",
+        "label": "Clinical notes with planned line of treatment"
+      },
+      {
+        "key": "detailed_echo_report",
+        "label": "Detailed Echo report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "invoice_of_balloon_used",
+        "label": "Invoice of balloon used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Do the clinical notes detail history, signs & symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo report suggestive of Pulmonary valve stenosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the Post procedure still of ECHO show reduced gradient?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient Echo report does not show Pulmonary valve stenosis.",
+    "Detailed Echo report is missing or not suggestive of Pulmonary valve stenosis at pre-auth.",
+    "Clinical notes lack detailed history, signs & symptoms, or indication for procedure.",
+    "Post-procedure ECHO stills do not show a reduced gradient.",
+    "Invoice for the balloon used is missing at claim stage.",
+    "Discharge summary is missing or does not mention the date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath Lab",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Pulmonary valve stenosis is a congenital or acquired (carcinoid syndrome) reduction in the area of the pulmonary valve. Congenital valvular pulmonary stenosis (PS) accounts for 5–10% of all congenital heart disease. In most of the cases, the stenosis is due to fusion of commissures leading to “doming” of the valve leaflets in systole. Rarely it may be due to dysplastic leaflets. Balloon pulmonary valvuloplasty (BPV) is safe and effective in attaining both immediate and longterm reduction of pulmonary valvular gradients and is currently the preferred therapeutic modality for “doming\" valvular PS."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

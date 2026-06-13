@@ -1,0 +1,128 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN032A",
+  "procedure_code": "SN032A",
+  "condition": "Thoracic / Lumbar Corpectomy with fusion",
+  "procedure_name": "Thoracic Corpectomy with fusion",
+  "specialty": "Neurosurgery, Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Thoracic-Lumbar Corpectomy with fusion_Medco.pdf",
+    "Thoracic-Lumbar Corpectomy with fusion_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience",
+    "MCh/DNB/Equivalent in Neurosurgery"
+  ],
+  "clinical_indications": [
+    "The most common pathologies in the thoracic spine requiring corpectomy are tumors, trauma, and infection."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "mri_report_labelled",
+        "label": "MRI labelled with patient ID, date and side (Left/Right) affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "post_procedure_imaging_xray_implants",
+        "label": "Post procedure Imaging with film (X ray) showing the implants"
+      },
+      {
+        "key": "post_procedure_clinical_photo_scar",
+        "label": "Post procedure Clinical photograph showing scar"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice/barcode of implant"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission",
+        "expected": true
+      },
+      {
+        "q": "MRI labelled with patient ID, date and side (Left/Right) - affected part",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Indoor case papers (ICPs)",
+        "expected": true
+      },
+      {
+        "q": "Procedure / operation notes",
+        "expected": true
+      },
+      {
+        "q": "Post procedure Imaging with film (X ray) showing the implants",
+        "expected": true
+      },
+      {
+        "q": "Post procedure Clinical photograph",
+        "expected": true
+      },
+      {
+        "q": "Invoice/barcode of implant",
+        "expected": true
+      },
+      {
+        "q": "Discharge Summary",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing history, signs, symptoms, evaluation findings, indication for procedure, planned line of management, or advice for admission",
+    "MRI report missing patient ID, date, or Left/Right labelling for the affected part",
+    "Post-procedure X-ray missing or does not show the implant",
+    "Invoice/barcode of implant missing",
+    "Detailed Indoor Case Papers (ICPs) missing or incomplete",
+    "Post-procedure clinical photograph showing scar is missing"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Obtaining adequate exposure for corpectomy is critical due to the relative intolerance of the thoracic spinal cord to manipulation and mobilization.",
+      "Additionally, the numerous comorbidities usually present in these patients often preclude the systemic stress of open surgery."
+    ],
+    "surgical_options": [
+      "Anterior (thoracoscopic)",
+      "Anterolateral (retropleural)",
+      "Posterolateral (lateral extracavitary)",
+      "Posterior (transpedicular)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

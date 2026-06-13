@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG031A",
+  "procedure_code": "SG031A",
+  "condition": "Fissure-in-Ano",
+  "procedure_name": "Procedure for Fissure in Ano",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Fissure in ano_Medco.pdf",
+    "Fissure in ano_PPD.CPD.pdf"
+  ],
+  "alos": "1-2 Days",
+  "min_doctor_qualification": [
+    "MS/ DNB/ equivalent (General Surgery)",
+    "MCh/Equivalent (Surgical Gastroenterology)"
+  ],
+  "clinical_indications": [
+    "Severe pain on defaecation that promotes constipation",
+    "Bleeding is usually small and occurs as a streak by the side of stools",
+    "Foul smelling discharge is present (in chronic cases)",
+    "On examination, a longitudinal ulcer is seen in the midline posteriorly that maybe covered by a skin tag",
+    "Local inflammation and induration",
+    "Diagnosis is backed by clinical manifestation",
+    "Severe symptoms of acute fissure, not decreasing in 3 days with conservative treatment"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "conservative_treatment_failure_duration",
+      "operator": ">=",
+      "value": "3 days",
+      "note": "for acute fissure, if severe symptoms not decreasing with conservative treatment"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "anal_examination_findings",
+        "label": "Anal examination findings"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_icps",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient present with pain during defecation and often persisting after defecation?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "History and clinical examination not suggestive of fissure.",
+    "Clinical notes missing or lacking detailed history, signs & symptoms, or indication for procedure.",
+    "Patient record does not indicate pain during defecation or pain persisting after defecation.",
+    "Detailed Indoor Case Papers (ICPs) missing or incomplete, without daily vitals or line of treatment.",
+    "Detailed Procedure/Operative Notes not available.",
+    "Discharge summary missing or incomplete, without follow-up advice at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Anal fissure is an ulcer-like, longitudinal tear usually in the midline of the anal canal, distal to the dentate line. Most cases are idiopathic and maybe due to trauma and ischemia. An acute fissure looks like a simple tear in the anoderm, whereas a chronic fissure, defined as lasting more than 8 to 12 weeks, is further characterized by edema and fibrosis.",
+      "Acute anal fissure is a deep tear through the skin of the anal margin extending into the anal canal. There is little inflammatory induration or edema of its edges. There is accompanying spasm of the anal sphincter muscle.",
+      "Chronic anal fissure is characterized by inflamed indurated margins, and a base consisting of either scar tissue or the lower border of the internal sphincter muscle. Chronic anal fissure does not heal with conservative measures."
+    ],
+    "surgical_options": [
+      "Fissurectomy",
+      "Open lateral sphincterotomy",
+      "Closed lateral sphincterotomy",
+      "Fissurectomy and anal advancement flap"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "The purpose of this section is to act as a guidance & a clinical decision support tool for the clinicians in deciding the line of treatment, plan clinical management of patient and decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

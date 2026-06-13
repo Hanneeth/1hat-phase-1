@@ -1,0 +1,95 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU051A",
+  "procedure_code": "SU051A",
+  "condition": "Exstrophy Bladder",
+  "procedure_name": "Exstrophy Bladder repair including osteotomy if needed, epispadias repair, ureteric reimplant, augmentation of bladder",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Exstrophy Bladder repair including osteotomy_Medco.pdf",
+    "Exstrophy Bladder repair including osteotomy_PPD.CPD.pdf"
+  ],
+  "alos": "4 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "usg_ct_mri_confirming_diagnosis",
+        "label": "USG/CT/MRI confirming the diagnosis"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical Photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_affected_part",
+        "label": "Post Procedure Clinical Photograph of affected part"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes and /USG/CT/MRI report indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes and /USG/CT/MRI report not indicative of the procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Bladder exstrophy is a birth defect primarily involving the musculoskeletal system and genitourinary tracts.",
+      "Is a rare congenital disorder in which the Urinary bladder develops outside the abdomen wall, exposed bladder can't function normally, resulting in urine incontinence."
+    ],
+    "surgical_options": [
+      "Staged functional closure for classic bladder exstrophy (i.e., modern staged repair of exstrophy [MSRE])",
+      "Complete primary repair for classic bladder exstrophy (CPRE)",
+      "Urinary diversion for classic bladder exstrophy",
+      "Closure for cloacal exstrophy",
+      "Gender reassignment",
+      "Primary closure is to repair the bladder and anterior abdominal wall",
+      "Osteotomy: Osteotomy provides closure of the bony ring and muscles of the pelvic floor to support the bladder and surround the urethra.",
+      "Bladder closure: A circumferential incision is made around the exstrophied bladder",
+      "Bladder neck repair: This procedure is undertaken at least 1 year after primary closure of the bladder exstrophy.",
+      "Ureteric reimplantation: Is performed by an extravesical mobilization of the ureters and then by either the Cohen or Leadbetter-Politano technique depending upon the bladder size.",
+      "Epispadias repair: this is performed after all other procedures. A major portion of epispadias repair achieved already during bladder closure. Remaining is the most distal part of the urethra and the glans. This is achieved with simple tubularization and de-epithelialization and approximation of the glans followed by corpora are sutured to each other over the urethral tube.",
+      "Bladder augmentation: Preoperative urine cultures are performed to rule out a UTI. Bowel preparation is done with oral PEGLEC and rectal washes."
+    ],
+    "pre_op_preparation": "Preoperative urine cultures are performed to rule out a UTI. Bowel preparation is done with oral PEGLEC and rectal washes.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

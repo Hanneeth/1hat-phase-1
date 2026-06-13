@@ -1,0 +1,144 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Vasculitis/ : Vasculitis_Medco.pdf (clinical + mandatory docs) + Vasculitis_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M100029",
+  "procedure_code": "M100029",
+  "condition": "Vasculitis",
+  "procedure_name": "Vasculitis",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Vasculitis_Medco.pdf",
+    "Vasculitis_PPD.CPD.pdf"
+  ],
+  "alos": "3-5 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Fever",
+    "Headache",
+    "Fatigue",
+    "Weight loss",
+    "General aches and pains",
+    "Night sweats",
+    "Rash",
+    "Nerve problems, such as numbness or weakness",
+    "Skin rash",
+    "Palpable purpura",
+    "Respiratory symptoms",
+    "Renal symptoms"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_indications_treatment",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "c_reactive_protein",
+        "label": "C-reactive protein"
+      },
+      {
+        "key": "urine_routine_esr",
+        "label": "Urine Routine, ESR"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_indications",
+        "label": "Detailed indoor case papers along with indications"
+      },
+      {
+        "key": "biopsy_report_if_applicable",
+        "label": "Biopsy report (if applicable)"
+      },
+      {
+        "key": "anca_ana_test_report",
+        "label": "Antineutrophil cytoplasmic antibodies (ANCA) levels / The antinuclear antibody (ANA) test"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the C-reactive report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Urine Routine, ESR report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the patient present with skin rash / palpable purpura / respiratory symptoms / renal symptoms?",
+        "expected": true
+      },
+      {
+        "q": "Was any of the following test done urine routine, ESR?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the detailed Indoor Case Papers with detailed line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the biopsy report (if applicable) of the affected blood vessel submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Antineutrophil cytoplasmic antibodies (ANCA) levels / The antinuclear antibody (ANA) test report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Discharge Summary with 15 days of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Absence of documented skin rash, palpable purpura, respiratory, or renal symptoms for the patient.",
+    "Urine routine or ESR test reports not submitted or documented as 'not done'.",
+    "Clinical notes lacking evaluation findings, indications, or planned line of treatment at pre-authorization.",
+    "Missing Antineutrophil cytoplasmic antibodies (ANCA) levels or Antinuclear antibody (ANA) test report at claim submission.",
+    "Biopsy report (if applicable) of the affected blood vessel not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD/DNB/ equivalent (in General Medicine / Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Proceed with Vasculitis only if diagnosis made is backed by clinical manifestation.",
+      "Vasculitis is an inflammation of the blood vessels. It happens when the immune system attacks healthy blood vessels, causing them to become swollen and narrow. It can happen because of an infection, a medicine, or another disease. The cause is often unknown. Vasculitis can range from a minor problem that just affects the skin, to a more serious illness that causes problems with organs like the heart or kidneys. There are many types of vasculitis.",
+      "Behcet's disease: This condition causes inflammation of your arteries and veins. Signs and symptoms include mouth and genital ulcers, eye inflammation, and acne-like skin lesions.",
+      "Buerger's disease: This condition causes inflammation and clots in the blood vessels of your hands and feet, resulting in pain and ulcers in these areas. Rarely, Buerger's disease can affect blood vessels in the abdomen, brain and heart. It is also called thromboangiitis (throm-boe-an-jee-l-tis) obliterans.",
+      "Churg-Strauss syndrome (Eosinophilic granulomatosis with polyangiitis): This condition is very rare. It mainly affects the lungs, skin, kidneys, heart and nerves in your limbs. Signs and symptoms vary greatly and include asthma, skin changes, nerve pain and nasal allergies.",
+      "Cryoglobulinemia: This condition results from abnormal proteins in the blood. Signs and symptoms include rash, joint pain, weakness, and numbness or tingling.",
+      "Giant cell arteritis: This condition is an inflammation of the arteries in your head, especially at the temples. Signs and symptoms include headaches, scalp tenderness, jaw pain, blurred or double vision, and even blindness.",
+      "Granulomatosis with polyangiitis: This condition causes inflammation of the blood vessels in your nose, sinuses, throat, lungs and kidneys. Signs and symptoms include nasal stuffiness, sinus infections, nosebleeds and possibly coughing up blood.",
+      "Henoch-Schonlein purpura (IgA vasculitis): This condition is more common in children than in adults and causes inflammation of the smallest blood vessels (capillaries) of your skin, joints, bowel and kidneys. Signs and symptoms include abdominal pain, blood in the urine, joint pain, and a rash on your buttocks or lower legs.",
+      "Hypersensitivity vasculitis: Sometimes called allergic vasculitis, the primary sign of this condition is red spots on your skin, usually on your lower legs. It can be triggered by an infection or an adverse reaction to medicine.",
+      "Kawasaki disease: This condition most often affects children younger than age 5. Signs and symptoms include fever, rash and redness of the eyes.",
+      "Microscopic polyangiitis: This form of vasculitis affects small blood vessels, usually those in the kidneys, lungs or nerves. Signs and symptoms include abdominal pain and a rash, fever, muscle pain and weight loss.",
+      "Polyarteritis nodosa: This form of vasculitis usually affects the kidneys, the digestive tract, the nerves and the skin. Signs and symptoms include rash, general malaise, weight loss, muscle and joint pain, abdominal pain after eating, high blood pressure, muscle pain and weakness, and kidney problems.",
+      "Takayasu's arteritis: This form of vasculitis affects the larger arteries in the body, including the aorta. Signs and symptoms include joint pain, loss of pulse, high blood pressure, night sweats, fever, general malaise, appetite loss, headaches and visual changes."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

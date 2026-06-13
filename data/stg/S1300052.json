@@ -1,0 +1,102 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1300052",
+  "procedure_code": "S1300052",
+  "condition": "Chronic Constrictive Pericarditis (CCP)",
+  "procedure_name": "Pericardiectomy",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Pericardiectomy_Medco.pdf",
+    "Pericardiectomy_PPD.CPD.pdf"
+  ],
+  "alos": "10days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Chronic Constrictive pericarditis (CCP) is a condition in which granulation tissue formation in the pericardium results in loss of pericardial elasticity leading to restriction in the ventricular filling.",
+    "Pericardiectomy is the only definitive management of chronic constrictive pericarditis."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of Constrictive pericarditis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Post procedure still of ECHO submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not suggestive of Constrictive pericarditis.",
+    "Clinical notes lacking detailed history, signs, symptoms, or indication for procedure.",
+    "Procedure/Operative notes not submitted or incomplete.",
+    "Post-procedure ECHO stills not submitted or lacking report.",
+    "Detailed Discharge Summary not submitted or missing date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Chronic Constrictive pericarditis (CCP) is a condition in which granulation tissue formation in the pericardium results in loss of pericardial elasticity leading to restriction in the ventricular filling. Worldwide, the leading cause of constrictive pericarditis is tuberculosis, and the incidence is about 50% of patients with tuberculous pericardial effusion despite antitubercular therapy. In developed nations, the leading cause of this condition is idiopathic or post-viral infection with incidence being 40% to 60% of total cases. It is also a known complication of any cardiac surgery and is a fairly common complication of mediastinal radiation therapy with an incidence ranging from 2% to 30% in patients treated with radiation. It has also been associated with connective tissue disorders such as rheumatoid arthritis and systemic lupus erythematosus (SLE).",
+      "Patients will often present with chronic symptoms. Their symptoms may be related to volume overload like weight gain and swelling or may be related to decreased cardiac output like progressive fatigue and dyspnea on exertion. They may also complain of increasing abdominal girth or abdominal discomfort. Abdominal complaints are secondary to either ascites or congestive hepatomegaly.",
+      "On physical examination, the jugular venous pressure (JVP) is usually elevated, however, may be normal in early constrictive pericarditis. JVP does not decrease with inspiration, and this is known as Kussmaul's sign. An accentuated heart sound heard earlier than third heart sound called pericardial knock can be heard in almost half of the patients. Abdominal examination may reveal ascites or hepatomegaly.",
+      "Pericardiectomy is the only definitive management of chronic constrictive pericarditis and effort should be made to remove as much of the pericardium as possible. Extensive penetration of the myocardium by fibrosis and calcification is associated with poor outcome. Operative mortality ranges from 55% to 10%."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Should be considered very cautiously in patients with mild disease with few symptoms or patients with advanced disease and other comorbidities due to the high mortality of the procedure."
+    ]
+  }
+}

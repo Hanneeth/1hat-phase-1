@@ -1,0 +1,137 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB069A",
+  "procedure_code": "SB069A",
+  "condition": "Ulnar Nerve Injury/Compression",
+  "procedure_name": "Exploration and Ulnar nerve Repair",
+  "specialty": "Orthopedics, Neurosurgery (Nerve root block)",
+  "version": "1.1",
+  "source_files": [
+    "Nerve Repair Surgery, Exploration and Ulnar nerve Repair_Medco.pdf",
+    "Nerve Repair Surgery,Exploration and Ulnar nerve Repair_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in Orthopedics)",
+    "MCh/DNB/Equivalent (in Neurosurgery)",
+    "MCh/DNB/Equivalent (in Plastic surgery)"
+  ],
+  "clinical_indications": [
+    "Injuries, Fractures, Ulnar Pediatric Nerve Tumors, Congenital abnormalities, Functional loss.",
+    "Ulnar nerve subluxation: Symptomatic cases needs treatment similar to that of cubital tunnel syndrome.",
+    "Ulnar Nerve Compression: The ulnar nerve can be subject to compression at several sites along its course.",
+    "Complete high ulnar nerve injury usually causes severe sequelae, such as residual sensation, loss of movement, and “claw hand” deformity, and affects fine manipulation of the hand.",
+    "Direct trauma to the ulnar nerve can be watched if the nerve is in continuity or repaired or grafted if the nerve has been severed or ruptured."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_signs_symptoms",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "radiological_investigations_surgery_ncv",
+        "label": "Radiological investigations confirming the need of surgery; +/- NCV report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post Procedure clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure / Operative Notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary with follow-up advise at the time of discharge"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "MRI / EMG/ NCV of the affected part labelled with patient ID, date and side (Left/ Right) - confirming the diagnosis submitted?",
+        "expected": false
+      },
+      {
+        "q": "X-ray of affected part labelled with patient ID, date and side (Left/ Right) submitted?",
+        "expected": false
+      },
+      {
+        "q": "Radiological investigations confirming the need of surgery; +/- NCV report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are Detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the Post procedure clinical photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission are missing or incomplete.",
+    "Radiological investigations confirming the need of surgery or NCV report is missing or incomplete.",
+    "Clinical photograph of affected part is missing.",
+    "The clinical notes and imaging reports submitted are not indicative of surgery.",
+    "Detailed Indoor case papers (ICPs) are missing or incomplete.",
+    "Post-procedure clinical photograph is missing.",
+    "Detailed procedure / Operative Notes are missing or incomplete.",
+    "Discharge summary with follow-up advice at the time of discharge is missing or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The ulnar nerve in particular is a mixed motor and sensory nerve, with a long distance to travel to its end motor targets in the hand, because of that the nerve lesions often have a poor prognosis.",
+      "Ulnar nerve conditions in children can be largely grouped into compression (direct or due to mass effect) and trauma (fracture or directly to the nerve). Primary nerve tumors are uncommon.",
+      "Complete high ulnar nerve injury usually causes severe sequelae, such as residual sensation, loss of movement, and “claw hand” deformity, and affects fine manipulation of the hand.",
+      "The most common causes of trauma to the ulnar nerve in children involve fractures around the elbow and their treatment, namely, supracondylar humerus and medial epicondylar fractures.",
+      "The ulnar nerve can also be subject to compression syndromes in children, primarily at the elbow.",
+      "Direct trauma to the ulnar nerve can be watched if the nerve is in continuity or repaired or grafted if the nerve has been severed or ruptured.",
+      "Diagnosis: Physical examination and sensory functions/signs. Nerve Conduction Studies."
+    ],
+    "surgical_options": [
+      "Exploration of the ulnar nerve.",
+      "Primary repair: Viable nerve ends, Accurate fascicular alignment, few stitches, minimal tension etc.",
+      "Tendon transfer, functional free muscle transfers.",
+      "Ulnar Nerve transfers (Distal nerve transfer from the median nerve).",
+      "Nerve graft: Autografts, allografts, conduits."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

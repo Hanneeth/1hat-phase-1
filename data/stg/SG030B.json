@@ -1,0 +1,125 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG030B",
+  "procedure_code": "SG030B",
+  "condition": "Resection Anastomosis",
+  "procedure_name": "Resection Anastomosis (Lap)",
+  "specialty": "General Surgery/ Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Ileostomy Resection Anastomosis Exploratory Laparotomy_Medco.pdf",
+    "Ileostomy Resection Anastomosis Exploratory Laparotomy_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MS",
+    "DNB",
+    "equivalent (in General Surgery)"
+  ],
+  "clinical_indications": [
+    "History of fever",
+    "Vomiting",
+    "Abdominal pain",
+    "Distension of stomach",
+    "Inability to pass flatus"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "x_ray_abdomen_erect_posture",
+        "label": "X ray abdomen (erect posture)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_icps",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed operative notes"
+      },
+      {
+        "key": "intra_operative_clinical_photograph_stills",
+        "label": "Intra-operative clinical photograph/ stills"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "histopathological_report",
+        "label": "Histopathological report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "X ray abdomen (erect posture)",
+        "expected": true
+      },
+      {
+        "q": "Was the patient admitted with symptoms of Inability to pass flatus, detention of stomach, pain in abdomen etc.?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intra-operative clinical photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathological report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient was not admitted with symptoms such as history of fever, vomiting, abdominal pain, distension of stomach, or inability to pass flatus.",
+    "Clinical notes are missing, incomplete, or do not detail history, signs, symptoms, or indication for procedure.",
+    "X-ray abdomen (erect posture) is missing at pre-authorization.",
+    "Indoor Case Papers (ICPs) with daily vitals and line of treatment are missing or incomplete at claim submission.",
+    "Intra-operative clinical photograph/stills are missing.",
+    "Discharge summary is missing or does not include follow-up advice.",
+    "Histopathological report is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed with Ileostomy / Resection Anastomosis/ Exploratory Laparotomy only if diagnosis made is backed by clinical manifestation and investigations.",
+      "History of fever",
+      "Vomiting",
+      "Abdominal pain",
+      "Distension of stomach",
+      "Inability to pass flatus"
+    ],
+    "surgical_options": null,
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV001A",
+  "procedure_code": "SV001A",
+  "condition": "Pulmonary Atresia with Ventricular Septal Defect and Major Aortopulmonary Collateral Arteries (MAPCA)",
+  "procedure_name": "Unifocalization of Major Aortopulmonary Collateral Arteries (MAPCA)",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Unifocalisation of MAPCA_Medco.pdf",
+    "Unifocalisation of MAPCA_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/ equivalent(Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Ventricular septal defect with tricuspid atresia- Type C and D.",
+    "Type C - Long-segment pulmonary atresia with absent main pulmonary artery. Branch pulmonary arteries confluent, but pulmonary blood flow dependent predominantly on MAPCAs.",
+    "Type D - Long-segment pulmonary atresia with absent main pulmonary artery. Nonconfluent branch pulmonary arteries with MAPCA-dependent pulmonary blood flow."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      },
+      {
+        "key": "ct_angio_cardiac_catheterization_report",
+        "label": "CT Angio/Cardiac Catheterization report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes include detailed history, signs & symptoms, and indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Echo/Doppler report is suggestive of Major aorto-pulmonary collateral arteries?",
+        "expected": true
+      },
+      {
+        "q": "CT Angio/Cardiac Catheterization report (if available) is suggestive of Major aorto-pulmonary collateral arteries?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Post-procedure ECHO shows repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Discharge Summary with follow-up advice available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report does not indicate Major aorto-pulmonary collateral arteries.",
+    "Clinical notes are missing or lack detailed history, signs, symptoms, or indication for procedure.",
+    "CT Angio/Cardiac Catheterization report (if available) is missing or not suggestive of Major aorto-pulmonary collateral arteries.",
+    "Detailed Procedure / Operative notes are missing.",
+    "Post-procedure ECHO report does not demonstrate repair of the defect.",
+    "Detailed Discharge Summary is missing or lacks follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Treatment of pulmonary atresia with ventricular septal defect and major aortopulmonary collateral arteries is challenging and controversial.",
+      "Basically, the collateral arteries are treated surgically by unifocalization to integrate them and unify the blood flow in the pulmonary circulation.",
+      "These major collateral arteries are anatomically similar to the bronchial arteries; however, they develop into different vessels because of different environmental exposures.",
+      "Currently, treatment plans involving surgical intervention in early infancy to address the multiple variations of major aortopulmonary collateral arteries are being established to achieve definitive intracardiac repair.",
+      "Historically, several surgical approaches have been proposed, including multi-stage unifocalization performed by lateral thoracotomy, rehabilitation of the central pulmonary artery followed by intracardiac repair, and single-stage unifocalization by a midline incision.",
+      "Recently, single-stage unifocalization performed during infancy has become the preferred method for achieving low right ventricular pressure after closing the ventricular septal defect.",
+      "Furthermore, for the maintenance of the lowest possible right ventricular pressure after definitive repair, combination therapy or hybrid therapy with catheter and surgical intervention is essential.",
+      "Diagnostic Workup includes: Clinical assessment, Pulse Oximetry (measuring oxygen saturation, noting anemia's effect on cyanosis), X-ray Chest (looking for cardiomegaly/pulmonary oligemia, heterogeneous reticular appearance in MAPCA-dependent flow, right-sided aortic arch prevalence), ECG (right-axis deviation, right ventricular hypertrophy, biventricular hypertrophy/left atrial enlargement with increased pulmonary blood flow).",
+      "Echocardiography is vital for diagnosis but may not delineate distal pulmonary arterial tree; additional imaging (cardiac catheterization, CTA/CMRI) is essential for planning definitive repair.",
+      "Cardiac catheterization is almost always performed in patients with VSD-PAt before definitive repair, especially after prior aortopulmonary shunt surgery (Class I for Type C/D, Class IIa for Type A/B). It helps assess shunt patency, pulmonary artery branch confluence, pressure, MAPCA distribution/size, recruitable lung segments, and single/dual lung segment supply, and operability in late-presenting large MAPCAs.",
+      "CTA is a vital investigation for planning surgery, recommended for all patients planned for repair (Class I), providing clear definition of lung segments supplied by native pulmonary arteries."
+    ],
+    "surgical_options": [
+      "Multi-stage unifocalization performed by lateral thoracotomy.",
+      "Rehabilitation of the central pulmonary artery followed by intracardiac repair.",
+      "Single-stage unifocalization by a midline incision.",
+      "Single-stage unifocalization performed during infancy (preferred method)."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

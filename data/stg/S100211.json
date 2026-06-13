@@ -1,0 +1,137 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S100211",
+  "procedure_code": "S100211",
+  "condition": "Choledochal cyst",
+  "procedure_name": "Operation of Choledochal Cyst",
+  "specialty": "General/Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Choledochal cyst_Medco.pdf",
+    "Choledochal cyst_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (in Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Confirmed diagnosis of Choledochal cyst (excluding Type III where endoscopic sphincterotomy is adequate) by imaging (Ultrasound Abdomen, MRCP, ERCP/CT Abdomen).",
+    "Presence of clinical symptoms such as vague right upper quadrant pain, jaundice, nausea, vomiting, abdominal distension, recurrent attacks with abdominal pain and pyrexia.",
+    "High risk of malignancy and associated complications (ductal strictures, stone formation, cholangitis, rupture, and secondary biliary cirrhosis).",
+    "Condition requiring surgical management."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "ultrasound_abdomen",
+        "label": "Ultrasound Abdomen"
+      },
+      {
+        "key": "magnetic_resonance_cholangiopancreatography_mrcp",
+        "label": "Magnetic Resonance Cholangiopancreatography (MRCP)"
+      },
+      {
+        "key": "endoscopic_retrograde_cholangiopancreatography_ercp_ct_abdomen",
+        "label": "Endoscopic retrograde cholangiopancreatography (ERCP) / CT Abdomen (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are clinical notes with detailed history, signs & symptoms, planned treatment line, and indication for procedure available?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging (USG/MRCP/ERCP/CT Abdomen) confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Are the clinical details and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was USG/CT/MRCP/ERCP Abdomen report indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes with detailed history, signs & symptoms, planned treatment line, or indication for procedure are missing or incomplete at pre-authorization.",
+    "Imaging (USG/MRCP/ERCP/CT Abdomen) did not confirm the diagnosis of choledochal cyst at pre-authorization.",
+    "Clinical details and/or imaging were not indicative of surgery for choledochal cyst.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details are missing or incomplete at claim submission.",
+    "Detailed Procedure / Operative Notes are missing or incomplete at claim submission.",
+    "Discharge summary with follow-up advice is missing or incomplete at claim submission.",
+    "Mandatory imaging reports (Ultrasound Abdomen, MRCP) are missing at pre-authorization."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Choledochal cyst (biliary cysts) is defined as an isolated or combined congenital dilatation of the extra or intrahepatic biliary tree.",
+      "Choledochal cyst is not an isolated entity but rather regarded as a constellation of pathological anomalies in the hepato-pancreaticobiliary system.",
+      "Biliary cysts are associated with significant complications such as ductal strictures, stone formation, cholangitis, rupture, and secondary biliary cirrhosis.",
+      "In addition, certain types of biliary cysts have a high risk of malignancy.",
+      "Majority of cases manifest in children within 1-2 years of age. It can also present in adults.",
+      "More common in females 4: 1.",
+      "Abdominal distension can be due to a large cyst. The cyst can be palpated per abdomen in the right hypochondrium.",
+      "Slow progressive jaundice, recurrent attacks with abdominal pain and pyrexia.",
+      "Patients may also report nausea, vomiting, fever, pruritus, and weight loss.",
+      "Infants typically present with obstructive jaundice and abdominal masses, children more often present with abdominal pain and nausea/vomiting, and adults frequently present with pain, fever, nausea/vomiting, and jaundice."
+    ],
+    "surgical_options": [
+      "Cyst excision with Roux-en-Y hepatoenterostomy is the definitive treatment of choice in all patients with Choledochal cyst, regardless of age or symptomatology.",
+      "Type I: Excision of the cyst followed by Roux-en-Y hepaticojejunostomy or hepaticoduodenostomy.",
+      "Type II: Excision of the diverticulum with suturing of CBD.",
+      "Type IV: Complete excision with Roux-en-Y Hepaticojejunostomy; If total excision is not possible due to adhesions between the cyst and portal vein, posterior wall of the cyst can be left behind, after removal of mucosa (Lilly's technique); Hepatectomy for excision of the cyst, and reconstruction with wide hilar Roux-en-Y hepaticojejunostomy (for Type IV A/V).",
+      "Type V: Hepatectomy, Liver transplantation."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

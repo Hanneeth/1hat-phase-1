@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S700010",
+  "procedure_code": "S700010",
+  "condition": "Nephrectomy - Partial or Hemi (for Benign conditions)",
+  "procedure_name": "Nephrectomy Partial or Hemi (Open)",
+  "specialty": "Urology, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Nephrectomy - Partial or Hemi (for Benign conditions) _Medco.pdf",
+    "Nephrectomy - Partial or Hemi (for Benign conditions)_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "MS/DNB or Equivalent (in Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Chronic pyelonephritis, renal arterial disease, calculus disease",
+    "Presence of systematic diseases",
+    "Tumour in a solitary kidney, treatment of T1 renal cell cancer (RCC)",
+    "Partial nephrectomy for tumour/masses size small (<4 cm in size)",
+    "Partial nephrectomy for renal masses between 4-7 Cm (based on their location)",
+    "In children to remove a non-functioning upper or lower pole secondary to complicated duplex anomalies of the kidney"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "tumour/masses size",
+      "operator": "<",
+      "value": "4 cm",
+      "note": "for small masses"
+    },
+    {
+      "field": "renal masses size",
+      "operator": "between",
+      "value": "4-7 Cm",
+      "note": "based on location"
+    },
+    {
+      "field": "renal masses size",
+      "operator": ">",
+      "value": "7 Cm",
+      "note": "generally treated with Radical nephrectomy (implying <=7cm for partial)"
+    },
+    {
+      "field": "cancer stage",
+      "operator": "is",
+      "value": "T1",
+      "note": "for renal cell cancer (RCC)"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "ct_mri_ivp_report",
+        "label": "CT/MRI scan, IVP (for Open.) report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "intra_operative_photograph",
+        "label": "Intra operative Photograph"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes and CT/MRI scan, IVP (for Open.) are indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Clinical notes and/or CT/MRI scan/IVP (for Open.) are not indicative of the procedure",
+    "CT/MRI scan or IVP (for Open.) report is missing at pre-authorization",
+    "Intra operative photograph is missing at claim submission",
+    "Histopathology report is missing at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Recent developments in imaging techniques, preoperative staging, improvements in surgical techniques have made nephron-sparing surgery (NSS) an alternative to radical nephrectomy in select patients."
+    ],
+    "surgical_options": [
+      "Open Partial/hemi Nephrectomy: A surgical procedure involves a transperitoneal incision or an extraperitoneal incision, typically in patients with one kidney, pre-existing chronic kidney diseases and tumours located in centre kidney are typically managed with open partial/hemi nephrectomy to save as much as kidney part."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

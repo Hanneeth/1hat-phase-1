@@ -1,0 +1,149 @@
+{
+  "_comment": "HBP 1.0 codes S400028 and S400058 map to HBP 2.0 code SO003A, which is the primary procedure code for these guidelines.",
+  "stg_id": "SO003A",
+  "procedure_code": "SO003A",
+  "condition": "Tubal Pathologies including Ectopic Pregnancy",
+  "procedure_name": "Laparoscopic tubal surgeries (for any indication including ectopic pregnancy)",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Laparoscopic tubal surgeries_Medco.pdf",
+    "Laparoscopic tubal surgeries_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS (Obstetrics & Gynecology)",
+    "MD (Obstetrics & Gynecology)",
+    "DNB (Obstetrics & Gynecology)",
+    "DGO or equivalent (Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Management of ectopic pregnancy (with confirmed tubal pregnancy measuring > 35 mm, concurrent intrauterine pregnancy ruled out, significant pain abdomen, and failure of medical management)",
+    "Removal of peritubal adhesions",
+    "Tuboplasty / Reanastomosis",
+    "Removal of hydrosalpinx and pyosalpinx",
+    "Fimbrioplasty for correction of prefimbrial phimosis"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "tubal_pregnancy_size",
+      "operator": ">",
+      "value": "35 mm",
+      "note": "Confirmed tubal pregnancy for ectopic pregnancy management"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, symptoms, signs, examination findings, indication for procedure, planned line of treatment, and advice for admission"
+      },
+      {
+        "key": "serum_beta_hcg_titers",
+        "label": "Serum Beta human chorionic gonadotropin (hCG) titers"
+      },
+      {
+        "key": "usg_abdomen_pelvis",
+        "label": "USG abdomen/pelvis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "serum_beta_hcg_level_ectopic_pregnancy",
+        "label": "Serum Beta hCG level (in case of ectopic pregnancy)"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological Examination"
+      },
+      {
+        "key": "usg_abdomen_pelvis_optional",
+        "label": "USG abdomen/pelvis (optional)"
+      },
+      {
+        "key": "blood_transfusion_notes",
+        "label": "Blood transfusion notes (if blood transfusion was given)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advise for admission documented in Detailed Clinical notes?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical presentation, evaluation findings, and imaging/investigations confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation, severity, imaging, and laboratory investigations, failure of medical management indicative of surgery (for Ectopic Pregnancy)?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and imaging indicative of tubal surgery other than Ectopic pregnancy?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical evaluation findings, imaging and/or investigations indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Tubal pregnancy is not confirmed to be measuring more than 35 mm, or concurrent intrauterine pregnancy is not ruled out for ectopic pregnancy cases.",
+    "Failure of medical management for ectopic pregnancy is not documented or justified.",
+    "Clinical presentation, severity, imaging, or laboratory investigations did not indicate the necessity for surgery for ectopic pregnancy.",
+    "Clinical presentation or imaging did not indicate the necessity for tubal surgery for non-ectopic indications.",
+    "Mandatory Serum Beta hCG titers or USG abdomen/pelvis are missing at pre-authorization.",
+    "Histopathological Examination or Detailed Procedure/Operative notes are missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability. Laparoscopic facility for laparoscopic procedures.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Amenorrhea",
+      "Spotting/Bleeding per vaginum",
+      "Pain abdomen: esp. one sided, dull/sharp/crampy, continuous/intermittent",
+      "Fainting attacks",
+      "Dizziness",
+      "Shoulder pain",
+      "Past history of: Pelvic Inflammatory Disease, Ectopic pregnancy, Tubal surgery"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

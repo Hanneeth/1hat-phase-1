@@ -1,0 +1,131 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO025A",
+  "procedure_code": "SO025A",
+  "condition": "Vault Prolapse",
+  "procedure_name": "Sacrocolpopexy (Abdominal) – Open",
+  "specialty": "Obstetrics & Gynecology, Urology",
+  "version": "1.1",
+  "source_files": [
+    "Vault Prolapse_Medco.pdf",
+    "Vault Prolapse_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO/Equivalent (in Obstetrics & Gynecology)",
+    "MCh/DNB/Equivalent in (Urology Surgery)"
+  ],
+  "clinical_indications": [
+    "Vaginal bulge/ Protrusion",
+    "Reducible//irreducible",
+    "Pelvic discomfort: weakness perineal region/ dragging- bearing down sensation",
+    "Pelvic discomfort: low back ache relieved by lying down",
+    "Urinary symptoms: - Stress incontinence",
+    "Urinary symptoms: Frequency/urgency/ nocturia",
+    "Urinary symptoms: urinary retention/incomplete voiding",
+    "Defecation problems: Difficulty in emptying rectum, tenesmus, splinting",
+    "Defecation problems: Incomplete evacuation of the faeces",
+    "Defecation problems: Fecal Incontinence",
+    "Sexual Function/ dyspareunia",
+    "Vaginal discharge - leucorrhoea, blood stained discharge"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indications, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "pelvic_abdominal_usg",
+        "label": "Pelvic/Abdominal USG"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "investigation_reports",
+        "label": "Investigation reports (if required)"
+      },
+      {
+        "key": "intra_operative_photos",
+        "label": "Intra-operative photos (optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes all vitals, detailed history especially history of previous hysterectomy, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did the clinical presentation, composite examination (pelvic examination), and imaging confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or incomplete (lacking vitals, detailed history including previous hysterectomy, symptoms, signs, physical examination, indication for procedure, planned line of treatment, or advice for admission)",
+    "Clinical presentation, composite examination (pelvic examination), or imaging (Pelvic/Abdominal USG) does not confirm the diagnosis or is not indicative of surgery",
+    "Pelvic/Abdominal USG not attached at pre-authorization stage",
+    "Detailed indoor case papers (ICPs) missing or lacking daily vitals and treatment details at claim submission",
+    "Detailed procedure/operative notes not available at claim submission",
+    "Discharge summary missing or lacking follow-up advice at discharge"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability;",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Vault prolapse is descent of the vaginal apex",
+      "Vault prolapse can be primary or secondary",
+      "Enterocele — Laxity of the upper-third of the posterior vaginal wall results in herniation of the pouch of Douglas. It may contain omentum or even loop of small bowel and hence, called enterocele. Traction enterocele is secondary to uterovaginal prolapse. Pulsion enterocele is secondary to chronically raised intra-abdominal pressure.",
+      "Secondary vault prolapse This may occur following either vaginal or abdominal hysterectomy. Undetected enterocele during initial operation or inadequate primary repair usually results in secondary vault prolapse",
+      "Post-hysterectomy (vaginal or abdominal) vault prolapse is usually accompanied by an enterocele (70%)."
+    ],
+    "surgical_options": [
+      "Vault suspension (sacral colpopexy): Abdominal sacral colpopexy is a very useful technique if an abdominal approach is indicated for other reasons (adnexal mass) and is preferred by some surgeons for the treatment of recurrent prolapse after a prior surgical failure."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

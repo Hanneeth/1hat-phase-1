@@ -1,0 +1,103 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG096C",
+  "procedure_code": "SG096C",
+  "condition": "Biopsy",
+  "procedure_name": "Cervix Cancer screening (PAP + Colposcopy)",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Biopsy_Medco.pdf",
+    "Biopsy_PPD.CPD.pdf"
+  ],
+  "alos": "Daycare",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO or Equivalent (Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "The Pap test is indicated to screen for malignant and premalignant lesions of the cervix.",
+    "Women with epithelial cell abnormality on pap smear should be further tested with colposcopy and biopsy.",
+    "The most common indication for colposcopy is an abnormal cervical cancer screening test.",
+    "Symptoms suggestive of cervical cancer, e.g. profuse foul-smelling vaginal discharge, abnormal or contact vaginal bleeding, postmenopausal bleeding (along with endometrial assessment)",
+    "Cervical cancer suspected on naked-eye examination of the cervix",
+    "Follow-up after treatment of cervical precancer",
+    "Evaluation of other lower genital tract abnormalities (e.g. genital warts, vulvar lesions)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_with_supporting_investigations",
+        "label": "Clinical notes with supporting investigations"
+      },
+      {
+        "key": "indication_for_procedure",
+        "label": "Indication for procedure"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_optional",
+        "label": "Detailed indoor case papers (optional)"
+      },
+      {
+        "key": "other_investigation_reports_if_done",
+        "label": "Other Investigation reports if done"
+      },
+      {
+        "key": "detailed_procedure_notes",
+        "label": "Detailed procedure notes"
+      },
+      {
+        "key": "intra_procedure_photographs_optional",
+        "label": "Intra-procedure photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological Examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical presentation, physical examination ± supporting investigations indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was the clinical presentation, physical examination ± supporting investigations indicative of procedure?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, physical examination or supporting investigations not indicative of procedure",
+    "Missing clinical notes or supporting investigations at pre-authorization stage",
+    "Missing indication for procedure at pre-authorization stage",
+    "Missing detailed procedure notes at claim stage",
+    "Missing Histopathological Examination report at claim stage",
+    "Missing Detailed Discharge Summary at claim stage"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at tertiary hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Cervix Cancer screening (PAP + Colposcopy)"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

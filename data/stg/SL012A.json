@@ -1,0 +1,141 @@
+{
+  "_comment": "The procedure if performed for Complicated sinusitis, may be done on an emergency basis. In all such cases, pre-authorization documents can be submitted within 24 hours of admission.",
+  "stg_id": "SL012A",
+  "procedure_code": "SL012A",
+  "condition": "Sinus Surgery",
+  "procedure_name": "Open sinus surgery",
+  "specialty": "ENT",
+  "version": "1.1",
+  "source_files": [
+    "Sinus surgery_Medco.pdf",
+    "Sinus surgery_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MS",
+    "DNB",
+    "PG Diploma or equivalent (in ENT)"
+  ],
+  "clinical_indications": [
+    "Inflammatory issues such as Chronic rhinosinusitis (refractory to medical/conservative management)",
+    "Nasal polypi, Allergic fungal sinusitis",
+    "Antro-choanal polyp"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, chronicity of sinusitis, examination findings, indications for doing the procedure& advise for admission)"
+      },
+      {
+        "key": "ct_pns_report",
+        "label": "CT (PNS) report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_note_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "intra_procedure_still_images",
+        "label": "Intra procedure Still images of the affected part with time and date (optional)"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the signs, symptoms, examination and investigations confirm the presence of Chronic sinusitis?",
+        "expected": true
+      },
+      {
+        "q": "Evidence of medical/conservative management tried but failed/ ineffective/ not indicated?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Clinical notes (detailing signs, symptoms, chronicity of sinusitis, examination findings, indications for doing the procedure& advise for admission) available?",
+        "expected": true
+      },
+      {
+        "q": "CT scan (PNS) reports?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is the Discharge summary available?",
+        "expected": true
+      },
+      {
+        "q": "Do OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Are the Intra procedure Still images of the affected part with time and date available?(Optional)",
+        "expected": false
+      },
+      {
+        "q": "Is the Histopathology report available",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Signs, symptoms, examination, or investigations do not confirm the presence of Chronic sinusitis.",
+    "No evidence of medical/conservative management having been tried and failed/ineffective/not indicated.",
+    "Clinical notes are missing or lack details on signs, symptoms, chronicity, examination findings, indications, or advise for admission.",
+    "CT (PNS) report is missing.",
+    "Discharge summary is missing or incomplete.",
+    "Operative notes are missing or do not detail surgical steps and outcomes.",
+    "Documents showing appropriate post-operative care or follow-up advice are missing.",
+    "Histopathology report is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Functional Endoscopic Sinus Surgery (FESS) is a minimally invasive technique performed through nasal cavity using endoscopes where surgical field is viewed on monitor."
+    ],
+    "surgical_options": [
+      "Functional Endoscopic Sinus Surgery (FESS) is a minimally invasive technique performed through nasal cavity using endoscopes where surgical field is viewed on monitor.",
+      "Open sinus surgery is the conventional approach to sinuses and are used for cases where endoscopic access to the sinuses or to the diseases is inadequate. Additional septoplasty may sometimes be combined with these surgeries to address significantly deviated septum."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Maximal medical management/conservative management has not been tried and failed/ineffective/not indicated."
+    ],
+    "potential_complications": [
+      "Nasal bleeding",
+      "nasal obstruction",
+      "disease recurrence",
+      "orbital complications",
+      "CSF leak",
+      "injury to optic nerve or internal carotid artery"
+    ]
+  }
+}

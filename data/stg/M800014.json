@@ -1,0 +1,109 @@
+{
+  "_comment": "Distilled from Mental retardation_Medco.pdf and Mental retardation_PPD.CPD.pdf. Note: The source document indicates 'Procedures covered/ procedure count: 1', but lists multiple distinct HBP codes (M800007, M800014, MM001A) for the same package and price. Following the instruction to output one JSON object per procedure code, three identical objects are produced, differing only in their procedure_code and stg_id.",
+  "stg_id": "M800014",
+  "procedure_code": "M800014",
+  "condition": "Mental Retardation",
+  "procedure_name": "Mental Retardation",
+  "specialty": "Mental Disorders",
+  "version": "1.1",
+  "source_files": [
+    "Mental retardation_Medco.pdf",
+    "Mental retardation_PPD.CPD.pdf"
+  ],
+  "alos": "8-12 weeks",
+  "min_doctor_qualification": [
+    "MD Psychiatry",
+    "DNB Psychiatry",
+    "PG Diploma (in Psychiatry)",
+    "equivalent (in Psychiatry)"
+  ],
+  "clinical_indications": [
+    "Slow in development/delayed milestones of development",
+    "Poor speech, self-care, learning and memory",
+    "Less intelligent compared to other children",
+    "Intellectual disability (mental retardation) - global developmental delay + impairment compared to peers in intellectual functioning and adaptive skills"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailed_history_chronicity",
+        "label": "Clinical notes with detailed history and chronicity"
+      },
+      {
+        "key": "admission_document_signed_by_psychiatrist",
+        "label": "Admission document signed by empanelled psychiatrist"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_treatment_notes",
+        "label": "Detailed treatment notes"
+      },
+      {
+        "key": "neuroimaging",
+        "label": "Neuroimaging"
+      },
+      {
+        "key": "thyroid_function_test",
+        "label": "Thyroid function Test"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, mini mental status test, indication for treatment and need of hospitalization?",
+        "expected": true
+      },
+      {
+        "q": "Was the admission document signed by an empanelled psychiatrist?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed treatment notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the following investigations done? (Neuroimaging, Thyroid function test)",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient admission document not signed by an empanelled psychiatrist",
+    "Clinical notes missing or incomplete, or does not include detailed history, mini mental status test, indication for treatment, or need of hospitalization",
+    "Detailed treatment notes not submitted",
+    "Relevant investigations (Neuroimaging, Thyroid function test) not submitted",
+    "Detailed Discharge Summary missing or does not mention date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": "F70-89",
+    "special_empanelment": "As per the provisions of the Mental Health Act 2017",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The provisions under Mental Healthcare Act 2017 be referred for details on Admission & Discharge criteria."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": "Treatment of associated problems such as vitamin or mineral deficiency, epilepsy, ADHD, vision/hearing issues; management of treatable disorders like hypothyroidism and inherited metabolic disorders; and management of comorbid physical health problems like epilepsy, visual/hearing impairment, or locomotor/orthopaedic problems.",
+    "referral_criteria": [
+      "Secondary Care (District Hospital): Severe or multiple developmental problems; History of regression (loss of acquired skills); Definite family history of developmental problems (h/o similar problem in the sibling); Co-occurring severe behavioural or emotional problems; Suspected case of ASD; Suspected SLD; Genetic counselling; Speech therapy or physiotherapy.",
+      "Tertiary Care (Medical College / Regional Referral Centre): Evaluate and manage children with severe IDD, ASD, multiple disabilities, and those with severe comorbid disorders (such as ADHD, aggression, bipolar disorder, and psychotic disorders) through multi-disciplinary approach; Investigate for the cause (review tests already done; imaging, genetic tests, metabolic tests); Manage treatable disorders (like hypothyroidism and inherited metabolic disorders); Manage comorbid physical health problems (like epilepsy, visual /hearing impairment, locomotor/ orthopaedic problems); Assessment and management for SLD (psychoeducation, school liaison, teaching basic remediation techniques)."
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

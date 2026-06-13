@@ -1,0 +1,163 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO014A",
+  "procedure_code": "SO014A",
+  "condition": "Hysterotomy",
+  "procedure_name": "Hysterotomy",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Hysterotomy_Medco.pdf",
+    "Hysterotomy_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MS/MD/DNB/DGO or Equivalent (in Obstetrics & Gynecology)",
+    "MBBS with emergency obstetric care training and MTP training certification"
+  ],
+  "clinical_indications": [
+    "Mid-trimester MTP where other methods have failed or are contraindicated (In case of second trimester abortion consider booking in relevant Medical Termination of Pregnancy (MTP) and refer to the relevant guidelines)",
+    "Fibroids in the lower uterine segment obstructing evacuation",
+    "Completely low-lying placenta (placenta previa)",
+    "Uterine anomalies (uterine didelphys, septate uterus)",
+    "Cervical cancer with pregnancy",
+    "Women with multiple previous cesarean delivery (due to the risk of placenta accreta)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "gestation_age",
+      "operator": "<",
+      "value": "28 weeks",
+      "note": "products of conception extracted before viability"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "history_clinical_presentation_diagnosis",
+        "label": "History and clinical presentation confirming the diagnosis"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "documentation_indication_of_surgery",
+        "label": "Documentation of indication of surgery"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative/procedure notes"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological Examination"
+      },
+      {
+        "key": "blood_transfusion_notes_if_given",
+        "label": "Blood transfusion notes (if blood transfusion was given)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure, planned line of treatment and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Was the diagnosis established based on gestation age or imaging?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was there a documentation of indication of surgery Preterm labor (<28 weeks)/any anomalies/after failure of medical procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathological examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Following parameters indicative of surgery: Failure of medical procedure?",
+        "expected": true
+      },
+      {
+        "q": "Following parameters indicative of surgery: Preterm labor < 28 weeks?",
+        "expected": true
+      },
+      {
+        "q": "Following parameters indicative of surgery: Any anomalies?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Documentation of indication of surgery (e.g., preterm labor < 28 weeks, anomalies, or failure of medical procedure) not provided or incomplete",
+    "Histopathological examination report not submitted",
+    "Detailed operative/procedure notes missing or incomplete",
+    "Detailed clinical notes missing or incomplete at pre-authorization",
+    "Diagnosis not clearly established based on gestation age or imaging at pre-authorization"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre, anesthesia and anesthetist availability",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hysterotomy is an operative procedure of extracting the products of conception out of the womb before viability (28th week) by cutting through the anterior wall of the uterus.",
+      "The operation is usually done through the abdominal route.",
+      "The operation is rarely done these days for the purpose of Medical Termination of Pregnancy (MTP)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "In case of second trimester abortion, consider booking in relevant Medical Termination of Pregnancy (MTP) and refer to the relevant guidelines."
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "complications": {
+      "immediate": [
+        "Uterine bleeding",
+        "Peritonitis",
+        "Intestinal obstruction",
+        "Anesthetic hazards",
+        "Increased morbidity and an occasional death"
+      ],
+      "remote": [
+        "Menstrual abnormality—menorrhagia or irregular periods",
+        "Scar endometriosis (1%)",
+        "Scar rupture in subsequent pregnancy"
+      ]
+    }
+  }
+}

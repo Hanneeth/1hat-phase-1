@@ -1,0 +1,108 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB013A",
+  "procedure_code": "SB013A",
+  "condition": "Fracture -Single & Both Bones-Forearm -ORIF-Plating, Nailing",
+  "procedure_name": "Fracture - Single Bone - Forearm - ORIF - Plating, Nailing",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Fracture - Single & Both Bones - Forearm - ORIF - Plating Nailing_Medco.pdf",
+    "Fracture - Single & Both Bones - Forearm - ORIF - Plating Nailing_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years' experience"
+  ],
+  "clinical_indications": [
+    "Fractures of both radius and ulna are one of the most common fractures in adults due to industrial, road traffic accidents, sports.",
+    "Forearm fractures are viewed as articular fractures as slight deviation in the spatial orientation of the radius and ulna decreases the forearm's rotational amplitude and thereby impairs the positioning and function of the hand.",
+    "Intramedullary nailing of forearm fractures, open reduction and internal fixation of fracture remains the treatment of choice for most forearm fractures.",
+    "The goal is to obtain sound union with excellent functional outcome and early mobilization."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_pre_auth",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "x_ray_pre_auth",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right) confirming the diagnosis"
+      },
+      {
+        "key": "clinical_photograph_affected_part_pre_auth",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_x_ray",
+        "label": "Post-procedure X-ray labelled with patient ID, date and side (Left/Right) - Showing implant"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "invoice_barcode_implant_used_optional",
+        "label": "Invoice or barcode of Implant used (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are the clinical notes and imaging reports indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the clinical notes and imaging reports indicative of procedure?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or imaging reports are not indicative of the procedure.",
+    "Pre-authorization X-ray missing, unlabelled, or not confirming diagnosis.",
+    "Post-procedure X-ray missing, unlabelled, or not showing implant for claim submission.",
+    "Invoice or barcode of Implant used is missing for claim submission (optional document may cause queries if not provided).",
+    "Pre-authorization clinical photograph of affected part missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "It is essential to regain length, apposition",
+      "Axial alignment and normal rotational alignment",
+      "Treating diaphyseal fractures of the radius and the ulna to gain good range of motion."
+    ],
+    "surgical_options": [
+      "Plating: Dorsal Thompson approach, Volar henrys approach.",
+      "Nailing: Intramedullary nailing, radial nail."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "Immobilized, Suture removal, follow-up and removal of plate/nail.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

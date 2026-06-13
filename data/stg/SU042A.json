@@ -1,0 +1,111 @@
+{
+  "_comment": "Distilled from Diagnostic Cystoscopy_Medco.pdf and Diagnostic Cystoscopy_PPD.CPD.pdf. HBP 2.0 code.",
+  "stg_id": "SU042A",
+  "procedure_code": "SU042A",
+  "condition": "Urological Conditions",
+  "procedure_name": "Diagnostic Cystoscopy",
+  "specialty": "Urology, Paediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Diagnostic Cystoscopy_Medco.pdf",
+    "Diagnostic Cystoscopy_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in Urology, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "To look at the lining of the bladder and the urethra.",
+    "Gross or microscopic hematuria",
+    "Evaluation of patients with voiding symptoms, urologic fistulas, urethral or bladder diverticula, Congenital anomalies' in pediatrics",
+    "Treatment of urethral strictures",
+    "Bladder neck procedures",
+    "Intravesical procedures (e.g., for treatment of bladder stones, bladder ulcers, or bladder tumors; removal of foreign bodies in the bladder; botulinum toxin injection; and ureteral catheterization in association with some gynecologic problems)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes",
+        "label": "Detailed Clinical notes with history, indication for procedure, symptoms, signs, examination findings and advice for admission"
+      },
+      {
+        "key": "imaging_report",
+        "label": "Xray/USG/CT Scan/MRI report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operation_notes",
+        "label": "Detailed Procedure / operation notes"
+      },
+      {
+        "key": "intraprocedural_still_photograph_optional",
+        "label": "Intraprocedural still photograph (Optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes – all vitals, detailed history especially previous surgery, symptoms, signs, physical examination including local examination, indication for procedure, advise for admission, and planned line of treatment available?",
+        "expected": true
+      },
+      {
+        "q": "Is Xray/USG/CT Scan/MRI report submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is intraprocedural still photograph submitted? (optional)",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or imaging report (Xray/USG/CT Scan/MRI) not indicative of procedure.",
+    "Detailed clinical notes for pre-authorization missing or incomplete.",
+    "Xray/USG/CT Scan/MRI report missing at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) missing or incomplete at claim submission.",
+    "Detailed Procedure / Operative Notes missing at claim submission.",
+    "Discharge summary with follow-up advice missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MCh/Equivalent (in Urology, Pediatric surgery)",
+    "clinical_key_pointers": [
+      "Cystoscopy is a visual inspection of the inside bladder and urethra.",
+      "Cystoscopy can be performed in several settings, including OPD or an operating room, with either topical pain medicine (a numbing jelly in the urethra) or under an aesthetic (general or sedation)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

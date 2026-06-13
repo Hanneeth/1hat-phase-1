@@ -1,0 +1,86 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG007A",
+  "procedure_code": "MG007A",
+  "condition": "HIV with complications",
+  "procedure_name": "HIV with complications",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "HIV complications_Medco.pdf",
+    "HIV complications_PPD.CPD.pdf"
+  ],
+  "alos": "NA",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Complication of HIV disease is its progression to acquired immunodeficiency syndrome (AIDS). It should be suspected once opportunistic infections and/or low CD4 count are present in an individual who is HIV positive.",
+    "AIDS occurs when lymphocyte count falls below a level (less than 200 cells per microliters) and is characterized by one or more of the following: Tuberculosis (TB) and extra pulmonary tuberculosis, Cytomegalovirus, Candidiasis, Cryptococcal meningitis, Cryptosporidiosis, Toxoplasmosis, Kaposi's sarcoma, Lymphoma, Neurological complications (AIDS dementia complex), Kidney disease."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "lymphocyte count (CD4)",
+      "operator": "<",
+      "value": "200 cells per microliter",
+      "note": "Threshold for AIDS diagnosis"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "cd4_cell_count_report",
+        "label": "CD4 cell count report"
+      },
+      {
+        "key": "hiv_elisa_hiv_viral_load_report",
+        "label": "HIV-ELISA/HIV viral load report (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_and_treatment_given",
+        "label": "Detailed indoor case papers and treatment given"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Does the patient have any opportunistic infections?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "CD4 cell count report not submitted.",
+    "HIV-ELISA/HIV viral load report not submitted (optional document).",
+    "Documentation/investigation report confirming diagnosis of HIV not available.",
+    "Lack of documented opportunistic infections despite HIV diagnosis, crucial for 'HIV with complications' package.",
+    "Clinical notes including evaluation findings, indications, or planned line of treatment not submitted at pre-authorization.",
+    "Detailed indoor case papers or discharge summary not submitted at claim stage, or discharge summary lacks follow-up date."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "DNB / MD (General Medicine / Pediatric Medicine/ Dermatology & Venereology)",
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV022A",
+  "procedure_code": "SV022A",
+  "condition": "Thoracotomy, Thoracoabdominal Approach",
+  "procedure_name": "Thoracotomy, Thoraco Abdominal Approach",
+  "specialty": "CTVS, Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Thoracotomy thoracoabdominal approach_Medco.pdf",
+    "Thoracotomy thoracoabdominal approach_PPD.CPD.pdf"
+  ],
+  "alos": "7-10 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (in CTVS, Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Thoracoabdominal aneurysms",
+    "Cancer of the esophagogastric junction",
+    "Pathology of the lower thoracic and upper lumbar spine",
+    "Any procedure on lung, thoracic esophagus, aorta",
+    "Thoracic sympathectomy",
+    "Diaphragmatic hernia/plication",
+    "Mediastinal tumors"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_indication",
+        "label": "Clinical notes with evaluation findings, indication of procedure, and planned line of management"
+      },
+      {
+        "key": "ct_chest_abdomen",
+        "label": "CT Chest/Abdomen (Based on Etiology)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative Photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination (optional)"
+      },
+      {
+        "key": "postoperative_chest_abdomen_xray",
+        "label": "Postoperative Chest/Abdomen X-ray"
+      },
+      {
+        "key": "usg_chest_abdomen",
+        "label": "USG Chest/Abdomen"
+      },
+      {
+        "key": "ct_scan",
+        "label": "CT scan (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did CT/MRI Chest/Abdomen confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the evaluation findings and imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was intra-operative photograph submitted (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Was post-operative Xray/USG report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Evaluation findings or imaging were not indicative of surgery.",
+    "Clinical notes are missing or incomplete, or do not clearly state history, symptoms, evaluation findings, planned treatment, or indication for procedure during pre-authorization.",
+    "CT/MRI Chest/Abdomen report is missing or did not confirm the diagnosis during pre-authorization.",
+    "Detailed procedure or operative notes are missing or incomplete in the claim submission.",
+    "Post-operative Chest/Abdomen X-ray or USG report is missing in the claim submission.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details are missing or incomplete in the claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The thoracoabdominal incision provides wide exposure of the lower thorax, the upper abdomen, and the retroperitoneal space."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

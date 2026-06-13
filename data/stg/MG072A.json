@@ -1,0 +1,142 @@
+{
+  "stg_id": "MG072A",
+  "procedure_code": "MG072A",
+  "condition": "Haemodialysis / Renal failure",
+  "procedure_name": "Haemodialysis / Peritoneal Dialysis",
+  "specialty": "General Medicine/ Pediatric medical management/ General surgery",
+  "version": "1.1",
+  "source_files": [
+    "Haemodialysis, Renal failure, AV Fistula _Medco.pdf",
+    "Haemodialysis, Renal failure, AV Fistula _PPD.CPD.pdf"
+  ],
+  "alos": "daycare",
+  "min_doctor_qualification": [
+    "MBBS",
+    "The patient should be periodically seen by a nephrologist to decide the dialysis prescription and line of treatment"
+  ],
+  "clinical_indications": [
+    "Diagnosis of Acute Kidney Injury or Chronic Kidney Disease backed by clinical signs, symptoms and investigations",
+    "Acute Kidney Injury with clinical features such as reduced urine output, dark concentrated urine, swelling of face and limbs, breathlessness",
+    "Acute Kidney Injury with investigations showing elevated serum creatinine, electrolyte/acid-base abnormalities, supportive imaging and serological findings",
+    "Chronic Kidney Disease with clinical features such as Edema, Hematuria, Proteinuria, renal stone, family history of kidney diseases, unexplained hypertension, Anemia",
+    "Chronic Kidney Disease with investigations showing elevated serum creatinine, supportive imaging findings",
+    "Fluid overload requiring dialysis",
+    "Pericarditis requiring dialysis",
+    "Hyperkalemia requiring dialysis",
+    "Severe metabolic acidosis requiring dialysis",
+    "Encephalopathy requiring dialysis",
+    "Severe uraemia requiring dialysis",
+    "Need to create space for fluids or blood products via dialysis",
+    "eGFR <5 ml/min (for Chronic Kidney Disease)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "eGFR",
+      "operator": "<",
+      "value": "5 ml/min",
+      "note": "for Chronic Kidney Disease dialysis"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "pathological_examination",
+        "label": "Pathological Examination (Complete Blood count, Blood urea, Serum Creatinine, GFR, serum electrolytes; monthly for chronic dialysis, quarterly for Serum Iron, ferritin, TIBC, TSAT, SGOT, SGPT, viral markers, calcium, phosphate)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes_indoor_case_papers",
+        "label": "Clinical Notes/ Indoor case papers"
+      },
+      {
+        "key": "detail_dialysis_chart",
+        "label": "Detail dialysis chart (only dialysis chart in chronic dialysis pts)"
+      },
+      {
+        "key": "all_investigation_reports",
+        "label": "All investigation reports"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the patient a confirmed case of ARF?",
+        "expected": true
+      },
+      {
+        "q": "Did Renal Function Test show Raised Sr. creatinine?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed vital parameters chart available including Input/output chart?",
+        "expected": true
+      },
+      {
+        "q": "Initial diagnosis has been confirmed as chronic kidney disease and end-stage kidney failure?",
+        "expected": true
+      },
+      {
+        "q": "Maximum 3 dialysis sessions being done per week in a single pre-authorisation?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Clinical Notes with all the details of the dialysis done?",
+        "expected": true
+      },
+      {
+        "q": "Any investigation done?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical note does not mention the need for dialysis",
+    "Diagnosis of Acute Kidney Injury or Chronic Kidney disease/End-stage kidney disease not mentioned",
+    "Pathological examination reports (CBC, Blood urea, Serum Creatinine, GFR, serum electrolytes) missing or not repeated monthly/quarterly as required for chronic cases",
+    "Dialysis chart (for chronic dialysis patients) missing or incomplete",
+    "More than 3 dialysis sessions per week requested in a single pre-authorization without separate pre-auth",
+    "eGFR threshold not met or not documented for CKD dialysis"
+  ],
+  "additional_information": {
+    "icd_10_code": "N17.9, N18.3",
+    "special_empanelment": "Dialysis facilities available, Dialysis machines – for general unit, water treatment plant, separate isolation area for dialyzing patients with hepatitis B, dialysis reprocessing area, Working hours of unit per day",
+    "min_doctor_qualification_desirable": "MD/ DNB (Medicine); DM/ DNB (Nephrology) or equivalent",
+    "clinical_key_pointers": [
+      "Proceed with Haemodialysis only if diagnosis made is backed by clinical signs, symptoms and investigations.",
+      "A patient with pre-existing CKD may develop AKI"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Indications for dialysis",
+      "Unexplained AKI",
+      "Involvement of other organs",
+      "Sepsis",
+      "Systemic disease",
+      "Complicated pregnancy",
+      "Initial evaluation of all newly diagnosed cases (CKD)",
+      "Rapid disease progression (CKD)",
+      "New complication (CKD)",
+      "Discussion for Renal Replacement Therapy (RRT) (CKD)"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Look for contraindications to HD or PD"
+    ]
+  }
+}

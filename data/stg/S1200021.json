@@ -1,0 +1,123 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1200021",
+  "procedure_code": "S1200021",
+  "condition": "Temporary Pacemaker Implantation",
+  "procedure_name": "Temporary Pacemaker Implantation",
+  "specialty": "Cardiology",
+  "version": "1.1",
+  "source_files": [
+    "Temporary Pacemaker Implantation_Medco.pdf",
+    "Temporary Pacemaker Implantation_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MD/ DM/DNB/ equivalent (Cardiology)",
+    "M.Ch./DNB/ equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Symptomatic bradyarrhythmias (reversible)",
+    "Bridge to permanent pacemaker",
+    "Specific tachyarrhythmias (i.e., overdrives pacing)",
+    "Asystolic cardiac arrest",
+    "Bradycardia due to atrioventricular block",
+    "Sinus node disease",
+    "Following acute myocardial infarction",
+    "Prophylactic",
+    "Periprocedural",
+    "Overdrive suppression of tachyarrhythmias"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "ecg_with_cardiologist_report",
+        "label": "ECG with report of cardiologist"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operative_notes_with_indication",
+        "label": "Procedure / Operative notes with indication"
+      },
+      {
+        "key": "ecg_paced_rhythm_strip_still_frame_of_lead_in_situ",
+        "label": "ECG paced rhythm strip/ still frame of lead in situ"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "invoice_barcode_of_pacemaker_pacing_lead",
+        "label": "Invoice & barcode of designated pacemaker pacing lead"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Was the ECG and its report by cardiologist suggestive of an indication requiring temporary pacemaker implantation?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Indoor case papers?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does still frame shows temporary lead in heart/ ECG shows paced rhythm?",
+        "expected": true
+      },
+      {
+        "q": "Is there a detailed discharge summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice & barcode of designated pacing lead used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient ECG report not suggestive of a condition requiring temporary pacemaker implantation.",
+    "Clinical notes are incomplete (missing detailed history, signs, symptoms, or a clear indication for the procedure).",
+    "Invoice or barcode of the designated pacing lead is missing at the claim submission stage.",
+    "The submitted still frame does not clearly show the temporary lead in the heart, or the ECG does not demonstrate paced rhythm.",
+    "The detailed discharge summary was not submitted or does not mention the date of follow-up."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Cardiac Cath lab/CTVS O.T.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Temporary pacemaker implantation (TPI) is a lifesaving procedure which is mainly indicated in patients with symptomatic bradyarrhythmias, which is reversible or as bridge to permanent pacemaker, as well as in patients with specific tachyarrhythmias (i.e., overdrives pacing).",
+      "Temporary transvenous pacing consists in inserting a temporary pacing electrode catheter (EC) into the right sided chambers through peripheral venous route, and then applying regulated electrical stimulus with the goal of restoring effective cardiac depolarization, resulting in an adequate heart rate and cardiac output."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

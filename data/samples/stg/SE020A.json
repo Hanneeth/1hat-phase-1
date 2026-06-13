@@ -1,0 +1,62 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE020A",
+  "procedure_code": "SE020A",
+  "condition": "Cataract",
+  "procedure_name": "Cataract Surgery (Phacoemulsification with foldable IOL)",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "PM JAY/Standard Treatment Guideline/master/Cataract/Cataract Surgery (Phaco and SICS)_Medco.pdf",
+    "PM JAY/Standard Treatment Guideline/master/Cataract/Cataract Surgery (Phaco and SICS)_PPD.CPD.pdf"
+  ],
+
+  "alos": "daycare",
+  "min_doctor_qualification": ["MD Ophthalmology", "MS Ophthalmology", "DNB Ophthalmology", "PG Diploma Ophthalmology"],
+
+  "clinical_indications": [
+    "BCVA <= 6/9 not improving with pinhole or glasses",
+    "Lens opacity on slit-lamp examination",
+    "Glare / uniocular polyopia",
+    "White pupillary reflex"
+  ],
+
+  "clinical_thresholds": [
+    { "field": "bcva", "operator": "<=", "value": "6/9", "note": "not improving with pinhole" }
+  ],
+
+  "mandatory_documents": {
+    "preauth": [
+      { "key": "clinical_notes", "label": "Clinical notes" },
+      { "key": "ocular_biometry", "label": "Ocular biometry (A-scan + keratometry)" },
+      { "key": "slit_lamp", "label": "Slit-lamp examination" },
+      { "key": "affected_eye_photo", "label": "Clinical photo of affected eye, labelled R/L" },
+      { "key": "full_face_photo", "label": "Full-face photo of patient" },
+      { "key": "bp_blood_sugar", "label": "BP + blood sugar (Fasting / PP / Random)" }
+    ],
+    "claim": [
+      { "key": "intraop_photo", "label": "Still image of patient undergoing the procedure with patient ID + date" },
+      { "key": "ot_notes", "label": "Operative notes detailing surgical steps + implant details" },
+      { "key": "discharge_summary", "label": "Detailed discharge summary" },
+      { "key": "iol_barcode", "label": "Barcode of the IOL implanted" }
+    ]
+  },
+
+  "checklist": {
+    "ppd_preauth": [
+      { "q": "BCVA < 6/9?", "expected": true },
+      { "q": "Previous cataract surgery in the same eye?", "expected": false }
+    ],
+    "cpd_claim": [
+      { "q": "OT notes detail surgical steps + IOL barcode / implant details + surgery success?", "expected": true },
+      { "q": "Post-op care and follow-up advice documented (day 1, 1-2 wks, 2-4 wks)?", "expected": true }
+    ]
+  },
+
+  "common_queries": [
+    "BCVA not documented, or documented above the 6/9 threshold without justification",
+    "Affected eye not labelled R or L in the clinical photograph",
+    "Missing IOL barcode at claim stage",
+    "Ocular biometry (A-scan/keratometry) not attached at pre-auth"
+  ]
+}

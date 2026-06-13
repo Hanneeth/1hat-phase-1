@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MG079A",
+  "procedure_code": "MG079A",
+  "condition": "Peripheral Arterial Thrombosis",
+  "procedure_name": "Peripheral Arterial Thrombosis",
+  "specialty": "General Medicine",
+  "version": "1.1",
+  "source_files": [
+    "Peripheral Arterial Thrombosis_MEDCO.pdf",
+    "Peripheral Arterial Thrombosis_PPD.CPD.pdf"
+  ],
+  "alos": "5 days",
+  "min_doctor_qualification": [
+    "MBBS",
+    "DNB/MD equivalent in General Medicine"
+  ],
+  "clinical_indications": [
+    "Presence of thrombus within an artery in upper or lower extremities",
+    "Symptoms suggestive of acute limb ischemia (Pallor, Pain, Paresthesia, Paralysis, Pulselessness, Poikilothermia)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes detailing history and admission notes showing vitals and examination findings."
+      },
+      {
+        "key": "investigation_reports_blood_doppler_ultrasound",
+        "label": "Investigation reports such as Blood tests & Doppler Ultrasound"
+      },
+      {
+        "key": "relevant_investigations_mri_ct_mra_optional",
+        "label": "Relevant investigations MRI/CT/MRA (optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "treatment_details",
+        "label": "Treatment details"
+      },
+      {
+        "key": "relevant_investigation_report_blood_doppler_ultrasound",
+        "label": "Relevant Investigations report Blood tests & Doppler Ultrasound"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailing history and admission notes showing vitals and examination findings.",
+        "expected": true
+      },
+      {
+        "q": "Were the investigation reports (Blood test & Doppler Ultrasound) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the relevant investigations MRI/CT/MRA submitted? (optional)",
+        "expected": true
+      },
+      {
+        "q": "Were the patient's investigations (Blood Test & Doppler Ultrasound) suggestive of the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the relevant investigation reports (Blood test & Doppler Ultrasound) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is a detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's investigations (Blood Test & Doppler Ultrasound) are not suggestive of Peripheral Arterial Thrombosis diagnosis or not documented.",
+    "Clinical notes detailing history and admission notes showing vitals and examination findings are missing or incomplete at pre-authorization.",
+    "Mandatory investigation reports (Blood tests & Doppler Ultrasound) are missing or incomplete at pre-authorization.",
+    "Detailed Indoor case papers (ICPs) or treatment details are missing or incomplete at claim submission.",
+    "Detailed discharge summary is missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Care Facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Peripheral Arterial Thrombosis is the formation of a thrombus within an artery in the upper or lower extremities.",
+      "In most cases, it follows rupture of atheroma (a fat-rich deposit in the blood vessel wall), and is therefore referred to as atherothrombosis.",
+      "An arterial thrombus in the limbs can lead to acute limb ischemia.",
+      "Medical management is multifaceted and includes: Cholesterol reduction, Antiplatelet therapy, Anticoagulation, Peripheral vasodilators, Blood pressure management, Exercise therapy, and Smoking cessation.",
+      "Adherence to this regimen can reduce limb-related complications like critical limb ischemia and amputation, as well as systemic complications of atherosclerosis like stroke and myocardial infarction."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

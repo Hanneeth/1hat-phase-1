@@ -1,0 +1,83 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU084A",
+  "procedure_code": "SU084A",
+  "condition": "Priapism - Follow Up",
+  "procedure_name": "Surgery for Priapism - Follow Up",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Surgery for Priapism Followup_Medco.pdf",
+    "Surgery for Priapism Followup_PPD.CPD.pdf"
+  ],
+  "alos": "daycare",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology)"
+  ],
+  "clinical_indications": [
+    "Proceed with Surgery for Priapism only if diagnosis made is backed by clinical manifestation"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_current_visit",
+        "label": "Clinical notes of current visit detailing examination findings, previous surgery/procedure, investigations, advise for daycare procedure"
+      },
+      {
+        "key": "discharge_summary_last_admission",
+        "label": "Discharge Summary of last admission for surgery for priapism procedure"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes_discharge_summary_current_visit",
+        "label": "Clinical notes/discharge summary of the current visit with the details of treatment given"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes of the current visit detailing examination findings, previous surgery/procedure, investigations, advise for daycare procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Discharge Summary of last admission for surgery for priapism procedure submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Clinical notes/discharge summary of the current visit with the details of treatment given submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical findings and/or earlier discharge summary do not indicate the necessity for a follow-up procedure.",
+    "Clinical notes of current visit detailing examination findings, previous surgery/procedure, investigations, advise for daycare procedure not submitted or incomplete.",
+    "Discharge Summary of last admission for surgery for priapism procedure not submitted or incomplete.",
+    "Clinical notes/discharge summary of the current visit with the details of treatment given not submitted or incomplete."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ischemic priapism: Progressive penile pain",
+      "Ischemic priapism: Erection lasting more than four hours or unrelated to sexual interest or stimulation",
+      "Ischemic priapism: Rigid penile shaft, but the tip of penis (glans) is soft",
+      "Nonischemic priapism: Erection lasting more than four hours or unrelated to sexual interest or stimulation",
+      "Nonischemic priapism: Erect but not fully rigid penile shaft"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

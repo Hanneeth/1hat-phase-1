@@ -1,0 +1,148 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG006A",
+  "procedure_code": "SG006A",
+  "condition": "Bleeding Peptic Ulcer",
+  "procedure_name": "Operation for Bleeding Peptic Ulcer",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Operation for Bleeding Peptic Ulcer_Medco.pdf",
+    "Operation for Bleeding Peptic Ulcer_PPD.CPD.pdf"
+  ],
+  "alos": "5 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent in General Surgery",
+    "MCh/DNB/Equivalent (Surgical Gastroenterologist)"
+  ],
+  "clinical_indications": [
+    "Failure of endoscopic therapy",
+    "Hemodynamic instability despite vigorous resuscitation (more than a three units transfusion)",
+    "Shock associated with recurrent hemorrhage",
+    "Perforation",
+    "Rare blood type",
+    "Difficult crossmatch",
+    "Refusal of transfusion",
+    "Shock on presentation",
+    "Advanced age",
+    "Severe comorbid disease",
+    "Chronic gastric ulcer as the origin of hemorrhage",
+    "Surgery may be appropriate for older adult patients who are unlikely to tolerate prolonged attempts at resuscitation, large volume transfusions, or periods of hypotension"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication of procedure, and planned line of management"
+      },
+      {
+        "key": "confirmed_peptic_ulcer_disease",
+        "label": "Confirmed case of peptic ulcer disease"
+      },
+      {
+        "key": "upper_endoscopy",
+        "label": "Upper endoscopy"
+      },
+      {
+        "key": "angiography",
+        "label": "Angiography (Optional)"
+      },
+      {
+        "key": "cect_abdomen",
+        "label": "CECT Abdomen (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the patient complaint of melena, blood in vomit?",
+        "expected": true
+      },
+      {
+        "q": "Was the patient a confirm case of peptic ulcer disease?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation, evaluation findings, and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes - detailed history, established prior diagnosis of peptic ulcer disease, previous surgery notes, signs & symptoms, planned line of management, indication for procedure, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical evaluation and imaging confirm the diagnosis of bleeding peptic ulcer?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Intra-operative photographs submitted (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient did not complain of melena or blood in vomit",
+    "Patient was not a confirmed case of peptic ulcer disease",
+    "Clinical presentation, evaluation findings, or imaging were not indicative of surgery",
+    "Clinical notes incomplete or missing indication for procedure or planned management",
+    "Upper endoscopy report missing at pre-authorization",
+    "Detailed Procedure / operative notes not available at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Upper gastrointestinal (UGI) bleeding secondary to peptic ulcer disease is a common medical condition that results in high patient morbidity and medical care costs. While the majority of patients with bleeding peptic ulcers will stop bleeding spontaneously and not rebleed during hospitalization, a subgroup of patients is at high risk for recurrent hemorrhage and requires endoscopic therapy to decrease this risk. Most patients with acute bleeding can be managed with fluid resuscitation and transfusion, acid suppression therapy, and endoscopic intervention. If endoscopic therapy fails, interventional angiography or surgery may be required."
+    ],
+    "surgical_options": [
+      "Surgical treatments for peptic ulcer disease include oversewing of the artery with truncal vagotomy and pyloroplasty, antrectomy with gastrojejunostomy (Billroth II procedure), and highly selective vagotomy.",
+      "Emergency surgery for bleeding peptic ulcer disease involves oversewing of the ulcer (to ligate the bleeding artery) plus truncal vagotomy (to decrease acid secretion) and pyloroplasty (for gastric drainage)."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

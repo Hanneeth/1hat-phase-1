@@ -1,0 +1,158 @@
+{
+  "_comment": "The procedure code MP034A is the HBP 2.0 code, replacing HBP 1.0 code M200019 for the same procedure.",
+  "stg_id": "MP034A",
+  "procedure_code": "MP034A",
+  "condition": "Dysmorphic Children",
+  "procedure_name": "Dysmorphic children",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Dysmorphic children_Medco.pdf",
+    "Dysmorphic children_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MD/DNB/DCH (Pediatric)"
+  ],
+  "clinical_indications": [
+    "Genetic etiology suspected in any child with at least 1 major or more than 2 minor congenital anomalies.",
+    "Genetic etiology suspected in any child with growth deficit (short stature/failure to thrive).",
+    "Genetic etiology suspected in any child with developmental delay, mental deficit, or developmental regression.",
+    "Genetic etiology suspected in any child with failure to develop secondary sexual characteristics.",
+    "Genetic etiology suspected in any child with abnormal genitalia.",
+    "Genetic etiology suspected in any child who appears 'different'/'unusual'."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "congenital_anomalies",
+      "operator": ">=",
+      "value": "1 major",
+      "note": "for suspicion of genetic etiology"
+    },
+    {
+      "field": "congenital_anomalies",
+      "operator": ">",
+      "value": "2 minor",
+      "note": "for suspicion of genetic etiology"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including history, evaluation findings, and planned line of management"
+      },
+      {
+        "key": "whole_body_scanning",
+        "label": "Whole body scanning"
+      },
+      {
+        "key": "dna_chromosomal_biochemical_assay",
+        "label": "DNA/chromosomal /biochemical assay"
+      },
+      {
+        "key": "skeletal_survey",
+        "label": "Skeletal Survey"
+      },
+      {
+        "key": "usg",
+        "label": "USG"
+      },
+      {
+        "key": "ecg",
+        "label": "Electrocardiogram (ECG)"
+      },
+      {
+        "key": "two_d_echo",
+        "label": "2D ECHO"
+      },
+      {
+        "key": "thyroid_profile",
+        "label": "Thyroid profile"
+      },
+      {
+        "key": "viral_serology_markers",
+        "label": "Viral Serology markers"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs) mentioning the treatment details"
+      },
+      {
+        "key": "investigation_reports_if_required",
+        "label": "Investigation reports (if required)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes contain detailed history (prenatal, perinatal, maternal medication, family), signs & symptoms, vital monitoring, planned treatment line, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Clinical presentation and imaging/investigations suggestive of the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Clinical examination suggested a dysmorphic disorder?",
+        "expected": true
+      },
+      {
+        "q": "Imaging/investigations supported the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed ICPs with daily vitals and treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Discharge summary includes follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing detailed history, evaluation findings, or planned line of management at pre-authorization.",
+    "Clinical examination or imaging/investigations did not suggest or support a dysmorphic disorder diagnosis.",
+    "Mandatory diagnostic reports (e.g., Whole body scanning, DNA/chromosomal assay, Skeletal Survey) not uploaded at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) missing daily vitals or treatment details at claim submission.",
+    "Discharge summary does not include follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital, requiring a multidisciplinary approach involving geneticist, relevant subspecialties, social workers, physiotherapist, and speech therapist.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Congenital anomalies are a significant cause of neonatal intensive care unit (NICU) admissions.",
+      "The presence of a particular congenital anomaly may necessitate evaluation for the presence of other specific associated anomalies or genetic syndromes.",
+      "An anomaly is a structural defect that deviates from the normal standard and can be categorized as major or minor.",
+      "A major anomaly has surgical, medical or cosmetic importance and may be a marker for other occult malformations.",
+      "Minor anomalies may indicate genetic syndromes.",
+      "Common physical features include birth parameters, aplasia cutis congenita, holoprosencephaly, asymmetric crying facies, preauricular ear tags and pits, cleft lip with or without cleft palate, esophageal atresia/tracheoesophageal fistula, congenital heart defects, ventral wall defects, and polydactyly.",
+      "Potential causes include chromosomal aneuploidy, single gene abnormalities, teratogen exposure, birth defects, and environmental factors.",
+      "The approach to a dysmorphic child involves suspicion, clinical evaluation (history, physical examination), investigations, analysis, diagnosis, confirmation, intervention (treatment, counseling, prenatal diagnosis), and surveillance & follow-up.",
+      "Examination typically includes anthropometry, assessment for specific syndromes (e.g., Prader Willi, Angelman, Smith Magenis, Miller Dieker), and growth monitoring (height, weight, head circumference).",
+      "Investigations include general prenatal & perinatal history, skeletal survey, chromosomal, DNA, biochemical assay. ECG/USG can be useful for additional major or minor abnormalities.",
+      "Management focuses on appropriate medical/surgical treatment wherever feasible."
+    ],
+    "surgical_options": [
+      "Appropriate medical/ surgical management wherever feasible"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

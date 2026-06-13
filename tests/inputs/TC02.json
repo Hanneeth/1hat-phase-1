@@ -1,0 +1,178 @@
+{
+  "_test_id": "TC02",
+  "_description": "Acute STEMI emergency — inferior wall. Primary PTCA planned. Tests emergency flag (Phase 1 stub returns non-emergency), STG check with ECG + troponin evidence, cardiology package matching.",
+  "_expected_status": "CONDITIONAL",
+  "_expected_specialty": "MC",
+  "_expected_flags_include": [
+    "EMERGENCY_PHASE_STUBBED",
+    "CANDIDATES_GENERATED"
+  ],
+  "_expected_flags_exclude": [
+    "PUB_RESERVED_BLOCK",
+    "WALLET_INSUFFICIENT"
+  ],
+  "session_id": "IRIS-TC02-20260612",
+  "created_at": "2026-06-12T09:30:00+05:30",
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": true,
+    "is_medico_legal": false,
+    "chief_complaints": "Crushing central chest pain radiating to left arm and jaw for 4 hours, profuse sweating, breathlessness, nausea",
+    "duration_days": 0,
+    "history_of_present_illness": "Patient was apparently well until 4 hours ago when he developed sudden onset crushing central chest pain radiating to left arm and jaw, associated with profuse diaphoresis, breathlessness, and nausea. No prior cardiac history. No prior hospitalisations. Currently haemodynamically unstable on arrival. Family brought him to ER.",
+    "provisional_diagnosis": "Acute STEMI — inferior wall",
+    "planned_procedure": "Primary percutaneous coronary intervention (Primary PTCA)",
+    "weight_kg": 74,
+    "height_cm": 170,
+    "vitals": {
+      "bp_systolic_mmhg": 88,
+      "bp_diastolic_mmhg": 58,
+      "pulse_bpm": 115,
+      "spo2_pct": 91,
+      "temperature_f": 98.4,
+      "rr_per_min": 24,
+      "gcs": 15,
+      "blood_glucose_mgdl": 210
+    },
+    "examination_findings": {
+      "general": "Patient conscious, restless, diaphoretic, pallor present",
+      "cvs": "S1 S2 heard, no murmurs, JVP elevated, peripheral pulses weak and thready",
+      "rs": "Bilateral basal crackles present, no wheeze",
+      "abdomen": "Soft, non-tender, no organomegaly",
+      "cns": "No focal neurological deficits, GCS 15",
+      "local": null
+    },
+    "investigations": [
+      {
+        "type": "ecg",
+        "result_summary": "ST elevation 2-3mm in leads II, III, aVF. Reciprocal ST depression in I, aVL. Heart rate 115/min. Sinus tachycardia. Features consistent with acute inferior wall STEMI.",
+        "structured_values": [
+          {
+            "parameter": "rhythm",
+            "value": "sinus_tachycardia",
+            "unit": null,
+            "flag": null,
+            "leads": null
+          },
+          {
+            "parameter": "heart_rate",
+            "value": 115,
+            "unit": "bpm",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "ST_elevation",
+            "value": "2-3mm",
+            "unit": "mm",
+            "flag": "H",
+            "leads": "II, III, aVF"
+          },
+          {
+            "parameter": "ST_depression",
+            "value": "reciprocal",
+            "unit": null,
+            "flag": null,
+            "leads": "I, aVL"
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-12"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "Troponin I: 2.8 ng/mL (elevated, ref <0.04), CK-MB: 48 U/L (elevated), Hb: 12.4 g/dL, WBC: 11200/cumm, creatinine: 1.1 mg/dL, blood glucose: 210 mg/dL",
+        "structured_values": [
+          {
+            "parameter": "Troponin I",
+            "value": 2.8,
+            "unit": "ng/mL",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "CK-MB",
+            "value": 48,
+            "unit": "U/L",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "Hb",
+            "value": 12.4,
+            "unit": "g/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "creatinine",
+            "value": 1.1,
+            "unit": "mg/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "blood_glucose",
+            "value": 210,
+            "unit": "mg/dL",
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": false,
+        "report_date": null
+      },
+      {
+        "type": "echo",
+        "result_summary": null,
+        "structured_values": null,
+        "document_available": false,
+        "report_date": null
+      }
+    ],
+    "comorbidities": [
+      "type2_diabetes",
+      "hypertension"
+    ],
+    "past_medical_history": "Hypertension 10 years, Type 2 DM 5 years on oral medication. No prior cardiac events.",
+    "past_surgical_history": "None",
+    "current_medications": [
+      "Metformin 500mg BD",
+      "Amlodipine 5mg OD",
+      "Aspirin 75mg OD"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "ex-smoker, 20 pack years, quit 5 years ago",
+      "alcohol": "occasional",
+      "diet": "mixed"
+    },
+    "family_history": "Father had MI at age 60",
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "ER admission notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Photo of patient on hospital bed",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Suresh Babu",
+      "registration_number": "TN-MED-12345",
+      "qualification": "MD DM Cardiology",
+      "specialty_code": "MC"
+    },
+    "notes": "Patient in cardiogenic shock. IV fluids, oxygen, aspirin loading dose, IV heparin given. Cath lab activated for primary PTCA. Consent obtained from family."
+  }
+}

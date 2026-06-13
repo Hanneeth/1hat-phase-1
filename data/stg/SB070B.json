@@ -1,0 +1,115 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB070B",
+  "procedure_code": "SB070B",
+  "condition": "Implant Removal under LA, Implant Removal under RA / GA",
+  "procedure_name": "Implant Removal Screw under LA",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Implant Removal under LA, RA, GA _Medco.pdf",
+    "Implant Removal under LA, RA, GA_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years' experience"
+  ],
+  "clinical_indications": [
+    "Is the patient's choice/demand.",
+    "Pain around the region bearing the implants",
+    "Post-operative infection, protruding implants",
+    "Broken implants and those adjacent vital structures.",
+    "The removal also due to their own problems that includes neurovascular injuries especially in the hands of junior members of the team, re-fracture, wound sepsis.",
+    "In children, implants should be removed as soon as treatment objectives are achieved to avoid interfering with their growth, those closely related to the growth plate."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management, advise for the procedure."
+      },
+      {
+        "key": "x_ray",
+        "label": "X-ray labelled with patient ID, date and side (Left/ Right) affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_op_x_ray",
+        "label": "Post-op X-ray labelled with patient ID, date and side (Left/Right) - confirm the removal of Implant"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure / operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the clinical notes and X Ray report submitted indicative of diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Were clinical notes detailing signs, symptoms, examination findings, planned line of treatment & advise for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was X-ray labelled with patient ID, date and side (Left/Right) of affected limb submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are detailed indoor case papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was Post-op X-ray labelled with patient ID, date and side (Left/Right) confirming the removal of Implant?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or X-ray report not indicative of diagnosis/indication for implant removal.",
+    "Pre-operative X-ray missing or not labelled with patient ID, date, or side of affected part.",
+    "Post-operative X-ray missing or not labelled with patient ID, date, side, or not confirming implant removal.",
+    "Screw implant removal performed before 3 months without strong justification (e.g., for complications like infection or broken implants).",
+    "Detailed procedure/operative notes missing critical information on surgical steps or implant details."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB or Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "After fracture healing, an implant plays no role and the question rises whether the implant should be removed and if so, why and when. However, several benefits of removal of implants were acknowledged such as functional improvement and pain relief, the complications of surgical procedure such as neurovascular injury and refractures, whereas the expected outcome is not well determined yet.",
+      "Ideally an implant should not be removed before the fracture is solidly united and the implant is no longer serving any purpose.",
+      "A screw used in a neutral fashion and Compression fashion, both allows to hold the plate in place, allows movement of the bone fragment relative to the plate as it is tightened. Are usually removed at 3 months."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": "Preparation for Implant removal surgery: What needs to be removed, why does the implant need removal, when was it implanted, where is the implant located, Is the implant broken, what is the surgical plan.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

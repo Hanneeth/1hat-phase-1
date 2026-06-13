@@ -1,0 +1,157 @@
+{
+  "_test_id": "TC04",
+  "_description": "Portability case — patient from Maharashtra being treated in Chennai. Acute appendicitis. Tests PORTABILITY_CASE flag in Phase 8. Home state PPD may reject public-reserved packages.",
+  "_expected_status": "READY_WITH_WARNINGS",
+  "_expected_specialty": "SG",
+  "_expected_flags_include": [
+    "PORTABILITY_CASE",
+    "CANDIDATES_GENERATED"
+  ],
+  "_expected_flags_exclude": [
+    "WALLET_INSUFFICIENT",
+    "PUB_RESERVED_BLOCK"
+  ],
+  "session_id": "IRIS-TC04-20260612",
+  "created_at": "2026-06-12T11:00:00+05:30",
+  "patient": {
+    "patient_id": "P004"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": true,
+    "is_medico_legal": false,
+    "chief_complaints": "Severe right lower abdominal pain 24 hours, fever 101°F, vomiting 3 episodes, loss of appetite",
+    "duration_days": 1,
+    "history_of_present_illness": "Patient visited Chennai for a business trip. Developed periumbilical pain yesterday which shifted to right lower quadrant over 12 hours. Accompanied by fever, vomiting, and anorexia. No similar episodes in past. No bowel irregularity. No urinary complaints.",
+    "provisional_diagnosis": "Acute appendicitis",
+    "planned_procedure": "Laparoscopic appendicectomy",
+    "weight_kg": 78,
+    "height_cm": 175,
+    "vitals": {
+      "bp_systolic_mmhg": 118,
+      "bp_diastolic_mmhg": 76,
+      "pulse_bpm": 94,
+      "spo2_pct": 98,
+      "temperature_f": 101.2,
+      "rr_per_min": 18,
+      "gcs": 15,
+      "blood_glucose_mgdl": null
+    },
+    "examination_findings": {
+      "general": "Patient in pain, mild distress, feverish, no pallor, no icterus",
+      "cvs": "S1 S2 heard, tachycardia, no murmurs",
+      "rs": "Clear air entry bilateral",
+      "abdomen": "Guarding and tenderness at McBurney's point. Rovsing sign positive. Rebound tenderness present. No rigidity. Bowel sounds present.",
+      "cns": "No focal deficits",
+      "local": null
+    },
+    "investigations": [
+      {
+        "type": "usg",
+        "result_summary": "Appendix visualised — diameter 9.2mm, non-compressible, surrounding echogenic fat, no free fluid. Features consistent with acute appendicitis.",
+        "structured_values": [
+          {
+            "parameter": "appendix_diameter",
+            "value": 9.2,
+            "unit": "mm",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "compressibility",
+            "value": "non-compressible",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "periappendiceal_changes",
+            "value": "echogenic fat present",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-12"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "WBC 16800/cumm (elevated), neutrophils 84%, CRP 48 mg/L (elevated), Hb 14.2 g/dL, creatinine 0.8 mg/dL",
+        "structured_values": [
+          {
+            "parameter": "WBC",
+            "value": 16800,
+            "unit": "/cumm",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "neutrophils",
+            "value": 84,
+            "unit": "%",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "CRP",
+            "value": 48,
+            "unit": "mg/L",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "Hb",
+            "value": 14.2,
+            "unit": "g/dL",
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-12"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No significant past history",
+    "past_surgical_history": "None",
+    "current_medications": [],
+    "allergies": [
+      "Sulfa drugs"
+    ],
+    "personal_history": {
+      "smoking": "occasional",
+      "alcohol": "social",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Surgical emergency admission notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo",
+        "available": true
+      },
+      {
+        "key": "treating_doctor_prescription",
+        "label": "Surgeon advising admission",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Anand Rajan",
+      "registration_number": "TN-MED-33456",
+      "qualification": "MS General Surgery",
+      "specialty_code": "SG"
+    },
+    "notes": "Patient is from Maharashtra (portability case). Consented for emergency surgery. IV antibiotics started. Anaesthesia clearance obtained."
+  }
+}

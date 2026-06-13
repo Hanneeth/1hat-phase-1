@@ -1,0 +1,131 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE014A",
+  "procedure_code": "SE014A",
+  "condition": "Pterygium",
+  "procedure_name": "Pterygium + Conjunctival Autograft",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Pterygium + Conjunctival Autograft_Medco.pdf",
+    "Pterygium + Conjunctival Autograft_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD Ophthalmology",
+    "MS Ophthalmology",
+    "DNB Ophthalmology",
+    "PG Diploma Ophthalmology"
+  ],
+  "clinical_indications": [
+    "Diagnosis made is backed by clinical signs, symptoms, ophthalmic examination",
+    "Irritation in the affected eye and foreign body sensation",
+    "Vision impairment",
+    "Marked cosmetic disfigurement",
+    "Restricted eye movement"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "keratometry",
+        "label": "Keratometry"
+      },
+      {
+        "key": "retinoscopy_or_autorefraction_ar",
+        "label": "Retinoscopy or Autorefraction (AR)"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of the affected part"
+      },
+      {
+        "key": "full_face_picture_patient",
+        "label": "Full face picture of the patient"
+      }
+    ],
+    "claim": [
+      {
+        "key": "still_image_patient_undergoing_procedure",
+        "label": "Still image of the patient undergoing the procedure with patient ID and date"
+      },
+      {
+        "key": "blood_pressure_blood_sugar",
+        "label": "Other essential investigations- Blood Pressure & Blood Sugar (Fasting, PP and Random)"
+      },
+      {
+        "key": "operative_notes",
+        "label": "Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes detailing history of trauma (+/-), clinical symptoms and decrease in visual acuity?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected part with Proper labelling of Affected Eye whether R or L with full face photograph.",
+        "expected": true
+      },
+      {
+        "q": "Did the report suggest decrease in visual acuity?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are Blood Sugar (fasting, PP and/or random) investigations done and reports available if patient age >40years or patient is a known diabetic?",
+        "expected": true
+      },
+      {
+        "q": "Do OT notes detail the steps of surgery performed and was the surgery successful?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Was the Pterygium excision and conjunctival autograft done in the same eye?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Report does not suggest a decrease in visual acuity, or acuity not documented.",
+    "Clinical photograph of affected part is missing, improperly labelled (R/L), or full face picture of patient is missing.",
+    "Pterygium excision and conjunctival autograft not performed on the same eye.",
+    "Blood Sugar (fasting, PP and/or random) reports missing for patients >40 years or known diabetics.",
+    "Operative notes do not detail surgical steps or success."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Pterygium + Conjunctival Autograft Surgery only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination",
+      "Irritation in the affected eye and foreign body sensation",
+      "Vision impairment",
+      "Marked cosmetic disfigurement",
+      "Restricted eye movement"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB024A",
+  "procedure_code": "SB024A",
+  "condition": "Joint pathology requiring exploration or drainage",
+  "procedure_name": "Arthrotomy of any joint",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Arthrotomy-Arthrolysis of joint_Medco.pdf",
+    "Arthrotomy-Arthrolysis of joint_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Surgical exploration of a joint",
+    "Inspection of cartilage",
+    "Inspection of intra-articular structures",
+    "Inspection of joint capsule",
+    "Inspection of ligaments",
+    "Joint drainage"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_confirming_diagnosis",
+        "label": "Clinical notes confirming the diagnosis"
+      },
+      {
+        "key": "x_ray_pre_procedure_labelled",
+        "label": "X-ray labelled with patient ID, date and side (Left/ Right) of affected part"
+      },
+      {
+        "key": "clinical_photograph_affected_part",
+        "label": "Clinical photograph of affected part"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_procedure_x_ray_labelled",
+        "label": "Post-procedure X-ray labelled with patient ID, date and side (Left/Right) of affected part"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes with indication for surgery submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray labelled with patient ID, date and side (Left/Right) of affected part is indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photograph of affected part",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Post-procedure X-ray labelled with patient ID, date and side (Left/Right) of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Were Post-operative photographs submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical findings and X-ray report not indicative of surgery",
+    "Clinical notes with indication for surgery not submitted",
+    "X-ray labelled with patient ID, date and side (Left/Right) of affected part not indicative of surgery",
+    "Clinical photograph of affected part not submitted or unclear",
+    "Detailed ICPs with daily vitals and treatment details not provided",
+    "Post-procedure X-ray (labelled with patient ID, date and side) of affected part not submitted",
+    "Detailed Procedure / Operative Notes not available",
+    "Post-operative photographs not submitted",
+    "Discharge summary with follow-up advice not provided at discharge"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/ Equivalent (in Orthopedics)",
+    "clinical_key_pointers": [
+      "An arthrotomy is a surgical exploration of a joint, which should include inspection of the cartilage, intra-articular structures, joint capsule, and ligaments.",
+      "May be used in drainage."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

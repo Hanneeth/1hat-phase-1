@@ -1,0 +1,121 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU029B",
+  "procedure_code": "SU029B",
+  "condition": "Uretero-vaginal / Uterine fistula repair",
+  "procedure_name": "Uretero - Uterine fistula repair - Open",
+  "specialty": "Urology, Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Uretero-vaginal and Uterine fistula repair_Medco.pdf",
+    "Uretero-vaginal and Uterine fistula repair_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MCh / DNB equivalent in (Urology)",
+    "MS/PG Diploma in (Obstetrics & Gynecology)"
+  ],
+  "clinical_indications": [
+    "Proceed with Uretero-vaginal / Uterine fistula repair only if diagnosis made is backed by clinical manifestation:",
+    "Abdominal pain",
+    "Distention or paralytic ileus",
+    "Hematuria",
+    "Irritability of the bladder"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "imaging_reports_endoscopy_reports",
+        "label": "Intravenous pyelogram (IVP)/ CT-IVP/CT-urogram report + cystoscopy and vaginoscopy report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed Operative notes / Procedure notes"
+      },
+      {
+        "key": "intra_procedure_still_photograph",
+        "label": "Intra procedure still photograph"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was Clinical notes including evaluation findings, indication for procedure, and planned line of management submitted?",
+        "expected": true
+      },
+      {
+        "q": "Intravenous pyelogram (IVP)/ CT-IVP/CT-urogram report + cystoscopy and vaginoscopy report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did imaging suggest presence of fistula?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure/Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Intra procedure still photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing, incomplete, or not detailing evaluation findings, indication, or planned management.",
+    "Imaging (IVP/CT-IVP/CT-urogram) or endoscopic (cystoscopy/vaginoscopy) reports missing or incomplete, preventing confirmation of fistula diagnosis.",
+    "Intra-procedure still photograph not submitted at claim stage.",
+    "Imaging reports (IVP/CT-IVP/CT-urogram) did not confirm the presence of a fistula, or report is unclear.",
+    "Operative notes missing, incomplete, or lacking details of surgical steps and findings."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care and Laparoscopic surgery facility availability.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A vaginal fistula is an abnormal opening that connects your vagina to another organ, such as your bladder, colon or rectum.",
+      "There are several types of vaginal fistulas:",
+      "Vesicovaginal fistula: Also called a bladder fistula, this opening occurs between your vagina and urinary bladder and is the type that doctors see most often.",
+      "Ureterovaginal fistula: This type of fistula happens when the abnormal opening develops between your vagina and the ducts that carry urine from your kidneys to your bladder (ureters).",
+      "Urethrovaginal fistula: In this type of fistula, also called a urethral fistula, the opening occurs between your vagina and the tube that carries urine out of your body (urethra).",
+      "Rectovaginal fistula: In this type of fistula, the opening is between your vagina and the lower portion of your large intestine (rectum).",
+      "Colovaginal fistula: With a colovaginal fistula, the opening occurs between the vagina and colon.",
+      "Enterovaginal fistula: In this type of fistula, the opening is between the small intestine and the vagina.",
+      "The evidence relating to diagnosis and treatment of urinary fistula is generally poor and this review inevitably relies largely on numerous case series and other consensus statements."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

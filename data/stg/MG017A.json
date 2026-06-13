@@ -1,0 +1,190 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Pneumonia/ : Pneumonia_Medco.pdf (clinical + mandatory docs) + Pneumonia_PPD.CPD.pdf (PPD/CPD processing checklists).",
+  "stg_id": "MG017A",
+  "procedure_code": "MG017A",
+  "condition": "Severe Pneumonia",
+  "procedure_name": "Severe pneumonia",
+  "specialty": "General Medicine/ Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Pneumonia_Medco.pdf",
+    "Pneumonia_PPD.CPD.pdf"
+  ],
+  "alos": "5 days (to be capped, new pre-auth to be raised after 5 days, if required, & should not be auto-approved)",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Not able to drink (General danger sign)",
+    "Persistent vomiting (General danger sign)",
+    "Convulsions (General danger sign)",
+    "Lethargic or unconscious (General danger sign)",
+    "Stridor in a calm child or severe malnutrition (General danger sign)",
+    "Irregular or gasping respiration (Red flag sign)",
+    "Cold extremities (Red flag sign)",
+    "Altered sensorium (Red flag sign)",
+    "Cyanosis (Red flag sign)",
+    "Frank hemoptysis",
+    "Signs of respiratory failure (RR>30/min, Abdominothoracic paradox, cyanosis, speaks in short sentences)",
+    "Multi-lobar consolidation on chest X-ray",
+    "Confusion/disorientation"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "CRB-65 score",
+      "operator": ">",
+      "value": "1",
+      "note": "Referral criterion for higher centre"
+    },
+    {
+      "field": "Oxygen saturation (O2)",
+      "operator": "<=",
+      "value": "92%",
+      "note": "for patients <=50 yrs"
+    },
+    {
+      "field": "Oxygen saturation (O2)",
+      "operator": "<",
+      "value": "90%",
+      "note": "for patients >50 yrs"
+    },
+    {
+      "field": "Hypothermia (core temperature)",
+      "operator": "<",
+      "value": "360C",
+      "note": "Referral criterion for higher centre"
+    },
+    {
+      "field": "CRB-65 Confusion",
+      "operator": "present",
+      "value": "1 point",
+      "note": "For mortality risk assessment in primary care"
+    },
+    {
+      "field": "CRB-65 Respiratory rate",
+      "operator": ">=",
+      "value": "30/min",
+      "note": "For mortality risk assessment in primary care"
+    },
+    {
+      "field": "CRB-65 Low BP",
+      "operator": "<=",
+      "value": "DBP ≤60 mmHg or SBP ≤90 mmHg",
+      "note": "For mortality risk assessment in primary care"
+    },
+    {
+      "field": "CRB-65 Age",
+      "operator": ">=",
+      "value": "65 years",
+      "note": "For mortality risk assessment in primary care"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "x_ray_ct_chest",
+        "label": "X ray / CT chest"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "complete_blood_count_cbc",
+        "label": "Complete Blood Count (CBC)"
+      },
+      {
+        "key": "liver_function_test_lft",
+        "label": "Liver Function Test (LFT)"
+      },
+      {
+        "key": "x_ray_ct_chest",
+        "label": "X Ray / CT Chest"
+      },
+      {
+        "key": "pleural_fluid_culture",
+        "label": "Pleural fluid culture"
+      },
+      {
+        "key": "covid_testing",
+        "label": "COVID testing (To be decided on case to case basis as per ICMR/ GoI guidelines and only in specific centres approved by GoI for doing such testing.)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are the clinical sign and symptoms mentioned suggestive for Pneumonia?",
+        "expected": true
+      },
+      {
+        "q": "Did chest X ray show any abnormality?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Did Chest X ray show any abnormality?",
+        "expected": true
+      },
+      {
+        "q": "Has COVID testing been done?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical history or radiological findings not suggestive of Severe Pneumonia.",
+    "X-ray/CT chest not showing any abnormality.",
+    "If COVID testing was advised, ICMR/GoI guidelines for testing were not strictly followed.",
+    "Missing mandatory clinical notes or X-ray/CT chest at pre-authorization."
+  ],
+  "additional_information": {
+    "icd_10_code": "J18.9",
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD / DNB/ equivalent (Medicine/ Pediatrics/ Pulmonology)",
+    "clinical_key_pointers": [
+      "Clinical picture of High fever (>39 degree)",
+      "Cough",
+      "Difficult breathing",
+      "Chest pain",
+      "Dullness to percussion",
+      "Diminished breath sounds",
+      "Inspiratory crepitations",
+      "Sometimes bronchial breath sounds on examination",
+      "Presence of comorbid medical conditions",
+      "Saturation O2 ≤92% and ≤90% for age ≤50 and >50 years"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": "If referring to a higher center: give the first dose of antibiotic (oral and if available, parenteral), secure an IV line, and start 0.9% Normal saline and oxygen supplementation through face mask at 4-6 litres per minute during shift. If patient is drowsy and has copious secretions, consider calling for help from the SUB-DISTRICT/DISTRICT hospital for endotracheal intubation and shifting on a transport ventilator.",
+    "post_op_care": "Accepting orally, Afebrile and Hemodynamically stable for a period of at least 48 hours for discharge.",
+    "fitness_criteria": null,
+    "comorbidity_management": "Oral antibiotics after checking for comorbidities (Diabetes, CVDs, CKD, CLD, Hepatic Pathology, Cancer, Alcohol Abuse, H/o antibiotics within last 3 months). If suspected atypical pathogens, other end organ disease, diabetes, malignancy, severe CAP, use of antibiotics in past 3 months. Suspected P. aeruginosa (diabetes, chronic lung disease like bronchiectasis, chronic steroid therapy) in ICU.",
+    "referral_criteria": [
+      "Frank hemoptysis and/or Signs of respiratory failure [listed under in the history and evaluation sections]",
+      "CRB-65 score > 1",
+      "Oxygen saturation by pulse oximetry ≤ 92% (patients ≤50 yrs) OR <90% (patients>50 yrs)",
+      "Multi-lobar consolidation on chest X-ray",
+      "Confusion/disorientation",
+      "Hypothermia (core temperature <360C)"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Cardiorespiratory arrest (for Non-invasive ventilation)",
+      "Presence of severe upper airway inflammation & edema (for Non-invasive ventilation)",
+      "Severe haemodynamic instability - hypotension (for Non-invasive ventilation)",
+      "Eu-capnic (normal PaCO2) coma (for Non-invasive ventilation)",
+      "Multiple organ dysfunction or severe psychomotor agitation (for Non-invasive ventilation)"
+    ]
+  }
+}

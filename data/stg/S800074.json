@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S800074",
+  "procedure_code": "S800074",
+  "condition": "Muscle Biopsy",
+  "procedure_name": "Muscle Biopsy with report",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "muscle biopsy_Medco.pdf",
+    "muscle biopsy_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Evaluation and diagnosis of patients presenting to clinic with acute or progressive weakness who are suspected of having an underlying neuromuscular disorder.",
+    "Providing diagnostic evidence that either establishes a disease etiology or focuses the differential diagnosis alongside clinical examination, electrodiagnostic, laboratory and molecular genetic testing.",
+    "Distinguishing between a necrotizing, metabolic or inflammatory myopathy in the setting of rapidly progressive muscle weakness to facilitate rapid, appropriate therapeutic management.",
+    "Identifying pathologic protein defects via immunohistochemical staining on the muscle biopsy specimen (e.g., in cases of suspected dystrophinopathy without genetic confirmation) to pave the way for genetic confirmation."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes including evaluation findings, indication of procedure and planned line of management"
+      },
+      {
+        "key": "electromyography_report",
+        "label": "Electromyography (EMG) report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "histopathological_report_muscle_biopsy",
+        "label": "Histopathological report of muscle biopsy"
+      },
+      {
+        "key": "post_procedure_clinical_photograph_scar_photo",
+        "label": "Post Procedure clinical photograph/scar photo (Optional)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of management, indication for procedure, and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Was Electromyography (EMG) report of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Electromyography (EMG) report indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were detailed Indoor Case Papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the histopathological report of muscle biopsy submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or incomplete (lacking detailed history, signs/symptoms, planned management, or indication for procedure).",
+    "Electromyography (EMG) report not submitted or not indicative of the procedure.",
+    "Detailed Indoor Case Papers (ICPs) not submitted at claim processing.",
+    "Histopathological report of muscle biopsy not submitted at claim processing.",
+    "Detailed Procedure/Operative Notes not available at claim processing.",
+    "Discharge summary missing or lacking follow-up advice at claim processing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at a Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Muscle biopsy is an important tool for the evaluation and diagnosis of patients presenting to clinic with acute or progressive weakness who are suspected of having an underlying neuromuscular disorder.",
+      "Alongside clinical examination, electrodiagnostic, laboratory and molecular genetic testing, muscle biopsy has a critical role, providing diagnostic evidence.",
+      "It can establish a disease etiology or focus the differential diagnosis.",
+      "In rapidly progressive muscle weakness, muscle biopsy is an expeditious diagnostic study to distinguish between necrotizing, metabolic or inflammatory myopathy.",
+      "Immunohistochemical staining on muscle biopsy can identify pathologic protein defects for genetic confirmation, even if initial genetic tests don't confirm dystrophinopathy.",
+      "The muscle biopsy procedure itself is fairly straightforward with little risk.",
+      "Full benefit requires involvement of a surgeon, processing laboratory, and pathologist, necessitating careful planning.",
+      "Successful muscle biopsy requires optimal cryo-processing of fresh specimens to preserve viable macromolecules for enzyme histochemistry and metabolic assays, unlike other organ biopsies requiring simple formalin preservation.",
+      "The ordering physician must orchestrate tissue collection, packaging, and processing to ensure desired testing can be performed and to avoid repeat procedures due to limited, inappropriate or poor sample quality.",
+      "Ordering clinicians should be familiar with the procedure, common pitfalls, and requirements of each team member for an optimal outcome.",
+      "Muscles traditionally chosen for biopsy include the deltoid, biceps, and quadriceps."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG048A",
+  "procedure_code": "SG048A",
+  "condition": "Mesenteric Cyst",
+  "procedure_name": "Mesenteric Cyst – Excision",
+  "specialty": "General/Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Mesenteric Cyst_Medco.pdf",
+    "Mesenteric Cyst_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (in General Surgery)",
+    "MCh/DNB/Equivalent (in Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Symptomatic mesenteric cysts requiring surgical excision",
+    "Painless abdominal swelling with characteristic physical signs (fluctuant swelling near umbilicus, moves freely at right angles to mesentery - Tillaux's sign, zone of resonance around cyst)",
+    "Recurrent attacks of abdominal pain with or without vomiting (due to temporary impaction of a food bolus or torsion of mesentery)",
+    "Acute abdominal catastrophe (due to torsion, rupture, haemorrhage into cyst, or infection)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure, and planned line of management"
+      },
+      {
+        "key": "usg_ct_mri_abdomen",
+        "label": "USG/CT/MRI Abdomen"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "intra_operative_photographs",
+        "label": "Intra-operative photographs (optional)"
+      },
+      {
+        "key": "histopathology_examination",
+        "label": "Histopathology examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did USG/CT/MRI Abdomen report confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was histopathology examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Imaging report (USG/CT/MRI Abdomen) does not confirm the diagnosis or is not indicative of surgery.",
+    "Clinical notes are missing detailed history, signs, symptoms, or planned line of treatment and indication for procedure.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details are missing or incomplete.",
+    "Detailed Procedure / Operative Notes are not available.",
+    "Histopathology examination report was not submitted.",
+    "Discharge summary is missing or lacks follow-up advice at the time of discharge."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Cysts of the mesentery are benign lesions.",
+      "Typically, the cyst is located in the umbilical region which moves at right angles to the direction of mesentery.",
+      "These are congenital cysts, enterogenous or chylolymphatic.",
+      "MESENTERIC CYST-TYPES: Chylolymphatic cyst, Enterogenous cyst, Urogenital remnant, Teratomatous dermoid cyst."
+    ],
+    "surgical_options": [
+      "Enucleation",
+      "Bowel resection",
+      "Partial excision with marsupialization (if enucleation and resection is not possible)",
+      "Chylolymphatic cyst: Enucleation (without sacrificing bowel, due to separate blood supply)",
+      "Enterogenous cyst: Excision of cyst with bowel segment (both share the same blood supply)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

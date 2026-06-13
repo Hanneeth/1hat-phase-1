@@ -1,0 +1,127 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG122A",
+  "procedure_code": "SG122A",
+  "condition": "Distal Pancreatectomy + Splenectomy",
+  "procedure_name": "Distal Pancreatectomy + Splenectomy",
+  "specialty": "General Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Distal Pancreatectomy and Splenectomy_Medco.pdf",
+    "Distal Pancreatectomy and Splenectomy_PPD.CPD.pdf"
+  ],
+  "alos": "7 Days",
+  "min_doctor_qualification": [
+    "MS/DNB/Equivalent (General Surgery)",
+    "MCh/DNB/Equivalent (GI Surgery)"
+  ],
+  "clinical_indications": [
+    "To treat pancreatic cancer localised at the end of the pancreas",
+    "For chronic pancreatitis, pancreatic pseudocysts, and injury due to trauma",
+    "Removal of adjacent spleen when the disease affects the splenic artery or vein",
+    "For tumours in the tail of the pancreas, especially in cancer cases where the tumour invades the splenic artery or vein or has spread to lymph nodes in the hilum of the spleen"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical Notes with history and examination and planned line of treatment"
+      },
+      {
+        "key": "ct_abdomen_report",
+        "label": "CT Abdomen Report"
+      },
+      {
+        "key": "biopsy_report_optional",
+        "label": "Biopsy Report (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed Operative/Procedure Notes"
+      },
+      {
+        "key": "intraoperative_photograph_optional",
+        "label": "Intraoperative Photograph (Optional)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "post_operative_hpe_report",
+        "label": "Post Operative HPE Report"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the patient's clinical history/investigations indicative of the Procedure?",
+        "expected": true
+      },
+      {
+        "q": "Whether the investigation reports confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Whether CT Abdomen report available?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Operative/Procedure notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the discharge summary with follow-up advice available at discharge?",
+        "expected": true
+      },
+      {
+        "q": "Whether post-operative HPE report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's clinical history/investigations not indicative of the procedure.",
+    "Investigation reports do not confirm the diagnosis.",
+    "CT Abdomen report not available at pre-authorization.",
+    "Detailed Operative/Procedure notes not available at claim submission.",
+    "Detailed Discharge Summary with follow-up advice not available at claim submission.",
+    "Detailed Indoor Case Papers (ICPs) with daily vitals and treatment details not available.",
+    "Post-operative HPE report not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A distal Pancreatectomy is the removal of the end of the pancreas while leaving the pancreatic head attached. It is performed to treat pancreatic cancer localised at the end of the pancreas but may also be used for chronic pancreatitis, pancreatic pseudocysts, and injury due to trauma. The adjacent spleen is often removed when the disease affects the splenic artery or vein.",
+      "After the end of the pancreas is removed, the remaining portion of the organ functions normally by producing and releasing digestive enzymes and hormones. Compared to surgical procedures that remove the head of the pancreas, a distal pancreatectomy is performed in much less time and requires a shorter recovery period. The procedure can also be performed laparoscopically and may be combined with chemotherapy or radiation therapy.",
+      "Tumours in the tail of the pancreas are removed with distal pancreatectomy. In cancer cases, the tumour often invades the splenic artery or vein. In addition, cancers in this location can spread to the lymph nodes in the hilum of the spleen. For these reasons, the removal of the spleen is also indicated along with the tail of the pancreas. The pancreatic duct and cut edge of the pancreas are oversewn to prevent leakage of pancreatic enzymes/hormones."
+    ],
+    "surgical_options": [
+      "Laparoscopic approach",
+      "Combined with chemotherapy or radiation therapy"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "The pancreatic duct and cut edge of the pancreas are oversewn to prevent leakage of pancreatic enzymes/hormones.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

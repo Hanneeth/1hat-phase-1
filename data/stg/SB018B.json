@@ -1,0 +1,93 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB018B",
+  "procedure_code": "SB018B",
+  "condition": "Fracture - Acetabulum",
+  "procedure_name": "Fracture - Acetabulum (Combined Approach)",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Fracture Acetabulum_Medco.pdf",
+    "Fracture Acetabulum_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 10 years of experience"
+  ],
+  "clinical_indications": [
+    "Displaced fractures of the acetabulum requiring anatomical reduction and rigid internal fixation."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "x_ray_affected_limb",
+        "label": "X-ray labelled with patient ID, date and side (Left/ Right) - affected limb"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers (ICPs)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure / operation notes"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice and bar code of implant"
+      },
+      {
+        "key": "post_procedure_x_ray_affected_limb",
+        "label": "Post procedure X-ray labelled with patient ID, date and side (Left/Right) - affected limb"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Does the Post Procedure X Ray show the fracture stabilization/implant type of Acetabulum and its type?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or incomplete regarding history, symptoms, evaluation findings, indication for procedure, or planned line of management at pre-authorization.",
+    "Pre-authorization X-ray not labelled with patient ID, date, or side of affected limb.",
+    "Invoice and barcode of implant missing or unreadable at claim submission.",
+    "Procedure / operation notes missing or incomplete at claim submission.",
+    "Post Procedure X Ray does not show the fracture stabilization/implant type of Acetabulum or its type."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Mechanism of fracture: Fractures of the Acetabulum occur primarily in young adults as a result of high-velocity trauma (vehicular accidents or falls from heights). These fractures are often associated with other life-threatening injuries.",
+      "Displacement of the fracture fragments leads to articular incongruity of the hip joint that results in abnormal pressure distribution on the articular cartilage surface. This can lead to rapid breakdown of the cartilage surface, resulting in disabling arthritis of the hip joint."
+    ],
+    "surgical_options": [
+      "Displaced fractures of the acetabulum are best treated with anatomical reduction and rigid internal fixation. Superior outcomes are associated with anatomic reduction of the weight bearing dome of the acetabulum.",
+      "Most of the acetabular fractures (98%) can be managed by a single appropriate operative approach. However, adequate visualization of some acetabular fracture types may necessitate extensile or combined anterior and posterior approaches.",
+      "The triradiate, extended iliofemoral, the modified extensile approach and combined anterior and posterior exposures are the various techniques described.",
+      "Combined surgical approaches have been described as staged procedures under the same anesthesia or at different operative settings."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

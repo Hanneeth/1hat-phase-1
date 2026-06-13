@@ -1,0 +1,127 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "ST007A",
+  "procedure_code": "ST007A",
+  "condition": "Compound fracture with wound requiring flap cover",
+  "procedure_name": "Internal fixation with Flap cover Surgery for wound in compound fracture",
+  "specialty": "Polytrauma",
+  "version": "1.1",
+  "source_files": [
+    "Internal fixation with flap cover surgery_Medco.pdf",
+    "Internal fixation with flap cover surgery_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MS Orthopedic surgery",
+    "DNB Orthopedic surgery",
+    "MCh Reconstructive Surgery",
+    "DNB Reconstructive Surgery"
+  ],
+  "clinical_indications": [
+    "Compound fracture suggested by clinical notes and X-ray report requiring internal fixation and flap cover surgery"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_injury_need_for_surgery",
+        "label": "Clinical Notes detailing the injury and need for surgery"
+      },
+      {
+        "key": "xray_ct_report_fractured_limb",
+        "label": "X-ray/ CT report of fractured limb"
+      },
+      {
+        "key": "pre_op_clinical_photograph_injury",
+        "label": "Pre op clinical photograph of injury (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "post_op_clinical_photograph_implant_fixation_flap_cover",
+        "label": "Post op clinical photograph showing implant for fixation and flap cover (Optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the clinical notes and X-ray report suggestive of compound fracture?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the post op clinical photograph show implant fixation and flap cover?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or X-ray report not suggestive of compound fracture.",
+    "Clinical Notes detailing the injury and need for surgery not submitted or incomplete at pre-authorization.",
+    "X-ray/ CT report of fractured limb not submitted or inconclusive at pre-authorization.",
+    "Detailed Discharge Summary not mentioning date of follow-up submitted at claim.",
+    "Post op clinical photograph showing implant fixation and flap cover not submitted at claim."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Functional Operation Theatre",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Open fractures often are associated with high-energy trauma",
+      "the initial assessment as per Advanced Trauma Life Support protocol",
+      "Stop external haemorrhage - direct pressure or with application of a tourniquet.",
+      "Neurovascular examination of the limb.",
+      "Provide adequate analgesia.",
+      "Straighten and align limb and classify fracture (Modified Gustilo Anderson classification)",
+      "Remove gross contaminants from the wound.",
+      "Photograph wound.",
+      "Cover wound with sterile, moist (saline) dressing and adhesive film dressing.",
+      "Leave wound undisturbed until patient reaches the operating theatre.",
+      "Splint fracture",
+      "Repeat neurovascular examination.",
+      "IV antibiotics: co-amoxiclav (1.2 g) or cefuroxime (1.5g) 8 hourly, or clindamycin 600 mg if the patient is allergic to penicillin.",
+      "Check tetanus status and administer prophylaxis if required",
+      "X-ray: two orthogonal views, two joints",
+      "Immediate consultation to the plastic surgery team after formulating plan for bone stabilization",
+      "Shift to OT for debridement",
+      "Thorough debridement, to be done within 24 hours of admission",
+      "Fracture fixation- external or internal and reassessment",
+      "Plan for permanent cover – flap(fasciocutaneous/muscle) or graft according to status of wound else provide temporary cover with NPWT and second look in 72 hrs.",
+      "Wounds requiring free flaps best done within 1st week.",
+      "Local flaps are safely performed at the same time as skeletal fixation. Internal fixation is only undertaken if soft tissue coverage can be performed at the same time.",
+      "Free flap reconstruction is best performed on scheduled trauma lists by experienced, dedicated senior surgical teams following adequate preparation of the patient, including imaging such as angiography or computed tomography (CT) scanning of comminuted fractures.",
+      "Microsurgery is best performed before the vessels become friable or fibrosed and this becomes increasingly likely after the first week. We recommend that definitive soft tissue reconstruction be undertaken within the first 7 days after injury.",
+      "All open fractures are covered with vascularized soft tissue.",
+      "Dressings such as those using foam with negative pressure can temporize following wound excision but are not to be used as a substitute for definitive flap coverage.",
+      "Relatively low energy tibial fractures are covered by local fasciocutaneous flaps so long as the vascularity has not been compromised by the zone of injury and degloving.",
+      "Diaphyseal tibial fractures with periosteal stripping are best covered by muscle flaps instead of fasciocutaneous flaps.",
+      "Metaphyseal fractures, especially those around the ankle, are best covered by fasciocutaneous flaps, including free flaps."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Immediate consultation to the plastic surgery team after formulating plan for bone stabilization.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

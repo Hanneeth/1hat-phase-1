@@ -1,0 +1,103 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SO055A",
+  "procedure_code": "SO055A",
+  "condition": "Manual Removal of Placenta",
+  "procedure_name": "Manual Removal of Placenta",
+  "specialty": "Obstetrics & Gynecology",
+  "version": "1.1",
+  "source_files": [
+    "Manual Removal of Placenta_Medco.pdf",
+    "Manual Removal of Placenta_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "MBBS with relevant experience"
+  ],
+  "clinical_indications": [
+    "Placenta not expelled even after 30 minutes of the delivery of baby",
+    "Postpartum haemorrhage with retained placenta",
+    "Shock (mostly hypovolemic following haemorrhage)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "detailed_clinical_notes_delivery_notes",
+        "label": "Detailed clinical notes including Delivery notes (if available) with history, symptoms, signs, examination findings, indications and advice for admission"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_vitals",
+        "label": "Indoor case papers with vitals"
+      },
+      {
+        "key": "last_predelivery_investigation_reports",
+        "label": "Last Investigation reports of predelivery if available (Haemoglobin, ABO-Rh, Urine Albumin and Sugar)"
+      },
+      {
+        "key": "post_procedure_investigations",
+        "label": "Investigations done after the procedure (Haemoglobin)"
+      },
+      {
+        "key": "detailed_operative_procedure_notes",
+        "label": "Detailed operative / procedure notes"
+      },
+      {
+        "key": "general_anaesthesia_or_iv_sedation_documentation",
+        "label": "Documentation of General anaesthesia (preferable) or Intravenous sedation"
+      },
+      {
+        "key": "discharge_summary_follow_up_advice",
+        "label": "Discharge summary with follow-up advise at the time of discharge"
+      },
+      {
+        "key": "blood_transfusion_notes",
+        "label": "Blood transfusion notes (if blood transfusion was given)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is there evidence of uterine malformations on Ultrasound/examination?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Evidence of uterine malformations found on Ultrasound/examination",
+    "Detailed indoor case papers with vitals missing or incomplete",
+    "Last pre-delivery investigation reports (Haemoglobin, ABO-Rh, Urine Albumin and Sugar) missing or incomplete",
+    "Post-procedure investigations (Haemoglobin) missing or incomplete",
+    "Detailed operative/procedure notes missing or incomplete",
+    "Documentation of General anaesthesia or Intravenous sedation missing",
+    "Discharge summary with follow-up advice missing or incomplete",
+    "Blood transfusion notes missing when transfusion was given"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Facilities with well-equipped operation theatre / labour room",
+    "min_doctor_qualification_desirable": "MS/ DNB/ DGO or equivalent (Obstetrics & Gynaecology) or possessing a recognized Emergency obstetrics care certification from a government recognized institution.",
+    "clinical_key_pointers": [
+      "Manual removal of placenta is performed when the placenta is not expelled even 30 minutes after the delivery of the baby.",
+      "With active management, the placenta is commonly delivered within 5-10 minutes."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [
+      "Ratio of Manual Removal of Placenta to the Number of Vaginal deliveries being carried out in a hospital to be monitored"
+    ],
+    "contraindications": [
+      "Malformation of the uterus",
+      "Placenta accreta",
+      "Uterine fibroid"
+    ]
+  }
+}

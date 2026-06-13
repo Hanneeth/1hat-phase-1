@@ -1,0 +1,113 @@
+{
+  "stg_id": "SU069A",
+  "procedure_code": "SU069A",
+  "condition": "Perineal Urethrostomy without closure",
+  "procedure_name": "Perineal Urethrostomy without closure",
+  "specialty": "Urology, Pediatric surgery",
+  "version": "1.1",
+  "source_files": [
+    "Perineal Urethrostomy without closure_Medco.pdf",
+    "Perineal Urethrostomy without closure_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology, Pediatric surgery)"
+  ],
+  "clinical_indications": [
+    "Recurrent urethral strictures",
+    "Satisfactory solution, especially in the elderly",
+    "Also needed after urethrectomy and/or penectomy",
+    "Patients require chronic urinary diversion",
+    "Squamous cell carcinoma of penis",
+    "Hypospadias",
+    "Failure of previous reconstructive procedures, such as urethroplasty"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_planned_treatment",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "retrograde_urethrography_mcu",
+        "label": "Retrograde urethrography (RGU)/ Micturating Cysto-urethrogram (MCU) confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "intra_operative_clinical_photograph",
+        "label": "Intra operative clinical photograph"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure / operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Supporting Evidence for the surgery, Retrograde urethrography (RGU)/ Micturating Cysto-urethrogram (MCU) reports submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intra operative clinical Photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and Retrograde urethrography (RGU) / Micturating Cysto-urethrogram (MCU) not indicative of procedure.",
+    "Clinical notes including evaluation findings and planned line of treatment not submitted at pre-authorization.",
+    "Supporting evidence for the surgery (RGU/MCU reports) not submitted at pre-authorization.",
+    "Intra operative clinical photograph not submitted at claim submission.",
+    "Detailed procedure / operative Notes not submitted at claim submission.",
+    "Detailed discharge summary not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary care facilities",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Perineal urethrotomy is a surgical procedure usually performed for temporary urine diversion in patients with obstructive urinary outflow disease.",
+      "Creating a permanent opening into the urethra through an incision in the skin of the perineum.",
+      "Is the best option to restore urethral patency in case of urethral stricture disease.",
+      "PU allows the patient to resume normal voiding and is generally assumed to be the last option before abandoning the urethral outlet."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

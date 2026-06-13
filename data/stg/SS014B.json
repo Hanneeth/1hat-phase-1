@@ -1,0 +1,122 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS014B",
+  "procedure_code": "SS014B",
+  "condition": "Exomphalos and Gastroschisis",
+  "procedure_name": "Gastroschisis",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Exomphalos and Gastroschisis_Medco.pdf",
+    "Exomphalos and Gastroschisis_PPD.CPD.pdf"
+  ],
+  "alos": "1-4 weeks",
+  "min_doctor_qualification": [
+    "MCh/ Equivalent (Pediatric Surgery)"
+  ],
+  "clinical_indications": [
+    "Developmental abnormalities (abdominal wall defects) in the region of the umbilicus.",
+    "Diagnosed on antenatal ultrasonography or present at birth as neonatal emergencies, requiring urgent treatment.",
+    "Associated with exposed bowel on the abdominal wall.",
+    "A careful physical exam at birth revealing abdominal contents external to the abdominal wall is diagnostic."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_photographs",
+        "label": "Clinical photographs"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "post_operative_photographs",
+        "label": "Post-operative photographs"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the physical exam lead to clinical diagnosis of Gastroschisis/Exomphalos at birth?",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photographs?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative photographs?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Physical exam diagnosis of Gastroschisis/Exomphalos at birth not documented.",
+    "Clinical photographs supporting diagnosis not submitted at pre-authorization.",
+    "Clinical notes lack detailed history, signs & symptoms, or indication for procedure.",
+    "Detailed operative notes or procedure details are missing at claim submission.",
+    "Post-operative photographs not submitted at claim submission.",
+    "Detailed Indoor Case Papers (ICPs) lacking daily vitals or line of treatment."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Center equipped to handle the resuscitative and surgical needs of the newborn",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Exomphalos (Omphalocele) and Gastroschisis are developmental abnormalities (abdominal wall defects) in the region of the umbilicus, diagnosed on antenatal ultrasonography or present at birth as neonatal emergencies, requiring urgent treatment.",
+      "Gastroschisis and omphalocele are associated with exposed bowel on the abdominal wall.",
+      "The herniation of bowel through the abdominal wall 2 to 3 cm lateral to the umbilicus is a gastroschisis.",
+      "In contrast to omphalocele, the bowel is not covered by peritoneum or amniotic membrane. As a result, prolonged contact with the amniotic fluid typically causes a thick, exudative covering (a “peel”) on the exposed bowel.",
+      "Gastroschisis is not associated with extraintestinal anomalies, but segments of intestinal atresia are common.",
+      "During the neonatal period, infants with omphalocele and gastroschisis do not routinely receive any further investigations unless there are signs of dysmorphia.",
+      "No intrauterine interventions are available for the treatment of omphalocele or gastroschisis."
+    ],
+    "surgical_options": [
+      "Gastroschisis is a surgical emergency requiring immediate closure or coverage.",
+      "Small defects may be treated with primary surgical repair.",
+      "Larger defects or those with extensive herniation of abdominal contents require a staged approach with placement of the abdominal contents into a suspended silo and gradual reduction into the abdominal cavity."
+    ],
+    "pre_op_preparation": "Therapy is undertaken after delivery of the infant, with goals of temperature maintenance, fluid resuscitation, and preventing additional fluid loss from the abdominal contents with appropriate care of the herniated viscera, paying particular attention to the preservation of its blood supply.",
+    "post_op_care": "Ventral hernia develops at weak spot post repair, which requires surgical repair after about six months.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

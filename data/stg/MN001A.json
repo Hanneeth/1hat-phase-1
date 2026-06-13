@@ -1,0 +1,234 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MN001A",
+  "procedure_code": "MN001A",
+  "condition": "Basic Neonatal Care",
+  "procedure_name": "Basic neonatal care package: Babies that can be managed by side of mother in postnatal ward without requiring admission in SNCU/NICU",
+  "specialty": "Neo-natal Care",
+  "version": "1.1",
+  "source_files": [
+    "Basic neonatal care package_Medco.pdf",
+    "Basic neonatal care package_PPD.CPD.pdf"
+  ],
+  "alos": null,
+  "min_doctor_qualification": [
+    "MD/DNB/DCH/Equivalent (in Pediatrics)"
+  ],
+  "clinical_indications": [
+    "Any newborn needing feeding support",
+    "Babies requiring closer monitoring or short-term care for conditions like: Birth asphyxia (need for positive pressure ventilation; no HIE)",
+    "Babies requiring closer monitoring or short-term care for conditions like: Moderate jaundice requiring phototherapy",
+    "Babies requiring closer monitoring or short-term care for conditions like: Large for dates (>97 percentile) Babies",
+    "Babies requiring closer monitoring or short-term care for conditions like: Small for gestational age (less than 3rd centile)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "apgar_score",
+      "operator": ">",
+      "value": "5",
+      "note": "For birth asphyxia, along with positive pressure ventilation < 60 sec, to be managed in postnatal ward."
+    },
+    {
+      "field": "positive_pressure_ventilation_duration",
+      "operator": "<",
+      "value": "60 sec",
+      "note": "For birth asphyxia, along with Apgar score > 5, to be managed in postnatal ward."
+    },
+    {
+      "field": "baby_weight_percentile",
+      "operator": ">",
+      "value": "97",
+      "note": "For Large for Dates Babies"
+    },
+    {
+      "field": "baby_weight_percentile",
+      "operator": "<",
+      "value": "3",
+      "note": "For Small for Gestational Age Babies"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_eval_findings_plan",
+        "label": "Clinical notes including evaluation findings and planned line of management"
+      },
+      {
+        "key": "documentation_feeding_difficulties",
+        "label": "Documentation of feeding difficulties (if feeding support needed)"
+      },
+      {
+        "key": "clinical_photograph_orofacial_deformities",
+        "label": "Clinical photograph (in case orofacial deformities, if feeding support needed)"
+      },
+      {
+        "key": "neonate_resuscitation_notes",
+        "label": "Neonate resuscitation notes (if birth asphyxia)"
+      },
+      {
+        "key": "indication_monitoring_postnatal_ward",
+        "label": "Indication for monitoring in postnatal ward (if birth asphyxia)"
+      },
+      {
+        "key": "neonate_vital_monitoring",
+        "label": "Neonate vital monitoring (if birth asphyxia)"
+      },
+      {
+        "key": "arterial_cord_blood_analysis_optional",
+        "label": "Arterial cord blood analysis (optional, if birth asphyxia)"
+      },
+      {
+        "key": "blood_sugar_asphyxia_optional",
+        "label": "Blood sugar (optional, if birth asphyxia)"
+      },
+      {
+        "key": "complete_blood_count_asphyxia_optional",
+        "label": "Complete blood count (optional, if birth asphyxia)"
+      },
+      {
+        "key": "total_serum_bilirubin",
+        "label": "Total serum bilirubin (if moderate jaundice)"
+      },
+      {
+        "key": "blood_group_mother_baby",
+        "label": "Blood group: Mother and baby (if moderate jaundice)"
+      },
+      {
+        "key": "hemoglobin_reticulocyte_smear_hemolysis_optional",
+        "label": "Hemoglobin, reticulocyte count, peripheral smear for evidence of hemolysis (optional, if moderate jaundice)"
+      },
+      {
+        "key": "g6pd_enzyme_activity_optional",
+        "label": "G6PD enzyme activity (optional, if moderate jaundice)"
+      },
+      {
+        "key": "direct_coombs_test_optional",
+        "label": "Direct Coomb`s test (optional, if moderate jaundice)"
+      },
+      {
+        "key": "blood_glucose_lga",
+        "label": "Blood glucose (if large for dates)"
+      },
+      {
+        "key": "serum_calcium_lga",
+        "label": "Serum calcium (if large for dates)"
+      },
+      {
+        "key": "complete_blood_count_lga",
+        "label": "Complete blood count (if large for dates)"
+      },
+      {
+        "key": "feeding_monitoring_lga",
+        "label": "Feeding monitoring (if large for dates)"
+      },
+      {
+        "key": "vitals_monitoring_lga",
+        "label": "Vitals monitoring (if large for dates)"
+      },
+      {
+        "key": "blood_glucose_sga",
+        "label": "Blood glucose (if small for gestational age)"
+      },
+      {
+        "key": "serum_calcium_sga",
+        "label": "Serum calcium (if small for gestational age)"
+      },
+      {
+        "key": "complete_blood_count_sga",
+        "label": "Complete blood count (if small for gestational age)"
+      },
+      {
+        "key": "feeding_monitoring_sga",
+        "label": "Feeding monitoring (if small for gestational age)"
+      },
+      {
+        "key": "vitals_monitoring_sga",
+        "label": "Vitals monitoring (if small for gestational age)"
+      },
+      {
+        "key": "karyotyping_report_sga_optional",
+        "label": "Karyotyping report - If dysmorphic features present ± h/o previous miscarriages (optional, if small for gestational age)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_clinical_notes",
+        "label": "Indoor case papers (ICPs) / clinical notes"
+      },
+      {
+        "key": "investigations_reports",
+        "label": "Investigations reports (if done)"
+      },
+      {
+        "key": "detailed_procedure_notes_indication",
+        "label": "Detailed Procedure notes and indication (if any)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the feeding or breast issues documented in clinical notes?",
+        "expected": true
+      },
+      {
+        "q": "Was the APGAR score > 5/positive pressure ventilation documented < 60 sec?",
+        "expected": true
+      },
+      {
+        "q": "Was Serum bilirubin report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the baby weight >97 percentile according to the unit`s chart?",
+        "expected": true
+      },
+      {
+        "q": "Was the baby weight <3rd centile according to the unit`s chart?",
+        "expected": true
+      },
+      {
+        "q": "Was Karyotyping report (optional) submitted For Small for gestation age (<3 percentile) Babies if dysmorphic features are present ± h/o previous miscarriages?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed neonatal notes with daily vitals and line of treatment available?",
+        "expected": true
+      },
+      {
+        "q": "Are blood sugar/Serum bilirubin/APGAR score/ABG/weight plotted available as required by the case?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Feeding or breast issues not documented in clinical notes when feeding support is claimed.",
+    "APGAR score not > 5 or positive pressure ventilation not < 60 sec, indicating severe asphyxia not covered by this package.",
+    "Serum bilirubin report not submitted when moderate jaundice requiring phototherapy is claimed.",
+    "Baby's weight not >97th percentile for Large for Dates, or <3rd centile for Small for Gestational Age, or weight documentation is missing/incorrect.",
+    "Mandatory investigation reports (e.g., blood sugar, bilirubin, CBC) not submitted as per the presenting condition.",
+    "Detailed neonatal notes with daily vitals and line of treatment not available at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Postnatal ward",
+    "min_doctor_qualification_desirable": "DM/DNB/Equivalent (in Neonatology)",
+    "clinical_key_pointers": [
+      "Breast milk is unquestionably the best milk for a newborn baby. WHO recommends infants should be exclusively breastfed for the first 6 months. Breastfeeding should be immediately initiated after birth in hemodynamically stable newborns.",
+      "Icterus or jaundice is yellowish discoloration of skin, sclera and mucus membrane. Jaundice should be observed in broad daylight. Severity is assessed based on onset, intensity, associated clinical signs, lab reports, and clinical features of bilirubin induced brain dysfunction.",
+      "Newborns born >97th centile by customized centile charts are defined as Large for gestation age (LGA). Often infants of mothers with poorly controlled diabetes are macrosomic due to the effect of fetal hyperinsulinism secondary to exposure to high maternal glucose.",
+      "Perinatal asphyxia (PA) is a major cause of neonatal and under-5 mortality. PA is a multi-organ disorder affecting virtually every organ system in the body.",
+      "Intrauterine growth retardation (IUGR) are defined as small for gestation age (SGA), if their weight is below 3rd centile on charts, for that gestational age."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Immediate Transfer to NICU if: Apgar score at 1 minute is ≤ 3; Required prolonged bag and mask ventilation (60 seconds or more); Required chest compressions. Also, if total serum bilirubin does not decrease or continues to rise, or if the baby is a high-risk category for jaundice. For SGA, if hemodynamically unstable, any features suggestive of HIE, abnormal umbilical doppler changes of absent or reversal, or birth weight < 1.8 kg.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MP037A",
+  "procedure_code": "MP037A",
+  "condition": "Wilson's disease",
+  "procedure_name": "Wilson's disease",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Wilson disease_Medco.pdf",
+    "Wilson disease_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MD / DNB / DCH or equivalent (Pediatric Medicine)"
+  ],
+  "clinical_indications": [
+    "Coombs-negative hemolytic anemia (early manifestation – increasing pallor)",
+    "Persistent or recurrent Jaundice",
+    "Spider hemangioma",
+    "Portal hypertension",
+    "Fulminant hepatic failure",
+    "Tremors",
+    "Worsening handwriting",
+    "Decline in school performance",
+    "Dystonia",
+    "Psychiatric disturbances",
+    "Behavioral changes",
+    "Parkinsonism",
+    "Kayser-Fleischer rings"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "serum_ceruloplasmin",
+      "operator": "<",
+      "value": "20 mg/dL",
+      "note": "depressed levels"
+    },
+    {
+      "field": "24_hour_urine_copper",
+      "operator": ">",
+      "value": "100 µg/day",
+      "note": "elevated levels"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "serum_ceruloplasmin",
+        "label": "Serum ceruloplasmin"
+      },
+      {
+        "key": "24_hour_urine_copper",
+        "label": "24-hour urine copper"
+      },
+      {
+        "key": "slit_lamp_examination",
+        "label": "Slit lamp examination (Kayser-Fleischer ring) (if available)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "serum_ceruloplasmin",
+        "label": "Serum ceruloplasmin"
+      },
+      {
+        "key": "24_hour_urine_copper",
+        "label": "24-hour urine copper"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is the Serum ceruloplasmin levels depressed (<20 mg/dL)?",
+        "expected": true
+      },
+      {
+        "q": "Is the 24-hour urine copper levels elevated (>100 µg/day)?",
+        "expected": true
+      },
+      {
+        "q": "Is the age below 3 years?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do Detailed ICPs contain a detailed line of treatment?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Serum ceruloplasmin levels not depressed (<20 mg/dL) or not documented",
+    "24-hour urine copper levels not elevated (>100 µg/day) or not documented",
+    "Slit lamp examination for Kayser-Fleischer ring not performed or documented when clinically indicated",
+    "Age of patient is not below 3 years without sufficient justification",
+    "Detailed Indoor Case Papers (ICPs) do not include a detailed line of treatment"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Hematological manifestation: Coombs-negative hemolytic anemia (early manifestation – increasing pallor)",
+      "Hepatic manifestations (usually in early childhood): Persistent or recurrent Jaundice, Spider hemangioma, Portal hypertension, Fulminant hepatic failure",
+      "Neuropsychiatric manifestations: Tremors, Worsening handwriting, Decline in school performance, Dystonia, Psychiatric disturbances, Behavioral changes, Parkinsonism",
+      "Ocular: Kayser-Fleischer rings"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "S1100012",
+  "procedure_code": "BM006B",
+  "condition": "Post Burn Contracture surgeries for Functional Improvement",
+  "procedure_name": "Post Burn Contracture surgeries for Functional Improvement (Package including splints, pressure garments, silicone - gel sheet and physiotherapy): Neck contracture; Contracture release with - Split thickness Skin Graft (STSG) / Full Thickness Skin Graft (FTSG) / Flap cover is done for each joint with post-operative regular dressings for STSG / FTSG / Flap cover.",
+  "specialty": "Burns Management",
+  "version": "1.1",
+  "source_files": [
+    "Post Burn Contracture surgeries for Functional Improvement_Medco.pdf",
+    "Post Burn Contracture surgeries for Functional Improvement_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent Plastic Surgery/ Reconstructive Surgery"
+  ],
+  "clinical_indications": [
+    "Post burn contractures of the neck that are severely disfiguring and restrict motion."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_history_burns_etiology_treatment_contractures",
+        "label": "Clinical history detailing the burns - etiology, treatment given, and resultant contractures left"
+      },
+      {
+        "key": "functional_disability_expected_improvement",
+        "label": "Functional disability to be detailed and expected functional improvement to be shared."
+      },
+      {
+        "key": "pre_operative_clinical_photograph",
+        "label": "Pre-operative clinical photograph."
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed procedure/Operative notes"
+      },
+      {
+        "key": "post_operative_clinical_photograph",
+        "label": "Post-operative clinical photograph of the affected part"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical history detailing the burns - etiology, treatment given, and resultant contractures left submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did Functional disability explained and expected functional improvement has submit?",
+        "expected": true
+      },
+      {
+        "q": "Pre-operative clinical photograph submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was detailed Indoor case papers submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the detailed procedure/Operative notes?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post-operative clinical photograph of the affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the discharge summary report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Functional disability not explained or expected functional improvement not submitted during pre-authorization.",
+    "Diagnosis of post-burn contracture not adequately backed by clinical signs, symptoms, or examination findings.",
+    "Clinical history detailing the burns, etiology, treatment, or resultant contractures is missing or incomplete.",
+    "Pre-operative clinical photograph is missing or inadequate at pre-authorization.",
+    "Detailed procedure or operative notes are missing or incomplete, or do not detail surgical steps/graft/flap type at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination.",
+      "Burn wound healing is determined by the depth of burns. First degree burns heal spontaneously over a period 5 to 7 days. Second degree burns take longer to heal around 10 to 14 days or more, with changes in the skin texture and color. Whereas, third degree burns do not heal spontaneously and result in raw areas. Over a period of time, there is wound contraction with concentric reduction in the size of the wound resulting in formation of contractures.",
+      "Post burn contractures are severely disfiguring and restrict motion across the joint.",
+      "Surgical release is the only option for correction of a contracture.",
+      "Surgical release involves incisional or excisional release of the contracture followed by resurfacing of the raw area with split skin graft or flap. The defect requiring flap cover should be replaced with the donor tissues matching texture, color, and pliability.",
+      "Even after surgical contracture release, patient requires ancillary procedures, which include: scar massage, splinting, compression garments, physiotherapy, silicone gel sheet application etc."
+    ],
+    "surgical_options": [
+      "Contracture release with - Split thickness Skin Graft (STSG)",
+      "Full Thickness Skin Graft (FTSG)",
+      "Flap cover"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "Includes post-operative regular dressings for STSG / FTSG / Flap cover. Patient requires ancillary procedures, which include: scar massage, splinting, compression garments, physiotherapy, silicone gel sheet application etc.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Referral of cases to the appropriate level of care as required for treatment under PMJAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

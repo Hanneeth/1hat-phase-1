@@ -1,0 +1,171 @@
+{
+  "_comment": "Distilled from PTCA, Systemic thrombolysis, CABG, IABP_Medco.pdf and PTCA, Systemic thrombolysis, CABG, IABP_PPD.CPD.pdf",
+  "stg_id": "SV004A",
+  "procedure_code": "SV004A",
+  "condition": "Coronary Artery Disease",
+  "procedure_name": "Coronary artery bypass grafting (CABG)",
+  "specialty": "Cardiology/ Cardiothoracic Vascular Surgery",
+  "version": "1.1",
+  "source_files": [
+    "PTCA, Systemic thrombolysis, CABG, IABP_Medco.pdf",
+    "PTCA, Systemic thrombolysis, CABG, IABP_PPD.CPD.pdf"
+  ],
+  "alos": "5-7 days",
+  "min_doctor_qualification": [
+    "M.Ch. or DNB (cardiovascular thoracic surgery) or equivalent"
+  ],
+  "clinical_indications": [
+    "Severe coronary artery disease (>70% stenosis in Two or Three vessel disease/>50% stenosis in left main coronary artery) not amenable to PTCA/ PCI, basis angiography and clinical parameters",
+    "Patient with diabetes mellitus and multi-vessel disease or left main disease (prefer CABG over PTCA/PCI)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "stenosis_two_three_vessel",
+      "operator": ">=",
+      "value": "70%",
+      "note": "Stenosis in two or three of the main coronary artery"
+    },
+    {
+      "field": "stenosis_left_main",
+      "operator": ">",
+      "value": "50%",
+      "note": "Stenosis in left main coronary artery"
+    },
+    {
+      "field": "amenability_to_ptca_pci",
+      "operator": "not_amenable",
+      "value": "true",
+      "note": "Documentary evidence revealing that the patient is not amenable to PTCA/ PCI"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "electrocardiogram_ecg",
+        "label": "Electrocardiogram (ECG)"
+      },
+      {
+        "key": "chest_x_ray",
+        "label": "Chest X-ray"
+      },
+      {
+        "key": "2d_echo",
+        "label": "2D ECHO"
+      },
+      {
+        "key": "coronary_angiography_stills_reports",
+        "label": "Coronary Angiography stills & reports (showing blockage)"
+      },
+      {
+        "key": "cardiac_enzymes",
+        "label": "Cardiac enzymes (Troponins T/ I (if not available then CPK-MB)"
+      },
+      {
+        "key": "routine_biochemistry",
+        "label": "Routine Biochemistry (Haemogram, urea, creatinine, electrolytes, sugar, fasting lipids, Liver function test, Urinalysis)"
+      },
+      {
+        "key": "patient_photograph",
+        "label": "Patient Photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "still_image_of_patient_undergoing_procedure",
+        "label": "Still image of the patient undergoing the procedure with date & time (With pic of the site of incision post procedure)"
+      },
+      {
+        "key": "2d_echo_post_procedure",
+        "label": "2D ECHO (post procedure)"
+      },
+      {
+        "key": "cardiac_enzymes",
+        "label": "Cardiac enzymes (Troponins T/ I (if not available then CPK-MB)"
+      },
+      {
+        "key": "procedure_operation_notes",
+        "label": "Procedure/ Operation notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "post_op_chest_x_ray_showing_sternal_sutures",
+        "label": "Post op Chest X-ray showing sternal sutures"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Consent duly signed by Patient & Cardiothoracic Surgeon- Yes",
+        "expected": true
+      },
+      {
+        "q": "Stenosis of >/=70% in two or three of the main coronary artery- Yes",
+        "expected": true
+      },
+      {
+        "q": ">50% stenosis in left main coronary artery- Yes",
+        "expected": true
+      },
+      {
+        "q": "Documentary evidence revealing that the patient is not amenable to PTCA/ PCI- Yes",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the patient have severe coronary artery disease (>70% stenosis in Two or Three vessel disease/>50% stenosis in left main coronary artery) not amenable to PTCA/ PCI, basis angiography and clinical parameters?",
+        "expected": true
+      },
+      {
+        "q": "Do OT notes detail steps of the Surgery undergone mentioning donor sites used for grafts and outcomes of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Is Post Op Chest X-Ray available showing Sternal sutures & Post procedure Clinical photograph showing chest scar?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show monitoring of vitals (BP, Heart Rate), appropriate post-procedure care with continued medication, anti-ischemics, High dose Statins, Ace inhibitors, Beta blockers?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary available with discharge advise, medication and Life-style modification?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Consent not signed by Patient and Cardiothoracic Surgeon.",
+    "Stenosis of main coronary artery documented below 70% in two or three vessels, or left main artery stenosis below 50%.",
+    "Documentary evidence not showing patient is not amenable to PTCA/PCI.",
+    "OT notes not detailing surgical steps, donor sites, or outcomes of surgery.",
+    "Post Op Chest X-Ray not showing Sternal sutures or clinical photograph not showing chest scar.",
+    "Discharge summary not showing proper monitoring of vitals, post-procedure care, medication, or lifestyle modification advice.",
+    "Coronary Angiography stills & reports (showing blockage) not uploaded at pre-auth.",
+    "Still image of the patient undergoing the procedure with date & time (with pic of the site of incision post procedure) not uploaded at claim."
+  ],
+  "additional_information": {
+    "icd_10_code": "I25.10, I25.11",
+    "special_empanelment": "Cardiac catheterization lab, Cardiac Care Unit & qualified Cardiologist (for PTCA/ PCI/ IABP)/ qualified cardiothoracic surgeon (for CABG)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Prefer CABG over PTCA/PCI if patient is having diabetes mellitus with multi-vessel disease or left main disease"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

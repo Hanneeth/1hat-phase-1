@@ -1,0 +1,114 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Ureterolithotomy/ : Ureterolithotomy_Medco.pdf (clinical + mandatory docs) + Ureterolithotomy_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU018A",
+  "procedure_code": "SU018A",
+  "condition": "Ureterolithotomy",
+  "procedure_name": "Ureterolithotomy Open",
+  "specialty": "Urology, Pediatric surgery",
+  "version": "1.1",
+  "source_files": [
+    "Ureterolithotomy_Medco.pdf",
+    "Ureterolithotomy_PPD.CPD.pdf"
+  ],
+  "alos": "4 Days",
+  "min_doctor_qualification": [
+    "MCh/DNB or Equivalent (in Urology, Pediatric surgery)"
+  ],
+  "clinical_indications": [
+    "Ureteric stones involving significant ureteral strictures that prevent endoscopic access.",
+    "Renal colic, pain is typically intermittent/constant, radiation of pain into the ipsilateral groin or testicle varies from severe, sharp/stabbing pain to a dull ache.",
+    "Urine analysis and urine microscopy is positive for occult blood."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings and planned line of treatment"
+      },
+      {
+        "key": "iv_urography_or_ct_report",
+        "label": "Intravenous urography (IVU)/ Non-contrast-enhanced CT/CT-IVP reports confirming the need for surgery"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed indoor case papers"
+      },
+      {
+        "key": "post_procedure_imaging",
+        "label": "Post procedure Imaging (X Ray/USG) showing stone removed"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "drugs_detailed_discharge_summary",
+        "label": "Drugs Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Intravenous urography (IVU)/ Non-contrast-enhanced CT/CT-IVP reports confirming the need for surgery submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed indoor case papers with daily vitals and treatment details available?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post procedure Imaging (X Ray/USG) showing stone removed reports submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed Procedure / Operative Notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the Detailed discharge summary submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes including evaluation findings and planned line of treatment not submitted or incomplete.",
+    "Intravenous urography (IVU)/ Non-contrast-enhanced CT/CT-IVP reports not submitted or do not confirm the need for surgery.",
+    "Post procedure Imaging (X Ray/USG) not submitted or does not show stone removal.",
+    "Detailed Procedure / Operative Notes not submitted or incomplete.",
+    "Clinical findings and Intravenous urography (IVU)/ Non-contrast-enhanced CT/CT-IVP reports not indicative of Ureterolithotomy procedure."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "icd_10_code_uncertain": "Reference 1 mentions ICD N20.0 for Neck Space Infection, which appears to be an error in the document's reference list as this document is about Ureterolithotomy. Therefore, ICD-10 code is set to null.",
+    "special_empanelment": "Availability of Laparoscopic surgery.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ureterolithotomy Open. & Lap.: refers to the open or laparoscopic surgical removal of a stone from the ureter. Symptoms: renal colic, pain is typically intermittent/constant, radiation of pain into the ipsilateral groin or testicle varies from severe, sharp/stabbing pain to a dull ache. Urine analysis and urine microscopy is positive for occult blood."
+    ],
+    "surgical_options": [
+      "Open Surgical Procedure: In case Ureteric stones involving significant ureteral strictures that prevent endoscopic access."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": "A CT urogram usually performed 3-6 months postoperatively to rule out a stricture or residual stones, also, Ultrasound can be used to evaluate for silent hydronephrosis. Evaluate for metabolic risk factors, and further stone formation.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": [
+      "Anuria",
+      "Fever with chills and rigors",
+      "Suspected renal failure",
+      "Persistent haematuria"
+    ],
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

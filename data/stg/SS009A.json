@@ -1,0 +1,127 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SS009A",
+  "procedure_code": "SS009A",
+  "condition": "Rectal Polypectomy",
+  "procedure_name": "Rectal Polypectomy - Sigmoidoscopic Under GA",
+  "specialty": "Pediatric Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Rectal polypectomy_Medco.pdf",
+    "Rectal polypectomy_PPD.CPD.pdf"
+  ],
+  "alos": "1-2 Days",
+  "min_doctor_qualification": [
+    "MS/ DNB/ equivalent (General Surgery)",
+    "MCH/ equivalent (Pediatric surgery)",
+    "DM/ equivalent (Gastroenterology)"
+  ],
+  "clinical_indications": [
+    "Bleeding per rectum – fresh blood in drops at the time of defecation (painless)",
+    "Prolapsing rectal mass / Protrusion from the anus",
+    "Confirmed presence of rectal polyp by digital rectal examination, colonoscopy, or rigid/flexible proctosigmoidoscopy"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "rectal_polyp",
+      "operator": "is",
+      "value": "present",
+      "note": "confirmed by digital rectal examination, sigmoidoscopy, or colonoscopy"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "digital_rectal_examination",
+        "label": "Digital rectal examination"
+      },
+      {
+        "key": "sigmoidoscopy_colonoscopy",
+        "label": "Sigmoidoscopy/Colonoscopy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_icps",
+        "label": "Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_operative_notes",
+        "label": "Detailed operative notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Digital rectal examination and Sigmoidoscopy/Colonoscopy for confirming polyp?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Histopathological examination report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Presence of rectal polyp not confirmed by digital rectal examination, sigmoidoscopy, or colonoscopy",
+    "Clinical notes, detailed history, signs & symptoms, or indication for procedure are missing/incomplete at pre-authorization",
+    "Digital rectal examination or Sigmoidoscopy/Colonoscopy confirming polyp is missing/incomplete at pre-authorization",
+    "Detailed Indoor Case Papers with daily vitals and line of treatment are missing/incomplete at claim submission",
+    "Detailed procedure / Operative Notes are missing/incomplete at claim submission",
+    "Discharge summary with follow-up advice is missing/incomplete at claim submission",
+    "Histopathological examination report is missing/incomplete at claim submission"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Polyps are abnormal growths rising from the lining of the large intestine. Polyps may be sessile (flat) or pedunculated (with a stalk) and vary considerably in size.",
+      "Juvenile polyps are the most common gastrointestinal (GI) polyps seen in children, common in age group of 3-6 years.",
+      "Juvenile polyps are lesions, which are typically solitary and commonly occur in the rectum or sigmoid colon.",
+      "Juvenile rectal polyps are isolated benign hamartomas and are a relatively common cause of rectal bleeding.",
+      "Rectal polyp is a benign adenomatous polyp, usually single."
+    ],
+    "surgical_options": [
+      "Polypectomy (Sigmoidoscopy or Colonoscopy for isolated juvenile polyp)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "If the polyps are more than five in number, periodic colonoscopic surveillance is mandatory",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

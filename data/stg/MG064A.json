@@ -1,0 +1,117 @@
+{
+  "_comment": "The document lists 'HBP 1.0 code: M100009, M200021' and 'HBP 2.0 code: MG064A'. Given 'Procedures covered: 1' and the distinction between HBP 1.0 and HBP 2.0, MG064A is treated as the current primary procedure code. The older codes are noted but not treated as separate procedures for JSON object generation.",
+  "stg_id": "MG064A",
+  "procedure_code": "MG064A",
+  "condition": "Severe anemia",
+  "procedure_name": "Severe anemia",
+  "specialty": "General Medicine, Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Severe Anemia_Medco.pdf",
+    "Severe Anemia_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "MBBS"
+  ],
+  "clinical_indications": [
+    "Diagnosis of severe anemia with hemoglobin level less than 7 g/dl, supported by clinical manifestations."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "hemoglobin level",
+      "operator": "<",
+      "value": "7 g/dl",
+      "note": "at the time of pre-authorization"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings_indications_planned_treatment",
+        "label": "Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment"
+      },
+      {
+        "key": "cbc_hb_report",
+        "label": "CBC, Hb report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor case papers and Treatment details"
+      },
+      {
+        "key": "post_treatment_cbc_hb_reports",
+        "label": "Post treatment CBC, Hb reports"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the Clinical Notes including evaluation findings, indications for the procedure, and planned line of treatment submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the CBP, Hb level submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the patient hemoglobin level less than 7 g/dl?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Was Detailed indoor case papers along with indications and Treatment details submitted?",
+        "expected": true
+      },
+      {
+        "q": "Did the treatment detail mention blood transfusion and ferrous sulphate injection?",
+        "expected": true
+      },
+      {
+        "q": "Was the Post treatment Hb report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the detailed Discharge Summary submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was patient undergone any blood transfusion treatment?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient's hemoglobin level not documented as less than 7 g/dl at the time of pre-authorization.",
+    "Treatment details do not mention administration of blood transfusion or ferrous sulphate injection, where applicable for severe anemia.",
+    "Pre-treatment CBC and Hb report is missing or incomplete at pre-authorization.",
+    "Post-treatment CBC and Hb report is missing or incomplete at claim submission.",
+    "Clinical notes or detailed indoor case papers are incomplete, or lack evaluation findings, indications, or planned line of treatment."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MD / DNB equivalent (in General medicine, Pediatric Medicine)",
+    "clinical_key_pointers": [
+      "Common signs: Pallor of the conjunctivae, Mucous membranes appear pale, Fatigue, Dizziness, Dyspnea, Tachycardia, Heart murmur",
+      "Signs that anemia may be immediately life threatening: Sweating, Thirst, Cold extremities, Edema in the lower limbs, Respiratory distress, Angina, Shock",
+      "Significant signs: Dark colored urine (hemolysis), Bleeding (melena, hematuria), Jaundice, Hepatosplenomegaly, Cheilosis and glossitis (nutritional deficiency)"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

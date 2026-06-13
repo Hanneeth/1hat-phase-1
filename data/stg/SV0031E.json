@@ -1,0 +1,116 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV0031E",
+  "procedure_code": "SV0031E",
+  "condition": "Double Valve Procedure",
+  "procedure_name": "Immediate reoperation- Double valve procedure",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Double valve procedures_Medco.pdf",
+    "Double valve procedures_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_notes_reoperation",
+        "label": "Clinical notes indicating need for reoperation"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "barcode_of_implant",
+        "label": "Barcode of implant, if used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Clinical notes indicating need for reoperation",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of two valve pathology?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair/ replacement of both the valves?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the discharge summary mention need for reoperation?",
+        "expected": true
+      },
+      {
+        "q": "Is the barcode of implant/ valve/ ring used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report not suggestive of two valve pathology",
+    "Clinical notes (detailed history, signs & symptoms, indication for procedure) missing or inadequate at pre-authorization",
+    "Clinical notes indicating need for reoperation missing or inadequate at pre-authorization",
+    "Procedure/Operative notes not submitted at claim stage",
+    "Post procedure ECHO stills/report missing or not showing repair/replacement of both valves at claim stage",
+    "Barcode of implant not submitted at claim stage, despite implant being used",
+    "Discharge summary not mentioning need for reoperation at claim stage"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "For Clinical Pointers, refer to individual valve Guidance document/ Standard Treatment Guideline."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

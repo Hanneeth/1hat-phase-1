@@ -1,0 +1,100 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Open Reduction of Small Joint/ : Open Reduction of Small Joint_Medco.pdf (clinical + mandatory docs) + Open Reduction of Small Joint_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB029A",
+  "procedure_code": "SB029A",
+  "condition": "Fracture-dislocation of proximal interphalangeal (PIP) joint",
+  "procedure_name": "Open reduction of small joint",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Open Reduction of Small Joint_Medco.pdf",
+    "Open Reduction of Small Joint_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics"
+  ],
+  "clinical_indications": [
+    "Dorsal fracture-dislocation of the proximal interphalangeal (PIP) joint is a relatively common injury that most frequently occurs as a result of axial force applied to an extended finger.",
+    "Hyperextension of the PIP joint of the fingers results in a spectrum of injuries, ranging from incomplete disruptions of the volar plate and collateral ligaments to unstable fractures and dislocations.",
+    "Ruptures of the volar capsular mechanism usually occur at the base of the middle phalanx, often with small fragments of the middle phalangeal bone."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "x_ray_affected_limb",
+        "label": "X-ray labelled with patient ID, date and side (Left/ Right) - affected limb"
+      },
+      {
+        "key": "clinical_photograph_patient",
+        "label": "Clinical photograph of child/Patient"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "post_op_x_ray_affected_limb",
+        "label": "Post-op X-ray -ray labelled with patient ID, date and side (Left/Right) affected limb"
+      },
+      {
+        "key": "post_procedure_clinical_photograph",
+        "label": "Post procedure clinical photograph"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice and barcode of implant"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative Notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": [
+      {
+        "q": "Does the Post Procedure X Ray show the Implant/K-wire?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Post-procedure X-ray does not show the implant or K-wire.",
+    "Pre-authorization X-ray is missing patient ID, date, or side labelling.",
+    "Post-operative X-ray is missing patient ID, date, or side labelling.",
+    "Invoice and barcode of implant are missing at claim submission.",
+    "Clinical photograph of the patient is missing at pre-authorization.",
+    "Post-procedure clinical photograph is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/Equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Open reduction of small joints involves using small metal screws or a metal plate and screws.",
+      "Open Reduction surgical treatment allows the fracture fragments to be restored as close to their normal position as possible and held there until healing occurs.",
+      "This technique allows for a more accurate reduction of the small bone fragments."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

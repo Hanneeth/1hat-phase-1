@@ -1,0 +1,81 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MM011C",
+  "procedure_code": "MM011C",
+  "condition": "Behavioral and Emotional Disorders of Childhood and Adolescence",
+  "procedure_name": "Mixed Disorder of Conduct and Emotions",
+  "specialty": "Mental Disorders",
+  "version": "1.1",
+  "source_files": [
+    "Behavioral & Emotional Disorders of Childhood and Adolescence_Medco.pdf",
+    "Behavioral & Emotional Disorders of Childhood and Adolescence_PPD.CPD.pdf"
+  ],
+  "alos": "3-4 weeks",
+  "min_doctor_qualification": [
+    "MD Psychiatry",
+    "DNB Psychiatry",
+    "equivalent (Psychiatry)"
+  ],
+  "clinical_indications": [
+    "A group of disorders characterized by the combination of persistently aggressive, dissocial or defiant behaviour with overt and marked symptoms of depression, anxiety or other emotional upsets.",
+    "The criteria for both conduct disorders of childhood and emotional disorders of childhood or an adult-type neurotic diagnosis or a mood disorder must be met."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_detailed_history_chronicity",
+        "label": "Clinical notes with detailed history and chronicity"
+      },
+      {
+        "key": "admission_document_signed_psychiatrist",
+        "label": "Admission document signed by empanelled psychiatrist"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_treatment_notes",
+        "label": "Detailed treatment notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was patient admission document signed by an empanelled psychiatrist?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Admission document not signed by an empanelled psychiatrist.",
+    "Clinical notes lack detailed history, mini mental status test, indication for treatment, or justification for hospitalization.",
+    "Discharge summary does not mention a date of follow-up.",
+    "Treating doctor does not meet the minimum qualification (MD/DNB/equivalent Psychiatry).",
+    "The disorder is not associated with physiological disturbances or physical factors as per the disclaimer."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "As per the provisions of the Mental Health Act 2017",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The provisions under Mental Healthcare Act 2017 (https://egazette.nic.in/WriteReadData/2017/175248.pdf) be referred for details on Admission & Discharge criteria.",
+      "Neurodevelopmental disorders other than intellectual disorders come under ICD 11 and DSM-5.",
+      "Depressive conduct disorder: This category requires the combination of conduct disorder with persistent and marked depression of mood, as demonstrated by symptoms such as excessive misery, loss of interest and pleasure in usual activities, self-blame, and hopelessness; disturbances of sleep or appetite may also be present.",
+      "Other mixed disorders of conduct and emotions: This category requires the combination of conduct disorder with persistent and marked emotional symptoms such as anxiety, obsessions or compulsions, depersonalization or derealization, phobias, or hypochondriasis."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

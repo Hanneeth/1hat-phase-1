@@ -1,0 +1,134 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SG054A",
+  "procedure_code": "SG054A",
+  "condition": "Cystic swellings in the scrotum",
+  "procedure_name": "Excision of Single Sebaceous Cyst over scrotum",
+  "specialty": "General Surgery, Pediatric Surgery, Genitourinary Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Cystic swellings in the scrotum_Medco.pdf",
+    "Cystic swellings in the scrotum_PPD.CPD.pdf"
+  ],
+  "alos": "1-2 Days",
+  "min_doctor_qualification": [
+    "MS/Equivalent (in General Surgery)",
+    "MCh/Equivalent (in Pediatric Surgery, Genitourinary Surgery)"
+  ],
+  "clinical_indications": [
+    "Obstruction to one of the sebaceous ducts, resulting in accumulation of sebaceous material",
+    "Gold standard treatment for epidermal cyst is complete excision of cyst and its contents",
+    "Incision and avulsion of cyst with the wall is indicated",
+    "Excision of small cysts along with the skin"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including evaluation findings, indication for procedure and planned line of management"
+      },
+      {
+        "key": "clinical_photographs_optional",
+        "label": "Clinical photographs (optional)"
+      },
+      {
+        "key": "scrotal_ultrasound",
+        "label": "Scrotal ultrasound (not required for sebaceous cysts)"
+      },
+      {
+        "key": "fine_needle_aspiration_cytology_optional",
+        "label": "Fine Needle Aspiration Cytology (FNAC) (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photographs_optional",
+        "label": "Post-operative photographs (optional)"
+      },
+      {
+        "key": "histopathological_examination",
+        "label": "Histopathological examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, planned line of treatment, indication for procedure?",
+        "expected": true
+      },
+      {
+        "q": "Did clinical evaluation and Scrotal ultrasound/FNAC confirm the diagnosis?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Post-operative photographs submitted (optional)?",
+        "expected": true
+      },
+      {
+        "q": "Histopathological examination report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or incomplete, lacking detailed history, signs & symptoms, planned line of treatment, or indication for procedure",
+    "Diagnosis not confirmed by clinical evaluation (Scrotal ultrasound is not required for sebaceous cysts)",
+    "Detailed ICPs with daily vitals and treatment details missing or incomplete",
+    "Detailed procedure / Operative Notes not available",
+    "Histopathological examination report not submitted",
+    "Discharge summary with follow-up advice not provided"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Sebaceous cysts (epidermal cysts) are common in the scrotal skin. This occurs due to obstruction to one of the sebaceous ducts, resulting in accumulation of sebaceous material. They are usually small and multiple (Strawberry scrotum). On clinical examination, they are localized to scrotal skin and separate from the testes.",
+      "Clinical features: They are slow-growing and appear in early adulthood or middle age",
+      "Clinical features: Hemispherical or spherical swelling located in the dermis. A dark spot in the centre (punctum) filled with keratin is a diagnostic feature of this cyst. The punctum indicates blockage of the duct.",
+      "Clinical features: In 20-30% of cases, instead of opening into the skin, sebaceous duct opens into the hair follicle. Hence, punctum is not seen",
+      "Clinical features: It has a smooth surface, round borders, soft and putty consistency and is nontender",
+      "Clinical features: The swelling is mobile over the deep structures, and the skin is free all around except an area of adherence at the site of punctum"
+    ],
+    "surgical_options": [
+      "Gold standard treatment for epidermal cyst is complete excision of cyst and its contents",
+      "Incision and avulsion of cyst with the wall. Care should be taken to excise the entire cyst wall to prevent recurrence.",
+      "When it is small it can be excised along with the skin."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

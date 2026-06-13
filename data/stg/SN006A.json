@@ -1,0 +1,152 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN006A",
+  "procedure_code": "SN006A",
+  "condition": "Meningioma",
+  "procedure_name": "Surgery for tumor meninges (Gocussa)",
+  "specialty": "Neurosurgery",
+  "version": "1.1",
+  "source_files": [
+    "Meningioma_Medco.pdf",
+    "Meningioma_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MCh/DNB/Equivalent (in Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Symptomatic lesions",
+    "Lesions with accelerated growth"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_evaluation_findings",
+        "label": "Clinical notes including evaluation findings"
+      },
+      {
+        "key": "ct_mri_brain",
+        "label": "CT/MRI Brain"
+      },
+      {
+        "key": "digital_subtraction_angiography_dsa",
+        "label": "Digital subtraction angiography (DSA) (Optional)"
+      },
+      {
+        "key": "positron_emission_tomography_pet_scan",
+        "label": "Positron emission tomography (PET) scan (Optional)"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_op_ct_brain",
+        "label": "Post-op CT Brain"
+      },
+      {
+        "key": "histopathological_examination_report",
+        "label": "Histopathological Examination report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, evaluation findings, indication for procedure, and planned line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Did history, physical examination, and radiological investigations confirm the diagnosis?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation, grading and radiological investigations indicative of surgery?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and treatment details provided?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Was the imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was post-op CT Brain report submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes lack detailed history, signs/symptoms, evaluation findings, indication for procedure, or planned line of treatment.",
+    "History, physical examination, or radiological investigations did not confirm the diagnosis.",
+    "CT/MRI Brain report not submitted at pre-authorization stage.",
+    "Histopathological Examination report not submitted at claim submission.",
+    "Clinical presentation, grading, or radiological investigations were not indicative of surgery.",
+    "Post-op CT Brain report not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Care at Tertiary Hospital",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Meningioma is the commonest primary central nervous system tumor accounting for about 37.6% of them; and approximately 50% of all benign brain tumors.",
+      "Meningioma originates from the meningeal layers of either the brain or the spinal cord. Meningioma commonly originates from meningothelial arachnoid cap cells.",
+      "Most of the meningiomas are sporadic, benign, and slowly growing.",
+      "Most intracranial meningiomas are located supratentorial. They are commonly seen in the parasagittal, brain convexity, sphenoid ridge, anterior and posterior parafalcine areas, and olfactory groove.",
+      "Other reported locations of intracranial meningiomas include suprasellar, posterior fossa (cerebellopontine), intraventricular, and intra-orbital areas.",
+      "Several predisposing factors increase the risk of occurrence, including genetic disorders such as neurofibromatosis type 2, exposure to radiation, hormonal therapy, and family history.",
+      "Classification (according to WHO): Grade I typical meningiomas are low grade tumors and are the most common (slowly growing cells).",
+      "Classification (according to WHO): Grade II atypical meningiomas are mid-grade tumors (higher chance of recurrence); subtypes include choroid and clear cell meningioma.",
+      "Classification (according to WHO): Grade III anaplastic meningiomas are malignant (cancerous, fast-growing); subtypes include papillary and rhabdoid meningioma.",
+      "Clinical Manifestation: Dependent on location and size.",
+      "Many small meningiomas are found incidentally and are entirely asymptomatic.",
+      "Most common presentations include: headache, paresis, visual impairments, anosmia, neurological deficits.",
+      "Meningiomas may also become clinically apparent due to mass effect depending on their location: Supratentorial (Parasagittal, convexities - seizures and hemiparesis; Sphenoid ridge; Olfactory groove/planum sphenoidale - anosmia, foster kennedy syndrome; Juxtasellar - visual field defects, cranial nerve deficits); Infratentorial (Obstructive hydrocephalus, Cranial nerve deficits); Miscellaneous intradural (<5% - Intraventricular meningioma, Optic nerve meningioma, Pineal gland - parinaud syndrome, obstructive hydrocephalus)."
+    ],
+    "surgical_options": [
+      "Observation: Asymptomatic small-sized tumors, and patients with cavernous sinus meningiomas, can be followed up with close observation annually or biennially, including serial imaging (brain MRI).",
+      "Surgery: Symptomatic lesions and those with accelerated growth are primarily treated with maximum gross total surgical resection. Simpson grade correlates surgical resection completeness with symptomatic recurrence.",
+      "Radiation: External beam radiotherapy or brachytherapy after surgical resection for grade II and III meningiomas. Stereotactic radiosurgery (SRS) for patients unfit for surgery, skull base meningiomas, recurrent, or incompletely resected meningiomas.",
+      "Chemotherapy: Adjuvant therapies to reduce recurrence rate in incompletely removed, atypical, or malignant meningiomas."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "complications": [
+      "Non-surgical: risk of recurrence, increase in size, accelerated growth. Calcification, progression to grade 2 or 3, malignancy, brain invasion, and rarely metastasis.",
+      "Surgical and medical: hematoma, infection, venous thrombosis, CSF leak, injury to surrounding anatomical structures, worsening of neurological deficits, aspiration pneumonia, deep vein thrombosis, pulmonary embolism, myocardial ischemia, stroke.",
+      "Post radiosurgery: risk of cranial nerve deficits (e.g., optic nerve injury in intracranial meningioma), increasing risk of toxicity due to radiotherapy."
+    ]
+  }
+}

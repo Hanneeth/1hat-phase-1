@@ -1,0 +1,127 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Chalazion Removal/ : Chalazion Removal_Medco.pdf (clinical + mandatory docs) + Chalazion Removal_PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE007A",
+  "procedure_code": "SE007A",
+  "condition": "Chalazion",
+  "procedure_name": "Chalazion Removal",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Chalazion Removal_Medco.pdf",
+    "Chalazion Removal_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MD Ophthalmology",
+    "MS Ophthalmology",
+    "DNB Ophthalmology",
+    "PG Diploma Ophthalmology",
+    "equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "Diagnosis is backed by clinical signs, symptoms, and ophthalmic examination",
+    "Does not respond to conservative medical therapy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph",
+        "label": "Clinical Photograph"
+      }
+    ],
+    "claim": [
+      {
+        "key": "operative_procedure_notes",
+        "label": "Operative/ procedure notes"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Histopathology report"
+      },
+      {
+        "key": "intraoperative_photograph_with_time_and_date_stamp",
+        "label": "Intraoperative photograph with time and date stamp"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Did the clinical examination suggest presence of chalazion with following symptoms small, red inflamed area of the eyelids?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Clinical notes, clinical symptoms and visual acuity?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected part with Proper labelling of Affected Eye whether R or L with full face photograph.",
+        "expected": true
+      },
+      {
+        "q": "Detailed admission notes?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and was the surgery successful?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Was the intra operative photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the document evidence present for the specimen being send for the Histopathology examination?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical examination did not suggest presence of chalazion with symptoms of small, red inflamed area of the eyelids.",
+    "Clinical notes are not detailed, or do not describe clinical symptoms and visual acuity.",
+    "Clinical photograph of affected part is missing or not properly labelled with R or L eye, or full face photograph is missing.",
+    "Admission notes are not detailed.",
+    "Operative/procedure notes are missing or do not detail the steps of surgery performed or surgical outcome.",
+    "Documents showing appropriate post-op care and follow-up advice are not available.",
+    "Intraoperative photograph with time and date stamp is missing.",
+    "Histopathology report is missing or does not show evidence of specimen being sent for examination (if lesion atypical)."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Surgical specimen should be sent for histopathology if lesion is atypical.",
+      "Early stage Chalazion small, red inflamed area of the eyelids",
+      "After few days the inflammation can develop into painless and slow growing lump",
+      "A chalazion can appear on the upper or lower eyelid"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SV018B",
+  "procedure_code": "SV018B",
+  "condition": "Chronic thromboembolic pulmonary hypertension (CTEPH)",
+  "procedure_name": "Pulmonary Thromboendarterectomy",
+  "specialty": "CTVS",
+  "version": "1.1",
+  "source_files": [
+    "Thromboendarectomy_Medco.pdf",
+    "Thromboendarectomy_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "M.Ch./DNB/ equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Symptomatic patients with CTEPH require pulmonary thromboendarterectomy."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      },
+      {
+        "key": "ctpa_report",
+        "label": "CTPA report"
+      },
+      {
+        "key": "lung_perfusion_scan",
+        "label": "Lung perfusion scan"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_with_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "lung_perfusion_report",
+        "label": "Lung perfusion report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/ Doppler report suggestive of pulmonary hypertension?",
+        "expected": true
+      },
+      {
+        "q": "Was the CTPA report suggestive of Chronic thromboembolic pulmonary hypertension (CTEPH)?",
+        "expected": true
+      },
+      {
+        "q": "Was the Lung perfusion report suggestive of Chronic thromboembolic pulmonary hypertension (CTEPH)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or lacking detailed history, signs, symptoms, or indication for procedure",
+    "Echo/Doppler report missing or not suggestive of pulmonary hypertension",
+    "CTPA report missing or not suggestive of chronic thromboembolic pulmonary hypertension (CTEPH)",
+    "Lung perfusion report missing or not suggestive of chronic thromboembolic pulmonary hypertension (CTEPH)",
+    "Procedure / Operative notes not submitted",
+    "Post procedure stills of ECHO with report not submitted",
+    "Detailed Discharge Summary not submitted or missing date of follow-up"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiothoracic Surgery OT",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Chronic thromboembolic pulmonary hypertension (CTEPH) is a complication of venous thromboembolic disease.",
+      "Pulmonary thromboendarterectomy (PTE) remains the preferred and potentially curative option for patients with chronic thromboembolic pulmonary hypertension (CTEPH).",
+      "The disease is characterized by intraluminal thrombus organization, fibrotic scar tissue-like stenosis, and the ensuing vascular remodeling of unaffected pulmonary vessels.",
+      "CTEPH symptoms are nonspecific and usually related to the development of pulmonary hypertension.",
+      "Patients may be asymptomatic for several years before presenting with progressive exertional dyspnea, chronic nonproductive cough, atypical chest pain, tachycardia, syncope and cor pulmonale."
+    ],
+    "surgical_options": [
+      "Pulmonary thromboendarterectomy (PTE)"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

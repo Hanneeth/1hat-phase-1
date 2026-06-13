@@ -1,0 +1,186 @@
+{
+  "stg_id": "MP041A",
+  "procedure_code": "MP041A",
+  "condition": "Autoimmune hemolytic anemia",
+  "procedure_name": "Immune hemolytic anemia",
+  "specialty": "Pediatric Medical Management",
+  "version": "1.1",
+  "source_files": [
+    "Immune Hemolytic Anemia_Medco.pdf",
+    "Immune Hemolytic Anemia_PPD.CPD.pdf"
+  ],
+  "alos": "10 days",
+  "min_doctor_qualification": [
+    "MD / DNB / DCH/ equivalent (Pediatric Medicine)",
+    "DM/DNB/ equivalent (Hematology)"
+  ],
+  "clinical_indications": [
+    "Diagnosis of Autoimmune haemolytic anaemia (AIHA) in childhood, caused by auto-antibodies against red blood cell antigens leading to premature destruction.",
+    "Clinical diagnosis of Autoimmune hemolytic anemia must be backed by clinical manifestations.",
+    "Acute transient type: lasting 3-6 months, predominantly in children ages 2-12 years, often preceded by a respiratory infection (accounts for 70-80% of patients).",
+    "Prolonged chronic course: more frequent in infants and children >12 years old, with hemolysis continuing for many months or years."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "direct_coombs_test_and_hemolysis_evidence",
+      "operator": "=",
+      "value": "positive",
+      "note": "Direct Coomb`s test must be positive along with laboratory evidence of hemolysis."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_vitals_examination_findings_planned_treatment",
+        "label": "Clinical notes showing vitals, examination findings, planned line of treatment & advice for admission"
+      },
+      {
+        "key": "direct_coombs_test",
+        "label": "Direct Coomb`s test (DCT)"
+      },
+      {
+        "key": "complete_blood_count_peripheral_smear_urinalysis_reticulocyte_haptoglobin_total_serum_bilirubin",
+        "label": "Complete blood count (CBC), peripheral smear, urinalysis, reticulocyte, haptoglobin, total serum bilirubin"
+      },
+      {
+        "key": "indirect_coombs_test_optional",
+        "label": "Indirect Coomb`s test (ICT) (Optional)"
+      },
+      {
+        "key": "kidney_function_tests_optional",
+        "label": "Kidney function tests (Optional)"
+      },
+      {
+        "key": "bone_marrow_aspiration_optional",
+        "label": "Bone marrow aspiration (Optional)"
+      },
+      {
+        "key": "chest_x_ray_optional",
+        "label": "Chest X-ray (Optional)"
+      },
+      {
+        "key": "lactate_dehydrogenase_optional",
+        "label": "Lactate dehydrogenase (LDH) (Optional)"
+      },
+      {
+        "key": "viral_serology_optional",
+        "label": "Viral serology (Optional)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_treatment_details",
+        "label": "Detailed Indoor case papers (ICPs) with treatment details"
+      },
+      {
+        "key": "dct_cbc_peripheral_smear_claim",
+        "label": "DCT, CBC, peripheral smear"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes include detailed history, signs & symptoms, and detailed treatment line?",
+        "expected": true
+      },
+      {
+        "q": "Direct Coomb`s test (DCT) (antibodies for warm and cold antigen) is positive?",
+        "expected": true
+      },
+      {
+        "q": "Complete blood count (CBC) shows severe anemia appropriate for age, with normal white blood cell count and platelet count?",
+        "expected": true
+      },
+      {
+        "q": "Peripheral smear shows macrocytosis, polychromasia, anisocytosis, presence of nucleated red cells, and microspherocytes?",
+        "expected": true
+      },
+      {
+        "q": "Urinanalysis shows presence of Hb in urine?",
+        "expected": true
+      },
+      {
+        "q": "Indices of haemolysis indicate high reticulocyte count, low/absent haptoglobin, and increased serum indirect bilirubin?",
+        "expected": true
+      },
+      {
+        "q": "Indirect Coomb`s test (ICT) is positive (if applicable based on clinical condition)?",
+        "expected": true
+      },
+      {
+        "q": "Kidney function tests (urea, creatinine) are high, indicating hemolysis or acute kidney injury (if applicable based on clinical condition)?",
+        "expected": true
+      },
+      {
+        "q": "Bone marrow aspiration results are consistent with myelofibrosis or malignancy (if applicable based on clinical condition)?",
+        "expected": true
+      },
+      {
+        "q": "Chest X-ray indicates infections (if applicable based on clinical condition)?",
+        "expected": true
+      },
+      {
+        "q": "Lactate dehydrogenase (LDH) is high (if applicable based on clinical condition)?",
+        "expected": true
+      },
+      {
+        "q": "Viral serology results are available and relevant (if applicable based on clinical condition)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Detailed Indoor Case Papers (ICPs) with detailed line of treatment are provided?",
+        "expected": true
+      },
+      {
+        "q": "Direct Coomb`s test (DCT) is negative?",
+        "expected": true
+      },
+      {
+        "q": "CBC and peripheral smear are normal?",
+        "expected": true
+      },
+      {
+        "q": "Detailed discharge summary with follow-up advice at the time of discharge is provided?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Direct Coomb's test is not positive or laboratory evidence of hemolysis is absent at pre-authorization.",
+    "Direct Coomb's test result at claim stage is not negative, contradicting expected post-treatment status.",
+    "Clinical notes are missing or incomplete regarding vitals, examination findings, planned treatment, or advice for admission at pre-authorization.",
+    "Direct Coomb's test (DCT) report is missing at pre-authorization.",
+    "Any of the required blood tests (CBC, peripheral smear, reticulocyte, haptoglobin, total serum bilirubin) or urinanalysis reports are missing or show inconsistent findings at pre-authorization.",
+    "Detailed Indoor case papers (ICPs) with treatment details are missing or incomplete at claim submission.",
+    "CBC or peripheral smear at claim stage is not normal, indicating unresolved condition without justification.",
+    "Detailed discharge summary is missing or incomplete at claim submission, or lacks follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Autoimmune haemolytic anaemia (AIHA) in childhood is caused by auto-antibodies directed against antigens on red blood cells, leading to premature destruction.",
+      "Acute onset symptoms may include prostration, pallor, jaundice, fever, and hemoglobinuria.",
+      "More gradual onset symptoms primarily include fatigue and pallor.",
+      "Associated factors observed are dark urine, organomegaly, weakness, dizziness, dyspnea, fast heart beat, and headache.",
+      "First level tests for diagnosis include WBC count, red cell morphology on peripheral smear, reticulocyte count, indices of haemolysis (haptoglobin, indirect bilirubin, LDH), DAT and IAT, blood group, liver and kidney function, and urinanalysis.",
+      "Haemolytic anaemia is defined by whole blood count, reticulocyte count, haptoglobin, lactate dehydrogenase (LDH), and bilirubin."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Follow-up advice is provided at the time of discharge, as part of the detailed discharge summary.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Cases may require referral to an appropriate level of care as needed.",
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

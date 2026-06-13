@@ -1,0 +1,117 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MC008A",
+  "procedure_code": "MC008A",
+  "condition": "Ventricular Septal Defect",
+  "procedure_name": "VSD Device Closure",
+  "specialty": "Cardiology/ CTVS",
+  "version": "1.1",
+  "source_files": [
+    "VSD closure_Medco.pdf",
+    "VSD closure_PPD.CPD.pdf"
+  ],
+  "alos": "2 days",
+  "min_doctor_qualification": [
+    "DM/DNB/ equivalent (Cardiology)",
+    "M.Ch./DNB/ equivalent (Cardiothoracic Surgery)"
+  ],
+  "clinical_indications": [
+    "Percutaneous device VSD closure is reserved for those whom surgery is very risky due to severe PAH, multiple comorbidities, and those who had prior cardiothoracic surgery such as residual or recurrent VSD.",
+    "Muscular VSDs are the main type amenable to this procedure, the proximity of other defects to the inlet valves makes performing this technique challenging in such cases."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "echo_doppler_report",
+        "label": "Echo/Doppler report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "procedure_operative_notes",
+        "label": "Procedure / Operative notes"
+      },
+      {
+        "key": "post_procedure_echo_stills_report",
+        "label": "Post procedure stills of ECHO with report"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary"
+      },
+      {
+        "key": "invoice_barcode_device_used",
+        "label": "Invoice/barcode of blade / device used"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/Doppler report suggestive of Ventricular septal defect?",
+        "expected": true
+      },
+      {
+        "q": "Was the Echo/color Doppler suggestive of other heart defect along with VSD?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Does the Post procedure still of ECHO show repair of the defect?",
+        "expected": true
+      },
+      {
+        "q": "Is there a Detailed Discharge Summary mentioning date of follow-up submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is the Invoice/barcode of blade / device used submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Echo/Doppler report does not confirm Ventricular Septal Defect.",
+    "Clinical notes (detailed history, signs & symptoms, indication for procedure) are missing or insufficient.",
+    "Echo/Doppler report is missing or incomplete.",
+    "Echo/color Doppler report suggests other heart defect along with VSD, contrary to expectations for VSD Device Closure.",
+    "Procedure/Operative notes are missing or incomplete.",
+    "Invoice/barcode of the device used is not submitted."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Cardiac Catheterisation lab: Yes; CCU/ICCU: Yes; Qualified cardiologist (DM/DNB cardiology): Yes; Qualified cardiothoracic surgeon (MCh/DNB cardiovascular thoracic surgery): No",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ventricular septal defect (VSD) is the most common congenital cardiac anomaly in children and is the second most common congenital abnormality in adults, second only to a bicuspid aortic valve.",
+      "An abnormal communication between the right and left ventricles and shunt formation is the main mechanism of hemodynamic compromise in VSD.",
+      "While many VSDs close spontaneously, if they do not, large defects can lead to detrimental complications such as pulmonary arterial hypertension (PAH), ventricular dysfunction and an increased risk of arrhythmias",
+      "Ventricular septal defects especially small VSDs may be asymptomatic and detected incidentally.",
+      "Common symptoms: Dyspnea/ Breathlessness with feeding, Failure to thrive, Recurrent respiratory infections, Palpitations, Poor weight gain",
+      "Common signs: Pan-systolic best heard in the left lower sternal border, Prominent parasternal pulsations, Tachypnea, Signs of Eisenmenger syndrome in cases of shunt reversal (cyanosis, increased pulmonary vascular resistance, dyspnea on exertion, syncope, and increased susceptibility to infection)",
+      "Management: Approximately 85% to 90% of small isolated VSDs close spontaneously during the first year of life. Patients with small, asymptomatic VSDs with the absence of PAH have an excellent prognosis without any intervention. Otherwise, the management approach includes endocarditis prophylaxis and VSD closure."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SE018A",
+  "procedure_code": "SE018A",
+  "condition": "Scleral Buckle Removal",
+  "procedure_name": "Scleral Buckle Removal",
+  "specialty": "Ophthalmology",
+  "version": "1.1",
+  "source_files": [
+    "Scleral buckling surgery_Medco.pdf",
+    "Scleral buckling surgery_PPD.CPD.pdf"
+  ],
+  "alos": "1 Day",
+  "min_doctor_qualification": [
+    "MD Ophthalmology",
+    "MS Ophthalmology",
+    "DNB Ophthalmology",
+    "PG Diploma Ophthalmology",
+    "equivalent (in Ophthalmology)"
+  ],
+  "clinical_indications": [
+    "After scleral buckling surgery for the treatment of retinal detachment, surgery related complications may arise.",
+    "Complications may include extrusion, infection and pain."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_indication",
+        "label": "Clinical notes with indication for surgery"
+      },
+      {
+        "key": "admission_notes",
+        "label": "Admission Notes"
+      },
+      {
+        "key": "clinical_photograph_affected_eye",
+        "label": "Clinical Photograph of the affected eye"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge summary"
+      },
+      {
+        "key": "operative_procedure_notes",
+        "label": "Operative/ procedure notes"
+      },
+      {
+        "key": "microbiology_report_host_tissue",
+        "label": "Microbiology report of the host tissue"
+      },
+      {
+        "key": "investigation_reports_fundus_bscan",
+        "label": "Investigation reports- Fundus examination/ B-scan"
+      },
+      {
+        "key": "intraoperative_photograph_with_patient_id_time_date_optional",
+        "label": "Intraoperative photograph with Patient ID, time and date(optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "In case of Scleral buckle removal, does the patient have a history of scleral buckling surgery performed in the same eye?",
+        "expected": true
+      },
+      {
+        "q": "Detailed Clinical notes (with h/o myopia, diabetes, trauma to head/ eye, retinal detachment in the other eye; previous scleral buckling surgery in the same eye (in case of scleral buckle removal), etc.), clinical symptoms (floaters, flashes, visual distortion, etc.) and visual acuity?",
+        "expected": true
+      },
+      {
+        "q": "Clinical photo of Affected eye with Proper labelling of Affected Eye whether R or L with full face photograph.",
+        "expected": true
+      },
+      {
+        "q": "Detailed admission notes?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Do OT notes detail the steps of surgery performed and was the surgery successful?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Was the intra operative photograph submitted?",
+        "expected": true
+      },
+      {
+        "q": "For scleral buckle removal surgery, is there a documentary evidence that the specimen has been sent for Microbiology examination?",
+        "expected": true
+      },
+      {
+        "q": "Are relevant investigation reports submitted like B-scan / Fundus examination?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient does not have a history of scleral buckling surgery performed in the same eye.",
+    "Clinical notes do not clearly indicate the need for scleral buckle removal surgery (e.g., extrusion, infection, pain).",
+    "Microbiology report of the host tissue is missing or inconclusive.",
+    "Clinical photograph of the affected eye is missing or not properly labelled (R/L) or full face photograph is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": null,
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, ophthalmic examination.",
+      "Retinal detachment (RD) is a condition in which the neurosensory retina is separated from the retinal pigment epithelium. May lead to permanent loss of vision if left untreated."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

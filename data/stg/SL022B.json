@@ -1,0 +1,118 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SL022B",
+  "procedure_code": "SL022B",
+  "condition": "Ranula",
+  "procedure_name": "Removal of Ranula",
+  "specialty": "Oral Maxillo Facial Surgery/ENT",
+  "version": "1.1",
+  "source_files": [
+    "Removal of Ranula_MEDCO.pdf",
+    "Removal of Ranula_PPD.CPD.pdf"
+  ],
+  "alos": "2 Days",
+  "min_doctor_qualification": [
+    "MDS (Oral Maxillo-facial surgery)",
+    "MS/MCh/ DNB/ equivalent in (ENT/Plastic Surgery)"
+  ],
+  "clinical_indications": [
+    "Detection of calculi or foreign bodies (multiple stone in glands)",
+    "Determination of extent of destruction of salivary gland",
+    "Detection of fistulae, diverticula, strictures",
+    "Larger sialolith",
+    "Malignant carcinomas or tumors",
+    "Recurrent swelling in floor of mouth with discharge of fluid",
+    "Plunging Ranula"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_pre_op_photos",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, indications for doing the procedure & advise for admission) including pre-op photos (intraoral and extraoral)"
+      },
+      {
+        "key": "document_required_for_investigation_of_ranula",
+        "label": "Document required for Investigation of Ranula: (X-ray of the Ranula OR Conventional Radiography (X-ray))"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_consent",
+        "label": "Indoor case papers & Consent (informed written)"
+      },
+      {
+        "key": "procedure_operative_note",
+        "label": "Procedure note/ operative note"
+      },
+      {
+        "key": "post_op_photos_excised_tissue_or_histopathology",
+        "label": "Post-operative Photograph of the affected parts (intraoral and extraoral and of excised tissue(Ranula)) OR Histopathology of the excised tissue"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Clinical notes (including clinical signs & symptoms, examination findings, indications for doing the procedure & advise for admission)?",
+        "expected": true
+      },
+      {
+        "q": "Radiological Imaging for presence of Ranula?",
+        "expected": true
+      },
+      {
+        "q": "Pre-op Photo (intraoral, extraoral)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "OT notes detail the steps of surgery performed and outcomes of the surgery?",
+        "expected": true
+      },
+      {
+        "q": "Documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Post-op Photo (intraoral, extraoral) of affected part submitted?",
+        "expected": true
+      },
+      {
+        "q": "Histopathology of the excised tissue to confirm the complete removal of Ranula?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Signs, symptoms, examination, or imaging (X-Ray/USG/Radiological Imaging) not confirming the presence of Ranula.",
+    "Conservative or medical management failure/non-indication not documented.",
+    "Pre-operative photos (intraoral/extraoral) are missing or unclear.",
+    "Post-operative photo of affected parts (intraoral/extraoral) OR histopathology report of excised tissue is missing/incomplete.",
+    "Operative notes are missing or do not detail surgical steps and outcomes."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Proceed for Surgery only if diagnosis made is backed by clinical signs, symptoms, examination."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Damage nerve (Facial nerve paralysis)",
+      "Auriculotemporal nerve damage (Frey's syndrome)",
+      "Damage lingual nerve",
+      "Damage Wharton's Duct",
+      "Weakness of upper eye muscle.",
+      "Salivary fistulae/Sialoceles"
+    ]
+  }
+}

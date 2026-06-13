@@ -1,0 +1,109 @@
+{
+  "_test_id": "TC13",
+  "_description": "Dental caries with abscess — clearly dental OPD-like condition. Phase 2 will find very few or no candidates (dental not in HBP). Phase 6 should flag EXCLUSION_DENTAL_RISK. Tests exclusion check and zero-candidates USP path.",
+  "_expected_status": "CONDITIONAL",
+  "_expected_specialty": null,
+  "_expected_flags_include": [
+    "EXCLUSION_DENTAL_RISK"
+  ],
+  "_expected_flags_may_include": [
+    "USP_RECOMMENDED",
+    "NO_CANDIDATES_FOUND"
+  ],
+  "session_id": "IRIS-TC13-20260612",
+  "created_at": "2026-06-12T15:30:00+05:30",
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Severe toothache lower right molar for 2 weeks, jaw swelling, unable to eat, fever",
+    "duration_days": 14,
+    "history_of_present_illness": "Patient has severe toothache in lower right molar for 2 weeks. Developed jaw swelling and fever over last 2 days. Unable to open mouth fully, difficulty eating. No trauma. Dentist referred for dental extraction and abscess drainage under GA.",
+    "provisional_diagnosis": "Dental caries with periapical abscess — lower right molar (46). Trismus. Planned tooth extraction and I&D under general anaesthesia.",
+    "planned_procedure": "Dental extraction (tooth 46) and incision-drainage of dental abscess under GA",
+    "weight_kg": 74,
+    "height_cm": 170,
+    "vitals": {
+      "bp_systolic_mmhg": 126,
+      "bp_diastolic_mmhg": 82,
+      "pulse_bpm": 88,
+      "spo2_pct": 98,
+      "temperature_f": 100.8,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": null
+    },
+    "examination_findings": {
+      "general": "Facial asymmetry — right-sided jaw swelling. Fever 100.8°F. Trismus — mouth opening 2 fingers.",
+      "cvs": "S1 S2 heard, no murmurs",
+      "rs": "Clear bilateral",
+      "abdomen": "Soft, non-tender",
+      "cns": "No focal deficits",
+      "local": "Intraoral: Lower right molar (46) — caries involving pulp. Periapical swelling tender to palpation. Purulent discharge from gingival sulcus. Submandibular space: soft fluctuant swelling right side."
+    },
+    "investigations": [
+      {
+        "type": "xray",
+        "result_summary": "Dental X-ray (OPG): Periapical radiolucency around tooth 46 root. Extensive caries involving pulp chamber. No bony destruction (excluding osteomyelitis).",
+        "structured_values": [
+          {
+            "parameter": "periapical_lucency",
+            "value": "present",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "bony_destruction",
+            "value": "absent",
+            "unit": null,
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-11"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No significant history",
+    "past_surgical_history": "None",
+    "current_medications": [
+      "Amoxicillin-Clavulanate 625mg TDS (started today)",
+      "Ibuprofen 400mg TDS"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "none",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Dental/surgical consultation notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Prakash Mohan",
+      "registration_number": "TN-MED-44444",
+      "qualification": "MDS Oral and Maxillofacial Surgery",
+      "specialty_code": "SM"
+    },
+    "notes": "Dental exclusion applies — tooth extraction for caries is excluded under PM-JAY Annexure 6. Exception applies only for trauma/injury requiring bone treatment. This is dental caries, NOT trauma. EXCLUSION_DENTAL_RISK flag expected."
+  }
+}
