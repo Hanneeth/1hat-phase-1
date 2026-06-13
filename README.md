@@ -130,13 +130,18 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 IRIS accepts a standard admission JSON input and outputs a structured pre-auth readiness report.
 
+### Test Cases
+You can find various standard testing scenario inputs in the `tests/inputs/` directory:
+- **Location:** `tests/inputs/TC01.json` through `tests/inputs/TC15.json`
+- **Scenarios:** These files cover various paths, including happy paths, public reservation block cases, STG non-eligibility cases, multi-package combination rule test cases, wallet insufficiency cases, and pediatric age-boundary cases.
+
 ### Standard Execution (using CLI)
-You can run the pipeline by specifying the path to an input JSON file:
+To run the engine using a specific test case file, specify the file path as an argument:
 ```bash
 python main.py tests/inputs/TC01.json
 ```
 
-Or pipe the input via standard input (stdin):
+Or pipe the input via standard input (`stdin`):
 ```bash
 # Windows PowerShell
 cat tests/inputs/TC01.json | python main.py
@@ -145,20 +150,60 @@ cat tests/inputs/TC01.json | python main.py
 python main.py < tests/inputs/TC01.json
 ```
 
-### Sample Output structure
+### Sample Output Structure
+Running the engine with `tests/inputs/TC01.json` produces the following structured JSON output:
+
 ```json
 {
   "readiness_status": "READY_WITH_WARNINGS",
-  "selected_packages": [ ... ],
-  "blocked_candidates": [ ... ],
-  "preauth_docs_required": [ ... ],
-  "preauth_docs_missing": [ ... ],
-  "enhancement_plan": [ ... ],
+  "selected_packages": [],
+  "blocked_candidates": [
+    {
+      "procedure_code": "SG021A",
+      "reason_code": "SHARD_NOT_FOUND",
+      "message": "Shard file general_surgery.json not found"
+    }
+  ],
+  "preauth_docs_required": [
+    {
+      "key": "clinical_notes",
+      "label": "Admission / clinical notes",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "patient_photo",
+      "label": "Photo of patient on hospital bed",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    }
+  ],
+  "preauth_docs_missing": [],
+  "enhancement_plan": [],
   "copayment_required": false,
   "copayment_gap_inr": null,
-  "flags": [ ... ],
+  "comorbidity_notes": [],
+  "flags": [
+    {
+      "code": "EMERGENCY_PHASE_STUBBED",
+      "message": "Emergency routing not implemented — assuming planned elective admission",
+      "severity": "info"
+    },
+    {
+      "code": "CANDIDATES_GENERATED",
+      "message": "Generated 1 candidates from index",
+      "severity": "info"
+    },
+    {
+      "code": "USP_RECOMMENDED",
+      "message": "No standard PM-JAY packages validated for this clinical input. Unspecified Surgical Package (USP) pathway may apply. Consult SHA.",
+      "severity": "warning"
+    }
+  ],
   "stg_coverage": {
-    "validated": 2,
+    "validated": 0,
     "stg_missing": 0
   },
   "errors": []
