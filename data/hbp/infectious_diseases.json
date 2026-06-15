@@ -1,0 +1,387 @@
+{
+  "_comment": "KB-2 HBP 2022 — Infectious Diseases. Deterministic fields set by kb2_extractor.py. Fill: mandatory_documents, aliases, stratification_criteria, additional_information.",
+  "scheme_id": "pmjay",
+  "specialty": "Infectious Diseases",
+  "specialty_code": "ID",
+  "packages": [
+    {
+      "package_code": "ID001",
+      "package_name": "Laboratory Tests for COVID-19 Infection (PCR)\n(Reimbursement level for this package will be as per the ICMR guidelines, issued from time to time)",
+      "procedures": [
+        {
+          "procedure_code": "ID001A",
+          "procedure_name": "Screening Test for COVID-19 Infection",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "A",
+              "description": "All hospitalized patients with Severe Acute Respiratory Illness",
+              "criterion": "All hospitalized patients with Severe Acute Respiratory Illness",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "ID001A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "screening_form",
+                "label": "Form for Screening Test for COVID-19 Infection signed by a Physician"
+              }
+            ],
+            "claim": [
+              {
+                "key": "screening_form",
+                "label": "Form for Screening Test for COVID-19 Infection signed by a Physician"
+              }
+            ]
+          },
+          "aliases": [
+            "COVID-19 screening",
+            "SARS-CoV-2 screening test",
+            "COVID RT-PCR screening",
+            "Rapid Antigen Test for COVID-19",
+            "COVID screening swab",
+            "ICD-10 Z11.5",
+            "ICD-10 U07.1",
+            "ICD-10 U07.2",
+            "Coronavirus screening",
+            "Severe Acute Respiratory Illness screening",
+            "SARI COVID test"
+          ],
+          "additional_information": {
+            "alos": "3 days"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — tier3/tier2/tier1 all=1500 (flat). rates_inr=null per schema: billing_unit=per_day → rates go in bed_rates_inr (not applicable here; no bed-category breakdown in PDF)",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "ID001B",
+          "procedure_name": "Test for Confirmation of COVID-19 Infection",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "day1_only",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "ID001B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "investigation_reports",
+                "label": "Positive report of Screening Test for COVID-19 Infection (PCR)"
+              }
+            ],
+            "claim": [
+              {
+                "key": "investigation_reports",
+                "label": "Positive report of Screening Test for COVID-19 Infection (PCR)"
+              }
+            ]
+          },
+          "aliases": [
+            "COVID-19 confirmatory test",
+            "SARS-CoV-2 RT-PCR",
+            "COVID PCR test",
+            "COVID-19 confirmation",
+            "ICD-10 U07.1",
+            "ICD-10 U07.2",
+            "Coronavirus confirmatory test",
+            "COVID swab test",
+            "COVID molecular test"
+          ],
+          "additional_information": {
+            "alos": "3 days",
+            "admission_criteria": "Fever and cough and / or shortness of breath"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — tier3/tier2/tier1 all=3000 (flat). rates_inr=null per schema: billing_unit=per_day → rates go in bed_rates_inr (not applicable here; no bed-category breakdown in PDF)",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (Yes) → day1_only",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "ID003",
+      "package_name": "Treatment of COVID-19 Infection",
+      "procedures": [
+        {
+          "procedure_code": "ID003A",
+          "procedure_name": "Treatment of COVID-19 Infection",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Patient managed in Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Patient managed in High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Patient managed in ICU without Ventilator support",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Patient managed in ICU with Ventilator support",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "ID003A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "investigation_reports",
+                "label": "Positive report for COVID-19 Test"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical Notes"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "COVID-19 management",
+            "SARS-CoV-2 treatment",
+            "COVID care",
+            "Coronavirus treatment",
+            "ICD-10 U07.1",
+            "ICD-10 U07.2",
+            "COVID-19 admission",
+            "Inpatient COVID treatment",
+            "COVID pneumonia treatment"
+          ],
+          "additional_information": {
+            "alos": "3 days"
+          },
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — ID003A/ID005A package-specific bed rates"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "ID005",
+      "package_name": "Treatment of systemic fungal infections",
+      "procedures": [
+        {
+          "procedure_code": "ID005A",
+          "procedure_name": "Treatment of systemic fungal infections",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Patient managed in Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Patient managed in High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Patient managed in ICU without Ventilator support",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Patient managed in ICU with Ventilator support",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "ID005A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "investigation_reports",
+                "label": "Positive report for fungal infection"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Systemic fungal infection management",
+            "Deep mycosis treatment",
+            "Invasive candidiasis treatment",
+            "Aspergillosis treatment",
+            "Mucormycosis treatment",
+            "ICD-10 B49",
+            "ICD-10 B48.8",
+            "Disseminated fungal infection",
+            "Antifungal therapy",
+            "Systemic mycosis"
+          ],
+          "additional_information": {
+            "alos": "3 days"
+          },
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — ID003A/ID005A package-specific bed rates"
+          }
+        }
+      ]
+    }
+  ]
+}

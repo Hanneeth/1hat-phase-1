@@ -1,0 +1,2381 @@
+{
+  "_comment": "KB-2 HBP 2022 — Mental Disorders. Deterministic fields set by kb2_extractor.py. Fill: mandatory_documents, aliases, stratification_criteria, additional_information.",
+  "scheme_id": "pmjay",
+  "specialty": "Mental Disorders",
+  "specialty_code": "MM",
+  "packages": [
+    {
+      "package_code": "MM001",
+      "package_name": "Mental Retardation (intellectual disability)",
+      "procedures": [
+        {
+          "procedure_code": "MM001A",
+          "procedure_name": "Intellectual Disability (ID)",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Intellectual Disability",
+            "Mental Retardation",
+            "MR",
+            "ID",
+            "ICD-10 F79",
+            "Cognitive impairment",
+            "Developmental delay",
+            "Intellectual developmental disorder"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM001A",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM001"
+        }
+      ]
+    },
+    {
+      "package_code": "MM002",
+      "package_name": "Mental disorders - Organic, including symptomatic",
+      "procedures": [
+        {
+          "procedure_code": "MM002A",
+          "procedure_name": "Mental disorders - Organic, including symptomatic",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Organic mental disorders",
+            "Symptomatic mental disorders",
+            "Neurocognitive disorders",
+            "Dementia",
+            "Delirium",
+            "Amnestic disorder",
+            "ICD-10 F09",
+            "Organic brain syndrome"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM002A",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM002"
+        }
+      ]
+    },
+    {
+      "package_code": "MM003",
+      "package_name": "Schizophrenia, schizotypal and delusional disorders",
+      "procedures": [
+        {
+          "procedure_code": "MM003A",
+          "procedure_name": "Schizophrenia, schizotypal and delusional disorders",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Schizophrenia",
+            "Schizotypal disorder",
+            "Delusional disorder",
+            "ICD-10 F29",
+            "Psychosis",
+            "Schizoaffective disorder",
+            "Paranoia",
+            "Psychotic disorder"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM003A",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM003"
+        }
+      ]
+    },
+    {
+      "package_code": "MM004",
+      "package_name": "Neurotic, stress-related and somatoform disorders",
+      "procedures": [
+        {
+          "procedure_code": "MM004A",
+          "procedure_name": "Neurotic, stress-related and somatoform disorders",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Neurotic disorders",
+            "Stress-related disorders",
+            "Somatoform disorders",
+            "ICD-10 F48",
+            "Anxiety disorders",
+            "Phobic anxiety",
+            "Obsessive-compulsive disorder",
+            "OCD",
+            "PTSD",
+            "Post-traumatic stress disorder"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM004A",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM004"
+        }
+      ]
+    },
+    {
+      "package_code": "MM005",
+      "package_name": "Mood (affective) disorders",
+      "procedures": [
+        {
+          "procedure_code": "MM005A",
+          "procedure_name": "Mood (affective) disorders",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Mood disorders",
+            "Affective disorders",
+            "Depression",
+            "Major depressive disorder",
+            "Bipolar disorder",
+            "Manic episode",
+            "ICD-10 F39",
+            "Mania",
+            "Cyclothymia"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM005A",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM005"
+        }
+      ]
+    },
+    {
+      "package_code": "MM006",
+      "package_name": "Behavioural syndromes associated with physiological disturbances and physical factors",
+      "procedures": [
+        {
+          "procedure_code": "MM006A",
+          "procedure_name": "Behavioural syndromes associated with physiological disturbances and physical factors",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Behavioural syndromes",
+            "Eating disorders",
+            "Anorexia nervosa",
+            "Bulimia nervosa",
+            "Sleep disorders",
+            "Nonorganic sleep disorders",
+            "Sexual dysfunction",
+            "ICD-10 F59"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM006A",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM006"
+        }
+      ]
+    },
+    {
+      "package_code": "MM007",
+      "package_name": "Mental and Behavioural disorders due to psychoactive substance use",
+      "procedures": [
+        {
+          "procedure_code": "MM007A",
+          "procedure_name": "Mental and Behavioural disorders due to psychoactive substance use",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history of psychoactive substanec with chronicity"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Substance use disorders",
+            "Drug addiction",
+            "Alcohol dependence",
+            "De-addiction",
+            "Substance abuse",
+            "Psychoactive substance use",
+            "Withdrawal state",
+            "ICD-10 F19"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM007A",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM007"
+        }
+      ]
+    },
+    {
+      "package_code": "MM008",
+      "package_name": "Package (Cognitive Tests, Complete Haemogram, Liver Function Test, Renal Function Test, Serum Electrolytes, Electro Cardiogram (ECG), CT / MRI Brain, Electroencephalogram, Thyroid Function Test, VDRL, HIV Test, Vitamin B12 levels, Folate levels, Lipid Profile, Homocysteine levels), serum Lithium level",
+      "procedures": [
+        {
+          "procedure_code": "MM008A",
+          "procedure_name": "Package (Cognitive Tests, Complete Haemogram, Liver Function Test, Renal Function Test, Serum Electrolytes, Electro Cardiogram (ECG), CT / MRI Brain, Electroencephalogram, Thyroid Function Test, VDRL, HIV Test, Vitamin B12 levels, Folate levels, Lipid Profile, Homocysteine levels), serum Lithium level",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 6600,
+            "tier2": 7500,
+            "tier1": 7500
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 6600,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relavant invetigation reports"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Psychiatric diagnostic package",
+            "Cognitive tests",
+            "Serum Lithium level",
+            "Psychiatry investigation profile",
+            "Mental health diagnostics",
+            "Comprehensive psychiatry workup",
+            "ICD-10 Z01.8"
+          ],
+          "stratification_criteria": null,
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM008A",
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — tier3=6600, tier2=7500, tier1=7500. Flat per-day city-tier rates; no bed-category breakdown (strat_remarks absent). bed_rates_inr intentionally null.",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          },
+          "_pkg_code": "MM008"
+        }
+      ]
+    },
+    {
+      "package_code": "MM009",
+      "package_name": "Electro Convulsive Therapy (ECT) - per session",
+      "procedures": [
+        {
+          "procedure_code": "MM009A",
+          "procedure_name": "Electro Convulsive Therapy (ECT) - per session",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 3300,
+            "tier2": 3800,
+            "tier1": 3800
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 3300,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 1,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Electro Convulsive Therapy",
+            "ECT",
+            "Shock therapy",
+            "Electroshock therapy",
+            "ECT per session",
+            "Psychiatric electrotherapy",
+            "ICD-10 Z50.4"
+          ],
+          "stratification_criteria": null,
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM009A",
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — tier3=3300, tier2=3800, tier1=3800. Flat per-day city-tier rates; no bed-category breakdown (strat_remarks absent). bed_rates_inr intentionally null.",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          },
+          "_pkg_code": "MM009"
+        }
+      ]
+    },
+    {
+      "package_code": "MM010",
+      "package_name": "NeuroDevelopmental Disorders (NDD) Other than Intellectual Disability",
+      "procedures": [
+        {
+          "procedure_code": "MM010A",
+          "procedure_name": "Autism Spectrum Disorder",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 1,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Autism Spectrum Disorder",
+            "ASD",
+            "Autism",
+            "Asperger syndrome",
+            "Childhood autism",
+            "Pervasive developmental disorder",
+            "ICD-10 F84.0"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM010A",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM010"
+        },
+        {
+          "procedure_code": "MM010B",
+          "procedure_name": "Mixed Developmental Disorder",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 0,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Mixed Developmental Disorder",
+            "Mixed specific developmental disorders",
+            "Developmental delay",
+            "ICD-10 F83",
+            "Learning disorder",
+            "Speech and language delay"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM010B",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM010"
+        },
+        {
+          "procedure_code": "MM010C",
+          "procedure_name": "Tourette Syndrome / Chronic Tic Disorder",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 0,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Tourette Syndrome",
+            "Chronic Tic Disorder",
+            "Tic disorder",
+            "Gilles de la Tourette syndrome",
+            "Vocal tics",
+            "Motor tics",
+            "ICD-10 F95.2"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM010C",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM010"
+        },
+        {
+          "procedure_code": "MM010D",
+          "procedure_name": "Attention Deficit Hyperactivity Disorder (ADHD)",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 0,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Attention Deficit Hyperactivity Disorder",
+            "ADHD",
+            "Hyperkinetic disorder",
+            "ADD",
+            "Attention deficit disorder",
+            "ICD-10 F90.0",
+            "Hyperactivity"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM010D",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM010"
+        },
+        {
+          "procedure_code": "MM010E",
+          "procedure_name": "Specific Developmental Disorders",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 0,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Specific Developmental Disorders",
+            "Speech and language developmental disorders",
+            "Scholastic skills disorders",
+            "Motor function developmental disorders",
+            "ICD-10 F80",
+            "ICD-10 F81",
+            "ICD-10 F82"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM010E",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM010"
+        }
+      ]
+    },
+    {
+      "package_code": "MM011",
+      "package_name": "Behavioral and motional Disorders of Childhood and Adolescence",
+      "procedures": [
+        {
+          "procedure_code": "MM011A",
+          "procedure_name": "Oppositional Defiant Disorder",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 0,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Oppositional Defiant Disorder",
+            "ODD",
+            "Disruptive behaviour disorder",
+            "Childhood behavioral disorder",
+            "ICD-10 F91.3"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM011A",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM011"
+        },
+        {
+          "procedure_code": "MM011B",
+          "procedure_name": "Conduct Disorder",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 0,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Conduct Disorder",
+            "CD",
+            "Childhood conduct disorder",
+            "Adolescent conduct disorder",
+            "Antisocial behaviour in children",
+            "ICD-10 F91"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM011B",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM011"
+        },
+        {
+          "procedure_code": "MM011C",
+          "procedure_name": "Mixed Disorder of Conduct and Emotions",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 0,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Mixed Disorder of Conduct and Emotions",
+            "Depressive conduct disorder",
+            "ICD-10 F92",
+            "Emotional and conduct disorder",
+            "Childhood emotional disorder"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM011C",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM011"
+        },
+        {
+          "procedure_code": "MM011D",
+          "procedure_name": "Anxiety and Depressive Disorders",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 0,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Anxiety and Depressive Disorders",
+            "Mixed anxiety and depressive disorder",
+            "Childhood anxiety",
+            "Childhood depression",
+            "ICD-10 F41.2",
+            "Pediatric depression"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM011D",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM011"
+        },
+        {
+          "procedure_code": "MM011E",
+          "procedure_name": "Other Internalizing and Externalizing Disorders of Childhood and Adolescence",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 2300,
+              "hdu": 3630,
+              "icu_no_vent": 9350,
+              "icu_vent": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 0,
+          "stratification_required": true,
+          "num_stratifications": 4,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Internalizing disorders",
+            "Externalizing disorders",
+            "Childhood emotional disorders",
+            "Sibling rivalry disorder",
+            "ICD-10 F93",
+            "ICD-10 F98"
+          ],
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Admission to Routine Ward",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "hdu",
+              "description": "HDU",
+              "criterion": "Admission to High Dependency Unit",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_no_vent",
+              "description": "ICU (without Ventilator)",
+              "criterion": "Admission to ICU without Ventilator",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "icu_vent",
+              "description": "ICU (with Ventilator)",
+              "criterion": "Admission to ICU with Ventilator",
+              "source": "strat_remarks"
+            }
+          ],
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must."
+          },
+          "stg_ref": "MM011E",
+          "source_refs": {
+            "rates_inr": "PDF row not found — null, verify manually",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "pricing.bed_rates_inr": "HBP-2022.pdf strat_remarks — package-specific bed rates (auto-parsed)"
+          },
+          "_pkg_code": "MM011"
+        }
+      ]
+    },
+    {
+      "package_code": "MM012",
+      "package_name": "Non-Pharmacological Interventions",
+      "procedures": [
+        {
+          "procedure_code": "MM012A",
+          "procedure_name": "Psychological, Behavioural and Developmental and Educational Interventions (Typically Includes Child Counselling / Psychotherapy, Family Counselling / Psychotherapy / Training Such As Parent Management Training, Behavioral / Cognitive-Behavioral Interventions, Developmental Interventions Such As Early Intervention, Speech / Language Therapy, Occupational Therapy, Physiotherapy, Remediation For Specific Learning Disability and Other Rehabilitative / Psychosocial Interventions)",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 3300,
+            "tier2": 3800,
+            "tier1": 3900
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 3300,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Non-Pharmacological Interventions",
+            "Psychotherapy",
+            "Cognitive Behavioral Therapy",
+            "CBT",
+            "Speech Therapy",
+            "Occupational Therapy",
+            "Remedial education",
+            "Family counselling",
+            "ICD-10 Z50.4"
+          ],
+          "stratification_criteria": null,
+          "additional_information": {
+            "recurrence_rule": "4 CYCLES OVER 3 MONTHS",
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must.",
+            "note": "Add-on package"
+          },
+          "stg_ref": "MM012A",
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — tier3=3300, tier2=3800, tier1=3900. Flat per-day city-tier rates; no bed-category breakdown (strat_remarks absent). bed_rates_inr intentionally null.",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          },
+          "_pkg_code": "MM012"
+        }
+      ]
+    },
+    {
+      "package_code": "MM013",
+      "package_name": "Pharmacological Interventions",
+      "procedures": [
+        {
+          "procedure_code": "MM013A",
+          "procedure_name": "Common Medications Used in Management of Child & Adult Psycholoigical DisordersiIncluding Anti-ADHD Medication",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2200,
+            "tier2": 2500,
+            "tier1": 2600
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 2200,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Pharmacological Interventions",
+            "Psychiatric medications",
+            "Anti-ADHD Medication",
+            "Psychopharmacology",
+            "Psychotropic medication management"
+          ],
+          "stratification_criteria": null,
+          "additional_information": {
+            "recurrence_rule": "4 CYCLES OVER 3 MONTHS",
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must.",
+            "note": "Add-on package"
+          },
+          "stg_ref": "MM013A",
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — tier3=2200, tier2=2500, tier1=2600. Flat per-day city-tier rates; no bed-category breakdown (strat_remarks absent). bed_rates_inr intentionally null.",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          },
+          "_pkg_code": "MM013"
+        }
+      ]
+    },
+    {
+      "package_code": "MM014",
+      "package_name": "Psychological / Psychosocial Assessment Package for All Child And Adolescent Psychiatric Disorders",
+      "procedures": [
+        {
+          "procedure_code": "MM014A",
+          "procedure_name": "Psychological Assessments (Includes IQ Testing, Specific Learning Disability Assessments, Assessments For Autism Spectrum Disorder, Developmental  Assessments, Projective Tests and Other Tests Of Psychopathology),  Other Psychosocial Assessments (Family, Schooling)",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2800,
+            "tier2": 3200,
+            "tier1": 3300
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 2800,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed history with chronicity"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "need for specific treatment and expected results"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed treatment notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "all investigations done"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Psychological Assessments",
+            "IQ Testing",
+            "Learning Disability Assessment",
+            "Autism Assessment",
+            "Projective Tests",
+            "Psychosocial Assessments"
+          ],
+          "stratification_criteria": null,
+          "additional_information": {
+            "min_doctor_qualification": "Admission under empanneled Psychiatrist is a must.",
+            "note": "Add-on package"
+          },
+          "stg_ref": "MM014A",
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — tier3=2800, tier2=3200, tier1=3300. Flat per-day city-tier rates; no bed-category breakdown (strat_remarks absent). bed_rates_inr intentionally null.",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          },
+          "_pkg_code": "MM014"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,895 @@
+{
+  "_comment": "KB-2 HBP 2022 — Interventional Neuroradiology. Deterministic fields set by kb2_extractor.py. Fill: mandatory_documents, aliases, stratification_criteria, additional_information.",
+  "scheme_id": "pmjay",
+  "specialty": "Interventional Neuroradiology",
+  "specialty_code": "IN",
+  "packages": [
+    {
+      "package_code": "IN001",
+      "package_name": "Carotico-cavernous Fistula (CCF) embolization",
+      "procedures": [
+        {
+          "procedure_code": "IN001A",
+          "procedure_name": "Carotico-cavernous Fistula (CCF) embolization with coils.\n[includes 5 coils, guide catheter, micro-catheter, micro-guidewire, general items]",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 70000,
+            "tier2": 99400,
+            "tier1": 105000
+          },
+          "implant": {
+            "name": "Glue for AVMs / AVFs",
+            "cost_inr": 0
+          },
+          "pricing": {
+            "base_rate_inr": 70000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "IN001A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "dsa_report",
+                "label": "Cerebral angiography report (DSA)"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "clincial examination notes"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "OT notes"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "discharge summary"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "invoice of implants"
+              }
+            ]
+          },
+          "aliases": [
+            "CCF embolization with coils",
+            "Carotid-cavernous fistula coiling",
+            "Endovascular treatment of CCF",
+            "Transvenous embolization of CCF",
+            "Transarterial embolization of CCF",
+            "ICD-10 I77.0",
+            "AV fistula embolization",
+            "Neurointerventional coiling for CCF"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row IN001A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        },
+        {
+          "procedure_code": "IN001B",
+          "procedure_name": "Carotid-cavernous Fistula (CCF) embolization with balloon (includes one balloon, guide catheter, micro-catheter, micro-\nguidewire, general items)",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 70000,
+            "tier2": 99400,
+            "tier1": 105000
+          },
+          "implant": {
+            "name": "Glue for AVMs / AVFs",
+            "cost_inr": 0
+          },
+          "pricing": {
+            "base_rate_inr": 70000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "IN001B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT confirming the diagnosis"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI confirming the diagnosis"
+              },
+              {
+                "key": "dsa_report",
+                "label": "DSA confirming the diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_intraop",
+                "label": "Intra procedure clinical photograph"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoices / bar code of balloon and stent"
+              }
+            ]
+          },
+          "aliases": [
+            "CCF embolization with balloon",
+            "Carotid-cavernous fistula balloon occlusion",
+            "Balloon embolization of CCF",
+            "Endovascular balloon occlusion for CCF",
+            "Detachable balloon embolization",
+            "ICD-10 I77.0",
+            "CCF ballooning"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row IN001B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        },
+        {
+          "procedure_code": "IN001C",
+          "procedure_name": "Dural AVMs (per sitting) with onyx",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 150000,
+            "tier2": 213000,
+            "tier1": 225000
+          },
+          "implant": {
+            "name": "Onyx for AVMs / AVFs",
+            "cost_inr": 0
+          },
+          "pricing": {
+            "base_rate_inr": 150000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "IN001C",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT confirming the diagnosis"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI confirming the diagnosis"
+              },
+              {
+                "key": "dsa_report",
+                "label": "DSA confirming the diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "radiographic_stills",
+                "label": "Radiographic stills photograph"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice / bar code of Onyx used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Dural AVM embolization with onyx",
+            "DAVM onyx embolization",
+            "Endovascular onyx injection for dural AVM",
+            "Dural arteriovenous malformation embolization",
+            "ICD-10 Q28.2",
+            "Liquid embolic agent for DAVM"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row IN001C, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        },
+        {
+          "procedure_code": "IN001D",
+          "procedure_name": "Dural AVFs (per sitting) with onyx",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 150000,
+            "tier2": 213000,
+            "tier1": 225000
+          },
+          "implant": {
+            "name": "Onyx for AVMs / AVFs",
+            "cost_inr": 0
+          },
+          "pricing": {
+            "base_rate_inr": 150000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "IN001D",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT confirming the diagnosis"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI confirming the diagnosis"
+              },
+              {
+                "key": "dsa_report",
+                "label": "DSA confirming the diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "radiographic_stills",
+                "label": "Radiographic stills photograph"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice / bar code of Onyx used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Dural AVF embolization with onyx",
+            "DAVF onyx embolization",
+            "Endovascular onyx injection for dural AVF",
+            "Dural arteriovenous fistula embolization",
+            "ICD-10 I77.0",
+            "Liquid embolic agent for DAVF"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row IN001D, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "IN002",
+      "package_name": "Intracranial balloon angioplasty with stenting",
+      "procedures": [
+        {
+          "procedure_code": "IN002A",
+          "procedure_name": "Intracranial balloon angioplasty with stenting",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 100000,
+            "tier2": 142000,
+            "tier1": 150000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 100000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "IN002A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT confirming the diagnosis"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI confirming the diagnosis"
+              },
+              {
+                "key": "dsa_report",
+                "label": "DSA confirming the diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_intraop",
+                "label": "Intra procedure clinical photograph"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "device_invoice_barcode",
+                "label": "Invoices / bar code of balloon and stent"
+              }
+            ]
+          },
+          "aliases": [
+            "Intracranial stenting",
+            "Balloon angioplasty of intracranial artery",
+            "PTA and stenting of intracranial vessels",
+            "Endovascular treatment of intracranial stenosis",
+            "ICD-10 I67.2",
+            "Cerebral angioplasty with stent"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row IN002A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        },
+        {
+          "procedure_code": "IN002B",
+          "procedure_name": "Spinal AVM embolization - Using Histoacryl \n(per sitting)",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 100000,
+            "tier2": 142000,
+            "tier1": 150000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 100000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "IN002B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT confirming the diagnosis"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI confirming the diagnosis"
+              },
+              {
+                "key": "dsa_report",
+                "label": "DSA confirming the diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "radiographic_stills",
+                "label": "Radiographic stills photograph"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI"
+              },
+              {
+                "key": "device_invoice_barcode",
+                "label": "Invoice / bar code of histoacryl used"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              }
+            ]
+          },
+          "aliases": [
+            "Spinal AVM glue embolization",
+            "Histoacryl embolization of spinal AVM",
+            "Spinal arteriovenous malformation embolization",
+            "Endovascular treatment of spinal AVM",
+            "ICD-10 Q28.2",
+            "Spinal vascular malformation embolization"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row IN002B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "IN003",
+      "package_name": "Intracranial thrombolysis/ clot retrieval",
+      "procedures": [
+        {
+          "procedure_code": "IN003A",
+          "procedure_name": "Intracranial thrombolysis / clot retrieval",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 100000,
+            "tier2": 142000,
+            "tier1": 150000
+          },
+          "implant": {
+            "name": "Coil for embolization of aneurysms",
+            "cost_inr": 24000
+          },
+          "pricing": {
+            "base_rate_inr": 100000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "IN003A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT confirming the diagnosis"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI confirming the diagnosis"
+              },
+              {
+                "key": "dsa_report",
+                "label": "DSA confirming the diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_intraop",
+                "label": "Intra procedure clinical photograph"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoices / bar code of balloon and stent"
+              }
+            ]
+          },
+          "aliases": [
+            "Mechanical thrombectomy",
+            "Endovascular clot retrieval",
+            "Intra-arterial thrombolysis",
+            "Acute ischemic stroke intervention",
+            "Stroke thrombectomy",
+            "ICD-10 I63",
+            "Cerebral revascularization for stroke"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row IN003A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "IN004",
+      "package_name": "Carotico-cavernous Fistula (CCF) embolization",
+      "procedures": [
+        {
+          "procedure_code": "IN004B",
+          "procedure_name": "Carotid-cavernous Fistula (CCF) embolization with balloon \n(includes one balloon, guide catheter, micro-catheter, micro-guidewire, general items)",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 64000,
+            "tier2": 90880,
+            "tier1": 96000
+          },
+          "implant": {
+            "name": "Balloon for Embolization",
+            "cost_inr": 11000
+          },
+          "pricing": {
+            "base_rate_inr": 64000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 7,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "IN004B",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT confirming the diagnosis"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI confirming the diagnosis"
+              },
+              {
+                "key": "dsa_report",
+                "label": "DSA confirming the diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "xray",
+                "label": "Post procedure x-ray showing balloon"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice / bar code of used coil / catheter and other accessories"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              }
+            ]
+          },
+          "aliases": [
+            "CCF embolization with balloon",
+            "Carotid-cavernous fistula balloon occlusion",
+            "Balloon embolization of CCF",
+            "Endovascular balloon occlusion for CCF",
+            "ICD-10 I77.0",
+            "CCF ballooning"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row IN004B, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "SU008",
+      "package_name": "Nephrostomy - Percutaneous ultrasound guided",
+      "procedures": [
+        {
+          "procedure_code": "SU008A",
+          "procedure_name": "Nephrostomy - Percutaneous ultrasound guided",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 14000,
+            "tier2": 21300,
+            "tier1": 22500
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 14000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "full",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "SU008A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "usg_report",
+                "label": "USG confirming the indication and need of procedure"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_photo_intraop",
+                "label": "Intra procedure clinical photograph"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "detailed Procedure / Operative Notes"
+              }
+            ]
+          },
+          "aliases": [
+            "PCN",
+            "Percutaneous nephrostomy",
+            "Ultrasound guided nephrostomy",
+            "Percutaneous tube nephrostomy",
+            "ICD-10 N13.6",
+            "Renal decompression",
+            "Percutaneous placement of nephrostomy tube"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row SU008A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (Yes) → full",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    }
+  ]
+}
