@@ -1,249 +1,114 @@
-# IRIS Pre-Authorisation Engine (Phase 1)
+# IRIS — PM-JAY Pre-Authorisation Engine
 
-IRIS is a deterministic, multi-phase decision engine for India's national health assurance scheme (**PM-JAY**). Given patient clinical information at admission, IRIS recommends valid PM-JAY package codes, runs clinical guidelines checks, calculates multi-package billing rates, identifies document gaps, and assesses pre-auth readiness.
+IRIS is a clinical pre-authorisation decision engine for India's national health assurance scheme (**PM-JAY / Ayushman Bharat**). Given a patient's clinical presentation, wallet balance history, and hospital details, IRIS runs a deterministic 11-phase pipeline that selects valid Health Benefit Package (HBP) codes, verifies clinical eligibility against Standard Treatment Guidelines (STGs) using Gemini LLM, resolves multi-procedure billing combination rules, scans for Annexure 6 exclusions, comorbid conditions, and special populations, and performs a pre-auth document gap analysis. It yields a structured pre-auth readiness status (`READY`, `READY_WITH_WARNINGS`, `CONDITIONAL`, or `BLOCKED`) that enables internal medical coordinators to make instant, compliant decisions.
 
 ---
 
-## System Overview & Data Flow
+## 1. Setup and Installation
 
-IRIS runs as a **deterministic pipeline of sequential phases**. Each phase is a function that reads from and mutates a shared state container (`IRISSession`).
+### Prerequisites:
+- **Python 3.11+**
+- **Gemini API Key** (for candidate search, STG guidelines eligibility checks, and stratum tiebreaking)
 
-```mermaid
-graph TD
-    Input[Input JSON] --> P0[Phase 0: Preflight Gates]
-    P0 --> P1[Phase 1: Emergency Routing]
-    P1 --> P2[Phase 2: Candidate Generation]
-    P2 --> P3[Phase 3: Per-Package Validation]
-    P3 --> Routing{0 Validated Packages?}
-    
-    %% Early exits
-    P0 -- Block Flag --> P10[Phase 10: Output Assembly]
-    P1 -- Block Flag --> P10
-    P2 -- Block Flag --> P10
-    P3 -- Block Flag --> P10
-    
-    %% USP Pathway
-    Routing -- Yes --> USP[Set USP_RECOMMENDED <br> Skip Phases 4-8]
-    USP --> P9[Phase 9: Document Gap Analysis]
-    
-    %% Normal Pathway
-    Routing -- No --> P4[Phase 4: Multi-Package Combinations]
-    P4 --> P5[Phase 5: Wallet Sufficiency]
-    P5 --> P6[Phase 6: Exclusion Category Check]
-    P6 --> P7[Phase 7: Comorbidity Resolution]
-    P7 --> P8[Phase 8: Special Populations]
-    P8 --> P9
-    
-    P9 --> P10
-    P10 --> Output[IRISOutput JSON]
+### Step 1: Clone and Enter Workspace
+```powershell
+cd e:\Code\1hat-phase1
 ```
 
-### Early Exit Safeguards
-- **Blocking Flags:** After each of the first four phases (Phases 0–3), the orchestrator checks `session.has_block_flag()`. If any flag has `severity="block"`, the engine immediately skips to Phase 10 to assemble the final blocked output.
-- **Unspecified Surgical Package (USP) Pathway:** If Phase 3 results in zero validated packages, the engine sets `session.usp_recommended = True`, skips Phases 4–8, and jumps directly to Phase 9 and 10.
-
----
-
-## Directory Structure
-
-```
-1hat-phase1/
-├── main.py                    # CLI Entry Point & Pipeline Orchestration
-├── config.py                  # Global Constants & Configuration (Tunable Parameters)
-├── session.py                 # Shared Pipeline State Container (IRISSession)
-├── models.py                  # Domain Dataclasses (Type-hinted, No Pydantic)
-├── input_validator.py         # JSON Schema Validator (Stubbed for MVP)
-├── logger_setup.py            # Global Logger Configuration
-│
-├── kb/                        # Knowledge Base I/O & Search Layers
-│   ├── loader.py              # LRU-cached JSON File Loaders
-│   └── searcher.py            # Fuzzy Candidate Search (rapidfuzz)
-│
-├── llm/                       # LLM Gateway
-│   └── stg_checker.py         # Gemini API Client for STG Clinical Checks
-│
-├── stubs/                     # External Government Database Stubs
-│   ├── bis_stub.py            # Beneficiary Identification System (Patient Context)
-│   └── hem_stub.py            # Hospital Empanelment Module (Hospital Context)
-│
-├── phases/                    # Deterministic Pipeline Phases (Phases 0 - 10)
-│   ├── phase0_preflight.py    # Patient & Hospital Pre-admission Gates
-│   ├── phase1_emergency.py    # Emergency Admission Routing (Stubbed for MVP)
-│   ├── phase2_candidates.py   # Clinical-based Candidate Selection
-│   ├── phase3_validator.py    # Rule Verification & LLM STG Eligibility
-│   ├── phase4_multipackage.py # Combination Rules, Deductions, and Standalones
-│   ├── phase5_financial.py    # Base-rate Estimate & Wallet Sufficiency Check
-│   ├── phase6_exclusion.py    # Annexure 6 Exclusions (OPD, Cosmetic, etc.)
-│   ├── phase7_comorbidity.py  # Comorbidity Absorption Rules
-│   ├── phase8_special_pop.py  # Neonatal, Paediatric, Portability, and MTB routing
-│   ├── phase9_documents.py    # Annexure 7 Relaxation & Document Gap Analysis
-│   └── phase10_output.py      # Final Assembly & Readiness State Resolution
-│
-├── data/                      # Knowledge Base JSON Files
-│   ├── hbp/                   # Health Benefit Package Shards & Thin Index
-│   ├── stg/                   # Standard Treatment Guidelines per Procedure
-│   └── schemes/               # PM-JAY Scheme-specific configurations
-│
-└── tests/
-    └── inputs/                # Standard JSON test inputs (TC01.json - TC15.json)
+### Step 2: Set Up Virtual Environment (Recommended)
+```powershell
+python -m venv venv
+venv\Scripts\activate      # Windows (PowerShell)
+# source venv/bin/activate  # Linux / macOS
 ```
 
----
-
-## Detailed Pipeline Phases
-
-| Phase | Phase Name | Core Responsibility / Logic |
-|---|---|---|
-| **Phase 0** | **Preflight Gates** | Resolves patient metadata via BIS and hospital profile via HEM. Aborts if patient is not registered or the hospital's scheme is not `"pmjay"`. |
-| **Phase 1** | **Emergency Routing** | Identifies emergency admissions based on vitals and symptoms. *(Stubbed in MVP — defaults to elective planned admission)*. |
-| **Phase 2** | **Candidate Generation** | Formulates a search query from clinical inputs and runs a fuzzy text search against the `_index.json` HBP catalog. Filters out specialties the hospital is not empanelled for and restricted public-only packages (if private). |
-| **Phase 3** | **Per-Package Validator** | Loads full procedure details from specialty JSON shards. Performs public-reservation checks, classifies billing types, runs the LLM STG eligibility check, resolves bed-category/procedural stratification, checks implant criteria, and estimates LoS enhancement counts. |
-| **Phase 4** | **Multi-Package Rules** | Resolves package combinations: drops per-day packages if a surgical package is present; keeps only one per-day package; segregates standalones into group 2; checks add-on parents; and applies the **100-50-25%** surgical deduction scale. |
-| **Phase 5** | **Financial Check** | Computes base-rate estimates. Validates against available wallet. Senior citizens (age ≥70) trigger Vay Vandana Yojana dual-wallet checks, flagging debit-order ambiguity. |
-| **Phase 6** | **Exclusion Verification** | Scans clinical texts for keywords matching PM-JAY Annexure 6 exclusions (OPD-only, dental, cosmetic, etc.) and raises warning flags. |
-| **Phase 7** | **Comorbidity Resolution** | Identifies standard chronic management conditions (e.g. Hypertension, Diabetes) and marks them as absorbed by the primary surgical package. |
-| **Phase 8** | **Special Populations** | Adds flags for neonatal risk escalation, paediatric device warnings, interstate portability TAT adjustments, mandatory tumor boards (MTB) for oncology, and NOTTO donor/recipient IDs for transplants. |
-| **Phase 9** | **Document Gap Analysis** | Compiles checklist of required documents: universal (`clinical_notes` and `patient_photo`), conditional (MLC reports, NOTTO IDs, MTB approvals), and package-specific guidelines. Waives all except `clinical_notes` for public hospitals. |
-| **Phase 10**| **Output Assembly** | Assigns final pre-auth readiness status: **READY**, **READY_WITH_WARNINGS**, **CONDITIONAL**, or **BLOCKED**. Packages output into serializable JSON. |
-
----
-
-## Environment Setup & Requirements
-
-IRIS requires **Python 3.11+**.
-
-### 1. Install Dependencies
-```bash
+### Step 3: Install Dependencies
+```powershell
 pip install -r requirements.txt
 ```
-*Dependencies:* `rapidfuzz` (fuzzy matching), `google-genai` (Gemini API client), `python-dotenv` (environment configuration).
 
-### 2. Configure Environment Variables
-Create a `.env` file in the project root:
+### Step 4: Configure Environment Variables
+Create a file named `.env` in the project root directory:
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
 ---
 
-## How to Run the Pipeline
+## 2. Running the Pipeline
 
-IRIS accepts a standard admission JSON input and outputs a structured pre-auth readiness report.
+IRIS takes an input JSON payload, processes it through the pipeline, and prints the serialized `IRISOutput` structure as JSON to **stdout**. All debug logs are printed to **stderr** (or stdout if redirected).
 
-### Test Cases
-You can find various standard testing scenario inputs in the `tests/inputs/` directory:
-- **Location:** `tests/inputs/TC01.json` through `tests/inputs/TC15.json`
-- **Scenarios:** These files cover various paths, including happy paths, public reservation block cases, STG non-eligibility cases, multi-package combination rule test cases, wallet insufficiency cases, and pediatric age-boundary cases.
-
-### Standard Execution (using CLI)
-To run the engine using a specific test case file, specify the file path as an argument:
-```bash
-python main.py tests/inputs/TC01.json
+### Running on a File:
+```powershell
+python main.py tests/inputs/TC02.json
 ```
 
-Or pipe the input via standard input (`stdin`):
-```bash
-# Windows PowerShell
-cat tests/inputs/TC01.json | python main.py
-
-# Bash / Linux / macOS
-python main.py < tests/inputs/TC01.json
+### Running via STDIN (PowerShell):
+```powershell
+cat tests/inputs/TC02.json | python main.py
 ```
 
-### Sample Output Structure
-Running the engine with `tests/inputs/TC01.json` produces the following structured JSON output:
-
-```json
-{
-  "readiness_status": "READY_WITH_WARNINGS",
-  "selected_packages": [],
-  "blocked_candidates": [
-    {
-      "procedure_code": "SG021A",
-      "reason_code": "SHARD_NOT_FOUND",
-      "message": "Shard file general_surgery.json not found"
-    }
-  ],
-  "preauth_docs_required": [
-    {
-      "key": "clinical_notes",
-      "label": "Admission / clinical notes",
-      "package_code": null,
-      "available": true,
-      "criticality": "hard_block"
-    },
-    {
-      "key": "patient_photo",
-      "label": "Photo of patient on hospital bed",
-      "package_code": null,
-      "available": true,
-      "criticality": "hard_block"
-    }
-  ],
-  "preauth_docs_missing": [],
-  "enhancement_plan": [],
-  "copayment_required": false,
-  "copayment_gap_inr": null,
-  "comorbidity_notes": [],
-  "flags": [
-    {
-      "code": "EMERGENCY_PHASE_STUBBED",
-      "message": "Emergency routing not implemented — assuming planned elective admission",
-      "severity": "info"
-    },
-    {
-      "code": "CANDIDATES_GENERATED",
-      "message": "Generated 1 candidates from index",
-      "severity": "info"
-    },
-    {
-      "code": "USP_RECOMMENDED",
-      "message": "No standard PM-JAY packages validated for this clinical input. Unspecified Surgical Package (USP) pathway may apply. Consult SHA.",
-      "severity": "warning"
-    }
-  ],
-  "stg_coverage": {
-    "validated": 0,
-    "stg_missing": 0
-  },
-  "errors": []
-}
-```
+### Pipeline Exit Codes:
+- **`0`**: Successful pipeline execution (regardless of whether the final status is `READY` or `BLOCKED`).
+- **`1`**: Schema validation failed on input payload.
 
 ---
 
-## How to Run Tests
+## 3. Running the Test Cases
 
-There are four smoke/unit test scripts in the root directory:
+IRIS includes 16 pre-built test cases under `tests/inputs/` designed to exercise every major pipeline gate and logical branch:
 
-### 1. KB Loader Test (`phaseb_test.py`)
-Validates that the HBP index, specialty shards, STG catalog, and database stubs (BIS/HEM) are loading correctly.
-```bash
-python phaseb_test.py
+| Test Case | Scenario | Focus Area |
+|---|---|---|
+| **`TC01.json`** | Shard not built (Infectious Diseases) | Specialty shard missing; triggers Unspecified Surgical Package (USP) pathway |
+| **`TC02.json`** | Standard surgical package (Cardiology, Pt P001, Hosp H001) | Baseline success path for private hospital (requires 2 universal docs) |
+| **`TC03.json`** | STG ineligible (Cardiology, PTCA guideline check) | LLM eligibility failure; candidate is blocked |
+| **`TC04.json`** | Public reservation block (General Surgery, public-only procedure at private hospital) | Candidates blocked due to public-reservation rule |
+| **`TC05.json`** | Multi-package surgical + fixed_medical | Multi-procedure combination rules; verifies standalone split |
+| **`TC06.json`** | Per-day medical + surgical package conflict | Rule 5: drops medical per-day package in presence of surgical |
+| **`TC07.json`** | Senior citizen dual-wallet (Age 72, Kamala Devi) | Dual family & Vay Vandana cards; raises debit order ambiguity warning |
+| **`TC08.json`** | Wallet insufficient (family wallet balance ₹8,000) | Compares base rates to balance; raises insufficient wallet warning |
+| **`TC09.json`** | Oncology case | Specialty MO/MR/SC; triggers MTB and oncology multi-stage flags |
+| **`TC10.json`** | Paediatric boundary case (Age 5, Arjun) | Patient age ≤ 14; raises paediatric device flag |
+| **`TC11.json`** | Interstate portability (Maharashtra patient in TN hospital) | State mismatch; raises portability case flag |
+| **`TC12.json`** | Medico-legal case (MLC) | `is_medico_legal: true`; adds MLC FIR and self-declaration to required docs |
+| **`TC13.json`** | Organ transplant case | Specialty OT; raises NOTTO documentation requirements |
+| **`TC14.json`** | Add-on without valid parent procedure | Orphan add-on detection; package is dropped |
+| **`TC15.json`** | Standalone package split | Standalone procedure separated into separate pre-auth group (Group 2) |
+| **`TC16.json`** | Dual General Surgery (Cholecystectomy + Umbilical hernia repair) | Multi-surgical 100-50 deduction rule and dual selection |
+
+### Executing Standalone Integration Test Scripts:
+- **Verify Knowledge Base Loaders**:
+  ```powershell
+  python phaseb_test.py
+  ```
+- **Test Candidate Generation (Phases 0–2)**:
+  ```powershell
+  python phasec_test.py
+  ```
+- **Test LLM STG Eligibility Verification (Phase 3)**:
+  ```powershell
+  python phased_test.py
+  ```
+- **Full Pipeline Smoke Test (Phases 0–10)**:
+  ```powershell
+  python phasee_test.py
+  ```
+
+---
+
+## 4. Running the Streamlit Debug Console
+
+For manual interactive inspection, run the built-in Streamlit developer console:
+
+```powershell
+streamlit run app.py
 ```
 
-### 2. Early Pipeline Test (`phasec_test.py`)
-Tests Phase 0 (Preflight) through Phase 2 (Candidate Generation). Useful to verify that clinical inputs are being fuzzily matched to candidate procedures.
-```bash
-python phasec_test.py
-```
-
-### 3. LLM STG Validation Test (`phased_test.py`)
-Triggers the Phase 3 candidate validation and runs the LLM STG eligibility checks using the Gemini API.
-```bash
-python phased_test.py
-```
-
-### 4. Full Pipeline Test (`phasee_test.py`)
-Simulates the entire pipeline execution (Phases 0 through 10) on a mock clinical input.
-```bash
-python phasee_test.py
-```
-
-> **Note on Windows Terminal Encoding:**
-> If you run `phasee_test.py` directly on a Windows terminal with default CP1252 encoding, you might experience a `UnicodeEncodeError` when the test prints checkmark (`✓`) and cross (`✗`) characters to the console.
-> You can bypass this print-only terminal encoding issue by redirecting the output, or by running:
-> ```powershell
-> [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-> python phasee_test.py
-> ```
+### Console Features:
+1. **Test Case Selector**: Select any of the 16 pre-built test cases to load their raw parameters.
+2. **Clinical Input Editor**: Manually edit complaints, diagnosis, vitals, comorbidities, and non-clinical documents in hand.
+3. **Pipeline Runner**: Click "Run IRIS Pipeline" to execute all phases.
+4. **Execution Summary**: Visualizes the final pre-auth readiness status, selected package combination details, wallet balances, document gap checklists, comorbidity absorption logs, and full debug printout.
+5. **Aesthetics**: Functional and developer-centric console designed for rapid diagnosis and rule tuning.

@@ -1,0 +1,173 @@
+{
+  "_test_id": "TC16",
+  "_description": "Dual General Surgery — symptomatic cholelithiasis (planned laparoscopic cholecystectomy) with co-existing symptomatic umbilical hernia repaired at same sitting. Single elective admission, two separate PM-JAY packages. Tests multi-surgical 100-50 combination rule and whether the pipeline catches both billable procedures.",
+  "_expected_status": "CONDITIONAL",
+  "_expected_specialty": "SG",
+  "_expected_packages_count": 2,
+  "_expected_flags_include": [
+    "CANDIDATES_GENERATED",
+    "FINANCIAL_ESTIMATE_APPROXIMATE",
+    "DEDUCTION_APPROXIMATE"
+  ],
+  "_expected_flags_exclude": [
+    "WALLET_INSUFFICIENT",
+    "PUB_RESERVED_BLOCK",
+    "USP_RECOMMENDED"
+  ],
+  "_notes": "The non-obvious part: MEDCO typically files only for cholecystectomy and misses the umbilical hernia as a separately billable package. Both are surgical — 100-50 deduction applies sorted by base_rate_inr descending. No MLC, no emergency, no comorbidities — clean dual-surgical test.",
+  "session_id": "IRIS-TC16-20260614",
+  "created_at": "2026-06-14T10:30:00+05:30",
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-14",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Recurrent right upper quadrant pain after fatty meals for 8 months. Painless swelling at navel since 2 years, increasing in size, reducible, no bowel complaints.",
+    "duration_days": 240,
+    "history_of_present_illness": "Patient is a 48-year-old male who has been experiencing episodic right upper quadrant and epigastric pain for 8 months, typically occurring 30-60 minutes after meals, especially fatty food. Two episodes of severe biliary colic in the past 3 months. No jaundice, no fever. Separately, patient noticed a swelling at the umbilicus 2 years ago, initially small and reducible. No pain at umbilical swelling site. No bowel obstruction symptoms. Both conditions evaluated simultaneously and patient planned for combined surgery under single anaesthesia.",
+    "provisional_diagnosis": "Symptomatic cholelithiasis with umbilical hernia",
+    "planned_procedure": "Laparoscopic cholecystectomy with simultaneous open umbilical hernia repair (mesh)",
+    "weight_kg": 82,
+    "height_cm": 168,
+    "vitals": {
+      "bp_systolic_mmhg": 124,
+      "bp_diastolic_mmhg": 80,
+      "pulse_bpm": 78,
+      "spo2_pct": 98,
+      "temperature_f": 98.4,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": 104
+    },
+    "examination_findings": {
+      "general": "Conscious, oriented, mild central obesity, no pallor, no icterus, no lymphadenopathy",
+      "cvs": "S1 S2 heard, no murmurs, regular rate and rhythm",
+      "rs": "Bilateral air entry clear, no added sounds",
+      "abdomen": "Soft, mild tenderness in right hypochondrium on deep palpation. Murphy's sign positive. Umbilical swelling 3x3 cm, reducible, non-tender, positive cough impulse, no overlying skin changes.",
+      "cns": "No focal neurological deficits",
+      "local": "Umbilical region: reducible hernia with defect palpable approximately 2 cm, bowel sounds present in sac"
+    },
+    "investigations": [
+      {
+        "type": "usg",
+        "result_summary": "USG abdomen: Multiple calculi in gallbladder, largest 12mm. Gallbladder wall mildly thickened at 4mm. No common bile duct dilation. CBD 4mm. Liver normal. Umbilical hernia with small bowel loops in sac confirmed.",
+        "structured_values": [
+          {
+            "parameter": "gallstones_count",
+            "value": "multiple",
+            "unit": null,
+            "flag": null,
+            "leads": null
+          },
+          {
+            "parameter": "largest_stone_mm",
+            "value": 12,
+            "unit": "mm",
+            "flag": null,
+            "leads": null
+          },
+          {
+            "parameter": "cbd_diameter_mm",
+            "value": 4,
+            "unit": "mm",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "gb_wall_thickness_mm",
+            "value": 4,
+            "unit": "mm",
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-10"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "LFT: Total bilirubin 0.8 mg/dL, direct 0.2, SGOT 32, SGPT 38, ALP 88. CBC: Hb 13.2, WBC 9100, platelets 2.6 lakh. RFT: Creatinine 0.9. PT/INR 1.1. Blood glucose fasting 104 mg/dL.",
+        "structured_values": [
+          {
+            "parameter": "total_bilirubin",
+            "value": 0.8,
+            "unit": "mg/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "SGPT",
+            "value": 38,
+            "unit": "U/L",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "ALP",
+            "value": 88,
+            "unit": "U/L",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "Hb",
+            "value": 13.2,
+            "unit": "g/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "INR",
+            "value": 1.1,
+            "unit": null,
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-12"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No significant past medical history. No prior abdominal surgeries.",
+    "past_surgical_history": "None",
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "non-smoker",
+      "alcohol": "occasional",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Admission clinical notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Photo of patient on hospital bed",
+        "available": true
+      },
+      {
+        "key": "clinical_photo_initial",
+        "label": "Clinical photograph of umbilical hernia",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Anand Krishnamurthy",
+      "registration_number": "TN-MED-78923",
+      "qualification": "MS General Surgery, FMAS, FIAGES",
+      "specialty_code": "SG"
+    },
+    "notes": "Patient fit for combined surgery. Pre-anaesthetic check cleared. Planned for laparoscopic cholecystectomy followed by umbilical hernia mesh repair under same general anaesthesia. Informed consent obtained for both procedures."
+  }
+}

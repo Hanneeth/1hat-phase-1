@@ -2,7 +2,7 @@
 
 import logging
 from session import IRISSession
-from kb.searcher import search_candidates
+from kb.searcher_router import search_candidates
 
 logger = logging.getLogger(__name__)
 

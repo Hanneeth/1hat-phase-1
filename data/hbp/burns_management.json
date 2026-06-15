@@ -12,6 +12,7 @@
           "procedure_code": "BM001A",
           "procedure_name": "Criteria 1: % Total Body Surface Area Burns (TBSA):less than 20% in adults and less than 10% in children younger  than 12 years. Dressing without anesthesia",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 7000,
@@ -100,6 +101,7 @@
           "procedure_code": "BM001B",
           "procedure_name": "Criteria 2: % Total Body Surface Area Burns (TBSA): Upto 25%; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 50000,
@@ -195,6 +197,7 @@
           "procedure_code": "BM001C",
           "procedure_name": "Criteria 3: % Total Body Surface Area Burns (TBSA): 25-40 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 62500,
@@ -289,6 +292,7 @@
           "procedure_code": "BM001D",
           "procedure_name": "Criteria 4: % Total Body Surface Area Burns (TBSA):40- 60 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 100000,
@@ -383,6 +387,7 @@
           "procedure_code": "BM001E",
           "procedure_name": "Criteria 5: % Total Body Surface Area Burns (TBSA):60-80 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 100000,
@@ -483,6 +488,7 @@
           "procedure_code": "BM002A",
           "procedure_name": "Criteria 1:  % Total Body Surface Area Burns (TBSA): less than 20% in adults and less than 10% in children younger  than 12 years. Dressing without anesthesia",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 7000,
@@ -569,6 +575,7 @@
           "procedure_code": "BM002B",
           "procedure_name": "Criteria 2: % Total Body Surface Area Burns (TBSA): Upto 25%; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 50000,
@@ -663,6 +670,7 @@
           "procedure_code": "BM002C",
           "procedure_name": "Criteria 3: % Total Body Surface Area Burns (TBSA): 25-40 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 62500,
@@ -756,6 +764,7 @@
           "procedure_code": "BM002D",
           "procedure_name": "Criteria 4: % Total Body Surface Area Burns (TBSA):40- 60 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 100000,
@@ -849,6 +858,7 @@
           "procedure_code": "BM002E",
           "procedure_name": "Criteria 5: % Total Body Surface Area Burns (TBSA):60-80 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 100000,
@@ -948,6 +958,7 @@
           "procedure_code": "BM003A",
           "procedure_name": "% Total Body Surface Area Burns (TBSA) - any % \n(not requiring admission). \nNeeds at least 5-6 dressing",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 7000,
@@ -1042,6 +1053,7 @@
           "procedure_code": "BM003B",
           "procedure_name": "% Total Body Surface Area Burns (TBSA): Upto 40 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 50000,
@@ -1136,6 +1148,7 @@
           "procedure_code": "BM003C",
           "procedure_name": "% Total Body Surface Area Burns (TBSA): 40 % - 60 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 62500,
@@ -1229,6 +1242,7 @@
           "procedure_code": "BM003D",
           "procedure_name": "% Total Body Surface Area Burns (TBSA): >  60 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 100000,
@@ -1329,6 +1343,7 @@
           "procedure_code": "BM004A",
           "procedure_name": "Electrical contact burns: Low voltage - without part of limb / limb loss; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 37500,
@@ -1423,6 +1438,7 @@
           "procedure_code": "BM004B",
           "procedure_name": "Electrical contact burns: Low voltage - with part of limb / limb loss; Includes % TBSA skin grafted, flap cover, follow-up dressings Amputation  etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 50000,
@@ -1517,6 +1533,7 @@
           "procedure_code": "BM004C",
           "procedure_name": "Electrical contact burns: High voltage - with part of limb / limb loss; Includes % TBSA skin grafted, flap cover,fasciotomy +/- /amputation/Central IV Line/debridement/early skin grafting pedicle or free flap coverage,follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 75000,
@@ -1611,6 +1628,7 @@
           "procedure_code": "BM004D",
           "procedure_name": "Electrical contact burns: High voltage - without part of limb / limb loss; Includes % TBSA skin grafted, flap cover, fasciotomy +/- /debridement/early skin grafting/flap cover: pedicle or free flap coverage,follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 62500,
@@ -1711,6 +1729,7 @@
           "procedure_code": "BM005A",
           "procedure_name": "Chemical burns: Without significant facial scarring and/or loss of function; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.(Similar to therma burns\nrequire more grafting, debridement,(skin grafing/canthopexy)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 50000,
@@ -1805,6 +1824,7 @@
           "procedure_code": "BM005B",
           "procedure_name": "Chemical burns: With significant facial scarring and/or loss of function; Includes % TBSA skin grafted, flap cover,debridement,skin grafting,follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 75000,
@@ -1905,6 +1925,7 @@
           "procedure_code": "BM006A",
           "procedure_name": "Post Burn Contracture surgeries for Functional Improvement (Package including splints, pressure garments, silicone - gel sheet and physiotherapy): Excluding Neck contracture; Contracture release with - Split thickness Skin Graft (STSG) / Full Thickness Skin Graft (FTSG) / Flap cover is done for each joint with post - operative regular dressings for STSG / FTSG / Flap cover.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 62500,
@@ -1991,6 +2012,7 @@
           "procedure_code": "BM006B",
           "procedure_name": "Post Burn Contracture surgeries for Functional Improvement (Package including splints, pressure garments,contracture release & split skin graft with or without flap reconstruction,silicone - gel sheet and physiotherapy): Neck contracture; Contracture release with - Split thickness Skin Graft (STSG) / \nFull Thickness Skin Graft (FTSG) / Flap cover is done for each joint with post-operative regular dressings for STSG / FTSG / Flap cover.",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 62500,

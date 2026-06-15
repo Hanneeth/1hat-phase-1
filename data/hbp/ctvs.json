@@ -12,6 +12,7 @@
           "procedure_code": "MC014A",
           "procedure_name": "Temporary Pacemaker implantation",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 24000,
@@ -108,6 +109,7 @@
           "procedure_code": "MC015A",
           "procedure_name": "Permanent Pacemaker Implantation - \nSingle Chamber",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 30700,
@@ -209,6 +211,7 @@
           "procedure_code": "MC016A",
           "procedure_name": "Permanent Pacemaker Implantation - \nDouble Chamber",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 41300,
@@ -309,6 +312,7 @@
           "procedure_code": "SC074A",
           "procedure_name": "Vascular reconstruction",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 95300,
@@ -384,6 +388,7 @@
           "procedure_code": "SG069A",
           "procedure_name": "Carotid Body tumour - Excision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 37500,
@@ -481,6 +486,7 @@
           "procedure_code": "SG077A",
           "procedure_name": "Intercostal drainage Only",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 5600,
@@ -576,6 +582,7 @@
           "procedure_code": "SV001A",
           "procedure_name": "Unifocalization of MAPCA",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 137500,
@@ -664,6 +671,7 @@
           "procedure_code": "SV001B",
           "procedure_name": "Isolated Secundum Atrial Septal Defect (ASD) Repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 137500,
@@ -745,6 +753,7 @@
           "procedure_code": "SV001C",
           "procedure_name": "Glenn procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 137500,
@@ -826,6 +835,7 @@
           "procedure_code": "SV001D",
           "procedure_name": "Pulmonary Artery Banding",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 137500,
@@ -905,6 +915,7 @@
           "procedure_code": "SV001E",
           "procedure_name": "Systemic - Pulmonary Artery shunt",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 137500,
@@ -995,6 +1006,7 @@
           "procedure_code": "SV001F",
           "procedure_name": "Vascular Ring division",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 137500,
@@ -1075,6 +1087,7 @@
           "procedure_code": "SV001G",
           "procedure_name": "Coarctation repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 137500,
@@ -1169,6 +1182,7 @@
           "procedure_code": "SV002A",
           "procedure_name": "ASD closure + Partial Anomalous Venous Drainage Repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -1270,6 +1284,7 @@
           "procedure_code": "SV002B",
           "procedure_name": "ASD Closure + Mitral procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -1382,6 +1397,7 @@
           "procedure_code": "SV002C",
           "procedure_name": "ASD Closure + Tricuspid procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -1493,6 +1509,7 @@
           "procedure_code": "SV002D",
           "procedure_name": "ASD Closure + Pulmonary procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -1603,6 +1620,7 @@
           "procedure_code": "SV002E",
           "procedure_name": "ASD Closure + Infundibular procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -1713,6 +1731,7 @@
           "procedure_code": "SV002F",
           "procedure_name": "VSD closure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -1823,6 +1842,7 @@
           "procedure_code": "SV002G",
           "procedure_name": "Infundibular PS repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -1933,6 +1953,7 @@
           "procedure_code": "SV002H",
           "procedure_name": "Valvular PS / PR repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -2044,6 +2065,7 @@
           "procedure_code": "SV002I",
           "procedure_name": "Partial AV canal repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -2154,6 +2176,7 @@
           "procedure_code": "SV002J",
           "procedure_name": "Intermediate AV canal repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -2264,6 +2287,7 @@
           "procedure_code": "SV002K",
           "procedure_name": "Atrial septectomy + Glenn",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -2375,6 +2399,7 @@
           "procedure_code": "SV002L",
           "procedure_name": "Atrial septectomy + PA Band",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -2485,6 +2510,7 @@
           "procedure_code": "SV002M",
           "procedure_name": "Sinus of Valsalva aneurysm repair with aortic valve procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -2595,6 +2621,7 @@
           "procedure_code": "SV002N",
           "procedure_name": "Sinus of Valsalva aneurysm repair without aortic valve procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -2704,6 +2731,7 @@
           "procedure_code": "SV002O",
           "procedure_name": "Sub-aortic membrane resection",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -2820,6 +2848,7 @@
           "procedure_code": "SV003A",
           "procedure_name": "Ebstien anomoly repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -2930,6 +2959,7 @@
           "procedure_code": "SV003B",
           "procedure_name": "Double switch operation",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -3040,6 +3070,7 @@
           "procedure_code": "SV003C",
           "procedure_name": "Rastelli Procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -3150,6 +3181,7 @@
           "procedure_code": "SV003D",
           "procedure_name": "Fontan procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -3269,6 +3301,7 @@
           "procedure_code": "SV003E",
           "procedure_name": "AP window repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -3378,6 +3411,7 @@
           "procedure_code": "SV003F",
           "procedure_name": "Arch interruption Repair without VSD closure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -3487,6 +3521,7 @@
           "procedure_code": "SV003G",
           "procedure_name": "Arch interruption Repair with VSD closure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -3596,6 +3631,7 @@
           "procedure_code": "SV003H",
           "procedure_name": "DORV Repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -3705,6 +3741,7 @@
           "procedure_code": "SV003I",
           "procedure_name": "Supravalvular AS repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -3815,6 +3852,7 @@
           "procedure_code": "SV003J",
           "procedure_name": "Konno procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -3924,6 +3962,7 @@
           "procedure_code": "SV003K",
           "procedure_name": "Norwood procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -4034,6 +4073,7 @@
           "procedure_code": "SV003L",
           "procedure_name": "VSD closure + RV - PA conduit",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -4143,6 +4183,7 @@
           "procedure_code": "SV003M",
           "procedure_name": "VSD + Aortic procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -4252,6 +4293,7 @@
           "procedure_code": "SV003N",
           "procedure_name": "VSD + Mitral procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -4361,6 +4403,7 @@
           "procedure_code": "SV003O",
           "procedure_name": "VSD + Tricuspid procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -4470,6 +4513,7 @@
           "procedure_code": "SV003P",
           "procedure_name": "VSD + Pulmonary artery procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -4579,6 +4623,7 @@
           "procedure_code": "SV003Q",
           "procedure_name": "VSD + Infundibular procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -4688,6 +4733,7 @@
           "procedure_code": "SV003R",
           "procedure_name": "VSD + Coarctation repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -4797,6 +4843,7 @@
           "procedure_code": "SV003S",
           "procedure_name": "TAPVC Repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -4906,6 +4953,7 @@
           "procedure_code": "SV003T",
           "procedure_name": "Truncus arteriosus repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -5015,6 +5063,7 @@
           "procedure_code": "SV003U",
           "procedure_name": "Tetralogy of Fallot Repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -5125,6 +5174,7 @@
           "procedure_code": "SV003V",
           "procedure_name": "Complete AV canal repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -5235,6 +5285,7 @@
           "procedure_code": "SV003W",
           "procedure_name": "Arterial switch operation",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -5345,6 +5396,7 @@
           "procedure_code": "SV003X",
           "procedure_name": "Senning Operation",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -5454,6 +5506,7 @@
           "procedure_code": "SV003Y",
           "procedure_name": "Mustard Operation",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -5563,6 +5616,7 @@
           "procedure_code": "SV003Z",
           "procedure_name": "ALCAPA repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 275000,
@@ -5642,6 +5696,7 @@
           "procedure_code": "SV004A",
           "procedure_name": "Coronary artery bypass grafting (CABG), with or without  intraoperative IABP)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 162400,
@@ -5724,6 +5779,7 @@
           "procedure_code": "SV005A",
           "procedure_name": "Aortic valve replacement",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 163700,
@@ -5826,6 +5882,7 @@
           "procedure_code": "SV005B",
           "procedure_name": "Mitral valve replacement / Mitral valve repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 163700,
@@ -5933,6 +5990,7 @@
           "procedure_code": "SV005C",
           "procedure_name": "Tricuspid valve replacement / Tricuspid valve repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 163700,
@@ -6046,6 +6104,7 @@
           "procedure_code": "SV006A",
           "procedure_name": "Double valve replacement/ repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 195300,
@@ -6165,6 +6224,7 @@
           "procedure_code": "SV007A",
           "procedure_name": "Triple valve replacement/ repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 233800,
@@ -6283,6 +6343,7 @@
           "procedure_code": "SV008A",
           "procedure_name": "Closed mitral valvotomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 78400,
@@ -6369,6 +6430,7 @@
           "procedure_code": "SV009A",
           "procedure_name": "Ross Procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -6458,6 +6520,7 @@
           "procedure_code": "SV010A",
           "procedure_name": "Surgery for Hypertrophic Obstructive Cardiomyopathy (HOCM)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 152700,
@@ -6566,6 +6629,7 @@
           "procedure_code": "SV011A",
           "procedure_name": "Pericardial window (via thoracotomy)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 41300,
@@ -6649,6 +6713,7 @@
           "procedure_code": "SV012A",
           "procedure_name": "Pericardiectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 92200,
@@ -6730,6 +6795,7 @@
           "procedure_code": "SV013A",
           "procedure_name": "Patent Ductus Arteriosus (PDA) Closure via thoracotomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 78400,
@@ -6812,6 +6878,7 @@
           "procedure_code": "SV014A",
           "procedure_name": "Bental Procedure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -6925,6 +6992,7 @@
           "procedure_code": "SV014B",
           "procedure_name": "Aortic Dissection",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -7037,6 +7105,7 @@
           "procedure_code": "SV014C",
           "procedure_name": "Aortic Aneurysm ( Root Ascending )",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -7149,6 +7218,7 @@
           "procedure_code": "SV014D",
           "procedure_name": "Valve sparing root replacement",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -7262,6 +7332,7 @@
           "procedure_code": "SV014E",
           "procedure_name": "AVR + Root enlargement",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -7402,6 +7473,7 @@
           "procedure_code": "SV015A",
           "procedure_name": "Aortic Arch Replacement using cardiopulmonary bypass",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -7505,6 +7577,7 @@
           "procedure_code": "SV015B",
           "procedure_name": "Thoracoabdominal aneurysm Repair using partial cardiopulmonary bypass",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 206300,
@@ -7613,6 +7686,7 @@
           "procedure_code": "SV016A",
           "procedure_name": "Aortic Aneurysm Repair using Cardiopulmonary bypass (CPB)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -7709,6 +7783,7 @@
           "procedure_code": "SV016B",
           "procedure_name": "Aortic Aneurysm Repair using Left Heart Bypass",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 165000,
@@ -7804,6 +7879,7 @@
           "procedure_code": "SV016C",
           "procedure_name": "Aortic Aneurysm Repair without using Cardiopulmonary bypass (CPB)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 90100,
@@ -7896,6 +7972,7 @@
           "procedure_code": "SV016D",
           "procedure_name": "Aortic Aneurysm Repair without using Left Heart Bypass",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 90100,
@@ -7993,6 +8070,7 @@
           "procedure_code": "SV017A",
           "procedure_name": "Aorto Iliac bypass - U/L",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 88700,
@@ -8091,6 +8169,7 @@
           "procedure_code": "SV017B",
           "procedure_name": "Aorto femoral bypass - U/L",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 88700,
@@ -8189,6 +8268,7 @@
           "procedure_code": "SV017C",
           "procedure_name": "Aorto Iliac bypass - B/L",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 88700,
@@ -8287,6 +8367,7 @@
           "procedure_code": "SV017D",
           "procedure_name": "Aorto femoral bypass - B/L",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 88700,
@@ -8391,6 +8472,7 @@
           "procedure_code": "SV018A",
           "procedure_name": "Pulmonary Embolectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 193900,
@@ -8471,6 +8553,7 @@
           "procedure_code": "SV018B",
           "procedure_name": "Pulmanary Thromboendarterectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 193900,
@@ -8558,6 +8641,7 @@
           "procedure_code": "SV019A",
           "procedure_name": "Femoro - Femoral Bypass",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -8656,6 +8740,7 @@
           "procedure_code": "SV019B",
           "procedure_name": "Carotid - endearterectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -8754,6 +8839,7 @@
           "procedure_code": "SV019C",
           "procedure_name": "Carotid Body Tumor Excision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -8852,6 +8938,7 @@
           "procedure_code": "SV019D",
           "procedure_name": "Thoracic Outlet syndrome Repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -8950,6 +9037,7 @@
           "procedure_code": "SV019E",
           "procedure_name": "Carotid aneurysm repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -9048,6 +9136,7 @@
           "procedure_code": "SV019F",
           "procedure_name": "Subclavian aneurysm repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -9146,6 +9235,7 @@
           "procedure_code": "SV019G",
           "procedure_name": "Axillary aneurysm repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -9244,6 +9334,7 @@
           "procedure_code": "SV019H",
           "procedure_name": "Brachial artery aneurysm repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -9342,6 +9433,7 @@
           "procedure_code": "SV019I",
           "procedure_name": "Femoral artery aneurysm repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -9440,6 +9532,7 @@
           "procedure_code": "SV019J",
           "procedure_name": "Popliteal artery aneurysm repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -9538,6 +9631,7 @@
           "procedure_code": "SV019K",
           "procedure_name": "Femoral - popliteal Bypass",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -9636,6 +9730,7 @@
           "procedure_code": "SV019L",
           "procedure_name": "Axillo - Brachial Bypass",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -9734,6 +9829,7 @@
           "procedure_code": "SV019M",
           "procedure_name": "Carotio - carotid Bypass",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -9832,6 +9928,7 @@
           "procedure_code": "SV019N",
           "procedure_name": "Carotido - subclavian artery  bypass",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -9930,6 +10027,7 @@
           "procedure_code": "SV019O",
           "procedure_name": "Carotido - axillary bypass",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -10028,6 +10126,7 @@
           "procedure_code": "SV019P",
           "procedure_name": "Axillo - femoral bypass - U/L",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -10126,6 +10225,7 @@
           "procedure_code": "SV019Q",
           "procedure_name": "Axillo - femoral bypass - B/L",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -10224,6 +10324,7 @@
           "procedure_code": "SV019R",
           "procedure_name": "Aorto - carotid bypass",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -10322,6 +10423,7 @@
           "procedure_code": "SV019S",
           "procedure_name": "Aorto - subclavian bypass",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -10420,6 +10522,7 @@
           "procedure_code": "SV019T",
           "procedure_name": "Patch Graft Angioplasty",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -10518,6 +10621,7 @@
           "procedure_code": "SV019U",
           "procedure_name": "Small Arterial Aneurysms – Repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -10616,6 +10720,7 @@
           "procedure_code": "SV019V",
           "procedure_name": "Medium size arterial aneurysms with synthetic graft",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -10713,6 +10818,7 @@
           "procedure_code": "SV019W",
           "procedure_name": "Surgery for Arterial Aneursysm –Vertebral",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -10811,6 +10917,7 @@
           "procedure_code": "SV019X",
           "procedure_name": "Surgery for Arterial Aneurysm Renal Artery",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -10909,6 +11016,7 @@
           "procedure_code": "SV019Y",
           "procedure_name": "Operations for Acquired Arteriovenous Fistual",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -11007,6 +11115,7 @@
           "procedure_code": "SV019Z",
           "procedure_name": "Congenital Arterio Venous Fistula",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -11097,6 +11206,7 @@
           "procedure_code": "SV020A",
           "procedure_name": "Peripheral Thromboembolectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 38500,
@@ -11178,6 +11288,7 @@
           "procedure_code": "SV021A",
           "procedure_name": "Peripheral arterial injury repair (without bypass)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 41300,
@@ -11260,6 +11371,7 @@
           "procedure_code": "SV022A",
           "procedure_name": "Thoracotomy, Thoraco Abdominal Approach",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 41300,
@@ -11341,6 +11453,7 @@
           "procedure_code": "SV023A",
           "procedure_name": "Lung cyst exision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 61900,
@@ -11416,6 +11529,7 @@
           "procedure_code": "SV023B",
           "procedure_name": "Decortication",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 61900,
@@ -11492,6 +11606,7 @@
           "procedure_code": "SV023C",
           "procedure_name": "Hydatid cyst",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 61900,
@@ -11567,6 +11682,7 @@
           "procedure_code": "SV023D",
           "procedure_name": "Other simple lung procedure excluding lung resection",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 61900,
@@ -11643,6 +11759,7 @@
           "procedure_code": "SV023E",
           "procedure_name": "Bronchial Repair Surgery for Injuries due to FB",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 61900,
@@ -11724,6 +11841,7 @@
           "procedure_code": "SV024A",
           "procedure_name": "Pulmonary Resection",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 96300,
@@ -11830,6 +11948,7 @@
           "procedure_code": "SV025A",
           "procedure_name": "Foreign Body Removal with scope",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 27500,
@@ -11916,6 +12035,7 @@
           "procedure_code": "SV026A",
           "procedure_name": "Surgical Correction of Bronchopleural Fistula",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 89400,
@@ -11997,6 +12117,7 @@
           "procedure_code": "SV027A",
           "procedure_name": "Space - Occupying Lesion (SOL) mediastinum",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 90100,
@@ -12082,6 +12203,7 @@
           "procedure_code": "SV028A",
           "procedure_name": "Isolated Intercostal Drainage and Management of ICD, Intercostal Block, Antibiotics & Physiotherapy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 13800,
@@ -12164,6 +12286,7 @@
           "procedure_code": "SV029A",
           "procedure_name": "Diaphragmatic Repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 41300,
@@ -12258,6 +12381,7 @@
           "procedure_code": "SV030A",
           "procedure_name": "Surgery for Cardiac Tumour",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 130700,
@@ -12343,6 +12467,7 @@
           "procedure_code": "SV031A",
           "procedure_name": "Tetralogy of Fallot Repair (immediate  re operation)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 103200,
@@ -12457,6 +12582,7 @@
           "procedure_code": "SV031B",
           "procedure_name": "Aortic valve replacement /repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 196100,
@@ -12559,6 +12685,7 @@
           "procedure_code": "SV031C",
           "procedure_name": "Mitral valve replacement /repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 196100,
@@ -12665,6 +12792,7 @@
           "procedure_code": "SV031D",
           "procedure_name": "Tricuspid valve replacement /repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 196100,
@@ -12771,6 +12899,7 @@
           "procedure_code": "SV031E",
           "procedure_name": "Double valve replacement/ repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 97700,
@@ -12885,6 +13014,7 @@
           "procedure_code": "SV031F",
           "procedure_name": "Triple valve replacement/ repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 116900,
@@ -13005,6 +13135,7 @@
           "procedure_code": "SV032A",
           "procedure_name": "Low Cardiac Output syndrome requiring IABP insertion post - operatively",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 68800,
@@ -13090,6 +13221,7 @@
           "procedure_code": "SV033A",
           "procedure_name": "Re-do sternotomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 27500,
@@ -13167,6 +13299,7 @@
           "procedure_code": "SV034A",
           "procedure_name": "Excessive bleeding requiring re-exploration",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 13800,
@@ -13244,6 +13377,7 @@
           "procedure_code": "SV035A",
           "procedure_name": "Mediastinotomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 39600,
@@ -13325,6 +13459,7 @@
           "procedure_code": "SV036A",
           "procedure_name": "Pectus excavation",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 62500,
@@ -13433,6 +13568,7 @@
           "procedure_code": "SV037A",
           "procedure_name": "Left ventricular aneurysm repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 162400,
@@ -13530,6 +13666,7 @@
           "procedure_code": "SV038A",
           "procedure_name": "CABG + Left ventricular aneurysm repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 224900,
@@ -13632,6 +13769,7 @@
           "procedure_code": "SV039A",
           "procedure_name": "Tracheal repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 62500,
@@ -13733,6 +13871,7 @@
           "procedure_code": "SV040A",
           "procedure_name": "Aortic stenting",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 62500,
@@ -13840,6 +13979,7 @@
           "procedure_code": "SV041A",
           "procedure_name": "First Follow-up-  2-4 weeks after discharge - AT NETWORK HOSPITAL",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 0,
@@ -13918,6 +14058,7 @@
           "procedure_code": "SV041B",
           "procedure_name": "Second Follow-up- After 3 months",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 4400,
@@ -13996,6 +14137,7 @@
           "procedure_code": "SV041C",
           "procedure_name": "Third Follow-up- After 3 months",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 2200,
@@ -14074,6 +14216,7 @@
           "procedure_code": "SV041D",
           "procedure_name": "fourth Follow-up- After 3 months",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 2200,
@@ -14152,6 +14295,7 @@
           "procedure_code": "SV041E",
           "procedure_name": "FifthFollow-up - After 3 months",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 2200,

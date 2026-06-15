@@ -1,0 +1,883 @@
+{
+  "_comment": "KB-2 HBP 2022 — High end Procedures. Deterministic fields set by kb2_extractor.py. Fill: mandatory_documents, aliases, stratification_criteria, additional_information.",
+  "scheme_id": "pmjay",
+  "specialty": "High end Procedures",
+  "specialty_code": "HP",
+  "packages": [
+    {
+      "package_code": "HP001",
+      "package_name": "USG guided percutaneous Radiofrequency Ablation (RFA)",
+      "procedures": [
+        {
+          "procedure_code": "HP001A",
+          "procedure_name": "USG guided percutaneous Radiofrequency Ablation (RFA)",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 26640,
+            "tier2": 26640,
+            "tier1": 26640
+          },
+          "implant": {
+            "name": "RF probe for tumor ablation",
+            "cost_inr": 75000
+          },
+          "pricing": {
+            "base_rate_inr": 26640,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_procedure",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HP001A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "relavent investigations supporting daignosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "procedure report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "invloice / barcode for implants used"
+              }
+            ]
+          },
+          "aliases": [
+            "Radiofrequency ablation",
+            "RFA",
+            "USG guided RFA",
+            "Percutaneous RFA",
+            "Tumor ablation",
+            "USG RFA",
+            "Percutaneous radiofrequency ablation"
+          ],
+          "additional_information": {
+            "remarks": "Special conditions updated",
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HP001A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HP002",
+      "package_name": "USG guided percutaneous Microwave Ablation (MWA)",
+      "procedures": [
+        {
+          "procedure_code": "HP002A",
+          "procedure_name": "USG guided percutaneous Microwave Ablation (MWA)",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 30640,
+            "tier2": 30640,
+            "tier1": 30640
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 30640,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_procedure",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HP002A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "relavent investigations supporting daignosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "procedure report"
+              }
+            ]
+          },
+          "aliases": [
+            "Microwave ablation",
+            "MWA",
+            "USG guided MWA",
+            "Percutaneous MWA",
+            "Tumor ablation",
+            "USG MWA",
+            "Percutaneous microwave ablation"
+          ],
+          "additional_information": {
+            "remarks": "Special conditions updated",
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HP002A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HP003",
+      "package_name": "CT guided percutaneous Radiofrequency Ablation (RFA)",
+      "procedures": [
+        {
+          "procedure_code": "HP003A",
+          "procedure_name": "CT guided percutaneous Radiofrequency Ablation (RFA)",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 29040,
+            "tier2": 29040,
+            "tier1": 29040
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 29040,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_procedure",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HP003A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "relavent investigations supporting daignosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "procedure report"
+              }
+            ]
+          },
+          "aliases": [
+            "CT guided RFA",
+            "CT Radiofrequency ablation",
+            "Percutaneous RFA",
+            "RFA under CT guidance",
+            "Tumor ablation CT",
+            "CT RFA"
+          ],
+          "additional_information": {
+            "remarks": "Special conditions updated",
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HP003A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HP004",
+      "package_name": "CT guided percutaneous Microwave Ablation (MWA)",
+      "procedures": [
+        {
+          "procedure_code": "HP004A",
+          "procedure_name": "CT guided percutaneous Microwave Ablation (MWA)",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 33040,
+            "tier2": 33040,
+            "tier1": 33040
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 33040,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_procedure",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HP004A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "relavent investigations supporting daignosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "procedure report"
+              }
+            ]
+          },
+          "aliases": [
+            "CT guided MWA",
+            "CT Microwave ablation",
+            "Percutaneous MWA",
+            "MWA under CT guidance",
+            "Tumor ablation CT MWA",
+            "CT MWA"
+          ],
+          "additional_information": {
+            "remarks": "Special conditions updated",
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HP004A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HP005",
+      "package_name": "USG guided percutaneous catheter drainage",
+      "procedures": [
+        {
+          "procedure_code": "HP005A",
+          "procedure_name": "USG guided percutaneous catheter drainage",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 5820,
+            "tier2": 5820,
+            "tier1": 5820
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 5820,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_procedure",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HP005A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "relavent investigations supporting daignosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "procedure report"
+              }
+            ]
+          },
+          "aliases": [
+            "PCD",
+            "Percutaneous catheter drainage",
+            "USG guided PCD",
+            "Pigtail catheter drainage",
+            "Abscess drainage",
+            "Fluid drainage",
+            "USG PCD"
+          ],
+          "additional_information": {
+            "remarks": "Special conditions updated",
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HP005A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HP006",
+      "package_name": "CT guided percutaneous catheter drainage",
+      "procedures": [
+        {
+          "procedure_code": "HP006A",
+          "procedure_name": "CT guided percutaneous catheter drainage",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 5820,
+            "tier2": 5820,
+            "tier1": 5820
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 5820,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_procedure",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HP006A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "relavent investigations supporting daignosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "procedure report"
+              }
+            ]
+          },
+          "aliases": [
+            "CT guided PCD",
+            "PCD under CT",
+            "CT pigtail drainage",
+            "CT abscess drainage",
+            "Percutaneous catheter drainage",
+            "CT PCD"
+          ],
+          "additional_information": {
+            "remarks": "Special conditions updated",
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HP006A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HP007",
+      "package_name": "Cerebral angiogram under local anesthesia",
+      "procedures": [
+        {
+          "procedure_code": "HP007A",
+          "procedure_name": "Cerebral angiogram under local anesthesia",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 5800,
+            "tier2": 5800,
+            "tier1": 5800
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 5800,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_procedure",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HP007A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "relavent investigations supporting daignosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "procedure report"
+              }
+            ]
+          },
+          "aliases": [
+            "Cerebral angiogram",
+            "DSA brain",
+            "Digital subtraction angiography brain",
+            "Four vessel angiogram",
+            "Carotid angiogram",
+            "Diagnostic cerebral angiogram",
+            "Neuro DSA under LA",
+            "ICD-10 I67.1",
+            "ICD-10 Q28.2",
+            "ICD-10 I60.9"
+          ],
+          "additional_information": {
+            "remarks": "Special conditions updated",
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HP007A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HP008",
+      "package_name": "Cerebral angiogram under general anesthesia",
+      "procedures": [
+        {
+          "procedure_code": "HP008A",
+          "procedure_name": "Cerebral angiogram under general anesthesia",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 18900,
+            "tier2": 18900,
+            "tier1": 18900
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 18900,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_procedure",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HP008A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "relavent investigations supporting daignosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "procedure report"
+              }
+            ]
+          },
+          "aliases": [
+            "Cerebral angiogram GA",
+            "DSA brain GA",
+            "Digital subtraction angiography brain GA",
+            "Four vessel angiogram GA",
+            "Carotid angiogram GA",
+            "Diagnostic cerebral angiogram GA",
+            "Neuro DSA under GA",
+            "ICD-10 I67.1",
+            "ICD-10 Q28.2",
+            "ICD-10 I60.9"
+          ],
+          "additional_information": {
+            "remarks": "Special conditions updated",
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HP008A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HP009",
+      "package_name": "Spinal Angiogram under general anesthesia",
+      "procedures": [
+        {
+          "procedure_code": "HP009A",
+          "procedure_name": "Spinal Angiogram under general anesthesia",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 18900,
+            "tier2": 18900,
+            "tier1": 18900
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 18900,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_procedure",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HP009A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "relavent investigations supporting daignosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "procedure report"
+              }
+            ]
+          },
+          "aliases": [
+            "Spinal angiogram",
+            "Spinal DSA",
+            "Digital subtraction angiography spine",
+            "Spinal vascular imaging",
+            "Diagnostic spinal angiogram",
+            "Spinal DSA under GA",
+            "ICD-10 Q28.8",
+            "ICD-10 G95.1"
+          ],
+          "additional_information": {
+            "remarks": "Special conditions updated",
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HP009A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HP010",
+      "package_name": "Plasmapheresis",
+      "procedures": [
+        {
+          "procedure_code": "HP010A",
+          "procedure_name": "Plasmapheresis",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 70000,
+            "tier2": 70000,
+            "tier1": 70000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 70000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_procedure",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HP010A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "relavent investigations supporting daignosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "procedure report"
+              }
+            ]
+          },
+          "aliases": [
+            "Plasmapheresis",
+            "Plasma exchange",
+            "PLEX",
+            "Therapeutic plasma exchange",
+            "TPE",
+            "Apheresis",
+            "ICD-10 G61.0",
+            "ICD-10 G70.0",
+            "ICD-10 M31.1",
+            "ICD-10 G36.0"
+          ],
+          "additional_information": {
+            "remarks": "Special conditions updated",
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HP010A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    }
+  ]
+}

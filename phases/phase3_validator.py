@@ -30,7 +30,7 @@ from models import (
     ValidatedPackage,
 )
 from kb.loader import load_specialty_shard, get_procedure_from_shard, load_stg
-from llm.stg_checker import check_stg_eligibility
+from llm.stg_checker import check_stg_eligibility, check_plausibility, resolve_stratum
 from config import (
     ENHANCEMENT_BATCH_PRIVATE,
     ENHANCEMENT_BATCH_PUBLIC,
@@ -149,6 +149,14 @@ def run_phase3(session: IRISSession) -> IRISSession:
                 "message": str(exc),
             })
 
+    # Post-loop: resolve same-package duplicates via tiebreaker LLM
+    session.validated_packages = _resolve_package_duplicates(
+        session.validated_packages,
+        session.clinical,
+        session.patient,
+        session,
+    )
+
     validated_count = len(session.validated_packages)
     blocked_count = len(session.phase3_blocked)
     logger.info(
@@ -264,9 +272,27 @@ def _validate_candidate(candidate: CandidatePackage, session: IRISSession) -> No
                 ),
             })
             return
-        # Fail-open: no STG file → pass with warning
+        # Plausibility check — lightweight LLM sanity gate for STG-missing cases
+        plausibility = check_plausibility(
+            code,
+            procedure.get("procedure_name", code),
+            session.clinical,
+        )
+        if not plausibility["plausible"]:
+            logger.warning(
+                "Phase 3 — %s failed plausibility check (STG missing): %s",
+                code,
+                plausibility["reason"],
+            )
+            session.phase3_blocked.append({
+                "procedure_code": code,
+                "reason_code": "PLAUSIBILITY_FAILED",
+                "message": plausibility["reason"],
+            })
+            return
         stg_eligible = True
-        stg_missing_criteria: list[str] = []
+        stg_missing_criteria = []
+        pkg_flags.append(f"STG_MISSING_PLAUSIBILITY_PASSED: {plausibility['reason'][:80]}")
     else:
         session.stg_coverage["validated"] += 1
         llm_result = check_stg_eligibility(code, stg, session.clinical)
@@ -351,6 +377,7 @@ def _validate_candidate(candidate: CandidatePackage, session: IRISSession) -> No
         special_conditions_rule=rule,
         stg_eligible=stg_eligible,
         stg_missing_criteria=stg_missing_criteria,
+        stg_reasoning=llm_result.get("reasoning") if stg is not None else None,
         is_addon_to=procedure.get("is_addon_to"),
         addon_type=procedure.get("addon_type"),
         match_score=candidate.match_score,
@@ -678,3 +705,144 @@ def _extract_base_rate(procedure: dict, city_tier: str) -> int | None:
         return int(base)
 
     return None
+
+
+def _resolve_package_duplicates(
+    validated: list[ValidatedPackage],
+    clinical,
+    patient,
+    session: IRISSession,
+) -> list[ValidatedPackage]:
+    """After Phase 3's per-candidate loop, resolve ties within same package_code.
+
+    Groups validated packages by package_code. For any group with more than
+    one survivor, applies tiebreaker logic to select exactly one.
+
+    Groups that are SKIPPED (all survivors kept as-is):
+      - Group size == 1: no tie to break
+      - Any survivor has procedure_label in ("add_on", "follow_up"):
+          these are not mutually exclusive variants — keep all
+      - quantity_basis in ("eye", "limb") from KB-2 shard:
+          bilateral/multi-unit procedures — keep all
+
+    For groups that need tiebreaking:
+      1. Load STG files for all survivors
+      2. Load KB-2 shard procedures for all survivors (for Scenario B fallback)
+      3. Call resolve_stratum — picks exactly one
+      4. Block the rest with reason_code="STRATUM_NOT_SELECTED"
+
+    Fallback within resolve_stratum (if LLM fails): highest fuzz.WRatio
+    on procedure_name vs clinical text. This is handled inside resolve_stratum
+    itself — _resolve_package_duplicates always gets exactly one selected code.
+
+    Args:
+        validated: session.validated_packages after the per-candidate loop.
+        clinical:  ClinicalInput from session.
+        patient:   PatientContext from session.
+        session:   IRISSession — phase3_blocked and flags are mutated here.
+
+    Returns:
+        New list of ValidatedPackage with duplicates resolved.
+    """
+    from collections import defaultdict
+
+    # Group by package_code
+    groups: dict[str, list[ValidatedPackage]] = defaultdict(list)
+    for vp in validated:
+        groups[vp.package_code].append(vp)
+
+    final: list[ValidatedPackage] = []
+
+    for pkg_code, group in groups.items():
+        # Single survivor — no tie, pass through
+        if len(group) == 1:
+            final.append(group[0])
+            continue
+
+        # Skip if any are add_on or follow_up — not mutually exclusive
+        labels = {vp.procedure_label for vp in group}
+        if labels & {"add_on", "follow_up"}:
+            logger.debug(
+                "Phase 3 tiebreaker — %s skipped (add_on/follow_up in group)",
+                pkg_code,
+            )
+            final.extend(group)
+            continue
+
+        # Check quantity_basis via shard for bilateral procedures
+        skip_due_to_bilateral = False
+        shard_procedures: dict[str, dict] = {}
+        for vp in group:
+            shard_filename = SPECIALTY_CODE_TO_SHARD.get(vp.specialty_code)
+            if shard_filename:
+                try:
+                    shard = load_specialty_shard(shard_filename)
+                    proc = get_procedure_from_shard(vp.procedure_code, shard)
+                    if proc:
+                        shard_procedures[vp.procedure_code] = proc
+                        qty_basis = proc.get("quantity_basis", "none")
+                        if qty_basis in ("eye", "limb"):
+                            skip_due_to_bilateral = True
+                except FileNotFoundError:
+                    pass
+                except Exception as exc:  # noqa: BLE001
+                    logger.warning(
+                        "Phase 3 tiebreaker — shard load error for %s: %s",
+                        vp.procedure_code, exc,
+                    )
+
+        if skip_due_to_bilateral:
+            logger.debug(
+                "Phase 3 tiebreaker — %s skipped (bilateral quantity_basis)",
+                pkg_code,
+            )
+            final.extend(group)
+            continue
+
+        # Load STG files for all survivors
+        stgs: dict[str, dict] = {}
+        for vp in group:
+            stg = load_stg(vp.procedure_code)
+            if stg is not None:
+                stgs[vp.procedure_code] = stg
+
+        logger.info(
+            "Phase 3 tiebreaker — %s has %d survivors, %d STGs loaded, calling resolve_stratum",
+            pkg_code, len(group), len(stgs),
+        )
+
+        # Call LLM tiebreaker
+        result = resolve_stratum(
+            package_code=pkg_code,
+            survivors=group,
+            clinical=clinical,
+            patient=patient,
+            stgs=stgs,
+            shard_procedures=shard_procedures,
+        )
+
+        selected_code = result["selected"]
+        reason = result["reason"]
+
+        for vp in group:
+            if vp.procedure_code == selected_code:
+                final.append(vp)
+                logger.info(
+                    "Phase 3 tiebreaker — %s selected %s: %s",
+                    pkg_code, selected_code, reason,
+                )
+            else:
+                session.phase3_blocked.append({
+                    "procedure_code": vp.procedure_code,
+                    "reason_code": "STRATUM_NOT_SELECTED",
+                    "message": (
+                        f"{vp.procedure_code} not selected for {pkg_code}. "
+                        f"Selected: {selected_code}. Reason: {reason}"
+                    ),
+                })
+                logger.info(
+                    "Phase 3 tiebreaker — %s blocked %s (not selected)",
+                    pkg_code, vp.procedure_code,
+                )
+
+    return final

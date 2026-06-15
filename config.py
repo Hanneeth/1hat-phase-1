@@ -43,3 +43,15 @@ VAY_VANDANA_WALLET_INR: int = 500000
 # Logging
 LOG_LEVEL: str = "INFO"
 LOG_FORMAT: str = "[%(levelname)s][%(name)s] %(message)s"
+
+# ---------------------------------------------------------------------------
+# Phase 2 Search Mode
+# ---------------------------------------------------------------------------
+# Controls which candidate generation backend Phase 2 uses.
+# "fuzzy"  — rapidfuzz token_set_ratio against _index.json aliases (default,
+#             deterministic, zero LLM cost, weaker clinical understanding)
+# "llm"    — Gemini reads full _index.json + clinical input and returns
+#             procedure codes directly (better clinical reasoning, one LLM
+#             call per run, non-deterministic)
+# Switch by changing this one constant. No other code changes needed.
+PHASE2_SEARCH_MODE: str = "llm"

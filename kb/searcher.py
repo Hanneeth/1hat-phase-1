@@ -14,6 +14,7 @@ Private helper:
 
 import logging
 
+# pyrefly: ignore [missing-import]
 from rapidfuzz import fuzz
 
 from config import MIN_FUZZY_SCORE, TOP_N_CANDIDATES
@@ -49,10 +50,12 @@ def search_candidates(
         5.  Keep only rows where match_score >= MIN_FUZZY_SCORE.
         6.  Sort descending by match_score.
         7.  Take top TOP_N_CANDIDATES rows.
-        8.  Deduplicate by package_code: if multiple rows share the same
-            package_code, keep only the one with the highest match_score.
-        9.  Convert each surviving row to CandidatePackage.
-        10. Return the final list.
+        8.  Convert each surviving row to CandidatePackage.
+            Note: package_code deduplication is intentionally removed.
+            Multiple procedures from the same package may pass through.
+            Phase 3 tiebreaker (_resolve_package_duplicates) selects
+            the correct stratum per package after LLM validation.
+        9.  Return the final list.
 
     Args:
         clinical: Parsed ClinicalInput from session.clinical.
@@ -122,25 +125,11 @@ def search_candidates(
     scored.sort(key=lambda x: x[0], reverse=True)
     top: list[tuple[float, dict]] = scored[:TOP_N_CANDIDATES]
 
-    # Step 8: Deduplicate by package_code — keep highest match_score per package
-    seen_packages: dict[str, tuple[float, dict]] = {}
-    for score, row in top:
-        pkg_code: str = row["package_code"]
-        if pkg_code not in seen_packages or score > seen_packages[pkg_code][0]:
-            seen_packages[pkg_code] = (score, row)
-
-    deduped: list[tuple[float, dict]] = sorted(
-        seen_packages.values(), key=lambda x: x[0], reverse=True
-    )
-    logger.info(
-        "Phase 2: %d candidates after package_code deduplication (was %d pre-dedup)",
-        len(deduped),
-        len(top),
-    )
-
-    # Step 9: Convert to CandidatePackage
+    # Step 8: Convert to CandidatePackage
+    # Deduplication by package_code removed — Phase 3 tiebreaker resolves
+    # same-package duplicates via LLM after per-candidate validation.
     candidates: list[CandidatePackage] = []
-    for score, row in deduped:
+    for score, row in top:
         candidates.append(
             CandidatePackage(
                 procedure_code=row["procedure_code"],

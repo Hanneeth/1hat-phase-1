@@ -433,6 +433,7 @@ class ValidatedPackage:
     stg_eligible: bool
     # --- fields with defaults below ---
     stg_missing_criteria: list[str] = field(default_factory=list)
+    stg_reasoning: str | None = None
     is_addon_to: list[str] | None = None
     addon_type: str | None = None
     match_score: float = 0.0

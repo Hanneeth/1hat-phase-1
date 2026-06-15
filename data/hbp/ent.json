@@ -12,6 +12,7 @@
           "procedure_code": "SC002A",
           "procedure_name": "Soft palate",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 56400,
@@ -103,6 +104,7 @@
           "procedure_code": "SC002B",
           "procedure_name": "Hard palate",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 64400,
@@ -200,6 +202,7 @@
           "procedure_code": "SC064A",
           "procedure_name": "Growth - Squamous",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 56300,
@@ -285,6 +288,7 @@
           "procedure_code": "SC064B",
           "procedure_name": "Growth - Basal",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 56300,
@@ -369,6 +373,7 @@
           "procedure_code": "SC064C",
           "procedure_name": "Injury",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 56300,
@@ -460,6 +465,7 @@
           "procedure_code": "SE040A",
           "procedure_name": "GA / EUA separate add on package",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 3000,
@@ -551,6 +557,7 @@
           "procedure_code": "SG067A",
           "procedure_name": "Radical Neck Dissection",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 33700,
@@ -654,6 +661,7 @@
           "procedure_code": "SG068A",
           "procedure_name": "Surgical removal of Branchial Cyst/Sinus",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 20000,
@@ -749,6 +757,7 @@
           "procedure_code": "SG070A",
           "procedure_name": "Hemi thyroidectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 26300,
@@ -843,6 +852,7 @@
           "procedure_code": "SG070B",
           "procedure_name": "Total thyroidectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 26300,
@@ -936,6 +946,7 @@
           "procedure_code": "SG070C",
           "procedure_name": "Total Thyroidectomy with Block Dissection",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 43600,
@@ -1038,6 +1049,7 @@
           "procedure_code": "SG098A",
           "procedure_name": "Foreign Body Removal",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 7000,
@@ -1145,6 +1157,7 @@
           "procedure_code": "SL001A",
           "procedure_name": "Pinna surgery for tumor",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 10000,
@@ -1234,6 +1247,7 @@
           "procedure_code": "SL001B",
           "procedure_name": "Pinna surgery for trauma",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 10000,
@@ -1321,6 +1335,7 @@
           "procedure_code": "SL002A",
           "procedure_name": "Tympanoplasty (can be stratified  (GA/LA) and price adjusted accordingly )",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 15400,
@@ -1424,6 +1439,7 @@
           "procedure_code": "SL003A",
           "procedure_name": "Stapedectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 17300,
@@ -1506,6 +1522,7 @@
           "procedure_code": "SL003B",
           "procedure_name": "Tympanotomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 15000,
@@ -1593,6 +1610,7 @@
           "procedure_code": "SL004A",
           "procedure_name": "Simple",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 28000,
@@ -1689,6 +1707,7 @@
           "procedure_code": "SL004B",
           "procedure_name": "Radical",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 28000,
@@ -1792,6 +1811,7 @@
           "procedure_code": "SL005A",
           "procedure_name": "Unilateral",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 7600,
@@ -1886,6 +1906,7 @@
           "procedure_code": "SL005B",
           "procedure_name": "Bilateral",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 7600,
@@ -1986,6 +2007,7 @@
           "procedure_code": "SL006A",
           "procedure_name": "Endoscopic DCR",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 20000,
@@ -2082,6 +2104,7 @@
           "procedure_code": "SL007A",
           "procedure_name": "Epistaxis treatment - packing",
           "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": null,
           "implant": null,
@@ -2183,6 +2206,7 @@
           "procedure_code": "SL008A",
           "procedure_name": "Functional septo rhinoplasty",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 22700,
@@ -2279,6 +2303,7 @@
           "procedure_code": "SL009A",
           "procedure_name": "Septoplasty",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 13875,
@@ -2384,6 +2409,7 @@
           "procedure_code": "SL010A",
           "procedure_name": "Fracture - setting nasal bone",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 8625,
@@ -2487,6 +2513,7 @@
           "procedure_code": "SL011A",
           "procedure_name": "Inferior turbinate reduction under GA(HOW IS IT DIFFERENT FROM TURBINATE REDUCTION AT THE END?)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 6000,
@@ -2583,6 +2610,7 @@
           "procedure_code": "SL012A",
           "procedure_name": "Open sinus surgery(Open Sinus Surgery (Single/Multiple Sinuses)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 16200,
@@ -2681,6 +2709,7 @@
           "procedure_code": "SL013A",
           "procedure_name": "Functional Endoscopic Sinus (FESS)stratified as U/L or B/L and cost adjusted",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 14700,
@@ -2774,6 +2803,7 @@
           "procedure_code": "SL014A",
           "procedure_name": "Ant. Ethmoidal artery ligation - Open",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 16200,
@@ -2861,6 +2891,7 @@
           "procedure_code": "SL014B",
           "procedure_name": "Ant. Ethmoidal artery ligation - Endoscopic",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 16200,
@@ -2948,6 +2979,7 @@
           "procedure_code": "SL014C",
           "procedure_name": "Sphenopalatine artery ligation - Open",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 16200,
@@ -3035,6 +3067,7 @@
           "procedure_code": "SL014D",
           "procedure_name": "Sphenopalatine artery ligation - Endoscopic",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 16200,
@@ -3129,6 +3162,7 @@
           "procedure_code": "SL015A",
           "procedure_name": "Adenoidectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 9400,
@@ -3223,6 +3257,7 @@
           "procedure_code": "SL016A",
           "procedure_name": "Tonsillectomy - U/L tonsillectomy (unilateral/bilateral)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 12200,
@@ -3308,6 +3343,7 @@
           "procedure_code": "SL016B",
           "procedure_name": "Tonsillectomy - B/L adenotonsillectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 12200,
@@ -3399,6 +3435,7 @@
           "procedure_code": "SL017A",
           "procedure_name": "Peritonsillar abscess drainage",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 5800,
@@ -3483,6 +3520,7 @@
           "procedure_code": "SL017B",
           "procedure_name": "Intraoral calculus removal",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 5800,
@@ -3574,6 +3612,7 @@
           "procedure_code": "SL018A",
           "procedure_name": "Thyroglossal cyst excision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 17000,
@@ -3658,6 +3697,7 @@
           "procedure_code": "SL018B",
           "procedure_name": "Thyroglossal sinus excision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 17000,
@@ -3742,6 +3782,7 @@
           "procedure_code": "SL018C",
           "procedure_name": "Thyroglossal fistula excision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 17000,
@@ -3825,6 +3866,7 @@
           "procedure_code": "SL018D",
           "procedure_name": "Branchial sinus excision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 17000,
@@ -3908,6 +3950,7 @@
           "procedure_code": "SL018E",
           "procedure_name": "Branchial fistula excision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 17000,
@@ -3997,6 +4040,7 @@
           "procedure_code": "SL019A",
           "procedure_name": "Uvulopalatopharyngoplasty (UPPP)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 20100,
@@ -4093,6 +4137,7 @@
           "procedure_code": "SL020A",
           "procedure_name": "Excision of tumour of oral cavity / paranasal sinus / laryngopharynx without reconstruction",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 12500,
@@ -4190,6 +4235,7 @@
           "procedure_code": "SL020B",
           "procedure_name": "Excision of tumour of oral cavity / paranasal sinus / laryngopharynx with pedicled flap reconstruction",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 45700,
@@ -4273,6 +4319,7 @@
           "procedure_code": "SL020C",
           "procedure_name": "Excision of tumour of oral cavity /\nparanasal sinus / laryngopharynx with free flap reconstruction",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 31300,
@@ -4371,6 +4418,7 @@
           "procedure_code": "SL021A",
           "procedure_name": "Total Parotidectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 28200,
@@ -4459,6 +4507,7 @@
           "procedure_code": "SL021B",
           "procedure_name": "Superficial Parotidectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 23800,
@@ -4553,6 +4602,7 @@
           "procedure_code": "SL022A",
           "procedure_name": "Removal of Submandibular Salivary gland",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 29000,
@@ -4655,6 +4705,7 @@
           "procedure_code": "SL022B",
           "procedure_name": "Removal of Ranula",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 29000,
@@ -4763,6 +4814,7 @@
           "procedure_code": "SL023A",
           "procedure_name": "Rigid laryngoscopy - Diagnostic + / - biopsy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 7000,
@@ -4852,6 +4904,7 @@
           "procedure_code": "SL023B",
           "procedure_name": "Rigid bronchoscopy -  Diagnostic + / - biopsy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 7000,
@@ -4940,6 +4993,7 @@
           "procedure_code": "SL023C",
           "procedure_name": "Rigid oesophagoscopy - Diagnostic + / - biopsy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 7000,
@@ -5034,6 +5088,7 @@
           "procedure_code": "SL024A",
           "procedure_name": "Microlaryngeal surgery with or without laser",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 17000,
@@ -5125,6 +5180,7 @@
           "procedure_code": "SL025A",
           "procedure_name": "Open laryngeal framework surgery / Thyroplasty",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 5000,
@@ -5235,6 +5291,7 @@
           "procedure_code": "SL026A",
           "procedure_name": "Tracheostomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 28000,
@@ -5324,6 +5381,7 @@
           "procedure_code": "SL026B",
           "procedure_name": "Tracheotomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 28000,
@@ -5419,6 +5477,7 @@
           "procedure_code": "SL027A",
           "procedure_name": "Selective Benign neck tumour\nexcision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 23500,
@@ -5514,6 +5573,7 @@
           "procedure_code": "SL027B",
           "procedure_name": "Comprehensive Benign neck tumour\nexcision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 23500,
@@ -5609,6 +5669,7 @@
           "procedure_code": "SL027C",
           "procedure_name": "Selective Pharyngeal diverticulum\nexcision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 23500,
@@ -5704,6 +5765,7 @@
           "procedure_code": "SL027D",
           "procedure_name": "Comprehensive Pharyngeal\ndiverticulum excision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 23500,
@@ -5805,6 +5867,7 @@
           "procedure_code": "SL028A",
           "procedure_name": "Deep neck abscess drainage",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 16800,
@@ -5897,6 +5960,7 @@
           "procedure_code": "SL028B",
           "procedure_name": "Post trauma neck exploration",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 21000,
@@ -5995,6 +6059,7 @@
           "procedure_code": "SL029A",
           "procedure_name": "Endoscopic CSF Rhinorrhea Repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 32500,
@@ -6082,6 +6147,7 @@
           "procedure_code": "SL029B",
           "procedure_name": "Optic nerve decompression",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 31900,
@@ -6168,6 +6234,7 @@
           "procedure_code": "SL029C",
           "procedure_name": "Orbital decompression",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 31900,
@@ -6255,6 +6322,7 @@
           "procedure_code": "SL029D",
           "procedure_name": "Craniofacial resection",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 31900,
@@ -6346,6 +6414,7 @@
           "procedure_code": "SL029E",
           "procedure_name": "Maxillary swing",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 31900,
@@ -6438,6 +6507,7 @@
           "procedure_code": "SL030A",
           "procedure_name": "Endoscopic Hypophysectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 49800,
@@ -6526,6 +6596,7 @@
           "procedure_code": "SL030B",
           "procedure_name": "Clival tumour excision",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 49800,
@@ -6619,6 +6690,7 @@
           "procedure_code": "SL031A",
           "procedure_name": "Subtotal petrosectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 30900,
@@ -6706,6 +6778,7 @@
           "procedure_code": "SL031B",
           "procedure_name": "Post-traumatic facial nerve\ndecompression",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 30900,
@@ -6794,6 +6867,7 @@
           "procedure_code": "SL031C",
           "procedure_name": "CSF Otorrhoea repair",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 30900,
@@ -6887,6 +6961,7 @@
           "procedure_code": "SL032A",
           "procedure_name": "Fisch approach",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 49900,
@@ -6982,6 +7057,7 @@
           "procedure_code": "SL032B",
           "procedure_name": "Translabyrinthine approach",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 49900,
@@ -7077,6 +7153,7 @@
           "procedure_code": "SL032C",
           "procedure_name": "Transcochlear approach",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 49900,
@@ -7172,6 +7249,7 @@
           "procedure_code": "SL032D",
           "procedure_name": "Temporal Bone resection",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 49900,
@@ -7273,6 +7351,7 @@
           "procedure_code": "SL033A",
           "procedure_name": "Closed reduction for fracture of maxilla",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 0,
@@ -7360,6 +7439,7 @@
           "procedure_code": "SL033B",
           "procedure_name": "Closed reduction for fracture of mandible",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 0,
@@ -7447,6 +7527,7 @@
           "procedure_code": "SL033C",
           "procedure_name": "Closed reduction for fracture of zygoma",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 0,
@@ -7534,6 +7615,7 @@
           "procedure_code": "SL033D",
           "procedure_name": "Closed reduction and Intermaxillary fixation for fracture of mandible",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 0,
@@ -7628,6 +7710,7 @@
           "procedure_code": "SL034A",
           "procedure_name": "Open reduction and internal fixation of maxilla",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 14000,
@@ -7734,6 +7817,7 @@
           "procedure_code": "SL034B",
           "procedure_name": "Open reduction and internal fixation of mandible",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 14000,
@@ -7840,6 +7924,7 @@
           "procedure_code": "SL034C",
           "procedure_name": "Open reduction and internal fixation of zygoma",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 14000,
@@ -7952,6 +8037,7 @@
           "procedure_code": "SL035A",
           "procedure_name": "Turbinate reduction",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 1200,
@@ -8032,6 +8118,7 @@
           "procedure_code": "SL035B",
           "procedure_name": "Biopsy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 1200,
@@ -8112,6 +8199,7 @@
           "procedure_code": "SL035C",
           "procedure_name": "Intratympanic injections",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 1200,
@@ -8192,6 +8280,7 @@
           "procedure_code": "SL035D",
           "procedure_name": "Wide bore aspiration",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 1200,
@@ -8278,6 +8367,7 @@
           "procedure_code": "SL036A",
           "procedure_name": "Cochlear Implant Surgery* Surgery(53000) *pre -op evaluation(including  vaccine for meningitis)- 10000/- *Initial mapping and swithch on - 5000/-Rehabilitation Therapy (part- 1 for first 6 months) -21700 Rehabilitation Therapy (part- 2 for second 6 months)-40300",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 162500,
@@ -8356,6 +8446,7 @@
           "procedure_code": "SN035B",
           "procedure_name": "Trigeminal Nerve Neurectomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 31100,
@@ -8438,6 +8529,7 @@
           "procedure_code": "SP009A",
           "procedure_name": "Resuturing of Any Wound gap\nSurgeries",
           "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 3800,

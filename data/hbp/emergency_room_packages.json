@@ -12,6 +12,7 @@
           "procedure_code": "ER001A",
           "procedure_name": "Laceration - Suturing / Dressing",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 2000,
@@ -97,6 +98,7 @@
           "procedure_code": "ER002A",
           "procedure_name": "Emergency with stable\ncardiopulmonary status",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 2000,
@@ -169,6 +171,7 @@
           "procedure_code": "ER002B",
           "procedure_name": "Emergency with unstable cardiopulmonary status with\nresuccitation",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 11000,
@@ -250,6 +253,7 @@
           "procedure_code": "ER003A",
           "procedure_name": "Animal bites (Excluding Snake Bite)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 1700,
@@ -339,6 +343,7 @@
           "procedure_code": "SB001A",
           "procedure_name": "Fracture - Conservative Management - \nWithout plaster",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 2300,
@@ -426,6 +431,7 @@
           "procedure_code": "SU073A",
           "procedure_name": "Emergency management of Hematuria(per  day) LOS-1-5 days",
           "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": null,
           "implant": null,

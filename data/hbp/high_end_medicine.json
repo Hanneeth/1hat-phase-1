@@ -1,0 +1,2540 @@
+{
+  "_comment": "KB-2 HBP 2022 — High end Medicine. Deterministic fields set by kb2_extractor.py. Fill: mandatory_documents, aliases, stratification_criteria, additional_information.",
+  "scheme_id": "pmjay",
+  "specialty": "High end Medicine",
+  "specialty_code": "HM",
+  "packages": [
+    {
+      "package_code": "HM001",
+      "package_name": "Recombinant tissue plasminogen activator",
+      "procedures": [
+        {
+          "procedure_code": "HM001A",
+          "procedure_name": "Recombinant tissue plasminogen activator- 0.9 mg/kg (not to exceed 90 mg total treatment dose) infused over 60 minutes.",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 42000,
+            "tier2": 42000,
+            "tier1": 42000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 42000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM001A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Recombinant tissue plasminogen activator",
+            "rtPA infusion",
+            "Alteplase injection",
+            "Actilyse",
+            "Thrombolytic therapy",
+            "Fibrinolytic therapy",
+            "ICD-10 Y46.6",
+            "Tissue plasminogen activator",
+            "Clot buster injection",
+            "IV rtPA administration"
+          ],
+          "additional_information": {
+            "admission_criteria": "0.9 mg/kg (not to exceed 90 mg total treatment dose) infused over 60 minutes."
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM001A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM002",
+      "package_name": "Tenecteplase",
+      "procedures": [
+        {
+          "procedure_code": "HM002A",
+          "procedure_name": "Tenecteplase - 0.2 mg/kg given as a bolus dose over 1-2min volume of TNK to be administered at a dilution of 2mg/ml",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 24900,
+            "tier2": 24900,
+            "tier1": 24900
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 24900,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM002A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Tenecteplase",
+            "TNKase",
+            "Elaxim",
+            "Thrombolytic therapy",
+            "TNK-tPA",
+            "Fibrinolytic drug",
+            "ICD-10 Y46.6",
+            "Tissue plasminogen activator variant",
+            "Clot buster injection",
+            "IV Tenecteplase bolus"
+          ],
+          "additional_information": {
+            "admission_criteria": "0.2 mg/kg given as a bolus dose over 1-2min volume of TNK to be administered at a dilution of 2mg/ml"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM002A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM003",
+      "package_name": "Heparin",
+      "procedures": [
+        {
+          "procedure_code": "HM003A",
+          "procedure_name": "Heparin - Based on weight and age of patient",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 15000,
+            "tier2": 15000,
+            "tier1": 15000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 15000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM003A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Heparin",
+            "Unfractionated Heparin",
+            "UFH",
+            "Anticoagulant therapy",
+            "Blood thinner injection",
+            "Heparin infusion",
+            "ICD-10 Y44.2",
+            "Intravenous heparin"
+          ],
+          "additional_information": {
+            "admission_criteria": "Based on weight and age of patient"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM003A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM004",
+      "package_name": "Methylprednisolone",
+      "procedures": [
+        {
+          "procedure_code": "HM004A",
+          "procedure_name": "Methylprednisolone - 0.117-1.66 mg/kg/day orally divided every 6-8 hours",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 25000,
+            "tier2": 25000,
+            "tier1": 25000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 25000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM004A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Methylprednisolone",
+            "Solu-Medrol",
+            "IV Steroid",
+            "Corticosteroid therapy",
+            "Glucocorticoid administration",
+            "ICD-10 Y42.0",
+            "High-dose systemic corticosteroid"
+          ],
+          "additional_information": {
+            "admission_criteria": "0.117-1.66 mg/kg/day orally divided every 6-8 hours"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM004A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM005",
+      "package_name": "Erythropoeitin",
+      "procedures": [
+        {
+          "procedure_code": "HM005A",
+          "procedure_name": "Erythropoeitin - 5000 units-Rs700\n10000 units-Rs1000",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 0,
+            "tier2": 0,
+            "tier1": 0
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 0,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "5000_units",
+              "description": "5000 units",
+              "criterion": "Dose of 5000 units",
+              "source": "strat_remarks"
+            },
+            {
+              "stratum_id": "10000_units",
+              "description": "10000 units",
+              "criterion": "Dose of 10000 units",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "HM005A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Erythropoeitin",
+            "EPO",
+            "Epoetin alfa",
+            "Epogen",
+            "Erythropoiesis-stimulating agent",
+            "ESA therapy",
+            "ICD-10 D47.1",
+            "Anemia treatment injection"
+          ],
+          "additional_information": {
+            "note": "5000 units-Rs700, 10000 units-Rs1000"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM005A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM006",
+      "package_name": "Liposomal amphotericin",
+      "procedures": [
+        {
+          "procedure_code": "HM006A",
+          "procedure_name": "Liposomal amphotericin - for 2.5 Gm  dosage. @ 2500 per 50mg",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 125000,
+            "tier2": 125000,
+            "tier1": 125000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 125000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM006A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Liposomal amphotericin",
+            "AmBisome",
+            "L-AMB",
+            "Antifungal IV therapy",
+            "Mucormycosis treatment",
+            "Polyene antifungal injection",
+            "ICD-10 Y40.3"
+          ],
+          "additional_information": {
+            "admission_criteria": "for 2.5 Gm dosage. @ 2500 per 50mg"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM006A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM007",
+      "package_name": "IVIG",
+      "procedures": [
+        {
+          "procedure_code": "HM007A",
+          "procedure_name": "IVIG - 3000 per GM @ 2 GM/Per Kg body weight. Almost 20 GM in adult dose.( Mx. Of 200000 , paid on actual utilization)",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 200000,
+            "tier2": 200000,
+            "tier1": 200000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 200000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM007A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "IVIG",
+            "Intravenous Immunoglobulin",
+            "Immune globulin therapy",
+            "IVIg infusion",
+            "Immunomodulatory therapy",
+            "Antibody treatment administration"
+          ],
+          "additional_information": {
+            "admission_criteria": "3000 per GM @ 2 GM/Per Kg body weight. Almost 20 GM in adult dose. (Mx. Of 200000, paid on actual utilization)"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM007A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM008",
+      "package_name": "IvIg for Kawasaki Disease",
+      "procedures": [
+        {
+          "procedure_code": "HM008A",
+          "procedure_name": "IvIg for Kawasaki Disease - 0.4 gm/Kg body wt/day  ( price per gram)",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2000,
+            "tier2": 2000,
+            "tier1": 2000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 2000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM008A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "IvIg for Kawasaki Disease",
+            "IVIG for Kawasaki",
+            "Immunoglobulin for Mucocutaneous lymph node syndrome",
+            "ICD-10 M30.3",
+            "Intravenous Immune Globulin for KD"
+          ],
+          "additional_information": {
+            "admission_criteria": "0.4 gm/Kg body wt/day (price per gram)"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM008A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM009",
+      "package_name": "IvIg for GB Syndrome",
+      "procedures": [
+        {
+          "procedure_code": "HM009A",
+          "procedure_name": "IvIg for GB Syndrome - 2gm /Kg body weight ( price per gram)",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2000,
+            "tier2": 2000,
+            "tier1": 2000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 2000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM009A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "IvIg for GB Syndrome",
+            "IVIG for GBS",
+            "Immunoglobulin for Guillain-Barre syndrome",
+            "ICD-10 G61.0",
+            "Acute inflammatory demyelinating polyneuropathy treatment",
+            "IVIg therapy for polyneuritis"
+          ],
+          "additional_information": {
+            "admission_criteria": "2gm /Kg body weight (price per gram)"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM009A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM010",
+      "package_name": "IvIg for ITP",
+      "procedures": [
+        {
+          "procedure_code": "HM010A",
+          "procedure_name": "IvIg for ITP - 1gm /Kg body weight                      ( price per gram)",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2000,
+            "tier2": 2000,
+            "tier1": 2000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 2000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM010A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "IvIg for ITP",
+            "IVIG for Immune thrombocytopenic purpura",
+            "Immunoglobulin for Idiopathic thrombocytopenic purpura",
+            "ICD-10 D69.3",
+            "IVIg for low platelets"
+          ],
+          "additional_information": {
+            "admission_criteria": "1gm /Kg body weight (price per gram)"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM010A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM011",
+      "package_name": "Rituximab",
+      "procedures": [
+        {
+          "procedure_code": "HM011A",
+          "procedure_name": "Rituximab - 500mg to 1 gm ( Price per 500mg/50ml box)",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 7500,
+            "tier2": 7500,
+            "tier1": 7500
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 7500,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM011A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Rituximab",
+            "Rituxan",
+            "MabThera",
+            "Monoclonal antibody therapy",
+            "Anti-CD20 therapy",
+            "Biologic response modifier",
+            "ICD-10 Y43.3"
+          ],
+          "additional_information": {
+            "admission_criteria": "500mg to 1 gm (Price per 500mg/50ml box)"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM011A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM012",
+      "package_name": "Human Albumin 20%",
+      "procedures": [
+        {
+          "procedure_code": "HM012A",
+          "procedure_name": "Human Albumin 20% - 250-500ml (Price per 100ml infusion)",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 6000,
+            "tier2": 6000,
+            "tier1": 6000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 6000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM012A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Human Albumin 20%",
+            "Albumin 20 percent",
+            "Plasma volume expander",
+            "Hypoalbuminemia treatment",
+            "Colloid fluid resuscitation"
+          ],
+          "additional_information": {
+            "admission_criteria": "250-500ml (Price per 100ml infusion)"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM012A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM013",
+      "package_name": "Albumin 5%",
+      "procedures": [
+        {
+          "procedure_code": "HM013A",
+          "procedure_name": "Albumin 5% - 250-500ml (Price per 100ml infusion)",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 3000,
+            "tier2": 3000,
+            "tier1": 3000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 3000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM013A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Albumin 5%",
+            "Albumin 5 percent",
+            "Plasma volume expander",
+            "Isotonic albumin",
+            "Colloid therapy"
+          ],
+          "additional_information": {
+            "admission_criteria": "250-500ml (Price per 100ml infusion)"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM013A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM017",
+      "package_name": "Imipenem",
+      "procedures": [
+        {
+          "procedure_code": "HM017A",
+          "procedure_name": "Imipenem - 1gm147.57. 3 gm per day dose",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 7000,
+            "tier2": 7000,
+            "tier1": 7000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 7000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM017A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Imipenem",
+            "Imipenem-Cilastatin",
+            "Primaxin",
+            "Carbapenem antibiotic",
+            "Broad-spectrum IV antibiotic",
+            "ICD-10 Y40.8"
+          ],
+          "additional_information": {
+            "admission_criteria": "1gm147.57. 3 gm per day dose"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM017A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM018",
+      "package_name": "Meropenem",
+      "procedures": [
+        {
+          "procedure_code": "HM018A",
+          "procedure_name": "Meropenem - 1gm 159.93.  3 gm Per day dose",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 7000,
+            "tier2": 7000,
+            "tier1": 7000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 7000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM018A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Meropenem",
+            "Merrem",
+            "Meromac",
+            "Carbapenem antibiotic",
+            "Broad-spectrum IV antibiotic",
+            "High-end antibiotic therapy",
+            "ICD-10 Y40.8"
+          ],
+          "additional_information": {
+            "admission_criteria": "1gm 159.93. 3 gm Per day dose"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM018A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM019",
+      "package_name": "Piperacillin-Tazobactem",
+      "procedures": [
+        {
+          "procedure_code": "HM019A",
+          "procedure_name": "Piperacillin-Tazobactem - 4.5gm 66.52. 4.5gm TDS per day dose",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 3000,
+            "tier2": 3000,
+            "tier1": 3000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 3000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM019A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Piperacillin-Tazobactem",
+            "Pip-Tazo",
+            "Tazact",
+            "Zosyn",
+            "Extended-spectrum penicillin",
+            "Beta-lactamase inhibitor combination",
+            "High-end antibiotic therapy"
+          ],
+          "additional_information": {
+            "admission_criteria": "4.5gm 66.52. 4.5gm TDS per day dose"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM019A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM020",
+      "package_name": "Colistin",
+      "procedures": [
+        {
+          "procedure_code": "HM020A",
+          "procedure_name": "Colistin - 1 MU 73.92. Dose 9 MU",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 7000,
+            "tier2": 7000,
+            "tier1": 7000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 7000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM020A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Colistin",
+            "Polymyxin E",
+            "Colistimethate sodium",
+            "Multi-drug resistant infection treatment",
+            "Last-resort antibiotic",
+            "IV Colistin administration"
+          ],
+          "additional_information": {
+            "admission_criteria": "1 MU 73.92. Dose 9 MU"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM020A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM021",
+      "package_name": "Vancomycin",
+      "procedures": [
+        {
+          "procedure_code": "HM021A",
+          "procedure_name": "Vancomycin - 500mg 45.15. 2gm per day dose.",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2100,
+            "tier2": 2100,
+            "tier1": 2100
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 2100,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM021A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Vancomycin",
+            "Vancocin",
+            "Glycopeptide antibiotic",
+            "MRSA treatment",
+            "High-end IV antibiotic",
+            "ICD-10 Y40.8"
+          ],
+          "additional_information": {
+            "admission_criteria": "500mg 45.15. 2gm per day dose."
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM021A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HM022",
+      "package_name": "Amphotericin deoxycholate",
+      "procedures": [
+        {
+          "procedure_code": "HM022A",
+          "procedure_name": "Amphotericin deoxycholate - 50mg 121.06.",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 1000,
+            "tier2": 1000,
+            "tier1": 1000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 1000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": null,
+          "addon_type": "high_end_drug",
+          "addon_mapping_status": "unknown_verify_tms",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HM022A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "clinical_notes_admission",
+                "label": "Admission note showing vitals"
+              },
+              {
+                "key": "examination_findings",
+                "label": "Examination finding"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "Planned line of treatment"
+              },
+              {
+                "key": "provisional_diagnosis",
+                "label": "Provisional diagnosis for parent package"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with treatment details"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT scan report"
+              },
+              {
+                "key": "mri_report",
+                "label": "MRI scan report"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "drug_invoice_barcode",
+                "label": "Invoice/Barcode of the drug"
+              },
+              {
+                "key": "drug_photo",
+                "label": "Image of the drug"
+              },
+              {
+                "key": "batch_number",
+                "label": "Batch number"
+              }
+            ]
+          },
+          "aliases": [
+            "Amphotericin deoxycholate",
+            "Conventional Amphotericin B",
+            "Fungizone",
+            "Polyene antifungal injection",
+            "Antifungal IV injection",
+            "ICD-10 Y40.3"
+          ],
+          "additional_information": {
+            "admission_criteria": "50mg 121.06."
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HM022A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MG0105",
+      "package_name": "Pulmonary Thromboembolism",
+      "procedures": [
+        {
+          "procedure_code": "MG0105A",
+          "procedure_name": "Pulmonary Thromboembolism",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 25000,
+            "tier2": 28800,
+            "tier1": 28800
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 25000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": [
+            "MG0105A"
+          ],
+          "addon_type": null,
+          "addon_mapping_status": "same_package_derived",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "A",
+              "description": "Pulmonary Thromboembolism",
+              "criterion": "[unable to extract — verify STG]",
+              "source": "procedure_name"
+            }
+          ],
+          "stg_ref": "MG0105A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes detailing history and Admission notes showing vitals and examination findings"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Investigation reports in support of diagnosis & any other investigations done"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "planned line of management"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICPs"
+              },
+              {
+                "key": "treatment_details",
+                "label": "Treatment details"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports."
+              }
+            ]
+          },
+          "aliases": [
+            "Pulmonary Thromboembolism",
+            "PE",
+            "Pulmonary embolism",
+            "Acute PE treatment",
+            "Venous thromboembolism management",
+            "ICD-10 I26.9",
+            "Blood clot in lung"
+          ],
+          "additional_information": {
+            "remarks": "Changed procedure label to Add-on Procedure"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MG0105A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MG0106",
+      "package_name": "Diffuse alveolar Hemorrhage Associated with SLE/ Vasculitis/ GP Syndrome",
+      "procedures": [
+        {
+          "procedure_code": "MG0106A",
+          "procedure_name": "Diffuse alveolar Hemorrhage Associated with SLE/ Vasculitis/ GP Syndrome",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 136000,
+            "tier2": 156400,
+            "tier1": 156400
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 136000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": [
+            "MG0106A"
+          ],
+          "addon_type": null,
+          "addon_mapping_status": "same_package_derived",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MG0106A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes detailing history and Admission notes showing vitals and examination findings"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Investigation reports in support of diagnosis & any other investigations done"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "planned line of management"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICPs"
+              },
+              {
+                "key": "treatment_details",
+                "label": "Treatment details"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports."
+              }
+            ]
+          },
+          "aliases": [
+            "Diffuse alveolar Hemorrhage",
+            "DAH",
+            "Lung bleeding",
+            "Alveolar hemorrhage in Systemic Lupus Erythematosus",
+            "Goodpasture syndrome treatment",
+            "Pulmonary hemorrhage",
+            "ICD-10 R04.8"
+          ],
+          "additional_information": {
+            "remarks": "Changed procedure label to Add-on Procedure"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MG0106A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MG0107",
+      "package_name": "Severe/ Refractory Vasculitis",
+      "procedures": [
+        {
+          "procedure_code": "MG0107A",
+          "procedure_name": "Severe/ Refractory Vasculitis",
+          "billing_unit": "per_dose",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 75000,
+            "tier2": 86300,
+            "tier1": 86300
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 75000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": [
+            "MG0107A"
+          ],
+          "addon_type": null,
+          "addon_mapping_status": "same_package_derived",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MG0107A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes detailing history and Admission notes showing vitals and examination findings"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Investigation reports in support of diagnosis & any other investigations done"
+              },
+              {
+                "key": "treatment_plan",
+                "label": "planned line of management"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICPs"
+              },
+              {
+                "key": "treatment_details",
+                "label": "Treatment details"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports."
+              }
+            ]
+          },
+          "aliases": [
+            "Severe/ Refractory Vasculitis",
+            "Systemic vasculitis",
+            "Autoimmune blood vessel inflammation",
+            "ANCA-associated vasculitis management",
+            "ICD-10 I77.6"
+          ],
+          "additional_information": {
+            "remarks": "Changed procedure label to Add-on Procedure"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MG0107A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    }
+  ]
+}

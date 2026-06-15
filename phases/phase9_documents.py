@@ -140,11 +140,22 @@ def _get_available_doc_keys(clinical) -> set[str]:
     Side effects:
         None.
     """
+    KEY_MAP = {
+    "usg": "usg_report",
+    "ct": "ct_report",
+    "mri": "mri_report",
+    "xray": "xray",
+    "ecg": "ecg",
+    "echo": "echo",
+    "blood_reports": "blood_reports",
+    "biopsy_hpe": "biopsy_hpe",
+    }
     keys: set[str] = set()
 
     for inv in clinical.investigations:
         if inv.document_available:
             keys.add(inv.type)
+            keys.add(KEY_MAP.get(inv.type, inv.type)) 
 
     for doc in clinical.non_clinical_documents_in_hand:
         if doc.available:
@@ -268,6 +279,30 @@ def _get_conditional_required(session: IRISSession) -> list[DocumentItem]:
         docs.append(DocumentItem(
             key="tumour_board_approval",
             label="Multidisciplinary Tumour Board (MTB) approval note",
+            package_code=None,
+            available=False,
+            criticality="hard_block",
+        ))
+
+    # USP pathway — additional documents required for unspecified surgical package pre-auth
+    if session.usp_recommended:
+        docs.append(DocumentItem(
+            key="case_summary",
+            label="Detailed case summary with diagnosis and treatment plan",
+            package_code=None,
+            available=False,
+            criticality="hard_block",
+        ))
+        docs.append(DocumentItem(
+            key="specialist_opinion",
+            label="Specialist opinion letter justifying the procedure",
+            package_code=None,
+            available=False,
+            criticality="hard_block",
+        ))
+        docs.append(DocumentItem(
+            key="cost_estimate",
+            label="Estimated cost of treatment from treating hospital",
             package_code=None,
             available=False,
             criticality="hard_block",

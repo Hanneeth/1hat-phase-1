@@ -12,6 +12,7 @@
           "procedure_code": "MC001A",
           "procedure_name": "Right Heart Catheterization",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 12500,
@@ -96,6 +97,7 @@
           "procedure_code": "MC001B",
           "procedure_name": "Left Heart Catheterization",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 12500,
@@ -186,6 +188,7 @@
           "procedure_code": "MC002A",
           "procedure_name": "For Deep vein thrombosis (DVT)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 30800,
@@ -270,6 +273,7 @@
           "procedure_code": "MC002B",
           "procedure_name": "For Mesenteric Thrombosis",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 30800,
@@ -353,6 +357,7 @@
           "procedure_code": "MC002C",
           "procedure_name": "For Peripheral vessels",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 30800,
@@ -442,6 +447,7 @@
           "procedure_code": "MC003A",
           "procedure_name": "Coarctation of Aorta",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 48300,
@@ -542,6 +548,7 @@
           "procedure_code": "MC003B",
           "procedure_name": "Pulmonary Artery Stenosis",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 48300,
@@ -647,6 +654,7 @@
           "procedure_code": "MC004A",
           "procedure_name": "Balloon Pulmonary Valvotomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 29300,
@@ -747,6 +755,7 @@
           "procedure_code": "MC004B",
           "procedure_name": "Balloon Aortic Valvotomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 29300,
@@ -853,6 +862,7 @@
           "procedure_code": "MC005A",
           "procedure_name": "Balloon Mitral Valvotomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 44700,
@@ -947,6 +957,7 @@
           "procedure_code": "MC006A",
           "procedure_name": "Balloon Atrial Septostomy",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 30500,
@@ -1046,6 +1057,7 @@
           "procedure_code": "MC007A",
           "procedure_name": "ASD Device Closure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 46200,
@@ -1139,6 +1151,7 @@
           "procedure_code": "MC008A",
           "procedure_name": "VSD Device Closure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 47400,
@@ -1232,6 +1245,7 @@
           "procedure_code": "MC009A",
           "procedure_name": "PDA Device Closure",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 40800,
@@ -1325,6 +1339,7 @@
           "procedure_code": "MC010A",
           "procedure_name": "PDA stenting",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 50400,
@@ -1435,6 +1450,7 @@
           "procedure_code": "MC011A",
           "procedure_name": "PTCA, inclusive of diagnostic angiogram",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 50800,
@@ -1548,6 +1564,7 @@
           "procedure_code": "MC012A",
           "procedure_name": "Electrophysiological Study",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 34700,
@@ -1635,6 +1652,7 @@
           "procedure_code": "MC012B",
           "procedure_name": "Electrophysiological Study \nwith Radio Frequency Ablation",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 34700,
@@ -1732,6 +1750,7 @@
           "procedure_code": "MC013A",
           "procedure_name": "Percutaneous Transluminal Septal Myocardial Ablation",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 42500,
@@ -1821,6 +1840,7 @@
           "procedure_code": "MC014A",
           "procedure_name": "Temporary Pacemaker implantation",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 24000,
@@ -1914,6 +1934,7 @@
           "procedure_code": "MC015A",
           "procedure_name": "Permanent Pacemaker Implantation - \nSingle Chamber",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 30700,
@@ -2011,6 +2032,7 @@
           "procedure_code": "MC016A",
           "procedure_name": "Permanent Pacemaker Implantation - \nDouble Chamber",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 41300,
@@ -2108,6 +2130,7 @@
           "procedure_code": "MC017A",
           "procedure_name": "Peripheral Angioplasty",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 43200,
@@ -2197,6 +2220,7 @@
           "procedure_code": "MC018A",
           "procedure_name": "Bronchial artery Embolisation \n(for Haemoptysis)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 41000,
@@ -2298,6 +2322,7 @@
           "procedure_code": "MC019A",
           "procedure_name": "Pericardiocentesis",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 15200,
@@ -2383,6 +2408,7 @@
           "procedure_code": "MC020A",
           "procedure_name": "Systemic Thrombolysis (for MI)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 22400,
@@ -2472,6 +2498,7 @@
           "procedure_code": "MC021A",
           "procedure_name": "Arteriovenous Malformation (AVM) in the Limbs",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 50800,
@@ -2565,6 +2592,7 @@
           "procedure_code": "MC022A",
           "procedure_name": "First Follow-up-  2-4 weeks after discharge - AT NETWORK HOSPITAL",
           "billing_unit": "per_visit",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 0,
@@ -2649,6 +2677,7 @@
           "procedure_code": "MC022B",
           "procedure_name": "Second Follow-up- After 3 months",
           "billing_unit": "per_visit",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 4400,
@@ -2726,6 +2755,7 @@
           "procedure_code": "MC022C",
           "procedure_name": "Third Follow-up- After 3 months",
           "billing_unit": "per_visit",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 2200,
@@ -2803,6 +2833,7 @@
           "procedure_code": "MC022D",
           "procedure_name": "fourth Follow-up- After 3 months",
           "billing_unit": "per_visit",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 2200,
@@ -2880,6 +2911,7 @@
           "procedure_code": "MC022E",
           "procedure_name": "FifthFollow-up - After 3 months",
           "billing_unit": "per_visit",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 2200,
@@ -2963,6 +2995,7 @@
           "procedure_code": "MG031A",
           "procedure_name": "Bacterial Endocarditis",
           "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": null,
           "implant": null,
@@ -3078,6 +3111,7 @@
           "procedure_code": "MG031B",
           "procedure_name": "Fungal Endocarditis",
           "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": null,
           "implant": null,
@@ -3199,6 +3233,7 @@
           "procedure_code": "MG036A",
           "procedure_name": "Atrial Fibrillation",
           "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": null,
           "implant": null,
@@ -3317,6 +3352,7 @@
           "procedure_code": "MG037A",
           "procedure_name": "Cardiac Tamponade",
           "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": null,
           "implant": null,
@@ -3426,6 +3462,7 @@
           "procedure_code": "MG038A",
           "procedure_name": "Congestive heart failure",
           "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": null,
           "implant": null,
@@ -3541,6 +3578,7 @@
           "procedure_code": "MG075A",
           "procedure_name": "High end radiological diagnostic \n(CT, MRI, Imaging including nuclear imaging)",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 5000,
@@ -3640,6 +3678,7 @@
           "procedure_code": "MG076A",
           "procedure_name": "High end histopathology (Biopsies) and advanced serology investigations",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 5000,
@@ -3739,6 +3778,7 @@
           "procedure_code": "MG098A",
           "procedure_name": "PET scan",
           "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": {
             "tier3": 0,
@@ -3856,6 +3896,7 @@
           "procedure_code": "PM039A",
           "procedure_name": "Palliative care end stage disease",
           "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
           "quantity_basis": "none",
           "rates_inr": null,
           "implant": null,

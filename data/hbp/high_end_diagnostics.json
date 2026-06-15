@@ -1,0 +1,1088 @@
+{
+  "_comment": "KB-2 HBP 2022 — High end Diagnostics. Deterministic fields set by kb2_extractor.py. Fill: mandatory_documents, aliases, stratification_criteria, additional_information.",
+  "scheme_id": "pmjay",
+  "specialty": "High end Diagnostics",
+  "specialty_code": "HD",
+  "packages": [
+    {
+      "package_code": "HD001",
+      "package_name": "Lymphangiography",
+      "procedures": [
+        {
+          "procedure_code": "HD001A",
+          "procedure_name": "Lymphangiography",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 10920,
+            "tier2": 10920,
+            "tier1": 10920
+          },
+          "implant": {
+            "name": "Lipidol and needle",
+            "cost_inr": 18000
+          },
+          "pricing": {
+            "base_rate_inr": 10920,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD001A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "investigation_reports",
+                "label": "Final report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice / barcode for implants used"
+              }
+            ]
+          },
+          "aliases": [
+            "Lymphography",
+            "Lymph vessel X-ray",
+            "Contrast lymphangiography",
+            "Imaging of lymphatic system",
+            "ICD-10 I89.9",
+            "Radiographic visualization of lymph nodes",
+            "Lymph node mapping"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD001A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HD002",
+      "package_name": "Diagnostic venography (DVA)",
+      "procedures": [
+        {
+          "procedure_code": "HD002A",
+          "procedure_name": "Diagnostic venography (DVA)",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 5520,
+            "tier2": 5520,
+            "tier1": 5520
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 5520,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD002A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "investigation_reports",
+                "label": "Final report"
+              }
+            ]
+          },
+          "aliases": [
+            "DVA",
+            "Diagnostic venography",
+            "Phlebography",
+            "Venogram",
+            "Vein X-ray with contrast",
+            "ICD-10 I87.9",
+            "Lower limb venography",
+            "Upper limb venography"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD002A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HD003",
+      "package_name": "IVUS(Intravascular Ultrasound)- peripheral vessels",
+      "procedures": [
+        {
+          "procedure_code": "HD003A",
+          "procedure_name": "IVUS(Intravascular Ultrasound)- peripheral vessels",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 16560,
+            "tier2": 16560,
+            "tier1": 16560
+          },
+          "implant": {
+            "name": "IVUS Catheter",
+            "cost_inr": 48000
+          },
+          "pricing": {
+            "base_rate_inr": 16560,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD003A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "investigation_reports",
+                "label": "Final report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice / barcode for implants used"
+              }
+            ]
+          },
+          "aliases": [
+            "IVUS",
+            "Intravascular Ultrasound",
+            "Endovascular ultrasound",
+            "Peripheral IVUS",
+            "ICD-10 I70.2",
+            "Peripheral vessel imaging"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD003A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HD004",
+      "package_name": "Diskography",
+      "procedures": [
+        {
+          "procedure_code": "HD004A",
+          "procedure_name": "Diskography",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 5520,
+            "tier2": 5520,
+            "tier1": 5520
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 5520,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD004A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "investigation_reports",
+                "label": "Final report"
+              }
+            ]
+          },
+          "aliases": [
+            "Discography",
+            "Spinal discography",
+            "Intervertebral disc imaging",
+            "Contrast discography",
+            "Provocative discography",
+            "ICD-10 M51.9",
+            "Spinal diagnostic injection"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD004A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HD005",
+      "package_name": "USG guided percutaneous biopsy",
+      "procedures": [
+        {
+          "procedure_code": "HD005A",
+          "procedure_name": "USG guided percutaneous biopsy",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 2520,
+            "tier2": 2520,
+            "tier1": 2520
+          },
+          "implant": {
+            "name": "Biopsy Gun",
+            "cost_inr": 3000
+          },
+          "pricing": {
+            "base_rate_inr": 2520,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD005A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "biopsy_hpe",
+                "label": "Final report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice / barcode for implants used"
+              }
+            ]
+          },
+          "aliases": [
+            "Ultrasound guided biopsy",
+            "Image guided percutaneous biopsy",
+            "Core needle biopsy under USG",
+            "USG FNAB",
+            "Targeted biopsy under ultrasound",
+            "ICD-10 R93.8"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD005A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HD006",
+      "package_name": "USG guided percutaneous FNAC",
+      "procedures": [
+        {
+          "procedure_code": "HD006A",
+          "procedure_name": "USG guided percutaneous FNAC",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 720,
+            "tier2": 720,
+            "tier1": 720
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 720,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD006A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "biopsy_hpe",
+                "label": "Final report"
+              }
+            ]
+          },
+          "aliases": [
+            "Ultrasound guided FNAC",
+            "USG guided Fine Needle Aspiration Cytology",
+            "Image guided FNAC",
+            "USG FNAC",
+            "Targeted cytology under USG",
+            "ICD-10 R93.8"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD006A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HD007",
+      "package_name": "USG guided percutaneous needle aspiration",
+      "procedures": [
+        {
+          "procedure_code": "HD007A",
+          "procedure_name": "USG guided percutaneous needle aspiration",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 720,
+            "tier2": 720,
+            "tier1": 720
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 720,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD007A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "investigation_reports",
+                "label": "Final report"
+              }
+            ]
+          },
+          "aliases": [
+            "Ultrasound guided needle aspiration",
+            "USG guided aspiration",
+            "Image guided fluid aspiration",
+            "USG aspiration of cyst/abscess",
+            "Percutaneous drainage under USG",
+            "ICD-10 R93.8"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD007A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HD008",
+      "package_name": "CT guided percutaneous biopsy",
+      "procedures": [
+        {
+          "procedure_code": "HD008A",
+          "procedure_name": "CT guided percutaneous biopsy",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 3720,
+            "tier2": 3720,
+            "tier1": 3720
+          },
+          "implant": {
+            "name": "Biopsy Gun",
+            "cost_inr": 3000
+          },
+          "pricing": {
+            "base_rate_inr": 3720,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD008A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "biopsy_hpe",
+                "label": "Final report"
+              },
+              {
+                "key": "implant_sticker",
+                "label": "Invoice / barcode for implants used"
+              }
+            ]
+          },
+          "aliases": [
+            "CT guided biopsy",
+            "Computed tomography guided biopsy",
+            "Core needle biopsy under CT",
+            "CT FNAB",
+            "Targeted biopsy under CT scan",
+            "ICD-10 R93.8"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD008A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T",
+            "implant": "HBP-2022.pdf — Implant mapped + implant cost columns"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HD009",
+      "package_name": "CT guided percutaneous FNAC",
+      "procedures": [
+        {
+          "procedure_code": "HD009A",
+          "procedure_name": "CT guided percutaneous FNAC",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 3120,
+            "tier2": 3120,
+            "tier1": 3120
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 3120,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD009A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "biopsy_hpe",
+                "label": "Final report"
+              }
+            ]
+          },
+          "aliases": [
+            "CT guided FNAC",
+            "Computed tomography guided Fine Needle Aspiration Cytology",
+            "Image guided FNAC under CT",
+            "CT FNAC",
+            "Targeted cytology under CT scan",
+            "ICD-10 R93.8"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD009A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HD010",
+      "package_name": "CT guided percutaneous needle aspiration",
+      "procedures": [
+        {
+          "procedure_code": "HD010A",
+          "procedure_name": "CT guided percutaneous needle aspiration",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 3120,
+            "tier2": 3120,
+            "tier1": 3120
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 3120,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD010A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "investigation_reports",
+                "label": "Final report"
+              }
+            ]
+          },
+          "aliases": [
+            "CT guided needle aspiration",
+            "Computed tomography guided aspiration",
+            "Image guided fluid aspiration under CT",
+            "CT aspiration of cyst/abscess",
+            "Percutaneous drainage under CT",
+            "ICD-10 R93.8"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD010A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HD011",
+      "package_name": "Genetic workup",
+      "procedures": [
+        {
+          "procedure_code": "HD011A",
+          "procedure_name": "Genetic workup",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 20000,
+            "tier2": 20000,
+            "tier1": 20000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 20000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD011A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "investigation_reports",
+                "label": "Final report"
+              }
+            ]
+          },
+          "aliases": [
+            "Genetic testing",
+            "Genetic screening",
+            "Chromosomal analysis",
+            "DNA testing",
+            "Karyotyping",
+            "Molecular genetic test",
+            "Genetic profiling",
+            "ICD-10 Q99.8"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD011A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HD012",
+      "package_name": "Metabolic work up",
+      "procedures": [
+        {
+          "procedure_code": "HD012A",
+          "procedure_name": "Metabolic work up",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 30000,
+            "tier2": 30000,
+            "tier1": 30000
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 30000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD012A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "investigation_reports",
+                "label": "Final report"
+              }
+            ]
+          },
+          "aliases": [
+            "Metabolic screening",
+            "Metabolic panel",
+            "Inborn errors of metabolism panel",
+            "Comprehensive metabolic panel",
+            "CMP",
+            "Metabolic assay",
+            "ICD-10 E88.9"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD012A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "HD013",
+      "package_name": "Vedio EEG Monitoring Test (VEEG)",
+      "procedures": [
+        {
+          "procedure_code": "HD013A",
+          "procedure_name": "Vedio EEG Monitoring Test (VEEG)",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 3600,
+            "tier2": 3600,
+            "tier1": 3600
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 3600,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "add_on",
+          "is_addon_to": "any_perday_medical_where_permitted",
+          "addon_type": "diagnostic_highend",
+          "addon_mapping_status": "cross_specialty_rule_based",
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "HD013A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical and examination notes"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Relevant investigations supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "investigation_reports",
+                "label": "Final report"
+              }
+            ]
+          },
+          "aliases": [
+            "Video EEG",
+            "VEEG",
+            "Video electroencephalography monitoring",
+            "Continuous video EEG",
+            "Epilepsy monitoring",
+            "Long-term EEG monitoring",
+            "ICD-10 G40.9"
+          ],
+          "additional_information": {
+            "alos": "daycare"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row HD013A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Add - On Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    }
+  ]
+}
