@@ -58,7 +58,7 @@ Core principles:
 
 4. Domain match between diagnosis and procedure. The patient's presenting condition must be the condition the procedure treats. A procedure designed for condition X is not eligible for a patient with condition Y, regardless of whether Y has features that superficially resemble X. The clinical reasoning required to bridge them is itself evidence the match does not hold.
 
-5. Treat absence as failure. If a required clinical fact, investigation, or measurement is not present in the clinical input, the criterion that depends on it is unmet. Do not assume presence from context. Do not infer values from related findings.
+5. Treat absence as failure — for THRESHOLDS only. Clinical thresholds are hard AND conditions. If a threshold criterion is not unambiguously satisfied by the clinical input, it is unmet. Do not assume presence from context. Do not infer values from related findings. Clinical indications are OR conditions — the patient needs to satisfy at least one, not all. If the patient clearly satisfies one indication, the indication gate is passed even if other listed indications are absent.
 
 6. Confidence calibration. Use "high" when STG criteria are clearly stated and the clinical input clearly satisfies or fails them. Use "medium" when the criteria are clear but the clinical input is partially documented. Use "low" only when the criteria themselves are ambiguous or when interpretation requires judgment beyond literal reading. Never use confidence as a way to soften an unclear pass — if confidence would be low because the match is weak, return eligible=False instead.
 
@@ -71,7 +71,7 @@ When the clinical input requires you to construct a reasoning chain to justify e
 
 USER_PROMPT_TEMPLATE = """STG eligibility criteria for PM-JAY procedure {procedure_code}:
 
-=== CLINICAL INDICATIONS ===
+=== CLINICAL INDICATIONS (OR logic — patient must satisfy AT LEAST ONE of these to qualify) ===
 {indications}
 
 === CLINICAL THRESHOLDS (must be met for pre-auth approval) ===
@@ -238,19 +238,27 @@ def check_plausibility(
         Logs INFO (result), WARNING (retry), ERROR (all retries failed).
     """
     _PLAUSIBILITY_SYSTEM = (
-        "You are a clinical relevance checker for PM-JAY package selection.\n"
+        "You are a clinical relevance checker for PM-JAY (India's national health "
+        "scheme) package selection.\n\n"
+        "Important context: PM-JAY allows multiple packages to be billed for a "
+        "single admission. A package does not need to cover the patient's entire "
+        "treatment — it only needs to address one specific condition or procedure "
+        "that the patient requires during this admission.\n\n"
+        "Your only task: determine whether the patient has the specific medical "
+        "condition or clinical need that this PM-JAY procedure is designed to treat. "
+        "Do not evaluate whether this package alone is sufficient for the patient's "
+        "complete treatment. Do not consider what other procedures are planned.\n\n"
         "Respond with valid JSON only. No prose outside the JSON."
     )
 
-    planned = clinical.planned_procedure or "not specified"
     user_prompt = (
         f"Patient provisional diagnosis: {clinical.provisional_diagnosis}\n"
         f"Patient chief complaints: {clinical.chief_complaints}\n"
-        f"Planned procedure (if stated): {planned}\n"
         f"\n"
         f"Candidate PM-JAY package: {procedure_name} ({procedure_code})\n"
         f"\n"
-        f"Is this package clinically plausible for this patient?\n"
+        f"Does this patient have the specific condition or clinical need that "
+        f"this PM-JAY procedure is designed to treat?\n"
         f'Respond JSON only:\n'
         f'{{"plausible": true or false, "reason": "one sentence explanation"}}'
     )

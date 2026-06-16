@@ -319,6 +319,85 @@ def run_pipeline(session: IRISSession) -> IRISOutput:
 # CLI entry point
 # ---------------------------------------------------------------------------
 
+def print_summary(output_dict: dict) -> None:
+    """Print a human-readable 3-5 line summary of the IRIS result to stdout."""
+
+    DIVIDER = "═" * 72
+
+    status = output_dict.get("readiness_status", "UNKNOWN")
+
+    # Status icon
+    STATUS_ICONS = {
+        "READY": "✅",
+        "READY_WITH_WARNINGS": "⚠️",
+        "CONDITIONAL": "🟡",
+        "BLOCKED": "🔴",
+    }
+    icon = STATUS_ICONS.get(status, "❓")
+
+    # Selected packages line
+    packages = output_dict.get("selected_packages", [])
+    if packages:
+        pkg_parts = []
+        for fp in packages:
+            v = fp.get("validated", {})
+            code = v.get("procedure_code", "?")
+            name = v.get("package_name", "?")
+            proc = v.get("procedure_name", "")
+            rate = v.get("base_rate_inr")
+            role = fp.get("role", "primary")
+            factor = fp.get("deduction_factor", 1.0)
+            rate_str = f"₹{int(rate * factor):,}" if rate else "rate unknown"
+            pkg_parts.append(f"{code} · {name} ({proc}) · {rate_str} [{role}]")
+        packages_line = " | ".join(pkg_parts)
+    else:
+        packages_line = "No packages selected"
+
+    # Financial line
+    estimated = output_dict.get("estimated_total_inr", 0)
+    copayment = output_dict.get("copayment_required", False)
+    gap = output_dict.get("copayment_gap_inr")
+    if copayment and gap:
+        financial_line = (
+            f"Estimated ₹{estimated:,} | ⚠️  CO-PAYMENT REQUIRED — Gap: ₹{gap:,}"
+        )
+    else:
+        financial_line = f"Estimated ₹{estimated:,} | Wallet sufficient ✓"
+
+    # Docs line
+    required = len(output_dict.get("preauth_docs_required", []))
+    missing = len(output_dict.get("preauth_docs_missing", []))
+    docs_line = f"Docs: {required} required"
+    if missing:
+        docs_line += f", {missing} MISSING 🔴"
+    else:
+        docs_line += ", all in hand ✓"
+
+    # Key warning flags (exclude info flags, exclude noisy always-present ones)
+    SKIP_FLAGS = {
+        "EMERGENCY_PHASE_STUBBED",
+        "CANDIDATES_GENERATED",
+        "FINANCIAL_ESTIMATE_APPROXIMATE",
+        "DEDUCTION_APPROXIMATE",
+        "DOC_GAP_ANALYSIS",
+    }
+    warn_flags = [
+        f.get("code", "")
+        for f in output_dict.get("flags", [])
+        if f.get("severity") in ("warning", "block")
+        and f.get("code") not in SKIP_FLAGS
+    ]
+    flags_line = f"Flags: {', '.join(warn_flags)}" if warn_flags else "Flags: none"
+
+    # Print
+    print(f"\n{DIVIDER}")
+    print(f"  IRIS RESULT  {icon}  {status}")
+    print(f"  {packages_line}")
+    print(f"  {financial_line}")
+    print(f"  {docs_line}  |  {flags_line}")
+    print(f"{DIVIDER}\n")
+
+
 def main() -> None:
     """CLI entry point for the IRIS pipeline.
 
@@ -368,9 +447,11 @@ def main() -> None:
     # --- Serialise and print ---
     output_dict = serialize_output(output)
     print(json.dumps(output_dict, indent=2, default=str))
+    print_summary(output_dict)
 
     logger.info("Pipeline complete. Status: %s", output.readiness_status)
 
 
 if __name__ == "__main__":
     main()
+

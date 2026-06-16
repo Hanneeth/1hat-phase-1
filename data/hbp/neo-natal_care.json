@@ -1,0 +1,1179 @@
+{
+  "_comment": "KB-2 HBP 2022 — Neo-natal Care. Deterministic fields set by kb2_extractor.py. Fill: mandatory_documents, aliases, stratification_criteria, additional_information.",
+  "scheme_id": "pmjay",
+  "specialty": "Neo-natal Care",
+  "specialty_code": "MN",
+  "packages": [
+    {
+      "package_code": "MN001",
+      "package_name": "Basic neonatal care package: Babies that can be managed by side of mother in postnatal ward without requiring admission in SNCU/NICU:\n• Any newborn needing feeding support\n• Babies requiring closer monitoring or short-term care for conditions like: \no Birth asphyxia (need for positive pressure ventilation; no HIE)\no Moderate jaundice requiring phototherapy\no Large for dates (>97 percentile) Babies \no Small for gestational age (less than 3rd centile)",
+      "procedures": [
+        {
+          "procedure_code": "MN001A",
+          "procedure_name": "Neonates 1800-2500g  OR Neonates of any weight requiring closer monitoring or short-term care on mother's bedside for conditions like, but not limited to: \n o Birth asphyxia (need for positive pressure ventilation at birth; no HIE)\n o Moderate jaundice requiring phototherapy\n o Large for dates (>97 percentile) or Small for gestational age (less than 3rd centile)                                                                                                                                   o Rule-out sepsis .                                                                                                                                                                                                                                         o Investigations warranted because of antenatal scan findings.                                                                                                                                                                            Includes activities listed under Basic Neonatal care package and Kangaroo Mother Care support",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 1000
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 4,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Ward",
+              "criterion": "Routine Ward",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "MN001A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed clinical notes (incl trigger for hospitalization and examiantion findings)"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "supporting investigations"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICPs (daily Treatment details)"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Basic neonatal care",
+            "Routine ward neonatal care",
+            "Neonatal routine care",
+            "Newborn monitoring",
+            "KMC support",
+            "Kangaroo Mother Care",
+            "Mild jaundice care",
+            "Neonatal phototherapy",
+            "Routine neonatal ward monitoring"
+          ],
+          "additional_information": {
+            "admission_criteria": "Neonates 1800-2500g OR Neonates of any weight requiring closer monitoring or short-term care on mother's bedside",
+            "min_doctor_qualification": "Admission under neonatologist in NICU (in major locations) and under Pediatrician in smaller locations is a must."
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf p.32 — strat_remarks: 'Routine Ward - 1000/day'",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MN002",
+      "package_name": "Special Neonatal Care Package: Babies that required admission to SNCU or NICU:\nBabies admitted for short term care for conditions like: \n• Mild Respiratory Distress/tachypnea\n• Mild encephalopathy \n• Severe jaundice requiring intensive phototherapy\n• Haemorrhagic disease of newborn\n• Unwell baby requiring monitoring\n• Some dehydration\n• Hypoglycaemia                           \nMother's stay and food in the hospital for breastfeeding, family centred care and (Kangaroo Mother Care) KMC is mandatory and included in the package rate",
+      "procedures": [
+        {
+          "procedure_code": "MN002A",
+          "procedure_name": "Neonates  between 1500-1799g  OR Neonates of any weight with mild illness like, but not limited to: \n • Mild Respiratory Distress/tachypnea \n • Mild encephalopathy \n • Severe jaundice requiring intensive phototherapy\n • Unwell baby requiring monitoring\n • Some dehydration\n • Hypoglycaemia                                                                                                                                                                                                                                          The above list is illustrative but not limited to these conditions.                                                                                                                                                                            The required procedures may include radiant warmer care, gavage feeding, oxygen therapy, IV fluid administration, blood transfusion.\nThe package includes food and stay for the mother in the hospital for breastfeeding, Kangaroo Mother Care (KMC) and Family centered care.",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "nicu": 4000
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 6,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "nicu",
+              "description": "SNCU / NICU",
+              "criterion": "SNCU / NICU Admission",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "MN002A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes with planned line of treatment (incl birth & past history)"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "Investigation Reports supporting diagnosis"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICPs (daily Treatment details)"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "Detailed Discharge Summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Special neonatal care",
+            "SNCU admission",
+            "NICU mild illness",
+            "Mild respiratory distress newborn",
+            "Neonatal hypoglycemia care",
+            "Neonatal dehydration care",
+            "Severe jaundice phototherapy newborn",
+            "Radiant warmer care neonate"
+          ],
+          "additional_information": {
+            "admission_criteria": "Neonates between 1500-1799g OR Neonates of any weight with mild illness"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf p.32 — strat_remarks: 'SNCU / NICU - 4000/day'",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MN003",
+      "package_name": "Intensive Neonatal Care Package \nBabies with birthweight 1500-1799 g                                                                                                                                                                       \n                           or \nBabies of any birthweight and at least one of the following conditions:                                                                                               \n• Need for mechanical ventilation for less than 24 hours or non-invasive respiratory support (CPAP, HFFNC)                                                                                                                                                                                                                  \n• Sepsis / pneumonia without complications                                                                                                                   \n• Hyperbilirubinemia requiring exchange transfusion\n• Seizures\n• Major congenital malformations (pre-surgical stabilization, not requiring ventilation)                                                                                                                                                                                                                              \n• Cholestasis significant enough requiring work up and in-hospital management \n• Congestive heart failure or shock      \nMother's stay and food in the hospital for breastfeeding, family centred care and (Kangaroo Mother Care) KMC is mandatory and included in the package rate",
+      "procedures": [
+        {
+          "procedure_code": "MN003A",
+          "procedure_name": "Neonates of  any birthweight  with moderate illness like \n • Need for mechanical ventilation for less than 24 hours or non-invasive respiratory support (CPAP, HFFNC) \n • Sepsis / pneumonia without complications \n • Hyperbilirubinemia requiring exchange transfusion\n • Seizures requring anti-convulsants\n • Major congenital malformations (pre-surgical stabilization) \n • Cholestasis  requiring investigations and in-hospital management \n • Congestive heart failure or shock \n The above list is illustrative but not limited to these conditions.                                                                                                                                                                       The package includes mandatory stay and food of the mother in the hospital for breastfeeding, Kangaroo Mother Care (KMC) and Family centered care",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "nicu": 6000
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": true,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 7,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "nicu",
+              "description": "SNCU / NICU",
+              "criterion": "SNCU / NICU Admission",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "MN003A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed clinical notes (incl trigger for hospitalization and examiantion findings)"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "supporting investigations"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICPs (daily Treatment details)"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Intensive neonatal care",
+            "Moderate neonatal illness care",
+            "Newborn CPAP care",
+            "HFFNC neonate",
+            "Neonatal sepsis care",
+            "Neonatal exchange transfusion",
+            "Neonatal seizures management"
+          ],
+          "additional_information": {
+            "admission_criteria": "Neonates of any birthweight with moderate illness",
+            "min_doctor_qualification": "Admission under neonatologist in NICU (in major locations) and under Pediatrician in smaller locations is a must."
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf p.32 — strat_remarks: 'SNCU / NICU - 6000'",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MN004",
+      "package_name": "Advanced Neonatal Care Package:\nBabies with birthweight of 1200-1499 g                                                                                                                                                    \n                                  or \nBabies of any birthweight with at least one of the following conditions: \n• Any condition requiring invasive ventilation longer than 24 hours                                                                                                                                                                                                                                                                                                                                                                                                                                      \n• Hypoxic Ischemic encephalopathy requiring Therapeutic Hypothermia                                                                                                                                              \n• Cardiac rhythm disorders needing intervention (the cost of cardiac surgery or implant will be covered under cardiac surgery packages)                                                                                                                                                                        \n• Sepsis with complications such as meningitis or bone and joint infection, DIC or shock\n• Renal failure requiring dialysis                                                                                                                                                                                                                          \n• Inborn errors of metabolism   \nMother's stay and food in the hospital for breastfeeding, family centred care and (Kangaroo Mother Care) KMC is mandatory and included in the package rate",
+      "procedures": [
+        {
+          "procedure_code": "MN004A",
+          "procedure_name": "Neonates  between 1200-1499 g  OR \nNeonates of any weight with at least one of the following conditions: \n • Any condition requiring invasive ventilation longer than 24 hours \n • Moderate to Severe Hypoxic Ischemic encephalopathy \n • Cardiac rhythm disorders needing intervention (the cost of cardiac surgery or implant will be covered under cardiac surgery packages) \n • Sepsis with complications such as meningitis or bone and joint infection, DIC or shock\n • Renal failure requiring dialysis \n • Inborn errors of metabolism \n The above list is illustrative but not limited to these conditions.                                                                                                                                                                     The package includes mandatory stay and food of the mother in the hospital for breastfeeding, Kangaroo Mother Care (KMC) and Family centered care",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "nicu": 7750
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 7,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "icu_vent",
+              "description": "NICU Advanced Care",
+              "criterion": "NICU with advanced monitoring or ventilation",
+              "source": "domain_knowledge"
+            }
+          ],
+          "stg_ref": "MN004A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed clinical notes (incl trigger for hospitalization and examiantion findings)"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "supporting investigations"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICPs (daily Treatment details)"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Advanced neonatal care",
+            "Invasive ventilation neonate",
+            "Moderate to severe HIE neonate",
+            "Therapeutic hypothermia newborn",
+            "Neonatal meningitis care",
+            "Neonatal renal failure dialysis",
+            "VLBW care"
+          ],
+          "additional_information": {
+            "admission_criteria": "Neonates between 1200-1499 g OR Neonates of any weight with specified severe conditions",
+            "min_doctor_qualification": "Admission under neonatologist in NICU (in major locations) and under Pediatrician in smaller locations is a must."
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf p.33 — strat_remarks: '7750/day' (Advanced NICU single rate)",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MN005",
+      "package_name": "Critical Care Neonatal Package:\nBabies with birthweight of <1200 g                                                                                                                                                   \n                           or \nBabies of any birthweight with at least one of the following conditions:                                                                                                \n• Severe Respiratory Failure requiring High Frequency Ventilation or inhaled Nitric Oxide (iNO)\n• Multisystem failure requiring multiple organ support including mechanical ventilation and multiple inotropes\n• Critical congenital heart disease     \nMother's stay and food in the hospital for breastfeeding, family centred care and (Kangaroo Mother Care) KMC is mandatory and included in the package rate",
+      "procedures": [
+        {
+          "procedure_code": "MN005A",
+          "procedure_name": "Neonates  <1200 g  OR\nNeonates of any weight with at least one of the following conditions: \n • Severe Respiratory Failure requiring High Frequency Ventilation or inhaled Nitric Oxide (iNO)\n • Multisystem failure requiring multiple organ support including mechanical ventilation and multiple inotropes\n • Reuiring parenteral nutrition                                                                                                                                                                                                                Critical congenital heart disease (excluding surgical costs)\nThe above list is illustrative but not limited to these conditions.                                                                                                                                                                              The package includes mandatory stay and food of the mother in the hospital for breastfeeding, Kangaroo Mother Care (KMC) and Family centered care",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "nicu": 9900
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 21,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "icu_vent",
+              "description": "Critical NICU",
+              "criterion": "Critical NICU Care",
+              "source": "domain_knowledge"
+            }
+          ],
+          "stg_ref": "MN005A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed clinical notes (incl trigger for hospitalization and examiantion findings)"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "supporting investigations"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICPs (daily Treatment details)"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Critical care neonatal",
+            "Severe respiratory failure neonate",
+            "High frequency ventilation neonate",
+            "iNO neonate",
+            "Inhaled Nitric Oxide newborn",
+            "Multisystem failure neonate",
+            "Critical congenital heart disease neonate",
+            "ELBW care"
+          ],
+          "additional_information": {
+            "admission_criteria": "Neonates <1200 g OR Neonates of any weight with critical condition",
+            "min_doctor_qualification": "Admission under neonatologist in NICU (in major locations) and under Pediatrician in smaller locations is a must."
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf p.33 — strat_remarks: '9900/day' (Critical NICU single rate)",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MN006",
+      "package_name": "Chronic Care Package: If the baby requires stay beyond the upper limit of usual stay in Package no MN004A or MN005A for conditions like severe BPD requiring respiratory support, severe NEC requiring prolonged TPN support",
+      "procedures": [
+        {
+          "procedure_code": "MN006A",
+          "procedure_name": "Neonates  in Special Neonatal Care, Special Neonatal Care-Plus, Intensive Neonatal Care or Critical Neonatal Care  packages  (MN002,MN003,MN004, MN005) who have not fully recovered and continue to require  NICU/SNCU care,  e.g. for  respiratory support, gavage feeding, thermal support, etc.,",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "nicu": 4000
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": true,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "nicu",
+              "description": "SNCU / NICU",
+              "criterion": "Continued NICU/SNCU care",
+              "source": "strat_remarks"
+            }
+          ],
+          "stg_ref": "MN006A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "prior_claim_details",
+                "label": "Claim number of having utilized Package no MN004A or MN005A"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "Notes mentioning need for stay beyond prescribed upper limit"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICPs (daily Treatment details)"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Chronic neonatal care",
+            "Prolonged NICU stay",
+            "Extended SNCU care",
+            "Severe BPD care newborn",
+            "Prolonged TPN support neonate",
+            "Chronic care neonate",
+            "Neonatal extended monitoring"
+          ],
+          "additional_information": {
+            "admission_criteria": "Stay beyond upper limit of MN004A/MN005A for chronic conditions",
+            "alos": "Chronic extension"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf p.33 — strat_remarks: 'SNCU / NICU - 4000'",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MN007",
+      "package_name": "High Risk Newborn Post Discharge Care Package (Protocol Driven)",
+      "procedures": [
+        {
+          "procedure_code": "MN007A",
+          "procedure_name": "Includes but not limited to minimum six follow-up visits at 40 weeks PMA,  and corrected ages of 3,6,9, 12  and 18 months for  Assessment and Management of growth and development. Neurosonogram at 40 weeks PMA if indicated.",
+          "billing_unit": "per_visit",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 1000,
+            "tier2": 1150,
+            "tier1": 1250
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 1000,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": true,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "secondary",
+          "day_care": false,
+          "los_indicative": 3,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MN007A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Need of planned care and details of planned post discharge care"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICP with daily notes, vitals, drugs given"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "investigation reports"
+              },
+              {
+                "key": "vitals_chart",
+                "label": "Card with pre and post admission general conditions and vital parameters"
+              }
+            ]
+          },
+          "aliases": [
+            "High risk newborn follow up",
+            "Neonatal post discharge care",
+            "Neurosonogram neonate follow up",
+            "High risk neonate monitoring",
+            "Post NICU follow up",
+            "Neonatal growth assessment"
+          ],
+          "additional_information": {
+            "doc_cadence": "six follow-up visits at 40 weeks PMA, and corrected ages of 3,6,9, 12 and 18 months"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf p.33 — MN007A: Tier3=1000 Tier2=1150 Tier1=1250, strat_remarks='per visit'",
+            "billing_unit": "HBP-2022.pdf — non-zero tier rates confirm per_visit (extractor default per_day for MN specialty was wrong for this procedure)",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MN008",
+      "package_name": "Laser Therapy for Retinopathy of Prematurity (Irrespective of no. of eyes affected) - per session",
+      "procedures": [
+        {
+          "procedure_code": "MN008A",
+          "procedure_name": "Laser Therapy for Retinopathy of Prematurity\n(Irrespective of no. of eyes affected)\nper session",
+          "billing_unit": "per_session",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 1900,
+            "tier2": 2200,
+            "tier1": 2300
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 1900,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MN008A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "fundus_report",
+                "label": "Fundoscope reports / stills showing extent of ROP and need for procedure"
+              }
+            ],
+            "claim": [
+              {
+                "key": "ot_notes",
+                "label": "Details of Laser therapy done"
+              }
+            ]
+          },
+          "aliases": [
+            "ROP laser therapy",
+            "Laser photocoagulation ROP",
+            "Retinopathy of prematurity laser",
+            "Newborn laser eye therapy",
+            "Preterm baby eye laser",
+            "Neonatal eye laser"
+          ],
+          "additional_information": {
+            "laterality_note": "Irrespective of no. of eyes affected"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf p.34 — MN008A: Tier3=1900 Tier2=2200 Tier1=2300. Package name says 'per session'.",
+            "billing_unit": "HBP-2022.pdf — non-zero tier rates confirm per_session (extractor default per_day for MN specialty was wrong for this procedure)",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MN009",
+      "package_name": "Advanced Surgery for Retinopathy of Prematurity",
+      "procedures": [
+        {
+          "procedure_code": "MN009A",
+          "procedure_name": "Advanced Surgery for Retinopathy\nof Prematurity",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 18800,
+            "tier2": 21300,
+            "tier1": 22500
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 18800,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MN009A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes"
+              },
+              {
+                "key": "fundus_report",
+                "label": "Fundoscope reports / stills showing extent of ROP and need for surgery"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "intraop_photo",
+                "label": "Intra procedure clinical photograph"
+              }
+            ]
+          },
+          "aliases": [
+            "Advanced surgery ROP",
+            "Vitrectomy for ROP",
+            "Scleral buckling ROP",
+            "Lens-sparing vitrectomy",
+            "Retinopathy of prematurity surgery",
+            "Neonatal eye surgery"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MN009A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MN010",
+      "package_name": "Ventriculoperitoneal Shunt Surgery (VP) or Omaya Reservoir or External Drainage for Hydrocephalus",
+      "procedures": [
+        {
+          "procedure_code": "MN010A",
+          "procedure_name": "Ventriculoperitoneal Shunt Surgery (VP) or Omaya Reservoir or External Drainage for\nHydrocephalus",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "surgical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 6300,
+            "tier2": 7100,
+            "tier1": 7500
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 6300,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 2,
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MN010A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical history"
+              },
+              {
+                "key": "ct_report",
+                "label": "CT / MRI (either modality)"
+              },
+              {
+                "key": "clinical_photo_initial",
+                "label": "pre-op clinical photograph"
+              }
+            ],
+            "claim": [
+              {
+                "key": "discharge_summary",
+                "label": "Detailed discharge summary"
+              },
+              {
+                "key": "ot_notes",
+                "label": "Detailed Procedure / Operative Notes"
+              },
+              {
+                "key": "intraop_photo",
+                "label": "Intra procedure clinical photograph"
+              }
+            ]
+          },
+          "aliases": [
+            "VP shunt neonate",
+            "Ventriculoperitoneal shunt newborn",
+            "Omaya reservoir newborn",
+            "External ventricular drainage neonate",
+            "EVD neonate",
+            "Hydrocephalus surgery newborn",
+            "Neonatal CSF drainage"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf — row MN010A, Tier3/Tier2/Tier1 columns",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Surgical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MN011",
+      "package_name": "Basic neonatal care (Level IA)",
+      "procedures": [
+        {
+          "procedure_code": "MN011A",
+          "procedure_name": "Neonates > 2.5 kg nursed with mother : Includes clinical monitoring, breastfeeding support, birth vaccination, thyroid screening, universal hearing screening and pre-discharge counselling",
+          "billing_unit": "per_day",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": null,
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": null,
+            "bed_rates_inr": {
+              "ward": 6000
+            },
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": false,
+          "los_indicative": 5,
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "ward",
+              "description": "Routine Postnatal Ward",
+              "criterion": "Nursed with mother",
+              "source": "procedure_name"
+            }
+          ],
+          "stg_ref": "MN011A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed clinical notes (incl trigger for hospitalization and examiantion findings)"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "supporting investigations"
+              }
+            ],
+            "claim": [
+              {
+                "key": "clinical_notes",
+                "label": "Detailed ICPs (daily Treatment details)"
+              },
+              {
+                "key": "discharge_summary",
+                "label": "detailed discharge summary"
+              },
+              {
+                "key": "investigation_reports",
+                "label": "All investigations reports"
+              }
+            ]
+          },
+          "aliases": [
+            "Basic neonatal care Level IA",
+            "Healthy newborn care",
+            "Routine postnatal newborn care",
+            "Mother and baby care",
+            "Universal hearing screening newborn",
+            "Neonatal birth vaccination"
+          ],
+          "additional_information": {
+            "admission_criteria": "Neonates > 2.5 kg nursed with mother",
+            "min_doctor_qualification": "Admission under neonatologist in NICU (in major locations) and under Pediatrician in smaller locations is a must."
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf p.34 — strat_remarks: '6000/day'",
+            "billing_unit": "HBP_2022_Package_Master1.xlsx col Y (Medical) + specialty logic",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MN012",
+      "package_name": "ROP screening",
+      "procedures": [
+        {
+          "procedure_code": "MN012A",
+          "procedure_name": "ROP screening (both eyes)",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 550,
+            "tier2": 625,
+            "tier1": 625
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 550,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": false,
+          "num_stratifications": 0,
+          "stratification_criteria": null,
+          "stg_ref": "MN012A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Clinical notes, examination findings and age of the beneficiaries"
+              }
+            ],
+            "claim": [
+              {
+                "key": "screening_report",
+                "label": "Screening report from ophalmologist"
+              }
+            ]
+          },
+          "aliases": [
+            "ROP screening",
+            "Retinopathy of prematurity eye exam",
+            "Premature baby eye check",
+            "Ophthalmologist screening neonate",
+            "Neonatal fundus exam"
+          ],
+          "additional_information": {
+            "laterality_note": "both eyes"
+          },
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf p.34 — MN012A: Tier3=550 Tier2=625 Tier1=625. Non-zero tier rates confirm one_time, not per_day.",
+            "billing_unit": "HBP-2022.pdf — non-zero tier rates confirm one_time (extractor default per_day for MN specialty was wrong for this procedure)",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    },
+    {
+      "package_code": "MN013",
+      "package_name": "BERA",
+      "procedures": [
+        {
+          "procedure_code": "MN013A",
+          "procedure_name": "BERA",
+          "billing_unit": "one_time",
+          "medical_or_surgical": "medical",
+          "quantity_basis": "none",
+          "rates_inr": {
+            "tier3": 1650,
+            "tier2": 1900,
+            "tier1": 2200
+          },
+          "implant": null,
+          "pricing": {
+            "base_rate_inr": 1650,
+            "bed_rates_inr": null,
+            "increment": null,
+            "quantity_cap": null,
+            "sequence": null
+          },
+          "procedure_label": "regular",
+          "is_addon_to": null,
+          "addon_type": null,
+          "addon_mapping_status": null,
+          "reserved_public_only": false,
+          "auto_approved": "none",
+          "enhancement_applicable": false,
+          "special_conditions_popup": false,
+          "special_conditions_rule": false,
+          "level_of_care": "tertiary",
+          "day_care": true,
+          "los_indicative": "daycare",
+          "stratification_required": true,
+          "num_stratifications": 1,
+          "stratification_criteria": [
+            {
+              "stratum_id": "A",
+              "description": "BERA Test",
+              "criterion": "BERA",
+              "source": "procedure_name"
+            }
+          ],
+          "stg_ref": "MN013A",
+          "mandatory_documents": {
+            "preauth": [
+              {
+                "key": "clinical_notes",
+                "label": "Cininical notes explaining indication for Bera, family history"
+              },
+              {
+                "key": "blood_reports",
+                "label": "Bilurubin test"
+              }
+            ],
+            "claim": [
+              {
+                "key": "bera_report",
+                "label": "Test report of BERA"
+              },
+              {
+                "key": "clinical_notes",
+                "label": "note on further Management"
+              }
+            ]
+          },
+          "aliases": [
+            "BERA test",
+            "Brainstem evoked response audiometry neonate",
+            "Hearing screening BERA",
+            "Auditory brainstem response ABR",
+            "Newborn hearing test"
+          ],
+          "additional_information": null,
+          "source_refs": {
+            "rates_inr": "HBP-2022.pdf p.34 — MN013A: Tier3=1650 Tier2=1900 Tier1=2200. Non-zero tier rates confirm one_time, not per_day.",
+            "billing_unit": "HBP-2022.pdf — non-zero tier rates confirm one_time (extractor default per_day for MN specialty was wrong for this procedure)",
+            "reserved_public_only": "HBP_2022_Package_Master1.xlsx col O",
+            "auto_approved": "col R (No) → none",
+            "procedure_label": "col U (Regular Procedure)",
+            "mandatory_documents.preauth": "HBP_2022_Package_Master1.xlsx col S",
+            "mandatory_documents.claim": "HBP_2022_Package_Master1.xlsx col T"
+          }
+        }
+      ]
+    }
+  ]
+}

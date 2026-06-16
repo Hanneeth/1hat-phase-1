@@ -1,0 +1,102 @@
+{
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-16",
+    "bed_category": "hdu",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Progressive breathlessness, chest heaviness, and right upper quadrant pain for 5 days",
+    "duration_days": 5,
+    "history_of_present_illness": "58-year-old male presenting with two concurrent conditions requiring management in the same admission. First: progressive breathlessness and chest heaviness for 5 days. Echo performed shows moderate pericardial effusion with early tamponade physiology (IVC plethora, respiratory variation in mitral inflow), requiring pericardiocentesis. Second: right upper quadrant pain with nausea for 3 days and two episodes of vomiting for 3 days, ultrasound confirming acute cholecystitis with cholelithiasis. Patient is haemodynamically compensated. Plan is pericardiocentesis to relieve tamponade, followed by laparoscopic cholecystectomy once haemodynamically stable, in the same admission. Both procedures to be pre-authorised together.",
+    "provisional_diagnosis": "Moderate pericardial effusion with early tamponade physiology; Acute cholecystitis with cholelithiasis",
+    "planned_procedure": "Pericardiocentesis (echo-guided) followed by laparoscopic cholecystectomy without CBD exploration",
+    "weight_kg": 68.0,
+    "height_cm": 165.0,
+    "vitals": {
+      "bp_systolic_mmhg": 102,
+      "bp_diastolic_mmhg": 68,
+      "pulse_bpm": 102,
+      "spo2_pct": 96,
+      "temperature_f": 99.8,
+      "rr_per_min": 22
+    },
+    "examination_findings": {
+      "general": "Conscious, oriented, mildly anxious. Mild tachycardia. JVP elevated. No cyanosis.",
+      "cvs": "Muffled heart sounds. BP 102/68 mmHg with pulsus paradoxus (12mmHg). JVP elevated. Heart rate 102 bpm.",
+      "rs": "Decreased air entry at bilateral lung bases. No crackles.",
+      "abdomen": "Tenderness in right hypochondrium. Murphy's sign positive. No organomegaly. Bowel sounds present.",
+      "cns": null,
+      "local": null
+    },
+    "investigations": [
+      {
+        "type": "echo",
+        "result_summary": "Moderate pericardial effusion (circumferential, largest dimension 18mm posteriorly). Early tamponade signs: right atrial collapse during systole, IVC plethora without respiratory variation. LV function preserved. EF 60%. No regional wall motion abnormality.",
+        "structured_values": [
+          {"parameter": "LVEF", "value": 60, "unit": "%", "flag": "N", "leads": null},
+          {"parameter": "Pericardial_Effusion", "value": 18, "unit": "mm", "flag": "H", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "usg",
+        "result_summary": "Multiple calculi in gallbladder (largest 11mm). Gallbladder wall thickening 5mm. Pericholecystic fluid. CBD 4mm, not dilated. Normal liver parenchyma.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "ecg",
+        "result_summary": "Sinus tachycardia at 102 bpm. Low voltage complexes in limb leads. Electrical alternans noted. No ST elevation or depression.",
+        "structured_values": [
+          {"parameter": "Heart_Rate", "value": 102, "unit": "bpm", "flag": "H", "leads": "I,II,III,aVF"},
+          {"parameter": "Low_Voltage", "value": "present", "unit": null, "flag": "H", "leads": "limb leads"}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "WBC 12,200 cells/mcL (mildly elevated). Haemoglobin 12.8 g/dL. CRP 48 mg/L (elevated). Troponin I 0.02 ng/mL (borderline). ANA negative. AFB culture sent. Bilirubin normal. LFT mildly elevated (AST 52, ALT 48).",
+        "structured_values": [
+          {"parameter": "WBC", "value": 12200, "unit": "cells/mcL", "flag": "H", "leads": null},
+          {"parameter": "Troponin_I", "value": 0.02, "unit": "ng/mL", "flag": "N", "leads": null},
+          {"parameter": "CRP", "value": 48, "unit": "mg/L", "flag": "H", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      }
+    ],
+    "comorbidities": ["Hypertension", "Hypothyroidism"],
+    "past_medical_history": "Hypertension on amlodipine for 7 years. Hypothyroidism on levothyroxine. No prior cardiac events. No TB history.",
+    "past_surgical_history": null,
+    "current_medications": ["Amlodipine 5mg OD", "Levothyroxine 50mcg OD"],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Ex-smoker (quit 10 years ago)",
+      "alcohol": "Non-alcoholic",
+      "diet": "Vegetarian"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes", "available": true},
+      {"key": "echo", "label": "2D Echocardiography Report", "available": true},
+      {"key": "ecg", "label": "12-Lead ECG", "available": true},
+      {"key": "usg_report", "label": "USG Abdomen Report", "available": true},
+      {"key": "blood_reports", "label": "Blood Investigation Reports (CBC, LFT, Troponin, CRP)", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Muthukumar A",
+      "registration_number": "TN-08842",
+      "qualification": "DM Cardiology",
+      "specialty_code": "MC"
+    },
+    "notes": "Cardiology team managing pericardial effusion. General surgery team consulted for cholecystitis. Joint pre-auth being filed for both procedures in the same admission."
+  }
+}

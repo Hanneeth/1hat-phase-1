@@ -1,0 +1,111 @@
+{
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-16",
+    "bed_category": "ward",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Bilateral leg swelling, breathlessness on exertion, and a right groin swelling for the past 3 weeks",
+    "duration_days": 21,
+    "history_of_present_illness": "54-year-old male with known ischaemic heart disease and congestive cardiac failure, presenting for elective surgery and concurrent cardiac management. First condition: right inguinal hernia noted for 4 months, symptomatic, reducible, now causing discomfort and impacting daily activities. Elective laparoscopic repair with mesh planned. Second condition: acute decompensation of congestive heart failure over the past 3 weeks, bilateral pitting pedal oedema up to mid-shin, orthopnoea, paroxysmal nocturnal dyspnoea, requiring in-patient medical management with diuretics and optimisation. Cardiologist and surgeon have planned to manage CHF medically in this admission and then proceed to hernia surgery once cardiac status is optimised. Pre-auth being filed for both: inguinal hernia laparoscopic repair and congestive heart failure in-patient medical management.",
+    "provisional_diagnosis": "Decompensated congestive heart failure (EF 35%); Right direct inguinal hernia",
+    "planned_procedure": "In-patient medical management of congestive cardiac failure followed by laparoscopic mesh repair of right inguinal hernia (TEP)",
+    "weight_kg": 74.0,
+    "height_cm": 166.0,
+    "vitals": {
+      "bp_systolic_mmhg": 118,
+      "bp_diastolic_mmhg": 76,
+      "pulse_bpm": 96,
+      "spo2_pct": 94,
+      "temperature_f": 98.4,
+      "rr_per_min": 20
+    },
+    "examination_findings": {
+      "general": "Conscious, oriented. Bilateral pitting pedal oedema (++). Mild dyspnoea at rest. JVP elevated at 6cm.",
+      "cvs": "S1S2 heard. S3 gallop present. JVP elevated. HR 96 bpm, irregular. BP 118/76.",
+      "rs": "Bilateral basal crackles present. Reduced air entry at bases bilaterally.",
+      "abdomen": "Soft, no organomegaly. Mild ascites. Right inguinal reducible swelling 4x3cm with positive cough impulse.",
+      "cns": null,
+      "local": "Right inguinal hernia: reducible, non-tender, cough impulse positive. Testis normally positioned bilaterally."
+    },
+    "investigations": [
+      {
+        "type": "echo",
+        "result_summary": "Dilated cardiomyopathy. LV globally hypokinetic. LVEF 35% (severely reduced). LV end-diastolic dimension 62mm. Mild mitral regurgitation. Pulmonary artery pressure 38mmHg (mildly elevated). No pericardial effusion.",
+        "structured_values": [
+          {"parameter": "LVEF", "value": 35, "unit": "%", "flag": "L", "leads": null},
+          {"parameter": "LVEDD", "value": 62, "unit": "mm", "flag": "H", "leads": null},
+          {"parameter": "PAP", "value": 38, "unit": "mmHg", "flag": "H", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-14"
+      },
+      {
+        "type": "ecg",
+        "result_summary": "Atrial fibrillation with ventricular rate 96 bpm. Left bundle branch block. No acute ST changes.",
+        "structured_values": [
+          {"parameter": "Heart_Rate", "value": 96, "unit": "bpm", "flag": "H", "leads": "II"},
+          {"parameter": "Rhythm", "value": "Atrial fibrillation", "unit": null, "flag": "H", "leads": "I,II,V1"}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "BNP 820 pg/mL (significantly elevated). Serum sodium 134 mEq/L (borderline low). Serum potassium 3.8 mEq/L. Creatinine 1.4 mg/dL (mildly elevated). Haemoglobin 11.8 g/dL. WBC 9,200 cells/mcL.",
+        "structured_values": [
+          {"parameter": "BNP", "value": 820, "unit": "pg/mL", "flag": "H", "leads": null},
+          {"parameter": "Creatinine", "value": 1.4, "unit": "mg/dL", "flag": "H", "leads": null},
+          {"parameter": "Sodium", "value": 134, "unit": "mEq/L", "flag": "L", "leads": null},
+          {"parameter": "Haemoglobin", "value": 11.8, "unit": "g/dL", "flag": "L", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "usg",
+        "result_summary": "Right inguinal hernia confirmed on dynamic USG with Valsalva. Mild ascites. Liver mildly enlarged. No gallstones.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2026-06-12"
+      }
+    ],
+    "comorbidities": ["Ischaemic Heart Disease", "Congestive Cardiac Failure", "Atrial Fibrillation", "Hypertension"],
+    "past_medical_history": "Known IHD since 2019, had a minor MI in 2020. Chronic heart failure, EF 35% at baseline. Atrial fibrillation on anticoagulation. Hypertension.",
+    "past_surgical_history": null,
+    "current_medications": [
+      "Furosemide 40mg OD",
+      "Spironolactone 25mg OD",
+      "Bisoprolol 2.5mg OD",
+      "Ramipril 5mg OD",
+      "Warfarin 5mg OD",
+      "Digoxin 0.125mg OD"
+    ],
+    "allergies": ["Aspirin (GI intolerance)"],
+    "personal_history": {
+      "smoking": "Ex-smoker (20 pack years, quit 2019)",
+      "alcohol": "Non-alcoholic",
+      "diet": "Mixed"
+    },
+    "family_history": "Father had MI at age 58.",
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes", "available": true},
+      {"key": "echo", "label": "2D Echocardiography Report", "available": true},
+      {"key": "ecg", "label": "12-Lead ECG", "available": true},
+      {"key": "blood_reports", "label": "Blood Investigation Reports (BNP, RFT, CBC, Electrolytes)", "available": true},
+      {"key": "usg_report", "label": "USG Abdomen and Dynamic Inguinal Scan", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Jayakumar S",
+      "registration_number": "TN-07763",
+      "qualification": "MS General Surgery",
+      "specialty_code": "SG"
+    },
+    "notes": "Dual pathology. Cardiac team managing CHF; surgery deferred until optimisation. Filing pre-auth for both CHF management and inguinal hernia repair in same admission. Warfarin to be bridged before surgery."
+  }
+}

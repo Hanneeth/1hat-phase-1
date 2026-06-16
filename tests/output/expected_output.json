@@ -1,0 +1,122 @@
+{
+    "TC01": {
+        "expect_selected_codes": [
+            "SG050B"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC02": {
+        "expect_selected_codes": [
+            "MC011A"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC03": {
+        "expect_selected_codes": [],
+        "expect_selected_count": 0
+    },
+    "TC04": {
+        "expect_selected_codes": [
+            "SG017A"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC05": {
+        "expect_selected_codes": [
+            "SG039C"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC06": {
+        "expect_selected_codes": [
+            "SE022A"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC07": {
+        "expect_selected_codes": [
+            "SG075B"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC08": {
+        "expect_selected_codes": [
+            "MN004A"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC09": {
+        "expect_selected_codes": [
+            "SV002F"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC10": {
+        "expect_selected_codes": [],
+        "expect_selected_count": 0
+    },
+    "TC11": {
+        "expect_selected_codes": [],
+        "expect_selected_count": 0
+    },
+    "TC12": {
+        "expect_selected_codes": [
+            "SV004A"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC13": {
+        "expect_selected_codes": [],
+        "expect_selected_count": 0
+    },
+    "TC14": {
+        "expect_selected_codes": [
+            "BM001B"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC15": {
+        "expect_selected_codes": [],
+        "expect_selected_count": 0
+    },
+    "TC16": {
+        "expect_selected_codes": [
+            "SG039C"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC17": {
+        "expect_selected_codes": [
+            "SG039C"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC18": {
+        "expect_selected_codes": [
+            "SG039C",
+            "SG050B"
+        ],
+        "expect_selected_count": 2
+    },
+    "TC19": {
+        "expect_selected_codes": [
+            "SG039A",
+            "MC019A"
+        ],
+        "expect_selected_count": 2
+    },
+    "TC20": {
+        "expect_selected_codes": [
+            "SG050B"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC21": {
+        "expect_selected_codes": [
+            "SG039C",
+            "SG051C",
+            "MC019A"
+        ],
+        "expect_selected_count": 3
+    }
+}

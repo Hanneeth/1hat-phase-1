@@ -1,0 +1,80 @@
+{
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-16",
+    "bed_category": "ward",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Right upper quadrant pain and a right groin swelling that increases on straining, both worsening over past 2 months",
+    "duration_days": 10,
+    "history_of_present_illness": "52-year-old male with two concurrent surgical problems. First, symptomatic cholelithiasis with recurrent biliary colic for the past 3 months, confirmed on ultrasound. Second, a right inguinal hernia noted for the past 6 months, reducible, no prior episodes of obstruction or strangulation. Patient and surgeon have agreed to perform combined laparoscopic surgery: laparoscopic cholecystectomy and laparoscopic mesh repair of right inguinal hernia in the same operative sitting to reduce anaesthesia risk and hospital stay.",
+    "provisional_diagnosis": "Symptomatic cholelithiasis with right direct inguinal hernia",
+    "planned_procedure": "Combined laparoscopic cholecystectomy (without CBD exploration) and laparoscopic mesh repair of right inguinal hernia (TEP approach)",
+    "weight_kg": 78.5,
+    "height_cm": 172.0,
+    "vitals": {
+      "bp_systolic_mmhg": 132,
+      "bp_diastolic_mmhg": 84,
+      "pulse_bpm": 78,
+      "spo2_pct": 99,
+      "temperature_f": 98.6,
+      "rr_per_min": 16
+    },
+    "examination_findings": {
+      "general": "Conscious, well-oriented, no acute distress. No jaundice. No lymphadenopathy.",
+      "cvs": "S1S2 heard, no murmurs. BP 132/84 mmHg.",
+      "rs": "Normal vesicular breath sounds bilaterally.",
+      "abdomen": "Mild tenderness in right hypochondrium on deep palpation. Murphy's sign equivocal. A reducible swelling of approximately 3x2cm noted in the right inguinal region, with positive cough impulse. Hernia reduces easily on lying down. Bowel sounds normal.",
+      "cns": null,
+      "local": "Right inguinal region: reducible, non-tender swelling. Cough impulse positive. Testis normally positioned."
+    },
+    "investigations": [
+      {
+        "type": "usg",
+        "result_summary": "Multiple gallstones in gallbladder (largest 10mm). Gallbladder wall thickness 3.5mm. No pericholecystic fluid. CBD not dilated (3mm). Normal liver parenchyma. Right inguinal hernia confirmed on dynamic USG scan with Valsalva.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2026-06-12"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "WBC 8,400 cells/mcL (normal). Haemoglobin 14.1 g/dL. Total bilirubin 0.8 mg/dL. ALP 74 U/L. AST 28 U/L. ALT 32 U/L. INR 1.0. Serum amylase normal.",
+        "structured_values": [
+          {"parameter": "WBC", "value": 8400, "unit": "cells/mcL", "flag": "N", "leads": null},
+          {"parameter": "Haemoglobin", "value": 14.1, "unit": "g/dL", "flag": "N", "leads": null},
+          {"parameter": "Total_Bilirubin", "value": 0.8, "unit": "mg/dL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-13"
+      }
+    ],
+    "comorbidities": ["Hypertension"],
+    "past_medical_history": "Hypertension for 5 years, well controlled on amlodipine. No diabetes. No cardiac illness.",
+    "past_surgical_history": null,
+    "current_medications": ["Amlodipine 5mg OD"],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Non-smoker",
+      "alcohol": "Non-alcoholic",
+      "diet": "Mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes", "available": true},
+      {"key": "usg_report", "label": "USG Abdomen and Dynamic Inguinal Scan", "available": true},
+      {"key": "blood_reports", "label": "Blood Investigation Reports (LFT, CBC)", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Prabhakaran V",
+      "registration_number": "TN-11023",
+      "qualification": "MS General Surgery, FIAGES",
+      "specialty_code": "SG"
+    },
+    "notes": "Combined laparoscopic approach planned to minimise hospital stay. Pre-anaesthetic fitness obtained. Antihypertensives continued. Polypropylene mesh to be used for hernia repair."
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-16",
+    "bed_category": "hdu",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Right upper quadrant pain, a midline abdominal bulge, and sudden onset breathlessness with chest discomfort for 4 days",
+    "duration_days": 4,
+    "history_of_present_illness": "56-year-old male with three concurrent conditions being managed in the same hospital admission, requiring pre-auth for all three procedures. First condition: Acute cholecystitis with symptomatic cholelithiasis confirmed on ultrasound, presenting with right upper quadrant pain, nausea, fever and two episodes of vomiting— planned for laparoscopic cholecystectomy (without CBD exploration). Second condition: Incisional hernia at a prior midline laparotomy scar (open appendicectomy 8 years ago), symptomatic with abdominal bulge and discomfort — planned for mesh repair of incisional hernia (open or laparoscopic). Third condition: Pericardial effusion of moderate size identified on chest X-ray and confirmed on echocardiography, with early haemodynamic compromise — planned for pericardiocentesis (echo-guided). All three procedures will be performed under the same admission. Cholecystectomy and hernia repair to be done in the same anaesthetic sitting; pericardiocentesis to be performed first by cardiology.",
+    "provisional_diagnosis": "Acute cholecystitis with cholelithiasis; Symptomatic incisional hernia at midline scar; Moderate pericardial effusion with haemodynamic compromise",
+    "planned_procedure": "Echo-guided pericardiocentesis; Laparoscopic cholecystectomy without CBD exploration; Open mesh repair of incisional hernia at midline scar",
+    "weight_kg": 75.0,
+    "height_cm": 169.0,
+    "vitals": {
+      "bp_systolic_mmhg": 106,
+      "bp_diastolic_mmhg": 70,
+      "pulse_bpm": 108,
+      "spo2_pct": 95,
+      "temperature_f": 100.6,
+      "rr_per_min": 22
+    },
+    "examination_findings": {
+      "general": "Conscious, oriented. Mildly tachycardic and tachypnoeic. JVP elevated. No jaundice.",
+      "cvs": "Muffled heart sounds. Pulsus paradoxus 14mmHg. JVP raised. HR 108 bpm, regular.",
+      "rs": "Decreased air entry at bilateral lung bases. No wheeze.",
+      "abdomen": "Right hypochondrium tenderness with positive Murphy's sign. A midline incisional hernia approximately 5x4cm at umbilical region with positive cough impulse, reducible, non-tender. No signs of obstruction. Bowel sounds normal.",
+      "cns": null,
+      "local": "Midline scar from prior surgery. Incisional hernia 5x4cm, reducible, non-tender."
+    },
+    "investigations": [
+      {
+        "type": "echo",
+        "result_summary": "Moderate circumferential pericardial effusion (20mm posteriorly). Right atrial collapse in systole. IVC plethora. LV function preserved, EF 58%. No wall motion abnormality. Early tamponade physiology.",
+        "structured_values": [
+          {"parameter": "LVEF", "value": 58, "unit": "%", "flag": "N", "leads": null},
+          {"parameter": "Pericardial_Effusion", "value": 20, "unit": "mm", "flag": "H", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "usg",
+        "result_summary": "Multiple gallstones (largest 13mm). Gallbladder wall thickness 5.5mm. Pericholecystic fluid. CBD not dilated (3.5mm). Normal liver. Incisional hernia at umbilical level with small bowel loops in hernia sac, currently reducible.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "ct_report",
+        "result_summary": "CT abdomen confirms: (1) Acute cholecystitis with gallbladder wall thickening, pericholecystic fat stranding. (2) Midline incisional hernia at umbilical level, 5x4cm fascial defect, small bowel loops present in sac, no signs of strangulation or obstruction. CBD not dilated. No free air.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "ecg",
+        "result_summary": "Sinus tachycardia at 108 bpm. Electrical alternans. Low voltage QRS in limb leads. No ST changes.",
+        "structured_values": [
+          {"parameter": "Heart_Rate", "value": 108, "unit": "bpm", "flag": "H", "leads": "II"},
+          {"parameter": "Electrical_Alternans", "value": "present", "unit": null, "flag": "H", "leads": "I,II,III"}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "WBC 14,100 cells/mcL (elevated). Haemoglobin 12.9 g/dL. CRP 62 mg/L (elevated). Troponin I 0.015 ng/mL (borderline). Total bilirubin 1.2 mg/dL. ALP 98 U/L. INR 1.1. Creatinine 1.0 mg/dL.",
+        "structured_values": [
+          {"parameter": "WBC", "value": 14100, "unit": "cells/mcL", "flag": "H", "leads": null},
+          {"parameter": "CRP", "value": 62, "unit": "mg/L", "flag": "H", "leads": null},
+          {"parameter": "Troponin_I", "value": 0.015, "unit": "ng/mL", "flag": "N", "leads": null},
+          {"parameter": "Total_Bilirubin", "value": 1.2, "unit": "mg/dL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      }
+    ],
+    "comorbidities": ["Hypertension", "Type 2 Diabetes Mellitus"],
+    "past_medical_history": "Hypertension for 8 years on amlodipine. Type 2 DM for 6 years on metformin. No prior cardiac events.",
+    "past_surgical_history": "Open appendicectomy 8 years ago (midline laparotomy). Wound healed with subsequent incisional hernia development.",
+    "current_medications": [
+      "Amlodipine 5mg OD",
+      "Metformin 1000mg BD",
+      "Glimepiride 2mg OD"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Non-smoker",
+      "alcohol": "Occasional",
+      "diet": "Mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes", "available": true},
+      {"key": "echo", "label": "2D Echocardiography Report", "available": true},
+      {"key": "ecg", "label": "12-Lead ECG", "available": true},
+      {"key": "usg_report", "label": "USG Abdomen Report", "available": true},
+      {"key": "ct_report", "label": "CT Abdomen Report", "available": true},
+      {"key": "blood_reports", "label": "Blood Investigation Reports (CBC, LFT, CRP, Troponin)", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Arumugam K",
+      "registration_number": "TN-10554",
+      "qualification": "MS General Surgery, MCh GI Surgery",
+      "specialty_code": "SG"
+    },
+    "notes": "Three concurrent conditions in same admission. Cardiology managing pericardial effusion first. Surgical team to proceed with cholecystectomy + hernia repair in combined laparoscopic + open approach once cardiac status stabilised. Filing combined pre-auth for all three procedures."
+  }
+}

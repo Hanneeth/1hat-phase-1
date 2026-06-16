@@ -1,0 +1,81 @@
+{
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-16",
+    "bed_category": "ward",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Right upper quadrant pain radiating to right shoulder for 3 days, fever, nausea, vomiting after fatty meals",
+    "duration_days": 3,
+    "history_of_present_illness": "45-year-old male presenting with right upper quadrant colicky pain for 3 days, radiating to the right shoulder and scapula. Pain worsens after fatty meals. Associated with two episodes of vomiting and low-grade fever. Similar but milder episodes over past 6 months. No jaundice. No dark urine or clay-coloured stools. No change in bowel habits.",
+    "provisional_diagnosis": "Acute cholecystitis with cholelithiasis",
+    "planned_procedure": "Laparoscopic cholecystectomy without common bile duct exploration",
+    "weight_kg": 72.0,
+    "height_cm": 168.0,
+    "vitals": {
+      "bp_systolic_mmhg": 128,
+      "bp_diastolic_mmhg": 82,
+      "pulse_bpm": 92,
+      "spo2_pct": 98,
+      "temperature_f": 100.4,
+      "rr_per_min": 18
+    },
+    "examination_findings": {
+      "general": "Conscious, oriented, cooperative. Mild distress due to pain. No icterus. No lymphadenopathy.",
+      "cvs": "S1S2 heard, no murmurs. Heart rate 92 bpm, regular.",
+      "rs": "Clear air entry bilaterally. No adventitious sounds.",
+      "abdomen": "Tenderness and voluntary guarding in right hypochondrium. Murphy's sign positive. No palpable gallbladder. No hepatosplenomegaly. Bowel sounds present.",
+      "cns": null,
+      "local": null
+    },
+    "investigations": [
+      {
+        "type": "usg",
+        "result_summary": "Multiple calculi seen in gallbladder (largest 14mm). Gallbladder wall thickening to 5.5mm with pericholecystic fluid. Common bile duct not dilated (4mm). No intrahepatic biliary radicle dilatation. Normal liver parenchyma.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "WBC 13,800 cells/mcL (elevated). Haemoglobin 13.2 g/dL. Total bilirubin 1.1 mg/dL (normal). Direct bilirubin 0.4 mg/dL (normal). ALP 92 U/L. AST 44 U/L. ALT 38 U/L. Serum amylase 68 U/L (normal). INR 1.0.",
+        "structured_values": [
+          {"parameter": "WBC", "value": 13800, "unit": "cells/mcL", "flag": "H", "leads": null},
+          {"parameter": "Total_Bilirubin", "value": 1.1, "unit": "mg/dL", "flag": "N", "leads": null},
+          {"parameter": "ALP", "value": 92, "unit": "U/L", "flag": "N", "leads": null},
+          {"parameter": "Haemoglobin", "value": 13.2, "unit": "g/dL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      }
+    ],
+    "comorbidities": ["Type 2 Diabetes Mellitus"],
+    "past_medical_history": "Type 2 Diabetes Mellitus, diagnosed 4 years ago, on oral hypoglycaemics. Well controlled. No cardiac history.",
+    "past_surgical_history": null,
+    "current_medications": ["Metformin 500mg BD", "Glimepiride 1mg OD"],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Non-smoker",
+      "alcohol": "Occasional",
+      "diet": "Mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes", "available": true},
+      {"key": "usg_report", "label": "USG Abdomen Report", "available": true},
+      {"key": "blood_reports", "label": "Blood Investigation Reports (LFT, CBC, Amylase)", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Senthilkumar R",
+      "registration_number": "TN-09871",
+      "qualification": "MS General Surgery",
+      "specialty_code": "SG"
+    },
+    "notes": "Patient fit for laparoscopic surgery. Pre-anaesthetic check-up done. Diabetes optimised pre-operatively."
+  }
+}
