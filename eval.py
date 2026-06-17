@@ -24,6 +24,30 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8")
 
+# Global cache for procedure names
+_procedure_name_cache = {}
+
+def lookup_procedure_name(code: str, project_root: str) -> str:
+    """
+    Builds path: os.path.join(project_root, "data", "stg", f"{code}.json")
+    Opens and parses JSON, returning value of top-level key "procedure_name".
+    On any exception (FileNotFoundError, KeyError, JSONDecodeError etc):
+    returns "(name unavailable)".
+    """
+    if code in _procedure_name_cache:
+        return _procedure_name_cache[code]
+        
+    try:
+        path = os.path.join(project_root, "data", "stg", f"{code}.json")
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        name = data.get("procedure_name", "(name unavailable)")
+        _procedure_name_cache[code] = name
+        return name
+    except Exception:
+        _procedure_name_cache[code] = "(name unavailable)"
+        return "(name unavailable)"
+
 def get_stderr_detail(stderr_content: str, fallback: str) -> str:
     """Extracts the last 3 non-empty lines of stderr joined by ' | '."""
     if not stderr_content:
@@ -119,10 +143,14 @@ def main():
             results.append({
                 "tc_id": tc_id,
                 "result": "SKIP",
-                "detail": "not in expected_output.json"
+                "detail": "not in expected_output.json",
+                "expected_codes": [],
+                "actual_packages": []
             })
             skipped += 1
             continue
+
+        expect_selected_codes = expected_info.get("expect_selected_codes", [])
 
         # Print separator line before starting each TC's subprocess
         separator = f"── Running {tc_id} "
@@ -146,7 +174,9 @@ def main():
             results.append({
                 "tc_id": tc_id,
                 "result": "ERROR",
-                "detail": f"failed to spawn subprocess: {e}"
+                "detail": f"failed to spawn subprocess: {e}",
+                "expected_codes": expect_selected_codes,
+                "actual_packages": []
             })
             errors += 1
             continue
@@ -203,7 +233,9 @@ def main():
             results.append({
                 "tc_id": tc_id,
                 "result": "ERROR",
-                "detail": "timed out after 120s"
+                "detail": "timed out after 120s",
+                "expected_codes": expect_selected_codes,
+                "actual_packages": []
             })
             errors += 1
             continue
@@ -214,7 +246,9 @@ def main():
             results.append({
                 "tc_id": tc_id,
                 "result": "ERROR",
-                "detail": err_detail
+                "detail": err_detail,
+                "expected_codes": expect_selected_codes,
+                "actual_packages": []
             })
             errors += 1
             continue
@@ -228,7 +262,9 @@ def main():
             results.append({
                 "tc_id": tc_id,
                 "result": "ERROR",
-                "detail": err_detail
+                "detail": err_detail,
+                "expected_codes": expect_selected_codes,
+                "actual_packages": []
             })
             errors += 1
             continue
@@ -236,21 +272,26 @@ def main():
         # Extract actual codes
         try:
             selected_packages = output_json.get("selected_packages", [])
-            actual_codes = [
-                item["validated"]["procedure_code"]
-                for item in selected_packages
-            ]
+            actual_packages = []
+            for item in selected_packages:
+                code = item["validated"]["procedure_code"]
+                pkg_name = item["validated"].get("package_name") or "(name unavailable)"
+                proc_name = item["validated"].get("procedure_name") or "(name unavailable)"
+                name = f"{pkg_name} — {proc_name}"
+                actual_packages.append({"code": code, "name": name})
+            actual_codes = [pkg["code"] for pkg in actual_packages]
         except Exception as e:
             results.append({
                 "tc_id": tc_id,
                 "result": "ERROR",
-                "detail": f"output JSON structure invalid: {e}"
+                "detail": f"output JSON structure invalid: {e}",
+                "expected_codes": expect_selected_codes,
+                "actual_packages": []
             })
             errors += 1
             continue
 
         # Classification Logic
-        expect_selected_codes = expected_info.get("expect_selected_codes", [])
         expected_set = set(expect_selected_codes)
         actual_set = set(actual_codes)
         
@@ -289,7 +330,9 @@ def main():
         results.append({
             "tc_id": tc_id,
             "result": result_type,
-            "detail": detail
+            "detail": detail,
+            "expected_codes": expect_selected_codes,
+            "actual_packages": actual_packages
         })
 
     # Build Output Table Sorted Alphanumerically
@@ -300,7 +343,14 @@ def main():
     table_lines.append("  │ TC       │ Result           │ Detail                                   │")
     table_lines.append("  ├──────────┼──────────────────┼──────────────────────────────────────────┤")
     
-    for r in sorted_results:
+    file_content = []
+    file_content.append(start_time_dt.strftime("Eval run: %d-%m-%Y %H:%M"))
+    file_content.append("")
+    file_content.append("  ┌──────────┬──────────────────┬──────────────────────────────────────────┐")
+    file_content.append("  │ TC       │ Result           │ Detail                                   │")
+    file_content.append("  ├──────────┼──────────────────┼──────────────────────────────────────────┤")
+
+    for i, r in enumerate(sorted_results):
         tc = r["tc_id"]
         result = r["result"]
         detail = r["detail"]
@@ -309,11 +359,50 @@ def main():
         if not lines:
             lines = [""]
             
-        table_lines.append(f"  │ {tc:<8} │ {result:<16} │ {lines[0]:<40} │")
+        # Terminal row format
+        table_row_first = f"  │ {tc:<8} │ {result:<16} │ {lines[0]:<40} │"
+        table_lines.append(table_row_first)
         for line in lines[1:]:
             table_lines.append(f"  │ {'':<8} │ {'':<16} │ {line:<40} │")
             
+        # File row format
+        file_content.append(table_row_first)
+        for line in lines[1:]:
+            file_content.append(f"  │ {'':<8} │ {'':<16} │ {line:<40} │")
+            
+        # Detail block (only in file_content)
+        expected_codes = r.get("expected_codes", [])
+        if not expected_codes:
+            file_content.append("    Expected : (none expected)")
+        else:
+            first_code = expected_codes[0]
+            first_name = lookup_procedure_name(first_code, str(project_root))
+            file_content.append(f"    Expected : {first_code} — {first_name}")
+            for code in expected_codes[1:]:
+                name = lookup_procedure_name(code, str(project_root))
+                file_content.append(f"             : {code} — {name}")
+                
+        if result == "ERROR":
+            file_content.append("    Chosen   : (pipeline did not complete)")
+        elif result == "SKIP":
+            file_content.append("    Chosen   : (not evaluated)")
+        else:
+            actual_packages = r.get("actual_packages", [])
+            if not actual_packages:
+                file_content.append("    Chosen   : (none selected)")
+            else:
+                first_pkg = actual_packages[0]
+                file_content.append(f"    Chosen   : {first_pkg['code']} — {first_pkg['name']}")
+                for pkg in actual_packages[1:]:
+                    file_content.append(f"             : {pkg['code']} — {pkg['name']}")
+                    
+        # Blank line after detail block in file_content if not the last TC row
+        if i < len(sorted_results) - 1:
+            file_content.append("")
+            
+    # Table footers
     table_lines.append("  └──────────┴──────────────────┴──────────────────────────────────────────┘")
+    file_content.append("  └──────────┴──────────────────┴──────────────────────────────────────────┘")
 
     summary_lines = []
     summary_lines.append(f"  TOTAL: {fully_correct} fully correct, {partially_correct} partially correct, {incorrect} incorrect, {skipped} skipped, ")
@@ -334,10 +423,6 @@ def main():
     filename = start_time_dt.strftime("eval_%d_%m_%H_%M.txt")
     output_dir = project_root / "tests" / "output"
     
-    file_content = []
-    file_content.append(start_time_dt.strftime("Eval run: %d-%m-%Y %H:%M"))
-    file_content.append("")
-    file_content.extend(table_lines)
     file_content.append("")
     file_content.extend(summary_lines)
     file_content.append("")

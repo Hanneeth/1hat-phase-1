@@ -1,0 +1,36 @@
+Eval run: 16-06-2026 16:49
+
+  ┌──────────┬──────────────────┬──────────────────────────────────────────┐
+  │ TC       │ Result           │ Detail                                   │
+  ├──────────┼──────────────────┼──────────────────────────────────────────┤
+  │ TC01     │ FULLY CORRECT    │ 1/1 packages matched                     │
+  │ TC02     │ INCORRECT        │ wrong packages — missing: MC011A         │
+  │ TC03     │ FULLY CORRECT    │ 0/0 packages matched                     │
+  │ TC04     │ FULLY CORRECT    │ 1/1 packages matched                     │
+  │ TC05     │ FULLY CORRECT    │ 1/1 packages matched                     │
+  │ TC06     │ INCORRECT        │ wrong packages — missing: SE022A         │
+  │ TC07     │ FULLY CORRECT    │ 1/1 packages matched                     │
+  │ TC08     │ INCORRECT        │ wrong packages — missing: MN004A         │
+  │ TC09     │ ERROR            │ timed out after 120s                     │
+  │ TC10     │ FULLY CORRECT    │ 0/0 packages matched                     │
+  │ TC11     │ FULLY CORRECT    │ 0/0 packages matched                     │
+  │ TC12     │ INCORRECT        │ wrong packages — missing: SV004A         │
+  │ TC13     │ PARTIALLY CORRECT │ all expected present; unexpected extra:  │
+  │          │                  │ SL028A                                   │
+  │ TC14     │ INCORRECT        │ wrong packages — missing: BM001B |       │
+  │          │                  │ unexpected: BM003B                       │
+  │ TC15     │ FULLY CORRECT    │ 0/0 packages matched                     │
+  │ TC16     │ PARTIALLY CORRECT │ all expected present; unexpected extra:  │
+  │          │                  │ SG051C                                   │
+  │ TC17     │ FULLY CORRECT    │ 1/1 packages matched                     │
+  │ TC18     │ FULLY CORRECT    │ 2/2 packages matched                     │
+  │ TC19     │ INCORRECT        │ wrong packages — missing: SG039A |       │
+  │          │                  │ unexpected: SG039C                       │
+  │ TC20     │ FULLY CORRECT    │ 1/1 packages matched                     │
+  │ TC21     │ FULLY CORRECT    │ 3/3 packages matched                     │
+  └──────────┴──────────────────┴──────────────────────────────────────────┘
+
+  TOTAL: 12 fully correct, 2 partially correct, 6 incorrect, 0 skipped, 
+         1 errors
+
+  ISSUES DETECTED
