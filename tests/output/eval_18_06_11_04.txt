@@ -1,0 +1,106 @@
+Eval run: 18-06-2026 11:04
+
+  ┌──────────┬──────────────────┬──────────────────────────────────────────┐
+  │ TC       │ Result           │ Detail                                   │
+  ├──────────┼──────────────────┼──────────────────────────────────────────┤
+  │ TC01     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SG050B — Inguinal Hernia Lap
+    Chosen   : SG050B — Groin Hernia Repair — Inguinal - Lap.
+
+  │ TC02     │ INCORRECT        │ wrong packages — missing: MC011A         │
+    Expected : MC011A — PTCA, inclusive of diagnostic angiogram
+    Chosen   : (none selected)
+
+  │ TC03     │ FULLY CORRECT    │ 0/0 packages matched                     │
+    Expected : (none expected)
+    Chosen   : (none selected)
+
+  │ TC04     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SG017A — (name unavailable)
+    Chosen   : SG017A — Appendicectomy — Open
+
+  │ TC05     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SG039C — Cholecystectomy - Without Exploration of CBD - Lap.
+    Chosen   : SG039C — Cholecystectomy — Without Exploration of CBD - Lap
+
+  │ TC06     │ INCORRECT        │ wrong packages — missing: SE022A         │
+    Expected : SE022A — Capsulotomy (YAG)
+    Chosen   : (none selected)
+
+  │ TC07     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SG075B — (name unavailable)
+    Chosen   : SG075B — Mastectomy — Radical / Modified Radical Mastectomy
+
+  │ TC08     │ INCORRECT        │ wrong packages — missing: MN004A         │
+    Expected : MN004A — (name unavailable)
+    Chosen   : (none selected)
+
+  │ TC09     │ ERROR            │ timed out after 120s                     │
+    Expected : SV002F — Surgical Correction of Category - II Congenital Heart Disease - VSD Closure
+    Chosen   : (pipeline did not complete)
+
+  │ TC10     │ FULLY CORRECT    │ 0/0 packages matched                     │
+    Expected : (none expected)
+    Chosen   : (none selected)
+
+  │ TC11     │ FULLY CORRECT    │ 0/0 packages matched                     │
+    Expected : (none expected)
+    Chosen   : (none selected)
+
+  │ TC12     │ INCORRECT        │ wrong packages — missing: SV004A         │
+    Expected : SV004A — Coronary artery bypass grafting (CABG)
+    Chosen   : (none selected)
+
+  │ TC13     │ PARTIALLY CORRECT │ all expected present; unexpected extra:  │
+  │          │                  │ SL028A                                   │
+    Expected : (none expected)
+    Chosen   : SL028A — Deep neck abscess drainage/ Post trauma neck exploration — Deep neck abscess drainage
+
+  │ TC14     │ INCORRECT        │ wrong packages — missing: BM001B |       │
+  │          │                  │ unexpected: BM003B                       │
+    Expected : BM001B — % Total Body Surface Area Burns (TBSA): Upto 40%; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone
+    Chosen   : BM003B — Flame burns — % Total Body Surface Area Burns (TBSA): Upto 40 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.
+
+  │ TC15     │ FULLY CORRECT    │ 0/0 packages matched                     │
+    Expected : (none expected)
+    Chosen   : (none selected)
+
+  │ TC16     │ PARTIALLY CORRECT │ all expected present; unexpected extra:  │
+  │          │                  │ SG051C                                   │
+    Expected : SG039C — Cholecystectomy - Without Exploration of CBD - Lap.
+    Chosen   : SG039C — Cholecystectomy — Without Exploration of CBD - Lap
+             : SG051C — Hernia - Ventral — Paraumbilical
+
+  │ TC17     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SG039C — Cholecystectomy - Without Exploration of CBD - Lap.
+    Chosen   : SG039C — Cholecystectomy — Without Exploration of CBD - Lap
+
+  │ TC18     │ FULLY CORRECT    │ 2/2 packages matched                     │
+    Expected : SG039C — Cholecystectomy - Without Exploration of CBD - Lap.
+             : SG050B — Inguinal Hernia Lap
+    Chosen   : SG039C — Cholecystectomy — Without Exploration of CBD - Lap
+             : SG050B — Groin Hernia Repair — Inguinal - Lap.
+
+  │ TC19     │ FULLY CORRECT    │ 2/2 packages matched                     │
+    Expected : SG039A — Cholecystectomy - Without Exploration of CBD - Open
+             : MC019A — Pericardiocentesis
+    Chosen   : SG039A — Cholecystectomy — Without Exploration of CBD - Open
+             : MC019A — Pericardiocentesis — Pericardiocentesis
+
+  │ TC20     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SG050B — Inguinal Hernia Lap
+    Chosen   : SG050B — Groin Hernia Repair — Inguinal - Lap.
+
+  │ TC21     │ FULLY CORRECT    │ 3/3 packages matched                     │
+    Expected : SG039C — Cholecystectomy - Without Exploration of CBD - Lap.
+             : SG051C — (name unavailable)
+             : MC019A — Pericardiocentesis
+    Chosen   : SG039C — Cholecystectomy — Without Exploration of CBD - Lap
+             : SG051C — Hernia - Ventral — Paraumbilical
+             : MC019A — Pericardiocentesis — Pericardiocentesis
+  └──────────┴──────────────────┴──────────────────────────────────────────┘
+
+  TOTAL: 13 fully correct, 2 partially correct, 5 incorrect, 0 skipped, 
+         1 errors
+
+  ISSUES DETECTED
