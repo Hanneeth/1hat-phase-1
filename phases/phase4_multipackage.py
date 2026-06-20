@@ -5,7 +5,7 @@ Multi-package combination rule resolution.
 
 Reads  : session.validated_packages
 Writes : session.final_package_set
-Flags  : SURGICAL_PERDAY_BLOCKED, PERDAY_MULTIPLE_BLOCKED, STANDALONE_SPLIT,
+Flags  : CONFLICT_RESOLVED, SURGICAL_PERDAY_BLOCKED, PERDAY_MULTIPLE_BLOCKED, STANDALONE_SPLIT,
          ADDON_PARENT_UNKNOWN, ADDON_PARENT_MISSING, DIAGNOSTIC_ADDON_BLOCKED,
          DEDUCTION_APPROXIMATE
 
@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import logging
 
+from llm.conflict_resolver import resolve_conflicts
 from models import FinalPackage, ValidatedPackage
 from session import IRISSession
 
@@ -43,6 +44,8 @@ def run_phase4(session: IRISSession) -> IRISSession:
     If session.validated_packages is empty → return session immediately (usp path).
 
     Steps:
+    0. Conflict resolution — detect mutually exclusive or sub-included 
+       packages and remove before billing rules (only when >1 package).
     1. Classify into buckets by billing_type.
     2. Apply combination rules — drop incompatible packages, emit flags.
     3. Isolate standalone packages into pre_auth_group=2.
@@ -65,6 +68,50 @@ def run_phase4(session: IRISSession) -> IRISSession:
     if not session.validated_packages:
         logger.info("Phase 4 — no validated packages; USP path — returning immediately.")
         return session
+
+    # Step 0: Conflict resolution — detect and remove mutually exclusive or
+    # sub-included packages before PM-JAY billing rules are applied.
+    # Only runs when more than one package survived Phase 3.
+    # Fail-open: on LLM failure, original list is returned unchanged.
+    if len(session.validated_packages) > 1:
+        clinical_dict = {
+            "provisional_diagnosis": (
+                session.clinical.provisional_diagnosis or ""
+                if session.clinical else ""
+            ),
+            "planned_procedure": (
+                session.clinical.planned_procedure or ""
+                if session.clinical else ""
+            ),
+            "chief_complaints": (
+                session.clinical.chief_complaints or ""
+                if session.clinical else ""
+            ),
+        }
+        pre_conflict_count = len(session.validated_packages)
+        session.validated_packages = resolve_conflicts(
+            session.validated_packages,
+            clinical_dict,
+        )
+        post_conflict_count = len(session.validated_packages)
+        if post_conflict_count < pre_conflict_count:
+            dropped = pre_conflict_count - post_conflict_count
+            session.add_flag(
+                "CONFLICT_RESOLVED",
+                (
+                    f"{dropped} package(s) removed by conflict resolver "
+                    f"before billing rules — mutual exclusivity or "
+                    f"sub-inclusion detected."
+                ),
+                "info",
+            )
+            logger.info(
+                "Phase 4 — conflict resolver dropped %d package(s): "
+                "%d → %d",
+                dropped,
+                pre_conflict_count,
+                post_conflict_count,
+            )
 
     # Step 1: classify
     buckets = _classify_buckets(session.validated_packages)

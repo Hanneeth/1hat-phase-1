@@ -1,0 +1,125 @@
+Eval run: 18-06-2026 17:40
+
+  ┌──────────┬──────────────────┬──────────────────────────────────────────┐
+  │ TC       │ Result           │ Detail                                   │
+  ├──────────┼──────────────────┼──────────────────────────────────────────┤
+  │ TC01     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SG050B — Inguinal Hernia Lap
+    Chosen   : SG050B — Groin Hernia Repair — Inguinal - Lap.
+
+  │ TC02     │ INCORRECT        │ wrong packages — missing: MC011A         │
+    Expected : MC011A — PTCA, inclusive of diagnostic angiogram
+    Chosen   : (none selected)
+
+  │ TC03     │ FULLY CORRECT    │ 0/0 packages matched                     │
+    Expected : (none expected)
+    Chosen   : (none selected)
+
+  │ TC04     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SG017A — (name unavailable)
+    Chosen   : SG017A — Appendicectomy — Open
+
+  │ TC05     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SG039C — Cholecystectomy - Without Exploration of CBD - Lap.
+    Chosen   : SG039C — Cholecystectomy — Without Exploration of CBD - Lap
+
+  │ TC06     │ INCORRECT        │ wrong packages — missing: SE022A         │
+    Expected : SE022A — Capsulotomy (YAG)
+    Chosen   : (none selected)
+
+  │ TC07     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SG075B — (name unavailable)
+    Chosen   : SG075B — Mastectomy — Radical / Modified Radical Mastectomy
+
+  │ TC08     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : MN004A — (name unavailable)
+    Chosen   : MN004A — Advanced Neonatal Care Package:
+Babies with birthweight of 1200-1499 g                                                                                                                                                    
+                                  or 
+Babies of any birthweight with at least one of the following conditions: 
+• Any condition requiring invasive ventilation longer than 24 hours                                                                                                                                                                                                                                                                                                                                                                                                                                      
+• Hypoxic Ischemic encephalopathy requiring Therapeutic Hypothermia                                                                                                                                              
+• Cardiac rhythm disorders needing intervention (the cost of cardiac surgery or implant will be covered under cardiac surgery packages)                                                                                                                                                                        
+• Sepsis with complications such as meningitis or bone and joint infection, DIC or shock
+• Renal failure requiring dialysis                                                                                                                                                                                                                          
+• Inborn errors of metabolism   
+Mother's stay and food in the hospital for breastfeeding, family centred care and (Kangaroo Mother Care) KMC is mandatory and included in the package rate — Neonates  between 1200-1499 g  OR 
+Neonates of any weight with at least one of the following conditions: 
+ • Any condition requiring invasive ventilation longer than 24 hours 
+ • Moderate to Severe Hypoxic Ischemic encephalopathy 
+ • Cardiac rhythm disorders needing intervention (the cost of cardiac surgery or implant will be covered under cardiac surgery packages) 
+ • Sepsis with complications such as meningitis or bone and joint infection, DIC or shock
+ • Renal failure requiring dialysis 
+ • Inborn errors of metabolism 
+ The above list is illustrative but not limited to these conditions.                                                                                                                                                                     The package includes mandatory stay and food of the mother in the hospital for breastfeeding, Kangaroo Mother Care (KMC) and Family centered care
+
+  │ TC09     │ ERROR            │ timed out after 120s                     │
+    Expected : SV002F — Surgical Correction of Category - II Congenital Heart Disease - VSD Closure
+    Chosen   : (pipeline did not complete)
+
+  │ TC10     │ FULLY CORRECT    │ 0/0 packages matched                     │
+    Expected : (none expected)
+    Chosen   : (none selected)
+
+  │ TC11     │ FULLY CORRECT    │ 0/0 packages matched                     │
+    Expected : (none expected)
+    Chosen   : (none selected)
+
+  │ TC12     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SV004A — Coronary artery bypass grafting (CABG)
+    Chosen   : SV004A — Coronary artery bypass grafting (CABG), 
+including intra operative balloon pump (if required) — Coronary artery bypass grafting (CABG), with or without  intraoperative IABP)
+
+  │ TC13     │ PARTIALLY CORRECT │ all expected present; unexpected extra:  │
+  │          │                  │ SL028A                                   │
+    Expected : (none expected)
+    Chosen   : SL028A — Deep neck abscess drainage/ Post trauma neck exploration — Deep neck abscess drainage
+
+  │ TC14     │ INCORRECT        │ wrong packages — missing: BM001B |       │
+  │          │                  │ unexpected: BM003B                       │
+    Expected : BM001B — % Total Body Surface Area Burns (TBSA): Upto 40%; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone
+    Chosen   : BM003B — Flame burns — % Total Body Surface Area Burns (TBSA): Upto 40 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.
+
+  │ TC15     │ FULLY CORRECT    │ 0/0 packages matched                     │
+    Expected : (none expected)
+    Chosen   : (none selected)
+
+  │ TC16     │ PARTIALLY CORRECT │ all expected present; unexpected extra:  │
+  │          │                  │ SG051C                                   │
+    Expected : SG039C — Cholecystectomy - Without Exploration of CBD - Lap.
+    Chosen   : SG039C — Cholecystectomy — Without Exploration of CBD - Lap
+             : SG051C — Hernia - Ventral — Paraumbilical
+
+  │ TC17     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SG039C — Cholecystectomy - Without Exploration of CBD - Lap.
+    Chosen   : SG039C — Cholecystectomy — Without Exploration of CBD - Lap
+
+  │ TC18     │ FULLY CORRECT    │ 2/2 packages matched                     │
+    Expected : SG039C — Cholecystectomy - Without Exploration of CBD - Lap.
+             : SG050B — Inguinal Hernia Lap
+    Chosen   : SG039C — Cholecystectomy — Without Exploration of CBD - Lap
+             : SG050B — Groin Hernia Repair — Inguinal - Lap.
+
+  │ TC19     │ INCORRECT        │ wrong packages — missing: SG039A |       │
+  │          │                  │ unexpected: SG039C                       │
+    Expected : SG039A — Cholecystectomy - Without Exploration of CBD - Open
+             : MC019A — Pericardiocentesis
+    Chosen   : SG039C — Cholecystectomy — Without Exploration of CBD - Lap
+             : MC019A — Pericardiocentesis — Pericardiocentesis
+
+  │ TC20     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SG050B — Inguinal Hernia Lap
+    Chosen   : SG050B — Groin Hernia Repair — Inguinal - Lap.
+
+  │ TC21     │ PARTIALLY CORRECT │ missing: SG051C                          │
+    Expected : SG039C — Cholecystectomy - Without Exploration of CBD - Lap.
+             : SG051C — (name unavailable)
+             : MC019A — Pericardiocentesis
+    Chosen   : SG039C — Cholecystectomy — Without Exploration of CBD - Lap
+             : MC019A — Pericardiocentesis — Pericardiocentesis
+  └──────────┴──────────────────┴──────────────────────────────────────────┘
+
+  TOTAL: 13 fully correct, 3 partially correct, 4 incorrect, 0 skipped, 
+         1 errors
+
+  ISSUES DETECTED

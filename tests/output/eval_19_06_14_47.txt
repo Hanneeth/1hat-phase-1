@@ -1,0 +1,14 @@
+Eval run: 19-06-2026 14:47
+
+  ┌──────────┬──────────────────┬──────────────────────────────────────────┐
+  │ TC       │ Result           │ Detail                                   │
+  ├──────────┼──────────────────┼──────────────────────────────────────────┤
+  │ TC09     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : SV002F — Surgical Correction of Category - II Congenital Heart Disease - VSD Closure
+    Chosen   : SV002F — Surgical Correction of Category - II Congenital Heart Disease — VSD closure
+  └──────────┴──────────────────┴──────────────────────────────────────────┘
+
+  TOTAL: 1 fully correct, 0 partially correct, 0 incorrect, 0 skipped, 
+         0 errors
+
+  ALL PASS

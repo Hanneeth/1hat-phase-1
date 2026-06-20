@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 import streamlit as st
 import json
 import logging
@@ -8,6 +9,7 @@ from pathlib import Path
 
 from main import build_session, run_pipeline
 from phases.phase10_output import serialize_output
+from llm.nearest_match import get_nearest_match
 
 # 1. Page Configuration
 st.set_page_config(page_title="IRIS Debug Console", layout="wide")
@@ -21,6 +23,8 @@ if "run_error" not in st.session_state:
     st.session_state.run_error = None
 if "num_investigations" not in st.session_state:
     st.session_state.num_investigations = 1
+if "nearest_match" not in st.session_state:
+    st.session_state.nearest_match = None
 
 # 3. Log Capture Mechanism
 def run_with_log_capture(raw_json: dict):
@@ -41,16 +45,23 @@ def run_with_log_capture(raw_json: dict):
         output = run_pipeline(session)
         output_dict = serialize_output(output)
         output_dict["estimated_total_inr"] = getattr(session, "estimated_total_inr", 0)
+        nearest_match = None
+        if not output_dict.get("selected_packages"):
+            nearest_match = get_nearest_match(
+                output_dict.get("blocked_candidates", []),
+                raw_json.get("clinical", {})
+            )
         error_msg = None
     except Exception as e:
         output_dict = None
         error_msg = str(e)
+        nearest_match = None
     finally:
         root_logger.removeHandler(handler)
         root_logger.setLevel(prev_level)
 
     logs = log_buffer.getvalue()
-    return output_dict, logs, error_msg
+    return output_dict, logs, error_msg, nearest_match
 
 # 4. Title and Header
 st.title("🏥 IRIS Debug Console")
@@ -403,10 +414,11 @@ if run_clicked:
             raw_json["created_at"] = datetime.datetime.now().isoformat()
 
         with st.spinner("Running IRIS pipeline... (LLM calls may take 10–30 seconds)"):
-            output_dict, logs, error_msg = run_with_log_capture(raw_json)
+            output_dict, logs, error_msg, nearest_match = run_with_log_capture(raw_json)
         st.session_state.output_dict = output_dict
         st.session_state.logs = logs
         st.session_state.run_error = error_msg
+        st.session_state.nearest_match = nearest_match
 
 # 8. Output Display
 st.divider()
@@ -448,7 +460,23 @@ else:
             st.subheader("Selected Packages")
             packages = output_dict.get("selected_packages", [])
             if not packages:
-                st.info("No packages selected. See Blocked Candidates or Flags for reason.")
+                nearest_match = st.session_state.get("nearest_match")
+                if nearest_match is None:
+                    st.info("No packages selected. See Blocked Candidates or Flags for reason.")
+                elif not nearest_match.get("is_relevant"):
+                    st.warning(
+                        "No packages selected. No clinically relevant package was identified "
+                        "— USP pathway required."
+                    )
+                else:
+                    code = nearest_match.get("nearest_code", "?")
+                    pkg = nearest_match.get("package_name", "")
+                    missing = nearest_match.get("what_is_missing", "reason unavailable")
+                    st.warning(
+                        f"No packages selected. "
+                        f"**Potential Package: {code} — {pkg}**  \n"
+                        f"What's missing: {missing}"
+                    )
             else:
                 for pkg in packages:
                     validated = pkg.get("validated", {})

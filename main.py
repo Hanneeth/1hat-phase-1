@@ -49,6 +49,7 @@ from models import (
     TreatingDoctor,
     IRISOutput,
 )
+from llm.nearest_match import get_nearest_match
 from phases.phase0_preflight import run_phase0
 from phases.phase1_emergency import run_phase1
 from phases.phase2_candidates import run_phase2
@@ -319,7 +320,7 @@ def run_pipeline(session: IRISSession) -> IRISOutput:
 # CLI entry point
 # ---------------------------------------------------------------------------
 
-def print_summary(output_dict: dict) -> None:
+def print_summary(output_dict: dict, nearest_match: dict | None = None) -> None:
     """Print a human-readable 3-5 line summary of the IRIS result to stdout."""
 
     DIVIDER = "═" * 72
@@ -350,8 +351,16 @@ def print_summary(output_dict: dict) -> None:
             rate_str = f"₹{int(rate * factor):,}" if rate else "rate unknown"
             pkg_parts.append(f"{code} · {name} ({proc}) · {rate_str} [{role}]")
         packages_line = " | ".join(pkg_parts)
+        potential_line = None
     else:
-        packages_line = "No packages selected"
+        packages_line = "NO PACKAGES SELECTED!!"
+        if nearest_match is None or not nearest_match.get("is_relevant"):
+            potential_line = "  ⚠️  No relevant package identified — USP pathway required"
+        else:
+            code = nearest_match.get("nearest_code", "?")
+            pkg = nearest_match.get("package_name", "")
+            missing = nearest_match.get("what_is_missing", "reason unavailable")
+            potential_line = f"  ⚠️  POTENTIAL PACKAGE: {code} · {pkg} | What's missing: {missing}"
 
     # Financial line
     estimated = output_dict.get("estimated_total_inr", 0)
@@ -393,6 +402,8 @@ def print_summary(output_dict: dict) -> None:
     print(f"\n{DIVIDER}")
     print(f"  IRIS RESULT  {icon}  {status}")
     print(f"  {packages_line}")
+    if potential_line is not None:
+        print(potential_line)
     print(f"  {financial_line}")
     print(f"  {docs_line}  |  {flags_line}")
     print(f"{DIVIDER}\n")
@@ -446,8 +457,14 @@ def main() -> None:
 
     # --- Serialise and print ---
     output_dict = serialize_output(output)
+    nearest_match = None
+    if not output_dict.get("selected_packages"):
+        nearest_match = get_nearest_match(
+            output_dict.get("blocked_candidates", []),
+            raw_json.get("clinical", {})
+        )
     print(json.dumps(output_dict, indent=2, default=str))
-    print_summary(output_dict)
+    print_summary(output_dict, nearest_match)
 
     logger.info("Pipeline complete. Status: %s", output.readiness_status)
 

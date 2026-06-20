@@ -373,6 +373,7 @@ def check_stg_eligibility(
                     system_instruction=SYSTEM_PROMPT,
                     temperature=0,
                     max_output_tokens=4096,
+                    response_mime_type="application/json",
                     http_options=genai.types.HttpOptions(
                         timeout=LLM_TIMEOUT_SECONDS * 1000,  # SDK uses ms
                     ),
@@ -416,6 +417,8 @@ def check_plausibility(
     procedure_code: str,
     procedure_name: str,
     clinical: ClinicalInput,
+    specialty_code: str,
+    specialty_name: str,
 ) -> dict:
     """LLM-based clinical plausibility check for a candidate PM-JAY package.
 
@@ -433,6 +436,8 @@ def check_plausibility(
         procedure_code: PM-JAY procedure code, e.g. "BM001A".
         procedure_name: Human-readable procedure name for the prompt.
         clinical:       ClinicalInput dataclass from the current IRISSession.
+        specialty_code: The candidate procedure's specialty code.
+        specialty_name: The candidate procedure's specialty name.
 
     Returns:
         dict with keys:
@@ -445,30 +450,66 @@ def check_plausibility(
     Side effects:
         Logs INFO (result), WARNING (retry), ERROR (all retries failed).
     """
+    # _PLAUSIBILITY_SYSTEM = (
+    #     "You are a clinical relevance checker for PM-JAY (India's national health "
+    #     "scheme) package selection.\n\n"
+    #     "Important context: PM-JAY allows multiple packages to be billed for a "
+    #     "single admission. A package does not need to cover the patient's entire "
+    #     "treatment — it only needs to address one specific condition or procedure "
+    #     "that the patient requires during this admission.\n\n"
+    #     "Your only task: determine whether the patient has the specific medical "
+    #     "condition or clinical need that this PM-JAY procedure is designed to treat. "
+    #     "Do not evaluate whether this package alone is sufficient for the patient's "
+    #     "complete treatment. Do not consider what other procedures are planned.\n\n"
+    #     "Respond with valid JSON only. No prose outside the JSON."
+    # )
+    
     _PLAUSIBILITY_SYSTEM = (
-        "You are a clinical relevance checker for PM-JAY (India's national health "
-        "scheme) package selection.\n\n"
-        "Important context: PM-JAY allows multiple packages to be billed for a "
-        "single admission. A package does not need to cover the patient's entire "
-        "treatment — it only needs to address one specific condition or procedure "
-        "that the patient requires during this admission.\n\n"
-        "Your only task: determine whether the patient has the specific medical "
-        "condition or clinical need that this PM-JAY procedure is designed to treat. "
-        "Do not evaluate whether this package alone is sufficient for the patient's "
-        "complete treatment. Do not consider what other procedures are planned.\n\n"
-        "Respond with valid JSON only. No prose outside the JSON."
-    )
+    "You are a clinical plausibility gate for PM-JAY (India's national health scheme) "
+    "package selection. You are the final check before a candidate procedure enters "
+    "clinical eligibility validation. "
+    
+    "Your task: determine whether this candidate PM-JAY procedure is directly "
+    "plausible for this patient's CURRENT admission, based on the clinical "
+    "information provided. "
 
+    "Rules: "
+    "1. If planned_procedure is provided, it is the primary anchor. The candidate "
+    "package must match or directly correspond to the stated planned procedure. "
+    "A procedure addressing a completely different clinical problem from the "
+    "planned procedure is implausible — return plausible=false."
+    
+    "2. Domain match is required. The candidate procedure must belong to the same "
+    "clinical domain as the patient's presenting condition. A procedure from an "
+    "unrelated specialty that the clinical input does not reference is implausible."
+    
+    "3. The check is for THIS admission only. Do not approve a procedure because the "
+    "patient might theoretically need it in the future or because a comorbidity "
+    "could theoretically lead to it."
+
+    "4. Default to plausible=false when the connection between the patient's "
+    "presenting condition and the candidate procedure requires you to construct "
+    "a reasoning chain across multiple inferential steps. If the justification "
+    "is not direct, the answer is false."
+    
+    "5. Default to plausible=true only when there is a clear, direct line from at "
+    "least one piece of documented clinical evidence to the procedure's purpose."
+    
+    "Respond with valid JSON only. No prose outside the JSON."
+    )
+    
     user_prompt = (
-        f"Patient provisional diagnosis: {clinical.provisional_diagnosis}\n"
-        f"Patient chief complaints: {clinical.chief_complaints}\n"
+        f"Specialty of candidate procedure: {specialty_code} — {specialty_name}\n"
+        f"Planned procedure (if stated): {clinical.planned_procedure or 'not stated'}\n"
+        f"Provisional diagnosis: {clinical.provisional_diagnosis}\n"
+        f"Chief complaints: {clinical.chief_complaints}\n"
+        f"History of present illness: {clinical.history_of_present_illness or 'not provided'}\n"
         f"\n"
         f"Candidate PM-JAY package: {procedure_name} ({procedure_code})\n"
         f"\n"
-        f"Does this patient have the specific condition or clinical need that "
-        f"this PM-JAY procedure is designed to treat?\n"
-        f'Respond JSON only:\n'
-        f'{{"plausible": true or false, "reason": "one sentence explanation"}}'
+        f"Is this procedure directly plausible for this patient's current admission?\n"
+        f"Respond JSON only:\n"
+        f'{{"plausible": true or false, "reason": "one sentence citing the specific clinical evidence that justifies or rejects this"}}'
     )
 
     client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
@@ -482,6 +523,7 @@ def check_plausibility(
                     system_instruction=_PLAUSIBILITY_SYSTEM,
                     temperature=0,
                     max_output_tokens=4096,
+                    response_mime_type="application/json",
                     http_options=genai.types.HttpOptions(
                         timeout=LLM_TIMEOUT_SECONDS * 1000,
                     ),
@@ -568,8 +610,19 @@ def resolve_stratum(
 
     _SYSTEM = (
         "You are a clinical package selector for PM-JAY (India's national health scheme).\n"
-        "You are given multiple candidate procedure options from the same package.\n"
-        "Select exactly ONE procedure code that best matches the patient's condition.\n"
+        "You are given multiple candidate procedure variants from the same package.\n"
+        "Select exactly ONE procedure code that best matches the documented clinical intent.\n\n"
+        "CRITICAL RULE — planned_procedure anchor:\n"
+        "If the patient's planned_procedure field explicitly names a surgical approach, "
+        "technique, or method (e.g. 'laparoscopic', 'open', 'with CBD exploration', "
+        "'without CBD exploration', 'off-pump', 'with bypass'), that documented intent "
+        "is the authoritative anchor. You MUST select the variant that matches the "
+        "documented approach. Do NOT override it based on your own clinical reasoning "
+        "about what might be safer or more appropriate given comorbidities or concurrent "
+        "conditions. The treating doctor has already made that decision. IRIS's role is "
+        "to match the documented intent, not to second-guess it.\n\n"
+        "Only when planned_procedure does not specify the approach should you use "
+        "clinical parameters (TBSA, size, severity, etc.) to select the best variant.\n\n"
         "Respond with valid JSON only. No prose outside the JSON.\n"
         'Schema: {"selected": "PROCEDURE_CODE", "reason": "one sentence"}'
     )
@@ -629,6 +682,7 @@ def resolve_stratum(
         f"Patient weight: {weight} kg\n"
         f"Provisional diagnosis: {diagnosis}\n"
         f"Chief complaints: {complaints}\n"
+        f"Planned procedure: {clinical.planned_procedure or 'not specified'}\n"
         f"{numeric_context}\n\n"
         f"Candidate procedures (select exactly one):\n"
         f"{candidates_str}\n\n"
@@ -647,6 +701,7 @@ def resolve_stratum(
                     system_instruction=_SYSTEM,
                     temperature=0,
                     max_output_tokens=4096,
+                    response_mime_type="application/json",
                     http_options=genai.types.HttpOptions(
                         timeout=LLM_TIMEOUT_SECONDS * 1000,
                     ),
@@ -894,7 +949,7 @@ def _format_examination(examination_findings) -> str:
 def _parse_and_validate(raw_text: str) -> dict | None:
     """Parse LLM response text as JSON and validate required keys.
 
-    Strips markdown code fences if present before parsing.
+    Tries three strategies in sequence to parse the JSON.
 
     Args:
         raw_text: The raw string returned by the Gemini API.
@@ -903,21 +958,52 @@ def _parse_and_validate(raw_text: str) -> dict | None:
         Validated dict if parsing succeeds and "eligible" (bool) and
         "reasoning" (str) keys are present; None otherwise.
     """
-    text = raw_text.strip()
-    # Strip markdown code fences that some models include
-    if text.startswith("```"):
-        lines = text.splitlines()
-        # Remove first and last fence lines
-        text = "\n".join(
-            line for line in lines
-            if not line.strip().startswith("```")
-        )
+    parsed = None
+    strategy_number = 0
 
+    # STRATEGY 1 — Direct parse:
+    text_s1 = raw_text.strip()
     try:
-        parsed = json.loads(text)
+        res = json.loads(text_s1)
+        if isinstance(res, dict):
+            parsed = res
+            strategy_number = 1
     except json.JSONDecodeError:
+        pass
+
+    # STRATEGY 2 — Strip markdown fences anywhere in text:
+    if parsed is None:
+        lines = raw_text.splitlines()
+        clean_lines = [line for line in lines if not line.strip().startswith("```")]
+        text_s2 = "\n".join(clean_lines).strip()
+        try:
+            res = json.loads(text_s2)
+            if isinstance(res, dict):
+                parsed = res
+                strategy_number = 2
+        except json.JSONDecodeError:
+            pass
+
+    # STRATEGY 3 — Extract by brace scanning:
+    if parsed is None:
+        first_brace = raw_text.find('{')
+        last_brace = raw_text.rfind('}')
+        if first_brace != -1 and last_brace != -1 and first_brace < last_brace:
+            text_s3 = raw_text[first_brace:last_brace + 1]
+            try:
+                res = json.loads(text_s3)
+                if isinstance(res, dict):
+                    parsed = res
+                    strategy_number = 3
+            except json.JSONDecodeError:
+                pass
+
+    if parsed is None:
         return None
 
+    logger.debug("STG checker parsed via strategy %d", strategy_number)
+
+    # VALIDATION
     if not isinstance(parsed, dict):
         return None
     if not isinstance(parsed.get("eligible"), bool):

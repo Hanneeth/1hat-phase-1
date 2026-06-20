@@ -1,0 +1,14 @@
+Eval run: 19-06-2026 17:24
+
+  ┌──────────┬──────────────────┬──────────────────────────────────────────┐
+  │ TC       │ Result           │ Detail                                   │
+  ├──────────┼──────────────────┼──────────────────────────────────────────┤
+  │ TC14     │ FULLY CORRECT    │ 1/1 packages matched                     │
+    Expected : BM001B — % Total Body Surface Area Burns (TBSA): Upto 40%; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone
+    Chosen   : BM001B — Thermal burns — Criteria 2: % Total Body Surface Area Burns (TBSA): Upto 25%; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.
+  └──────────┴──────────────────┴──────────────────────────────────────────┘
+
+  TOTAL: 1 fully correct, 0 partially correct, 0 incorrect, 0 skipped, 
+         0 errors
+
+  ALL PASS

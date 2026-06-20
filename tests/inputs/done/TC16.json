@@ -1,22 +1,4 @@
 {
-  "_test_id": "TC16",
-  "_description": "Dual General Surgery — symptomatic cholelithiasis (planned laparoscopic cholecystectomy) with co-existing symptomatic umbilical hernia repaired at same sitting. Single elective admission, two separate PM-JAY packages. Tests multi-surgical 100-50 combination rule and whether the pipeline catches both billable procedures.",
-  "_expected_status": "CONDITIONAL",
-  "_expected_specialty": "SG",
-  "_expected_packages_count": 2,
-  "_expected_flags_include": [
-    "CANDIDATES_GENERATED",
-    "FINANCIAL_ESTIMATE_APPROXIMATE",
-    "DEDUCTION_APPROXIMATE"
-  ],
-  "_expected_flags_exclude": [
-    "WALLET_INSUFFICIENT",
-    "PUB_RESERVED_BLOCK",
-    "USP_RECOMMENDED"
-  ],
-  "_notes": "The non-obvious part: MEDCO typically files only for cholecystectomy and misses the umbilical hernia as a separately billable package. Both are surgical — 100-50 deduction applies sorted by base_rate_inr descending. No MLC, no emergency, no comorbidities — clean dual-surgical test.",
-  "session_id": "IRIS-TC16-20260614",
-  "created_at": "2026-06-14T10:30:00+05:30",
   "patient": {
     "patient_id": "P001"
   },

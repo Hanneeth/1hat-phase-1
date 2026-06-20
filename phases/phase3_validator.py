@@ -56,7 +56,7 @@ SPECIALTY_CODE_TO_SHARD: dict[str, str] = {
     "IR": "interventional_radiology",
     "MO": "medical_oncology",
     "MM": "mental_disorders",
-    "MN": "neonatal_care",
+    "MN": "neo-natal_care",
     "SN": "neurosurgery",
     "SO": "obstetrics_gynaecology",
     "SE": "ophthalmology",
@@ -277,6 +277,8 @@ def _validate_candidate(candidate: CandidatePackage, session: IRISSession) -> No
             code,
             procedure.get("procedure_name", code),
             session.clinical,
+            candidate.specialty_code,
+            candidate.specialty,
         )
         if not plausibility["plausible"]:
             logger.warning(
@@ -304,6 +306,10 @@ def _validate_candidate(candidate: CandidatePackage, session: IRISSession) -> No
                 "procedure_code": code,
                 "reason_code": "STG_NOT_ELIGIBLE",
                 "message": llm_result.get("reasoning", "LLM returned not eligible"),
+                "missing_criteria": llm_result.get("missing_criteria", []),
+                "confidence": llm_result.get("confidence", "low"),
+                "procedure_name": candidate.procedure_name,
+                "package_name": candidate.package_name,
             })
             return
 

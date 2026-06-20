@@ -114,9 +114,8 @@
     "TC21": {
         "expect_selected_codes": [
             "SG039C",
-            "SG051C",
             "MC019A"
         ],
-        "expect_selected_count": 3
+        "expect_selected_count": 2
     }
 }

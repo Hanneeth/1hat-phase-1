@@ -157,6 +157,8 @@ def main():
         dash_count = max(0, 60 - len(separator))
         print(separator + "─" * dash_count, flush=True)
 
+        tc_start_time = time.time()
+
         # Run the pipeline as a subprocess
         env = os.environ.copy()
         env["PYTHONIOENCODING"] = "utf-8"
@@ -228,6 +230,9 @@ def main():
         # Join the threads to ensure all output is read
         t_stdout.join(timeout=5)
         t_stderr.join(timeout=5)
+
+        tc_duration = time.time() - tc_start_time
+        print(f"time taken: {tc_duration:.2f} sec", flush=True)
 
         if timeout_occurred:
             results.append({

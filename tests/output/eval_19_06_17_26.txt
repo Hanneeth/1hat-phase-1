@@ -1,0 +1,14 @@
+Eval run: 19-06-2026 17:26
+
+  ┌──────────┬──────────────────┬──────────────────────────────────────────┐
+  │ TC       │ Result           │ Detail                                   │
+  ├──────────┼──────────────────┼──────────────────────────────────────────┤
+  │ TC06     │ INCORRECT        │ wrong packages — missing: SE022A         │
+    Expected : SE022A — Capsulotomy (YAG)
+    Chosen   : (none selected)
+  └──────────┴──────────────────┴──────────────────────────────────────────┘
+
+  TOTAL: 0 fully correct, 0 partially correct, 1 incorrect, 0 skipped, 
+         0 errors
+
+  ISSUES DETECTED
