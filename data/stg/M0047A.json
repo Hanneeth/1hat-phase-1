@@ -1,0 +1,143 @@
+{
+  "stg_id": "M0047A",
+  "procedure_code": "M0047A",
+  "condition": "Acute Lymphoblastic Leukemia",
+  "procedure_name": "CT for Acute Lymphoblastic Leukemia - Consolidation (Phase II, CNS Therapy Reinduction)",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Guidance document for processing PM-JAY packages for Acute Lymphoblastic Leukemia.pdf"
+  ],
+  "alos": "1",
+  "min_doctor_qualification": [
+    "DM (Medical oncology) or equivalent (MD Medicine with experience/Fellowship in Hematology/Medical Oncology)"
+  ],
+  "clinical_indications": [
+    "Standard risk patients in complete remission after induction therapy"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "post_induction_remission_blasts",
+      "operator": "<",
+      "value": "5%",
+      "note": "Bone marrow report should be in remission after induction therapy"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "documentation_of_induction_dates_and_regimen",
+        "label": "Documentation of induction dates (start and end date along with the name of regimen)"
+      },
+      {
+        "key": "clinical_notes_performance_status_infections",
+        "label": "Clinical notes (Performance status and any infections, if yes -site)"
+      },
+      {
+        "key": "bone_marrow_report_post_induction_remission",
+        "label": "Response to induction therapy – Bone marrow report (should be in remission <5% blasts)"
+      },
+      {
+        "key": "cbc_lft_rft_random_blood_sugar",
+        "label": "CBC, LFT, RFT, random blood sugar"
+      },
+      {
+        "key": "repeat_csf_cytology_report",
+        "label": "If CSF was positive – repeat CSF cytology report (must be negative)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "barcodes_of_drugs",
+        "label": "Barcodes of the drugs"
+      },
+      {
+        "key": "reports_of_tests",
+        "label": "Reports of the tests (pathology, radiology, microbiology, hematology, biochemistry, etc.)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary of inpatient department and/or day care and/or injection room"
+      },
+      {
+        "key": "treatment_protocol_dates_doses",
+        "label": "Copy of treatment protocol with dates and doses which were delivered at the end of each month"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Patient not in remission post induction therapy?",
+        "expected": false
+      },
+      {
+        "q": "Bone marrow report (post-induction) missing or not showing remission (<5% blasts)?",
+        "expected": false
+      },
+      {
+        "q": "Patient is elderly, frail, or has multiple comorbidities (contraindication for procedure)?",
+        "expected": false
+      },
+      {
+        "q": "Poor PS, active infections (pneumonia), or no marrow report post induction (contraindication)?",
+        "expected": false
+      },
+      {
+        "q": "Initial CSF was positive and repeat CSF cytology report not negative?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Barcodes of drugs uploaded?",
+        "expected": true
+      },
+      {
+        "q": "Reports of all relevant tests uploaded?",
+        "expected": true
+      },
+      {
+        "q": "Detailed discharge summary uploaded?",
+        "expected": true
+      },
+      {
+        "q": "Copy of treatment protocol with dates and doses delivered at the end of each month uploaded?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Missing documentation of induction dates or regimen for consolidation pre-authorization.",
+    "Post-induction bone marrow report not uploaded or not showing remission (<5% blasts).",
+    "Patient is elderly, frail, or with multiple comorbidities (contraindication for intensive treatment).",
+    "Patient has Poor PS, active infections, or no marrow report post induction (contraindication).",
+    "Repeat CSF cytology report is not negative after an initial positive CSF.",
+    "Missing drug barcodes or treatment protocol copy at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/Hematologist; Essential Medical Infrastructure: Chemotherapy unit (Day care/Injection room/Ward)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "ALL classification (B or T cell ALL) based on bone marrow or peripheral blood examination.",
+      "Risk stratification considers age, WBC count, and cytogenetics analysis.",
+      "NCG clinical guidelines for Acute Lymphoblastic Leukemia are to be followed.",
+      "Packages are once in lifetime and as a 1st line regimen; same protocol cannot be repeated."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Mandatory parameters to be monitored - CBC, RFT, LFT and infections; Follow-up care: OPD visits, CBC, LFT, RFT, peripheral smear after treatment completion",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Elderly and frail with multiple comorbidities",
+      "Relapsed disease",
+      "Poor PS",
+      "Active infections (pneumonia)",
+      "No marrow report post induction"
+    ]
+  }
+}

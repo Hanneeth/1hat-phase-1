@@ -1,0 +1,147 @@
+{
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-22",
+    "bed_category": "ward",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Severe urinary symptoms with weak stream and incomplete emptying for 2 years, and a bilateral neck swelling noticed 6 months ago",
+    "duration_days": 8,
+    "history_of_present_illness": "58-year-old male admitted for combined elective surgery for two co-existing conditions. First: benign prostatic hyperplasia (BPH) with severe lower urinary tract symptoms (IPSS 24/35). TRUS revealed a prostate volume of 92g. Given the very large prostate volume (>80g), the urologist has recommended open simple prostatectomy (Millin's retropubic approach) rather than TURP, which carries a high risk of TURP syndrome at this prostate size. PVR is 220 mL and Qmax on uroflowmetry is 6 mL/sec. Medical management with tamsulosin and dutasteride for 18 months has failed to provide adequate relief. Second: bilateral multinodular goiter confirmed on thyroid USG (dominant right lobe nodule 2.5 cm). FNAC of the dominant nodule reports Bethesda Category III — Atypia of Undetermined Significance (AUS). Given bilateral disease with indeterminate cytology on the dominant side, total thyroidectomy has been planned. Patient is euthyroid. Both procedures are planned in the same operative sitting to avoid repeated anaesthesia risk given the patient's age and to reduce total hospital stay.",
+    "provisional_diagnosis": "Benign prostatic hyperplasia (prostate 92g, IPSS 24/35, Qmax 6 mL/sec) with bilateral multinodular goiter (Bethesda III, dominant right nodule 2.5 cm)",
+    "planned_procedure": "Combined: Open simple prostatectomy (Millin's retropubic) for BPH and total thyroidectomy for bilateral multinodular goiter with indeterminate cytology",
+    "weight_kg": 77.0,
+    "height_cm": 168.0,
+    "vitals": {
+      "bp_systolic_mmhg": 130,
+      "bp_diastolic_mmhg": 82,
+      "pulse_bpm": 76,
+      "spo2_pct": 99,
+      "temperature_f": 98.4,
+      "rr_per_min": 16
+    },
+    "examination_findings": {
+      "general": "Conscious, cooperative, no acute distress. No pallor. No jaundice. No pedal oedema.",
+      "cvs": "S1S2 heard, no murmurs.",
+      "rs": "Bilateral equal air entry, no added sounds.",
+      "abdomen": "Soft. Bladder not palpable at rest. Suprapubic fullness on palpation. No tenderness. Bowel sounds normal.",
+      "cns": null,
+      "local": "Neck: Bilateral thyroid enlargement. Firm, non-tender bilateral thyroid nodules. Dominant right lobe nodule 2.5 cm palpable. No cervical lymphadenopathy. No retrosternal extension. DRE: Prostate grossly enlarged, smooth, rubbery, non-tender, bilateral lobes enlarged symmetrically. No induration or nodularity."
+    },
+    "investigations": [
+      {
+        "type": "usg_trus_prostate",
+        "result_summary": "Transrectal ultrasound (TRUS) prostate: Volume 92g. Both lobes symmetrically enlarged. No hypoechoic nodule or capsular breach. Median lobe enlargement present. Post-void residual urine (PVR) 220 mL.",
+        "structured_values": [
+          {"parameter": "prostate_volume_grams", "value": 92, "unit": "g", "flag": "H", "leads": null},
+          {"parameter": "pvr_ml", "value": 220, "unit": "mL", "flag": "H", "leads": null},
+          {"parameter": "median_lobe_enlargement", "value": "present", "unit": null, "flag": null, "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-14"
+      },
+      {
+        "type": "uroflowmetry",
+        "result_summary": "Uroflowmetry: Qmax 6 mL/sec (severely reduced; normal >15 mL/sec). Voided volume 180 mL. Bell-shaped curve absent — obstructive pattern. IPSS score 24/35 (severe).",
+        "structured_values": [
+          {"parameter": "Qmax_ml_per_sec", "value": 6, "unit": "mL/sec", "flag": "L", "leads": null},
+          {"parameter": "IPSS_score", "value": 24, "unit": "/35", "flag": "H", "leads": null},
+          {"parameter": "voided_volume_ml", "value": 180, "unit": "mL", "flag": null, "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-14"
+      },
+      {
+        "type": "psa",
+        "result_summary": "PSA: Total PSA 4.8 ng/mL. Free PSA 1.2 ng/mL. Free/Total ratio 0.25 (benign range >0.20). Consistent with benign prostatic hyperplasia.",
+        "structured_values": [
+          {"parameter": "total_psa_ng_ml", "value": 4.8, "unit": "ng/mL", "flag": null, "leads": null},
+          {"parameter": "free_total_psa_ratio", "value": 0.25, "unit": "", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-14"
+      },
+      {
+        "type": "usg_thyroid",
+        "result_summary": "Thyroid USG: Bilateral multinodular goiter. Right lobe: dominant hypoechoic nodule 2.5 cm with irregular margins, no calcification. Left lobe: two nodules 1.0 cm and 0.8 cm, isoechoic. No retrosternal extension. No suspicious cervical lymph nodes. TIRADS 4A (right dominant nodule).",
+        "structured_values": [
+          {"parameter": "right_dominant_nodule_cm", "value": 2.5, "unit": "cm", "flag": null, "leads": null},
+          {"parameter": "thyroid_involvement", "value": "bilateral", "unit": null, "flag": null, "leads": null},
+          {"parameter": "TIRADS", "value": "4A", "unit": null, "flag": null, "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "fnac_thyroid",
+        "result_summary": "FNAC right thyroid nodule (2.5 cm): Bethesda Category III — Atypia of Undetermined Significance (AUS). Follicular cells with mild nuclear irregularities. Recommendation: Repeat FNAC or surgical excision. Given bilateral disease, total thyroidectomy recommended.",
+        "structured_values": [
+          {"parameter": "Bethesda_category", "value": "III", "unit": null, "flag": null, "leads": "Atypia of Undetermined Significance"},
+          {"parameter": "disease_laterality", "value": "bilateral", "unit": null, "flag": null, "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-16"
+      },
+      {
+        "type": "thyroid_function_test",
+        "result_summary": "TFT: TSH 2.1 mIU/L (normal 0.4–4.0). Free T3 3.8 pg/mL (normal). Free T4 1.1 ng/dL (normal). Patient is euthyroid.",
+        "structured_values": [
+          {"parameter": "TSH_mIU_L", "value": 2.1, "unit": "mIU/L", "flag": "N", "leads": null},
+          {"parameter": "FreeT3", "value": 3.8, "unit": "pg/mL", "flag": "N", "leads": null},
+          {"parameter": "FreeT4", "value": 1.1, "unit": "ng/dL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "WBC 8,600 cells/mcL (normal). Haemoglobin 13.6 g/dL. Platelets 2.3 lakh/mcL. Serum creatinine 1.0 mg/dL. BUN 16 mg/dL. INR 1.0. PT 12 sec. APTT 27 sec. Serum calcium 9.2 mg/dL (normal). Serum sodium 139 mEq/L. Potassium 4.0 mEq/L.",
+        "structured_values": [
+          {"parameter": "Haemoglobin", "value": 13.6, "unit": "g/dL", "flag": "N", "leads": null},
+          {"parameter": "Creatinine", "value": 1.0, "unit": "mg/dL", "flag": "N", "leads": null},
+          {"parameter": "INR", "value": 1.0, "unit": "", "flag": "N", "leads": null},
+          {"parameter": "Serum_Calcium", "value": 9.2, "unit": "mg/dL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-17"
+      }
+    ],
+    "comorbidities": ["Hypertension"],
+    "past_medical_history": "Hypertension for 4 years, well controlled on amlodipine 5mg. BPH symptoms for 2 years, on tamsulosin 0.4mg and dutasteride 0.5mg — inadequate response. No diabetes. No cardiac illness. No prior thyroid disease.",
+    "past_surgical_history": null,
+    "current_medications": [
+      "Amlodipine 5mg OD",
+      "Tamsulosin 0.4mg OD",
+      "Dutasteride 0.5mg OD"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Non-smoker",
+      "alcohol": "Non-alcoholic",
+      "diet": "Mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes", "available": true},
+      {"key": "trus_prostate_report", "label": "TRUS Prostate Report (volume 92g, PVR 220 mL)", "available": true},
+      {"key": "uroflowmetry_report", "label": "Uroflowmetry Report (Qmax 6 mL/sec, IPSS 24/35)", "available": true},
+      {"key": "psa_report", "label": "PSA Report (free/total ratio benign)", "available": true},
+      {"key": "usg_thyroid_report", "label": "Thyroid USG Report (bilateral MNG, TIRADS 4A right nodule)", "available": true},
+      {"key": "fnac_report", "label": "FNAC Report (Bethesda III, right dominant nodule)", "available": true},
+      {"key": "tft_report", "label": "Thyroid Function Test (euthyroid)", "available": true},
+      {"key": "blood_reports", "label": "CBC, RFT, LFT, Coagulation, Serum Calcium", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Subramaniam K",
+      "registration_number": "TN-08821",
+      "qualification": "MS General Surgery, MCh Urology",
+      "specialty_code": "SU"
+    },
+    "notes": "Combined elective surgery planned: (1) Open simple prostatectomy (Millin's retropubic) for BPH — prostate 92g, open approach preferred over TURP due to very large volume. (2) Total thyroidectomy for bilateral multinodular goiter with Bethesda III cytology on dominant nodule. Pre-anaesthetic fitness obtained. Antihypertensives continued perioperatively. Urology leads the admission; general surgery (thyroid team) co-planned. Both procedures to be done under single GA."
+  }
+}

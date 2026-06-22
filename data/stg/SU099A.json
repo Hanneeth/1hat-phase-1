@@ -1,0 +1,120 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SU099A",
+  "procedure_code": "SU099A",
+  "condition": "Neuropathic bladder",
+  "procedure_name": "Botulinum toxin injection for Neuropathic bladder",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Botulinum toxin injection for Neuropathic bladder_Medco.pdf",
+    "Botulinum toxin injection for Neuropathic bladder_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MCh (Urology)",
+    "DNB (Urology)"
+  ],
+  "clinical_indications": [
+    "Urinary tract infection (UTI)",
+    "Kidney stones",
+    "Urinary incontinence (unable to control urine)",
+    "Small urine volume during voiding",
+    "Urinary frequency and urgency",
+    "Dribbling urine",
+    "Loss of feeling that the bladder is full"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, symptoms, signs, examination findings, indication for procedure and advice for admission"
+      },
+      {
+        "key": "urine_dipstick_test",
+        "label": "Urine dipstick test (Urinanalysis)"
+      },
+      {
+        "key": "ultrasound_urinary_bladder_tract",
+        "label": "Ultrasound of the urinary bladder & urinary tract"
+      },
+      {
+        "key": "urine_bacteriology",
+        "label": "Urine bacteriology"
+      },
+      {
+        "key": "urodynamic_study",
+        "label": "Urodynamic study"
+      },
+      {
+        "key": "urine_creatinine_clearance",
+        "label": "Urine creatinine clearance"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed indoor case papers clearly indicating the need for performing the procedure"
+      },
+      {
+        "key": "procedure_notes",
+        "label": "Detailed Procedure notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary with follow-up advice"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure and advice for admission available?",
+        "expected": true
+      },
+      {
+        "q": "Are reports of investigations performed available such as Urine dipstick test (Urinanalysis), Ultrasound of the urinary bladder & urinary tract, Urine bacteriology, Urodynamic study, Urine creatinine clearance?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers available?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed procedure notes available with indications?",
+        "expected": true
+      },
+      {
+        "q": "Is discharge summary available with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation, physical examination, or supporting investigations are not indicative of the procedure.",
+    "Patient did not complain of lack of voluntary control over urinary bladder.",
+    "Required investigation reports (Urine dipstick, Ultrasound, Urine bacteriology, Urodynamic study, Urine creatinine clearance) are missing or incomplete at pre-authorization.",
+    "Detailed procedure notes are missing or incomplete at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Well equipped operation theatre with anaesthesia facility.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Neurogenic bladder is a condition where there is lack of co-ordination between the brain, spinal cord and the urinary bladder and it disturbs the process of normal micturition & healthy urinary continence which requires proper functioning of both bladder and the urethra. As a result the patient complaints if urinary incontinence.",
+      "Botulinum neurotoxin (BoNT) injection into the bladder wall has been shown to be an effective in those with multiple sclerosis and spinal cord injury with neurogenic detrusor overactivity (NDO) and urinary incontinence who are not tolerating anticholinergic medications. The most common side effects are urinary tract infections and urinary retention. Most patients are medically managed by clean intermittent catheterization and anticholinergics but some may require Botulinum toxin injection.",
+      "Etiology: Spinal cord/ Brain injury, spina bifida, multiple sclerosis, Parkinsons disease, Stroke, Diabetes, infections, Heavy metal poisoning, Brain/ spinal cord tumors."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

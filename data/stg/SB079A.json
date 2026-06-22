@@ -1,0 +1,112 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB079A",
+  "procedure_code": "SB079A",
+  "condition": "Total Hip Replacement – Revision of Failed Hemi Arthroplasty into THR",
+  "procedure_name": "Revision of failed hemi arthroplasty into THR",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Revision of Failed Hemi Arthroplasty into THR_Medco.pdf",
+    "Revision of Failed Hemi Arthroplasty into THR_PPD.CPD.pdf"
+  ],
+  "alos": "4 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years of experience"
+  ],
+  "clinical_indications": [
+    "Acetabular loosening",
+    "Femoral loosening",
+    "Polyethylene wear"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_signs_symptoms_evaluation_findings_indication",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure"
+      },
+      {
+        "key": "xray_patient_id_date_side_confirming_diagnosis",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right)- confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_procedure_imaging_study_xray",
+        "label": "Post procedure imaging study (Xray)"
+      },
+      {
+        "key": "detailed_procedure_operative_note",
+        "label": "Detailed procedure/operative note"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice/barcode of implant"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were clinical notes with history, signs, symptoms, evaluation findings and indication for procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray labelled with patient ID, date and side (Left/Right)- confirming the diagnosis submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the clinical notes and x-ray report submitted are indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Post procedure imaging study (Xray) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure/operative note submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the invoice/barcode of implant submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the clinical notes and x-ray report submitted are indicative of procedure being done?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and/or X-ray report are not indicative of the procedure.",
+    "Clinical notes with history, signs, symptoms, evaluation findings, or indication for procedure are missing or incomplete.",
+    "X-ray not labelled with patient ID, date, or side (Left/Right), or does not confirm the diagnosis.",
+    "Post-procedure imaging study (X-ray) is missing or incomplete.",
+    "Detailed procedure/operative note is missing or incomplete.",
+    "Invoice or barcode of the implant is missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/or equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "There are various conditions in which a revision of failed hemi arthroplasty into total hip replacement is being done.",
+      "Indication: Acetabular loosening, femoral loosening and polyethylene wear etc",
+      "Diagnosis: X-ray/CT scan can be used to confirm the diagnosis."
+    ],
+    "surgical_options": [
+      "The standard of care for surgical management of failed hemiarthroplasty is conversion to a total hip arthroplasty.",
+      "In case of infection two stage procedure is followed."
+    ],
+    "pre_op_preparation": "Preoperative clinical, radiographic, and laboratory assessments are critical in determining the etiology of the painful hemiarthroplasty. Establishing the etiology preoperatively is essential to plan before treating the failed hemiarthroplasty.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

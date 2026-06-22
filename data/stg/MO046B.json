@@ -1,0 +1,168 @@
+{
+  "stg_id": "MO046B",
+  "procedure_code": "MO046B",
+  "condition": "Acute Myeloid Leukemia",
+  "procedure_name": "Induction Chemotherapy for Acute Myeloid Leukemia",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "PMJAY_STG_Acute Myeloid Leukemia & Acute Promyelocytic Leukemia.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "DM (Medical oncology) or equivalent (MD Medicine with experience/Fellowship in Hematology/Medical Oncology)"
+  ],
+  "clinical_indications": [
+    "Newly diagnosed AML",
+    "Age <60 years",
+    "Age >60 years; Good performance status with no co-morbidities",
+    "In patients who are not in remission after first course of induction - second course (reinduction) can be given with 2+5 regimen"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "age",
+      "operator": "<",
+      "value": "60",
+      "note": "for newly diagnosed AML"
+    },
+    {
+      "field": "age",
+      "operator": ">",
+      "value": "60",
+      "note": "with good performance status and no co-morbidities"
+    },
+    {
+      "field": "remission_status",
+      "operator": "not_in_remission",
+      "value": "true",
+      "note": "after first course of induction for reinduction with 2+5 regimen"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count"
+      },
+      {
+        "key": "peripheral_bone_marrow_flow_cytometry",
+        "label": "Peripheral blood or bone marrow flow cytometry confirming AML diagnosis"
+      },
+      {
+        "key": "cytogenetics_fish_rtpcr",
+        "label": "Cytogenetics/FISH/RTPCR on bone marrow or peripheral blood"
+      },
+      {
+        "key": "echocardiography",
+        "label": "Echocardiography"
+      },
+      {
+        "key": "liver_renal_function_tests",
+        "label": "Liver and renal function tests"
+      },
+      {
+        "key": "clinical_notes_age_performance_status_comorbidities",
+        "label": "Clinical notes (Age, Performance status, comorbidities, extramedullary disease sites if any, infections)"
+      },
+      {
+        "key": "clinical_notes_induction_start_date",
+        "label": "Clinical notes stating date of start of induction therapy (for reinduction)"
+      },
+      {
+        "key": "peripheral_blood_bone_marrow_persistent_disease",
+        "label": "Peripheral blood or bone marrow showing persistent disease (second BM/PB - after day 21 of first BM test or after day 21 of induction chemotherapy date) (for reinduction)"
+      },
+      {
+        "key": "prior_chemotherapy_treatment",
+        "label": "Prior treatment with chemotherapy (if second time): regimen, dates, response (if applicable)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "barcode_drugs",
+        "label": "Barcode of the drugs"
+      },
+      {
+        "key": "diagnosis_supporting_reports",
+        "label": "Reports of tests supporting diagnosis (pathology, radiology, microbiology, hematology, biochemistry, etc.)"
+      },
+      {
+        "key": "discharge_summary_inpatient",
+        "label": "Discharge summary of inpatient department"
+      },
+      {
+        "key": "discharge_summary_day_care",
+        "label": "Discharge summary of day care department"
+      },
+      {
+        "key": "chemotherapy_regimen_charts",
+        "label": "Charts of chemotherapy regimen"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      },
+      {
+        "key": "periodic_cbc_reports",
+        "label": "Periodic CBC reports (once a week minimum during induction)"
+      },
+      {
+        "key": "all_preauth_documents",
+        "label": "All documents as mentioned in preauthorization"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Poor performance status (3/4) for AML induction?",
+        "expected": false
+      },
+      {
+        "q": "Low ejection fraction on ECHO (less than 50%) for AML induction?",
+        "expected": false
+      },
+      {
+        "q": "Flow cytometry report attached?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Same package re-claimed within 6 months (excluding reinduction for non-remission) for AML induction?",
+        "expected": false
+      },
+      {
+        "q": "Periodic CBC reports available for induction period?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Diagnosis of AML not confirmed by flow cytometry or cytogenetics/FISH/RTPCR reports.",
+    "Echocardiography report showing low ejection fraction (<50%) for AML induction without justification.",
+    "Clinical notes missing details on age, performance status, or comorbidities for AML induction.",
+    "For reinduction, date of prior induction therapy or evidence of persistent disease after day 21 is missing.",
+    "Barcode of administered drugs or diagnosis supporting reports missing at claim stage.",
+    "Package re-claimed within 6 months without justification for non-remission after induction."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Qualified Medical Oncologist/hematologist; Chemotherapy unit (Day care and Ward)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "3+7 induction (Cytarabine 100 mg/m² 7 Days, Daunomycin 60 mg/m² x 3 Days ) – First line therapy",
+      "Can be given as second course (2+5 i.e. Cytarabine 100 mg/m² 5 Days, Daunomycin 60 mg/m² x 2 Days) if not in remission after first course"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": "Age <60 years OR Age >60 years with Good performance status with no co-morbidities",
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Age > 65 years with multiple co-morbidities, poor general condition, high risk disease (AML only)"
+    ]
+  }
+}

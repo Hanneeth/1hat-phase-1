@@ -27,6 +27,7 @@ from kb.loader import load_specialty_shard, get_procedure_from_shard
 from models import DocumentItem
 from phases.phase3_validator import SPECIALTY_CODE_TO_SHARD
 from session import IRISSession
+from llm.query_predictor import predict_package_queries
 
 logger = logging.getLogger(__name__)
 
@@ -108,6 +109,28 @@ def run_phase9(session: IRISSession) -> IRISSession:
             ),
             "warning",
         )
+
+    # Step 7 — Query prediction per package
+    logger.info("Phase 9 — query prediction: start")
+    if not hasattr(session, "query_predictions"):
+        session.query_predictions = []
+    available_keys_for_prediction = _get_available_doc_keys(session.clinical)
+    for fp in session.final_package_set:
+        try:
+            prediction = predict_package_queries(session, fp, available_keys_for_prediction)
+            session.query_predictions.append(prediction)
+            logger.info(
+                "Phase 9 — query prediction complete for %s: verdict=%s",
+                fp.validated.procedure_code,
+                prediction.readiness_verdict,
+            )
+        except Exception as exc:
+            logger.error(
+                "Phase 9 — query prediction failed for %s: %s",
+                fp.validated.procedure_code,
+                exc,
+            )
+    logger.info("Phase 9 — query prediction: complete (%d predictions)", len(session.query_predictions))
 
     logger.info(
         "Phase 9 — complete | required=%d, missing=%d (hard_block=%d)",

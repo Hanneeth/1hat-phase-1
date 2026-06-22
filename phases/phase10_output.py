@@ -69,6 +69,7 @@ def run_phase10(session: IRISSession) -> IRISOutput:
         blocked_candidates=session.phase3_blocked,
         preauth_docs_required=session.preauth_docs_required,
         preauth_docs_missing=session.preauth_docs_missing,
+        query_predictions=session.query_predictions,
         enhancement_plan=enhancement_plan,
         copayment_required=session.copayment_required,
         copayment_gap_inr=session.copayment_gap_inr,
@@ -80,12 +81,13 @@ def run_phase10(session: IRISSession) -> IRISOutput:
 
     logger.info(
         "Phase 10 — complete | status=%s, selected=%d, blocked=%d, "
-        "docs_required=%d, docs_missing=%d, enhancement_plans=%d, errors=%d",
+        "docs_required=%d, docs_missing=%d, predictions=%d, enhancement_plans=%d, errors=%d",
         status,
         len(output.selected_packages),
         len(output.blocked_candidates),
         len(output.preauth_docs_required),
         len(output.preauth_docs_missing),
+        len(output.query_predictions),
         len(enhancement_plan),
         len(output.errors),
     )

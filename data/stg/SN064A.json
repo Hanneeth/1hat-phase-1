@@ -1,0 +1,117 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN064A",
+  "procedure_code": "SN064A",
+  "condition": "Arteriovenous Malformation (AVM) in Brain",
+  "procedure_name": "Embolization- Arteriovenous Malformation (AVM)/Thrombectomy",
+  "specialty": "Neurosurgery",
+  "version": null,
+  "source_files": [
+    "Embolization - AVM in the Brain_Medco.pdf",
+    "Embolization - AVM in the Brain_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "MCH Neurosurgery",
+    "DNB Neurosurgery"
+  ],
+  "clinical_indications": [
+    "To reduce the size of the AVM.",
+    "To reduce the likelihood of bleeding.",
+    "To make other surgical treatments safer (when used prior to them).",
+    "To reduce stroke-like symptoms by redirecting blood back to normal brain tissue (in some large brain AVMs)."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes including history, vitals, physical examination findings with planned line of treatment"
+      },
+      {
+        "key": "dsa_report",
+        "label": "DSA Report"
+      },
+      {
+        "key": "ct_mri_report",
+        "label": "CT/MRI report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "dsa_image_with_coils_embolizing_agents",
+        "label": "DSA image with coils/embolizing agents."
+      },
+      {
+        "key": "invoice_barcode_used_coil_embolizing_agent",
+        "label": "Invoice / bar code of used coil/embolizing agent"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Is the DSA report of patient suggestive of Arteriovenous Malformation (AVM)?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Does the post procedure DSA image show coils/embolizing agents or image of blocked AVM in place?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Patient DSA/CT/MRI report not suggestive of AVM embolization.",
+    "DSA report not submitted at pre-authorization.",
+    "CT/MRI report not submitted at pre-authorization.",
+    "Detailed Indoor Case Papers (ICPs) not submitted at claim submission.",
+    "Detailed Procedure / Operative notes not submitted at claim submission.",
+    "Post-procedure DSA image not showing coils/embolizing agents or image of blocked AVM.",
+    "Invoice/barcode of the coil/embolizing agent used not submitted at claim submission.",
+    "Detailed discharge summary not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Hospital with well-equipped OT & ICU.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "A brain arteriovenous malformation (AVM) is a tangle of abnormal blood vessels connecting arteries and veins in the brain. The arteries are responsible for taking oxygen-rich blood from the heart to the brain. Veins carry the oxygen-depleted blood back to the lungs and heart. A brain AVM disrupts this vital process. An arteriovenous malformation can develop anywhere in your body but occurs most often in the brain or spine. Even so, brain AVMs are rare and affect less than 1 percent of the population.",
+      "Symptoms of peripheral AVMs include A brain arteriovenous malformation may not cause any signs or symptoms until the AVM ruptures, resulting in bleeding in the brain (haemorrhage). In about half of all brain AVMs, haemorrhage is the first sign.",
+      "But some people with brain AVM may experience signs and symptoms other than bleeding related to the AVM.",
+      "In people without haemorrhage, signs and symptoms of a brain AVM may include: Seizures; Headache or pain in one area of the head; Muscle weakness or numbness in one part of the body",
+      "Some people may experience more-serious neurological signs and symptoms, depending on the location of the AVM, including: Severe headache; Weakness, numbness, or paralysis; Vision loss; Difficulty speaking; Confusion or inability to understand others; Severe unsteadiness",
+      "Etiology: Not much is known about the etiology of brain AVMs. The cause of brain AVMs is yet unknown, however, it is possibly multifactorial; apparently both genetic mutation and angiogenic stimulation (the physiological process of formation of new blood vessels from pre-existing vessels) playing roles in AVM development. Some believe that AVMs develop in utero. While others advocate an angiopathic reaction, following either a cerebral ischemic or hemorrhagic event (subtypes of stroke) as a primary factor in their development.",
+      "Diagnostic: Evaluation and Clinical Management of Arteriovenous Malformations (AVMs) in Brain: Thorough history and physical examination. Signs or symptoms. Imaging Modalities – A variety of imaging modalities like DSA CT/MRI, Cerebral Arteriography are used to evaluate the nature, extent, and complexity of the malformation and to help to plan appropriate line of management."
+    ],
+    "surgical_options": [
+      "Surgical removal (resection). If the brain AVM has bled or is in an area that can easily be reached, surgical removal of the AVM via conventional brain surgery may be recommended. In this procedure, your neurosurgeon removes part of your skull temporarily to gain access to the AVM. With the help of a high-powered microscope, the surgeon seals off the AVM with special clips and carefully removes it from surrounding brain tissue. The surgeon then reattaches the skull bone and closes the incision in your scalp. Resection is usually done when the AVM can be removed with little risk of haemorrhage or seizures. AVMs that are in deep brain regions carry a higher risk of complications. In these cases, your doctor may recommend other treatments.",
+      "Endovascular embolization. In this procedure, your doctor inserts a long, thin tube (catheter) into a leg artery and threads it through blood vessels to your brain using X-ray imaging. The catheter is positioned in one of the feeding arteries to the AVM, and injects an embolizing agent, such as small particles, a glue-like substance, micro coils, or other materials, to block the artery and reduce blood flow into the AVM. Endovascular embolization is less invasive than traditional surgery. It may be performed alone but is frequently used prior to other surgical treatments to make the procedure safer by reducing the size of the AVM or the likelihood of bleeding. In some large brain AVMs, endovascular embolization may be used to reduce stroke-like symptoms by redirecting blood back to normal brain tissue.",
+      "Stereotactic radiosurgery (SRS). This treatment uses precisely focused radiation to destroy the AVM. It is not surgery in the literal sense because there is no incision. Instead, SRS directs many highly targeted radiation beams at the AVM to damage the blood vessels and cause scarring. The scarred AVM blood vessels then slowly clot off in one to three years following treatment. This treatment is most appropriate for small AVMs that are difficult to remove with conventional surgery and for those that haven't caused a life-threatening haemorrhage."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

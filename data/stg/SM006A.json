@@ -1,0 +1,136 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SM006A",
+  "procedure_code": "SM006A",
+  "condition": "Cyst & Tumor of Maxilla, Mandible",
+  "procedure_name": "Mandible Tumour Resection and reconstruction / Cancer surgery",
+  "specialty": "Oral Maxillofacial Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Surgery for Cyst & Tumor of Maxilla, Mandible _PPD.CPD.pdf",
+    "Surgery for Cyst & Tumor of Maxilla, Mandible_MEDICO.pdf"
+  ],
+  "alos": "2-5 Days",
+  "min_doctor_qualification": [
+    "MDS (Oral Maxillo-facial surgery)"
+  ],
+  "clinical_indications": [
+    "Mandible tumour requiring resection and reconstruction",
+    "Cancer surgery involving mandible",
+    "Advanced or radical treatment for cyst/tumour of mandible not amenable to conservative techniques like enucleation or marsupialization"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_photos_indications",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, clinical photographs (intraoral and extraoral), indications for doing the procedure & advise for admission)"
+      },
+      {
+        "key": "investigation_reports_preauth",
+        "label": "Investigation reports of Cyst/Tumour (X-ray for Odontogenic cyst OR CBCT/CT of Jaws OR Intraoral Radiograph AND/OR OPG-Orthopantomography) to confirm existence"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers_consent",
+        "label": "Indoor case papers & Consent (informed written)"
+      },
+      {
+        "key": "procedure_operative_anesthesia_notes",
+        "label": "Procedure note/ operative note & Anesthesia notes (where applicable)"
+      },
+      {
+        "key": "implants_barcode",
+        "label": "Barcode of Implants used"
+      },
+      {
+        "key": "investigation_reports_claim",
+        "label": "Post-procedure Investigation reports of Cyst/Tumour (X-ray for Odontogenic cyst OR Intraoral Radiograph &/ or OPG-Orthopantomography for existence & Histopathology report, Biopsy or FNAC)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Detailed Oral maxillofacial Clinical notes (including clinical signs & symptoms such as disfigurement of face difficulty in breathing, examination findings, indications for doing the procedure & advise for admission)?",
+        "expected": true
+      },
+      {
+        "q": "X-ray report of cyst/tumour of Maxilla/Mandible and Biopsy /FNAC of cyst and tumour of Oral maxillofacial region?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Indoor case papers & informed written consent Submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the documents available to show appropriate post-op care, advise including for follow-up?",
+        "expected": true
+      },
+      {
+        "q": "Barcode of Implant(s) used?",
+        "expected": true
+      },
+      {
+        "q": "Are the Investigation reports of of Cyst/Tumour such as: X-ray for Odontogenic cyst Or Intraoral Radiograph &/ or OPG-Orthopantomography to confirm the existence & Histopathology report, Biopsy or FNAC Submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Signs, symptoms, examination, or X-ray do not confirm the presence of Cyst or Tumour in Maxilla/Mandible.",
+    "X-Ray/OPG-Orthopantomography /Biopsy/FNAC does not confirm Cyst or Tumour.",
+    "Detailed Oral maxillofacial Clinical notes are missing or incomplete at pre-authorization stage.",
+    "X-ray report of cyst/tumour of Maxilla/Mandible or Biopsy /FNAC of cyst and tumour of Oral maxillofacial region are missing or incomplete at pre-authorization stage.",
+    "Indoor case papers or informed written consent are missing at claim submission stage.",
+    "Documentation for appropriate post-op care or follow-up advice is missing at claim submission stage.",
+    "Barcode of Implant(s) used is missing at claim submission stage.",
+    "Post-procedure Investigation reports (Histopathology, Biopsy, FNAC) or imaging reports are missing at claim submission stage."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Cyst of jaw, oral and facial soft tissue can be Intraosseous cyst (odontogenic or non-odontogenic in origin) and soft tissue cyst.",
+      "The keratocystic odontogenic tumor is back into the cyst category as odontogenic keratocyst (OKC).",
+      "Depending on the size of the cyst, its location and the patients' age, several treatment options are available: curettage, enucleation, radical treatment and marsupialization.",
+      "The marsupialization /enucleation /excision/ Reconstruction/resection for cyst and tumour in maxilla and mandible is a conservative technique used in early tumor stages, as curative treatment for the odontogenic cyst.",
+      "Despite its disadvantages, the marsupialization remains an interesting therapeutic choice in the case of large cysts, or in very young or old patients.",
+      "Odontogenic cysts are usually treated by enucleation (cystectomy).",
+      "Limited cysts (less than 5 cm) are usually managed by primary excision (total cystectomy), whereas larger ones (exceeding 5 cm) are often decompressed or marsupialized.",
+      "Decompression consists only of opening a much smaller surgical window, associating the creation of an opening (window) into the cystic cavity with/without the suturing of a decompressing device /gauge pack.",
+      "No specific symptoms of cyst and tumor in jaw, usually associated with carious and non-vital tooth.",
+      "Worrisome mouth ulcers, swellings and abnormally colored areas of the gums and lining tissues of the mouth may arise.",
+      "Warning signs can include ulcers, white patches, mixed red and white patches, or red patches inside your mouth or on your lips. These patches can often become malignant.",
+      "Seldom in deciduous teeth.",
+      "The cause of Cyst & Tumour is unknown, however some are associated with genetic syndromes.",
+      "People with nevoid basal cell carcinoma syndrome (Gorlin-Goltz syndrome) lack a gene that suppresses tumors; the genetic mutation is inherited.",
+      "Oral Soft tissue Swelling, bone pain, numbness, tenderness, and unexplained tooth mobility can be symptoms.",
+      "Benign tumors and cysts can cause damage to surrounding bone and tissue."
+    ],
+    "surgical_options": [
+      "Curettage",
+      "Enucleation",
+      "Radical treatment",
+      "Marsupialization",
+      "Excision",
+      "Reconstruction/Resection"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Marsupialization is contraindicated for limited cystic lesions that require continuous drainage.",
+      "Marsupialization is contraindicated when previous conservative treatment failed and when complete or marginal resection is indicated.",
+      "Marsupialization is contraindicated for cysts with tumour potential (KCOC/KEROTOCYST).",
+      "Enucleation is contraindicated for eruptional cyst, friable cyst, and large cyst where surgical access would weaken the jaw potentially leading to fracture."
+    ]
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M0045A",
+  "procedure_code": "M0045A",
+  "condition": "Myeloproliferative Neoplasm",
+  "procedure_name": "Hydroxyurea",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "PM-JAY-Myeloproliferative Neoplasm.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "DM (Medical oncology) or equivalent (MD Medicine with experience/Fellowship in Hematology/Medical Oncology)"
+  ],
+  "clinical_indications": [
+    "Any Myeloproliferative Neoplasm as charted (as per WHO 2016 classification)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "tlc",
+      "operator": "<",
+      "value": "2500/cumm",
+      "note": "Triggers IT pop-up/alert when package is booked"
+    },
+    {
+      "field": "platelets",
+      "operator": "<",
+      "value": "50,000/cumm",
+      "note": "Triggers IT pop-up/alert when package is booked"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "admission_opd_clinical_notes",
+        "label": "Admission/OPD clinical notes with complete history, physical examinations, indications and plan of treatment"
+      },
+      {
+        "key": "investigation_reports_diagnosis",
+        "label": "CBC, Peripheral blood smear, Bone marrow aspiration and Biopsy, Cytogenetics and molecular reports (Polycythemia Vera, Chronic myeloproliferative disorders, Myelofibrosis, Essential Thrombocythemia) suggestive of diagnosis of MPN"
+      }
+    ],
+    "claim": [
+      {
+        "key": "drug_barcode",
+        "label": "Bar code of the drugs"
+      },
+      {
+        "key": "test_reports",
+        "label": "Reports of the tests (pathology, radiology, microbiology, hematology, biochemistry, etc.)"
+      },
+      {
+        "key": "discharge_summary_inpatient",
+        "label": "Discharge summary of inpatient department (if admitted for supportive care)"
+      },
+      {
+        "key": "discharge_summary_daycare",
+        "label": "Discharge summary of day care department"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      },
+      {
+        "key": "opd_visit_documents",
+        "label": "OPD visit documents"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is a Myeloproliferative Neoplasm diagnosed according to WHO 2016 classification?",
+        "expected": true
+      },
+      {
+        "q": "Is there a prior hypersensitivity reaction to Hydroxyurea?",
+        "expected": false
+      },
+      {
+        "q": "Is TLC <2500/cumm or platelets <50,000/cumm?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are barcodes of the administered drugs provided?",
+        "expected": true
+      },
+      {
+        "q": "Are all relevant test reports (pathology, radiology, etc.) attached?",
+        "expected": true
+      },
+      {
+        "q": "Is an appropriate discharge summary (inpatient or daycare) provided?",
+        "expected": true
+      },
+      {
+        "q": "Are transfusion slips provided if transfusions were given?",
+        "expected": true
+      },
+      {
+        "q": "Are OPD visit documents relevant to the claim provided?",
+        "expected": true
+      },
+      {
+        "q": "Is documentation of follow-up care (CBC, LFT, RFT every 3-4 months) available?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Missing or incomplete Admission/OPD clinical notes and treatment plan for pre-authorization.",
+    "Missing or incomplete investigation reports for Myeloproliferative Neoplasm diagnosis at pre-authorization stage.",
+    "Pre-authorization for Hydroxyurea was approved despite a documented prior hypersensitivity reaction.",
+    "Package booked when TLC was not <2500/cumm or platelets were not <50,000/cumm, contrary to IT alert conditions.",
+    "Missing barcodes of administered drugs at the time of claim submission.",
+    "Missing relevant test reports (pathology, radiology, hematology, biochemistry, etc.) at claim submission.",
+    "Discharge summary (inpatient or daycare) or transfusion slips are missing at claim submission.",
+    "Follow-up care documentation (monitoring visits with CBC, LFT, RFT every 3-4 months) is incomplete or absent."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/Hematologist; Essential Medical Infrastructure: Day care",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Dosage: 500 mg cap, maximum 4 gms per day (depends on WBC count)",
+      "Duration: Maximum number of cycles - 12, Minimum duration between 2 cycles 90 days",
+      "This package can be given multiple times as and when required",
+      "It can be 1st or 2nd line regimen",
+      "Supportive care may include Packed RBC and SDP/RDP transfusions."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Monitoring visits every 3-4 months with CBC, LFT, RFT",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Decision to refer cases to the appropriate level of care as required for treatment of patients under PMJAY.",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Prior hypersensitivity reaction"
+    ]
+  }
+}

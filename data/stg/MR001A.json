@@ -1,0 +1,94 @@
+{
+  "_comment": "Radiation Oncology package MR001A for Relapsed Hodgkin's & Non-Hodgkin's Lymphoma",
+  "stg_id": "MR001A",
+  "procedure_code": "MR001A",
+  "condition": "Relapsed Hodgkin's & Non-Hodgkin's Lymphoma (Adults)",
+  "procedure_name": "2D External Beam Radiotherapy (10-25 fractions) (Inclusive of Simulation & Planning Cost) - Radical",
+  "specialty": "Radiation Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Relapsed Hodgkin's & Non-Hodgkin's Lymphoma (Adults).pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MD / DNB Radiation Oncology or equivalent"
+  ],
+  "clinical_indications": [
+    "Curative intent for patients with refractory disease after standard chemotherapy",
+    "Curative intent for limited relapse not fit for ASCT/ High dose chemotherapy"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "hpe_report",
+        "label": "HPE report"
+      },
+      {
+        "key": "clinical_notes_rt_plan",
+        "label": "Clinical notes with planned line of treatment (documents confirming the procedure indicated and details of RT treatment plan)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "investigations",
+        "label": "Investigations (essential investigation list)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed Discharge Summary (with RT treatment and doses given)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is the patient's general condition suitable for radiotherapy?",
+        "expected": true
+      },
+      {
+        "q": "Is the patient eligible for ASCT?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "No document to support relapse (no biopsy and no imaging) at pre-authorization",
+    "Contraindication (e.g., patient general condition not suitable for radiotherapy) not addressed",
+    "Incomplete documentation provided",
+    "Patient's eligibility for ASCT is not clearly stated or justified if applicable."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/ Hematologist – for chemotherapy; Radiation Oncologist- for radiation. Essential Medical Infrastructure: Chemotherapy unit/ Ward/ Day care/ Injection room/ LINEAC.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Relapse usually occurs within first 2 years following initial treatment.",
+      "Mostly in patients with advanced disease and less often in early stage disease.",
+      "Treatment mostly comprises of salvage therapy (high dose therapy), autologous stem cell transplantation & Involved site Radiation Therapy (ISRT).",
+      "Relapse categories for diffuse large B cell lymphoma include: (1) those relapsing after complete remission, (2) partial responders with persistent disease, and (3) refractory patients.",
+      "Second line regimen.",
+      "All packages are once in a life-time.",
+      "Protocols for low grade NHL (second line and subsequent lines) are listed in NHL template."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Follow-up care: OPD visits, blood tests, imaging if required, supportive care medications.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Pts general condition not suitable for radiotherapy"
+    ]
+  }
+}

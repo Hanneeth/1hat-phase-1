@@ -1,0 +1,112 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB075B",
+  "procedure_code": "SB075B",
+  "condition": "Application of traction – Crutchfield tong cervical spine traction",
+  "procedure_name": "Crutchfield tong cervical spine traction",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Crutchfield tong cervical spine traction_Medco.pdf",
+    "Crutchfield tong cervical spine traction_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years of experience"
+  ],
+  "clinical_indications": [
+    "Fracture of the cervical vertebrae."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission"
+      },
+      {
+        "key": "x_ray_mri_ct_labelled",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right)- confirming the diagnosis/MRI/CT"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_procedure_imaging_xray",
+        "label": "Post procedure imaging study (Xray)"
+      },
+      {
+        "key": "detailed_procedure_operative_note",
+        "label": "Detailed procedure/operative note"
+      },
+      {
+        "key": "invoice_barcode_of_implant",
+        "label": "Invoice/barcode of implant"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the clinical notes and x-ray report submitted are indicative of procedure?",
+        "expected": true
+      },
+      {
+        "q": "Were clinical notes with history, signs, symptoms, evaluation findings, indication for procedure, planned line of management and advice for admission submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray labelled with patient ID, date and side (Left/Right)- /MRI/CT confirming the diagnosis submitted?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the clinical notes and x-ray report submitted are indicative of procedure being done?",
+        "expected": true
+      },
+      {
+        "q": "Post procedure imaging study (Xray) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure/operative note submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the invoice/barcode of implant submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or diagnostic imaging (X-ray/MRI/CT) not indicative of Crutchfield tong cervical spine traction procedure.",
+    "Mandatory clinical notes are missing essential details such as history, symptoms, evaluation findings, or planned management.",
+    "Diagnostic imaging (X-ray/MRI/CT) is not labelled with patient ID, date, or side, or fails to confirm cervical vertebrae fracture.",
+    "Post-procedure imaging study (Xray) not submitted at the time of claim processing.",
+    "Detailed procedure/operative note not submitted with the claim.",
+    "Invoice or barcode for the implant not submitted at the time of claim."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/or equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Crutchfield tong is attached to the skull to hyperextend the head and neck of the patient with fractured cervical vertebrae and to immobilize and align the vertebrae.",
+      "A CT scan or X-ray can be used to confirm the diagnosis.",
+      "The tips of the tongs are inserted into small burr holes drilled in each parietal bone of the skull.",
+      "The surrounding skin is sutured and covered with dressing.",
+      "A rope tied to the center of the tongs passes over a pulley at the head of the bed and is attached to a weight of 10 to 20 pounds, which hangs freely.",
+      "The patient is immobilised.",
+      "The insertion sites of the tongs are inspected and cleaned every 1 to 2 hours; any formed crusts are removed with hydrogen peroxide or normal saline twice a day or as required.",
+      "Post traction X-rays are taken regularly plus tightening of crutchfield tong and adjustment of traction is required regularly based on type of reduction achieved on post traction Xrays."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

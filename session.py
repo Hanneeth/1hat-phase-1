@@ -28,6 +28,7 @@ from models import (
     FinalPackage,
     Flag,
     HospitalContext,
+    PackageQueryPrediction,
     PatientContext,
     ValidatedPackage,
 )
@@ -123,6 +124,7 @@ class IRISSession:
     # ------------------------------------------------------------------
     preauth_docs_required: list[DocumentItem] = field(default_factory=list)
     preauth_docs_missing: list[DocumentItem] = field(default_factory=list)
+    query_predictions: list[PackageQueryPrediction] = field(default_factory=list)
 
     # ------------------------------------------------------------------
     # Accumulated by ALL phases throughout the pipeline

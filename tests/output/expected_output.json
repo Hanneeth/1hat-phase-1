@@ -117,5 +117,60 @@
             "MC019A"
         ],
         "expect_selected_count": 2
+    },
+    "TC22": {
+        "expect_selected_codes": [
+            "SU007A"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC23": {
+        "expect_selected_codes": [
+            "SU014A"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC24": {
+        "expect_selected_codes": [
+            "SU077A",
+            "SG070B"
+        ],
+        "expect_selected_count": 2
+    },
+    "TC25": {
+        "expect_selected_codes": [
+            "SV006A"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC26": {
+        "expect_selected_codes": [
+            "SU089B"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC27": {
+        "expect_selected_codes": [],
+        "expect_selected_count": 0
+    },
+    "TC28": {
+        "expect_selected_codes": [
+            "SU016A"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC29": {
+        "expect_selected_codes": [
+            "SU007A"
+        ],
+        "expect_selected_count": 1
+    },
+    "TC30": {
+        "expect_selected_codes": [
+            "SV004A",
+            "MC011A",
+            "SG039C"
+        ],
+        "expect_selected_count": 3
     }
 }

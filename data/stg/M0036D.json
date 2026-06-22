@@ -1,0 +1,165 @@
+{
+  "stg_id": "M0036D",
+  "procedure_code": "M0036D",
+  "condition": "Chronic Lymphocytic Leukemia / Small Lymphocytic Lymphoma",
+  "procedure_name": "CT for Chronic Lymphocytic Leukemia (Lenalidomide)",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "PM-JAY_Chronic_Lymphocytic_Leukemia.pdf"
+  ],
+  "alos": "1 day per cycle",
+  "min_doctor_qualification": [
+    "DM (Medical oncology) or equivalent (MD Medicine with experience/Fellowship in Hematology/Medical Oncology)"
+  ],
+  "clinical_indications": [
+    "Complete blood counts confirming diagnosis of CLL",
+    "Flow cytometry (in peripheral blood or bone marrow) confirming diagnosis of CLL",
+    "Lymph node biopsy confirming diagnosis of small lymphocytic lymphoma (SLL), treated like CLL",
+    "Clinical notes indicating performance status",
+    "Clinical notes indicating presence or absence of B symptoms",
+    "Clinical notes indicating lymphadenopathy with size",
+    "Clinical notes indicating splenomegaly with size",
+    "Clinical notes indicating comorbidities and indication for therapy",
+    "Clinical notes indicating prior treatment for CLL (name of regimen, cycles, date of last cycle, response)",
+    "Renal function tests",
+    "Liver function tests",
+    "USG abdomen + pelvis or CECT chest + abdomen + pelvis with evidence of bulky lymph nodes",
+    "USG abdomen + pelvis or CECT chest + abdomen + pelvis with evidence of massive splenomegaly",
+    "USG abdomen + pelvis or CECT chest + abdomen + pelvis with evidence of other organ involvement",
+    "Previous 3 CBC reports showing doubling of lymphocyte counts in last 6 months",
+    "FISH-17 p deletion"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "lymphocyte_count_doubling",
+      "operator": "doubling",
+      "value": "in last 6 months",
+      "note": "Based on previous 3 CBC reports"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "complete_blood_counts",
+        "label": "Complete blood counts"
+      },
+      {
+        "key": "flow_cytometry_report",
+        "label": "Flow cytometry (either in peripheral blood or bone marrow- confirming diagnosis of CLL)"
+      },
+      {
+        "key": "lymph_node_biopsy_report",
+        "label": "Lymph node biopsy (confirming diagnosis of small lymphocytic lymphoma)"
+      },
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (Performance status, Presence or absence of B symptoms, lymphadenopathy with size, splenomegaly with size comorbidities and indication for therapy, Prior treatment for CLL (name of regimen, cycles, date of last cycle, response))"
+      },
+      {
+        "key": "renal_function_tests",
+        "label": "Renal function tests"
+      },
+      {
+        "key": "liver_function_tests",
+        "label": "Liver function tests"
+      },
+      {
+        "key": "usg_abdomen_pelvis_or_cect_chest_abdomen_pelvis",
+        "label": "USG abdomen + pelvis or CECT chest + abdomen + Pelvis – with evidence of bulky lymph nodes, massive splenomegaly or other organ involvement"
+      },
+      {
+        "key": "previous_cbc_reports",
+        "label": "Previous 3 CBC reports showing doubling of lymphocyte counts in last 6 months"
+      },
+      {
+        "key": "fish_17p_deletion_report",
+        "label": "FISH-17 p deletion"
+      },
+      {
+        "key": "prior_treatment_details_optional",
+        "label": "Details of prior treatment (optional) : Date of start and the end of therapy, name of the regimen and response to therapy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "drug_barcode",
+        "label": "Bar code of the drugs"
+      },
+      {
+        "key": "test_reports",
+        "label": "Reports of the tests (pathology, radiology, microbiology, hematology, biochemistry etc. listed under preauthorization)"
+      },
+      {
+        "key": "discharge_summary_inpatient",
+        "label": "Discharge summary of inpatient department"
+      },
+      {
+        "key": "discharge_summary_daycare",
+        "label": "Discharge summary of day care department"
+      },
+      {
+        "key": "chemotherapy_regimen_charts",
+        "label": "Charts of chemotherapy regimen"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      },
+      {
+        "key": "cbc_before_each_cycle",
+        "label": "CBC before each cycle"
+      },
+      {
+        "key": "response_assessment_details",
+        "label": "Response assessment (details after every 4 cycles and at the end of planned therapy showing improvement in hemoglobin, platelet counts, lymphadenopathy, splenomegaly and symptoms history and clinical examination, documented on USG/CECT)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is flow cytometry or biopsy report available?",
+        "expected": true
+      },
+      {
+        "q": "Is the indication of therapy written and supported by documentation?",
+        "expected": true
+      },
+      {
+        "q": "Has the patient received prior treatment with the same regimen without response to same treatment earlier?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Missing flow cytometry or biopsy report.",
+    "Indication for therapy is not written or supporting documents for indication are missing.",
+    "Same regimen is selected for prior treatment without response to same treatment earlier.",
+    "Missing bar code for drugs at claims submission.",
+    "Missing or incomplete test reports (pathology, radiology, etc.) at claims submission.",
+    "Missing discharge summary (inpatient or day care) at claims submission.",
+    "Missing charts of chemotherapy regimen or CBC before each cycle at claims submission.",
+    "Missing response assessment details after 4 cycles or at end of planned therapy."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/ Hematologist; Essential Medical Infrastructure: Chemotherapy unit (Day care/Injection room/Ward)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "FC and FCR can be used once in a lifetime as first or second line therapy.",
+      "Bendamustine + Rituximab, Rituximab + Chlorambucil, Rituximab + Lenalidomide can be used more than once as first or subsequent line therapy (same regimen can be repeated after 1 year if patient had response to earlier course).",
+      "Lenalidomide can be repeated more than once, in the 1st or 2nd line.",
+      "Bone marrow aspiration and biopsy should be avoided in CLL."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

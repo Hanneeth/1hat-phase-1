@@ -1,72 +1,32 @@
 {
-  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "_comment": "Radiation Oncology package MR007A for Relapsed Hodgkin's & Non-Hodgkin's Lymphoma",
   "stg_id": "MR007A",
   "procedure_code": "MR007A",
-  "condition": "Osteosarcoma",
-  "procedure_name": "Linear Accelerator, External Beam Radiotherapy IMRT (66-70Gy/33 -35 fractions @ 2Gy per fraction)",
+  "condition": "Relapsed Hodgkin's & Non-Hodgkin's Lymphoma (Adults)",
+  "procedure_name": "Linear Accelerator, External Beam Radiotherapy IMRT (Intensity Modulated Radiotherapy) (10-25 fractions) (Inclusive of Simulation & Planning Cost) - Radical",
   "specialty": "Radiation Oncology",
   "version": "1.1",
   "source_files": [
-    "Osteosarcoma Guidelines.pdf"
+    "Relapsed Hodgkin's & Non-Hodgkin's Lymphoma (Adults).pdf"
   ],
-  "alos": "1",
+  "alos": "1 day",
   "min_doctor_qualification": [
-    "MD or DNB (Radiation oncology) or equivalent"
+    "MD / DNB Radiation Oncology or equivalent"
   ],
   "clinical_indications": [
-    "Non-metastatic osteosarcoma where limb sparing resection is not possible, lesions are centro-axial in location (followed by adjuvant CT)",
-    "Metastatic osteosarcoma which are multiple/ bilateral &/ or inoperable / non-pulmonary metastasis"
+    "Curative intent for patients with refractory disease after standard chemotherapy",
+    "Curative intent for limited relapse not fit for ASCT/ High dose chemotherapy"
   ],
   "clinical_thresholds": [],
   "mandatory_documents": {
     "preauth": [
       {
-        "key": "clinical_notes",
-        "label": "Clinical notes with documentation of relevant history"
+        "key": "hpe_report",
+        "label": "HPE report"
       },
       {
-        "key": "rt_treatment_plan",
-        "label": "Details of RT treatment plan including Suggested dosage (As per table above)"
-      },
-      {
-        "key": "bone_imaging",
-        "label": "Bone imaging (local and chest x-ray)"
-      },
-      {
-        "key": "blood_investigations",
-        "label": "Blood investigations- CBC,LFT, RFT, RBS"
-      },
-      {
-        "key": "routine_biochemistry",
-        "label": "Routine Biochemistry"
-      },
-      {
-        "key": "serological_investigations",
-        "label": "Serological investigations- alkaline phosphatase, lactate dehydrogenase"
-      },
-      {
-        "key": "mri_affected_part",
-        "label": "MRI of the affected part"
-      },
-      {
-        "key": "core_needle_biopsy",
-        "label": "Core needle biopsy"
-      },
-      {
-        "key": "histopathology_report",
-        "label": "Histopathology report"
-      },
-      {
-        "key": "cect_chest",
-        "label": "CECT chest"
-      },
-      {
-        "key": "bone_scan_f18_pet_scan",
-        "label": "Bone scan/ F18 PET Scan"
-      },
-      {
-        "key": "echo_ecg_gfr_audiometry",
-        "label": "ECHO, ECG, GFR, Audiometry"
+        "key": "clinical_notes_rt_plan",
+        "label": "Clinical notes with planned line of treatment (documents confirming the procedure indicated and details of RT treatment plan)"
       }
     ],
     "claim": [
@@ -80,10 +40,10 @@
       },
       {
         "key": "discharge_summary",
-        "label": "  Discharge summary"
+        "label": "Discharge summary"
       },
       {
-        "key": "detailed_discharge_summary_rt_doses",
+        "key": "detailed_discharge_summary",
         "label": "Detailed Discharge Summary (with RT treatment and doses given)"
       }
     ]
@@ -91,44 +51,44 @@
   "checklist": {
     "ppd_preauth": [
       {
-        "q": "Increased levels of alkaline phosphatase and Lactate dehydrogenase?",
+        "q": "Is the patient's general condition suitable for radiotherapy?",
         "expected": true
       },
       {
-        "q": "Local part X-Ray/MRI/ Bone scan/ PET-CT shows osteosarcoma?",
-        "expected": true
-      },
-      {
-        "q": "Biopsy report shows High Grade osteosarcoma?",
+        "q": "Is the patient eligible for ASCT?",
         "expected": true
       }
     ],
     "cpd_claim": []
   },
   "common_queries": [
-    "Increased levels of alkaline phosphatase and Lactate dehydrogenase not documented or outside expected range",
-    "Local part X-Ray/MRI/ Bone scan/ PET-CT does not show osteosarcoma",
-    "Biopsy report does not show High Grade osteosarcoma",
-    "Clinical notes with relevant history are missing or incomplete at pre-authorization",
-    "RT treatment plan or suggested dosage is missing or incomplete at pre-authorization",
-    "Detailed Discharge Summary (with RT treatment and doses given) is missing or incomplete at claim submission",
-    "Poor wound healing or poor general condition"
+    "No document to support relapse (no biopsy and no imaging) at pre-authorization",
+    "Contraindication (e.g., patient general condition not suitable for radiotherapy) not addressed",
+    "Incomplete documentation provided",
+    "Patient's eligibility for ASCT is not clearly stated or justified if applicable."
   ],
   "additional_information": {
     "icd_10_code": null,
-    "special_empanelment": "Chemotherapy unit (adequate infrastructure for drug level monitoring especially for MAP regimen i.e. adequate facilities for admission for every cycle and adequate facilities to monitor serum methotrexate levels and to manage renal toxicities); LINEAC; well-equipped OT",
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/ Hematologist – for chemotherapy; Radiation Oncologist- for radiation. Essential Medical Infrastructure: Chemotherapy unit/ Ward/ Day care/ Injection room/ LINEAC.",
     "min_doctor_qualification_desirable": null,
-    "clinical_key_pointers": [],
+    "clinical_key_pointers": [
+      "Relapse usually occurs within first 2 years following initial treatment.",
+      "Mostly in patients with advanced disease and less often in early stage disease.",
+      "Treatment mostly comprises of salvage therapy (high dose therapy), autologous stem cell transplantation & Involved site Radiation Therapy (ISRT).",
+      "Relapse categories for diffuse large B cell lymphoma include: (1) those relapsing after complete remission, (2) partial responders with persistent disease, and (3) refractory patients.",
+      "Second line regimen.",
+      "All packages are once in a life-time.",
+      "Protocols for low grade NHL (second line and subsequent lines) are listed in NHL template."
+    ],
     "surgical_options": [],
     "pre_op_preparation": null,
-    "post_op_care": "Physiotherapy rehabilitation post-operatively, follow-up every 6 months for first 5 years and annual follow-up after every 5 years with clinical evaluation (examination of local area), radiological evaluation (X-ray of the local part and Chest) and functional evaluation (using special scores like Musculoskeletal Tumor Society (MSTS) scoring, etc.)",
+    "post_op_care": "Follow-up care: OPD visits, blood tests, imaging if required, supportive care medications.",
     "fitness_criteria": null,
     "comorbidity_management": null,
-    "referral_criteria": null,
+    "referral_criteria": "Decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
     "quality_assessment_parameters": [],
     "contraindications": [
-      "Poor wound healing (relative)",
-      "Poor GC"
+      "Pts general condition not suitable for radiotherapy"
     ]
   }
 }

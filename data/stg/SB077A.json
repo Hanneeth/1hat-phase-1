@@ -1,0 +1,115 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB077A",
+  "procedure_code": "SB077A",
+  "condition": "Fracture of head radius",
+  "procedure_name": "Replacement with head radius prosthesis",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Fracture of radius head_Medco.pdf",
+    "Fracture of radius head_PPD.CPD.pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years of experience"
+  ],
+  "clinical_indications": [
+    "Comminuted and displaced fracture of radial head"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure"
+      },
+      {
+        "key": "x_ray_labelled",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right)- confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_procedure_imaging_study_xray",
+        "label": "Post procedure imaging study (Xray)"
+      },
+      {
+        "key": "detailed_procedure_operative_note",
+        "label": "Detailed procedure/operative note"
+      },
+      {
+        "key": "invoice_barcode_of_implant",
+        "label": "Invoice/barcode of implant"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were clinical notes with history, signs, symptoms, evaluation findings and indication for procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray labelled with patient ID, date and side (Left/Right)- confirming the diagnosis submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the clinical notes and x-ray report submitted are indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Post procedure imaging study (Xray) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure/operative note submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was the invoice/barcode of implant submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the clinical notes and x-ray report submitted are indicative of procedure being done?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes with history, signs, symptoms, evaluation findings, and indication for procedure not submitted.",
+    "X-ray not submitted or not labelled with patient ID, date, or side (Left/Right) for diagnosis confirmation.",
+    "Post-procedure imaging study (Xray) not submitted at claim stage.",
+    "Detailed procedure/operative note not submitted at claim stage.",
+    "Invoice or barcode of implant not submitted at claim stage.",
+    "Clinical notes and X-ray report submitted at pre-authorization are not indicative of the procedure.",
+    "Clinical notes and X-ray report submitted at claim are not indicative of the procedure being done."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/or equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Radial head replacement is frequently used in treatment of radial head fractures or sequela.",
+      "X-ray can be used to confirm the diagnosis."
+    ],
+    "surgical_options": [
+      "Patient is positioned in a supine position. Usually, lateral approach is used for the procedure.",
+      "Careful resection of radial head and neck fragments.",
+      "Trim the radial neck to fit the prosthesis.",
+      "Medullary canal is opened to fit the prosthesis stem.",
+      "Stem diameter is determined and reaming of the collar is done.",
+      "Sizing of the prosthesis is done and prosthesis is checked for length and stability.",
+      "Repair of the annular ligament in case of rupture."
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

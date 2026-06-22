@@ -1,0 +1,130 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SN066A",
+  "procedure_code": "SN066A",
+  "condition": "Decompressive Craniectomy",
+  "procedure_name": "Craniectomy/DECRA for Head injury/Acute Stroke/Cerebral Venous thrombosis",
+  "specialty": "Neurosurgery",
+  "version": null,
+  "source_files": [
+    "Decompressive craniectomy_Medco.pdf",
+    "Decompressive craniectomy_PPD.CPD.pdf"
+  ],
+  "alos": "14 days",
+  "min_doctor_qualification": [
+    "MCH/DNB/ (Neurosurgery)"
+  ],
+  "clinical_indications": [
+    "Traumatic Brain Injury.",
+    "Acute Stroke.",
+    "Cerebellar Infarction",
+    "Cerebral Venous thrombosis."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_vitals_exam_planned_treatment",
+        "label": "Clinical notes including history, vitals, physical examination findings with planned line of treatment"
+      },
+      {
+        "key": "dsa_report",
+        "label": "DSA Report"
+      },
+      {
+        "key": "ct_mri_report",
+        "label": "CT/MRI report"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers",
+        "label": "Detailed Indoor Case Papers"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / Operative notes"
+      },
+      {
+        "key": "post_op_scar_photo",
+        "label": "Post-Op scar photo"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      },
+      {
+        "key": "copy_of_mlc_fir",
+        "label": "Copy of MLC/FIR (Optional)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes - detailed history, signs & symptoms, indication for procedure",
+        "expected": true
+      },
+      {
+        "q": "Was the DSA report of patient submitted?",
+        "expected": true
+      },
+      {
+        "q": "Was CT/MRI report submitted ?",
+        "expected": true
+      },
+      {
+        "q": "Is the DSA report of patient suggestive of Decompressive Craniectomy ?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers (ICPs) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed Procedure / Operative notes submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is there a detailed discharge summary submitted?",
+        "expected": true
+      },
+      {
+        "q": "Is clinical photograph showing scar ?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "DSA/CT/MRI report not suggestive of Decompressive Craniectomy.",
+    "Clinical notes (history, vitals, physical examination findings with planned line of treatment) not submitted at pre-authorization.",
+    "DSA Report not submitted at pre-authorization.",
+    "CT/MRI report not submitted at pre-authorization.",
+    "Detailed Indoor Case Papers not submitted at claim submission.",
+    "Detailed Procedure / Operative notes not submitted at claim submission.",
+    "Post-Op scar photo not submitted at claim submission.",
+    "Detailed discharge summary not submitted at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Hospital with well-equipped OT & ICU.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Decompressive craniectomy is a neurosurgical procedure in which part of the skull is removed to allow a swelling brain room to expand without being squeezed. It is performed on victims of traumatic brain injury, stroke, Chiari Malformation, and other conditions associated with raised intracranial pressure.",
+      "Symptoms: Loss of consciousness from several minutes to hours. Persistent headache or headache that worsens. Repeated vomiting or nausea. Convulsions or seizures. Dilation of one or both pupils of the eyes. Clear fluids draining from the nose or ears. Inability to awaken from sleep. Weakness or numbness in fingers and toes. Loss of coordination. Confusion, slur words or have difficulty understanding speech. Numbness, weakness or paralysis in the face, arm, or leg.",
+      "Diagnostic: Thorough history and physical examination.",
+      "Diagnostic: Clinical Signs or symptoms.",
+      "Diagnostic: Imaging Modalities – A variety of imaging modalities like DSA, CT/MRI, are used."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

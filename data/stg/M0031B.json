@@ -1,0 +1,156 @@
+{
+  "_comment": "Medical Oncology package M0031B for Relapsed Hodgkin's & Non-Hodgkin's Lymphoma",
+  "stg_id": "M0031B",
+  "procedure_code": "M0031B",
+  "condition": "Relapsed Hodgkin's & Non-Hodgkin's Lymphoma (Adults)",
+  "procedure_name": "CT for Relapsed B-Cell NHL - High Grade (Except Burkitt's & PCNSL) - ICE-R (Ifosfamide, Mesna, Carboplatin, Etoposide, Rituximab)",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Relapsed Hodgkin's & Non-Hodgkin's Lymphoma (Adults).pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "DM (Medical oncology/ Hematology) or equivalent (MD Medicine with experience or Fellowship in Hematology/Medical oncology)"
+  ],
+  "clinical_indications": [
+    "Diffuse large B-cell non-hodgkin's lymphoma; history of Non-hodgkin's lymphoma and previously undergoing treatment for the same (2nd line regimen)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "biopsy_report",
+        "label": "Biopsy report documenting the relapse of HL or NHL and subtype"
+      },
+      {
+        "key": "disease_sites_imaging",
+        "label": "Disease sites – CECT chest +abdomen +Pelvis or PET-CT"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count"
+      },
+      {
+        "key": "liver_renal_function_tests",
+        "label": "Liver and renal function tests"
+      },
+      {
+        "key": "clinical_notes_performance_status",
+        "label": "Clinical notes with performance status and disease sites including extranodal sites"
+      },
+      {
+        "key": "viral_markers",
+        "label": "Viral markers – HbsAg, HCV and HIV"
+      },
+      {
+        "key": "first_line_treatment_details",
+        "label": "Details of first line treatment, number of cycles, last date of chemotherapy, response"
+      }
+    ],
+    "claim": [
+      {
+        "key": "barcode_drugs",
+        "label": "Bar code of the drugs"
+      },
+      {
+        "key": "reports_tests",
+        "label": "Reports of the tests (pathology, radiology, microbiology, hematology, biochemistry, etc.)"
+      },
+      {
+        "key": "discharge_summary_inpatient",
+        "label": "Discharge summary of inpatient department"
+      },
+      {
+        "key": "discharge_summary_daycare",
+        "label": "Discharge summary of day care department"
+      },
+      {
+        "key": "charts_chemotherapy_regimen",
+        "label": "Charts of chemotherapy regimen"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      },
+      {
+        "key": "response_documentation",
+        "label": "Documentation of response after 3 to 4 cycles either with PET-CT or CECT (same as done at diagnosis) and clinical notes"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Was the patient on rituximab based regimen before (for high-grade NHL)?",
+        "expected": true
+      },
+      {
+        "q": "Does the patient have known resistance/refractory to Rituximab? (If yes, alternate regimens should be tried and no rituximab should be used)",
+        "expected": false
+      },
+      {
+        "q": "Is the patient suitable for stem cell transplant or not?",
+        "expected": true
+      },
+      {
+        "q": "Is the patient >70 years old or frail?",
+        "expected": false
+      },
+      {
+        "q": "Has the patient received this specific regimen earlier?",
+        "expected": false
+      },
+      {
+        "q": "Does the patient have renal failure (creatinine clearance less than 50 ml/min)? (Note: This is a carboplatin-based therapy, similar renal considerations apply)",
+        "expected": false
+      },
+      {
+        "q": "Does the patient have poor cardiac function (EF<45%)?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Response after 3 to 4 cycles documented with PET-CT or CECT (same as done at diagnosis) and clinical notes?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "No document to support relapse (biopsy or imaging missing)",
+    "Contraindication (e.g., age >70, frail, prior same regimen, renal failure, poor cardiac function) not addressed",
+    "Incomplete documentation provided",
+    "Patient not previously undergoing treatment for Non-Hodgkin's Lymphoma",
+    "First line treatment details are missing or incomplete",
+    "Response to previous treatment not documented",
+    "Patient was on rituximab based regimen previously, and known resistance/refractory to Rituximab is not addressed for this regimen."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/ Hematologist – for chemotherapy; Radiation Oncologist- for radiation. Essential Medical Infrastructure: Chemotherapy unit/ Ward/ Day care/ Injection room/ LINEAC.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Relapse usually occurs within first 2 years following initial treatment.",
+      "Mostly in patients with advanced disease and less often in early stage disease.",
+      "Treatment mostly comprises of salvage therapy (high dose therapy), autologous stem cell transplantation & Involved site Radiation Therapy (ISRT).",
+      "Relapse categories for diffuse large B cell lymphoma include: (1) those relapsing after complete remission, (2) partial responders with persistent disease, and (3) refractory patients.",
+      "Second line regimen.",
+      "All packages are once in a life-time.",
+      "Protocols for low grade NHL (second line and subsequent lines) are listed in NHL template."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Follow-up care: OPD visits, blood tests, imaging if required, supportive care medications.",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": "Decide referral of cases to the appropriate level of care (as required) for treatment of patients under PMJAY and selection of corresponding Health Benefit Package.",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Elderly (>70 years) and frail",
+      "If patient has received same regimen earlier",
+      "Renal failure (creatinine clearance less than 50 ml/min) – No cisplatin based therapy",
+      "Poor cardiac function (EF<45%)"
+    ]
+  }
+}

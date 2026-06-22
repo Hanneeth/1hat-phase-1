@@ -1,0 +1,91 @@
+{
+  "_comment": "Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/Fracture condyle Humerus ORIF/ : Fracture condyle Humerus ORIF_Medco.pdf (clinical + mandatory docs) + Fracture condyle Humerus ORIF_PPD.CPD .pdf (PPD/CPD processing checklists).",
+  "stg_id": "SB078A",
+  "procedure_code": "SB078A",
+  "condition": "Fracture condyle Humerus",
+  "procedure_name": "ORIF with screw of proximal humerus",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Fracture condyle Humerus ORIF_Medco.pdf",
+    "Fracture condyle Humerus ORIF_PPD.CPD .pdf"
+  ],
+  "alos": "3 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years of experience"
+  ],
+  "clinical_indications": [
+    "Proximal humerus fracture",
+    "Comminuted or displaced proximal humerus fractures",
+    "Proximal humerus fractures where bone would not heal correctly with casting or splinting alone"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_signs_symptoms_evaluation_findings_indication",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure."
+      },
+      {
+        "key": "xray_patient_id_date_side_diagnosis",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right)- confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_procedure_imaging_study_xray",
+        "label": "Post procedure imaging study (Xray)"
+      },
+      {
+        "key": "detailed_procedure_operative_note",
+        "label": "Detailed procedure/operative note"
+      },
+      {
+        "key": "invoice_barcode_implant",
+        "label": "Invoice/barcode of implant"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the clinical notes and x-ray report submitted are indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the clinical notes and x-ray report submitted are indicative of procedure being done?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and x-ray report are not indicative of the proposed procedure at pre-authorization or the procedure being done at claim submission.",
+    "X-ray is missing, not labelled with patient ID, date, or side (Left/Right), or does not confirm the diagnosis at pre-authorization.",
+    "Post-procedure imaging study (X-ray) is missing at claim submission.",
+    "Detailed procedure/operative note is missing or incomplete at claim submission.",
+    "Invoice or barcode of the implant is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/or equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "Open Reduction Internal Fixation (ORIF) of proximal humerus involves the implementation of implants to guide the healing process of a bone, as well as the open reduction, or setting, of the bone.",
+      "It involves fixation of screws and/or plates to enable or facilitate healing.",
+      "Rigid fixation prevents micro-motion across lines of fracture to enable healing and prevent infection when plates are used.",
+      "In a humerus fracture it is important to restore axial alignment and rotation.",
+      "Anatomic reduction and internal fixation follow the principle of reducing the numbers of fragments from 4 to 3, 3 to 2 and 2 to 1 starting distally. Alternatively, a bridging technique may be used.",
+      "If the fragments are big enough and the fracture planes are suitable, the fragments may be reduced and held with lag screws or cerclage."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

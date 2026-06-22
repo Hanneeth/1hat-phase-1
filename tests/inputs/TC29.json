@@ -1,0 +1,109 @@
+{
+  "patient": {
+    "patient_id": "P006"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-26",
+    "bed_category": "ward",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Right flank pain and high-grade fever with rigors for 2 days, on a background of known right kidney stone",
+    "duration_days": 10,
+    "history_of_present_illness": "65-year-old male with a known right renal pelvis calculus (2.2cm, confirmed on NCCT KUB performed 3 weeks prior) presenting with acute onset high-grade fever (39.2°C) and rigors for 2 days, associated with right flank pain and reduced urine output. He was admitted for planned PCNL but developed features of severe urosepsis within 48 hours of admission — fever, tachycardia (HR 108/min), tachypnea (RR 22/min), and elevated WBC (18,200 cells/mcL). Urine culture shows gram-negative bacillus (E. coli) sensitive to meropenem. Blood cultures drawn and pending. Serum creatinine rose from baseline 1.2 mg/dL (at pre-operative workup) to 1.9 mg/dL on day 2 — acute kidney injury superimposed on CKD background. Sepsis team has been engaged: IV meropenem 1g TDS initiated, IV fluids, urology monitoring. The sepsis has NOT progressed to septic shock — blood pressure maintaining above 90mmHg without vasopressors. Sepsis is being managed medically as severe sepsis (organ dysfunction without persistent hypotension). Once sepsis is controlled (expected 3–4 days), PCNL for the right renal stone will be proceeded with during the same hospitalisation. Both the PCNL (surgical procedure for stone) and the severe sepsis management (per-day medical) are being managed during the same hospitalisation period.",
+    "provisional_diagnosis": "(1) Severe urosepsis (obstructive uropathy — right renal pelvis calculus 2.2cm with infection) — acute kidney injury, severe sepsis without shock. (2) Right renal pelvis calculus 2.2cm — PCNL planned once sepsis controlled.",
+    "planned_procedure": "Two-stage same-admission management: (1) Medical management of severe urosepsis — IV antibiotics, fluid resuscitation, monitoring. (2) PCNL (Percutaneous Nephrolithotomy) right kidney for 2.2cm renal pelvis calculus — once sepsis clinically resolved.",
+    "weight_kg": 70.0,
+    "height_cm": 167.0,
+    "vitals": {
+      "bp_systolic_mmhg": 102,
+      "bp_diastolic_mmhg": 66,
+      "pulse_bpm": 108,
+      "spo2_pct": 97,
+      "temperature_f": 102.6,
+      "rr_per_min": 22
+    },
+    "examination_findings": {
+      "general": "Conscious but lethargic. Febrile (39.2°C). Mild pallor. No jaundice. No cyanosis.",
+      "cvs": "S1S2 heard, no murmurs. BP 102/66 mmHg. Tachycardia 108 bpm. Capillary refill 2 seconds.",
+      "rs": "Bilateral vesicular breath sounds. No crepitations.",
+      "abdomen": "Soft. Right costovertebral angle tenderness positive, severe. Right kidney ballotable. No peritoneal signs. Bowel sounds sluggish.",
+      "cns": "Alert. GCS 15/15. No focal deficits.",
+      "local": "No scrotal swelling. No skin rash."
+    },
+    "investigations": [
+      {
+        "type": "ncct_kub",
+        "result_summary": "NCCT KUB (2026-06-05, pre-operative): 2.2cm calculus in right renal pelvis. Mild right hydronephrosis (RPD 12mm). Stone density 1050 HU. Left kidney, ureters, bladder clear. Stone size and renal pelvis location confirm PCNL indication.",
+        "structured_values": [
+          {"parameter": "stone_size_cm", "value": 2.2, "unit": "cm", "flag": "H", "leads": "PCNL indicated — >2cm"},
+          {"parameter": "stone_location", "value": "right renal pelvis", "unit": null, "flag": null, "leads": null},
+          {"parameter": "right_rpd_mm", "value": 12, "unit": "mm", "flag": "H", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-05"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "Day 2 blood results: WBC 18,200 cells/mcL (markedly elevated, left shift). Haemoglobin 11.8 g/dL. Platelets 1.4 lakh/mcL (mild thrombocytopenia). Serum creatinine 1.9 mg/dL (elevated from baseline 1.2 — acute kidney injury, Stage 1 KDIGO). BUN 38 mg/dL. Serum sodium 132 mEq/L (mild hyponatraemia). Lactate 2.8 mmol/L (elevated — tissue hypoperfusion). Procalcitonin 18.4 ng/mL (markedly elevated — bacterial infection). CRP 186 mg/L.",
+        "structured_values": [
+          {"parameter": "WBC", "value": 18200, "unit": "cells/mcL", "flag": "H", "leads": "SIRS criterion met"},
+          {"parameter": "Creatinine_current", "value": 1.9, "unit": "mg/dL", "flag": "H", "leads": "AKI — from baseline 1.2"},
+          {"parameter": "Creatinine_baseline", "value": 1.2, "unit": "mg/dL", "flag": null, "leads": "Pre-operative baseline"},
+          {"parameter": "Lactate_mmol_L", "value": 2.8, "unit": "mmol/L", "flag": "H", "leads": "Elevated — organ dysfunction"},
+          {"parameter": "Procalcitonin_ng_mL", "value": 18.4, "unit": "ng/mL", "flag": "H", "leads": "Bacterial sepsis confirmed"},
+          {"parameter": "HR_bpm", "value": 108, "unit": "bpm", "flag": "H", "leads": "SIRS criterion met"},
+          {"parameter": "RR_per_min", "value": 22, "unit": "/min", "flag": "H", "leads": "SIRS criterion met"},
+          {"parameter": "temperature_celsius", "value": 39.2, "unit": "Celsius", "flag": "H", "leads": "SIRS criterion met"}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-27"
+      },
+      {
+        "type": "urine_culture",
+        "result_summary": "Urine culture (catheter specimen, 2026-06-26): E. coli — significant growth >10^5 CFU/mL. Sensitive to meropenem, piperacillin-tazobactam. Resistant to ciprofloxacin, co-trimoxazole. IV meropenem initiated.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2026-06-27"
+      },
+      {
+        "type": "blood_culture",
+        "result_summary": "Blood cultures drawn on 2026-06-26 (2 sets) — result pending at 48 hours. IV meropenem empirically started pending culture result.",
+        "structured_values": null,
+        "document_available": false,
+        "report_date": null
+      }
+    ],
+    "comorbidities": ["Hypertension", "Chronic Kidney Disease Stage 2"],
+    "past_medical_history": "Hypertension for 8 years on amlodipine. CKD Stage 2 (baseline creatinine 1.2 mg/dL). Prior cataract surgery right eye (2025-08-20). No diabetes. No cardiac illness. Known right renal pelvis calculus on surveillance since 2025.",
+    "past_surgical_history": "Right eye cataract extraction (2025-08-20).",
+    "current_medications": [
+      "Amlodipine 5mg OD",
+      "IV Meropenem 1g TDS (Day 1 — severe urosepsis)",
+      "IV Normal Saline 1L over 4 hours (fluid resuscitation)"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Ex-smoker (quit 15 years ago)",
+      "alcohol": "Non-alcoholic",
+      "diet": "Mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Admission clinical notes with vitals and examination findings", "available": true},
+      {"key": "ncct_kub_report", "label": "NCCT KUB Report (2.2cm right renal pelvis calculus, pre-operative)", "available": true},
+      {"key": "blood_reports", "label": "CBC, RFT, LFT, Coagulation, Procalcitonin, Lactate (Day 2)", "available": true},
+      {"key": "urine_culture_report", "label": "Urine Culture — E. coli sensitive to meropenem", "available": true},
+      {"key": "planned_management_note", "label": "Planned line of management — IV antibiotics for sepsis, PCNL once sepsis resolved", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Karthikeyan R",
+      "registration_number": "TN-09834",
+      "qualification": "MS General Surgery, MCh Urology",
+      "specialty_code": "SU"
+    },
+    "notes": "Dual clinical problem in one admission: (1) Severe urosepsis — 4 SIRS criteria met (fever >38C, HR >90, RR >20, WBC >12000), organ dysfunction (AKI creatinine 1.9 from baseline 1.2, elevated lactate 2.8), source confirmed as right obstructive uropathy with E. coli UTI. No vasopressors required — not septic shock. Managed medically with IV meropenem and fluids. Per-day medical management (severe sepsis) is ongoing. (2) Right renal pelvis calculus 2.2cm — PCNL planned once sepsis controlled, estimated Day 4-5. Both conditions being managed in the same hospitalisation. PM-JAY pre-auth covers the surgical PCNL (SU specialty). PM-JAY combination rules (Section 3.10.3) prohibit simultaneous billing of surgical + per-day medical packages — per-day sepsis management is not separately billable alongside the surgical PCNL package."
+  }
+}

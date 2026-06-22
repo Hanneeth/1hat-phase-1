@@ -1,0 +1,129 @@
+{
+  "stg_id": "M0047B",
+  "procedure_code": "M0047B",
+  "condition": "Acute Lymphoblastic Leukemia",
+  "procedure_name": "CT for Acute Lymphoblastic Leukemia - Induction (Phase I)",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Guidance document for processing PM-JAY packages for Acute Lymphoblastic Leukemia.pdf"
+  ],
+  "alos": "1",
+  "min_doctor_qualification": [
+    "DM (Medical oncology) or equivalent (MD Medicine with experience/Fellowship in Hematology/Medical Oncology)"
+  ],
+  "clinical_indications": [
+    "Diagnosis of B cell/T cell ALL (Standard Risk, High risk, or BCR/ABL positive)"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_complete_history_physical_examinations_indications_plan_of_treatment",
+        "label": "Clinical notes with complete history, physical examinations, indications and plan of treatment"
+      },
+      {
+        "key": "cbc_peripheral_smear_lft_rft_blood_sugar_se_ca_po4_2d_echo",
+        "label": "CBC, peripheral smear, LFT, RFT, Blood sugar, SE, Ca, Po4, 2D-ECHO if age>30 years"
+      },
+      {
+        "key": "peripheral_blood_or_bone_marrow_aspiration_with_immunophenotyping",
+        "label": "Peripheral blood or Bone marrow aspiration with immunophenotyping to confirm the diagnosis as ALL"
+      },
+      {
+        "key": "pb_or_bm_fish_or_pcr_report",
+        "label": "PB or BM- FISH or PCR report (done for only ALL)"
+      },
+      {
+        "key": "viral_markers",
+        "label": "Viral Markers"
+      },
+      {
+        "key": "csf_cytology",
+        "label": "CSF cytology"
+      }
+    ],
+    "claim": [
+      {
+        "key": "barcodes_of_drugs",
+        "label": "Barcodes of the drugs"
+      },
+      {
+        "key": "reports_of_tests",
+        "label": "Reports of the tests (pathology, radiology, microbiology, hematology, biochemistry, etc.)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary of inpatient department and/or day care and/or injection room"
+      },
+      {
+        "key": "treatment_protocol_dates_doses",
+        "label": "Copy of treatment protocol with dates and doses which were delivered at the end of each month"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Patient has previously received an induction package (re-claiming same package)?",
+        "expected": false
+      },
+      {
+        "q": "Patient is elderly, frail, or has multiple comorbidities?",
+        "expected": false
+      },
+      {
+        "q": "Patient is on palliative treatment?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Barcodes of drugs uploaded?",
+        "expected": true
+      },
+      {
+        "q": "Reports of all relevant tests uploaded?",
+        "expected": true
+      },
+      {
+        "q": "Detailed discharge summary uploaded?",
+        "expected": true
+      },
+      {
+        "q": "Copy of treatment protocol with dates and doses delivered at the end of each month uploaded?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Missing clinical notes, treatment plan, or diagnostic reports (CBC, LFT, RFT, Immunophenotyping, FISH/PCR, Viral Markers, CSF cytology) at pre-authorization.",
+    "Diagnosis of ALL not confirmed by required diagnostic documents.",
+    "Patient found to be elderly, frail, or with multiple comorbidities without sufficient justification for intensive treatment.",
+    "Induction package re-claimed for a patient who has already received it.",
+    "Missing drug barcodes or treatment protocol copy at claim submission.",
+    "Patient is undergoing palliative treatment but has been registered for an intensive package."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/Hematologist; Essential Medical Infrastructure: Chemotherapy unit (Day care/Injection room/Ward)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "ALL classification (B or T cell ALL) based on bone marrow or peripheral blood examination.",
+      "Risk stratification considers age, WBC count, and cytogenetics analysis.",
+      "NCG clinical guidelines for Acute Lymphoblastic Leukemia are to be followed.",
+      "Packages are once in lifetime and as a 1st line regimen; same protocol cannot be repeated."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Mandatory parameters to be monitored - CBC, RFT, LFT and infections; Follow-up care: OPD visits, CBC, LFT, RFT, peripheral smear after treatment completion",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Elderly and frail with multiple comorbidities",
+      "Relapsed disease"
+    ]
+  }
+}

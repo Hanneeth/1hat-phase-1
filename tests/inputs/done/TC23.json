@@ -1,0 +1,92 @@
+{
+  "patient": {
+    "patient_id": "P004"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-21",
+    "bed_category": "ward",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Severe right-sided colicky flank pain radiating to the right groin and dysuria for 4 days",
+    "duration_days": 2,
+    "history_of_present_illness": "42-year-old male presenting with a 4-day history of acute-onset right colicky flank pain radiating to the right groin, associated with dysuria and intermittent haematuria. No fever. No prior stone episodes. CT KUB performed on 2026-06-20 reveals a calculus in the right juxtavesical ureter (lower ureter, below the pelvic brim) causing mild right hydroureteronephrosis. Stone is confirmed by posterior acoustic shadow on imaging. Urologist has assessed the stone as amenable to ureteroscopic laser lithotripsy via right ureteroscopy (lower ureteric approach). No evidence of active urinary infection on urine culture performed prior to admission. Patient is from Nagpur (Maharashtra) but currently residing in Chennai for work; he presented directly to this hospital.",
+    "provisional_diagnosis": "Right lower ureteric calculus (juxtavesical segment) with mild right hydroureteronephrosis",
+    "planned_procedure": "Ureteroscopy (URS) + laser lithotripsy, right lower ureter (juxtavesical stone)",
+    "weight_kg": 82.0,
+    "height_cm": 174.0,
+    "vitals": {
+      "bp_systolic_mmhg": 128,
+      "bp_diastolic_mmhg": 82,
+      "pulse_bpm": 88,
+      "spo2_pct": 98,
+      "temperature_f": 98.6,
+      "rr_per_min": 18
+    },
+    "examination_findings": {
+      "general": "Conscious, in mild distress due to pain. No pallor. No jaundice. No fever.",
+      "cvs": "S1S2 heard. No murmurs.",
+      "rs": "Bilateral clear air entry.",
+      "abdomen": "Mild right flank tenderness. Right costovertebral angle tenderness positive. No guarding or rigidity. Bowel sounds normal.",
+      "cns": null,
+      "local": "No external genital abnormality. No scrotal swelling."
+    },
+    "investigations": [
+      {
+        "type": "ct_kub",
+        "result_summary": "Echogenic focus with posterior acoustic shadow identified in the right juxtavesical ureter (lower ureter, below pelvic brim). Mild right hydroureteronephrosis. No stone size measurement documented in the report. No left-sided calculi. Normal bladder.",
+        "structured_values": [
+          {"parameter": "stone_location", "value": "right juxtavesical ureter (lower ureter)", "unit": null, "flag": null, "leads": null},
+          {"parameter": "stone_size_cm", "value": null, "unit": "cm", "flag": "MISSING", "leads": "Stone size not measured in imaging report"}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-20"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "Serum creatinine 1.0 mg/dL (normal). eGFR 78 mL/min/1.73m2. WBC 9,100 cells/mcL (normal). Haemoglobin 14.5 g/dL. INR 1.0. PT 12 sec. APTT 29 sec. Platelets 2.4 lakh/mcL.",
+        "structured_values": [
+          {"parameter": "Creatinine", "value": 1.0, "unit": "mg/dL", "flag": "N", "leads": null},
+          {"parameter": "eGFR", "value": 78, "unit": "mL/min/1.73m2", "flag": "N", "leads": null},
+          {"parameter": "INR", "value": 1.0, "unit": "", "flag": "N", "leads": null},
+          {"parameter": "WBC", "value": 9100, "unit": "cells/mcL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-20"
+      },
+      {
+        "type": "urine_culture",
+        "result_summary": "Urine culture and sensitivity: No growth at 48 hours — sterile. Urine routine: RBCs 10–12/hpf, no pus cells.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2026-06-19"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No prior urological history. No diabetes. No hypertension. No cardiac illness.",
+    "past_surgical_history": null,
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Smoker (5 cigarettes/day)",
+      "alcohol": "Non-alcoholic",
+      "diet": "Mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes", "available": true},
+      {"key": "ct_kub_report", "label": "CT KUB Report (stone in right lower ureter; size not documented)", "available": true},
+      {"key": "blood_reports", "label": "Renal Function Tests, CBC, Coagulation Profile", "available": true},
+      {"key": "urine_culture_report", "label": "Urine Culture and Sensitivity (sterile)", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Anand Subramanian",
+      "registration_number": "TN-14567",
+      "qualification": "MS General Surgery, MCh Urology",
+      "specialty_code": "SU"
+    },
+    "notes": "Stone confirmed in right juxtavesical ureter (lower ureter). CT report confirms calculus by acoustic shadow but stone size measurement was not documented by the radiologist. Active infection excluded on sterile urine culture. URS via right lower ureteric approach planned under spinal anaesthesia. Patient is an interstate portability case (Maharashtra beneficiary, treated in Tamil Nadu)."
+  }
+}

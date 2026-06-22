@@ -1,0 +1,125 @@
+{
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-28",
+    "bed_category": "ward",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Exertional chest pain and breathlessness on moderate activity for 5 months, with two prior episodes of severe right upper quadrant pain over the past 6 months",
+    "duration_days": 14,
+    "history_of_present_illness": "58-year-old male presenting with a 5-month history of CCS Class III exertional angina (chest tightness on walking 200 metres on flat ground, climbing one flight of stairs) and NYHA Class II dyspnoea on exertion. Stress test positive at low workload (Stage 2 Bruce protocol). Coronary angiography performed on 2026-06-20 demonstrated multi-vessel coronary artery disease: (1) LAD — 90% critical proximal stenosis with heavy calcification extending over 3 cm; lesion complexity (SYNTAX score contribution high) makes PTCA technically contraindicated due to risk of dissection and incomplete revascularisation — CABG with LIMA-to-LAD grafting planned. (2) LCx — discrete 80% mid-vessel stenosis, 12mm lesion length, without calcification; suitable for percutaneous coronary intervention with drug-eluting stent (PTCA). (3) RCA — 50% stenosis; haemodynamically non-significant, medical management. Cardiology and cardiac surgery heart team (MDT) decision: Hybrid coronary revascularization — PTCA/DES to LCx first (Day 1–2), followed by CABG to LAD (Day 4–5) in the same admission. This approach avoids double jeopardy of the LAD territory during percutaneous intervention and allows complete revascularisation with the least overall risk. LVEF on echocardiography: 42% (mildly reduced; regional wall motion abnormality in LAD territory). In addition, pre-operative CT chest (obtained for surgical planning) incidentally revealed multiple gallstones (largest 12mm) with mild gallbladder wall thickening of 4.5mm. On direct questioning, the patient reports two episodes of severe right upper quadrant pain radiating to right shoulder over the past 6 months, consistent with biliary colic. General surgery team has reviewed and recommended laparoscopic cholecystectomy during the same admission — planned 48 hours after CABG stabilization (post-CABG Day 2), to prevent acute cholecystitis developing during the mandatory post-CABG anticoagulation period (aspirin + clopidogrel), which would carry extremely high operative risk if cholecystitis occurred as a new emergency.",
+    "provisional_diagnosis": "(1) Multi-vessel CAD — LAD 90% (complex, CABG indicated) + LCx 80% (discrete, PTCA indicated) + RCA 50% (medical). Hybrid revascularization planned: PTCA of LCx + CABG for LAD, same admission. (2) Symptomatic cholelithiasis — multiple gallstones with biliary colic history. Laparoscopic cholecystectomy planned during same admission.",
+    "planned_procedure": "Three procedures in same admission: (1) PTCA with drug-eluting stent to left circumflex (LCx) artery — Day 1 to 2. (2) CABG — LIMA-to-LAD bypass grafting under cardiopulmonary bypass — Day 4 to 5. (3) Laparoscopic cholecystectomy for symptomatic cholelithiasis — Day 7 to 8 (post-CABG stabilization). All three procedures clinically necessary in this admission.",
+    "weight_kg": 76.0,
+    "height_cm": 170.0,
+    "vitals": {
+      "bp_systolic_mmhg": 138,
+      "bp_diastolic_mmhg": 86,
+      "pulse_bpm": 78,
+      "spo2_pct": 98,
+      "temperature_f": 98.4,
+      "rr_per_min": 16
+    },
+    "examination_findings": {
+      "general": "Conscious, cooperative, in no acute distress at rest. No cyanosis. No jaundice. No pedal oedema.",
+      "cvs": "S1S2 heard. No murmurs. Mild S4 gallop at apex. Apex beat at 5th ICS MCL — not displaced. BP 138/86 mmHg bilaterally equal. No carotid bruits.",
+      "rs": "Bilateral vesicular breath sounds. No crepitations.",
+      "abdomen": "Soft. Mild tenderness on deep palpation in right hypochondrium. Murphy's sign equivocal. Liver and spleen not palpable. Bowel sounds normal.",
+      "cns": null,
+      "local": "Peripheral pulses normal bilaterally. No ankle oedema."
+    },
+    "investigations": [
+      {
+        "type": "coronary_angiography",
+        "result_summary": "CAG (2026-06-20): LAD — Critical 90% proximal stenosis. Heavy calcification over 3 cm lesion. SYNTAX score segment contribution 20 (complex). PTCA technically contraindicated — risk of coronary dissection and no-reflow in calcified proximal LAD. CABG with LIMA-LAD recommended. LCx — Discrete 80% mid-vessel stenosis. 12mm lesion. No calcification. TIMI 3 flow. Suitable for PCI with drug-eluting stent (PTCA). RCA — 50% non-critical stenosis. Haemodynamically non-significant. Medical management. LV angiogram: Mildly reduced LVEF 42%, anterior wall hypokinesis. CAG stills and report available.",
+        "structured_values": [
+          {"parameter": "LAD_stenosis_pct", "value": 90, "unit": "%", "flag": "H", "leads": "Critical — CABG indicated, PTCA contraindicated (calcified, complex)"},
+          {"parameter": "LCx_stenosis_pct", "value": 80, "unit": "%", "flag": "H", "leads": "Significant discrete lesion — PTCA/DES indicated"},
+          {"parameter": "RCA_stenosis_pct", "value": 50, "unit": "%", "flag": null, "leads": "Non-haemodynamically significant — medical management"},
+          {"parameter": "LVEF_pct", "value": 42, "unit": "%", "flag": "L", "leads": "Mildly reduced — anterior wall hypokinesis (LAD territory)"}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-20"
+      },
+      {
+        "type": "echocardiography",
+        "result_summary": "2D ECHO (2026-06-18): LVEF 42% (mildly reduced). Anterior wall and anterior septum hypokinesia (LAD territory). No significant valvular disease. No pericardial effusion. LV not significantly dilated. LA normal size. RV normal.",
+        "structured_values": [
+          {"parameter": "LVEF_pct", "value": 42, "unit": "%", "flag": "L", "leads": "Mildly reduced; regional wall motion abnormality LAD territory"},
+          {"parameter": "wall_motion_abnormality", "value": "anterior wall + anterior septum hypokinesia", "unit": null, "flag": "H", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-18"
+      },
+      {
+        "type": "ecg",
+        "result_summary": "12-lead ECG (2026-06-17): Normal sinus rhythm. T-wave inversions in V1–V4 (consistent with anterior ischaemia). Q wave in V1–V2 (possible prior silent MI). No acute ST changes.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2026-06-17"
+      },
+      {
+        "type": "usg_abdomen",
+        "result_summary": "USG Abdomen (2026-06-21, pre-operative CT followed by USG confirmation): Multiple gallstones in gallbladder — largest 12mm. Gallbladder wall thickness 4.5mm (mildly thickened, consistent with chronic cholecystitis). No pericholecystic fluid. CBD 4mm (not dilated). Liver parenchyma normal.",
+        "structured_values": [
+          {"parameter": "gallstone_largest_mm", "value": 12, "unit": "mm", "flag": null, "leads": null},
+          {"parameter": "gb_wall_thickness_mm", "value": 4.5, "unit": "mm", "flag": "H", "leads": "Mildly thickened — chronic cholecystitis"},
+          {"parameter": "CBD_mm", "value": 4, "unit": "mm", "flag": "N", "leads": "Not dilated"}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-21"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "WBC 9,100 cells/mcL (normal). Haemoglobin 13.4 g/dL. Platelets 2.1 lakh/mcL. Serum creatinine 1.0 mg/dL. BUN 18 mg/dL. Total bilirubin 0.9 mg/dL. ALP 68 U/L. AST 32 U/L. ALT 28 U/L. HbA1c 6.1% (mildly elevated — pre-diabetic range). INR 1.0. PT 12 sec. Total cholesterol 218 mg/dL. LDL 142 mg/dL.",
+        "structured_values": [
+          {"parameter": "Haemoglobin", "value": 13.4, "unit": "g/dL", "flag": "N", "leads": null},
+          {"parameter": "Creatinine", "value": 1.0, "unit": "mg/dL", "flag": "N", "leads": null},
+          {"parameter": "INR", "value": 1.0, "unit": "", "flag": "N", "leads": null},
+          {"parameter": "HbA1c_pct", "value": 6.1, "unit": "%", "flag": "N", "leads": "Pre-diabetic, no formal diabetes diagnosis"},
+          {"parameter": "Total_bilirubin", "value": 0.9, "unit": "mg/dL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-22"
+      }
+    ],
+    "comorbidities": ["Hypertension", "Dyslipidaemia"],
+    "past_medical_history": "Hypertension for 6 years on amlodipine. Dyslipidaemia on atorvastatin. Two episodes of right upper quadrant pain over past 6 months (biliary colic, not previously investigated). No diabetes (HbA1c 6.1%, pre-diabetic). No prior cardiac events. No prior surgery.",
+    "past_surgical_history": null,
+    "current_medications": [
+      "Amlodipine 5mg OD",
+      "Atorvastatin 40mg HS",
+      "Aspirin 75mg OD",
+      "Clopidogrel 75mg OD (initiated after CAG)",
+      "Isosorbide Mononitrate 20mg BD",
+      "Metoprolol Succinate 25mg OD"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Ex-smoker (quit 8 years ago, 20 pack-year history)",
+      "alcohol": "Non-alcoholic",
+      "diet": "Mixed"
+    },
+    "family_history": "Father had myocardial infarction at age 62. Elder brother has CAD.",
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes including angina history and biliary colic episodes", "available": true},
+      {"key": "cag_report_with_stills", "label": "Coronary Angiography Report with stills — LAD 90% complex (CABG), LCx 80% discrete (PTCA), RCA 50% (medical)", "available": true},
+      {"key": "echo_report", "label": "2D ECHO Report — LVEF 42%, anterior hypokinesia (LAD territory)", "available": true},
+      {"key": "ecg_report", "label": "12-lead ECG — anterior ischaemic changes V1-V4", "available": true},
+      {"key": "usg_abdomen_report", "label": "USG Abdomen — multiple gallstones 12mm, wall thickening 4.5mm, no CBD dilatation", "available": true},
+      {"key": "blood_reports", "label": "CBC, RFT, LFT, HbA1c, Lipid Profile, Coagulation", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Ramachandran S",
+      "registration_number": "TN-06712",
+      "qualification": "MS General Surgery, MCh CTVS",
+      "specialty_code": "SV"
+    },
+    "notes": "Heart Team decision (MDT — Cardiology + CTVS + General Surgery): HYBRID CORONARY REVASCULARIZATION for multi-vessel CAD. The LAD lesion is complex, calcified, and unsuitable for PTCA — LIMA-LAD CABG is mandatory. The LCx lesion is discrete, non-calcified, and ideal for PTCA/DES — CABG of LCx adds unnecessary surgical risk. Hybrid approach: (1) PTCA with drug-eluting stent to LCx — Day 1-2. (2) CABG (LIMA-to-LAD) — Day 4-5, off-pump or on-pump (intraoperative decision). PTCA of LCx and CABG of LAD are NOT alternative approaches for the same lesion — they are complementary procedures targeting two different coronary vessels. In addition, laparoscopic cholecystectomy for symptomatic cholelithiasis — Day 7-8 of same admission. Rationale: post-CABG dual antiplatelet therapy (aspirin + clopidogrel) would make emergency cholecystitis surgery extremely high-risk; elective lap chole in the same admission prevents this. Consent for all three procedures obtained."
+  }
+}

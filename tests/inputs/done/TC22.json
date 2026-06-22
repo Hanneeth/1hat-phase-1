@@ -1,0 +1,95 @@
+{
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-20",
+    "bed_category": "ward",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Right-sided colicky flank pain and intermittent gross haematuria for 3 months",
+    "duration_days": 5,
+    "history_of_present_illness": "48-year-old male presenting with a 3-month history of right-sided colicky flank pain radiating to the groin, intermittent gross haematuria, and one episode of culture-proven urinary tract infection 5 weeks ago, treated and cleared with antibiotics. NCCT KUB performed on 2026-06-15 reveals a 2.5 cm staghorn calculus in the right renal pelvis with mild right hydronephrosis (RPD 14 mm). Stone burden and location in the renal pelvis make ESWL unsuitable (too large for fragmentation) and ureteroscopy non-applicable (intrarenal location). Urologist has planned right PCNL (Percutaneous Nephrolithotomy) under spinal anaesthesia. Urine culture prior to surgery confirmed sterile.",
+    "provisional_diagnosis": "Right renal pelvis staghorn calculus (2.5 cm) with mild right hydronephrosis",
+    "planned_procedure": "PCNL (Percutaneous Nephrolithotomy) right kidney",
+    "weight_kg": 74.0,
+    "height_cm": 169.0,
+    "vitals": {
+      "bp_systolic_mmhg": 124,
+      "bp_diastolic_mmhg": 78,
+      "pulse_bpm": 74,
+      "spo2_pct": 99,
+      "temperature_f": 98.4,
+      "rr_per_min": 16
+    },
+    "examination_findings": {
+      "general": "Conscious, cooperative, no acute distress. No pallor. No jaundice. No pedal oedema.",
+      "cvs": "S1S2 heard, no murmurs. BP 124/78 mmHg.",
+      "rs": "Bilateral equal air entry, no added sounds.",
+      "abdomen": "Soft abdomen. Right renal angle tenderness present on deep palpation. Right kidney ballotable on bimanual examination. No peritoneal signs. Bowel sounds normal.",
+      "cns": null,
+      "local": "Right costovertebral angle tenderness positive. No scrotal swelling."
+    },
+    "investigations": [
+      {
+        "type": "ncct_kub",
+        "result_summary": "2.5 cm staghorn calculus in right renal pelvis. Mild right hydronephrosis with RPD 14 mm. Right renal parenchyma preserved. No calculi in left kidney, ureter, or bladder. CT Hounsfield density consistent with mixed composition stone.",
+        "structured_values": [
+          {"parameter": "stone_size_cm", "value": 2.5, "unit": "cm", "flag": "H", "leads": null},
+          {"parameter": "right_rpd_mm", "value": 14, "unit": "mm", "flag": "H", "leads": null},
+          {"parameter": "stone_location", "value": "right renal pelvis", "unit": null, "flag": null, "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "Serum creatinine 1.1 mg/dL (normal range 0.7–1.2). BUN 18 mg/dL. eGFR 72 mL/min/1.73m2. WBC 8,800 cells/mcL (normal). Haemoglobin 13.8 g/dL. Platelets 2.2 lakh/mcL. INR 1.0. PT 12.2 sec. APTT 28 sec. Serum sodium 138 mEq/L. Serum potassium 4.1 mEq/L.",
+        "structured_values": [
+          {"parameter": "Creatinine", "value": 1.1, "unit": "mg/dL", "flag": "N", "leads": null},
+          {"parameter": "eGFR", "value": 72, "unit": "mL/min/1.73m2", "flag": "N", "leads": null},
+          {"parameter": "INR", "value": 1.0, "unit": "", "flag": "N", "leads": null},
+          {"parameter": "WBC", "value": 8800, "unit": "cells/mcL", "flag": "N", "leads": null},
+          {"parameter": "Haemoglobin", "value": 13.8, "unit": "g/dL", "flag": "N", "leads": null},
+          {"parameter": "Platelets", "value": 220000, "unit": "cells/mcL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-17"
+      },
+      {
+        "type": "urine_culture",
+        "result_summary": "Urine culture and sensitivity: No growth at 48 hours — sterile. Urine routine: RBCs 12–15/hpf, no pus cells, no casts.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2026-06-16"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "Episode of UTI 5 weeks ago, confirmed sterile on repeat culture prior to surgery. No diabetes. No hypertension. No cardiac illness. No prior history of renal stones.",
+    "past_surgical_history": null,
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Non-smoker",
+      "alcohol": "Occasional",
+      "diet": "Mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes", "available": true},
+      {"key": "ncct_kub_report", "label": "NCCT KUB Report (confirming 2.5 cm right renal pelvis calculus)", "available": true},
+      {"key": "blood_reports", "label": "Renal Function Tests, CBC, Coagulation Profile", "available": true},
+      {"key": "urine_culture_report", "label": "Urine Culture and Sensitivity Report (sterile)", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Karthikeyan R",
+      "registration_number": "TN-09834",
+      "qualification": "MS General Surgery, MCh Urology",
+      "specialty_code": "SU"
+    },
+    "notes": "Pre-anaesthetic fitness obtained. Active infection excluded by sterile urine culture. Stone size 2.5 cm in renal pelvis — ESWL not suitable due to size, URS not applicable due to intrarenal location. Right PCNL planned under spinal anaesthesia with percutaneous access under fluoroscopic guidance."
+  }
+}

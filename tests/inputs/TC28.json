@@ -1,0 +1,99 @@
+{
+  "patient": {
+    "patient_id": "P005"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-26",
+    "bed_category": "ward",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Intermittent right-sided flank pain and microscopic haematuria for 6 weeks",
+    "duration_days": 1,
+    "history_of_present_illness": "35-year-old female presenting with a 6-week history of intermittent right-sided flank pain, dull in character, not radiating, with microscopic haematuria on routine urine examination. No gross haematuria. No fever. No dysuria. No prior stone history. NCCT KUB performed on 2026-06-22 reveals a single 11mm calculus in the right renal mid-pole calyx, with no hydronephrosis. Stone position and size are suitable for Extracorporeal Shock Wave Lithotripsy (ESWL). Urologist has assessed the stone as amenable to ESWL — single session planned. Patient is not pregnant (confirmed on urine beta-hCG negative 2026-06-24). No coagulopathy. Urine culture sterile. No distal ureteric obstruction. Hospital is EHCP registered for ESWL.",
+    "provisional_diagnosis": "Right mid-pole renal calyceal stone, 11mm, suitable for ESWL",
+    "planned_procedure": "Extracorporeal Shock Wave Lithotripsy (ESWL) — right kidney, single session, with or without JJ stent",
+    "weight_kg": 58.0,
+    "height_cm": 158.0,
+    "vitals": {
+      "bp_systolic_mmhg": 118,
+      "bp_diastolic_mmhg": 76,
+      "pulse_bpm": 76,
+      "spo2_pct": 99,
+      "temperature_f": 98.4,
+      "rr_per_min": 16
+    },
+    "examination_findings": {
+      "general": "Conscious, cooperative, no acute distress. No pallor. No jaundice.",
+      "cvs": "S1S2 heard, no murmurs.",
+      "rs": "Bilateral clear air entry.",
+      "abdomen": "Soft. Mild right costovertebral angle tenderness. Bowel sounds normal.",
+      "cns": null,
+      "local": "No external genital abnormality."
+    },
+    "investigations": [
+      {
+        "type": "ncct_kub",
+        "result_summary": "NCCT KUB (2026-06-22): Single calculus measuring 11mm in the right renal mid-pole calyx. Hounsfield density 950 HU (intermediate density — suitable for ESWL). No hydronephrosis. No ureteric calculus. Left kidney, both ureters, and bladder clear. No distal obstruction.",
+        "structured_values": [
+          {"parameter": "stone_size_mm", "value": 11, "unit": "mm", "flag": null, "leads": "Suitable for ESWL (<20mm)"},
+          {"parameter": "stone_location", "value": "right renal mid-pole calyx", "unit": null, "flag": null, "leads": null},
+          {"parameter": "hounsfield_density_HU", "value": 950, "unit": "HU", "flag": null, "leads": "Intermediate — ESWL appropriate"},
+          {"parameter": "hydronephrosis", "value": "absent", "unit": null, "flag": null, "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-22"
+      },
+      {
+        "type": "urine_analysis",
+        "result_summary": "Urine routine: Microscopic haematuria (RBCs 8–10/hpf). No pus cells. No casts. Urine culture (2026-06-21): Sterile — No growth at 48 hours. Urine beta-hCG: Negative (2026-06-24, confirms not pregnant).",
+        "structured_values": [
+          {"parameter": "urine_RBCs_hpf", "value": 10, "unit": "cells/hpf", "flag": "H", "leads": "Microscopic haematuria"},
+          {"parameter": "urine_culture", "value": "sterile", "unit": null, "flag": null, "leads": null},
+          {"parameter": "urine_beta_hCG", "value": "negative", "unit": null, "flag": null, "leads": "Not pregnant — ESWL safe"}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-24"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "Serum creatinine 0.8 mg/dL (normal). eGFR 94 mL/min/1.73m2. WBC 8,200 cells/mcL. Haemoglobin 12.4 g/dL. INR 1.0. PT 11.5 sec. APTT 27 sec. Platelets 2.8 lakh/mcL.",
+        "structured_values": [
+          {"parameter": "Creatinine", "value": 0.8, "unit": "mg/dL", "flag": "N", "leads": null},
+          {"parameter": "INR", "value": 1.0, "unit": "", "flag": "N", "leads": "No coagulopathy"},
+          {"parameter": "Haemoglobin", "value": 12.4, "unit": "g/dL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-23"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No prior stone episodes. No diabetes. No hypertension. No cardiac illness. Prior hospital admissions in this policy year for other conditions (caesarean delivery, gastroenteritis, appendix abscess drainage, cataract surgery).",
+    "past_surgical_history": "Caesarean delivery (2025-06-20), appendicular abscess drainage (2026-01-15, at public empanelled hospital).",
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Non-smoker",
+      "alcohol": "Non-alcoholic",
+      "diet": "Mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes", "available": true},
+      {"key": "ncct_kub_report", "label": "NCCT KUB Report (11mm right mid-pole calyx stone, no hydronephrosis)", "available": true},
+      {"key": "urine_culture_report", "label": "Urine Culture (sterile) and Urine Routine", "available": true},
+      {"key": "pregnancy_test_report", "label": "Urine beta-hCG Negative (not pregnant — ESWL safe)", "available": true},
+      {"key": "blood_reports", "label": "Renal Function Tests, CBC, Coagulation Profile", "available": true},
+      {"key": "ehcp_eswl_registration", "label": "Hospital EHCP Registration Certificate for ESWL", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Anand Subramanian",
+      "registration_number": "TN-14567",
+      "qualification": "MS General Surgery, MCh Urology",
+      "specialty_code": "SU"
+    },
+    "notes": "Single 11mm right mid-pole calyx stone on NCCT KUB. ESWL indicated — stone size <20mm, position amenable, no distal obstruction, no contraindications (not pregnant, no coagulopathy, sterile urine, no pacemaker). Hospital EHCP registered for ESWL. Patient's PM-JAY family wallet has only ₹8,000 remaining for this policy year (substantial prior claims this year). Estimated ESWL package cost ₹20,000 — copayment of approximately ₹12,000 required from patient."
+  }
+}

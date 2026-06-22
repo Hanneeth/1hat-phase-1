@@ -1,0 +1,129 @@
+{
+  "_comment": "Medical Oncology package for Non-Hodgkin Lymphoma",
+  "stg_id": "M0035B",
+  "procedure_code": "M0035B",
+  "condition": "Non-Hodgkin Lymphoma (Adults)",
+  "procedure_name": "CT for Low Grade NHL - Rituximab + Cyclophosphamide + Vincristine + Prednisolone",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Non-Hodgkin Lymphoma (Adults).pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "DM (Medical oncology/ Hematology) or equivalent (MD Medicine with experience or Fellowship in Hematology/Medical oncology)"
+  ],
+  "clinical_indications": [
+    "Mantle cell lymphoma"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "biopsy_bone_marrow_flow_cytometry_report",
+        "label": "Biopsy or bone marrow or peripheral blood flow cytometry report for low grade NHL"
+      },
+      {
+        "key": "evidence_for_indication",
+        "label": "Evidence to support indication of therapy in low grade lymphoma (as in SLL/CLL document)"
+      },
+      {
+        "key": "stage_of_disease",
+        "label": "Stage of disease – CECT chest +abdomen +Pelvis or PET-CT"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count"
+      },
+      {
+        "key": "liver_renal_function_tests",
+        "label": "Liver and renal function tests"
+      },
+      {
+        "key": "clinical_notes_performance_status_disease_sites",
+        "label": "Clinical notes with performance status and disease sites including extranodal sites"
+      },
+      {
+        "key": "viral_markers",
+        "label": "Viral markers – HbsAg, HCV and HIV"
+      }
+    ],
+    "claim": [
+      {
+        "key": "drug_barcode",
+        "label": "Bar code of the drugs"
+      },
+      {
+        "key": "test_reports",
+        "label": "Reports of the tests (pathology, radiology, microbiology, hematology, biochemistry, etc.)"
+      },
+      {
+        "key": "discharge_summary_inpatient",
+        "label": "Discharge summary of inpatient department"
+      },
+      {
+        "key": "discharge_summary_daycare",
+        "label": "Discharge summary of day care department"
+      },
+      {
+        "key": "chemotherapy_regimen_charts",
+        "label": "Charts of chemotherapy regimen"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      },
+      {
+        "key": "response_documentation",
+        "label": "Documentation of response after 3 to 4 cycles either with PET-CT or CECT (same as done at diagnosis) and clinical notes"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is diagnosis uncertain?",
+        "expected": false
+      },
+      {
+        "q": "Is there any contraindication as listed?",
+        "expected": false
+      },
+      {
+        "q": "Is documentation incomplete?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is there no response assessment or progression after 3-4 cycles?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Diagnosis of Non-Hodgkin Lymphoma (Adults) is uncertain.",
+    "No response assessment or progression after 3-4 cycles of treatment.",
+    "Missing biopsy or bone marrow or peripheral blood flow cytometry report for low grade NHL.",
+    "Lack of evidence to support the indication of therapy in low grade lymphoma.",
+    "Incomplete or missing reports for staging (CECT/PET-CT) or routine tests (CBC, LFT, RFT, Viral markers) at pre-authorization.",
+    "Absence of drug barcodes or detailed discharge summary at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/ Hematologist. Essential Medical Infrastructure: Chemotherapy unit/ Ward/ Day care/ Injection room/ LINEAC",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "For low grade lymphomas, package can be repeated as a 2nd line too, depending on duration and patient's general condition at relapse (if there is response to the same regimen earlier and after a gap of more than 1 year. Not permitted more than twice for any patient).",
+      "The indications for therapy in CLL, SLL, FL, Marginal zone lymphoma and other low-grade lymphomas as per the NCG guidelines."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

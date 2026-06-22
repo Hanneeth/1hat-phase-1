@@ -1,0 +1,136 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SM007A",
+  "procedure_code": "SM007A",
+  "condition": "Oral Submucous Fibrosis (OSMF) Treatment",
+  "procedure_name": "Release of fibrous bands & grafting - in (OSMF) treatment under GA (per side)",
+  "specialty": "Oral Maxillo Facial Surgery",
+  "version": "1.1",
+  "source_files": [
+    "Oral Submucous Fibrosis (OSMF) Treatment.pdf"
+  ],
+  "alos": "1-5 days",
+  "min_doctor_qualification": [
+    "MDS (Oral Maxillo-facial surgery)"
+  ],
+  "clinical_indications": [
+    "In Smokers, Tobacco chewers etc."
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "mouth_opening",
+      "operator": "<",
+      "value": "30mm",
+      "note": "Implied by early symptoms (20-30mm) and advanced symptoms (<20mm)"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (detailing signs, symptoms, examination findings, clinical photographs (intraoral & extraoral) indications for doing the procedure & advise for admission)"
+      },
+      {
+        "key": "x_ray",
+        "label": "X-ray: OPG/CBCT/CT/ Lateral Oblique and PA mandible"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Indoor case papers"
+      },
+      {
+        "key": "informed_consent",
+        "label": "Consent (informed written)"
+      },
+      {
+        "key": "procedure_operative_anesthesia_notes",
+        "label": "Procedure note/ operative note & Anesthesia notes"
+      },
+      {
+        "key": "histopathology_report",
+        "label": "Investigation reports (post procedure): Histopathology report showing OSMF to confirm the existence"
+      },
+      {
+        "key": "post_operative_clinical_photograph",
+        "label": "Post-operative clinical photograph (intraoral & extraoral, with maximal interincisal mouth opening)"
+      },
+      {
+        "key": "post_operative_radiological_imaging",
+        "label": "Post-operative radiological imaging (in 2 planes)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes and photographs detail signs, symptoms, examination findings, indications, and advise for admission?",
+        "expected": true
+      },
+      {
+        "q": "X-ray report shows proven OSMF with fibrous growth?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Chief complaints, history, signs, symptoms, and examination reports confirm OSMF?",
+        "expected": true
+      },
+      {
+        "q": "X-Ray and Histopathology reports confirm OSMF?",
+        "expected": true
+      },
+      {
+        "q": "OT notes detail surgical steps and outcomes?",
+        "expected": true
+      },
+      {
+        "q": "Documents show appropriate post-operative care and follow-up advice?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes and photographs are missing or incomplete at pre-authorization, lacking details of signs, symptoms, examination findings, indications, or advise for admission.",
+    "X-ray report is missing at pre-authorization, or does not show proven OSMF with fibrous growth.",
+    "Indoor case papers or informed written consent are missing at claim submission.",
+    "Procedure, operative, or anesthesia notes are missing or incomplete at claim submission.",
+    "Post-procedure histopathology report is missing or does not confirm the existence of OSMF at claim submission.",
+    "Chief complaints, history, signs, symptoms, or examination reports do not confirm the presence of OSMF.",
+    "Post-operative clinical photograph (intraoral & extraoral, with maximal interincisal mouth opening) is missing at claim submission.",
+    "Post-operative radiological imaging (in 2 planes) is missing at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Oral submucous fibrosis (OSMF) is an oral precancerous condition characterized by inflammation and progressive fibrosis of the submucosal tissues resulting in marked rigidity and trismus.",
+      "OSMF classification based on clinical findings: Stage 1: stomatitis, ulcers; Stage 2: Fibrosis in healing vesicles; Stage 3: Leukoplakia, speech and hearing defect.",
+      "Causes: Multifactorial, Local factor (chilies, Areca Nuts), Systemic Factors (Nutritional deficiency, Genetic predisposition, autoimmunity).",
+      "Early Symptoms: Burning sensation, blisters, ulcerations, excessive salivation, defective gustatory sensation, dryness of mouth, mouth opening 20-30mm.",
+      "Advanced Symptoms: Blanched, slightly opaque, white fibrous bands, fixation or shortening of uvula, inability to blow whistle, difficulty in swelling, nasal voice, mouth opening < 20mm.",
+      "Examination findings: Blanching seen on ventral surface of tongue, floor of mouth and restricted movement of tongue, blanching seen over buccal mucosa, decreased mouth opening, soft palate and faucial pillar showing redness, blanching showing shrunken uvula.",
+      "Investigations: X-ray (OPG/CBCT/CT/ Lateral Oblique and PA mandible).",
+      "Further Investigations (on Surgeon's prescriptions): Histopathology (Biopsy report/Special Stains or IHC Markers), Serological Blood Chemistry (Iron, Vitamin B12, ESR, Lipid Profile), Immunofluorescence/Immunohistochemical, Tissue culture."
+    ],
+    "surgical_options": [
+      "Release of fibrous bands & grafting"
+    ],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Difficult to do treatment in cases of Chronic consumption of areca nuts, betel leaf, tobacco chewers etc."
+    ],
+    "complications": [
+      "Recurrence",
+      "Malignancy"
+    ]
+  }
+}

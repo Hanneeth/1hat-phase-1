@@ -1,0 +1,161 @@
+{
+  "_comment": "Medical Oncology package for Hodgkin Lymphoma - ABVD regimen",
+  "stg_id": "M0039B",
+  "procedure_code": "M0039B",
+  "condition": "Hodgkin Lymphoma",
+  "procedure_name": "CT for Hodgkin's Lymphoma (ABVD (doxorubicin-Adriamycin, bleomycin, vinblastin, dacarbazine)) – Only once in life time - first line",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Hodgkin Lymphoma_Medco.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "DM (Medical oncology) or equivalent (MD Medicine with experience/Fellowship in Hematology/Medical Oncology)"
+  ],
+  "clinical_indications": [
+    "First line treatment (Only once in life time)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "lvef",
+      "operator": "<",
+      "value": "45%",
+      "note": "contraindication for ABVD"
+    },
+    {
+      "field": "pft_dlco_restriction",
+      "operator": "is",
+      "value": "moderate",
+      "note": "contraindication for ABVD"
+    },
+    {
+      "field": "age",
+      "operator": ">",
+      "value": "75",
+      "note": "contraindication for ABVD if frail"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (Performance status, Stage, Age, comorbidities, CBC, ESR, LFT,RFT, 2D-ECHO, PFT-DLCo)"
+      },
+      {
+        "key": "biopsy_report",
+        "label": "Biopsy to confirm diagnosis of HL (NLPHL may be given RCHOP if advanced stage and RT alone if stage I disease)"
+      },
+      {
+        "key": "prior_chemotherapy_response",
+        "label": "Any prior chemotherapy and response"
+      },
+      {
+        "key": "pet_ct_cect",
+        "label": "PET-CT (or CECT chest + abdomen and Pelvis+ Bone marrow biopsy- not needed if PET-CT is done)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "drug_barcode",
+        "label": "Bar code of the drugs"
+      },
+      {
+        "key": "test_reports",
+        "label": "Reports of the tests as written above in mandatory documents"
+      },
+      {
+        "key": "discharge_summary_inpatient",
+        "label": "Discharge summary of inpatient department"
+      },
+      {
+        "key": "discharge_summary_daycare",
+        "label": "Discharge summary of day care department"
+      },
+      {
+        "key": "chemotherapy_charts",
+        "label": "Charts of chemotherapy regimen with dates and dose"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      },
+      {
+        "key": "preauthorization_reports",
+        "label": "All the reports as in preauthorization"
+      },
+      {
+        "key": "response_assessment_details",
+        "label": "Response assessment details (both clinical notes and PET-CT)"
+      },
+      {
+        "key": "echo_pft_reports",
+        "label": "Reports of 2DECHO and PFT after 4 cycles in patients receiving ABVD"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Patient has LVEF less than 45%?",
+        "expected": false
+      },
+      {
+        "q": "Patient has PFT and DLCo showing moderate restriction?",
+        "expected": false
+      },
+      {
+        "q": "Patient is above 75 years and frail?",
+        "expected": false
+      },
+      {
+        "q": "Interim PET-CT after 2 cycles shows at least Partial response for reapproval of remaining treatment?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Response assessment details (clinical notes and PET-CT) provided?",
+        "expected": true
+      },
+      {
+        "q": "Reports of 2DECHO and PFT after 4 cycles provided?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes missing or incomplete (Performance status, Stage, Age, comorbidities, CBC, ESR, LFT,RFT, 2D-ECHO, PFT-DLCo)",
+    "Biopsy report confirming diagnosis of HL missing",
+    "PET-CT (or CECT chest + abdomen and Pelvis+ Bone marrow biopsy) report missing or incomplete",
+    "LVEF less than 45%",
+    "PFT and DLCo show moderate restriction",
+    "Patient above 75 years and frail",
+    "Same package re-claimed (ABVD only once in life time)",
+    "Patient not in partial or complete response post 2 cycles for reapproval of remaining treatment",
+    "Reports of 2DECHO and PFT after 4 cycles missing at claim stage",
+    "Incomplete documentation"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/Hematologist/ Radiation Oncologist; Essential Medical Infrastructure: Chemotherapy unit/ Ward/ Day care/ Injection room/ LINEAC",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Interim PET-CT after 2 cycles should show atleast Partial response and then reapproval for the remaining treatment should be given.",
+      "2D-ECHO and PFT with DLCo should be repeated after cycle 4 of ABVD.",
+      "Follow-up care (ABVD): Followed by local RT in case of early stage favorable & early stage unfavorable disease. In case of advanced stage with / without local RT. Repeat PET CT after chemotherapy incase interim PET shows partial response (PR). Follow-up 6 monthly for 5 years and later annually. Thyroid function test/ Breast examination (female patient) annually (for those patients who have received radiation to Neck/ breast region, respectively)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "LVEF less than 45%",
+      "PFT and DLCo shows moderate restriction",
+      "Age >75 years and frail"
+    ]
+  }
+}

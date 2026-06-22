@@ -1,0 +1,98 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB076A",
+  "procedure_code": "SB076A",
+  "condition": "Application of POP casts – POP Slab",
+  "procedure_name": "Application of Traction",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Application of POP casts_Medco.pdf",
+    "Application of POP casts_PPD.CPD.pdf"
+  ],
+  "alos": "Daycare",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years of experience"
+  ],
+  "clinical_indications": [
+    "Adult or pediatric fracture"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure."
+      },
+      {
+        "key": "x_ray_diagnosis",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right)- confirming the diagnosis"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_procedure_x_ray",
+        "label": "Post procedure imaging study (Xray)"
+      },
+      {
+        "key": "detailed_procedure_note",
+        "label": "Detailed procedure/operative note"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were clinical notes with history, signs, symptoms, evaluation findings and indication for procedure submitted?",
+        "expected": true
+      },
+      {
+        "q": "X-ray labelled with patient ID, date and side (Left/Right)- confirming the diagnosis submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the clinical notes and x-ray report submitted are indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Post procedure imaging study (Xray) submitted?",
+        "expected": true
+      },
+      {
+        "q": "Detailed procedure/operative note submitted?",
+        "expected": true
+      },
+      {
+        "q": "Were the clinical notes and x-ray report submitted are indicative of procedure being done?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes (history, signs, symptoms, evaluation findings, or indication for procedure) are missing or incomplete at pre-authorization.",
+    "X-ray report is missing, not labelled with patient ID, date, or side (Left/Right), or does not confirm the diagnosis at pre-authorization.",
+    "Clinical notes and x-ray report submitted at pre-authorization are not indicative of the procedure.",
+    "Post-procedure imaging study (X-ray) is missing at claim submission.",
+    "Detailed procedure/operative note is missing at claim submission.",
+    "Clinical notes and x-ray report submitted at claim are not indicative of the procedure being done."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/or equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "POP Slabs are used to immobilise and hold reductions in the management of adult and pediatric fractures. In this only a part of circumference of limb is incorporated.",
+      "X-ray can be used to confirm the diagnosis."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": "POP slab is prepared by unrolling plaster bandage to a required length or by withdrawing the required length of layers from a plaster dispenser. This may be done with either wet or dry bandages which are folded out on a smooth surface. Average thickness of slabs for strengthening is 12-16 layers. The thickness might be adjusted from patient to patient. Short ends should be discarded because they cannot be held securely when the slab is immersed in water. The slab can be prepared in any width, depending on the needs of the situation. Slabs must be smoothed carefully on a flat surface after they have been soaked. Plaster of Paris slab become supportive in three to five minutes, depending on the water temperature and the thickness.",
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "_comment": "Medical Oncology package for Non-Hodgkin Lymphoma",
+  "stg_id": "M0037C",
+  "procedure_code": "M0037C",
+  "condition": "Non-Hodgkin Lymphoma (Adults)",
+  "procedure_name": "CT for Peripheral T-cell lymphoma - SMILE",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Non-Hodgkin Lymphoma (Adults).pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "DM (Medical oncology/ Hematology) or equivalent (MD Medicine with experience or Fellowship in Hematology/Medical oncology)"
+  ],
+  "clinical_indications": [
+    "Peripheral T-cell lymphoma – NK T cell lymphoma"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "biopsy_report_high_grade_nhl",
+        "label": "Biopsy report for high-grade NHL"
+      },
+      {
+        "key": "stage_of_disease",
+        "label": "Stage of disease – CECT chest +abdomen +Pelvis or PET-CT"
+      },
+      {
+        "key": "complete_blood_count",
+        "label": "Complete blood count"
+      },
+      {
+        "key": "liver_renal_function_tests",
+        "label": "Liver and renal function tests"
+      },
+      {
+        "key": "clinical_notes_performance_status_disease_sites",
+        "label": "Clinical notes with performance status and disease sites including extranodal sites"
+      },
+      {
+        "key": "viral_markers",
+        "label": "Viral markers – HbsAg, HCV and HIV"
+      }
+    ],
+    "claim": [
+      {
+        "key": "drug_barcode",
+        "label": "Bar code of the drugs"
+      },
+      {
+        "key": "test_reports",
+        "label": "Reports of the tests (pathology, radiology, microbiology, hematology, biochemistry, etc.)"
+      },
+      {
+        "key": "discharge_summary_inpatient",
+        "label": "Discharge summary of inpatient department"
+      },
+      {
+        "key": "discharge_summary_daycare",
+        "label": "Discharge summary of day care department"
+      },
+      {
+        "key": "chemotherapy_regimen_charts",
+        "label": "Charts of chemotherapy regimen"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      },
+      {
+        "key": "response_documentation",
+        "label": "Documentation of response after 3 to 4 cycles either with PET-CT or CECT (same as done at diagnosis) and clinical notes"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is diagnosis uncertain?",
+        "expected": false
+      },
+      {
+        "q": "Is there any contraindication as listed?",
+        "expected": false
+      },
+      {
+        "q": "Is documentation incomplete?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Is there no response assessment or progression after 3-4 cycles?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Diagnosis of Non-Hodgkin Lymphoma (Adults) is uncertain.",
+    "No response assessment or progression after 3-4 cycles of treatment.",
+    "Presence of contraindications for SMILE regimen (e.g., Renal dysfunction less than 50 ml/min, Elderly/frail patient).",
+    "Incomplete or missing biopsy report for high-grade NHL at pre-authorization stage.",
+    "Absence of drug barcodes or detailed discharge summary at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/ Hematologist. Essential Medical Infrastructure: Chemotherapy unit/ Ward/ Day care/ Injection room/ LINEAC",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Package for high grade lymphoma - SMILE will be once in life-time and will be in first line therapy."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Renal dysfunction (creatinine clearance less than 50 ml/min) if SMILE is being used",
+      "Elderly (>70 years) and frail – for SMILE to be avoided"
+    ]
+  }
+}

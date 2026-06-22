@@ -1,0 +1,88 @@
+{
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-25",
+    "bed_category": "ward",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Severe anal pain during and after defecation with fresh blood on wiping, persisting for 8 weeks",
+    "duration_days": 1,
+    "history_of_present_illness": "58-year-old male presenting with an 8-week history of severe, knife-like anal pain occurring during defecation and persisting for 30–45 minutes after, associated with fresh blood on toilet paper. He reports increasing fear of defecation leading to voluntary constipation, which worsens the cycle. Conservative management has been attempted for the past 6 weeks: topical glyceryl trinitrate (GTN) 0.2% ointment twice daily and topical diltiazem 2% cream applied perianally — no significant improvement in pain or healing. Colorectal surgeon has examined the patient and confirmed a posterior midline chronic anal fissure with a sentinel skin tag on proctoscopy. The fissure has fibrous edges consistent with chronicity (>6 weeks). Given failure of conservative medical management, surgical intervention is planned: lateral internal sphincterotomy (LIS) under spinal anaesthesia as a day-care procedure.",
+    "provisional_diagnosis": "Chronic posterior midline anal fissure with sentinel tag — failed conservative management",
+    "planned_procedure": "Lateral internal sphincterotomy (LIS) for chronic anal fissure, day care under spinal anaesthesia",
+    "weight_kg": 76.0,
+    "height_cm": 170.0,
+    "vitals": {
+      "bp_systolic_mmhg": 126,
+      "bp_diastolic_mmhg": 80,
+      "pulse_bpm": 74,
+      "spo2_pct": 99,
+      "temperature_f": 98.4,
+      "rr_per_min": 16
+    },
+    "examination_findings": {
+      "general": "Conscious, cooperative, no acute distress. No pallor. No jaundice.",
+      "cvs": "S1S2 heard, no murmurs.",
+      "rs": "Bilateral clear air entry.",
+      "abdomen": "Soft. No tenderness. No hepatosplenomegaly. Bowel sounds normal.",
+      "cns": null,
+      "local": "Perianal examination: Posterior midline anal fissure visible on gentle retraction of buttocks. Sentinel skin tag present at the lower end of the fissure. Fibrous edges — consistent with chronic fissure (>6 weeks duration). Proctoscopy: Posterior midline chronic anal fissure with indurated edges. No internal haemorrhoids. No other anorectal pathology. Digital rectal examination: Not performed due to severe pain; sphincter tone assessed clinically as normal on palpation."
+    },
+    "investigations": [
+      {
+        "type": "proctoscopy",
+        "result_summary": "Proctoscopic examination (2026-06-23): Posterior midline anal fissure with fibrous edges and sentinel skin tag at inferior pole. Chronic fissure — indurated margins. No haemorrhoids, polyps, or other anorectal lesions. Sphincter spasm present. Report available.",
+        "structured_values": [
+          {"parameter": "fissure_location", "value": "posterior midline", "unit": null, "flag": null, "leads": null},
+          {"parameter": "fissure_type", "value": "chronic", "unit": null, "flag": null, "leads": "Fibrous edges, >6 weeks duration"},
+          {"parameter": "sentinel_tag", "value": "present", "unit": null, "flag": null, "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-23"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "WBC 7,900 cells/mcL (normal). Haemoglobin 14.2 g/dL. INR 1.0. PT 12 sec. APTT 28 sec. Blood glucose fasting 94 mg/dL.",
+        "structured_values": [
+          {"parameter": "Haemoglobin", "value": 14.2, "unit": "g/dL", "flag": "N", "leads": null},
+          {"parameter": "INR", "value": 1.0, "unit": "", "flag": "N", "leads": null},
+          {"parameter": "WBC", "value": 7900, "unit": "cells/mcL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-23"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No significant past medical history. No diabetes, hypertension, or cardiac illness. Occasional constipation for past 2 years.",
+    "past_surgical_history": null,
+    "current_medications": [
+      "Topical GTN 0.2% ointment (6 weeks, no improvement)",
+      "Topical Diltiazem 2% cream (6 weeks, no improvement)",
+      "Isabgol husk (fibre supplement)"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Non-smoker",
+      "alcohol": "Non-alcoholic",
+      "diet": "Mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes including failed conservative management history", "available": true},
+      {"key": "proctoscopy_report", "label": "Proctoscopic Findings Report (posterior midline chronic fissure with sentinel tag)", "available": true},
+      {"key": "blood_reports", "label": "CBC, Coagulation Profile, Fasting Blood Glucose", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Prabhakaran V",
+      "registration_number": "TN-11023",
+      "qualification": "MS General Surgery, FRCS",
+      "specialty_code": "SG"
+    },
+    "notes": "Chronic anal fissure confirmed on proctoscopy — posterior midline, fibrous edges, sentinel tag present. Conservative management failed after 6 weeks. Lateral internal sphincterotomy (LIS) planned as day-care surgical procedure. NOTE: PM-JAY code SG031A (Procedure for Fissure in Ano) is reserved for public hospitals only. This patient is presenting to a private empanelled hospital (H001). No non-reserved PM-JAY alternative exists for this surgical procedure. Patient must be informed that PM-JAY coverage for this procedure is available only at public empanelled hospitals, or a USP request must be filed."
+  }
+}

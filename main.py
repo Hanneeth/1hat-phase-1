@@ -382,6 +382,23 @@ def print_summary(output_dict: dict, nearest_match: dict | None = None) -> None:
     else:
         docs_line += ", all in hand ✓"
 
+    # Build docs detail list for TL;DR
+    docs_detail: list[str] = []
+    for doc in output_dict.get("preauth_docs_required", []):
+        key = doc.get("key", "")
+        label = doc.get("label", key)
+        available = doc.get("available", False)
+        criticality = doc.get("criticality", "")
+        if available:
+            status_icon = "✅"
+        elif criticality == "hard_block":
+            status_icon = "🔴"
+        else:
+            status_icon = "🟡"
+        pkg_code = doc.get("package_code")
+        pkg_suffix = f" [{pkg_code}]" if pkg_code else " [universal]"
+        docs_detail.append(f"    {status_icon} {label}{pkg_suffix}")
+
     # Key warning flags (exclude info flags, exclude noisy always-present ones)
     SKIP_FLAGS = {
         "EMERGENCY_PHASE_STUBBED",
@@ -398,6 +415,45 @@ def print_summary(output_dict: dict, nearest_match: dict | None = None) -> None:
     ]
     flags_line = f"Flags: {', '.join(warn_flags)}" if warn_flags else "Flags: none"
 
+    # Build query prediction TL;DR
+    predictions = output_dict.get("query_predictions", [])
+    pred_lines: list[str] = []
+    for pred in predictions:
+        code = pred.get("procedure_code", "?")
+        verdict = pred.get("readiness_verdict", "unknown")
+        summary = pred.get("verdict_summary", "")
+        VERDICT_ICONS = {
+            "ready": "✅",
+            "gaps_present": "🟡",
+            "likely_queried": "🔴",
+            "unknown": "❓",
+        }
+        v_icon = VERDICT_ICONS.get(verdict, "❓")
+        pred_lines.append(f"    {v_icon} {code} — {verdict.upper()}: {summary}")
+
+        llm_status = pred.get("llm_evaluation_status", "unknown")
+        if llm_status != "success":
+            pred_lines.append(
+                f"      ⚠ LLM evaluation {llm_status.upper()} — "
+                f"checklist results unavailable, deterministic checks only"
+            )
+
+        # High risk items
+        high_items: list[str] = []
+        for cr in pred.get("checklist_results", []):
+            if cr.get("risk_level") == "high":
+                high_items.append(f"      ⚠ [CHECKLIST] {cr.get('question', '')}")
+        for qr in pred.get("common_query_risks", []):
+            if qr.get("risk_level") == "high":
+                high_items.append(f"      ⚠ [QUERY RISK] {qr.get('query_text', '')}")
+        pred_lines.extend(high_items)
+
+        # Advisory claim docs (always show, clearly labelled)
+        claim_docs = pred.get("advisory_claim_docs", [])
+        if claim_docs:
+            pred_lines.append(f"\n\n      📋 Claim docs needed at discharge:")
+            for cd in claim_docs:
+                pred_lines.append(f"         • {cd.get('label', cd.get('key', ''))}")
     # Print
     print(f"\n{DIVIDER}")
     print(f"  IRIS RESULT  {icon}  {status}")
@@ -406,7 +462,20 @@ def print_summary(output_dict: dict, nearest_match: dict | None = None) -> None:
         print(potential_line)
     print(f"  {financial_line}")
     print(f"  {docs_line}  |  {flags_line}")
-    print(f"{DIVIDER}\n")
+
+    # Documents detail section
+    if docs_detail:
+        print(f"\n  DOCUMENTS REQUIRED:")
+        for line in docs_detail:
+            print(line)
+
+    # Query prediction section
+    if pred_lines:
+        print(f"\n  QUERY PREDICTION:\n")
+        for line in pred_lines:
+            print(line)
+
+    print(f"\n{DIVIDER}\n")
 
 
 def main() -> None:

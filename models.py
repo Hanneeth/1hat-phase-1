@@ -545,7 +545,47 @@ class EnhancementPlan:
 
 
 # ---------------------------------------------------------------------------
-# 20. IRISOutput
+# 20. ChecklistItemResult
+# ---------------------------------------------------------------------------
+
+@dataclass
+class ChecklistItemResult:
+    question: str
+    expected: bool
+    actual: bool | None
+    risk_level: str
+    reasoning: str
+
+
+# ---------------------------------------------------------------------------
+# 21. CommonQueryRisk
+# ---------------------------------------------------------------------------
+
+@dataclass
+class CommonQueryRisk:
+    query_text: str
+    risk_level: str
+    reasoning: str
+
+
+# ---------------------------------------------------------------------------
+# 22. PackageQueryPrediction
+# ---------------------------------------------------------------------------
+
+@dataclass
+class PackageQueryPrediction:
+    procedure_code: str
+    package_name: str
+    readiness_verdict: str
+    verdict_summary: str
+    checklist_results: list[ChecklistItemResult]
+    common_query_risks: list[CommonQueryRisk]
+    advisory_claim_docs: list[dict]
+    llm_evaluation_status: str = "unknown"
+
+
+# ---------------------------------------------------------------------------
+# 23. IRISOutput
 # ---------------------------------------------------------------------------
 
 @dataclass
@@ -575,6 +615,7 @@ class IRISOutput:
     blocked_candidates: list[dict] = field(default_factory=list)  # {procedure_code, reason_code, message}
     preauth_docs_required: list[DocumentItem] = field(default_factory=list)
     preauth_docs_missing: list[DocumentItem] = field(default_factory=list)
+    query_predictions: list[PackageQueryPrediction] = field(default_factory=list)
     enhancement_plan: list[EnhancementPlan] = field(default_factory=list)
     copayment_required: bool = False
     copayment_gap_inr: int | None = None

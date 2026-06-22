@@ -30,6 +30,7 @@ REQUIRE_STG_FOR_VALIDATION: bool = False  # False = warn; True = block when STG 
 # LLM (Phase 3 STG check only)
 LLM_MODEL: str = "gemini-2.5-flash"
 LLM_TIMEOUT_SECONDS: int = 30
+QUERY_PREDICTOR_TIMEOUT_SECONDS = 90
 LLM_MAX_RETRIES: int = 2
 
 # Age thresholds

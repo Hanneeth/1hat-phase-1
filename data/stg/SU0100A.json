@@ -1,0 +1,107 @@
+{
+  "stg_id": "SU0100A",
+  "procedure_code": "SU0100A",
+  "condition": "Torsion of Testis",
+  "procedure_name": "Torsion of testis",
+  "specialty": "Urology",
+  "version": "1.1",
+  "source_files": [
+    "Torsion of testis_Medco.pdf",
+    "Torsion of testis_PPD.CPD.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MCh (Urology)",
+    "DNB (Urology)"
+  ],
+  "clinical_indications": [
+    "Sudden onset of severe testicular pain not caused by an injury or accident",
+    "Swelling on one side of the scrotum that is painful and visible to the eye",
+    "Visible lump in the testicle",
+    "Almost always affects one testicle, left one is more commonly affected",
+    "Nausea, vomiting, lower abdominal and inguinal pain"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Detailed Clinical notes with history, symptoms, signs, examination findings, indication for procedure and advice for admission"
+      },
+      {
+        "key": "usg_doppler_scrotum",
+        "label": "Other investigations (USG doppler of Scrotum)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "indoor_case_papers",
+        "label": "Detailed indoor case papers clearly indicating the need for performing the procedure"
+      },
+      {
+        "key": "operative_notes",
+        "label": "Detailed Procedure/ Operative notes"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary with follow-up advice"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Are detailed Clinical notes – all vitals, detailed history, symptoms, signs, physical examination including local examination, indication for procedure and advice for admission available?",
+        "expected": true
+      },
+      {
+        "q": "Was the clinical presentation, physical examination ± supporting investigations indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed Indoor Case Papers available?",
+        "expected": true
+      },
+      {
+        "q": "Are detailed operative notes available with indications for the procedure?",
+        "expected": true
+      },
+      {
+        "q": "Is discharge summary available with follow-up advice at the time of discharge?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Detailed clinical notes are missing or incomplete (missing vitals, history, symptoms, signs, physical examination, local examination, indication for procedure, or advice for admission).",
+    "USG doppler of Scrotum report is missing.",
+    "Clinical presentation, physical examination, or supporting investigations are not indicative of the procedure.",
+    "Detailed indoor case papers are missing or do not clearly indicate the need for the procedure.",
+    "Detailed procedure/operative notes are missing or incomplete (missing details on surgical steps or procedure performed).",
+    "Discharge summary is missing or does not include follow-up advice."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Well equipped operation theatre with anaesthesia facility.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Testicular torsion is a serious emergency medical condition which occurs when a testicle rotates, twisting the spermatic cord that brings blood to the scrotum. The reduced blood flow causes sudden and often severe pain and swelling. If the blood supply is not restored within 6 hours, the testicle may have to be surgically removed. Its most common between the ages 12-18 years, but can occur at any age including pre-natal/ perinatal.",
+      "Etiology: Spontaneous, associated with trauma, Bell clapper deformity (congenital abnormality of the processus vaginalis)"
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "diagnostic_methods": [
+      "Physical examination, symptoms and medical history",
+      "Doppler ultrasound of the scrotum",
+      "TWIST scoring system. Higher the score, greater the probability that the patient has torsion. This tool comprises of the following- Hard testis – 2; Swelling – 2; Nausea/vomiting – 1; Absent cremasteric reflex – 1; High riding testis - 1"
+    ]
+  }
+}

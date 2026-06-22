@@ -1,0 +1,167 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "MO043E",
+  "procedure_code": "MO043E",
+  "condition": "Multiple Myeloma",
+  "procedure_name": "CT for MM / Amyloidosis (VMP - Melphalan, Prednisolone, Bortezomib)",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "PM-JAY_Guidance_document_for_processing_PM-JAY_packages_for_Multiple_Myeloma.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "DM (Medical oncology)",
+    "MD Medicine with experience/ Fellowship in Hematology/Medical Oncology"
+  ],
+  "clinical_indications": [
+    "Standard risk; Transplant ineligible"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "neuropathy_grade",
+      "operator": ">",
+      "value": "2",
+      "note": "Bortezomib based regimen should not be used."
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (ECOG-Performance status, comorbidities, prior treatment, response, neuropathy, infections, diagnosis, stage, risk stratification)"
+      },
+      {
+        "key": "investigations_basic",
+        "label": "Investigations: CBC, LFT, RFT, Ca, Viral markers, calculated creatinine clearance"
+      },
+      {
+        "key": "investigations_mm_specific",
+        "label": "Investigations: Beta2 microglobulin, SPEP+IFE, S.FLC assay, Urine Bence Jones Protein (BJP)"
+      },
+      {
+        "key": "investigations_imaging",
+        "label": "Investigations: Skeletal survey, MRI (for cord compression), PET-CT (for solitary plasmacytoma)"
+      },
+      {
+        "key": "investigations_biopsy",
+        "label": "Investigations: Biopsy (if plasmacytoma or amyloidosis)"
+      },
+      {
+        "key": "investigations_bone_marrow",
+        "label": "Investigations: Bone marrow aspiration and biopsy"
+      },
+      {
+        "key": "investigations_fish",
+        "label": "Investigations: FISH"
+      },
+      {
+        "key": "investigations_echo",
+        "label": "Investigations: ECHO (if cardiac comorbidities)"
+      },
+      {
+        "key": "investigations_amyloidosis_additional",
+        "label": "Investigations: Trop-T, NT-Pro BNP, 24-hour urine protein, 2D-ECHO (if amyloidosis)"
+      },
+      {
+        "key": "investigations_poems_ncv",
+        "label": "Investigations: NCV (for POEMS)"
+      },
+      {
+        "key": "treatment_protocol_planned",
+        "label": "Treatment protocol planned"
+      }
+    ],
+    "claim": [
+      {
+        "key": "bar_code_drugs",
+        "label": "Bar code of the drugs"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary (Inpatient/Day care/Injection room)"
+      },
+      {
+        "key": "chemotherapy_regimen_charts",
+        "label": "Charts of chemotherapy regimen"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      },
+      {
+        "key": "pre_auth_documents_verified",
+        "label": "All documents (clinical notes, investigations, treatment protocol) as asked during pre-auth"
+      },
+      {
+        "key": "response_assessment",
+        "label": "Response assessment details after every 3/4th cycle (clinical notes, supporting SPEP/FLC assay)"
+      },
+      {
+        "key": "pet_ct_plasmacytoma",
+        "label": "PET-CT after 4 months (if plasmacytoma)"
+      },
+      {
+        "key": "amyloidosis_response_assessment",
+        "label": "Amyloidosis response assessment (Trop-T, NT-Pro BNP, FLC assay, 24 hour urine protein if abnormal at diagnosis)"
+      },
+      {
+        "key": "follow_up_care_advised",
+        "label": "Follow-up care advised (OPD visits, CBC, RFT, LFT, Ca, SPEP+IFE, FLC assay, imaging)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Patient is elderly and frail for a triple drug regimen?",
+        "expected": false
+      },
+      {
+        "q": "Bortezomib based regimen to be used with existing neuropathy (grade >2)?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Same regimen used in last 6 months without documentation of partial response or absence of disease progression?",
+        "expected": false
+      },
+      {
+        "q": "No response evaluation performed in the last 6 months for repeated packages?",
+        "expected": false
+      },
+      {
+        "q": "Same regimen continued despite documented progressive disease?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Bortezomib based regimen chosen for a patient with neuropathy (grade >2).",
+    "Triple drug regimen chosen for an elderly and frail patient without specific justification.",
+    "Same regimen used in the last 6 months without documentation of partial response or absence of disease progression.",
+    "No response evaluation performed in the last 6 months for repeated packages.",
+    "Same regimen continued despite documented progressive disease.",
+    "Mandatory documents for pre-authorization/claim are incomplete or missing."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/ Hematologist; Essential Medical Infrastructure: Chemotherapy unit/Day care/ Injection room",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "All packages can be repeated provided there is documentation of partial response with regimen and patient had remained without disease progression after that regimen for more than 6 months with no contraindications."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Supportive care: Pain management, Acyclovir, PCP prophylaxis, oral hygiene, nutritional supplements.",
+    "fitness_criteria": null,
+    "comorbidity_management": "Comorbidities (diabetes, cardiac dysfunction, prior history of thromboembolism) should be documented in clinical notes; ECHO may be needed if cardiac comorbidities.",
+    "referral_criteria": "Guidance & clinical decision support tool for deciding referral of cases to the appropriate level of care (as required).",
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Neuropathy (>grade2) – No bortezomib based regimen.",
+      "Elderly and frail – preferably avoid triplets (three drug combination)."
+    ]
+  }
+}

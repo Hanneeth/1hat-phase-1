@@ -1,0 +1,140 @@
+{
+  "stg_id": "M0047C",
+  "procedure_code": "M0047C",
+  "condition": "Acute Lymphoblastic Leukemia",
+  "procedure_name": "CT for Acute Lymphoblastic Leukemia - Maintenance",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Guidance document for processing PM-JAY packages for Acute Lymphoblastic Leukemia.pdf"
+  ],
+  "alos": "1",
+  "min_doctor_qualification": [
+    "DM (Medical oncology) or equivalent (MD Medicine with experience/Fellowship in Hematology/Medical Oncology)"
+  ],
+  "clinical_indications": [
+    "Standard risk patients in complete remission after induction therapy, to be given for 2 years",
+    "High-risk patients in complete remission and no prospect for allogeneic stem cell transplant for 2 years"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "post_induction_remission_blasts",
+      "operator": "<",
+      "value": "5%",
+      "note": "Bone marrow report showing remission (if not repeated post-induction)"
+    },
+    {
+      "field": "maintenance_remission_status",
+      "operator": "is",
+      "value": "In remission",
+      "note": "Patient must be in remission for maintenance therapy"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "documentation_of_induction_dates_and_regimen",
+        "label": "Documentation of induction dates (start and end date along with the name of regimen)"
+      },
+      {
+        "key": "documentation_of_consolidation_dates_and_regimen",
+        "label": "Documentation of consolidation dates (start and end date along with the name of regimen)"
+      },
+      {
+        "key": "remission_status_bm_report",
+        "label": "Remission status – BM report with blast percentage (if in remission post induction it need not be repeated) and date of bone marrow report"
+      },
+      {
+        "key": "cbc_lft_rft",
+        "label": "CBC, LFT, RFT"
+      }
+    ],
+    "claim": [
+      {
+        "key": "barcodes_of_drugs",
+        "label": "Barcodes of the drugs"
+      },
+      {
+        "key": "reports_of_tests",
+        "label": "Reports of the tests (pathology, radiology, microbiology, hematology, biochemistry, etc.)"
+      },
+      {
+        "key": "discharge_summary",
+        "label": "Discharge summary of inpatient department and/or day care and/or injection room"
+      },
+      {
+        "key": "treatment_protocol_dates_doses",
+        "label": "Copy of treatment protocol with dates and doses which were delivered at the end of each month"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Bone marrow report for maintenance package is not available or not in remission?",
+        "expected": false
+      },
+      {
+        "q": "Patient is elderly, frail, or has multiple comorbidities (contraindication for procedure)?",
+        "expected": false
+      },
+      {
+        "q": "Patient is on palliative treatment?",
+        "expected": false
+      },
+      {
+        "q": "Patient is not in remission (contraindication for maintenance)?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Barcodes of drugs uploaded?",
+        "expected": true
+      },
+      {
+        "q": "Reports of all relevant tests uploaded?",
+        "expected": true
+      },
+      {
+        "q": "Detailed discharge summary uploaded?",
+        "expected": true
+      },
+      {
+        "q": "Copy of treatment protocol with dates and doses delivered at the end of each month uploaded?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Missing documentation of induction or consolidation dates/regimen for maintenance pre-authorization.",
+    "Remission status (BM report) for maintenance not uploaded or not showing remission.",
+    "Patient is elderly, frail, or with multiple comorbidities (contraindication for intensive treatment).",
+    "Patient is not in remission (contraindication for maintenance).",
+    "Maintenance package re-claimed beyond the 1st line regimen restriction.",
+    "Missing drug barcodes or treatment protocol copy at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/Hematologist; Essential Medical Infrastructure: Chemotherapy unit (Day care/Injection room/Ward)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "ALL classification (B or T cell ALL) based on bone marrow or peripheral blood examination.",
+      "Risk stratification considers age, WBC count, and cytogenetics analysis.",
+      "NCG clinical guidelines for Acute Lymphoblastic Leukemia are to be followed.",
+      "Packages are once in lifetime and as a 1st line regimen; same protocol cannot be repeated."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": "Mandatory parameters to be monitored - CBC, RFT, LFT and infections; Follow-up care: OPD visits, CBC, LFT, RFT, peripheral smear after treatment completion",
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Elderly and frail with multiple comorbidities",
+      "Relapsed disease",
+      "If not in remission"
+    ]
+  }
+}

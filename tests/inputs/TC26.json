@@ -1,0 +1,109 @@
+{
+  "patient": {
+    "patient_id": "P004"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-24",
+    "bed_category": "ward",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Left scrotal heaviness and dragging discomfort for 18 months, evaluated for male infertility",
+    "duration_days": 1,
+    "history_of_present_illness": "42-year-old male presenting with an 18-month history of left-sided scrotal heaviness and mild dragging discomfort, worsening on prolonged standing. He and his wife have been attempting conception for 2 years without success. Infertility workup initiated by their gynaecologist. Semen analysis performed on three separate occasions (2026-04-10, 2026-05-08, 2026-06-01) shows persistent oligospermia — total sperm count 8 million/mL (normal >15 million/mL), motility 32% (reduced), with normal morphology. Hormonal profile (FSH, LH, testosterone) is within normal limits. Scrotal USG with Doppler performed on 2026-06-10 confirms left-sided Grade III varicocele — dilated pampiniform plexus veins measuring up to 4.2mm at rest, with reversal of venous flow on Valsalva manoeuvre. No right-sided varicocele. Both testes normal in size and echotexture. Urologist has assessed the left varicocele as the primary correctable factor contributing to male-factor infertility and has recommended microsurgical varicocelectomy (subinguinal microsurgical approach, Marmar technique) to maximise testicular venous drainage while minimising artery and lymphatic injury. Hospital is EHCP registered for microsurgical procedures.",
+    "provisional_diagnosis": "Left varicocele Grade III (confirmed on Doppler USG) with male-factor infertility — oligospermia attributable to varicocele-induced testicular hyperthermia",
+    "planned_procedure": "Microsurgical varicocelectomy left side (subinguinal approach, operating microscope, Marmar technique)",
+    "weight_kg": 80.0,
+    "height_cm": 175.0,
+    "vitals": {
+      "bp_systolic_mmhg": 124,
+      "bp_diastolic_mmhg": 78,
+      "pulse_bpm": 72,
+      "spo2_pct": 99,
+      "temperature_f": 98.4,
+      "rr_per_min": 16
+    },
+    "examination_findings": {
+      "general": "Conscious, cooperative, no acute distress. Well-nourished adult male. No gynecomastia.",
+      "cvs": "S1S2 heard, no murmurs.",
+      "rs": "Clear bilateral breath sounds.",
+      "abdomen": "Soft, no hepatosplenomegaly. No abdominal mass.",
+      "cns": null,
+      "local": "Genitalia: Right testis and epididymis normal. Left testis normal size (18 mL on USG). On standing: bag of worms sensation palpable in left scrotum superior to testis — Grade III varicocele (visible and palpable at rest). Impulse on Valsalva present. Left testis normally positioned and non-tender."
+    },
+    "investigations": [
+      {
+        "type": "usg_scrotum_doppler",
+        "result_summary": "Scrotal USG with colour Doppler (2026-06-10): LEFT SIDE — Dilated pampiniform plexus veins, diameter 4.2 mm at rest. Colour Doppler shows retrograde venous flow on Valsalva manoeuvre confirming varicocele. Left testicular volume 18 mL (normal). No epididymal cyst or hydrocele. RIGHT SIDE — No varicocele. Right testicular volume 19 mL (normal). Normal echotexture bilaterally. Conclusion: Grade III left varicocele.",
+        "structured_values": [
+          {"parameter": "left_pampiniform_plexus_diam_mm", "value": 4.2, "unit": "mm", "flag": "H", "leads": "Abnormal >3mm"},
+          {"parameter": "retrograde_flow_valsalva", "value": "present", "unit": null, "flag": "H", "leads": null},
+          {"parameter": "varicocele_grade", "value": "III", "unit": null, "flag": null, "leads": "Palpable at rest"},
+          {"parameter": "left_testis_volume_mL", "value": 18, "unit": "mL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-10"
+      },
+      {
+        "type": "semen_analysis",
+        "result_summary": "Semen analysis (third sample, 2026-06-01, 3 days abstinence): Volume 3.2 mL. Total sperm count 8 million/mL (low; normal >15 million/mL). Total motility 32% (reduced; normal >40%). Progressive motility 24%. Normal morphology 6% (Kruger criteria). Conclusion: Oligospermia with reduced motility — male factor infertility.",
+        "structured_values": [
+          {"parameter": "total_sperm_count_million_per_mL", "value": 8, "unit": "million/mL", "flag": "L", "leads": "Normal >15 million/mL"},
+          {"parameter": "total_motility_pct", "value": 32, "unit": "%", "flag": "L", "leads": "Normal >40%"},
+          {"parameter": "normal_morphology_pct", "value": 6, "unit": "%", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-01"
+      },
+      {
+        "type": "hormonal_profile",
+        "result_summary": "FSH 5.2 mIU/mL (normal 1.5–12.4). LH 4.8 mIU/mL (normal 1.7–8.6). Serum Testosterone 420 ng/dL (normal 270–1070). Prolactin normal. Hormonal axis intact — infertility is not of endocrine origin.",
+        "structured_values": [
+          {"parameter": "FSH_mIU_mL", "value": 5.2, "unit": "mIU/mL", "flag": "N", "leads": null},
+          {"parameter": "Testosterone_ng_dL", "value": 420, "unit": "ng/dL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-05-20"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "WBC 7,800 cells/mcL (normal). Haemoglobin 14.8 g/dL. INR 1.0. PT 11.8 sec. APTT 28 sec. Serum creatinine 0.9 mg/dL.",
+        "structured_values": [
+          {"parameter": "Haemoglobin", "value": 14.8, "unit": "g/dL", "flag": "N", "leads": null},
+          {"parameter": "INR", "value": 1.0, "unit": "", "flag": "N", "leads": null},
+          {"parameter": "Creatinine", "value": 0.9, "unit": "mg/dL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-20"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No prior urological history. No prior surgery. No diabetes, hypertension, or cardiac illness. No prior treatment for infertility.",
+    "past_surgical_history": null,
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Non-smoker",
+      "alcohol": "Non-alcoholic",
+      "diet": "Mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes including infertility workup summary", "available": true},
+      {"key": "usg_scrotum_doppler_report", "label": "Scrotal USG with Doppler (Grade III left varicocele confirmed)", "available": true},
+      {"key": "semen_analysis_reports", "label": "Semen Analysis Reports (three samples — oligospermia confirmed)", "available": true},
+      {"key": "hormonal_profile_report", "label": "Hormonal Profile (FSH, LH, Testosterone — normal)", "available": true},
+      {"key": "blood_reports", "label": "CBC, Coagulation Profile, Renal Function Tests", "available": true},
+      {"key": "ehcp_microsurgery_registration", "label": "Hospital EHCP Registration Certificate for Microsurgical Procedures", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Anand Subramanian",
+      "registration_number": "TN-14567",
+      "qualification": "MS General Surgery, MCh Urology",
+      "specialty_code": "SU"
+    },
+    "notes": "Left varicocele Grade III confirmed clinically and on Doppler USG. Infertility workup confirms oligospermia as primary male-factor finding; hormonal axis intact. Microsurgical varicocelectomy (subinguinal, Marmar technique) recommended — preferred approach due to lower recurrence and complication rates compared to non-microsurgical (Palomo/Ivanissevich) technique. Hospital is EHCP registered for microsurgical procedures. Patient is portability case (home state: Maharashtra; treating hospital: Tamil Nadu). Day-care surgical admission planned."
+  }
+}

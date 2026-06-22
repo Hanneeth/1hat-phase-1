@@ -1,0 +1,43 @@
+{
+  "_comment": "Radiation Oncology package for Hodgkin Lymphoma - 2D External Beam RT Simulation & Planning Neoadjuvant",
+  "stg_id": "MR001C",
+  "procedure_code": "MR001C",
+  "condition": "Hodgkin Lymphoma",
+  "procedure_name": "2D External Beam Radiotherapy Simulation & Planning Cost - Neoadjuvant",
+  "specialty": "Radiation Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Hodgkin Lymphoma_RadOnco_Package Details.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "MD / DNB Radiation Oncology or equivalent"
+  ],
+  "clinical_indications": [],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [],
+    "claim": []
+  },
+  "checklist": {
+    "ppd_preauth": [],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Incomplete documentation"
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/Hematologist/ Radiation Oncologist; Essential Medical Infrastructure: Chemotherapy unit/ Ward/ Day care/ Injection room/ LINEAC",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": []
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "SB080A",
+  "procedure_code": "SB080A",
+  "condition": "Spine deformity correction",
+  "procedure_name": "Combined spinal segment- front and back (anterior/posterior/combines anterior and posterior)",
+  "specialty": "Orthopedics",
+  "version": "1.1",
+  "source_files": [
+    "Spine deformity correction_Medco.pdf",
+    "Spine deformity correction_PPD.CPD.pdf"
+  ],
+  "alos": "7 days",
+  "min_doctor_qualification": [
+    "Diploma in Orthopedics with 5 years of experience"
+  ],
+  "clinical_indications": [
+    "Patients with diseases like degenerative disc disease, spinal stenosis or spondylolisthesis etc."
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes_history_symptoms_evaluation_findings_indication",
+        "label": "Clinical notes with history, signs, symptoms, evaluation findings, indication for procedure."
+      },
+      {
+        "key": "xray_labelled_patient_id_date_side_diagnosis",
+        "label": "X-ray labelled with patient ID, date and side (Left/Right)- confirming the diagnosis"
+      },
+      {
+        "key": "pre_operative_clinical_pictures",
+        "label": "Pre operative clinical pictures"
+      }
+    ],
+    "claim": [
+      {
+        "key": "post_procedure_imaging_study_xray",
+        "label": "Post procedure imaging study (Xray)"
+      },
+      {
+        "key": "detailed_procedure_operative_note",
+        "label": "Detailed procedure/operative note"
+      },
+      {
+        "key": "invoice_barcode_of_implant",
+        "label": "Invoice/barcode of implant"
+      },
+      {
+        "key": "post_operative_clinical_pictures",
+        "label": "Post operative clinical pictures"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Were the clinical notes and x-ray report submitted are indicative of procedure?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Were the clinical notes and x-ray report submitted are indicative of procedure being done?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical notes or X-ray report are not indicative of the proposed procedure at pre-authorization.",
+    "Clinical notes or X-ray report are not indicative of the procedure performed at claim submission.",
+    "Missing or incompletely labelled X-ray, or pre-operative clinical pictures not submitted at pre-authorization.",
+    "Missing post-procedure imaging study (X-ray), detailed operative note, implant invoice/barcode, or post-operative clinical pictures at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "None",
+    "min_doctor_qualification_desirable": "MS/DNB/or equivalent in Orthopedics",
+    "clinical_key_pointers": [
+      "It helps achieve stability of the spine by holding it together with the help of screws and rods.",
+      "The aim of the procedure is to fuse the vertebra together in order hold them in position."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [],
+    "procedure_steps": [
+      "Once the skin is cleaned with antiseptic solution and covered in sterile drapes, small incisions are made on the back which becomes the portal of entry to the vertebra.",
+      "Through each incision, a small probe is inserted which is guided all the way to the vertebra with the help of fluoroscopy.",
+      "Once the probe is in position, a tiny guide wire is passed through the probe to the required position on the vertebra. The probe is removed and the pedicle screws are guided along the guide wire to the area where they need to be screwed into.",
+      "Once the screws have been inserted in the required positions, they are connected to each other with the help of rods. This is conducted individually for each vertebra. The purpose of the rods is to hold the screws in position.",
+      "At the same time that the screws and rods are inserted, a bone graft is also placed in order to promote the fusion of the spine.",
+      "Once sufficient has been achieved, the screws and rods will still remain in place as an attempt to remove them can damage the spine."
+    ]
+  }
+}

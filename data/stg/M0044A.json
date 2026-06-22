@@ -1,0 +1,154 @@
+{
+  "_comment": "One file per procedure_code. Distilled from the matching pair in PM JAY/Standard Treatment Guideline/master/<condition>/ : _Medco.pdf (clinical + mandatory docs) + _PPD.CPD.pdf (PPD/CPD processing checklists). Filename = procedure_code. This is what the Documentation Checker, Query Predictor, and Medical Justification agents read AFTER the picker has chosen the code.",
+  "stg_id": "M0044A",
+  "procedure_code": "M0044A",
+  "condition": "Chronic Myeloid Leukemia",
+  "procedure_name": "CT for Chronic Myeloid Leukemia",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "Chronic Myeloid Leukemia.pdf"
+  ],
+  "alos": "daycare",
+  "min_doctor_qualification": [
+    "DM (Medical oncology) or equivalent (MD Medicine with experience/Fellowship in Hematology/Medical Oncology)"
+  ],
+  "clinical_indications": [
+    "Diagnosis and Phase – CML CP/AP/BC",
+    "CBC, Peripheral Smear, Bone marrow aspiration and biopsy (may not be done at all centres), FISH on bone marrow or RT-PCR on peripheral blood or bone marrow, LFT, RFT required for diagnosis",
+    "Dose as per the phase of disease",
+    "Dose may need to be increased based on the response – documentation of time from the start of imatinib and response date, response category (match as per the NCG guidelines)",
+    "Prior therapy if any, details with response"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes (including prior treatment, response to therapy, spleen size on clinical examination)"
+      },
+      {
+        "key": "cbc",
+        "label": "CBC"
+      },
+      {
+        "key": "peripheral_smear",
+        "label": "Peripheral smear"
+      },
+      {
+        "key": "bone_marrow_aspiration_biopsy",
+        "label": "Bone marrow aspiration and biopsy (may not be done at all centres)"
+      },
+      {
+        "key": "cytogenetics_fish_or_rt_pcr",
+        "label": "Conventional cytogenetics or FISH on bone marrow or RT-PCR on peripheral blood or bone marrow"
+      },
+      {
+        "key": "lft",
+        "label": "LFT"
+      },
+      {
+        "key": "rft",
+        "label": "RFT"
+      },
+      {
+        "key": "final_diagnosis_phase",
+        "label": "Final diagnosis and phase"
+      },
+      {
+        "key": "imatinib_response_documentation",
+        "label": "Documentation of time from the start of imatinib and response date, response category (if dose increase is requested)"
+      },
+      {
+        "key": "flow_cytometry_report",
+        "label": "Flow cytometry report (in blast crisis)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "drug_barcode",
+        "label": "Bar code of the drugs"
+      },
+      {
+        "key": "chemotherapy_regimen_charts",
+        "label": "Charts of chemotherapy regimen"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      },
+      {
+        "key": "all_pre_auth_reports",
+        "label": "Reports of all tests (pathology, radiology, microbiology, hematology, biochemistry, etc.) listed for pre-authorization"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Is BCR-ABL report available?",
+        "expected": true
+      },
+      {
+        "q": "Is the patient on palliative care?",
+        "expected": false
+      },
+      {
+        "q": "Does the proposed Imatinib dose (CP-400 mg, AP/BC-600/800 mg) match the documented phase of disease?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Has response monitoring (e.g., BCR-ABL) been done within the last year?",
+        "expected": true
+      },
+      {
+        "q": "Has CBC been done within the last 6 months?",
+        "expected": true
+      },
+      {
+        "q": "Is BCR-ABL increasing over the last 3 visits?",
+        "expected": false
+      },
+      {
+        "q": "In the continuation phase, are TLC rising or platelets below 50,000/cumm without justification?",
+        "expected": false
+      }
+    ]
+  },
+  "common_queries": [
+    "Missing BCR-ABL report at pre-authorization.",
+    "Patient indicated as being on palliative care, which is a contraindication.",
+    "The prescribed Imatinib dose does not match the documented phase of disease.",
+    "Response monitoring (e.g., BCR-ABL) has not been performed for over one year.",
+    "CBC report not available for the last 6 months.",
+    "BCR-ABL level is increasing over the last 3 visits without clinical justification.",
+    "In the continuation phase, TLC is rising or platelets are below 50,000/cumm without clinical justification.",
+    "Incomplete mandatory documents submitted at pre-authorization."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Qualified Medical Oncologist/Hematologist; OPD basis treatment/ May need transfusion in Daycare",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "The National Cancer Grid (NCG) has issued clinical guidelines for Chronic Myeloid Leukemia to be followed in our country.",
+      "This package is given once in lifetime.",
+      "Mandatory parameters to be monitored: CBC, LFT, and RFT.",
+      "Initial therapy: BM FISH and/or cytogenetics at 6 months from the start of Imatinib (if positive, to be repeated at 1 year). The alternative is RQ-PCR on peripheral blood at 6, 12 months.",
+      "Continuation therapy: RQ-PCR on peripheral blood once every 6-12 months.",
+      "Repeat Bone marrow aspiration, cytogenetics and biopsy may be done if RQ-PCR or peripheral smear suggests disease progression.",
+      "Follow-up care: OPD visits at least once in 3 months; CBC, LFT, RFT, and follow-up tests as listed above (Initial therapy - BM FISH and/or cytogenetics at 6 months from the start of Imatinib if positive, to be repeated at 1 year. The alternative is RQ-PCR on peripheral blood at 6, 12 months)."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Progression on therapy"
+    ]
+  }
+}

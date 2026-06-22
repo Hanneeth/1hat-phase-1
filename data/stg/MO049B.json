@@ -1,0 +1,138 @@
+{
+  "stg_id": "MO049B",
+  "procedure_code": "MO049B",
+  "condition": "Acute Promyelocytic Leukemia (High Risk)",
+  "procedure_name": "High Risk Induction Chemotherapy for Acute Promyelocytic Leukemia",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "PMJAY_STG_Acute Myeloid Leukemia & Acute Promyelocytic Leukemia.pdf"
+  ],
+  "alos": "1 day",
+  "min_doctor_qualification": [
+    "DM (Medical oncology) or equivalent (MD Medicine with experience/Fellowship in Hematology/Medical Oncology)"
+  ],
+  "clinical_indications": [
+    "All patients irrespective of age, co-morbidities, poor performance status",
+    "White blood cells >10 x 10^9/L (based on Sanz's Risk Stratification for High Risk)"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "white_blood_cells",
+      "operator": ">",
+      "value": "10 x 10^9/L",
+      "note": "for high risk APML according to Sanz's Risk Stratification"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "peripheral_blood_abnormal_promyelocytes",
+        "label": "Peripheral blood showing abnormal promyelocytes"
+      },
+      {
+        "key": "fish_rtpcr_cytogenetics_pml_rara_confirmation",
+        "label": "FISH/RTPCR or cytogenetics confirmation of PML-RARA or other translocation involving RARA (within first 7 days for preauthorization)"
+      },
+      {
+        "key": "complete_blood_counts",
+        "label": "Complete blood counts"
+      },
+      {
+        "key": "renal_function_tests",
+        "label": "Renal function tests"
+      },
+      {
+        "key": "liver_function_tests",
+        "label": "Liver function tests"
+      },
+      {
+        "key": "ecg",
+        "label": "ECG"
+      },
+      {
+        "key": "coagulation_profile",
+        "label": "Coagulation profile"
+      },
+      {
+        "key": "prior_chemotherapy_treatment",
+        "label": "Prior treatment with chemotherapy (if second time): regimen, dates, response (if applicable)"
+      }
+    ],
+    "claim": [
+      {
+        "key": "barcode_drugs",
+        "label": "Barcode of the drugs"
+      },
+      {
+        "key": "diagnosis_supporting_reports",
+        "label": "Reports of tests supporting diagnosis (pathology, radiology, microbiology, hematology, biochemistry, etc.)"
+      },
+      {
+        "key": "discharge_summary_inpatient",
+        "label": "Discharge summary of inpatient department"
+      },
+      {
+        "key": "discharge_summary_day_care",
+        "label": "Discharge summary of day care department"
+      },
+      {
+        "key": "chemotherapy_regimen_charts",
+        "label": "Charts of chemotherapy regimen"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      },
+      {
+        "key": "periodic_cbc_reports",
+        "label": "Periodic CBC reports (once a week minimum during induction)"
+      },
+      {
+        "key": "all_preauth_documents",
+        "label": "All documents as mentioned in preauthorization"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "FISH/CTG/PCR report for confirmation of APML attached?",
+        "expected": true
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Same package re-claimed within 6 months for APML High Risk Induction?",
+        "expected": false
+      },
+      {
+        "q": "Periodic CBC reports available for induction period?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Confirmation of PML-RARA or other relevant translocation by FISH/RTPCR/cytogenetics missing within 7 days of pre-authorization.",
+    "Peripheral blood showing abnormal promyelocytes not documented.",
+    "Barcode of administered drugs or diagnosis supporting reports missing at claim stage.",
+    "Package re-claimed within 6 months without justification for APML High Risk Induction.",
+    "Patient's risk stratification (high risk) not clearly supported by WBC count."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Qualified Medical Oncologist/hematologist; Chemotherapy unit (Day care and Ward)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "No contra-indications for APML."
+    ]
+  }
+}

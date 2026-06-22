@@ -1,0 +1,177 @@
+{
+  "stg_id": "SN065A",
+  "procedure_code": "SN065A",
+  "condition": "Ventricular Tapping with Omayya Reservoir/External Ventricular Drainage (EVD)",
+  "procedure_name": "Ventricular tapping with Omayya Reservoir/External Ventricular drain",
+  "specialty": "Neurosurgery",
+  "version": null,
+  "source_files": [
+    "Ventricular Tapping with Omayya Reservoir External Ventricular Drainage (EVD).pdf"
+  ],
+  "alos": "14 days",
+  "min_doctor_qualification": [
+    "MCh Neurosurgery",
+    "DNB Neurosurgery"
+  ],
+  "clinical_indications": [
+    "Administration of intrathecal (IT) chemotherapeutic agents for intracranial neoplasms as well as haematological conditions with CNS involvement such as in acute lymphoblastic leukaemia",
+    "Administration of IT antibiotics for chronic relapsing meningitis and multi-drug resistant central nervous system infections.",
+    "Chronic drainage of CSF for infants with intraventricular haemorrhage",
+    "Chronic aspiration of fluid from tumour cysts not amenable to treatment such as craniopharyngiomas",
+    "Administration of opioid pain medications",
+    "Aspiration of residual subdural hematoma or effusion",
+    "Administration of IT drugs such as Nusinersen for spinal muscular atrophy and rituximab for progressive multiple sclerosis (phase 1b study)",
+    "Therapeutic (To relieve raised ICP)",
+    "Hydrocephalus (communicating and non-communicating)",
+    "Surgical Mass lesions",
+    "Infections (pyogenic and tuberculous)",
+    "Chiari Malformations",
+    "Subarachnoid hemorrhage resulting in acute hydrocephalus",
+    "Shunt failure due to mechanical disruption or infection",
+    "Brain relaxation in the OT, etc.",
+    "Intracranial Pressure monitoring",
+    "Vomiting",
+    "Altered sensorium",
+    "Drowsiness",
+    "Seizure",
+    "Generalized tonic colonic convulsions",
+    "Headache"
+  ],
+  "clinical_thresholds": [],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "clinical_notes",
+        "label": "Clinical notes"
+      },
+      {
+        "key": "clinical_evaluation",
+        "label": "Clinical Evaluation"
+      },
+      {
+        "key": "dsa_ct_mri_brain",
+        "label": "DSA/CT/MRI brain"
+      },
+      {
+        "key": "cerebrospinal_fluid_csf_analysis",
+        "label": "Cerebrospinal Fluid (CSF) Analysis"
+      },
+      {
+        "key": "coagulation_profile",
+        "label": "Coagulation Profile"
+      },
+      {
+        "key": "planned_line_of_treatment",
+        "label": "Planned line of treatment"
+      }
+    ],
+    "claim": [
+      {
+        "key": "detailed_indoor_case_papers_icps",
+        "label": "Detailed Indoor case papers (ICPs)"
+      },
+      {
+        "key": "detailed_procedure_operative_notes",
+        "label": "Detailed Procedure / operative notes"
+      },
+      {
+        "key": "post_operative_photographs",
+        "label": "Post-operative photographs (optional)"
+      },
+      {
+        "key": "dsa_ct_brain_preop_post_op",
+        "label": "DSA/CT brain (Preop & Post op)"
+      },
+      {
+        "key": "histopathology_examination",
+        "label": "Histopathology examination"
+      },
+      {
+        "key": "detailed_discharge_summary",
+        "label": "Detailed discharge summary"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Clinical notes including history, symptoms, signs, vitals, examination findings, planned line of treatment and advice for admission?",
+        "expected": true
+      },
+      {
+        "q": "Did the patient present with vomiting, altered sensorium, drowsiness, seizure, generalized tonic-colonic convulsions, headache?",
+        "expected": true
+      },
+      {
+        "q": "Was indication for procedure/surgery documented?",
+        "expected": true
+      },
+      {
+        "q": "Was clinical presentation and imaging indicative of surgery?",
+        "expected": true
+      },
+      {
+        "q": "Was the patient on/presented with/evidence of? On anticoagulation therapy?",
+        "expected": false
+      },
+      {
+        "q": "Was the patient on/presented with/evidence of? Scalp infection?",
+        "expected": false
+      },
+      {
+        "q": "Was the patient on/presented with/evidence of? Brain Abscess?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": [
+      {
+        "q": "Are the detailed ICPs with daily vitals and line of treatment?",
+        "expected": true
+      },
+      {
+        "q": "Are the detailed procedure / Operative Notes available?",
+        "expected": true
+      },
+      {
+        "q": "Is the Discharge summary with follow-up advise at the time of discharge?",
+        "expected": true
+      },
+      {
+        "q": "Was DSA/CT brain pre- and post-surgery report submitted?",
+        "expected": true
+      }
+    ]
+  },
+  "common_queries": [
+    "Clinical presentation and imaging not indicative of surgery.",
+    "Patient presented with or on anticoagulation therapy without sufficient justification.",
+    "Evidence of scalp infection present without sufficient justification.",
+    "Evidence of brain abscess present without sufficient justification.",
+    "Missing clinical notes or clinical evaluation at pre-authorization.",
+    "Missing DSA/CT/MRI brain reports (pre-op) at pre-authorization.",
+    "Missing detailed indoor case papers or operative notes at claim submission.",
+    "Missing pre- and post-op DSA/CT brain reports at claim submission."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Tertiary Hospital with well-equipped OT & ICU.",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "Ommaya reservoir (Ventricular tapping) is a ventricular access device for the purpose of repetitive access to the intrathecal space. This device is named after its inventor, a Pakistani neurosurgeon Ayub Khan Ommaya in 1963.Though initially conceived for delivery of antifungal medications into the cerebrospinal fluid (CSF), this device is commonly used today for chemotherapeutic central nervous system (CNS) delivery and CSF sampling. The Ommaya reservoir has replaced repeated intrathecal injections (via lumbar or suboccipital puncture) in the administration of antineoplastic drug delivery. This device permits repeated administration of chemotherapeutic drugs without doing a lumbar puncture, allows CSF sampling for the dose titration, and provides consistent intrathecal drug concentrations.",
+      "External Ventricular Drains (EVDs) are a temporary system and often emergency or urgent procedure which allow drainage of cerebrospinal fluid (CSF) from the lateral ventricles of the brain in patients with neurological injury or deterioration from progressive hydrocephalus is imminent."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Concurrent use of anticoagulant drugs",
+      "Bleeding disorders",
+      "Scalp infection",
+      "Brain abscess"
+    ]
+  }
+}

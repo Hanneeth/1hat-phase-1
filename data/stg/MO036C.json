@@ -1,0 +1,219 @@
+{
+  "stg_id": "MO036C",
+  "procedure_code": "MO036C",
+  "condition": "Chronic Lymphocytic Leukemia",
+  "procedure_name": "CT for Chronic Lymphocytic Leukemia (Rituximab + Fludarabine + Cyclophosphamide (FCR))",
+  "specialty": "Medical Oncology",
+  "version": "1.1",
+  "source_files": [
+    "PM-JAY_Guidance_document_for_processing_PM-JAY_packages_for_Chronic_Lymphocytic_Leukemia.pdf"
+  ],
+  "alos": "daycare",
+  "min_doctor_qualification": [
+    "DM (Medical oncology) or equivalent (MD Medicine with experience/ Fellowship in Hematology/Medical Oncology)"
+  ],
+  "clinical_indications": [
+    "Presence of B symptoms",
+    "Lymphadenopathy with bulky lymph nodes",
+    "Massive splenomegaly",
+    "Other organ involvement",
+    "Doubling of lymphocyte counts in last 6 months"
+  ],
+  "clinical_thresholds": [
+    {
+      "field": "age",
+      "operator": "<=",
+      "value": "65",
+      "note": "Not to be approved if age >65 years for FCR regimen"
+    },
+    {
+      "field": "performance_status",
+      "operator": "!=",
+      "value": "3/4",
+      "note": "Not to be approved if poor performance status (3/4) for FCR regimen"
+    },
+    {
+      "field": "17p_deletion",
+      "operator": "!=",
+      "value": "present",
+      "note": "Not to give FCR regimen if 17 p deletion is present"
+    },
+    {
+      "field": "lymphocyte_counts_doubling",
+      "operator": "=",
+      "value": "present",
+      "note": "Doubling of lymphocyte counts in last 6 months"
+    }
+  ],
+  "mandatory_documents": {
+    "preauth": [
+      {
+        "key": "complete_blood_counts",
+        "label": "Complete blood counts (to confirm diagnosis of CLL)"
+      },
+      {
+        "key": "flow_cytometry_peripheral_blood_or_bone_marrow",
+        "label": "Flow cytometry (either in peripheral blood or bone marrow- confirming diagnosis of CLL)"
+      },
+      {
+        "key": "lymph_node_biopsy",
+        "label": "Lymph node biopsy (confirming diagnosis of small lymphocytic lymphoma which is the counterpart of CLL and treated like CLL)"
+      },
+      {
+        "key": "performance_status_notes",
+        "label": "Clinical notes (Performance status)"
+      },
+      {
+        "key": "b_symptoms_notes",
+        "label": "Clinical notes (Presence or absence of B symptoms)"
+      },
+      {
+        "key": "lymphadenopathy_size_notes",
+        "label": "Clinical notes (Lymphadenopathy with size)"
+      },
+      {
+        "key": "splenomegaly_size_notes",
+        "label": "Clinical notes (Splenomegaly with size)"
+      },
+      {
+        "key": "comorbidities_notes",
+        "label": "Clinical notes (Comorbidities and indication for therapy)"
+      },
+      {
+        "key": "prior_treatment_cll_notes",
+        "label": "Clinical notes (Prior treatment for CLL (name of regimen, cycles, date of last cycle, response))"
+      },
+      {
+        "key": "renal_function_tests",
+        "label": "Renal function tests"
+      },
+      {
+        "key": "liver_function_tests",
+        "label": "Liver function tests"
+      },
+      {
+        "key": "usg_abdomen_pelvis_or_cect_chest_abdomen_pelvis",
+        "label": "USG abdomen +pelvis or CECT chest+ abdomen+ Pelvis – with evidence of bulky lymph nodes, massive splenomegaly or other organ involvement"
+      },
+      {
+        "key": "previous_3_cbc_reports_lymphocyte_doubling",
+        "label": "Previous 3 CBC reports showing doubling of lymphocyte counts in last 6 months"
+      },
+      {
+        "key": "fish_17p_deletion_report",
+        "label": "FISH-17 p deletion"
+      },
+      {
+        "key": "prior_treatment_details_optional",
+        "label": "Details of prior treatment (optional) : Date of start and the end of therapy, name of the regimen and response to therapy"
+      }
+    ],
+    "claim": [
+      {
+        "key": "drug_barcode",
+        "label": "Bar code of the drugs"
+      },
+      {
+        "key": "reports_of_tests_listed_under_preauthorization",
+        "label": "Reports of the tests (pathology, radiology, microbiology, hematology, biochemistry etc. listed under preauthorization)"
+      },
+      {
+        "key": "discharge_summary_inpatient_department",
+        "label": "Discharge summary of inpatient department"
+      },
+      {
+        "key": "discharge_summary_day_care_department",
+        "label": "Discharge summary of day care department"
+      },
+      {
+        "key": "charts_of_chemotherapy_regimen",
+        "label": "Charts of chemotherapy regimen"
+      },
+      {
+        "key": "transfusion_slips",
+        "label": "Transfusion slips"
+      },
+      {
+        "key": "cbc_before_each_cycle",
+        "label": "CBC before each cycle"
+      },
+      {
+        "key": "response_assessment_cect_thorax_abdomen_pelvis",
+        "label": "Response assessment (CECT Thorax, abdomen, pelvis if baseline presentation was with lymphadenopathy)"
+      },
+      {
+        "key": "response_assessment_cbc_hemoglobin_platelet",
+        "label": "Response assessment (CBC to look for recovery of hemoglobin or platelet count in Rai stage III or IV)"
+      },
+      {
+        "key": "details_of_response_assessment",
+        "label": "Details of response assessment (Showing improvement in hemoglobin, platelet counts, complete blood counts, lymphadenopathy, splenomegaly and symptoms history and clinical examination, organomegaly documented on USG abdomen or pelvis or CECT chest, abdomen and pelvis)"
+      }
+    ]
+  },
+  "checklist": {
+    "ppd_preauth": [
+      {
+        "q": "Flow cytometry or biopsy report available?",
+        "expected": true
+      },
+      {
+        "q": "Indication of therapy written and supported by documentation?",
+        "expected": true
+      },
+      {
+        "q": "FCR regimen selected for patient aged >65 years?",
+        "expected": false
+      },
+      {
+        "q": "FCR regimen selected for patient with abnormal creatinine?",
+        "expected": false
+      },
+      {
+        "q": "FCR regimen selected for patient with poor performance status (3/4)?",
+        "expected": false
+      },
+      {
+        "q": "FCR regimen selected for patient with 17 p deletion?",
+        "expected": false
+      },
+      {
+        "q": "FCR regimen has been used previously (once in a lifetime limit)?",
+        "expected": false
+      }
+    ],
+    "cpd_claim": []
+  },
+  "common_queries": [
+    "Flow cytometry or biopsy report missing.",
+    "Indication for therapy not documented or supporting documents are missing.",
+    "Selection of FCR despite multiple comorbidities.",
+    "Selection of FCR despite abnormal creatinine levels.",
+    "Selection of FCR despite poor performance status (3/4).",
+    "Selection of FCR despite 17 p deletion.",
+    "Prior use of FCR regimen which is permitted once in a lifetime."
+  ],
+  "additional_information": {
+    "icd_10_code": null,
+    "special_empanelment": "Essential Medical Personnel: Qualified Medical Oncologist/ Hematologist; Essential Medical Infrastructure: Chemotherapy unit (Day care/Injection room/Ward)",
+    "min_doctor_qualification_desirable": null,
+    "clinical_key_pointers": [
+      "FCR regimen can be used as first or second line once in a lifetime."
+    ],
+    "surgical_options": [],
+    "pre_op_preparation": null,
+    "post_op_care": null,
+    "fitness_criteria": null,
+    "comorbidity_management": null,
+    "referral_criteria": null,
+    "quality_assessment_parameters": [],
+    "contraindications": [
+      "Age >65 years (for FCR)",
+      "Poor performance status (3/4) (for FCR)",
+      "Multiple comorbidities (poorly controlled diabetes) (for FCR)",
+      "Renal dysfunction (for FCR)",
+      "Autoimmune hemolytic anemia (for FCR)",
+      "17 p deletion (for FCR)"
+    ]
+  }
+}

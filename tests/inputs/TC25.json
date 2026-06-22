@@ -1,0 +1,110 @@
+{
+  "patient": {
+    "patient_id": "P006"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-23",
+    "bed_category": "ward",
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Progressive exertional breathlessness and fatigue for 8 months, now limiting daily activities",
+    "duration_days": 10,
+    "history_of_present_illness": "65-year-old male with a known history of rheumatic heart disease (RHD) first diagnosed at age 22. He presents with NYHA class III exertional dyspnea, episodes of orthopnoea, and one syncopal episode 3 months ago. Echocardiography performed on 2026-06-15 reveals severe calcific aortic stenosis (aortic valve area 0.7 cm², mean gradient 52 mmHg, peak jet velocity 4.8 m/s) combined with moderate-to-severe mitral regurgitation (ERO 0.32 cm², vena contracta width 6.2 mm, regurgitant volume 48 mL per beat). Both valves are severely diseased due to longstanding rheumatic disease. Cardiac surgery team has reviewed ECHO findings and planned combined double valve surgery: aortic valve replacement (AVR) with a mechanical prosthesis and mitral valve replacement (MVR) or mitral valve repair under cardiopulmonary bypass. The decision between MVR and mitral valve repair will be made intraoperatively based on valve anatomy. LVEF is 48% (mildly reduced). Pre-operative optimisation with diuretics and cardiac medication has been completed. Pre-anaesthetic fitness: accepted with high anaesthetic risk (ASA III) due to combined valvular disease and reduced LVEF.",
+    "provisional_diagnosis": "Severe calcific aortic stenosis (AVA 0.7 cm², mean gradient 52 mmHg) with moderate-to-severe mitral regurgitation (ERO 0.32 cm²) — rheumatic aetiology, both valves diseased, NYHA class III",
+    "planned_procedure": "Double valve surgery: AVR (aortic valve replacement, mechanical prosthesis) + MVR/repair (mitral valve replacement or repair) under cardiopulmonary bypass",
+    "weight_kg": 68.0,
+    "height_cm": 165.0,
+    "vitals": {
+      "bp_systolic_mmhg": 108,
+      "bp_diastolic_mmhg": 68,
+      "pulse_bpm": 82,
+      "spo2_pct": 97,
+      "temperature_f": 98.2,
+      "rr_per_min": 18
+    },
+    "examination_findings": {
+      "general": "Conscious, mildly dyspnoeic at rest. No pallor. No cyanosis. JVP elevated (3 cm above angle of Louis). Bilateral pedal oedema (1+).",
+      "cvs": "Apex beat displaced — 6th intercostal space, anterior axillary line. Harsh ejection systolic murmur grade 4/6 at aortic area, radiating to carotids (AS). Pansystolic murmur grade 3/6 at apex, radiating to axilla (MR). S2 single (A2 absent due to immobile calcified aortic valve). No S3.",
+      "rs": "Fine bibasal crepitations. Bilateral reduced air entry at bases.",
+      "abdomen": "Soft. Hepatomegaly 2 cm below right costal margin. No ascites.",
+      "cns": null,
+      "local": "No carotid bruits. Peripheral pulses reduced amplitude bilaterally."
+    },
+    "investigations": [
+      {
+        "type": "echocardiography_doppler",
+        "result_summary": "2D ECHO + Doppler (2026-06-15): AORTIC VALVE — Severe calcific aortic stenosis. Aortic valve area (AVA) 0.7 cm² (severe <1.0 cm²). Mean gradient 52 mmHg (severe >40 mmHg). Peak aortic jet velocity 4.8 m/s (severe >4.0 m/s). Valve leaflets heavily calcified, restricted opening. MITRAL VALVE — Moderate-to-severe mitral regurgitation. Effective regurgitant orifice area (ERO) 0.32 cm² (moderate-severe >0.20 cm²). Vena contracta width 6.2 mm (moderate-severe >5 mm). Regurgitant volume 48 mL/beat. Posterior leaflet prolapse with incomplete coaptation. LVEF 48% (mildly reduced). LA severely enlarged (LAD 5.8 cm). LV mildly dilated. No pericardial effusion. Conclusion: Severe AS + moderate-severe MR — both valves diseased, surgical correction indicated.",
+        "structured_values": [
+          {"parameter": "AVA_cm2", "value": 0.7, "unit": "cm2", "flag": "L", "leads": "Severe AS threshold <1.0 cm2"},
+          {"parameter": "mean_gradient_mmHg", "value": 52, "unit": "mmHg", "flag": "H", "leads": "Severe AS threshold >40 mmHg"},
+          {"parameter": "peak_jet_velocity_m_s", "value": 4.8, "unit": "m/s", "flag": "H", "leads": "Severe AS threshold >4.0 m/s"},
+          {"parameter": "ERO_cm2", "value": 0.32, "unit": "cm2", "flag": "H", "leads": "Moderate-severe MR threshold >0.20 cm2"},
+          {"parameter": "vena_contracta_mm", "value": 6.2, "unit": "mm", "flag": "H", "leads": "Moderate-severe MR threshold >5 mm"},
+          {"parameter": "LVEF_pct", "value": 48, "unit": "%", "flag": "L", "leads": null},
+          {"parameter": "LA_diameter_cm", "value": 5.8, "unit": "cm", "flag": "H", "leads": "Severely dilated LA"}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-15"
+      },
+      {
+        "type": "ecg",
+        "result_summary": "12-lead ECG: Normal sinus rhythm. LVH with strain pattern. Broad notched P waves (P mitrale). No acute ischaemic changes.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2026-06-17"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "WBC 8,100 cells/mcL. Haemoglobin 12.9 g/dL. Platelets 1.9 lakh/mcL. Serum creatinine 1.2 mg/dL. BUN 20 mg/dL. INR 1.3 (on warfarin — held 5 days pre-op). PT 15 sec. Total bilirubin 1.1 mg/dL. Serum sodium 138 mEq/L. Potassium 4.2 mEq/L.",
+        "structured_values": [
+          {"parameter": "Haemoglobin", "value": 12.9, "unit": "g/dL", "flag": "N", "leads": null},
+          {"parameter": "Creatinine", "value": 1.2, "unit": "mg/dL", "flag": "N", "leads": null},
+          {"parameter": "INR", "value": 1.3, "unit": "", "flag": "N", "leads": "Warfarin held 5 days pre-op"}
+        ],
+        "document_available": true,
+        "report_date": "2026-06-19"
+      },
+      {
+        "type": "chest_xray",
+        "result_summary": "CXR PA view: Cardiomegaly (CTR 0.58). Prominent pulmonary vasculature. Mild bilateral pulmonary oedema. Aortic valve calcification visible. No pleural effusion.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2026-06-17"
+      }
+    ],
+    "comorbidities": ["Atrial Fibrillation", "Hypertension"],
+    "past_medical_history": "Rheumatic fever in childhood. Known RHD for over 40 years. Atrial fibrillation diagnosed 4 years ago, on warfarin. Hypertension on amlodipine. No prior cardiac surgery. No diabetes.",
+    "past_surgical_history": null,
+    "current_medications": [
+      "Warfarin 5mg OD (held 5 days pre-op)",
+      "Furosemide 40mg BD",
+      "Spironolactone 25mg OD",
+      "Amlodipine 5mg OD",
+      "Digoxin 0.25mg OD"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "Ex-smoker (quit 10 years ago)",
+      "alcohol": "Non-alcoholic",
+      "diet": "Mixed"
+    },
+    "family_history": "Father had rheumatic heart disease.",
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical Notes with NYHA classification and symptom history", "available": true},
+      {"key": "echo_doppler_report", "label": "2D ECHO + Doppler Report (showing both AS and MR with severity parameters)", "available": true},
+      {"key": "ecg_report", "label": "12-lead ECG Report", "available": true},
+      {"key": "blood_reports", "label": "CBC, RFT, LFT, Coagulation Profile", "available": true},
+      {"key": "chest_xray_report", "label": "Chest X-Ray PA View", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Ramachandran S",
+      "registration_number": "TN-06712",
+      "qualification": "MS General Surgery, MCh CTVS",
+      "specialty_code": "SV"
+    },
+    "notes": "Cardiac surgery team plan: Double valve surgery — combined AVR (aortic valve replacement with mechanical prosthesis) and MVR (mitral valve replacement) or mitral valve repair, under median sternotomy and cardiopulmonary bypass. Single valve replacement (AVR alone or MVR alone) is not appropriate as both valves are diseased with significant haemodynamic impact. Warfarin bridged and held 5 days pre-op. Pre-operative optimisation with diuretics completed. High-risk consent obtained."
+  }
+}

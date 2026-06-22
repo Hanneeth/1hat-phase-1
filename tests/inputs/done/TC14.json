@@ -1,14 +1,4 @@
 {
-  "_test_id": "TC14",
-  "_description": "Thermal burns 25% TBSA mixed 2nd-3rd degree from LPG explosion. Tests BM specialty matching, correct package for TBSA range, MLC requirement (accidental burn), and document gap analysis (burns photo with Rule of 9 chart mandatory).",
-  "_expected_status": "CONDITIONAL",
-  "_expected_specialty": "BM",
-  "_expected_flags_include": [
-    "CANDIDATES_GENERATED"
-  ],
-  "_expected_flags_may_include": [
-    "MANDATORY_DOCS_MISSING"
-  ],
   "session_id": "IRIS-TC14-20260612",
   "created_at": "2026-06-12T16:00:00+05:30",
   "patient": {
