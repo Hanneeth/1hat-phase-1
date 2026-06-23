@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 # pyrefly: ignore [missing-import]
 from google import genai
-from config import LLM_MODEL, LLM_TIMEOUT_SECONDS, LLM_MAX_RETRIES
+from config import LLM_MODEL, LLM_TIMEOUT_SECONDS, LLM_MAX_RETRIES, QUERY_PREDICTOR_TIMEOUT_SECONDS
 from models import ChecklistItemResult, CommonQueryRisk, PackageQueryPrediction
 from session import IRISSession
 
@@ -320,7 +320,7 @@ def _call_llm_and_parse_prediction(prompt: str, procedure_code: str) -> dict | N
                     max_output_tokens=8192,
                     response_mime_type="application/json",
                     http_options=genai.types.HttpOptions(
-                        timeout=LLM_TIMEOUT_SECONDS * 1000,
+                        timeout=QUERY_PREDICTOR_TIMEOUT_SECONDS * 1000,
                     ),
                 ),
             )
