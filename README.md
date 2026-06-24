@@ -1,13 +1,14 @@
 # IRIS — PM-JAY Pre-Authorisation & Claims Verification Engine
-===========================================================
 
-**IRIS (Intelligence for Rules and Integration of Schemes)** is an advanced, clinical-first validation and package selection engine designed for the Ayushman Bharat PM-JAY national health scheme. In public health administration, pre-authorisation and claim auditing are heavily bottlenecked by manual, error-prone matching of unstructured clinical reports against complex billing packages, Standard Treatment Guidelines (STGs), and financial capping rules. IRIS solves this by integrating a deterministic rules orchestrator with state-of-the-art LLM reasoning (`gemini-2.5-flash`). The engine processes admission data through an 11-phase pre-authorisation pipeline and a 12-step post-discharge claims verification pipeline. It automates patient eligibility routing, conducts semantic package candidate searches, verifies clinical criteria, applies sliding-scale rate deductions, projects wallet sufficiency, and audits discharges to detect clinical or procedural deviations, drafting automated justifications for medical audit reviewers.
+**IRIS (Intelligence for Rules and Integration of Schemes)** is a clinical-first decision and validation engine built for the Ayushman Bharat PM-JAY national health scheme. In public health administration, pre-authorisation and claim auditing are heavily bottlenecked by manual, error-prone matching of unstructured clinical reports against complex billing packages, Standard Treatment Guidelines (STGs), and financial capping rules.
+
+IRIS solves this by integrating a deterministic rules orchestrator with state-of-the-art LLM reasoning (`gemini-2.5-flash`). The engine processes admission data through an 11-phase pre-authorisation pipeline and a 13-step claims verification pipeline. It automates patient eligibility routing, conducts semantic package candidate searches, verifies clinical criteria, applies sliding-scale rate deductions, projects wallet sufficiency, and audits discharges to detect clinical or procedural deviations, drafting automated justifications for medical audit reviewers.
 
 ---
 
 ## 1. Setup & Installation
 
-IRIS requires **Python 3.11+** to support modern static typing and dataclass features.
+IRIS is built to run on **Python 3.11+** for modern typing support.
 
 ### Step-by-Step Installation
 
@@ -69,7 +70,7 @@ The pre-authorisation entry point is [main.py](file:///e:/Code/1hat-phase1/main.
 *   **Outputs:** Standard JSON output containing the pre-auth readiness status, selected package lists, missing documents checklist, estimated rates, and business flags is written to `stdout`. Logging outputs are written to `stderr`.
 
 ### Claims Verification Pipeline (Stage 3)
-The claims verification entry point is [main_claim.py](file:///e:/Code/1hat-phase1/main_claim.py). It accepts a patient discharge summary JSON, compares actual details against the pre-auth approved baseline, runs the 12-step verification rules, and outputs claims audit results.
+The claims verification entry point is [main_claim.py](file:///e:/Code/1hat-phase1/main_claim.py). It accepts a patient discharge summary JSON, compares actual details against the pre-auth approved baseline, runs the 13-step verification rules, and outputs claims audit results.
 
 *   **Run with a discharge JSON file argument:**
     ```powershell
@@ -77,14 +78,26 @@ The claims verification entry point is [main_claim.py](file:///e:/Code/1hat-phas
     ```
 *   **Outputs:** A comprehensive JSON object containing claims statuses, detected deviations, drafted LLM justifications, missing claim documents, partial payments (LAMA/death/referral computations), audit flags, and specialty warnings is written to `stdout`, followed by a formatted clinical summary report block.
 
+### Document Intake Pipeline
+The document intake layer parses unstructured medical files and extracts them into structured clinical JSON matching the target schema.
+
+*   **Execution module:** `intake/intake_runner.py` (via `run_intake(folder_path)`).
+*   **Process flow:**
+    1. Scans the input folder for PDF or DOCX files.
+    2. Extracts text using `pdf_extractor.py` (which tries `pdfplumber` and falls back to pytesseract OCR if text is less than 50 characters) or `docx_extractor.py` (which processes paragraphs and tables).
+    3. Calls `discharge_parser.py` (Gemini-based prompt utilizing a 3-strategy JSON extraction mechanism) to map raw text to the schema.
+    4. Validates target structure, types, and required fields using `schema_validator.py`.
+    5. Saves the parsed dict to `tests/inputs/<case_id>_discharge_parsed.json`.
+
 ### Streamlit Debug Panel
 For interactive execution, live logs, side-by-side verification, and manual clinical entry testing, run the Streamlit dashboard:
 ```powershell
 streamlit run app.py
 ```
 This launches a local web server (usually at `http://localhost:8501`) offering:
-1.  **Test Case Mode**: Select from pre-loaded test cases ([TC01.json](file:///e:/Code/1hat-phase1/tests/inputs/done/TC01.json) to [TC30.json](file:///e:/Code/1hat-phase1/tests/inputs/done/TC30.json)), run them dynamically, inspect phase-by-phase state logs, and see reasons why specific candidates were blocked.
-2.  **Manual Input Mode**: Type raw chief complaints, provisional diagnosis, planned procedures, history of present illness, and vitals to execute candidate selection and check validation rules interactively.
+1.  **Tab 1: Pre-Auth**: Select from pre-loaded test cases (TC01 to TC30), run them dynamically, inspect phase-by-phase state logs, and see reasons why specific candidates were blocked. Includes a Manual Input Mode for typing raw chief complaints, provisional diagnosis, and planned procedures.
+2.  **Tab 2: Claims**: Run claims verification on discharge documents, check cross-consistency validations, view checklist results, and print deviation justifications.
+3.  **Tab 3: About**: Information about the IRIS engine, active version, and model configurations.
 
 ---
 
@@ -113,7 +126,7 @@ IRIS includes a robust automated test runner in [eval.py](file:///e:/Code/1hat-p
 ## 5. Current Implementation Status
 
 ### What Works
-*   **Modular Session-State Container**: [IRISSession](file:///e:/Code/1hat-phase1/session.py) orchestrates and mutates state cleanly across 11 pre-auth phases and 12 claims verification steps.
+*   **Modular Session-State Container**: [IRISSession](file:///e:/Code/1hat-phase1/session.py) orchestrates and mutates state cleanly across 11 pre-auth phases and 13 claims verification steps.
 *   **Accreditation & Eligibility Verification (Phase 0)**: Queries mock databases for patient eligibility verification and hospital empanelment status.
 *   **Dual-Engine Candidate Search (Phase 2)**: Config-driven routing between RapidFuzz token matching and Gemini semantic parsing.
 *   **Clinical STG & Plausibility Engine (Phase 3)**: LLM verification checks clinical documentation against Standard Treatment Guidelines. Missing STGs automatically fallback to an LLM-based clinical plausibility evaluation.
@@ -176,10 +189,3 @@ Located under [llm/](file:///e:/Code/1hat-phase1/llm/):
 *   [query_predictor.py](file:///e:/Code/1hat-phase1/llm/query_predictor.py): Predicts potential queries from medical auditors based on clinical files.
 *   [nearest_match.py](file:///e:/Code/1hat-phase1/llm/nearest_match.py): Finds the closest matching code when the pipeline blocks all candidates.
 *   [cpd_evaluator.py](file:///e:/Code/1hat-phase1/llm/cpd_evaluator.py): Evaluates claims checklist compliance and drafts medical justifications.
-
-### Mock Databases & Test Inputs
-*   [stubs/bis_stub.py](file:///e:/Code/1hat-phase1/stubs/bis_stub.py): Mock patient identity database client reading [dummy_bis.json](file:///e:/Code/1hat-phase1/data/dummy/dummy_bis.json).
-*   [stubs/hem_stub.py](file:///e:/Code/1hat-phase1/stubs/hem_stub.py): Mock hospital empanelment database client reading [dummy_hem.json](file:///e:/Code/1hat-phase1/data/dummy/dummy_hem.json).
-*   [tests/inputs/done/](file:///e:/Code/1hat-phase1/tests/inputs/done/): 30 standardized patient admission test cases ([TC01.json](file:///e:/Code/1hat-phase1/tests/inputs/done/TC01.json) to [TC30.json](file:///e:/Code/1hat-phase1/tests/inputs/done/TC30.json)).
-*   [tests/inputs/TC14_discharge.json](file:///e:/Code/1hat-phase1/tests/inputs/TC14_discharge.json): Reference discharge summary test case for claim verification.
-*   [tests/output/expected_output.json](file:///e:/Code/1hat-phase1/tests/output/expected_output.json): Expected package selections for test cases.

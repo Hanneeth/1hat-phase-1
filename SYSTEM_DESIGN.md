@@ -1,10 +1,10 @@
 # IRIS Pre-Auth & Claim Selection Engine — System Design
 
-This document is the absolute, production-proven source of truth for the architecture, data models, knowledge base schemas, processing pipeline, and LLM integrations of the IRIS pre-authorisation and claim selection engine. All descriptions in this document correspond directly to the actual python codebase.
+This document serves as the absolute, ground-up source of truth for the architecture, data models, knowledge base schemas, processing pipeline, and LLM integrations of the IRIS pre-authorisation and claim selection engine. All descriptions correspond directly to the actual python codebase.
 
 ---
 
-## 1. Pipeline Overview
+## 1. Pipeline Architecture & Overview
 
 The IRIS pipeline is built around a shared, mutable state container: the `IRISSession`. The system processes patient clinical cases in two major stages: **Stage 1 & 2 (Pre-Authorisation)** and **Stage 3 (Claims Verification)**.
 
@@ -54,13 +54,13 @@ flowchart TD
     P5 --> P6[Phase 6: Clinical Exclusions Check]
     P6 --> P7[Phase 7: Comorbidity Absorption]
     P7 --> P8[Phase 8: Special Populations Routing]
-    P8 --> P9
+    P7 --> P9
     
     P9 --> P10
     P10 --> End([IRIS Structured Output JSON])
 ```
 
-1. **Early Exit (Block Flag Check):** After each of Phase 0, Phase 1, Phase 2, and Phase 3, the orchestrator checks `session.has_block_flag()`. If any flag with `severity == "block"` is present, the pipeline immediately halts execution, skips all remaining phases, and jumps to Phase 10 (Output Assembly) to return a `BLOCKED` status.
+1. **Early Exit (Block Flag Check):** After Phase 0, Phase 1, Phase 2, and Phase 3, the orchestrator checks `session.has_block_flag()`. If any flag with `severity == "block"` is present, the pipeline immediately halts execution, skips all remaining phases, and jumps to Phase 10 (Output Assembly) to return a `BLOCKED` status.
 2. **Unspecified Surgical Package (USP) Pathway:** After Phase 3, if `session.validated_packages` is empty (meaning no candidate package passed clinical validation/STG gates), the orchestrator initiates the USP pathway:
    - `session.usp_recommended` is set to `True`.
    - The warning flag `USP_RECOMMENDED` is added to the session.
@@ -71,42 +71,43 @@ flowchart TD
 
 ### Stage 3: Claims Verification Pipeline (Phase 11)
 
-Executed via `main_claim.py` and implemented in `phases/phase11_claim.py`. It runs a 12-step verification process to compare actual discharge data against the approved pre-authorization baseline:
+Implemented in `phases/phase11_claim.py` and run via `main_claim.py`, the claims verification pipeline implements a 13-step verification process to compare actual discharge data against the approved pre-authorization baseline:
 
-1. **Load Claim Context:** Loads pre-auth output dict, checks for selected packages, and pulls active STG details (including indicative Length of Stay (LoS) and specialty HBP shards).
-2. **Check Discharge Summary Completeness:** Evaluates the discharge summary against CAM Annexure 6 criteria for fields (patient/hospital identifiers, treating consultant, diagnosis, procedure, treatment details) and signatures (consultant, PMAM, patient/attendant).
-3. **Build Claim Docs List:** Compiles mandatory documents from STGs, HBP shards, implant invoices (if required), and mortality audit reports (if death occurs within 24 hours). Resolves duplicate documents using semantic equivalents mapping (`EQUIVALENT_KEYS`).
-4. **Check Length of Stay (LoS):** Computes actual LoS vs. indicative LoS. Checks if an approved enhancement plan was filed for prolonged stays.
-5. **Detect Deviations:** Flags anomalies including procedure code changes, ward category upgrades/downgrades, doctor registration mismatches, LoS excesses with no enhancement, and urology minor procedure sub-inclusions.
-6. **LLM Evaluation (CPD Checker):** Calls Gemini to evaluate actual findings against the CPD claim checklist and drafts clinical justifications for any detected deviations.
-7. **Compute Special Payment:** Applies partial billing calculations for LAMA/DAMA, death (on-table, within 24h, or post-operative), and referral cases based on per-day bed category rates and HBP guidelines.
-8. **Check Audit Flags:** Triggers flags for stable-in-ICU, prolonged stay, billed days exceeding stay, missing STG documents, unspecified package abuse, and patient cash collection.
-9. **Check SHA Notification:** Verifies if the hospital notified the State Health Authority within 24 hours of LAMA, referral, or death.
-10. **Check Specialty-Specific Guidelines:** Applies rules like BM (Burns management) follow-up photo frequency (days 5, 10, 15, 20) and MC/SV (Cardiology) stent carton sticker verification.
-11. **Compute Claim Status:** Assigns the final claim routing state (`CLAIM_BLOCKED`, `CLAIM_DEVIATION`, `CLAIM_GAPS`, or `CLAIM_READY`).
-12. **Final Assembly:** Packs findings and returns `IRISClaimOutput`.
+*   **Step 0: Cross-consistency checking:** Validates identity mismatch checks (patient PMJAY ID, admitting hospital, treating doctor registration number) and package integrity (comparing pre-auth validated `procedure_code` against discharge `admission.package_booked`). Also performs an LLM-based clinical consistency check to alert on diagnosis or admission type inconsistencies (e.g. elective pre-auth vs. emergency discharge).
+*   **Step 1: Claim context loading:** Reads the pre-auth output dict, checks for selected packages, and pulls active STG details and specialty HBP shards.
+*   **Step 2: Discharge summary completeness check:** Evaluates the discharge summary against CAM Annexure 6 criteria for fields (patient/hospital identifiers, treating consultant, diagnosis, procedure, treatment details) and signatures (consultant, PMAM, patient/attendant).
+*   **Step 3: Required claim documents list building:** Compiles mandatory documents from STGs, HBP shards (as fallback if STG is missing), implant invoices (if required), and mortality audit reports (if death occurs within 24 hours). Resolves duplicate documents using a bidirectional alias-to-canonical checks dictionary (`EQUIVALENT_KEYS`).
+*   **Step 4: Length of Stay (LoS) check:** Computes actual LoS vs. indicative LoS. Checks if an approved enhancement plan was filed for prolonged stays.
+*   **Step 5: Deviation detection:** Flags anomalies including procedure code changes, ward category upgrades/downgrades, doctor registration mismatches, LoS excesses with no enhancement, and urology minor procedure sub-inclusions.
+*   **Step 6: LLM Evaluation (CPD Checker):** Calls Gemini to evaluate actual findings against the CPD claim checklist and drafts clinical justifications for any detected deviations.
+*   **Step 7: Special payments calculation:** Applies partial billing calculations for LAMA/DAMA, death (on-table, within 24h, or post-operative), and referral cases based on per-day bed category rates and HBP guidelines.
+*   **Step 8: Audit flag triggering:** Triggers flags for stable-in-ICU, prolonged stay, billed days exceeding stay, missing STG documents, unspecified package abuse, and patient cash collection.
+*   **Step 9: SHA notification date check:** Verifies if the hospital notified the State Health Authority within 24 hours of LAMA, referral, or death.
+*   **Step 10: Specialty guidelines check:** Applies rules like BM (Burns management) follow-up photo frequency (days 5, 10, 15, 20) and MC/SV (Cardiology) stent carton sticker verification.
+*   **Step 11: Claim status mapping:** Assigns the final claim routing state (`CLAIM_BLOCKED`, `CLAIM_DEVIATION`, `CLAIM_GAPS`, or `CLAIM_READY`).
+*   **Step 12: Final Assembly:** Packs findings and returns `IRISClaimOutput`.
 
 ---
 
-## 2. File Structure
+## 2. File Structure & Module Purposes
 
 ```
 e:\Code\1hat-phase1\
 │
 ├── config.py                     # Global constants, paths, thresholds, and search mode
 ├── logger_setup.py               # Standardized stdout console logging utility
-├── input_validator.py            # Input JSON schema validation rules (currently a stub)
+├── input_validator.py            # Input JSON schema validation rules (stub returning True)
 ├── models.py                     # Unified data models and dataclass definitions
 ├── session.py                    # Session state class (IRISSession) for pipeline execution
 ├── main.py                       # Pre-authorisation pipeline entry point and orchestrator
 ├── main_claim.py                 # Claims verification pipeline entry point and orchestrator
-├── app.py                        # Streamlit web dashboard for interactive testing
-├── eval.py                       # Subprocess test suite running inputs againstexpected_output.json
+├── app.py                        # Streamlit web dashboard with Tab 1 (Pre-auth), Tab 2 (Claims), Tab 3 (About)
+├── eval.py                       # Subprocess test suite running inputs against expected_output.json
 │
 ├── kb/
 │   ├── __init__.py               # Package marker
 │   ├── loader.py                 # Shard-level JSON file loaders and caches (using @lru_cache)
-│   ├── searcher.py               # Fuzzy candidate selection using rapidfuzz token_set_ratio
+│   ├── searcher.py               # Fuzzy candidate selection using RapidFuzz token_set_ratio
 │   ├── searcher_llm.py           # Gemini-based candidate selection
 │   └── searcher_router.py        # Routes search queries to fuzzy or llm backend based on config
 │
@@ -131,12 +132,20 @@ e:\Code\1hat-phase1\
 │   ├── phase8_special_pop.py     # Specialty advisory routing (neonatal, oncology, transplant, etc.)
 │   ├── phase9_documents.py       # Document checklist compilation and gap checker
 │   ├── phase10_output.py         # Readiness status calculation and output serialization
-│   └── phase11_claim.py          # Claims verification logic (12-step verification)
+│   └── phase11_claim.py          # Claims verification logic (13-step verification)
 │
 ├── stubs/
 │   ├── __init__.py               # Package marker
 │   ├── bis_stub.py               # Mock client reading dummy_bis.json for patient details
-│   └── hem_stub.py               # Mock client reading dummy_hem.json for hospital details
+│   └── hem_stub.py               # Mock hospital empanelment stub reading dummy_hem.json
+│
+├── intake/
+│   ├── __init__.py               # Package marker
+│   ├── intake_runner.py          # Folder scanning, text extraction, parser orchestration, schema validation
+│   ├── pdf_extractor.py          # Text extraction from PDF using pdfplumber, falling back to Tesseract OCR
+│   ├── docx_extractor.py         # Text extraction from DOCX paragraphs and tables using python-docx
+│   ├── discharge_parser.py       # Gemini-based unstructured medical text to schema mapping parser
+│   └── schema_validator.py       # Enforces hard-required patient, admission, and clinical fields
 │
 └── data/
     ├── KB_SPEC.md                # Specifications for knowledge base structures
@@ -158,7 +167,7 @@ e:\Code\1hat-phase1\
 
 ## 3. Data Models (`models.py`)
 
-All data structures are implemented as strongly-typed Python dataclasses.
+IRIS defines the following dataclasses to represent structures throughout the pipelines:
 
 ```python
 @dataclass
@@ -468,17 +477,30 @@ class IRISOutput:
 
 IRIS partitions references and catalog data into 5 separate tiers:
 
-| Tier | Description | Source File | Status |
-| :--- | :--- | :--- | :--- |
-| **KB-1** | Core Scheme Rules (multipliers, limits, SLAs) | `data/schemes/pmjay.json` | **Active** |
-| **KB-2** | Specialty Shards & Derived Index | `data/hbp/` & `data/hbp/_index.json` | **Active** |
-| **KB-3** | Standard Treatment Guidelines (Checklists & qualifications) | `data/stg/<procedure_code>.json` | **Active** |
-| **KB-4** | Query / Rejection Taxonomy | `data/query_taxonomy.json` | **Missing** (Placeholder at `data/samples/query_taxonomy.json`) |
-| **KB-5** | State Overrides & State Variant Rules (CMCHIS) | `data/schemes/cmchis.json` | **Not Started** |
+*   **KB-1: Core Scheme Rules**
+    *   *Source file:* `data/schemes/pmjay.json`
+    *   *Purpose:* Declares schema parameters (limits, multipliers, SLAs, copayments, accreditation markups).
+    *   *Status:* **Active**.
+*   **KB-2: Specialty Shards & Derived Index**
+    *   *Source files:* `data/hbp/` directory.
+    *   *Purpose:* Houses category package masters (e.g. `data/hbp/Cardiology.json`) and flat catalog indexes (`data/hbp/_index.json`).
+    *   *Status:* **Active**.
+*   **KB-3: Standard Treatment Guidelines**
+    *   *Source files:* `data/stg/<procedure_code>.json`
+    *   *Purpose:* Declares mandatory document checklists, indicative LoS (ALOS), clinical check variables, and doctor qualifications.
+    *   *Status:* **Active**.
+*   **KB-4: Rejection & Query Taxonomy**
+    *   *Source file:* `data/query_taxonomy.json` (Placeholder fallback at `data/samples/query_taxonomy.json`).
+    *   *Purpose:* Standardized rejection codes and auditor query taxonomy.
+    *   *Status:* **Missing** (Loads the samples fallback).
+*   **KB-5: State-Specific Overrides**
+    *   *Source file:* `data/schemes/cmchis.json`.
+    *   *Purpose:* Tamil Nadu state overrides (CMCHIS).
+    *   *Status:* **Not Started**.
 
 ---
 
-## 5. LLM Usage Policy
+## 5. LLM Integration Policy
 
 IRIS integrates Large Language Models (LLMs) selectively for clinical reasoning. The system runs a **fail-open** policy: if any LLM call fails due to API limits or timeouts, the engine registers a warning flag and degrades to a safe, deterministic default.
 
@@ -493,7 +515,7 @@ IRIS integrates Large Language Models (LLMs) selectively for clinical reasoning.
     *   *Trigger:* Phase 2 Candidate Generation when `PHASE2_SEARCH_MODE == "llm"`.
     *   *Task:* Parses unstructured patient text to map to a list of candidate procedure codes.
     *   *Fallback:* Returns empty list `[]` (falls back to USP pathway) or falls back to fuzzy matching.
-2.  **`llm/stg_checker.py::check_stg_eligibility`**
+2.  **`llm/stg_checker.py::check_stg_eligible`**
     *   *Trigger:* Phase 3 STG validation when the matching STG JSON is present.
     *   *Task:* Evaluates whether clinical findings satisfy all mandatory STG parameters.
     *   *Fallback:* Marks patient as `eligible = True` with `confidence = "low"`, logging a warning.
@@ -525,10 +547,14 @@ IRIS integrates Large Language Models (LLMs) selectively for clinical reasoning.
     *   *Trigger:* Phase 11 Claims Verification.
     *   *Task:* Verifies discharge details against the CPD checklist and drafts justifications for deviations.
     *   *Fallback:* Returns empty checklist results, original deviations, and status `"failed"`.
+10. **`llm/cpd_evaluator.py::check_clinical_consistency`**
+    *   *Trigger:* Phase 11 Claims Verification Step 0.
+    *   *Task:* Assesses whether pre-auth diagnosis and procedures match clinical records at discharge.
+    *   *Fallback:* Returns `[]` (empty consistency issues list).
 
 ---
 
-## 6. Flag Codes & Reason Codes
+## 6. Business Flags & Reason Codes
 
 IRIS records pipeline events as **Business Flags** (user-facing, session-level) or **Reason Codes** (reasons why candidate packages were rejected in Phase 3).
 
@@ -568,6 +594,11 @@ IRIS records pipeline events as **Business Flags** (user-facing, session-level) 
 | **`NOTTO_DOCS_REQUIRED`** | `warning` | Phase 8 | Transplant procedure; NOTTO IDs required |
 | **`DOC_GAP_ANALYSIS`** | `info` | Phase 9 | Informational checklist execution details |
 | **`MANDATORY_DOCS_MISSING`** | `warning` | Phase 9 | One or more hard-block documents are missing |
+| **`IDENTITY_MISMATCH_PMJAY_ID`** | `block` | Phase 11 | PMJAY ID mismatch between pre-auth approved baseline and discharge JSON |
+| **`IDENTITY_MISMATCH_HOSPITAL`** | `block` | Phase 11 | Hospital code mismatch between pre-auth approved baseline and discharge JSON |
+| **`IDENTITY_MISMATCH_DOCTOR_REG`** | `block` | Phase 11 | Doctor medical registration mismatch between pre-auth approved baseline and discharge JSON |
+| **`PROCEDURE_MISMATCH`** | `block` | Phase 11 | Pre-auth approved procedure code differs from actual discharge procedure code |
+| **`CLINICAL_CONSISTENCY_WARNING`** | `warning` | Phase 11 | Diagnosis, admission type or related clinical parameters are inconsistent |
 
 ### Blocked Candidate Reason Codes
 
@@ -585,12 +616,12 @@ These reasons are written to `session.phase3_blocked` under the `reason_code` ke
 
 ---
 
-## 7. Configuration Constants (`config.py`)
+## 7. Configuration Parameters (`config.py`)
 
 All variables in `config.py` control the engine's core parameters:
 
 *   **`PROJECT_ROOT` / `DATA_DIR` / `HBP_DIR` / `STG_DIR` / `SCHEMES_DIR` / `DUMMY_DIR`**: Path objects pointing to package masters, STGs, and dummy databases.
-*   **`INDEX_FILE`**: Pointer to the derived HBP index file (`data/hbp/_index.json`).
+*   **`INDEX_FILE`**: Pointer to the flat HBP specialty index file (`data/hbp/_index.json`).
 *   **`PMJAY_RULES_FILE`**: Core scheme master path (`data/schemes/pmjay.json`).
 *   **`QUERY_TAXONOMY_FILE`**: Rejection taxonomy path (`data/query_taxonomy.json`).
 *   **`DUMMY_BIS_FILE` / `DUMMY_HEM_FILE`**: Mock data pointers for BIS and HEM databases.
