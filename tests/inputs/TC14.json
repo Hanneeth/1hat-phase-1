@@ -1,0 +1,121 @@
+{
+  "session_id": "IRIS-TC14-20260612",
+  "created_at": "2026-06-12T16:00:00+05:30",
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-12",
+    "bed_category": null,
+    "is_emergency": true,
+    "is_medico_legal": true,
+    "chief_complaints": "Burns to face, bilateral upper limbs, and chest following LPG cylinder explosion at home, 3 hours ago, severe pain",
+    "duration_days": 0,
+    "history_of_present_illness": "Patient was cooking at home when LPG cylinder exploded. Sustained thermal burns to face, bilateral upper limbs, and anterior chest. Burns occurred approximately 3 hours ago. Patient brought to ER by neighbours. MLC has been registered at local police station.",
+    "provisional_diagnosis": "Thermal burns — mixed 2nd and 3rd degree, 25% TBSA (face 4.5%, right upper limb 9%, left upper limb 9%, anterior chest 2.5%)",
+    "planned_procedure": "Wound debridement, silver sulphadiazine dressings, planned split skin graft after wound preparation",
+    "weight_kg": 74,
+    "height_cm": 170,
+    "vitals": {
+      "bp_systolic_mmhg": 100,
+      "bp_diastolic_mmhg": 68,
+      "pulse_bpm": 108,
+      "spo2_pct": 94,
+      "temperature_f": 97.8,
+      "rr_per_min": 22,
+      "gcs": 15,
+      "blood_glucose_mgdl": 188
+    },
+    "examination_findings": {
+      "general": "Patient in severe pain, anxious, voice hoarse (possible inhalation injury), no frank stridor",
+      "cvs": "Tachycardia, BP borderline, no murmur, peripheral pulses present",
+      "rs": "Hoarse voice, no stridor, SpO2 94% on oxygen mask. Auscultation clear.",
+      "abdomen": "Soft, non-tender",
+      "cns": "Conscious, GCS 15, appropriate to pain",
+      "local": "Burns extent mapped using Rule of 9: Face 4.5% (2nd degree, blistering), Right upper limb 9% (mixed 2nd-3rd degree, eschar forming), Left upper limb 9% (2nd degree, blistering), Anterior chest 2.5% (2nd degree). Total TBSA 25%. Burns appear mixed depth."
+    },
+    "investigations": [
+      {
+        "type": "blood_reports",
+        "result_summary": "CBC: Hb 15.2 g/dL, WBC 14800/cumm (stress response), Platelets 2.9 lakh. RFT: Creatinine 0.9 mg/dL, urea 28 mg/dL. Electrolytes: Na 138 mEq/L, K 4.1 mEq/L. ABG: pH 7.36, PaO2 88 on mask",
+        "structured_values": [
+          {
+            "parameter": "Hb",
+            "value": 15.2,
+            "unit": "g/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "WBC",
+            "value": 14800,
+            "unit": "/cumm",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "Na",
+            "value": 138,
+            "unit": "mEq/L",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "PaO2_on_oxygen",
+            "value": 88,
+            "unit": "mmHg",
+            "flag": "L",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-12"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No significant medical history",
+    "past_surgical_history": "None",
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "social",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Burns unit admission notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo on hospital bed",
+        "available": true
+      },
+      {
+        "key": "mlc_fir",
+        "label": "MLC copy with FIR number (accidental burns)",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Karthik Rajan",
+      "registration_number": "TN-MED-55555",
+      "qualification": "MS Plastic and Reconstructive Surgery, Burns Fellowship",
+      "specialty_code": "BM"
+    },
+    "notes": "MLC case — accidental burns from LPG explosion. Clinical photo with Rule of 9 chart is mandatory for BM packages but NOT yet in hand — should appear as missing in document gap analysis. Follow-up photos at days 5, 10, 15, 20 will be required at claim stage. Possible inhalation injury needs assessment."
+  }
+}

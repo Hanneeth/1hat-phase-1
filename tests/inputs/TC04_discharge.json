@@ -1,0 +1,143 @@
+{
+  "_test_id": "TC04_DISCHARGE",
+  "_description": "Portability case (P004, Maharashtra patient treated in Chennai). Emergency appendicectomy — laparoscopic approach converted to open intraoperatively due to gangrenous perforated appendix with localised peritonitis. Exercises: procedure_change deviation (lap to open), LOS exceeded (5 days vs indicative 3 days, no enhancement filed), deviation justification drafted, clinical consistency Step 0 passes (portability patient). Expected: CLAIM_DEVIATION.",
+  "_expected_claim_status": "CLAIM_DEVIATION",
+  "preauth_reference": "IRIS-TC04-20260612",
+  "case_id": "APL/CHN/2026/004567",
+  "preauth_input_path": "tests/inputs/TC04.json",
+  "claim_submission_date": "2026-06-19",
+  "hospital": {
+    "name": "Apollo Hospitals Chennai",
+    "hospital_code": "H001",
+    "address": "21 Greams Lane, Off Greams Road, Chennai 600006",
+    "district": "Chennai"
+  },
+  "patient": {
+    "name": "Sanjay Patel",
+    "pmjay_id": "P004",
+    "age": 34,
+    "gender": "M",
+    "address": "45 Andheri East, Mumbai 400069, Maharashtra",
+    "contact_number": "9823456789",
+    "ipd_number": "IPD/SG/2026/004567",
+    "pmjay_case_id": "IRIS-TC04-20260612"
+  },
+  "treating_consultant": {
+    "name": "Dr. Anand Rajan",
+    "contact_number": "9845673456",
+    "qualification": "MS General Surgery",
+    "registration_number": "TN-MED-33456",
+    "specialty": "General Surgery"
+  },
+  "admission": {
+    "date_of_admission": "2026-06-12",
+    "time_of_admission": "14:00",
+    "date_of_discharge": "2026-06-17",
+    "time_of_discharge": "10:30",
+    "date_of_operation": "2026-06-12",
+    "actual_los_days": 5,
+    "ward_category_actual": "ward",
+    "bed_category_breakdown": {
+      "ward_days": 5,
+      "hdu_days": 0,
+      "icu_days": 0,
+      "icu_vent_days": 0
+    },
+    "admission_type": "emergency",
+    "package_booked": "SG017A",
+    "discharge_status": "recovered",
+    "discharge_condition": "stable"
+  },
+  "clinical": {
+    "presenting_complaints": "Severe right lower abdominal pain for 24 hours, fever 101°F, vomiting 3 episodes, loss of appetite",
+    "duration_of_complaints": "24 hours",
+    "initial_assessment": "34-year-old male (portability case, home state Maharashtra) presented as emergency with 24-hour history of periumbilical pain migrating to right iliac fossa, fever, vomiting, and anorexia. USG confirmed acute appendicitis (appendix diameter 9.2mm, non-compressible, periappendiceal fat changes). WBC 16,800/cumm, CRP 48 mg/L. Clinically: McBurney's tenderness, Rovsing sign positive, rebound tenderness present. Emergency laparoscopic appendicectomy planned. IV antibiotics (ceftriaxone + metronidazole) commenced pre-operatively. Anaesthesia clearance obtained.",
+    "significant_past_history": "No significant past medical or surgical history. Allergy to sulfa drugs. Occasional smoker, social alcohol use.",
+    "primary_diagnosis_at_admission": "Acute appendicitis",
+    "final_diagnosis_at_discharge": "Post-operative status following open appendicectomy for gangrenous perforated appendicitis with localised peritonitis",
+    "icd10_codes": [
+      "K35.2",
+      "K35.32"
+    ],
+    "key_investigations": "USG abdomen, CBC, CRP, RFT, pre-operative blood workup",
+    "investigation_findings": "USG abdomen: appendix diameter 9.2mm, non-compressible, surrounding echogenic fat, no free fluid — acute appendicitis. CBC: WBC 16,800/cumm (elevated), neutrophils 84%, CRP 48 mg/L, Hb 14.2 g/dL, creatinine 0.8 mg/dL. Pre-op blood group O+ve, INR 1.1. Post-op Day 2 WBC 11,200/cumm (settling). Day 4 WBC 8,400/cumm, CRP 12 mg/L — resolving infection.",
+    "treatment_given": "IV ceftriaxone 1g BD + IV metronidazole 500mg TDS commenced pre-operatively. Emergency surgery on Day 1 — laparoscopic approach attempted, converted to open (Lanz incision) due to gangrenous perforated appendix with localised faecal peritonitis. Appendicectomy performed, peritoneal lavage with warm saline, drain placed in right iliac fossa. IV antibiotics continued for 72 hours post-op, converted to oral on Day 4. Patient mobilised Day 2. Oral diet commenced Day 3 after bowel sounds confirmed. Drain removed Day 4 (output serous < 15 mL). Discharged Day 5 in stable condition.",
+    "operative_findings": "Laparoscopic approach initiated — 3 ports placed, pneumoperitoneum established. On laparoscopic inspection: appendix found to be gangrenous with tip perforation and localised faecal peritonitis in right iliac fossa. Dense adhesions between appendix, caecum, and omentum. Decision made to convert to open approach for safe dissection and peritoneal lavage. Lanz incision made in right iliac fossa. Gangrenous appendix with perforated tip identified — perforation approximately 3mm, localised faecal collection approximately 20mL. Appendix base healthy — double-ligated with vicryl ties and appendix removed. Thorough peritoneal lavage performed with 2 litres warm saline. Corrugated drain placed in right iliac fossa. Wound closed in layers — peritoneum with vicryl, fascia with PDS, skin with nylon. Specimen sent for histopathology. Estimated blood loss: 50mL. No intraoperative complications beyond the conversion itself.",
+    "final_procedure_performed": "Open appendicectomy via Lanz incision with peritoneal lavage and drain placement (converted from laparoscopic approach due to gangrenous perforated appendicitis)",
+    "complications": "Intraoperative finding of gangrenous perforated appendicitis with localised faecal peritonitis necessitated conversion from laparoscopic to open approach.",
+    "follow_up_date": "2026-06-24",
+    "advice_on_discharge": "Wound care — keep dry, dressing change every 2 days, sutures (nylon) to be removed at follow-up on 24 June 2026. Tab. Amoxicillin-Clavulanate 625mg TDS x 5 days. Tab. Metronidazole 400mg TDS x 5 days. Tab. Paracetamol 500mg TDS as needed for pain. Tab. Pantoprazole 40mg OD before breakfast for 7 days. Avoid heavy lifting for 4 weeks. Return immediately for fever >38.5°C, wound redness, discharge, or severe abdominal pain. Histopathology report to be collected from hospital records at follow-up visit.",
+    "discharge_summary_text": "Patient Sanjay Patel, 34-year-old male, PMJAY ID P004 (portability case, home state Maharashtra), was admitted on 12 June 2026 at 14:00 hrs to Apollo Hospitals Chennai as an emergency under the care of Dr. Anand Rajan (MS General Surgery, TN-MED-33456) with a 24-hour history of acute right iliac fossa pain, fever, vomiting, and anorexia. Admission diagnosis: Acute appendicitis.\n\nOn admission, USG abdomen confirmed acute appendicitis with a non-compressible appendix of 9.2mm diameter and periappendiceal fat changes. WBC was elevated at 16,800/cumm with neutrophilia 84% and CRP 48 mg/L. Clinically McBurney's point tenderness, Rovsing sign, and rebound tenderness were present. IV antibiotics (ceftriaxone and metronidazole) were commenced pre-operatively and emergency surgery was planned as a laparoscopic appendicectomy.\n\nOn laparoscopic inspection, the appendix was found to be gangrenous with a tip perforation and approximately 20mL localised faecal collection in the right iliac fossa. Dense adhesions between the appendix, caecum, and omentum were identified. Given these findings, a decision was made intraoperatively to convert to an open approach via Lanz incision to enable safe dissection and thorough peritoneal lavage. Open appendicectomy was performed — the appendix base was healthy and was double-ligated with vicryl ties. Peritoneal lavage was performed with 2 litres warm saline. A corrugated drain was placed in the right iliac fossa. Estimated blood loss was 50mL. Specimen was sent for histopathology.\n\nPost-operatively the patient was managed with IV antibiotics for 72 hours before switching to oral antibiotics on Day 4. The drain output was serous and minimal — drain removed on Day 4. WBC normalised to 8,400/cumm by Day 4 with CRP 12 mg/L. Patient was mobilised on Day 2 and tolerating oral diet from Day 3. Wound was clean and dry at discharge. The patient was discharged on Day 5 (17 June 2026) in stable condition with oral antibiotics and follow-up instructions. Total duration of stay: 5 days. Histopathology report to be collected at follow-up.",
+    "operative_notes_text": "OPERATIVE NOTE\nDate: 12 June 2026 | Time: 16:30–18:00 hrs\nSurgeon: Dr. Anand Rajan (TN-MED-33456)\nAnaesthetist: Dr. Priya Anand\nAnaesthesia: General anaesthesia (IV induction, endotracheal intubation)\nIndication: Acute appendicitis — USG confirmed, WBC 16,800, clinical signs positive. Emergency surgery.\nPlanned procedure: Laparoscopic appendicectomy.\nActual procedure: Converted to open appendicectomy via Lanz incision.\n\nPROCEEDINGS:\nPatient positioned supine. General anaesthesia induced. Abdomen prepped and draped. Laparoscopic approach initiated — 10mm umbilical port placed using Hassan technique, pneumoperitoneum established at 12 mmHg CO2. 5mm left iliac fossa port and 5mm suprapubic port placed under direct vision. Laparoscopic inspection performed:\n\nFINDINGS ON LAPAROSCOPY:\n- Appendix: gangrenous, dark discolouration from base to tip, tip perforation approximately 3mm\n- Localised faecal peritonitis: approximately 20mL faecal collection in right iliac fossa\n- Dense adhesions: between appendix, caecum, and omentum — obscuring safe laparoscopic dissection\n- No generalised peritonitis. Pelvis and rest of abdomen clear.\n\nGiven the gangrenous perforated appendix with localised faecal peritonitis and dense adhesions making laparoscopic dissection unsafe, decision made to convert to open approach.\n\nCONVERSION TO OPEN:\nPorts removed. Pneumoperitoneum released. Lanz (grid-iron) incision made in right iliac fossa approximately 8cm. Layers opened: skin, subcutaneous fat, external oblique aponeurosis split in direction of fibres, internal oblique and transversus split. Peritoneum opened. Faecal collection aspirated and sent for culture. Appendix identified — gangrenous with tip perforation. Mesoappendix ligated with vicryl ties and divided. Appendix base identified — healthy caecal wall. Base double-ligated with 1-0 vicryl ties. Appendix amputated and specimen placed in bag — sent for histopathology. Stump not inverted (base healthy, inverting pursestring not required). Peritoneal lavage performed with 2 litres warm normal saline until clear. Corrugated drain placed in right iliac fossa, brought out through separate stab incision. Wound closed in layers: peritoneum with 0-vicryl continuous, fascia with loop PDS, subcutaneous with 2-0 vicryl, skin with 2-0 nylon interrupted. Estimated blood loss: 50mL. No blood transfusion required. Patient transferred to recovery in stable condition.\n\nPOST-OP INSTRUCTIONS: IV ceftriaxone + metronidazole for 72 hours. Drain output monitoring. Mobilise Day 2. Diet Day 3 if bowel sounds present.",
+    "pre_anaesthesia_text": "Pre-Anaesthesia Assessment — 12 June 2026\nAnaesthetist: Dr. Priya Anand\nASA Grade: I (healthy young adult, emergency surgery)\nAirway: Mallampati Class I. Adequate mouth opening. No anticipated difficult airway. Neck extension full.\nCardiovascular: HR 94 bpm, tachycardia (pain/fever related), BP 118/76 mmHg. No cardiac history.\nRespiratory: Clear air entry bilaterally. SpO2 98% on room air.\nAllergies: Sulfa drugs (documented).\nFasting: Patient last ate approximately 6 hours ago (emergency — RSI technique planned).\nPlan: General anaesthesia with rapid sequence induction (RSI) given emergency surgery and uncertain fasting status. Endotracheal intubation. Sulfa drugs avoided — ceftriaxone and metronidazole used (no cross-reactivity). Fit for emergency surgery."
+  },
+  "discharge_medications": [
+    "Tab. Amoxicillin-Clavulanate 625mg TDS x 5 days",
+    "Tab. Metronidazole 400mg TDS x 5 days",
+    "Tab. Paracetamol 500mg TDS as needed for pain x 5 days",
+    "Tab. Pantoprazole 40mg OD before breakfast x 7 days"
+  ],
+  "signatures": {
+    "treating_consultant_signed": true,
+    "pmam_signed": true,
+    "patient_or_attendant_signed": true
+  },
+  "patient_amount_collected_inr": 0,
+  "sha_notification_date": null,
+  "implant_details": null,
+  "documents_submitted": [
+    {
+      "key": "discharge_summary",
+      "label": "Discharge Summary (CAM Annexure 6 format)",
+      "available": true
+    },
+    {
+      "key": "operative_notes",
+      "label": "Operative notes — emergency open appendicectomy 12 June 2026",
+      "available": true
+    },
+    {
+      "key": "procedure_operative_notes",
+      "label": "Procedure / operative notes — open appendicectomy with peritoneal lavage",
+      "available": true
+    },
+    {
+      "key": "pre_anesthesia_check_up_report",
+      "label": "Pre-anaesthesia assessment report — 12 June 2026",
+      "available": true
+    },
+    {
+      "key": "detailed_discharge_summary",
+      "label": "Detailed discharge summary with follow-up advice",
+      "available": true
+    },
+    {
+      "key": "intraoperative_photo_gross_specimen",
+      "label": "Intraoperative photograph and gross specimen photograph (gangrenous appendix)",
+      "available": true
+    },
+    {
+      "key": "histopathology_report",
+      "label": "Histopathology report — appendix specimen (to be collected at follow-up)",
+      "available": false
+    },
+    {
+      "key": "blood_test_cbc_sr_creatinine_platelet_etc",
+      "label": "Blood investigations — CBC, CRP, RFT, blood group",
+      "available": true
+    },
+    {
+      "key": "usg_report",
+      "label": "USG abdomen report — 12 June 2026",
+      "available": true
+    }
+  ],
+  "deviations_declared": [
+    {
+      "type": "procedure_change",
+      "from": "Laparoscopic appendicectomy",
+      "to": "Open appendicectomy via Lanz incision with peritoneal lavage and drain placement",
+      "reason": "On laparoscopic inspection, appendix was found to be gangrenous with tip perforation and localised faecal peritonitis with dense adhesions. Safe laparoscopic dissection was not possible. Converted to open approach as per standard surgical practice for complicated appendicitis."
+    }
+  ]
+}

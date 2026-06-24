@@ -1,0 +1,162 @@
+{
+  "readiness_status": "READY",
+  "selected_packages": [
+    {
+      "validated": {
+        "procedure_code": "SG017A",
+        "package_code": "SG017",
+        "specialty_code": "SG",
+        "package_name": "Appendicectomy",
+        "procedure_name": "Open",
+        "billing_type": "surgical",
+        "billing_unit": "one_time",
+        "procedure_label": "regular",
+        "auto_approved": "none",
+        "enhancement_applicable": false,
+        "enhancement_requests_needed": null,
+        "reserved_public_only": false,
+        "base_rate_inr": 25000,
+        "stratification": {
+          "determinable": true,
+          "selected_stratum": null,
+          "note": null
+        },
+        "implant": {
+          "required": false,
+          "name": null,
+          "cost_inr": null,
+          "age_appropriate": true,
+          "gender_appropriate": true,
+          "quantity": null
+        },
+        "special_conditions_popup": false,
+        "special_conditions_rule": false,
+        "stg_eligible": true,
+        "stg_missing_criteria": [],
+        "stg_reasoning": null,
+        "is_addon_to": null,
+        "addon_type": null,
+        "match_score": 100.0,
+        "flags": [
+          "STG_MISSING",
+          "STG_MISSING_PLAUSIBILITY_PASSED: The provisional diagnosis of acute appendicitis directly justifies an appendicec"
+        ]
+      },
+      "role": "primary",
+      "deduction_factor": 1.0,
+      "pre_auth_group": 1
+    }
+  ],
+  "blocked_candidates": [
+    {
+      "procedure_code": "SE040A",
+      "reason_code": "PLAUSIBILITY_FAILED",
+      "message": "The candidate PM-JAY package is categorized under 'SL \u2014 ENT', which is an unrelated clinical domain to the patient's provisional diagnosis of acute appendicitis and planned laparoscopic appendicectomy, which fall under General Surgery."
+    }
+  ],
+  "preauth_docs_required": [
+    {
+      "key": "clinical_notes",
+      "label": "Admission / clinical notes",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "patient_photo",
+      "label": "Photo of patient on hospital bed",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "clinical_notes",
+      "label": "Clinical notes",
+      "package_code": "SG017",
+      "available": true,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "usg_report",
+      "label": "USG confirming the diagnosis",
+      "package_code": "SG017",
+      "available": true,
+      "criticality": "ppd_query_risk"
+    }
+  ],
+  "preauth_docs_missing": [],
+  "query_predictions": [
+    {
+      "procedure_code": "SG017A",
+      "package_name": "Appendicectomy",
+      "readiness_verdict": "unknown",
+      "verdict_summary": "STG file not available \u2014 query prediction skipped for this package.",
+      "checklist_results": [],
+      "common_query_risks": [],
+      "advisory_claim_docs": [
+        {
+          "key": "biopsy_hpe",
+          "label": "Histopathology report"
+        },
+        {
+          "key": "clinical_photo_intraop",
+          "label": "Intra procedure clinical photograph of removed appendix"
+        },
+        {
+          "key": "clinical_photo_posttreat",
+          "label": "post procedure clinical photograph"
+        },
+        {
+          "key": "ot_notes",
+          "label": "Detailed Operative notes"
+        },
+        {
+          "key": "discharge_summary",
+          "label": "Detailed discharge summary"
+        }
+      ],
+      "llm_evaluation_status": "skipped"
+    }
+  ],
+  "enhancement_plan": [],
+  "copayment_required": false,
+  "copayment_gap_inr": null,
+  "comorbidity_notes": [],
+  "flags": [
+    {
+      "code": "EMERGENCY_PHASE_STUBBED",
+      "message": "Emergency routing not implemented \u2014 assuming planned elective admission",
+      "severity": "info"
+    },
+    {
+      "code": "CANDIDATES_GENERATED",
+      "message": "Generated 2 candidates from index",
+      "severity": "info"
+    },
+    {
+      "code": "DEDUCTION_APPROXIMATE",
+      "message": "100-50-25 deduction order uses base_rate as proxy for final price. Actual order should use final price after tier/level/accreditation multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "FINANCIAL_ESTIMATE_APPROXIMATE",
+      "message": "Cost estimate uses base rates only. Final rates include tier, level, accreditation, and geo multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "PORTABILITY_CASE",
+      "message": "Portability case: patient from Maharashtra treated in Tamil Nadu. Claims processing TAT is 30 days (vs 15 for standard). Home state may reject public-reserved packages booked by private hospitals.",
+      "severity": "info"
+    },
+    {
+      "code": "DOC_GAP_ANALYSIS",
+      "message": "Required: 4 docs. Missing: 0.",
+      "severity": "info"
+    }
+  ],
+  "stg_coverage": {
+    "validated": 0,
+    "stg_missing": 2
+  },
+  "errors": []
+}

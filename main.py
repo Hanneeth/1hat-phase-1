@@ -535,6 +535,22 @@ def main() -> None:
     print(json.dumps(output_dict, indent=2, default=str))
     print_summary(output_dict, nearest_match)
 
+    # --- Cache output for Stage 3 ---
+    # Save serialised output to tests/outputs/<test_id>_output.json
+    # so main_claim.py can load it without re-running the pipeline.
+    if len(sys.argv) > 1:
+        try:
+            input_path_obj = Path(sys.argv[1])
+            test_id = input_path_obj.stem
+            cache_dir = Path("tests/outputs")
+            cache_dir.mkdir(parents=True, exist_ok=True)
+            cache_path = cache_dir / f"{test_id}_output.json"
+            with open(cache_path, "w", encoding="utf-8") as f:
+                json.dump(output_dict, f, indent=2, default=str)
+            logger.info("Output cached to %s", cache_path)
+        except Exception as exc:
+            logger.warning("Failed to cache output: %s", exc)
+
     logger.info("Pipeline complete. Status: %s", output.readiness_status)
 
 

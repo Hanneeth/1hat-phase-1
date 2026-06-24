@@ -1,0 +1,285 @@
+{
+  "readiness_status": "BLOCKED",
+  "selected_packages": [
+    {
+      "validated": {
+        "procedure_code": "SG039C",
+        "package_code": "SG039",
+        "specialty_code": "SG",
+        "package_name": "Cholecystectomy",
+        "procedure_name": "Without Exploration of CBD - Lap",
+        "billing_type": "surgical",
+        "billing_unit": "one_time",
+        "procedure_label": "regular",
+        "auto_approved": "none",
+        "enhancement_applicable": false,
+        "enhancement_requests_needed": null,
+        "reserved_public_only": false,
+        "base_rate_inr": 38900,
+        "stratification": {
+          "determinable": true,
+          "selected_stratum": null,
+          "note": null
+        },
+        "implant": {
+          "required": false,
+          "name": null,
+          "cost_inr": null,
+          "age_appropriate": true,
+          "gender_appropriate": true,
+          "quantity": null
+        },
+        "special_conditions_popup": false,
+        "special_conditions_rule": false,
+        "stg_eligible": true,
+        "stg_missing_criteria": [],
+        "stg_reasoning": "The patient satisfies the 'Acute Cholecystitis' indication, as evidenced by right upper quadrant pain, fever (100.4\u00b0F), two episodes of vomiting, and leukocytosis (WBC 13,800 cells/mcL). The patient also satisfies the 'Biliary Colic' indication due to the history of recurrent right upper quadrant colicky pain, especially after fatty meals, with confirmed gallbladder calculi. All three mandatory thresholds are met: multiple gallbladder calculi are present on ultrasonography, symptoms are clearly localized to the right hypochondrium, and there is no documented history of a previous cholecystectomy. The presence of Type 2 Diabetes Mellitus is a comorbidity and does not contraindicate the procedure as per the STG.",
+        "is_addon_to": null,
+        "addon_type": null,
+        "match_score": 100.0,
+        "flags": []
+      },
+      "role": "primary",
+      "deduction_factor": 1.0,
+      "pre_auth_group": 1
+    }
+  ],
+  "blocked_candidates": [
+    {
+      "procedure_code": "SG039B",
+      "reason_code": "STG_NOT_ELIGIBLE",
+      "message": "The patient satisfies the clinical indications for both 'Biliary Colic' and 'Acute Cholecystitis', with documented right upper quadrant pain, fever, vomiting, and leukocytosis (WBC 13,800 cells/mcL), along with gallbladder calculi on ultrasonography. The thresholds for 'gall_bladder_calculi present true', 'symptoms_right_hypochondrium_epigastrium present true', and 'previous_cholecystectomy present false' are also met. However, the patient fails two critical thresholds specific to a procedure involving CBD exploration. First, the 'cbd_stones present true' threshold is not met, as the USG explicitly states the common bile duct is not dilated (4mm) and no CBD stones are present. Second, the 'lft_abnormal present true' threshold, defined as elevated serum bilirubin, transaminase, AND alkaline phosphatase, is not met because the patient's total bilirubin and alkaline phosphatase levels are within normal limits. While AST is mildly elevated, it does not fulfill the combined requirement for all three LFT components to be elevated. Therefore, the patient is not eligible for Cholecystectomy with CBD exploration (SG039B).",
+      "missing_criteria": [
+        "CBD stones not present: USG documents common bile duct not dilated (4mm) and no CBD stones, but the threshold requires 'cbd_stones present true' (MRCP or USG showing large (>1cm) or multiple CBD stones if CBD exploration is planned).",
+        "LFTs not abnormal as per STG definition: Serum bilirubin (1.1 mg/dL) and alkaline phosphatase (92 U/L) are within normal limits. The threshold requires 'Elevated serum bilirubin, transaminase AND alkaline phosphate'."
+      ],
+      "confidence": "high",
+      "procedure_name": "With Exploration of CBD - Open",
+      "package_name": "Cholecystectomy"
+    },
+    {
+      "procedure_code": "SG039D",
+      "reason_code": "STG_NOT_ELIGIBLE",
+      "message": "The patient satisfies the clinical indications for both Biliary Colic and Acute Cholecystitis, as evidenced by right upper quadrant pain, fever, vomiting, and leukocytosis, along with gallbladder calculi on USG. However, the patient fails to meet two mandatory clinical thresholds for SG039D (Cholecystectomy with CBD exploration). First, the STG requires evidence of CBD stones (large >1cm or multiple) on imaging for CBD exploration, but the patient's USG explicitly states the common bile duct is not dilated and does not report any CBD stones. Second, the STG requires elevated serum bilirubin, transaminase, and alkaline phosphatase. While AST is mildly elevated, the patient's total bilirubin and alkaline phosphatase levels are within normal limits. Since all thresholds must be met, the procedure is not eligible.",
+      "missing_criteria": [
+        "cbd_stones present true: USG does not show CBD stones; the STG requires MRCP or USG showing large (>1cm) or multiple CBD stones if CBD exploration is planned, and this procedure (SG039D) includes CBD exploration.",
+        "lft_abnormal present true: Patient's LFTs show normal total bilirubin (1.1 mg/dL) and alkaline phosphatase (92 U/L); the STG requires elevated serum bilirubin, transaminase AND alkaline phosphatase."
+      ],
+      "confidence": "high",
+      "procedure_name": "With Exploration of CBD - Lap",
+      "package_name": "Cholecystectomy"
+    },
+    {
+      "procedure_code": "SG039A",
+      "reason_code": "STRATUM_NOT_SELECTED",
+      "message": "SG039A not selected for SG039. Selected: SG039C. Reason: The planned procedure explicitly specifies 'Laparoscopic cholecystectomy without common bile duct exploration', which directly matches the 'Lap' approach of SG039C."
+    }
+  ],
+  "preauth_docs_required": [
+    {
+      "key": "clinical_notes",
+      "label": "Admission / clinical notes",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "patient_photo",
+      "label": "Photo of patient on hospital bed",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "clinical_notes",
+      "label": "Clinical notes confirming the diagnosis",
+      "package_code": "SG039",
+      "available": true,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "usg_report",
+      "label": "USG confirming the diagnosis",
+      "package_code": "SG039",
+      "available": true,
+      "criticality": "ppd_query_risk"
+    }
+  ],
+  "preauth_docs_missing": [
+    {
+      "key": "patient_photo",
+      "label": "Photo of patient on hospital bed",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    }
+  ],
+  "query_predictions": [
+    {
+      "procedure_code": "SG039C",
+      "package_name": "Cholecystectomy",
+      "readiness_verdict": "likely_queried",
+      "verdict_summary": "3 high-risk item(s) detected: LFT - elevated serum bilirubin, transaminase and alkaline phosphate?, LFT not provided or not showing elevated serum bilirubin, transaminase and alkaline phosphate, Intraoperative photograph and pictures of gross specimen removed missing",
+      "checklist_results": [
+        {
+          "question": "Clinical notes detailed history, signs & symptoms, indication for procedure?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "Clinical notes are available and contain detailed history, signs, symptoms, and clear indication for the procedure."
+        },
+        {
+          "question": "USG Upper Abdomen - confirming presence of gall stone?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "USG report is available and clearly confirms the presence of multiple calculi in the gallbladder."
+        },
+        {
+          "question": "LFT - elevated serum bilirubin, transaminase and alkaline phosphate?",
+          "expected": true,
+          "actual": false,
+          "risk_level": "high",
+          "reasoning": "LFT shows normal serum bilirubin and alkaline phosphate, with only AST slightly elevated, not meeting the requirement for all to be elevated."
+        },
+        {
+          "question": "USG showing presence of calculi in gall bladder?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "USG report is available and clearly shows the presence of multiple calculi in the gallbladder."
+        },
+        {
+          "question": "Patient having complain of right hypochondrium or epigastrium?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "Patient's chief complaint is right upper quadrant pain, which corresponds to the right hypochondrium."
+        },
+        {
+          "question": "Cholecystectomy done in the past?",
+          "expected": false,
+          "actual": false,
+          "risk_level": "pass",
+          "reasoning": "Patient data does not indicate any history of cholecystectomy in the past."
+        }
+      ],
+      "common_query_risks": [
+        {
+          "query_text": "USG not showing presence of calculi in gall bladder",
+          "risk_level": "low",
+          "reasoning": "USG report clearly states \"Multiple calculi seen in gallbladder\", directly addressing this query."
+        },
+        {
+          "query_text": "Patient not complaining of right hypochondrium or epigastrium",
+          "risk_level": "low",
+          "reasoning": "Patient's chief complaint is right upper quadrant pain, which is consistent with right hypochondrium pain."
+        },
+        {
+          "query_text": "Cholecystectomy done in the past",
+          "risk_level": "low",
+          "reasoning": "Patient data does not mention any previous cholecystectomy, thus this trigger condition is not met."
+        },
+        {
+          "query_text": "Clinical notes missing detailed history, signs & symptoms, or indication for procedure",
+          "risk_level": "low",
+          "reasoning": "Clinical notes are available and contain detailed history, signs, symptoms, and clear indication for the procedure."
+        },
+        {
+          "query_text": "USG report not confirming presence of gall stone",
+          "risk_level": "low",
+          "reasoning": "USG report is available and explicitly confirms the presence of multiple gall stones."
+        },
+        {
+          "query_text": "LFT not provided or not showing elevated serum bilirubin, transaminase and alkaline phosphate",
+          "risk_level": "high",
+          "reasoning": "LFT is provided, but it shows normal serum bilirubin and alkaline phosphate, thus not showing elevation for all parameters."
+        },
+        {
+          "query_text": "Intraoperative photograph and pictures of gross specimen removed missing",
+          "risk_level": "high",
+          "reasoning": "These documents are inherently missing at the pre-authorization stage, and their absence is a known common query trigger."
+        },
+        {
+          "query_text": "Provide Treating Doctor's Prescription advising Hospitalization with diagnosis",
+          "risk_level": "medium",
+          "reasoning": "No treating doctor prescription found in documents in hand."
+        },
+        {
+          "query_text": "Provide clinical photograph of the injury/lesion",
+          "risk_level": "medium",
+          "reasoning": "No clinical photograph found \u2014 CAM Table 3 item for surgical cases."
+        }
+      ],
+      "advisory_claim_docs": [
+        {
+          "key": "operative_notes",
+          "label": "Operative notes"
+        },
+        {
+          "key": "pre_anesthesia_check_up_report",
+          "label": "Pre-anesthesia check-up report"
+        },
+        {
+          "key": "detailed_discharge_summary",
+          "label": "Detailed Discharge Summary"
+        },
+        {
+          "key": "intraoperative_photo_gross_specimen",
+          "label": "Intraoperative photograph and Pictures of gross specimen removed"
+        },
+        {
+          "key": "histopathology_report",
+          "label": "Histopathology report (can be submitted within 7 days of discharge)"
+        }
+      ],
+      "llm_evaluation_status": "success"
+    }
+  ],
+  "enhancement_plan": [],
+  "copayment_required": false,
+  "copayment_gap_inr": null,
+  "comorbidity_notes": [],
+  "flags": [
+    {
+      "code": "EMERGENCY_PHASE_STUBBED",
+      "message": "Emergency routing not implemented \u2014 assuming planned elective admission",
+      "severity": "info"
+    },
+    {
+      "code": "CANDIDATES_GENERATED",
+      "message": "Generated 4 candidates from index",
+      "severity": "info"
+    },
+    {
+      "code": "DEDUCTION_APPROXIMATE",
+      "message": "100-50-25 deduction order uses base_rate as proxy for final price. Actual order should use final price after tier/level/accreditation multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "FINANCIAL_ESTIMATE_APPROXIMATE",
+      "message": "Cost estimate uses base rates only. Final rates include tier, level, accreditation, and geo multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "COMORBIDITY_REVIEW_NEEDED",
+      "message": "Comorbidity 'Type 2 Diabetes Mellitus' may require separate clinical review \u2014 not a standard management condition.",
+      "severity": "info"
+    },
+    {
+      "code": "DOC_GAP_ANALYSIS",
+      "message": "Required: 4 docs. Missing: 1.",
+      "severity": "info"
+    },
+    {
+      "code": "MANDATORY_DOCS_MISSING",
+      "message": "1 mandatory document(s) missing \u2014 cannot submit pre-auth until resolved.",
+      "severity": "warning"
+    }
+  ],
+  "stg_coverage": {
+    "validated": 4,
+    "stg_missing": 0
+  },
+  "errors": []
+}

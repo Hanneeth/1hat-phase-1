@@ -1,0 +1,326 @@
+{
+  "readiness_status": "BLOCKED",
+  "selected_packages": [
+    {
+      "validated": {
+        "procedure_code": "BM001B",
+        "package_code": "BM001",
+        "specialty_code": "BM",
+        "package_name": "Thermal burns",
+        "procedure_name": "Criteria 2: % Total Body Surface Area Burns (TBSA): Upto 25%; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+        "billing_type": "surgical",
+        "billing_unit": "one_time",
+        "procedure_label": "regular",
+        "auto_approved": "none",
+        "enhancement_applicable": false,
+        "enhancement_requests_needed": null,
+        "reserved_public_only": false,
+        "base_rate_inr": 60000,
+        "stratification": {
+          "determinable": true,
+          "selected_stratum": null,
+          "note": null
+        },
+        "implant": {
+          "required": false,
+          "name": null,
+          "cost_inr": null,
+          "age_appropriate": true,
+          "gender_appropriate": true,
+          "quantity": null
+        },
+        "special_conditions_popup": false,
+        "special_conditions_rule": false,
+        "stg_eligible": true,
+        "stg_missing_criteria": [
+          "Minimum doctor qualification (M.Ch / DNB/ equivalent in Plastic Surgery) not specified in the clinical presentation"
+        ],
+        "stg_reasoning": "The patient presents with 25% Total Body Surface Area (TBSA) mixed 2nd and 3rd degree thermal burns. This TBSA is well within the 'Upto 40% TBSA' limit specified in the STG indication. The presence of 3rd degree burns and eschar formation on the right upper limb unequivocally indicates 'deep thermal burns'. Such deep burns, particularly full-thickness (3rd degree) and deep partial-thickness (deep 2nd degree) with eschar, are inherently 'requiring surgical procedures (skin grafting, flap cover) and not amenable to heal with dressings alone'. Therefore, the single clinical indication for BM001B is fully satisfied. No clinical thresholds are specified for this procedure. The minimum doctor qualification is an administrative criterion not explicitly stated in the patient's clinical presentation, which is noted as a missing criterion but does not preclude clinical eligibility.",
+        "is_addon_to": null,
+        "addon_type": null,
+        "match_score": 100.0,
+        "flags": []
+      },
+      "role": "primary",
+      "deduction_factor": 1.0,
+      "pre_auth_group": 1
+    }
+  ],
+  "blocked_candidates": [
+    {
+      "procedure_code": "BM001C",
+      "reason_code": "STG_NOT_ELIGIBLE",
+      "message": "The patient's clinical presentation indicates a total body surface area (TBSA) of 25% thermal burns. The sole clinical indication for procedure BM001C explicitly requires the patient to have 40% - 60% TBSA deep thermal burns. The patient's TBSA of 25% falls outside this mandatory numeric range, thus failing the primary eligibility criterion. While the burns are described as mixed 2nd and 3rd degree, consistent with 'deep thermal burns requiring surgical procedures', the TBSA percentage is a strict numeric boundary that is not met. The minimum doctor qualification is also not documented, but the TBSA mismatch is the definitive clinical disqualifier.",
+      "missing_criteria": [
+        "Total Body Surface Area (TBSA) of burns not within the 40% - 60% range: patient has 25% TBSA burns, while the STG requires 40% - 60% TBSA",
+        "Minimum doctor qualification (M.Ch / DNB/ equivalent in Plastic Surgery) not documented"
+      ],
+      "confidence": "high",
+      "procedure_name": "Criteria 3: % Total Body Surface Area Burns (TBSA): 25-40 %; Includes % TBSA skin grafted, flap cover, follow-up dressings etc. as deemed necessary; Surgical procedures are required for deep burns that are not amenable to heal with dressings alone.",
+      "package_name": "Thermal burns"
+    }
+  ],
+  "preauth_docs_required": [
+    {
+      "key": "clinical_notes",
+      "label": "Admission / clinical notes",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "patient_photo",
+      "label": "Photo of patient on hospital bed",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "mlc_fir",
+      "label": "MLC / FIR copy",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "self_declaration",
+      "label": "Self-declaration from patient / attender",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "clinical_notes",
+      "label": "Clinical Notes",
+      "package_code": "BM001",
+      "available": true,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "mlc_fir",
+      "label": "MLC copy with number",
+      "package_code": "BM001",
+      "available": true,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "clinical_photo_initial",
+      "label": "Extent of upto 40% burns visible on photograph (with rule of 9 chart)",
+      "package_code": "BM001",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    }
+  ],
+  "preauth_docs_missing": [
+    {
+      "key": "self_declaration",
+      "label": "Self-declaration from patient / attender",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "clinical_photo_initial",
+      "label": "Extent of upto 40% burns visible on photograph (with rule of 9 chart)",
+      "package_code": "BM001",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    }
+  ],
+  "query_predictions": [
+    {
+      "procedure_code": "BM001B",
+      "package_name": "Thermal burns",
+      "readiness_verdict": "likely_queried",
+      "verdict_summary": "6 high-risk item(s) detected: Is there any evidence of 40% burn on clinical photograph of full body clearly showing burn?, Detailed procedure/operative notes are missing or incomplete., Discharge summary with follow-up advice at discharge is missing.",
+      "checklist_results": [
+        {
+          "question": "Clinical notes clearly mentioning the areas affected by burn with % of TBSA burn as per rule of 9?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "Clinical notes clearly detail affected areas and TBSA percentage using Rule of 9."
+        },
+        {
+          "question": "Copy of MLC with number?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "MLC document is available and patient history confirms registration."
+        },
+        {
+          "question": "Clinical photograph of the affected part?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "Clinical photograph of the affected part is available."
+        },
+        {
+          "question": "Has the patient presented with superficial partial thickness burn which will not heal without surgery within 3-4 weeks?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "Patient has mixed 2nd and 3rd degree burns with eschar formation and planned skin graft, indicating surgical intervention is required."
+        },
+        {
+          "question": "Is there any evidence of 40% burn on clinical photograph of full body clearly showing burn?",
+          "expected": true,
+          "actual": false,
+          "risk_level": "high",
+          "reasoning": "Patient has 25% TBSA burn, not 40%, so the clinical photograph would not show evidence of 40% burn."
+        }
+      ],
+      "common_query_risks": [
+        {
+          "query_text": "Clinical notes do not clearly mention the areas affected by burn with % of TBSA burn as per rule of 9.",
+          "risk_level": "low",
+          "reasoning": "Clinical notes clearly mention affected areas and TBSA percentage as per Rule of 9."
+        },
+        {
+          "query_text": "MLC copy with number is missing.",
+          "risk_level": "low",
+          "reasoning": "MLC document is available and patient history confirms registration."
+        },
+        {
+          "query_text": "Clinical photograph of the affected part is missing or unclear.",
+          "risk_level": "low",
+          "reasoning": "Clinical photograph of the affected part is available."
+        },
+        {
+          "query_text": "Document showing % of burn through Rule of 9 is missing or incomplete.",
+          "risk_level": "low",
+          "reasoning": "Clinical notes clearly document % of burn using Rule of 9."
+        },
+        {
+          "query_text": "Patient's burn will heal without surgery within 3-4 weeks, but a surgical package was chosen.",
+          "risk_level": "low",
+          "reasoning": "Patient has mixed 2nd and 3rd degree burns with eschar and planned skin graft, indicating surgical necessity."
+        },
+        {
+          "query_text": "Clinical photograph does not show evidence of up to 40% burn.",
+          "risk_level": "low",
+          "reasoning": "Patient has 25% TBSA burn, which is within the 'up to 40%' limit, so the photograph should support this."
+        },
+        {
+          "query_text": "Documentary evidence of indication for surgery is missing.",
+          "risk_level": "low",
+          "reasoning": "Clinical notes clearly document mixed 2nd/3rd degree burns with eschar and planned skin graft, indicating surgical necessity."
+        },
+        {
+          "query_text": "Detailed procedure/operative notes are missing or incomplete.",
+          "risk_level": "high",
+          "reasoning": "Operative notes are generated post-procedure and cannot be available at the pre-authorization stage."
+        },
+        {
+          "query_text": "Discharge summary with follow-up advice at discharge is missing.",
+          "risk_level": "high",
+          "reasoning": "Discharge summary is generated post-discharge and cannot be available at the pre-authorization stage."
+        },
+        {
+          "query_text": "Post-treatment photograph is missing.",
+          "risk_level": "high",
+          "reasoning": "Post-treatment photographs are taken after treatment and cannot be available at the pre-authorization stage."
+        },
+        {
+          "query_text": "Blood test reports (CBC, Sr. creatinine, Platelet etc.) are missing.",
+          "risk_level": "low",
+          "reasoning": "Comprehensive blood test reports including CBC, RFT, and electrolytes are available."
+        },
+        {
+          "query_text": "X-ray report is missing.",
+          "risk_level": "medium",
+          "reasoning": "No X-ray report is provided, and a chest X-ray might be considered given the possible inhalation injury."
+        },
+        {
+          "query_text": "Treating doctor qualification may not meet minimum STG requirement",
+          "risk_level": "high",
+          "reasoning": "STG requires one of ['M.Ch / DNB/ equivalent (in Plastic Surgery)']. Treating doctor has: MS Plastic and Reconstructive Surgery, Burns Fellowship. Degree match: False, Specialty match: False."
+        },
+        {
+          "query_text": "Provide Treating Doctor's Prescription advising Hospitalization with diagnosis",
+          "risk_level": "medium",
+          "reasoning": "No treating doctor prescription found in documents in hand."
+        },
+        {
+          "query_text": "Provide Self-declaration with detailed narration of incident, mentioning date, place and time. With copy of MLC/FIR.",
+          "risk_level": "high",
+          "reasoning": "MLC case \u2014 FIR or self-declaration missing from documents in hand."
+        }
+      ],
+      "advisory_claim_docs": [
+        {
+          "key": "post_treatment_clinical_photograph",
+          "label": "Post treatment clinical photograph"
+        },
+        {
+          "key": "blood_test_cbc_sr_creatinine_platelet_etc",
+          "label": "Blood test (CBC, Sr. creatinine, Platelet etc.)"
+        },
+        {
+          "key": "x_ray",
+          "label": "X ray"
+        },
+        {
+          "key": "discharge_summary",
+          "label": "Discharge Summary"
+        },
+        {
+          "key": "procedure_operative_notes",
+          "label": "Procedure/ operative notes"
+        }
+      ],
+      "llm_evaluation_status": "success"
+    }
+  ],
+  "enhancement_plan": [],
+  "copayment_required": false,
+  "copayment_gap_inr": null,
+  "comorbidity_notes": [],
+  "flags": [
+    {
+      "code": "EMERGENCY_PHASE_STUBBED",
+      "message": "Emergency routing not implemented \u2014 assuming planned elective admission",
+      "severity": "info"
+    },
+    {
+      "code": "CANDIDATES_GENERATED",
+      "message": "Generated 4 candidates from index",
+      "severity": "info"
+    },
+    {
+      "code": "CONFLICT_RESOLVED",
+      "message": "1 package(s) removed by conflict resolver before billing rules \u2014 mutual exclusivity or sub-inclusion detected.",
+      "severity": "info"
+    },
+    {
+      "code": "ADDON_PARENT_UNKNOWN",
+      "message": "SE040A add-on parent unknown \u2014 removed.",
+      "severity": "warning"
+    },
+    {
+      "code": "DEDUCTION_APPROXIMATE",
+      "message": "100-50-25 deduction order uses base_rate as proxy for final price. Actual order should use final price after tier/level/accreditation multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "FINANCIAL_ESTIMATE_APPROXIMATE",
+      "message": "Cost estimate uses base rates only. Final rates include tier, level, accreditation, and geo multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "DOC_GAP_ANALYSIS",
+      "message": "Required: 7 docs. Missing: 2.",
+      "severity": "info"
+    },
+    {
+      "code": "MANDATORY_DOCS_MISSING",
+      "message": "1 mandatory document(s) missing \u2014 cannot submit pre-auth until resolved.",
+      "severity": "warning"
+    }
+  ],
+  "stg_coverage": {
+    "validated": 3,
+    "stg_missing": 1
+  },
+  "errors": []
+}

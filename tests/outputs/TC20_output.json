@@ -1,0 +1,264 @@
+{
+  "readiness_status": "BLOCKED",
+  "selected_packages": [
+    {
+      "validated": {
+        "procedure_code": "SG050B",
+        "package_code": "SG050",
+        "specialty_code": "SG",
+        "package_name": "Groin Hernia Repair",
+        "procedure_name": "Inguinal - Lap.",
+        "billing_type": "surgical",
+        "billing_unit": "one_time",
+        "procedure_label": "regular",
+        "auto_approved": "none",
+        "enhancement_applicable": false,
+        "enhancement_requests_needed": null,
+        "reserved_public_only": false,
+        "base_rate_inr": 25000,
+        "stratification": {
+          "determinable": true,
+          "selected_stratum": null,
+          "note": null
+        },
+        "implant": {
+          "required": true,
+          "name": "Mesh - 6 X 3 - Polypropylene",
+          "cost_inr": 1500,
+          "age_appropriate": true,
+          "gender_appropriate": true,
+          "quantity": 1
+        },
+        "special_conditions_popup": false,
+        "special_conditions_rule": false,
+        "stg_eligible": true,
+        "stg_missing_criteria": [
+          "Minimum doctor qualification (MS / DNB/ equivalent (General Surgery), DNB/ MCh/ equivalent (Pediatric Surgery)) not specified in clinical input"
+        ],
+        "stg_reasoning": "The patient presents with a right inguinal reducible swelling (4x3cm) with a positive cough impulse, confirmed by dynamic USG, which directly satisfies the 'Bulge in the area on either side of pubic bone' indication. The patient also reports discomfort in the groin region impacting daily activities, satisfying the 'Pain and discomfort in groin region when coughing, exercising or bending over' indication. Since at least one indication is met, the indication criteria are satisfied. No clinical thresholds are specified for this procedure. The patient's concurrent decompensated congestive heart failure is a comorbidity and does not block eligibility for the hernia repair itself. The minimum doctor qualification is not specified in the provided clinical input.",
+        "is_addon_to": null,
+        "addon_type": null,
+        "match_score": 100.0,
+        "flags": [
+          "STG_LOW_CONFIDENCE: The patient presents with a right inguinal reducible swelling (4x3cm) with a positive cough impulse,"
+        ]
+      },
+      "role": "primary",
+      "deduction_factor": 1.0,
+      "pre_auth_group": 1
+    }
+  ],
+  "blocked_candidates": [],
+  "preauth_docs_required": [
+    {
+      "key": "clinical_notes",
+      "label": "Admission / clinical notes",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "patient_photo",
+      "label": "Photo of patient on hospital bed",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "clinical_notes",
+      "label": "Clinical notes",
+      "package_code": "SG050",
+      "available": true,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "usg_report",
+      "label": "USG (specifying size of defect)",
+      "package_code": "SG050",
+      "available": true,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "clinical_photo_initial",
+      "label": "Clinical photograph",
+      "package_code": "SG050",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    }
+  ],
+  "preauth_docs_missing": [
+    {
+      "key": "patient_photo",
+      "label": "Photo of patient on hospital bed",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "clinical_photo_initial",
+      "label": "Clinical photograph",
+      "package_code": "SG050",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    }
+  ],
+  "query_predictions": [
+    {
+      "procedure_code": "SG050B",
+      "package_name": "Groin Hernia Repair",
+      "readiness_verdict": "likely_queried",
+      "verdict_summary": "2 high-risk item(s) detected: Was the Photograph showing hernia / bulge submitted?, Photograph showing hernia/bulge missing at pre-authorization",
+      "checklist_results": [
+        {
+          "question": "Clinical notes with detailed history, signs & symptoms, indication for procedure?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "Clinical notes are available and contain detailed history, signs, symptoms, and clear indication for the procedure."
+        },
+        {
+          "question": "Was the Photograph showing hernia / bulge submitted?",
+          "expected": true,
+          "actual": false,
+          "risk_level": "high",
+          "reasoning": "No photograph showing the hernia or bulge is listed in the available documents, which is a critical missing document."
+        },
+        {
+          "question": "Was the patient operated for hernia on same side in past?",
+          "expected": false,
+          "actual": false,
+          "risk_level": "pass",
+          "reasoning": "Patient history does not indicate any previous hernia surgery on the same side."
+        }
+      ],
+      "common_query_risks": [
+        {
+          "query_text": "Clinical notes missing detailed history, signs & symptoms, or indication for procedure",
+          "risk_level": "low",
+          "reasoning": "Clinical notes are available and provide detailed history, signs, symptoms, and a clear indication for the procedure."
+        },
+        {
+          "query_text": "Photograph showing hernia/bulge missing at pre-authorization",
+          "risk_level": "high",
+          "reasoning": "The list of available documents does not include a photograph showing the hernia or bulge, which is a common query trigger."
+        },
+        {
+          "query_text": "Intraoperative clinical photograph missing or does not show presence of Mesh",
+          "risk_level": "low",
+          "reasoning": "This query trigger pertains to intraoperative documentation, which is not relevant at the pre-authorization stage."
+        },
+        {
+          "query_text": "Invoice for the mesh used is missing",
+          "risk_level": "low",
+          "reasoning": "This query trigger pertains to post-procedure documentation (invoice for mesh), which is not relevant at the pre-authorization stage."
+        },
+        {
+          "query_text": "Patient previously operated for hernia on the same side without adequate justification",
+          "risk_level": "low",
+          "reasoning": "Patient history does not indicate any previous hernia surgery on the same side, thus this trigger is not applicable."
+        },
+        {
+          "query_text": "No clinical symptom of bulge in the area on either side of pubic bone documented",
+          "risk_level": "low",
+          "reasoning": "Clinical notes and examination findings clearly document a right groin swelling/bulge with positive cough impulse."
+        },
+        {
+          "query_text": "Provide Treating Doctor's Prescription advising Hospitalization with diagnosis",
+          "risk_level": "medium",
+          "reasoning": "No treating doctor prescription found in documents in hand."
+        },
+        {
+          "query_text": "Provide clinical photograph of the injury/lesion",
+          "risk_level": "medium",
+          "reasoning": "No clinical photograph found \u2014 CAM Table 3 item for surgical cases."
+        }
+      ],
+      "advisory_claim_docs": [
+        {
+          "key": "post_op_clinical_photograph",
+          "label": "Post op clinical photograph"
+        },
+        {
+          "key": "operative_notes",
+          "label": "Operative notes"
+        },
+        {
+          "key": "invoice_of_mesh_tacker_used",
+          "label": "Invoice of the Mesh / tacker used"
+        },
+        {
+          "key": "detailed_discharge_summary",
+          "label": "Detailed Discharge Summary"
+        },
+        {
+          "key": "pre_anesthesia_check_up_report",
+          "label": "Pre-anesthesia check-up report"
+        }
+      ],
+      "llm_evaluation_status": "success"
+    }
+  ],
+  "enhancement_plan": [],
+  "copayment_required": false,
+  "copayment_gap_inr": null,
+  "comorbidity_notes": [
+    "Comorbidity 'Hypertension' is absorbed in the surgical package \u2014 do not raise separately."
+  ],
+  "flags": [
+    {
+      "code": "EMERGENCY_PHASE_STUBBED",
+      "message": "Emergency routing not implemented \u2014 assuming planned elective admission",
+      "severity": "info"
+    },
+    {
+      "code": "CANDIDATES_GENERATED",
+      "message": "Generated 2 candidates from index",
+      "severity": "info"
+    },
+    {
+      "code": "SURGICAL_PERDAY_BLOCKED",
+      "message": "Surgical and per-day medical packages cannot be combined in same pre-auth. Per-day package(s) removed: MG038A.",
+      "severity": "warning"
+    },
+    {
+      "code": "DEDUCTION_APPROXIMATE",
+      "message": "100-50-25 deduction order uses base_rate as proxy for final price. Actual order should use final price after tier/level/accreditation multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "FINANCIAL_ESTIMATE_APPROXIMATE",
+      "message": "Cost estimate uses base rates only. Final rates include tier, level, accreditation, and geo multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "COMORBIDITY_REVIEW_NEEDED",
+      "message": "Comorbidity 'Ischaemic Heart Disease' may require separate clinical review \u2014 not a standard management condition.",
+      "severity": "info"
+    },
+    {
+      "code": "COMORBIDITY_REVIEW_NEEDED",
+      "message": "Comorbidity 'Congestive Cardiac Failure' may require separate clinical review \u2014 not a standard management condition.",
+      "severity": "info"
+    },
+    {
+      "code": "COMORBIDITY_REVIEW_NEEDED",
+      "message": "Comorbidity 'Atrial Fibrillation' may require separate clinical review \u2014 not a standard management condition.",
+      "severity": "info"
+    },
+    {
+      "code": "DOC_GAP_ANALYSIS",
+      "message": "Required: 5 docs. Missing: 2.",
+      "severity": "info"
+    },
+    {
+      "code": "MANDATORY_DOCS_MISSING",
+      "message": "1 mandatory document(s) missing \u2014 cannot submit pre-auth until resolved.",
+      "severity": "warning"
+    }
+  ],
+  "stg_coverage": {
+    "validated": 2,
+    "stg_missing": 0
+  },
+  "errors": []
+}

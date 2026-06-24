@@ -1,0 +1,152 @@
+{
+  "readiness_status": "BLOCKED",
+  "selected_packages": [],
+  "blocked_candidates": [
+    {
+      "procedure_code": "SV006A",
+      "reason_code": "STG_NOT_ELIGIBLE",
+      "message": "The STG for procedure SV006A explicitly states 'Not specified' for clinical indications. According to the core principles, particularly 'Literal interpretation' and 'Default to eligible=False whenever a criterion is not unambiguously satisfied by the clinical input,' if no indications are provided in the STG document, the patient cannot satisfy 'at least one' from an empty list. While the patient's clinical presentation clearly demonstrates severe symptomatic aortic stenosis and a need for Aortic Valve Replacement based on standard medical guidelines (severe AS parameters on ECHO, NYHA class III symptoms, syncopal episode), these specific conditions are not listed as criteria in the provided STG. The 'Clinical Key Notes' refer to external documents for 'Clinical Pointers,' confirming the incompleteness of the provided STG, but external information cannot be used for validation. Therefore, the patient fails to meet the indication requirement as per the literal interpretation of the provided STG. Additionally, the minimum doctor qualification is not explicitly documented in the patient's clinical presentation.",
+      "missing_criteria": [
+        "No clinical indications are specified in the STG document for SV006A, therefore the patient cannot satisfy 'at least one' indication from an empty list.",
+        "Minimum doctor qualification (M.Ch./DNB/equivalent in Cardiothoracic Surgery) is not explicitly documented in the patient's clinical presentation."
+      ],
+      "confidence": "low",
+      "procedure_name": "Double valve replacement/ repair",
+      "package_name": "Double Valve Procedure"
+    },
+    {
+      "procedure_code": "SV041A",
+      "reason_code": "PLAUSIBILITY_FAILED",
+      "message": "The candidate package is for a follow-up 2-4 weeks after discharge, which is not part of the patient's current admission for surgery."
+    },
+    {
+      "procedure_code": "SV041B",
+      "reason_code": "PLAUSIBILITY_FAILED",
+      "message": "The patient is currently admitted for double valve surgery, and a 'Second Follow-up- After 3 months' package is not directly related to the primary surgical procedure for this admission."
+    },
+    {
+      "procedure_code": "SV041C",
+      "reason_code": "PLAUSIBILITY_FAILED",
+      "message": "The patient is currently admitted for double valve surgery, whereas the candidate package is for a 'Third Follow-up- After 3 months', which is not the procedure planned for this admission."
+    },
+    {
+      "procedure_code": "SV041D",
+      "reason_code": "PLAUSIBILITY_FAILED",
+      "message": "The patient is currently admitted for double valve surgery, whereas the candidate package 'fourth Follow-up- After 3 months' is a post-operative service and not directly plausible for the current admission's primary purpose."
+    },
+    {
+      "procedure_code": "SV041E",
+      "reason_code": "PLAUSIBILITY_FAILED",
+      "message": "The patient is currently admitted for 'Double valve surgery', whereas the candidate package 'FifthFollow-up - After 3 months' is a post-operative follow-up scheduled for a future date, not the primary procedure for this admission."
+    }
+  ],
+  "preauth_docs_required": [
+    {
+      "key": "clinical_notes",
+      "label": "Admission / clinical notes",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "patient_photo",
+      "label": "Photo of patient on hospital bed",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "case_summary",
+      "label": "Detailed case summary with diagnosis and treatment plan",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "specialist_opinion",
+      "label": "Specialist opinion letter justifying the procedure",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "cost_estimate",
+      "label": "Estimated cost of treatment from treating hospital",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    }
+  ],
+  "preauth_docs_missing": [
+    {
+      "key": "patient_photo",
+      "label": "Photo of patient on hospital bed",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "case_summary",
+      "label": "Detailed case summary with diagnosis and treatment plan",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "specialist_opinion",
+      "label": "Specialist opinion letter justifying the procedure",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "cost_estimate",
+      "label": "Estimated cost of treatment from treating hospital",
+      "package_code": null,
+      "available": false,
+      "criticality": "hard_block"
+    }
+  ],
+  "query_predictions": [],
+  "enhancement_plan": [],
+  "copayment_required": false,
+  "copayment_gap_inr": null,
+  "comorbidity_notes": [],
+  "flags": [
+    {
+      "code": "EMERGENCY_PHASE_STUBBED",
+      "message": "Emergency routing not implemented \u2014 assuming planned elective admission",
+      "severity": "info"
+    },
+    {
+      "code": "CANDIDATES_GENERATED",
+      "message": "Generated 6 candidates from index",
+      "severity": "info"
+    },
+    {
+      "code": "NO_VALIDATED_PACKAGES",
+      "message": "No candidate packages passed Phase 3 validation. USP referral is recommended.",
+      "severity": "warning"
+    },
+    {
+      "code": "USP_RECOMMENDED",
+      "message": "No standard PM-JAY packages validated for this clinical input. Unspecified Surgical Package (USP) pathway may apply. Consult SHA.",
+      "severity": "warning"
+    },
+    {
+      "code": "DOC_GAP_ANALYSIS",
+      "message": "Required: 5 docs. Missing: 4.",
+      "severity": "info"
+    },
+    {
+      "code": "MANDATORY_DOCS_MISSING",
+      "message": "4 mandatory document(s) missing \u2014 cannot submit pre-auth until resolved.",
+      "severity": "warning"
+    }
+  ],
+  "stg_coverage": {
+    "validated": 1,
+    "stg_missing": 5
+  },
+  "errors": []
+}

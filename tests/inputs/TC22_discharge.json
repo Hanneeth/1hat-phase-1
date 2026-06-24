@@ -1,0 +1,155 @@
+{
+  "_test_id": "TC22_DISCHARGE",
+  "_description": "PCNL right kidney (SU007A) — surgery performed successfully on Day 2. Patient took LAMA on Day 4 before completing post-operative recovery (nephrostomy tube still in situ, stone fragments not fully cleared). SHA notified same day as LAMA. Special payment: 75% of package rate (LAMA after surgery — HBP Guidelines Section 6.1.a.ii). All claim docs present. Exercises: LAMA after surgery special payment rule, SHA notification check, CLAIM_GAPS status.",
+  "_expected_claim_status": "CLAIM_GAPS",
+  "_expected_deviations": [],
+  "_expected_audit_flags": ["missing_stg_docs"],
+  "_expected_specialty_notes": [],
+  "_expected_special_payment_trigger": "lama_after_surgery",
+  "_expected_special_payment_pct": 75,
+
+  "preauth_reference": "IRIS-TC22-20260620",
+  "case_id": "APL/CHN/2026/022345",
+  "preauth_input_path": "tests/inputs/TC22.json",
+  "claim_submission_date": "2026-06-26",
+
+  "hospital": {
+    "name": "Apollo Hospitals Chennai",
+    "hospital_code": "H001",
+    "address": "21 Greams Lane, Off Greams Road, Chennai 600006",
+    "district": "Chennai"
+  },
+
+  "patient": {
+    "name": "Ravi Kumar",
+    "pmjay_id": "P001",
+    "age": 48,
+    "gender": "M",
+    "address": "12 Anna Nagar East, Chennai 600102",
+    "contact_number": "9876543210",
+    "ipd_number": "IPD/SU/2026/022345",
+    "pmjay_case_id": "IRIS-TC22-20260620"
+  },
+
+  "treating_consultant": {
+    "name": "Dr. Karthikeyan R",
+    "contact_number": "9845679834",
+    "qualification": "MS General Surgery, MCh Urology",
+    "registration_number": "TN-09834",
+    "specialty": "Urology"
+  },
+
+  "admission": {
+    "date_of_admission": "2026-06-20",
+    "time_of_admission": "09:00",
+    "date_of_discharge": "2026-06-23",
+    "time_of_discharge": "14:00",
+    "date_of_operation": "2026-06-21",
+    "actual_los_days": 4,
+    "ward_category_actual": "ward",
+    "bed_category_breakdown": {
+      "ward_days": 4,
+      "hdu_days": 0,
+      "icu_days": 0,
+      "icu_vent_days": 0
+    },
+    "admission_type": "planned",
+    "package_booked": "SU007",
+    "discharge_status": "lama",
+    "discharge_condition": "clinically improving but not medically fit for discharge"
+  },
+
+  "clinical": {
+    "presenting_complaints": "Right-sided colicky flank pain and intermittent gross haematuria for 3 months",
+    "duration_of_complaints": "3 months",
+    "initial_assessment": "48-year-old male admitted for planned right PCNL for a 2.5 cm staghorn calculus in the right renal pelvis with mild hydronephrosis (RPD 14 mm). Pre-operative workup complete — urine culture sterile, renal function normal (creatinine 1.1 mg/dL, eGFR 72), coagulation normal (INR 1.0). Pre-anaesthetic fitness obtained for spinal anaesthesia. Patient admitted Day 1 for bowel preparation and IV fluids.",
+    "significant_past_history": "UTI 5 weeks prior — cleared on repeat culture. No diabetes, hypertension, or cardiac illness. No prior renal stones or urological surgery.",
+    "primary_diagnosis_at_admission": "Right renal pelvis staghorn calculus (2.5 cm) with mild right hydronephrosis",
+    "final_diagnosis_at_discharge": "Post-operative Day 3 status following right PCNL for right renal pelvis staghorn calculus — LAMA with nephrostomy tube in situ, residual fragments likely, stone-free status not confirmed",
+    "icd10_codes": ["N20.0", "N13.30"],
+    "key_investigations": "NCCT KUB, RFT, CBC, coagulation, urine culture, post-operative check X-ray KUB",
+    "investigation_findings": "Pre-operative: NCCT KUB — 2.5 cm staghorn calculus right renal pelvis, RPD 14 mm. Creatinine 1.1 mg/dL, eGFR 72, INR 1.0, urine culture sterile. Post-operative Day 2 (22 June 2026): X-ray KUB showed significant stone fragmentation but residual fragments visible in lower pole calyx — estimated residual burden 8mm. Nephrostomy tube draining well, urine output adequate. Post-operative Day 3 (23 June 2026): Patient haemodynamically stable. Creatinine 1.2 mg/dL (slight rise, acceptable post-PCNL). Haematuria resolving. Nephrostomy tube output 80 mL/hour (serous). Planned nephrostomy tube removal on Day 5 pending nephrostogram and stone-free confirmation. Post-operative urine culture pending.",
+    "treatment_given": "Day 1: IV fluids, bowel preparation, pre-operative antibiotics (IV ceftriaxone 1g). Day 2 (21 June 2026): Right PCNL performed under spinal anaesthesia. Successful percutaneous access, stone fragmented with pneumatic lithotripter, major fragments extracted. Nephrostomy tube (18Fr Malecot) placed. Day 3: IV antibiotics, haematuria monitoring, nephrostomy tube drainage monitoring, analgesia. Day 4: Patient and family requesting early discharge against medical advice — surgeon advised against LAMA given nephrostomy tube in situ, residual fragments, and pending stone-free status confirmation. Patient and attender signed LAMA form after counselling. Discharged against medical advice on Day 4.",
+    "operative_findings": "Right PCNL performed under spinal anaesthesia and fluoroscopic guidance. Prone position. Percutaneous access to right renal pelvis achieved via posterior lower pole calyx under C-arm guidance using 18-gauge access needle, guidewire placed, tract dilated to 24Fr using Amplatz dilator set. 24Fr Amplatz sheath placed. Nephroscopy performed — large 2.5 cm staghorn calculus identified occupying right renal pelvis extending into lower pole calyx. Pneumatic lithotripter used to fragment stone — major fragments extracted using stone forceps and Ellik evacuator. Multiple passes performed. Post-fragmentation nephroscopy: significant fragmentation achieved, pelvis cleared, residual fragments noted in lower pole calyx (estimated 8mm cumulative). Decision made to place nephrostomy tube and plan second-look nephroscopy on Day 5 for residual fragment clearance. 18Fr Malecot nephrostomy tube placed, secured to skin. No significant bleeding. Estimated blood loss 80 mL. Urine at end of procedure: haematuric but clearing. No intraoperative complications.",
+    "final_procedure_performed": "Right PCNL (Percutaneous Nephrolithotomy) with pneumatic lithotripsy and nephrostomy tube placement",
+    "complications": null,
+    "follow_up_date": "2026-06-28",
+    "advice_on_discharge": "LAMA — patient discharged against medical advice. Nephrostomy tube (18Fr Malecot) in situ — patient and attender instructed on nephrostomy tube care, drainage bag management, and warning signs. Return IMMEDIATELY to emergency if: fever >38.5°C, reduced urine output through nephrostomy tube, haematuria worsening, nephrostomy tube dislodgement, severe flank pain. Advised to return for planned second-look nephroscopy and nephrostomy tube removal within 3-4 days. LAMA form signed by patient and attender. Surgeon: Dr. Karthikeyan R.",
+
+    "discharge_summary_text": "Patient Ravi Kumar, 48-year-old male, PMJAY ID P001, was admitted on 20 June 2026 for planned right PCNL for a 2.5 cm staghorn calculus in the right renal pelvis with mild hydronephrosis. Pre-operative workup was complete — urine culture sterile, renal function normal, coagulation normal. Pre-anaesthetic fitness obtained for spinal anaesthesia.\n\nRight PCNL was performed on 21 June 2026 under spinal anaesthesia and fluoroscopic guidance. Percutaneous access to the right renal pelvis was achieved via the posterior lower pole calyx. The staghorn calculus was fragmented using a pneumatic lithotripter and major fragments were extracted. Post-fragmentation nephroscopy revealed residual fragments estimated at 8mm in the lower pole calyx. An 18Fr Malecot nephrostomy tube was placed and a second-look nephroscopy was planned for Day 5 to achieve complete stone clearance and confirm stone-free status before nephrostomy tube removal.\n\nPost-operatively the patient was haemodynamically stable with adequate nephrostomy tube drainage and resolving haematuria. Creatinine on Day 3 was 1.2 mg/dL (acceptable post-PCNL rise). Post-operative X-ray KUB on Day 2 confirmed significant fragmentation with residual fragments in the lower pole calyx. The surgical team had planned nephrostogram and second-look nephroscopy on Day 5 before nephrostomy tube removal.\n\nOn Day 4 (23 June 2026), the patient and family requested discharge against medical advice. The risks of early discharge with nephrostomy tube in situ — including tube dislodgement, urosepsis, and incomplete stone clearance — were explained in detail. The patient and attender declined to stay and signed the LAMA (Left Against Medical Advice) form after full counselling. Patient was discharged on Day 4 with nephrostomy tube in situ, instructions for tube care, and a strong advisory to return within 3-4 days for completion of treatment. PMJAY SHA notified on the same day as per protocol.",
+
+    "operative_notes_text": "OPERATIVE NOTE\nDate: 21 June 2026 | Time: 09:30–11:30 hrs\nSurgeon: Dr. Karthikeyan R (TN-09834)\nAnaesthetist: Dr. Priya Anand\nAnaesthesia: Spinal anaesthesia (bupivacaine heavy 0.5% 3mL)\nIndication: Right renal pelvis staghorn calculus 2.5 cm, mild hydronephrosis, ESWL not suitable (size), URS not applicable (intrarenal). Sterile urine culture pre-op confirmed.\nProcedure: Right PCNL under spinal anaesthesia and C-arm fluoroscopic guidance.\n\nPatient positioned prone on radiolucent table. Spinal anaesthesia administered in L3-L4 interspace — good anaesthetic level achieved (T8 block). Back prepped and draped. Fluoroscopic guidance used throughout.\n\nPERCUTANEOUS ACCESS:\n18-gauge access needle introduced into posterior lower pole calyx under C-arm guidance. Good calyceal puncture confirmed on fluoroscopy with contrast injection — contrast filled pelvis and lower calyx confirming central access. 0.038 Amplatz guidewire placed into renal pelvis and coiled. Access needle removed. Sequential dilation performed: 8Fr fascial dilator, then 10Fr, then Amplatz serial dilators up to 24Fr. 24Fr Amplatz sheath placed and locked.\n\nNEPHROSCOPY:\n24Fr rigid nephroscope introduced. Clear view of renal pelvis obtained. Staghorn calculus identified — large stone occupying pelvis and extending into lower pole calyx. Stone: mixed density, irregular surface, estimated 2.5 cm.\n\nLITHOTRIPSY AND EXTRACTION:\nPneumatic lithotripter (Swiss LithoClast) used to fragment stone systematically. Stone fragmented into multiple pieces. Fragment extraction performed using stone forceps and Ellik evacuator — multiple passes. Pelvis cleared of major fragments. Post-fragmentation nephroscopy: lower pole calyx inspection revealed residual fragments cumulative estimated 8mm. Upper pole calyx clear. Ureteropelvic junction patent — no obstruction.\n\nDECISION: Residual fragments in lower pole calyx — plan nephrostomy tube, second-look nephroscopy Day 5 for complete clearance.\n\n18Fr Malecot nephrostomy tube inserted via working sheath, coiled in renal pelvis, confirmed on fluoroscopy. Nephrostomy tube secured to skin with 2-0 silk suture and connected to closed drainage bag. Sheath removed. Estimated blood loss: 80 mL. No intraoperative complications. Urine at end of procedure: haematuric, clearing.\n\nPOST-OP PLAN: IV antibiotics 48 hours. Nephrostomy tube monitoring. X-ray KUB Day 2 for residual assessment. Nephrostogram + second-look nephroscopy Day 5. Stone-free confirmation before nephrostomy tube removal.",
+
+    "pre_anaesthesia_text": "Pre-Anaesthesia Assessment — 20 June 2026\nAnaesthetist: Dr. Priya Anand\nASA Grade: I (healthy adult, elective procedure)\nAirway: Mallampati Class I. Adequate mouth opening. Not relevant for spinal — documented for records.\nCardiovascular: HR 74 bpm regular, BP 124/78 mmHg. No cardiac history.\nRespiratory: Clear bilaterally, SpO2 99% on room air.\nRenal: Creatinine 1.1 mg/dL, eGFR 72. Acceptable for spinal.\nCoagulation: INR 1.0, PT 12.2s, APTT 28s — normal. Safe for spinal.\nInfection: Urine culture sterile — cleared for surgery.\nAllergies: None known.\nPlan: Spinal anaesthesia with bupivacaine heavy 0.5% in L3-L4 interspace. Prone positioning for PCNL. IV access two large-bore cannulae. IV fluids intraoperatively. Monitor SpO2, BP, HR throughout. Fit for planned procedure."
+  },
+
+  "discharge_medications": [
+    "Tab. Ciprofloxacin 500mg BD x 5 days (urine culture pending — empirical)",
+    "Tab. Tamsulosin 0.4mg OD at bedtime (facilitates stone fragment passage)",
+    "Tab. Paracetamol 500mg TDS as needed for pain",
+    "Tab. Pantoprazole 40mg OD before breakfast for 5 days",
+    "Nephrostomy tube care instructions given to patient and attender"
+  ],
+
+  "signatures": {
+    "treating_consultant_signed": true,
+    "pmam_signed": true,
+    "patient_or_attendant_signed": true
+  },
+
+  "patient_amount_collected_inr": 0,
+
+  "sha_notification_date": "2026-06-23",
+
+  "implant_details": null,
+
+  "documents_submitted": [
+    {
+      "key": "discharge_summary",
+      "label": "Discharge Summary (CAM Annexure 6 format)",
+      "available": true
+    },
+    {
+      "key": "operative_notes",
+      "label": "Operative notes — right PCNL 21 June 2026",
+      "available": true
+    },
+    {
+      "key": "procedure_operative_notes",
+      "label": "Procedure / operative notes — right PCNL with pneumatic lithotripsy",
+      "available": true
+    },
+    {
+      "key": "pre_anesthesia_check_up_report",
+      "label": "Pre-anaesthesia assessment report — 20 June 2026",
+      "available": true
+    },
+    {
+      "key": "detailed_discharge_summary",
+      "label": "Detailed discharge summary with LAMA documentation",
+      "available": true
+    },
+    {
+      "key": "blood_test_cbc_sr_creatinine_platelet_etc",
+      "label": "Blood investigations — RFT, CBC, coagulation profile",
+      "available": true
+    },
+    {
+      "key": "lama_form",
+      "label": "LAMA consent form signed by patient and attender",
+      "available": true
+    },
+    {
+      "key": "xray_kub_postop",
+      "label": "Post-operative X-ray KUB Day 2 showing residual fragments",
+      "available": true
+    },
+    {
+      "key": "urine_culture_report",
+      "label": "Pre-operative urine culture report (sterile)",
+      "available": true
+    }
+  ],
+
+  "deviations_declared": []
+}

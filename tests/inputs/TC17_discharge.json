@@ -1,0 +1,140 @@
+{
+  "_test_id": "TC17_DISCHARGE",
+  "_description": "Clean claim — lap cholecystectomy (SG039C), all mandatory claim docs present, no deviations, normal recovery, LOS 3 days matches indicative. Exercises the CLAIM_READY happy path end to end.",
+  "_expected_claim_status": "CLAIM_GAPS",
+  "_expected_deviations": [],
+  "_expected_audit_flags": [],
+  "_expected_specialty_notes": [],
+  "preauth_reference": "IRIS-TC17-20260616",
+  "case_id": "APL/CHN/2026/017234",
+  "preauth_input_path": "tests/inputs/TC17.json",
+  "claim_submission_date": "2026-06-20",
+  "hospital": {
+    "name": "Apollo Hospitals Chennai",
+    "hospital_code": "H001",
+    "address": "21 Greams Lane, Off Greams Road, Chennai 600006",
+    "district": "Chennai"
+  },
+  "patient": {
+    "name": "Ravi Kumar",
+    "pmjay_id": "P001",
+    "age": 45,
+    "gender": "M",
+    "address": "12 Anna Nagar East, Chennai 600102",
+    "contact_number": "9876543210",
+    "ipd_number": "IPD/SG/2026/017234",
+    "pmjay_case_id": "IRIS-TC17-20260616"
+  },
+  "treating_consultant": {
+    "name": "Dr. Senthilkumar R",
+    "contact_number": "9845671234",
+    "qualification": "MS General Surgery",
+    "registration_number": "TN-09871",
+    "specialty": "General Surgery"
+  },
+  "admission": {
+    "date_of_admission": "2026-06-16",
+    "time_of_admission": "09:30",
+    "date_of_discharge": "2026-06-19",
+    "time_of_discharge": "11:00",
+    "date_of_operation": "2026-06-17",
+    "actual_los_days": 3,
+    "ward_category_actual": "ward",
+    "bed_category_breakdown": {
+      "ward_days": 3,
+      "hdu_days": 0,
+      "icu_days": 0,
+      "icu_vent_days": 0
+    },
+    "admission_type": "planned",
+    "package_booked": "SG039C",
+    "discharge_status": "recovered",
+    "discharge_condition": "stable"
+  },
+  "clinical": {
+    "presenting_complaints": "Right upper quadrant pain radiating to right shoulder for 3 days, fever, nausea, vomiting after fatty meals",
+    "duration_of_complaints": "3 days",
+    "initial_assessment": "45-year-old male with Type 2 Diabetes Mellitus admitted for planned laparoscopic cholecystectomy. USG confirmed multiple gallstones with gallbladder wall thickening and pericholecystic fluid consistent with acute cholecystitis. LFTs within normal limits. Pre-anaesthetic check-up completed. Diabetes optimised pre-operatively with metformin held 24 hours prior to surgery.",
+    "significant_past_history": "Type 2 Diabetes Mellitus for 4 years on oral hypoglycaemics (Metformin 500mg BD, Glimepiride 1mg OD). Well controlled. No cardiac history. No prior abdominal surgery.",
+    "primary_diagnosis_at_admission": "Acute cholecystitis with cholelithiasis",
+    "final_diagnosis_at_discharge": "Post-operative status following laparoscopic cholecystectomy for acute calculous cholecystitis",
+    "icd10_codes": [
+      "K81.0",
+      "K80.00"
+    ],
+    "key_investigations": "USG abdomen, CBC, LFT, serum amylase, INR, blood sugar, pre-anaesthetic assessment",
+    "investigation_findings": "USG abdomen: multiple calculi in gallbladder (largest 14mm), gallbladder wall thickening 5.5mm with pericholecystic fluid, CBD not dilated (4mm). CBC: WBC 13,800 cells/mcL (elevated), Hb 13.2 g/dL. LFT: total bilirubin 1.1 mg/dL (normal), ALP 92 U/L, AST 44 U/L, ALT 38 U/L — all within normal limits. Serum amylase 68 U/L (normal). INR 1.0. Blood glucose pre-op: 118 mg/dL (well controlled).",
+    "treatment_given": "IV fluids and IV antibiotics (ceftriaxone 1g BD) on admission. Blood sugar monitoring 6-hourly with insulin sliding scale. Laparoscopic cholecystectomy performed on Day 2 (17 June 2026) under general anaesthesia. Standard 3-port technique. Post-operatively patient started on clear fluids on Day 2 evening, soft diet on Day 3. IV antibiotics continued for 24 hours post-op then switched to oral. Patient mobilised on Day 2 evening. Metformin restarted on Day 3.",
+    "operative_findings": "Standard 3-port laparoscopic cholecystectomy. Gallbladder moderately inflamed with omental adhesions around fundus — dissected bluntly. Calot's triangle dissected with clear identification of cystic duct and cystic artery. Critical view of safety achieved. Cystic duct clipped with 2 Hem-o-lok clips proximally and 1 distally. Cystic artery clipped and divided. Gallbladder dissected off liver bed using electrocautery. Specimen retrieved in endobag through umbilical port. Gallbladder contained multiple faceted stones (largest 14mm) with turbid bile. No bile spillage. Subhepatic drain placed. Haemostasis confirmed. Ports closed in layers. Estimated blood loss: 30 mL. No intraoperative complications.",
+    "final_procedure_performed": "Laparoscopic cholecystectomy without common bile duct exploration",
+    "complications": null,
+    "follow_up_date": "2026-06-26",
+    "advice_on_discharge": "Wound care — keep dry for 5 days, sutures to be removed at follow-up. Low-fat diet for 2 weeks. Restart Metformin 500mg BD and Glimepiride 1mg OD from today. Tab. Paracetamol 500mg TDS as needed for pain for 5 days. Tab. Pantoprazole 40mg OD for 7 days. Avoid heavy lifting for 2 weeks. Follow-up at surgical OPD on 26 June 2026 for wound check and suture removal.",
+    "discharge_summary_text": "Patient Ravi Kumar, 45-year-old male with known Type 2 Diabetes Mellitus, PMJAY ID P001, was admitted on 16 June 2026 at 09:30 hrs to Apollo Hospitals Chennai under the care of Dr. Senthilkumar R (MS General Surgery, TN-09871) for planned laparoscopic cholecystectomy. Admission diagnosis: Acute calculous cholecystitis.\n\nOn admission, USG abdomen confirmed multiple gallstones (largest 14mm) with gallbladder wall thickening (5.5mm) and pericholecystic fluid. LFTs were within normal limits (total bilirubin 1.1 mg/dL, ALP 92 U/L). WBC was mildly elevated at 13,800 cells/mcL consistent with acute cholecystitis. Pre-anaesthetic assessment was completed and diabetes was optimised pre-operatively. Metformin was held 24 hours prior to surgery.\n\nLaparoscopic cholecystectomy was performed on 17 June 2026 under general anaesthesia using standard 3-port technique. Intraoperative findings showed a moderately inflamed gallbladder with omental adhesions around the fundus. Calot's triangle was carefully dissected with critical view of safety achieved. Cystic duct and artery were clipped and divided. Gallbladder contained multiple faceted stones with turbid bile. No bile spillage occurred. Subhepatic drain was placed. Estimated blood loss 30 mL. No intraoperative complications.\n\nPost-operative recovery was uneventful. Patient was started on clear fluids on Day 2 evening and soft diet on Day 3. Blood sugars remained well controlled throughout. Drain output was minimal (serous, <20 mL) and drain was removed on Day 3. Patient was fully mobile and tolerating regular diet at the time of discharge on 19 June 2026. Total duration of stay: 3 days. Histopathology specimen sent — report to follow within 7 days.",
+    "operative_notes_text": "OPERATIVE NOTE\nDate: 17 June 2026 | Time: 10:00–11:05 hrs\nSurgeon: Dr. Senthilkumar R (TN-09871)\nAnaesthetist: Dr. Priya Anand\nAnaesthesia: General anaesthesia (IV induction, endotracheal intubation)\nIndication: Acute calculous cholecystitis with multiple gallstones confirmed on USG.\nProcedure: Standard laparoscopic cholecystectomy, 3-port technique.\nPatient positioned supine with reverse Trendelenburg. Pneumoperitoneum established with Veress needle at umbilicus — CO2 insufflation to 12 mmHg. 10mm umbilical port placed, 5mm epigastric port and 5mm right flank port placed under vision. Gallbladder grasped at Hartmann's pouch and retracted superolaterally. Omental adhesions around fundus dissected bluntly. Calot's triangle dissected with careful peritoneal stripping. Critical view of safety achieved — both structures entering gallbladder (cystic duct and cystic artery) clearly identified with no other structures in the window. Cystic duct clipped: 2 Hem-o-lok clips proximally (patient side) and 1 distally, divided between clips. Cystic artery clipped and divided similarly. Gallbladder dissected from liver bed using hook electrocautery — liver bed haemostatic. Specimen placed in endobag and retrieved through umbilical port without spillage. Gallbladder contained multiple faceted pigment stones (largest 14mm) with turbid greenish bile. Specimen sent for histopathology. Subhepatic drain (corrugated) placed through right flank port. Ports desufflated under vision. Port sites closed — umbilical with 0-vicryl fascial suture, skin closed with 3-0 monocryl subcuticular. Estimated blood loss: 30 mL. Intraoperative complications: none. Patient transferred to recovery in stable condition.",
+    "pre_anaesthesia_text": "Pre-Anaesthesia Assessment — 16 June 2026\nAnaesthetist: Dr. Priya Anand\nASA Grade: II (controlled Type 2 Diabetes Mellitus)\nAirway: Mallampati Class I. Good mouth opening. No anticipated difficult airway.\nCardiovascular: HR 92 bpm regular, BP 128/82 mmHg. No cardiac history.\nRespiratory: Clear air entry bilaterally. SpO2 98% on room air.\nBlood glucose: 118 mg/dL (well controlled). Metformin held since 15 June.\nINR: 1.0. No anticoagulants.\nAllergies: None known.\nPlan: General anaesthesia with endotracheal intubation. Continue insulin sliding scale intraoperatively. Resume Metformin post-op Day 1 once tolerating oral diet. Fit for surgery."
+  },
+  "discharge_medications": [
+    "Tab. Paracetamol 500mg TDS as needed for pain x 5 days",
+    "Tab. Pantoprazole 40mg OD before breakfast x 7 days",
+    "Tab. Metformin 500mg BD with meals (restarted)",
+    "Tab. Glimepiride 1mg OD with breakfast (restarted)",
+    "Tab. Amoxicillin-Clavulanate 625mg TDS x 3 days"
+  ],
+  "signatures": {
+    "treating_consultant_signed": true,
+    "pmam_signed": true,
+    "patient_or_attendant_signed": true
+  },
+  "patient_amount_collected_inr": 0,
+  "sha_notification_date": null,
+  "implant_details": null,
+  "documents_submitted": [
+    {
+      "key": "discharge_summary",
+      "label": "Discharge Summary (CAM Annexure 6 format)",
+      "available": true
+    },
+    {
+      "key": "operative_notes",
+      "label": "Operative notes — laparoscopic cholecystectomy 17 June 2026",
+      "available": true
+    },
+    {
+      "key": "procedure_operative_notes",
+      "label": "Procedure / operative notes — laparoscopic cholecystectomy",
+      "available": true
+    },
+    {
+      "key": "pre_anesthesia_check_up_report",
+      "label": "Pre-anaesthesia assessment report — 16 June 2026",
+      "available": true
+    },
+    {
+      "key": "detailed_discharge_summary",
+      "label": "Detailed discharge summary with follow-up advice",
+      "available": true
+    },
+    {
+      "key": "intraoperative_photo_gross_specimen",
+      "label": "Intraoperative photograph and gross specimen photograph (gallbladder with stones)",
+      "available": true
+    },
+    {
+      "key": "histopathology_report",
+      "label": "Histopathology report — gallbladder specimen (to be submitted within 7 days of discharge)",
+      "available": false
+    },
+    {
+      "key": "blood_test_cbc_sr_creatinine_platelet_etc",
+      "label": "Blood investigations — CBC, LFT, serum amylase, INR, blood glucose",
+      "available": true
+    },
+    {
+      "key": "usg_report",
+      "label": "USG abdomen report — 15 June 2026",
+      "available": true
+    }
+  ],
+  "deviations_declared": []
+}

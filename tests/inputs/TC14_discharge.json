@@ -1,0 +1,166 @@
+{
+  "_test_id": "TC14_DISCHARGE",
+  "_description": "Stage 3 discharge JSON for TC14 — thermal burns 25% TBSA mixed 2nd/3rd degree from LPG explosion. Package BM001B selected in Stage 1/2. Exercises: procedure deviation detected but assessed as severity:none by LLM (same procedure, more anatomically specific description), all claim docs available, clean CPD, normal recovery discharge, burns specialty notes fire, LOS 10 days vs indicative 19 days (within range). MLC case with SHA notified within 24h.",
+  "_expected_claim_status": "CLAIM_READY",
+  "_expected_deviations": [
+    "procedure_change:none"
+  ],
+  "_expected_audit_flags": [],
+  "_expected_specialty_notes": [
+    "burns_followup_photos"
+  ],
+  "preauth_reference": "IRIS-TC14-20260612",
+  "case_id": "APL/CHN/2026/014523",
+  "preauth_input_path": "tests/inputs/TC14.json",
+  "claim_submission_date": "2026-06-24",
+  "hospital": {
+    "name": "Apollo Hospitals Chennai",
+    "hospital_code": "H001",
+    "address": "21 Greams Lane, Off Greams Road, Chennai 600006",
+    "district": "Chennai"
+  },
+  "patient": {
+    "name": "Ravi Kumar",
+    "pmjay_id": "P001",
+    "age": 35,
+    "gender": "M",
+    "address": "12 Anna Nagar East, Chennai 600102",
+    "contact_number": "9876543210",
+    "ipd_number": "IPD/BU/2026/001456",
+    "pmjay_case_id": "IRIS-TC14-20260612"
+  },
+  "treating_consultant": {
+    "name": "Dr. Karthik Rajan",
+    "contact_number": "9845678901",
+    "qualification": "MS Plastic and Reconstructive Surgery, Burns Fellowship",
+    "registration_number": "TN-MED-55555",
+    "specialty": "Burns Management"
+  },
+  "admission": {
+    "date_of_admission": "2026-06-12",
+    "time_of_admission": "17:45",
+    "date_of_discharge": "2026-06-22",
+    "time_of_discharge": "11:00",
+    "date_of_operation": "2026-06-19",
+    "actual_los_days": 10,
+    "ward_category_actual": "ward",
+    "bed_category_breakdown": {
+      "ward_days": 10,
+      "hdu_days": 0,
+      "icu_days": 0,
+      "icu_vent_days": 0
+    },
+    "admission_type": "emergency",
+    "package_booked": "BM001B",
+    "discharge_status": "recovered",
+    "discharge_condition": "stable"
+  },
+  "clinical": {
+    "presenting_complaints": "Burns to face, bilateral upper limbs, and anterior chest following LPG cylinder explosion at home approximately 3 hours prior to presentation. Severe pain, hoarse voice.",
+    "duration_of_complaints": "3 hours prior to admission",
+    "initial_assessment": "35-year-old male admitted via emergency with 25% TBSA mixed 2nd and 3rd degree thermal burns sustained from LPG cylinder explosion. Burns mapped using Rule of 9: face 4.5% (superficial partial thickness, blistering), right upper limb 9% (mixed depth, eschar forming on dorsal aspect), left upper limb 9% (superficial to deep partial thickness, blistering), anterior chest 2.5% (superficial partial thickness). Hoarse voice on admission raising concern for inhalation injury — ENT and anaesthesia assessment performed on Day 1, no subglottic injury confirmed on laryngoscopy. Haemodynamically borderline on arrival: BP 100/68, HR 108, SpO2 94% on mask. IV fluid resuscitation initiated per Parkland formula.",
+    "significant_past_history": "No significant past medical or surgical history. Non-smoker. Social alcohol use. No known drug allergies.",
+    "primary_diagnosis_at_admission": "Thermal burns — mixed 2nd and 3rd degree, 25% TBSA (face 4.5%, right upper limb 9%, left upper limb 9%, anterior chest 2.5%). Possible inhalation injury.",
+    "final_diagnosis_at_discharge": "Post-operative status following wound debridement (Day 4) and split skin grafting right upper limb dorsal aspect (Day 7) for thermal burns 25% TBSA mixed 2nd and 3rd degree. Inhalation injury excluded. MLC case — accidental LPG explosion.",
+    "icd10_codes": [
+      "T31.2",
+      "T22.391A",
+      "T20.3XXA"
+    ],
+    "key_investigations": "CBC, RFT, LFT, blood culture, wound swab culture, ABG, chest X-ray, laryngoscopy",
+    "investigation_findings": "Admission bloods: WBC 14800/cumm (stress leukocytosis), Hb 15.2 g/dL, Platelets 2.9 lakh, Creatinine 0.9 mg/dL, Na 138 mEq/L, ABG pH 7.36 PaO2 88 on mask. Day 3 repeat: WBC 11200/cumm (settling), Hb 13.8 g/dL, Creatinine 0.8 mg/dL. Wound swab Day 3: Pseudomonas aeruginosa sensitive to piperacillin-tazobactam. Blood cultures: no growth. Laryngoscopy Day 1: vocal cords normal, no subglottic oedema — inhalation injury excluded. Chest X-ray: clear bilaterally.",
+    "treatment_given": "IV fluid resuscitation per Parkland formula (4ml/kg/%TBSA over 24h). IV morphine for pain. Silver sulphadiazine 1% dressings to all burn areas daily. IV piperacillin-tazobactam started Day 3 on wound swab sensitivities. Wound debridement under general anaesthesia Day 4 — necrotic tissue removed from right upper limb dorsal aspect, left forearm and face cleaned. Split skin grafting right upper limb dorsal aspect under spinal anaesthesia Day 7 — donor site right thigh, meshed 1.5:1, good graft take confirmed Day 9. Dressings to face and left upper limb continued — satisfactory healing with conservative management. Patient mobilised from Day 5.",
+    "operative_findings": "Day 4 debridement: Right upper limb dorsal aspect — full thickness burns with sloughing necrotic tissue approximately 4% TBSA, debrided to healthy bleeding base. Left forearm — deep partial thickness burns, debrided. Face — superficial partial thickness, blistering intact, cleaned and dressed. Day 7 SSG: Donor site right thigh harvested using Watson dermatome at 0.012 inch. Split skin graft meshed 1.5:1 applied to debrided right upper limb dorsal aspect. Stapled in place. Tie-over dressing applied. Day 9 check: graft take approximately 90%, no haematoma, no graft loss.",
+    "final_procedure_performed": "Wound debridement right upper limb dorsal aspect and split skin grafting right upper limb (donor site right thigh)",
+    "complications": null,
+    "follow_up_date": "2026-06-29",
+    "advice_on_discharge": "Daily wound dressing to graft site and donor site at nearest PHC or burns OPD. Tab. Amoxicillin-Clavulanate 625mg TDS for 5 days. Tab. Paracetamol 500mg TDS PRN for pain. Avoid sun exposure to graft site for 6 months. Compression garment to right upper limb to be fitted at 3-week follow-up. Return immediately if fever >38.5C, increasing redness, discharge from wound, or signs of graft failure. Follow-up at Burns OPD on 29 June 2026 for graft assessment and donor site review.",
+    "discharge_summary_text": "Patient Ravi Kumar, 35-year-old male, PMJAY ID P001, was admitted on 12 June 2026 at 17:45 hrs to the Burns Unit, Apollo Hospitals Chennai under the care of Dr. Karthik Rajan (MS Plastic and Reconstructive Surgery, Burns Fellowship, TN-MED-55555) with thermal burns sustained from an LPG cylinder explosion at home. This is a medico-legal case (MLC No. APL/MLC/2026/0612/047).\n\nOn admission, the patient had 25% TBSA mixed 2nd and 3rd degree thermal burns distributed as follows: face 4.5% (superficial partial thickness), right upper limb 9% (mixed depth with eschar formation on dorsal aspect), left upper limb 9% (superficial to deep partial thickness), anterior chest 2.5% (superficial partial thickness). Burns extent confirmed using Rule of 9. Hoarse voice on arrival prompted laryngoscopy on Day 1 which confirmed no inhalation injury. IV fluid resuscitation was initiated per Parkland formula. Wound swab on Day 3 grew Pseudomonas aeruginosa sensitive to piperacillin-tazobactam, which was commenced accordingly.\n\nOn Day 4 of admission (16 June 2026), wound debridement was performed under general anaesthesia. Full thickness necrotic tissue on the right upper limb dorsal aspect was debrided to healthy bleeding tissue base. Deep partial thickness burns on the left forearm were also debrided. Face burns were cleaned and dressed conservatively as they showed signs of re-epithelialisation. On Day 7 (19 June 2026), split skin grafting of the right upper limb dorsal aspect was performed using donor skin harvested from the right thigh at 0.012 inch via Watson dermatome, meshed 1.5:1 and applied with tie-over dressing. Graft take was assessed on Day 9 and confirmed approximately 90% with no complications.\n\nFace and left upper limb burns continued to heal satisfactorily with conservative dressing management throughout the admission. Patient was mobilised from Day 5 and commenced on oral diet from Day 3.\n\nAt the time of discharge on 22 June 2026, patient is stable, afebrile, graft site healing well, donor site clean and dry, tolerating oral diet, ambulatory. Total duration of stay: 10 days. Patient discharged with wound dressing instructions, oral antibiotics, analgesics, and follow-up at Burns OPD on 29 June 2026.",
+    "operative_notes_text": "OPERATIVE NOTE — PROCEDURE 1: WOUND DEBRIDEMENT\nDate: 16 June 2026 | Time: 09:00–10:15 hrs\nSurgeon: Dr. Karthik Rajan (TN-MED-55555)\nAnaesthetist: Dr. Priya Sundar\nAnaesthesia: General anaesthesia (IV induction, LMA)\nIndication: 25% TBSA mixed depth thermal burns — full thickness and deep partial thickness areas on right upper limb and left forearm not amenable to conservative healing.\nProcedure: Patient positioned supine. Burns areas prepped with povidone iodine. Right upper limb dorsal aspect — approximately 4% TBSA full thickness burn debrided using tangential excision technique with Watson dermatome set at 0.008 inch until healthy bleeding dermis/fat visible. Haemostasis achieved with adrenaline-soaked swabs and electrocautery. Left forearm — deep partial thickness burn approximately 2% TBSA debrided similarly to viable tissue plane. Face — superficial partial thickness burns cleaned, blisters decompressed, silver sulphadiazine dressing applied. Total surgical debridement area: approximately 6% TBSA. Betadine-soaked dressings applied to all debrided areas. Estimated blood loss: 150 mL. No intraoperative complications.\nPost-op: Patient transferred to recovery stable. Vitals: BP 112/72, HR 88, SpO2 98% on oxygen.\n\nOPERATIVE NOTE — PROCEDURE 2: SPLIT SKIN GRAFTING\nDate: 19 June 2026 | Time: 08:30–10:00 hrs\nSurgeon: Dr. Karthik Rajan (TN-MED-55555)\nAnaesthetist: Dr. Priya Sundar\nAnaesthesia: Spinal anaesthesia (bupivacaine heavy 0.5%)\nIndication: Debrided right upper limb dorsal aspect 4% TBSA full thickness wound requiring skin cover.\nProcedure: Patient positioned supine. Donor site right anterior thigh prepped. Split skin graft harvested using Watson dermatome at 0.012 inch, approximately 5% TBSA donor skin obtained. Graft meshed at 1.5:1 ratio using mesher. Recipient site (right upper limb dorsal aspect) — wound bed healthy granulating tissue, no slough. Graft laid out and secured with skin staples. Tie-over dressing with paraffin gauze, moist gauze and crepe bandage applied. Donor site dressed with paraffin gauze and absorbent dressing. Estimated blood loss: 80 mL. No intraoperative complications.\nDay 9 graft check (21 June 2026): Tie-over dressing removed. Graft take approximately 90%. No areas of haematoma or seroma. No graft loss. Donor site healing satisfactorily. Dressings reapplied.",
+    "pre_anaesthesia_text": null
+  },
+  "discharge_medications": [
+    "Tab. Amoxicillin-Clavulanate 625mg TDS x 5 days",
+    "Tab. Paracetamol 500mg TDS as needed for pain x 7 days",
+    "Tab. Pantoprazole 40mg OD before breakfast x 7 days",
+    "Paraffin gauze dressing to graft and donor site — daily at OPD/PHC"
+  ],
+  "signatures": {
+    "treating_consultant_signed": true,
+    "pmam_signed": true,
+    "patient_or_attendant_signed": true
+  },
+  "patient_amount_collected_inr": 0,
+  "sha_notification_date": "2026-06-12",
+  "implant_details": null,
+  "documents_submitted": [
+    {
+      "key": "discharge_summary",
+      "label": "Discharge Summary (CAM Annexure 6 format)",
+      "available": true
+    },
+    {
+      "key": "operative_notes",
+      "label": "Operative notes — wound debridement (Day 4) and split skin grafting (Day 7)",
+      "available": true
+    },
+    {
+      "key": "pre_anesthesia_check_up_report",
+      "label": "Pre-anaesthesia checkup report",
+      "available": false
+    },
+    {
+      "key": "post_treatment_clinical_photograph",
+      "label": "Post treatment clinical photograph — graft site and donor site Day 9",
+      "available": true
+    },
+    {
+      "key": "blood_test_cbc_sr_creatinine_platelet_etc",
+      "label": "Blood tests — CBC, RFT, LFT, wound swab culture, blood culture",
+      "available": true
+    },
+    {
+      "key": "x_ray",
+      "label": "Chest X-ray (admission)",
+      "available": true
+    },
+    {
+      "key": "clinical_photo_initial",
+      "label": "Clinical photograph at admission with Rule of 9 chart showing 25% TBSA",
+      "available": true
+    },
+    {
+      "key": "burns_followup_photo_day5",
+      "label": "Follow-up clinical photograph Day 5",
+      "available": true
+    },
+    {
+      "key": "burns_followup_photo_day10",
+      "label": "Follow-up clinical photograph Day 10 (at discharge)",
+      "available": true
+    },
+    {
+      "key": "burns_followup_photo_day15",
+      "label": "Follow-up clinical photograph Day 15 (to be submitted post discharge)",
+      "available": false
+    },
+    {
+      "key": "burns_followup_photo_day20",
+      "label": "Follow-up clinical photograph Day 20 (to be submitted post discharge)",
+      "available": false
+    },
+    {
+      "key": "mlc_fir",
+      "label": "MLC copy with FIR number",
+      "available": true
+    }
+  ],
+  "deviations_declared": [
+    {
+      "type": "procedure_change",
+      "from": "Wound debridement and split skin grafting (planned Day 4 onwards as single staged procedure)",
+      "to": "Two-stage procedure: wound debridement Day 4, split skin grafting Day 7 (staged due to wound bed preparation requirement and wound swab result awaited)",
+      "reason": "Wound bed on Day 4 showed residual contamination on intraoperative assessment. Split skin grafting deferred to Day 7 to allow wound bed maturation and initiation of targeted antibiotic therapy based on Day 3 wound swab result (Pseudomonas aeruginosa, piperacillin-tazobactam sensitive). Staging is standard burns surgical practice to optimise graft take."
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "_test_id": "TC20_DISCHARGE",
+  "_description": "Lap inguinal hernia repair (SG050B) — dual pathology admission (CHF medically managed, hernia surgically repaired). Two hard_block docs missing: pre-anaesthesia check-up report and mesh implant invoice/sticker. Exercises multi-gap CLAIM_BLOCKED path and clinical consistency check with dual pathology.",
+  "_expected_claim_status": "CLAIM_BLOCKED",
+  "_expected_deviations": [],
+  "_expected_audit_flags": ["missing_stg_docs"],
+  "_expected_specialty_notes": [],
+
+  "preauth_reference": "IRIS-TC20-20260616",
+  "case_id": "APL/CHN/2026/020891",
+  "preauth_input_path": "tests/inputs/TC20.json",
+  "claim_submission_date": "2026-06-25",
+
+  "hospital": {
+    "name": "Apollo Hospitals Chennai",
+    "hospital_code": "H001",
+    "address": "21 Greams Lane, Off Greams Road, Chennai 600006",
+    "district": "Chennai"
+  },
+
+  "patient": {
+    "name": "Ravi Kumar",
+    "pmjay_id": "P001",
+    "age": 54,
+    "gender": "M",
+    "address": "12 Anna Nagar East, Chennai 600102",
+    "contact_number": "9876543210",
+    "ipd_number": "IPD/SG/2026/020891",
+    "pmjay_case_id": "IRIS-TC20-20260616"
+  },
+
+  "treating_consultant": {
+    "name": "Dr. Jayakumar S",
+    "contact_number": "9845679876",
+    "qualification": "MS General Surgery",
+    "registration_number": "TN-07763",
+    "specialty": "General Surgery"
+  },
+
+  "admission": {
+    "date_of_admission": "2026-06-16",
+    "time_of_admission": "10:00",
+    "date_of_discharge": "2026-06-24",
+    "time_of_discharge": "11:30",
+    "date_of_operation": "2026-06-21",
+    "actual_los_days": 8,
+    "ward_category_actual": "ward",
+    "bed_category_breakdown": {
+      "ward_days": 8,
+      "hdu_days": 0,
+      "icu_days": 0,
+      "icu_vent_days": 0
+    },
+    "admission_type": "planned",
+    "package_booked": "SG050",
+    "discharge_status": "recovered",
+    "discharge_condition": "stable"
+  },
+
+  "clinical": {
+    "presenting_complaints": "Bilateral leg swelling, breathlessness on exertion, and right groin swelling for 3 weeks",
+    "duration_of_complaints": "3 weeks",
+    "initial_assessment": "54-year-old male with known ischaemic heart disease, decompensated congestive cardiac failure (LVEF 35%), atrial fibrillation, and hypertension admitted for dual management — medical optimisation of CHF followed by elective laparoscopic inguinal hernia repair. On admission: bilateral pitting pedal oedema (++), bilateral basal crackles, BNP 820 pg/mL, creatinine 1.4 mg/dL. Warfarin bridged pre-operatively with LMWH. Cardiac team and surgical team co-managing.",
+    "significant_past_history": "Ischaemic heart disease since 2019, minor MI in 2020. Chronic heart failure EF 35% at baseline. Atrial fibrillation on warfarin. Hypertension. Ex-smoker 20 pack years quit 2019. Aspirin intolerance (GI).",
+    "primary_diagnosis_at_admission": "Decompensated congestive heart failure (EF 35%); Right direct inguinal hernia",
+    "final_diagnosis_at_discharge": "Post-operative status following laparoscopic mesh repair of right direct inguinal hernia (TEP); Congestive cardiac failure — compensated on medical management",
+    "icd10_codes": ["K40.90", "I50.9", "I48.91"],
+    "key_investigations": "2D ECHO, ECG, BNP, RFT, CBC, electrolytes, coagulation, dynamic USG inguinal region, INR monitoring",
+    "investigation_findings": "ECHO: LVEF 35%, dilated cardiomyopathy, mild MR, PAP 38 mmHg. ECG: AF with LBBB, ventricular rate 96 bpm. BNP 820 pg/mL on admission, 310 pg/mL at Day 4 (improving). Creatinine 1.4 mg/dL (stable). Haemoglobin 11.8 g/dL. INR on warfarin 2.4 — bridged with enoxaparin 60mg BD from Day 3. INR checked Day 5 pre-op: 1.2 (safe for surgery). Dynamic USG: right direct inguinal hernia confirmed with Valsalva, no complications.",
+    "treatment_given": "Days 1-4: IV furosemide 40mg BD, fluid restriction, daily weights, BNP monitoring, strict input-output charting. Bisoprolol continued, digoxin rate-controlled AF. By Day 4: oedema significantly reduced, BNP falling, SpO2 98% on room air, creatinine stable — cardiac team cleared for surgery. Days 3-5: warfarin held, enoxaparin bridging initiated. Day 5 INR 1.2 — safe for surgery. Day 6 (21 June 2026): Laparoscopic totally extraperitoneal (TEP) hernia repair performed under general anaesthesia. Polypropylene mesh 15x10cm placed in preperitoneal space. Enoxaparin held 12 hours pre-op, resumed 24 hours post-op. Warfarin restarted Day 7. Post-operatively: patient mobilised Day 7, tolerating oral diet, no cardiac decompensation.",
+    "operative_findings": "Laparoscopic TEP approach. Preperitoneal space developed with balloon dissector. Right direct inguinal hernia defect identified — 3x2cm direct defect medial to inferior epigastric vessels. No indirect component. Sac reduced completely. Polypropylene mesh 15x10cm (Prolene, Ethicon, Lot No: ETH2026061) positioned to cover direct, indirect, and femoral spaces. Mesh fixed with 2 absorbable tacks at Cooper's ligament and 2 at anterior abdominal wall. No cord structures injured. No haemostasis issues. Ports desufflated under vision. Estimated blood loss: 20 mL. No intraoperative complications. Mesh deployed: Prolene Soft Mesh 15x10cm.",
+    "final_procedure_performed": "Laparoscopic totally extraperitoneal (TEP) inguinal hernia repair with polypropylene mesh",
+    "complications": null,
+    "follow_up_date": "2026-07-01",
+    "advice_on_discharge": "Wound care — keep dry for 5 days. Avoid heavy lifting >5kg for 4 weeks. Restart warfarin 5mg OD (INR check in 5 days at cardiology OPD). Continue furosemide 40mg OD, spironolactone 25mg OD, bisoprolol 2.5mg OD, ramipril 5mg OD, digoxin 0.125mg OD. Tab. Paracetamol 500mg TDS PRN for pain. Tab. Pantoprazole 40mg OD for 7 days. Daily weights — return if >2kg weight gain in 24 hours (cardiac decompensation warning). Follow-up surgical OPD 1 July 2026 for wound check. Cardiology OPD 28 June 2026 for INR and cardiac status review.",
+
+    "discharge_summary_text": "Patient Ravi Kumar, 54-year-old male, PMJAY ID P001, was admitted on 16 June 2026 at 10:00 hrs to Apollo Hospitals Chennai under the care of Dr. Jayakumar S (MS General Surgery, TN-07763) for dual management: decompensated congestive cardiac failure and right direct inguinal hernia repair. This was a planned admission with co-management by the cardiology team (Dr. Ramesh Nair, DM Cardiology).\n\nOn admission the patient had bilateral pitting pedal oedema (++), bilateral basal crackles, elevated JVP, and BNP of 820 pg/mL with LVEF 35% on ECHO. ECG showed persistent atrial fibrillation with LBBB. Days 1 to 4 were dedicated to aggressive medical optimisation of heart failure — IV furosemide, fluid restriction, and daily BNP monitoring. By Day 4 the patient was clinically compensated: BNP fell to 310 pg/mL, oedema resolved, SpO2 98% on room air, and the cardiac team cleared the patient for elective surgery. Warfarin was bridged with enoxaparin from Day 3, and INR was confirmed at 1.2 on Day 5 — safe for surgery.\n\nOn 21 June 2026 (Day 6), laparoscopic totally extraperitoneal (TEP) inguinal hernia repair was performed under general anaesthesia. A 3x2cm right direct inguinal hernia defect was identified and repaired with a 15x10cm polypropylene mesh (Prolene Soft Mesh, Ethicon). The procedure was completed without intraoperative complications with estimated blood loss of 20 mL. Post-operatively the patient was monitored closely for cardiac status — no decompensation occurred. Enoxaparin resumed 24 hours post-op. Warfarin restarted Day 7. Patient was mobile on Day 7 and tolerating regular diet.\n\nAt time of discharge on 24 June 2026 the patient is stable, wound clean and dry, cardiac status compensated, tolerating full oral diet and ambulating independently. Total duration of stay: 8 days (4 days CHF optimisation + 4 days post-operative recovery). Warfarin to be monitored at cardiology OPD. Surgical follow-up 1 July 2026.",
+
+    "operative_notes_text": "OPERATIVE NOTE\nDate: 21 June 2026 | Time: 09:00–10:15 hrs\nSurgeon: Dr. Jayakumar S (TN-07763)\nAnaesthetist: Dr. Priya Anand\nAnaesthesia: General anaesthesia (IV induction, LMA — chosen over ETT given cardiac status)\nIndication: Right direct inguinal hernia, symptomatic. Cardiac failure optimised pre-operatively (LVEF 35%, AF controlled). Warfarin bridged — INR 1.2 pre-op.\nProcedure: Laparoscopic Totally Extraperitoneal (TEP) Repair.\nPatient positioned supine. 10mm infraumbilical incision made. Preperitoneal space entered using Hassan technique. Balloon dissector introduced and space developed under direct vision — good preperitoneal space achieved. 10mm port at infraumbilicus, 5mm port at midline 3cm above pubis, 5mm port at midline 6cm above pubis. CO2 insufflation to 12 mmHg. Right direct inguinal hernia defect visualised — 3x2cm direct defect medial to inferior epigastric vessels. No indirect hernia component. Hernia sac completely reduced by blunt dissection. Cooper's ligament, iliopubic tract, and cord structures clearly identified. Vas deferens and testicular vessels carefully preserved. Prolene Soft Mesh 15x10cm (Ethicon, Lot ETH2026061) positioned to cover direct, indirect, and femoral spaces with adequate overlap on all borders. Mesh fixed with 2 absorbable ProTack tacks at Cooper's ligament and 2 at anterior abdominal wall superior to iliopubic tract — no tacks placed lateral to inferior epigastric vessels (nerve protection). Haemostasis confirmed. CO2 released, mesh position confirmed as space desufflated. Ports removed. Fascial defect at 10mm port closed with 0-vicryl. Skin closed with 3-0 monocryl subcuticular sutures. Estimated blood loss: 20 mL. No intraoperative complications.",
+
+    "pre_anaesthesia_text": null
+  },
+
+  "discharge_medications": [
+    "Tab. Warfarin 5mg OD (restarted — INR check at cardiology OPD 28 June)",
+    "Tab. Furosemide 40mg OD",
+    "Tab. Spironolactone 25mg OD",
+    "Tab. Bisoprolol 2.5mg OD",
+    "Tab. Ramipril 5mg OD",
+    "Tab. Digoxin 0.125mg OD",
+    "Tab. Paracetamol 500mg TDS as needed for pain x 5 days",
+    "Tab. Pantoprazole 40mg OD before breakfast x 7 days"
+  ],
+
+  "signatures": {
+    "treating_consultant_signed": true,
+    "pmam_signed": true,
+    "patient_or_attendant_signed": true
+  },
+
+  "patient_amount_collected_inr": 0,
+
+  "sha_notification_date": null,
+
+  "implant_details": {
+    "name": "Prolene Soft Mesh",
+    "manufacturer": "Ethicon",
+    "model": "15x10cm Polypropylene Mesh",
+    "lot_number": "ETH2026061",
+    "cost_inr": 1500
+  },
+
+  "documents_submitted": [
+    {
+      "key": "discharge_summary",
+      "label": "Discharge Summary (CAM Annexure 6 format)",
+      "available": true
+    },
+    {
+      "key": "operative_notes",
+      "label": "Operative notes — laparoscopic TEP hernia repair 21 June 2026",
+      "available": true
+    },
+    {
+      "key": "procedure_operative_notes",
+      "label": "Procedure / operative notes — TEP inguinal hernia repair",
+      "available": true
+    },
+    {
+      "key": "pre_anesthesia_check_up_report",
+      "label": "Pre-anaesthesia check-up report",
+      "available": false
+    },
+    {
+      "key": "detailed_discharge_summary",
+      "label": "Detailed discharge summary with follow-up advice",
+      "available": true
+    },
+    {
+      "key": "post_op_clinical_photograph",
+      "label": "Post-operative clinical photograph — wound site Day 3",
+      "available": true
+    },
+    {
+      "key": "implant_invoice_sticker",
+      "label": "Prolene mesh invoice and sticker (Ethicon, Lot ETH2026061)",
+      "available": false
+    },
+    {
+      "key": "blood_test_cbc_sr_creatinine_platelet_etc",
+      "label": "Blood investigations — CBC, RFT, BNP, coagulation, electrolytes",
+      "available": true
+    },
+    {
+      "key": "echo",
+      "label": "2D Echocardiography report",
+      "available": true
+    },
+    {
+      "key": "ecg",
+      "label": "12-lead ECG report",
+      "available": true
+    },
+    {
+      "key": "usg_report",
+      "label": "Dynamic USG inguinal region report",
+      "available": true
+    }
+  ],
+
+  "deviations_declared": []
+}

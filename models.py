@@ -585,6 +585,94 @@ class PackageQueryPrediction:
 
 
 # ---------------------------------------------------------------------------
+# 22a. ClaimDocumentItem
+# ---------------------------------------------------------------------------
+
+@dataclass
+class ClaimDocumentItem:
+    key: str
+    label: str
+    package_code: str | None
+    available: bool
+    criticality: str
+    notes: str | None
+
+
+# ---------------------------------------------------------------------------
+# 22b. DeviationItem
+# ---------------------------------------------------------------------------
+
+@dataclass
+class DeviationItem:
+    deviation_type: str
+    description: str
+    from_value: str
+    to_value: str
+    severity: str
+    justification_draft: str | None
+    justification_required: bool
+
+
+# ---------------------------------------------------------------------------
+# 22c. CPDChecklistResult
+# ---------------------------------------------------------------------------
+
+@dataclass
+class CPDChecklistResult:
+    question: str
+    expected: bool
+    actual: bool | None
+    risk_level: str
+    reasoning: str
+
+
+# ---------------------------------------------------------------------------
+# 22d. SpecialPaymentResult
+# ---------------------------------------------------------------------------
+
+@dataclass
+class SpecialPaymentResult:
+    trigger: str
+    base_package_rate_inr: int
+    payable_amount_inr: int
+    payable_percentage: int
+    computation_note: str
+
+
+# ---------------------------------------------------------------------------
+# 22e. IRISClaimOutput
+# ---------------------------------------------------------------------------
+
+@dataclass
+class IRISClaimOutput:
+    claim_status: str
+    procedure_code: str
+    package_name: str
+    preauth_reference: str
+    claim_docs_required: list[ClaimDocumentItem] = field(default_factory=list)
+    claim_docs_missing: list[ClaimDocumentItem] = field(default_factory=list)
+    image_docs_reminder: list[str] = field(default_factory=list)
+    cpd_checklist_results: list[CPDChecklistResult] = field(default_factory=list)
+    cpd_verdict: str = "unknown"
+    cpd_verdict_summary: str = ""
+    llm_evaluation_status: str = "unknown"
+    deviations_detected: list[DeviationItem] = field(default_factory=list)
+    deviation_justifications_drafted: int = 0
+    los_approved_indicative: int = 0
+    los_actual: int = 0
+    los_deviation: bool = False
+    los_deviation_note: str | None = None
+    discharge_summary_complete: bool = False
+    discharge_summary_missing_fields: list[str] = field(default_factory=list)
+    special_payment: SpecialPaymentResult | None = None
+    audit_flags_triggered: list[str] = field(default_factory=list)
+    sha_notification_warning: str | None = None
+    specialty_specific_notes: list[str] = field(default_factory=list)
+    flags: list[Flag] = field(default_factory=list)
+    errors: list[str] = field(default_factory=list)
+
+
+# ---------------------------------------------------------------------------
 # 23. IRISOutput
 # ---------------------------------------------------------------------------
 
