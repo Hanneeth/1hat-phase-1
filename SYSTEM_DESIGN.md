@@ -169,307 +169,250 @@ e:\Code\1hat-phase1\
 
 IRIS defines the following dataclasses to represent structures throughout the pipelines:
 
-```python
-@dataclass
-class WalletBalance:
-    family_balance_inr: int
-    vay_vandana_balance_inr: int | None
-    policy_year_start: str
+### 1. `WalletBalance`
+Represents the patient's remaining wallet balances under the scheme.
+*   `family_balance_inr: int` — Primary family entitlement balance (₹5 lakh/year standard).
+*   `vay_vandana_balance_inr: int | None` — Additional Vay Vandana Yojana entitlement for senior citizens (age ≥70).
+*   `policy_year_start: str` — ISO date string marking the start of the active policy year.
 
-@dataclass
-class PastClaim:
-    procedure_code: str
-    admission_date: str
-    package_amount_inr: int
-    status: str
+### 2. `PastClaim`
+A single historical PM-JAY claim record for the beneficiary.
+*   `procedure_code: str` — Historical procedure code.
+*   `admission_date: str` — ISO date string of admission.
+*   `package_amount_inr: int` — Billed amount of the package.
+*   `status: str` — "approved" | "rejected" | "pending".
 
-@dataclass
-class PatientContext:
-    patient_id: str
-    family_id: str
-    name: str
-    age: int
-    gender: str
-    home_state: str
-    home_district: str
-    wallet: WalletBalance
-    past_claims: list[PastClaim] = field(default_factory=list)
+### 3. `PatientContext`
+Beneficiary identity and entitlement data loaded by Phase 0.
+*   `patient_id: str` — Unique patient ID.
+*   `family_id: str` — Unique family ID.
+*   `name: str` — Patient's full name.
+*   `age: int` — Patient's age in years.
+*   `gender: str` — "M" | "F".
+*   `home_state: str` — Patient's state of residence.
+*   `home_district: str` — Patient's district of residence.
+*   `wallet: WalletBalance` — Current wallet balances.
+*   `past_claims: list[PastClaim]` — Past claims history.
 
-@dataclass
-class HospitalContext:
-    hospital_id: str
-    name: str
-    type: str
-    city_tier: str
-    state: str
-    district: str
-    is_aspirational_district: bool
-    accreditation: str
-    scheme: str
-    empanelled_specialties: list[str]
+### 4. `HospitalContext`
+Empanelled hospital profile loaded by Phase 0.
+*   `hospital_id: str` — Unique hospital ID.
+*   `name: str` — Hospital's name.
+*   `type: str` — "private" | "public".
+*   `city_tier: str` — "tier1" | "tier2" | "tier3".
+*   `state: str` — State where hospital is located.
+*   `district: str` — District where hospital is located.
+*   `is_aspirational_district: bool` — True if located in an aspirational district.
+*   `accreditation: str` — "none" | "bronze" | "nabh_entry" | "nabh_full" | "nqas".
+*   `scheme: str` — Must be "pmjay" for MVP.
+*   `empanelled_specialties: list[str]` — Empanelled 2-letter specialty codes.
 
-@dataclass
-class StructuredValue:
-    parameter: str
-    value: float | str | None
-    unit: str | None
-    flag: str | None
-    leads: str | None
+### 5. `StructuredValue`
+A single extracted parameter from an OCR-processed investigation document.
+*   `parameter: str` — Parameter name (e.g. "Troponin I", "Hemoglobin").
+*   `value: float | str | None` — Numeric value or qualitative result.
+*   `unit: str | None` — Unit of measurement.
+*   `flag: str | None` — "H" (high) | "L" (low) | "N" (normal) | None.
+*   `leads: str | None` — ECG-specific field identifying leads.
 
-@dataclass
-class Investigation:
-    type: str
-    result_summary: str | None
-    structured_values: list[StructuredValue] | None
-    document_available: bool
-    report_date: str | None
+### 6. `Investigation`
+A single investigation or diagnostic report in the clinical input.
+*   `type: str` — canonical type (e.g., "ecg", "echo", "ct", "blood_reports").
+*   `result_summary: str | None` — Free-text summary of the report.
+*   `structured_values: list[StructuredValue] | None` — Machine-readable parameters.
+*   `document_available: bool` — Whether the document is in hand.
+*   `report_date: str | None` — ISO report date.
 
-@dataclass
-class DocumentInHand:
-    key: str
-    label: str
-    available: bool
+### 7. `DocumentInHand`
+A non-clinical document collected from the patient at admission.
+*   `key: str` — Canonical document key (e.g., "patient_photo", "clinical_notes").
+*   `label: str` — Human-readable document name.
+*   `available: bool` — True if the document is available.
 
-@dataclass
-class ExaminationFindings:
-    general: str | None
-    cvs: str | None
-    rs: str | None
-    abdomen: str | None
-    cns: str | None
-    local: str | None
+### 8. `ExaminationFindings`
+Structured systemic examination findings recorded at admission.
+*   `general: str | None` — General findings.
+*   `cvs: str | None` — Cardiovascular findings.
+*   `rs: str | None` — Respiratory findings.
+*   `abdomen: str | None` — Abdomen examination details.
+*   `cns: str | None` — Central Nervous System findings.
+*   `local: str | None` — Local examination details.
 
-@dataclass
-class PersonalHistory:
-    smoking: str | None
-    alcohol: str | None
-    diet: str | None
+### 9. `PersonalHistory`
+Patient personal/social history relevant to clinical context.
+*   `smoking: str | None` — Smoking history details.
+*   `alcohol: str | None` — Alcohol history details.
+*   `diet: str | None` — Diet details.
 
-@dataclass
-class TreatingDoctor:
-    name: str
-    registration_number: str
-    qualification: str
-    specialty_code: str
+### 10. `TreatingDoctor`
+Identity and qualification of the admitting/treating doctor.
+*   `name: str` — Doctor's name.
+*   `registration_number: str` — Medical Council registration number.
+*   `qualification: str` — Academic degree string (e.g., "MD DM Cardiology").
+*   `specialty_code: str` — 2-letter HBP specialty code.
 
-@dataclass
-class ClinicalInput:
-    admission_date: str | None
-    bed_category: str | None
-    is_emergency: bool
-    is_medico_legal: bool
-    chief_complaints: str
-    duration_days: int
-    history_of_present_illness: str | None
-    provisional_diagnosis: str
-    planned_procedure: str | None
-    weight_kg: float | None
-    height_cm: float | None
-    vitals: dict
-    examination_findings: ExaminationFindings | None
-    investigations: list[Investigation]
-    comorbidities: list[str]
-    past_medical_history: str | None
-    past_surgical_history: str | None
-    current_medications: list[str] = field(default_factory=list)
-    allergies: list[str] = field(default_factory=list)
-    personal_history: PersonalHistory | None = None
-    family_history: str | None = None
-    non_clinical_documents_in_hand: list[DocumentInHand] = field(default_factory=list)
-    treating_doctor: TreatingDoctor | None = None
-    notes: str | None = None
+### 11. `ClinicalInput`
+Complete clinical presentation of the patient at admission.
+*   `admission_date: str | None` — ISO admission date.
+*   `bed_category: str | None` — ward | hdu | icu_no_vent | icu_vent | None.
+*   `is_emergency: bool` — True if admitted as emergency.
+*   `is_medico_legal: bool` — True if MLC.
+*   `chief_complaints: str` — Free-text chief complaints.
+*   `duration_days: int` — Duration of complaints.
+*   `history_of_present_illness: str | None` — Present illness history.
+*   `provisional_diagnosis: str` — Provisional diagnosis.
+*   `planned_procedure: str | None` — Planned procedure description.
+*   `weight_kg: float | None` — Weight in kilograms.
+*   `height_cm: float | None` — Height in centimeters.
+*   `vitals: dict` — Dictionary of vital parameters.
+*   `examination_findings: ExaminationFindings | None` — Examination findings.
+*   `investigations: list[Investigation]` — Diagnostics list.
+*   `comorbidities: list[str]` — Comorbidity list.
+*   `past_medical_history: str | None` — Past medical history.
+*   `past_surgical_history: str | None` — Past surgical history.
+*   `current_medications: list[str]` — List of medications.
+*   `allergies: list[str]` — List of allergies.
+*   `personal_history: PersonalHistory | None` — Personal history details.
+*   `family_history: str | None` — Family history details.
+*   `non_clinical_documents_in_hand: list[DocumentInHand]` — Documents in hand.
+*   `treating_doctor: TreatingDoctor | None` — Admitting doctor's details.
+*   `notes: str | None` — Optional notes.
 
-@dataclass
-class CandidatePackage:
-    procedure_code: str
-    package_code: str
-    specialty_code: str
-    specialty: str
-    package_name: str
-    procedure_name: str
-    billing_unit: str
-    reserved_public_only: bool
-    procedure_label: str
-    auto_approved: str
-    day_care: bool
-    base_rate_inr: int | None
-    match_score: float
+### 12. `CandidatePackage`
+Thin procedure record produced by Phase 2 search against `_index.json`.
+*   `procedure_code: str` — Standard PM-JAY procedure code.
+*   `package_code: str` — Parent package code.
+*   `specialty_code: str` — specialty identifier.
+*   `specialty: str` — specialty name.
+*   `package_name: str` — Package name.
+*   `procedure_name: str` — Procedure name.
+*   `billing_unit: str` — billing unit type.
+*   `reserved_public_only: bool` — Public-reserved status.
+*   `procedure_label: str` — regular | add_on | standalone | follow_up.
+*   `auto_approved: str` — none | full | day1_only.
+*   `day_care: bool` — True if daycare procedure.
+*   `base_rate_inr: int | None` — Base rate.
+*   `match_score: float` — String similarity score.
 
-@dataclass
-class StratificationResult:
-    determinable: bool
-    selected_stratum: str | None
-    note: str | None
+### 13. `StratificationResult`
+Outcome of Phase 3 stratification matching for a single procedure.
+*   `determinable: bool` — True if stratification variables are resolved.
+*   `selected_stratum: str | None` — Strata selected.
+*   `note: str | None` — Detailed reason if not determinable.
 
-@dataclass
-class ImplantResult:
-    required: bool
-    name: str | None
-    cost_inr: int | None
-    age_appropriate: bool
-    gender_appropriate: bool
-    quantity: int | None
+### 14. `ImplantResult`
+Implant applicability determination for a single procedure.
+*   `required: bool` — True if procedure requires an implant.
+*   `name: str | None` — Name of the implant.
+*   `cost_inr: int | None` — Standard implant rate.
+*   `age_appropriate: bool` — True if age matching succeeded.
+*   `gender_appropriate: bool` — True if gender matching succeeded.
+*   `quantity: int | None` — Required implant quantity.
 
-@dataclass
-class ValidatedPackage:
-    procedure_code: str
-    package_code: str
-    specialty_code: str
-    package_name: str
-    procedure_name: str
-    billing_type: str
-    billing_unit: str
-    procedure_label: str
-    auto_approved: str
-    enhancement_applicable: bool
-    enhancement_requests_needed: int | None
-    reserved_public_only: bool
-    base_rate_inr: int | None
-    stratification: StratificationResult
-    implant: ImplantResult
-    special_conditions_popup: bool
-    special_conditions_rule: bool
-    stg_eligible: bool
-    stg_missing_criteria: list[str] = field(default_factory=list)
-    stg_reasoning: str | None = None
-    is_addon_to: list[str] | None = None
-    addon_type: str | None = None
-    match_score: float = 0.0
-    flags: list[str] = field(default_factory=list)
+### 15. `ValidatedPackage`
+Rich procedure record produced by Phase 3 after full validation.
+*   Includes all fields of `CandidatePackage` plus:
+*   `billing_type: str` — surgical | fixed_medical | per_day | day_care.
+*   `enhancement_applicable: bool` — Enhancement suitability flag.
+*   `enhancement_requests_needed: int | None` — Estimated number of enhancement requests.
+*   `stratification: StratificationResult` — Selected stratification details.
+*   `implant: ImplantResult` — Implant results.
+*   `special_conditions_popup: bool` — True if special popup conditions apply.
+*   `special_conditions_rule: bool` — True if special rules apply.
+*   `stg_eligible: bool` — True if patient meets STG rules.
+*   `stg_missing_criteria: list[str]` — List of missing criteria.
+*   `stg_reasoning: str | None` — Explanation summary.
+*   `is_addon_to: list[str] | None` — Potential parent procedure list.
+*   `addon_type: str | None` — Type of add-on.
+*   `flags: list[str]` — Warning flags accumulated for this package.
 
-@dataclass
-class FinalPackage:
-    validated: ValidatedPackage
-    role: str
-    deduction_factor: float
-    pre_auth_group: int
+### 16. `FinalPackage`
+A validated package after Phase 4 combination rule processing.
+*   `validated: ValidatedPackage` — Wrapped validated package.
+*   `role: str` — primary | secondary | tertiary | addon | standalone.
+*   `deduction_factor: float` — Rate multiplier (1.0 | 0.5 | 0.25).
+*   `pre_auth_group: int` — 1 = main pre-auth, 2 = standalone/split.
 
-@dataclass
-class DocumentItem:
-    key: str
-    label: str
-    package_code: str | None
-    available: bool
-    criticality: str
+### 17. `DocumentItem`
+A single document entry in the pre-auth document checklist (Phase 9).
+*   `key: str` — Document code identifier.
+*   `label: str` — Document name.
+*   `package_code: str | None` — Package code target (None if universal).
+*   `available: bool` — True if available.
+*   `criticality: str` — hard_block | ppd_query_risk.
 
-@dataclass
-class Flag:
-    code: str
-    message: str
-    severity: str
+### 18. `Flag`
+A pipeline business event flag appended to `session.flags` during execution.
+*   `code: str` — UPPER_SNAKE_CASE identifier.
+*   `message: str` — Descriptive message.
+*   `severity: str` — info | warning | block.
 
-@dataclass
-class EnhancementPlan:
-    procedure_code: str
-    estimated_requests: int
-    batch_size_used: int
-    los_indicative_days: int
-    caveat: str
+### 19. `EnhancementPlan`
+Pre-computed enhancement request estimate for a single per_day procedure.
+*   `procedure_code: str` — Target procedure code.
+*   `estimated_requests: int` — Projected enhancement count.
+*   `batch_size_used: int` — Batch size parameter applied.
+*   `los_indicative_days: int` — Indicative LoS in days.
+*   `caveat: str` — Legal disclaimer.
 
-@dataclass
-class ChecklistItemResult:
-    question: str
-    expected: bool
-    actual: bool | None
-    risk_level: str
-    reasoning: str
+### 20. `ChecklistItemResult`
+*   `question: str` — Checklist question.
+*   `expected: bool` — Expected boolean answer.
+*   `actual: bool | None` — Actual matched boolean value.
+*   `risk_level: str` — low | medium | high.
+*   `reasoning: str` — Reason notes.
 
-@dataclass
-class CommonQueryRisk:
-    query_text: str
-    risk_level: str
-    reasoning: str
+### 21. `CommonQueryRisk`
+*   `query_text: str` — Standard query text.
+*   `risk_level: str` — low | medium | high.
+*   `reasoning: str` — Reasoning details.
 
-@dataclass
-class PackageQueryPrediction:
-    procedure_code: str
-    package_name: str
-    readiness_verdict: str
-    verdict_summary: str
-    checklist_results: list[ChecklistItemResult]
-    common_query_risks: list[CommonQueryRisk]
-    advisory_claim_docs: list[dict]
-    llm_evaluation_status: str = "unknown"
+### 22. `PackageQueryPrediction`
+*   `procedure_code: str` — Procedure code.
+*   `package_name: str` — Specialty package name.
+*   `readiness_verdict: str` — Verdict rating.
+*   `verdict_summary: str` — Short text summary.
+*   `checklist_results: list[ChecklistItemResult]` — Checklist validations.
+*   `common_query_risks: list[CommonQueryRisk]` — General query risks.
+*   `advisory_claim_docs: list[dict]` — Advisory document guidance.
+*   `llm_evaluation_status: str` — LLM status tracker.
 
-@dataclass
-class ClaimDocumentItem:
-    key: str
-    label: str
-    package_code: str | None
-    available: bool
-    criticality: str
-    notes: str | None
+### 23. `ClaimDocumentItem`
+*   `key: str` — Document code.
+*   `label: str` — Document label.
+*   `package_code: str | None` — Package reference.
+*   `available: bool` — Status checker.
+*   `criticality: str` — hard_block | warning | info.
+*   `notes: str | None` — Notes.
 
-@dataclass
-class DeviationItem:
-    deviation_type: str
-    description: str
-    from_value: str
-    to_value: str
-    severity: str
-    justification_draft: str | None
-    justification_required: bool
+### 24. `DeviationItem`
+*   `deviation_type: str` — Type of deviation.
+*   `description: str` — Description details.
+*   `from_value: str` — Baseline value.
+*   `to_value: str` — Discharge value.
+*   `severity: str` — warning | info.
+*   `justification_draft: str | None` — Auto-generated justification draft.
+*   `justification_required: bool` — True if justification is needed.
 
-@dataclass
-class CPDChecklistResult:
-    question: str
-    expected: bool
-    actual: bool | None
-    risk_level: str
-    reasoning: str
+### 25. `CPDChecklistResult`
+*   `question: str` — Question.
+*   `expected: bool` — Expected boolean.
+*   `actual: bool | None` — Actual boolean value.
+*   `risk_level: str` — Risk level rating.
+*   `reasoning: str` — Reason notes.
 
-@dataclass
-class SpecialPaymentResult:
-    trigger: str
-    base_package_rate_inr: int
-    payable_amount_inr: int
-    payable_percentage: int
-    computation_note: str
+### 26. `SpecialPaymentResult`
+*   `trigger: str` — Partial billing trigger (e.g. LAMA, death, referral).
+*   `base_package_rate_inr: int` — Original base package rate.
+*   `payable_amount_inr: int` — Calculated payout amount.
+*   `payable_percentage: int` — Payout percentage of the package.
+*   `computation_note: str` — Math breakdown.
 
-@dataclass
-class IRISClaimOutput:
-    claim_status: str
-    procedure_code: str
-    package_name: str
-    preauth_reference: str
-    claim_docs_required: list[ClaimDocumentItem] = field(default_factory=list)
-    claim_docs_missing: list[ClaimDocumentItem] = field(default_factory=list)
-    image_docs_reminder: list[str] = field(default_factory=list)
-    cpd_checklist_results: list[CPDChecklistResult] = field(default_factory=list)
-    cpd_verdict: str = "unknown"
-    cpd_verdict_summary: str = ""
-    llm_evaluation_status: str = "unknown"
-    deviations_detected: list[DeviationItem] = field(default_factory=list)
-    deviation_justifications_drafted: int = 0
-    los_approved_indicative: int = 0
-    los_actual: int = 0
-    los_deviation: bool = False
-    los_deviation_note: str | None = None
-    discharge_summary_complete: bool = False
-    discharge_summary_missing_fields: list[str] = field(default_factory=list)
-    special_payment: SpecialPaymentResult | None = None
-    audit_flags_triggered: list[str] = field(default_factory=list)
-    sha_notification_warning: str | None = None
-    specialty_specific_notes: list[str] = field(default_factory=list)
-    flags: list[Flag] = field(default_factory=list)
-    errors: list[str] = field(default_factory=list)
+### 27. `IRISClaimOutput`
+Output container of the Stage 3 claims pipeline. Holds checklists, deviations, justifications, and partial payment details.
 
-@dataclass
-class IRISOutput:
-    readiness_status: str
-    selected_packages: list[FinalPackage] = field(default_factory=list)
-    blocked_candidates: list[dict] = field(default_factory=list)
-    preauth_docs_required: list[DocumentItem] = field(default_factory=list)
-    preauth_docs_missing: list[DocumentItem] = field(default_factory=list)
-    query_predictions: list[PackageQueryPrediction] = field(default_factory=list)
-    enhancement_plan: list[EnhancementPlan] = field(default_factory=list)
-    copayment_required: bool = False
-    copayment_gap_inr: int | None = None
-    comorbidity_notes: list[str] = field(default_factory=list)
-    flags: list[Flag] = field(default_factory=list)
-    stg_coverage: dict = field(default_factory=lambda: {"validated": 0, "stg_missing": 0})
-    errors: list[str] = field(default_factory=list)
-```
+### 28. `IRISOutput`
+Final output container of the Stage 1 & 2 pre-auth pipeline. Holds selection, blocked lists, checklists, query predictions, and status.
 
 ---
 
@@ -479,24 +422,24 @@ IRIS partitions references and catalog data into 5 separate tiers:
 
 *   **KB-1: Core Scheme Rules**
     *   *Source file:* `data/schemes/pmjay.json`
-    *   *Purpose:* Declares schema parameters (limits, multipliers, SLAs, copayments, accreditation markups).
+    *   *Purpose:* Declares scheme pricing configurations, Northeast states, private/public enhancement batch limits, bed category multipliers, LAMA/DAMA partial billing percentages, and discharge audit triggers.
     *   *Status:* **Active**.
 *   **KB-2: Specialty Shards & Derived Index**
     *   *Source files:* `data/hbp/` directory.
-    *   *Purpose:* Houses category package masters (e.g. `data/hbp/Cardiology.json`) and flat catalog indexes (`data/hbp/_index.json`).
+    *   *Purpose:* Houses specialty shards (e.g., `cardiology.json`, `general_surgery.json`) containing full procedure records (billing_unit, reserved_public_only, stratification, is_addon_to, implant, rates_inr, pricing details) and a compiled `_index.json` containing flat metadata for searching.
     *   *Status:* **Active**.
 *   **KB-3: Standard Treatment Guidelines**
     *   *Source files:* `data/stg/<procedure_code>.json`
-    *   *Purpose:* Declares mandatory document checklists, indicative LoS (ALOS), clinical check variables, and doctor qualifications.
+    *   *Purpose:* Standard Treatment Guidelines for specific procedures. Declares clinical indications, structured clinical thresholds (parameter, operator, value), doctor qualification checks, checklist queries, common auditor queries, and pre-auth/claim document lists.
     *   *Status:* **Active**.
 *   **KB-4: Rejection & Query Taxonomy**
-    *   *Source file:* `data/query_taxonomy.json` (Placeholder fallback at `data/samples/query_taxonomy.json`).
-    *   *Purpose:* Standardized rejection codes and auditor query taxonomy.
+    *   *Source file:* `data/query_taxonomy.json` (Falls back to `data/samples/query_taxonomy.json` if absent).
+    *   *Purpose:* Master taxonomy catalog mapping rejection codes and claim audit red flags.
     *   *Status:* **Missing** (Loads the samples fallback).
 *   **KB-5: State-Specific Overrides**
     *   *Source file:* `data/schemes/cmchis.json`.
-    *   *Purpose:* Tamil Nadu state overrides (CMCHIS).
-    *   *Status:* **Not Started**.
+    *   *Purpose:* State-specific override sheets (e.g., CMCHIS Tamil Nadu).
+    *   *Status:* **Not Started** (Stubbed or not implemented).
 
 ---
 
@@ -511,46 +454,18 @@ IRIS integrates Large Language Models (LLMs) selectively for clinical reasoning.
 
 ### Primary LLM Functions and Fallbacks
 
-1.  **`kb/searcher_llm.py::search_candidates`**
-    *   *Trigger:* Phase 2 Candidate Generation when `PHASE2_SEARCH_MODE == "llm"`.
-    *   *Task:* Parses unstructured patient text to map to a list of candidate procedure codes.
-    *   *Fallback:* Returns empty list `[]` (falls back to USP pathway) or falls back to fuzzy matching.
-2.  **`llm/stg_checker.py::check_stg_eligible`**
-    *   *Trigger:* Phase 3 STG validation when the matching STG JSON is present.
-    *   *Task:* Evaluates whether clinical findings satisfy all mandatory STG parameters.
-    *   *Fallback:* Marks patient as `eligible = True` with `confidence = "low"`, logging a warning.
-3.  **`llm/stg_checker.py::check_plausibility`**
-    *   *Trigger:* Phase 3 validation when the STG JSON file is missing.
-    *   *Task:* Conducts a lightweight clinical plausibility check to verify code relevance.
-    *   *Fallback:* Marks the candidate as `plausible = True`.
-4.  **`llm/stg_checker.py::resolve_stratum`**
-    *   *Trigger:* Phase 3 duplicate resolution for overlapping candidate codes.
-    *   *Task:* Analyzes planned approach and clinical variables to choose the single best-fit variant.
-    *   *Fallback:* Selects the variant with the highest fuzzy match score (`fuzz.WRatio`).
-5.  **`llm/conflict_resolver.py::resolve_conflicts`**
-    *   *Trigger:* Phase 4 Multi-package Combination start.
-    *   *Task:* Scans validated packages to drop mutual exclusions or sub-included procedures.
-    *   *Fallback:* Retains all validated packages.
-6.  **`phases/phase6_exclusion.py::_check_exclusion_with_llm`**
-    *   *Trigger:* Phase 6 for Group A clinical exclusions (Dental, Cosmetic, Drug rehab).
-    *   *Task:* Assesses if clinical details warrant an exception under Annexure 5 rules.
-    *   *Fallback:* Retains the packages and appends a warning flag for manual audit review.
-7.  **`llm/query_predictor.py::predict_package_queries`**
-    *   *Trigger:* Phase 9 Document Gap Analysis.
-    *   *Task:* Predicts likelihood of PPD claim queries based on qualifications, vitals, and STG gaps.
-    *   *Fallback:* Returns readiness verdict as `"ready"` or `"unknown"` with `"skipped"/"failed"` status.
-8.  **`llm/nearest_match.py::get_nearest_match`**
-    *   *Trigger:* Orchestrator (`main.py`) when zero packages survive validation.
-    *   *Task:* Analyzes blocked candidate logs and identifies the closest package and its main deficit.
-    *   *Fallback:* Returns `None`.
-9.  **`llm/cpd_evaluator.py::evaluate_claim_with_cpd`**
-    *   *Trigger:* Phase 11 Claims Verification.
-    *   *Task:* Verifies discharge details against the CPD checklist and drafts justifications for deviations.
-    *   *Fallback:* Returns empty checklist results, original deviations, and status `"failed"`.
-10. **`llm/cpd_evaluator.py::check_clinical_consistency`**
-    *   *Trigger:* Phase 11 Claims Verification Step 0.
-    *   *Task:* Assesses whether pre-auth diagnosis and procedures match clinical records at discharge.
-    *   *Fallback:* Returns `[]` (empty consistency issues list).
+| LLM Function | Trigger | Task | Fallback |
+| :--- | :--- | :--- | :--- |
+| **`search_candidates`** | Phase 2 candidate search (LLM mode) | Map clinical text to procedure code candidates | Returns `[]` or falls back to fuzzy matching |
+| **`check_stg_eligible`** | Phase 3 STG validation (STG JSON present) | Check if clinical text satisfies STG criteria | Returns `eligible = True` with low confidence |
+| **`check_plausibility`** | Phase 3 STG validation (STG JSON missing) | Clinical plausibility check of procedure code | Returns `plausible = True` with warning flag |
+| **`resolve_stratum`** | Phase 3 stratification tiebreaker | Select best-fitting stratum variant | Selects highest fuzzy match candidate |
+| **`resolve_conflicts`** | Phase 4 combination check | Detect mutual exclusions or sub-inclusions | Retains all validated candidates |
+| **`_check_exclusion_with_llm`** | Phase 6 exclusions evaluation | Evaluate Annexure 5 exceptions (dental, cosmetic, rehab) | Retains package and adds manual audit flag |
+| **`predict_package_queries`** | Phase 9 query prediction | Assesses qualification tokens, vitals, and STG gaps | Returns `ready` / `unknown` status |
+| **`get_nearest_match`** | Orchestrator (if all candidates blocked) | Identifies nearest matching code and main deficit | Returns `None` |
+| **`evaluate_claim_with_cpd`** | Phase 11 claims checklist check | Audit discharge data and draft deviation justifications | Returns empty checklists with status `failed` |
+| **`check_clinical_consistency`** | Phase 11 claims Step 0 check | Match pre-auth diagnosis against discharge summary | Returns empty list `[]` of consistency issues |
 
 ---
 
@@ -649,7 +564,7 @@ All variables in `config.py` control the engine's core parameters:
 The following segments are stubbed, missing database mappings, or have placeholder implementations:
 
 1.  **Phase 1 (Emergency Routing):** Completely stubbed. Always assumes planned elective admissions (`is_emergency = False`, `needs_specialty_package = True`).
-2.  **KB-4 (Query / Deduction Taxonomy):** The production `data/query_taxonomy.json` file is missing. The loader falls back to `data/samples/query_taxonomy.json`.
+2.  **KB-4 (Query / Rejection Taxonomy):** The production `data/query_taxonomy.json` file is missing. The loader falls back to `data/samples/query_taxonomy.json`.
 3.  **KB-5 (State Overrides CMCHIS):** Tamil Nadu state overrides (`cmchis.json`) are not started.
 4.  **Phase 4 Deduction Factors Ordering:** Ordering is based on base rates. PM-JAY combination rules require ordering by final calculated rates (multipliers are only resolved in Phase 5).
 5.  **Phase 8 Paediatric Device Limits:** Sizing checks are advisory alerts; they do not perform physical range validations on implants.

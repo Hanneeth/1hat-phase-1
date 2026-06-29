@@ -1,0 +1,121 @@
+{
+  "preauth_reference": "TC_CASE1",
+  "case_id": "TC_CASE1",
+  "preauth_input_path": "tests\\inputs\\TC_CASE1.json",
+  "hospital": {
+    "name": "Apollo Hospitals Chennai",
+    "hospital_code": null,
+    "address": "21 Greams Lane, Off Greams Road, Chennai – 600006, Tamil Nadu",
+    "district": "Chennai"
+  },
+  "patient": {
+    "name": "Ramesh Kumar",
+    "pmjay_id": "PMJAY-MH-2024-P004",
+    "age": 28,
+    "gender": "M",
+    "address": "45, MG Road, Bangalore – 560001",
+    "contact_number": "+91-9876543210",
+    "ipd_number": "IPD/SG/2025/010456",
+    "pmjay_case_id": "IRIS-CASE1-20251010"
+  },
+  "treating_consultant": {
+    "name": "Dr. Suresh Patel",
+    "contact_number": "9845678901",
+    "qualification": "MBBS, MS (General Surgery)",
+    "registration_number": "KMC-12345-2010",
+    "specialty": "General Surgery"
+  },
+  "admission": {
+    "date_of_admission": "2025-10-10",
+    "time_of_admission": "02:30",
+    "date_of_discharge": "2025-10-14",
+    "time_of_discharge": "11:00",
+    "date_of_operation": "2025-10-10",
+    "actual_los_days": 4,
+    "ward_category_actual": "ward",
+    "bed_category_breakdown": {
+      "ward_days": 4,
+      "hdu_days": 0,
+      "icu_days": 0,
+      "icu_vent_days": 0
+    },
+    "admission_type": "Emergency",
+    "package_booked": "SG018A",
+    "discharge_status": "recovered",
+    "discharge_condition": "Stable"
+  },
+  "clinical": {
+    "presenting_complaints": "Patient presented to emergency department with acute onset severe abdominal pain in right lower quadrant for past 12 hours. Pain started periumbilically and migrated to right iliac fossa. Associated with nausea, vomiting (3 episodes), and fever (101 F). Pain aggravated by movement and coughing.",
+    "duration_of_complaints": "12 hours",
+    "initial_assessment": "Patient presented to emergency department with acute onset severe abdominal pain in right lower quadrant for past 12 hours. Pain started periumbilically and migrated to right iliac fossa. Associated with nausea, vomiting (3 episodes), and fever (101 F). Pain aggravated by movement and coughing. Physical Examination: Temperature 101.2 F, Pulse 110/min, BP 120/80 mmHg. Abdomen showed tenderness and guarding in right iliac fossa, positive McBurney's point tenderness, positive Rovsing's sign, and rebound tenderness. USG Abdomen (09/10/2025): Dilated appendix 9mm diameter with surrounding fluid collection suggestive of perforation and localized peritonitis. Blood Investigations (09/10/2025): TLC 18,500/cumm (elevated), Neutrophils 85%, CRP 45 mg/L (elevated). Serum electrolytes and renal function tests within normal limits. Blood sugar random 110 mg/dL.",
+    "significant_past_history": "No significant past medical history. No chronic illnesses. No known drug allergies. No previous surgeries.",
+    "primary_diagnosis_at_admission": "Acute Appendicitis with Perforation and Localized Peritonitis",
+    "final_diagnosis_at_discharge": "Post-operative status following emergency laparoscopic appendectomy with peritoneal lavage and drain placement for perforated appendicitis with localized peritonitis",
+    "icd10_codes": [
+      "K35.32"
+    ],
+    "key_investigations": "USG Abdomen, Blood Investigations (TLC, Neutrophils, CRP, Serum electrolytes, renal function tests, Blood sugar random)",
+    "investigation_findings": "USG Abdomen (09/10/2025): Dilated appendix 9mm diameter with surrounding fluid collection suggestive of perforation and localized peritonitis. Blood Investigations (09/10/2025): TLC 18,500/cumm (elevated), Neutrophils 85%, CRP 45 mg/L (elevated). Serum electrolytes and renal function tests within normal limits. Blood sugar random 110 mg/dL.",
+    "treatment_given": "Emergency Laparoscopic Appendectomy with Peritoneal Lavage and Drain Placement performed on 10/10/2025. Post-op patient stable. IV antibiotics initiated — Inj. Ceftriaxone 1g BD and Inj. Metronidazole 500mg TDS. IV fluids maintained. NPO status. Vitals stable. Day 1 (11/10/2025): Patient afebrile. Started on oral fluids. Drain output sero-sanguinous, reducing. Ambulation encouraged. Day 2 (12/10/2025): Drain removed — output minimal and clear. Started on soft diet. Wound inspection — clean and dry. Day 3 (13/10/2025): Switched to oral antibiotics. Tolerating regular diet. No abdominal tenderness on examination. Day 4 (14/10/2025): Patient comfortable, afebrile, tolerating regular diet, all surgical wounds clean and dry, ambulatory without assistance. Declared medically fit for discharge.",
+    "operative_findings": "Standard 3-port laparoscopic technique used. On entry, perforated appendix identified with a localized abscess of approximately 30 mL purulent collection in the right iliac fossa. Appendectomy performed with endoloop ligation of appendicular base. Thorough peritoneal lavage performed with warm normal saline until clear. A surgical drain placed in the right iliac fossa. No intraoperative complications. Estimated blood loss: 50 mL. No implants used.",
+    "final_procedure_performed": "Emergency Laparoscopic Appendectomy with Peritoneal Lavage and Drain Placement",
+    "complications": "Intraoperative finding of perforated appendix with localized abscess (30 mL) — an unanticipated pathology that required modified surgical approach with peritoneal lavage and drain placement, and extended IV antibiotic coverage. No post-operative complications. Wound healing satisfactory.",
+    "follow_up_date": "2025-10-17",
+    "advice_on_discharge": "Discharge Medications: 1. Tab. Amoxicillin-Clavulanate 625mg — 1 tablet three times daily for 5 days. 2. Tab. Metronidazole 400mg — 1 tablet three times daily for 5 days. 3. Tab. Paracetamol 500mg — 1-2 tablets as needed for pain for 7 days. 4. Tab. Pantoprazole 40mg — 1 tablet once daily before breakfast for 7 days. Follow-up Schedule: Day 7 post-surgery (17/10/2025) — wound check and suture removal at nearest PHC or surgical OPD. Day 14 post-surgery (24/10/2025) — final post-operative assessment. Activity Restrictions: Avoid heavy lifting (more than 5 kg) for 2 weeks. Avoid strenuous exercise for 3 weeks. Warning Signs — Return Immediately If: Fever above 100 F, severe abdominal pain, redness or discharge from wounds, or persistent vomiting.",
+    "discharge_summary_text": "Apollo Hospitals Chennai\n21 Greams Lane, Off Greams Road, Chennai – 600006, Tamil Nadu\nPh: 044-28293333 | Email: records@apollochennai.com | PMJAY Empanelment: H001\nPATIENT CLINICAL RECORD — INPATIENT DISCHARGE\nRecord No: APL/CHN/IPD/2025/010456 Date of Issue: 14/10/2025\nSECTION 1: PATIENT AND ADMISSION INFORMATION\nPatient Name: Ramesh Kumar IPD Number: IPD/SG/2025/010456\nAge / Gender: 28 Years / Male PMJAY ID: PMJAY-MH-2024-P004\nDate of Birth: 15/03/1997 PMJAY Case ID: IRIS-CASE1-20251010\nAddress: 45, MG Road, Bangalore – 560001 Contact: +91-9876543210\nDate of Admission: 10/10/2025 at 02:30 hrs Date of Discharge: 14/10/2025 at 11:00 hrs\nDuration of Stay: 4 Days Type of Admission: Emergency\nWard Category: General Ward PM-JAY Package Booked:SG018A\nSECTION 2: TREATING CONSULTANT\nConsultant Name: Dr. Suresh Patel Registration No: KMC-12345-2010\nQualification: MBBS, MS (General Surgery) Specialty: General Surgery\nContact: 9845678901 Department: General Surgery, Apollo Hospitals Chennai\nSECTION 3: CLINICAL SUMMARY\nPresenting Complaints:\nPatient presented to emergency department with acute onset severe abdominal pain in right lower quadrant for past 12 hours. Pain\nstarted periumbilically and migrated to right iliac fossa. Associated with nausea, vomiting (3 episodes), and fever (101 F). Pain\naggravated by movement and coughing.\nPast Medical and Surgical History:\nNo significant past medical history. No chronic illnesses. No known drug allergies. No previous surgeries.\nPre-operative Examination and Investigations:\nPhysical Examination: Temperature 101.2 F, Pulse 110/min, BP 120/80 mmHg. Abdomen showed tenderness and guarding in right\niliac fossa, positive McBurney's point tenderness, positive Rovsing's sign, and rebound tenderness. USG Abdomen (09/10/2025):\nDilated appendix 9mm diameter with surrounding fluid collection suggestive of perforation and localized peritonitis. Blood\nInvestigations (09/10/2025): TLC 18,500/cumm (elevated), Neutrophils 85%, CRP 45 mg/L (elevated). Serum electrolytes and renal\nfunction tests within normal limits. Blood sugar random 110 mg/dL.\nSECTION 4: DIAGNOSIS\nProvisional Diagnosis Acute Appendicitis with Perforation and Localized Peritonitis (ICD-10: K35.32)\n(at admission):\nFinal Diagnosis Post-operative status following emergency laparoscopic appendectomy with peritoneal lavage and drain placement for perforated appendicitis with localized peritonitis (ICD-10: K35.32)\n(at discharge):\nSECTION 5: PROCEDURE PERFORMED\nProcedure Name: Emergency Laparoscopic Appendectomy with Peritoneal Lavage and Drain Placement\nPM-JAY Package Code: SG018A — Appendicular Perforation\nDate and Time of Surgery: 10/10/2025 at 08:00 hrs\nDuration: 75 minutes\nAnaesthesia: General Anaesthesia\nAnaesthetist: Dr. Priya Sharma\nOperative Findings and Technique:\nStandard 3-port laparoscopic technique used. On entry, perforated appendix identified with a localized abscess of approximately 30\nmL purulent collection in the right iliac fossa. Appendectomy performed with endoloop ligation of appendicular base. Thorough\nperitoneal lavage performed with warm normal saline until clear. A surgical drain placed in the right iliac fossa. No intraoperative\ncomplications. Estimated blood loss: 50 mL. No implants used.\nSECTION 6: POST-OPERATIVE COURSE AND TREATMENT\nDay 0 (10/10/2025): Post-op patient stable. IV antibiotics initiated — Inj. Ceftriaxone 1g BD and Inj. Metronidazole 500mg TDS. IV\nfluids maintained. NPO status. Vitals stable. Day 1 (11/10/2025): Patient afebrile. Started on oral fluids. Drain output\nsero-sanguinous, reducing. Ambulation encouraged. Day 2 (12/10/2025): Drain removed — output minimal and clear. Started on soft\ndiet. Wound inspection — clean and dry. Day 3 (13/10/2025): Switched to oral antibiotics. Tolerating regular diet. No abdominal\ntenderness on examination. Day 4 (14/10/2025): Patient comfortable, afebrile, tolerating regular diet, all surgical wounds clean and\ndry, ambulatory without assistance. Declared medically fit for discharge.\nSECTION 7: COMPLICATIONS\nIntraoperative finding of perforated appendix with localized abscess (30 mL) — an unanticipated pathology that required modified\nsurgical approach with peritoneal lavage and drain placement, and extended IV antibiotic coverage. No post-operative complications.\nWound healing satisfactory.\nSECTION 8: CONDITION AT DISCHARGE\nDischarge Status: Recovered Discharge Condition: Stable\nActual LOS: 4 Days (10/10/2025 to 14/10/2025) Ward Category: General Ward (Ward)\nBed Breakdown: Ward: 4 days | HDU: 0 | ICU: 0 | ICU-Vent: 0 Implants Used: None\nComplications: None post-operative Patient Amount Collected:Rs. 11,500 (non-PM-JAY items)\nSECTION 9: DISCHARGE MEDICATIONS\n1. Tab. Amoxicillin-Clavulanate 625mg — 1 tablet three times daily for 5 days\n2. Tab. Metronidazole 400mg — 1 tablet three times daily for 5 days\n3. Tab. Paracetamol 500mg — 1-2 tablets as needed for pain for 7 days\n4. Tab. Pantoprazole 40mg — 1 tablet once daily before breakfast for 7 days\nSECTION 10: FOLLOW-UP INSTRUCTIONS\nFollow-up Schedule: Day 7 post-surgery (17/10/2025) — wound check and suture removal at nearest PHC or surgical OPD. Day 14\npost-surgery (24/10/2025) — final post-operative assessment.\nActivity Restrictions: Avoid heavy lifting (more than 5 kg) for 2 weeks. Avoid strenuous exercise for 3 weeks.\nWarning Signs — Return Immediately If: Fever above 100 F, severe abdominal pain, redness or discharge from wounds, or\npersistent vomiting.\nPM-JAY Claim Reference: IRIS-CASE1-20251010 | Package: SG018A — Appendicular Perforation\nSECTION 11: DOCUMENTS SUBMITTED WITH CLAIM\n# Document Status\n1 Discharge Summary (this document) Available\n2 Operative Notes — Laparoscopic Appendectomy 10/10/2025 Available\n3 Pre-anaesthesia Check-up Report Available\n4 Blood Investigation Reports (CBC, CRP, RFT, Electrolytes) Available\n5 USG Abdomen Report (09/10/2025) Available\n6 Intraoperative Clinical Photograph Available\n7 Histopathology Report — Appendix Specimen Pending (within 7 days)\n8 Post-operative Wound Photograph Available\nSECTION 12: DECLARATIONS AND SIGNATURES\nI certify that the patient was under my care, the treatment rendered was medically necessary, and all information provided in this\nrecord is true and correct to the best of my knowledge. The extended hospital stay was medically warranted due to intraoperative\nfindings of perforated appendicitis with peritonitis requiring IV antibiotic therapy.\n_______________________ _______________________ _______________________\nDr. Suresh Patel PMAM Signature Patient / Attendant\nMBBS, MS General Surgery Apollo Hospitals Chennai Ramesh Kumar\nReg: KMC-12345-2010 Date: 14/10/2025 Date: 14/10/2025\nDate: 14/10/2025\nApollo Hospitals Chennai | PMJAY Empanelment ID: H001 | For billing queries contact within 7 days of discharge | Emergency: 044-28293333\nThis is a computer-generated document. Valid only with treating consultant signature and hospital seal.",
+    "operative_notes_text": null,
+    "pre_anaesthesia_text": null
+  },
+  "discharge_medications": [
+    "Tab. Amoxicillin-Clavulanate 625mg — 1 tablet three times daily for 5 days",
+    "Tab. Metronidazole 400mg — 1 tablet three times daily for 5 days",
+    "Tab. Paracetamol 500mg — 1-2 tablets as needed for pain for 7 days",
+    "Tab. Pantoprazole 40mg — 1 tablet once daily before breakfast for 7 days"
+  ],
+  "signatures": {
+    "treating_consultant_signed": true,
+    "pmam_signed": true,
+    "patient_or_attendant_signed": true
+  },
+  "patient_amount_collected_inr": 11500,
+  "sha_notification_date": null,
+  "implant_details": null,
+  "documents_submitted": [
+    {
+      "key": "clinical_notes",
+      "label": "Clinical Notes",
+      "available": true
+    },
+    {
+      "key": "xray",
+      "label": "Xray",
+      "available": false
+    },
+    {
+      "key": "usg_report",
+      "label": "Usg Report",
+      "available": true
+    },
+    {
+      "key": "biopsy_hpe",
+      "label": "Biopsy Hpe",
+      "available": false
+    },
+    {
+      "key": "clinical_photo_intraop",
+      "label": "Clinical Photo Intraop",
+      "available": true
+    },
+    {
+      "key": "discharge_summary",
+      "label": "Discharge Summary",
+      "available": true
+    },
+    {
+      "key": "ot_notes",
+      "label": "Ot Notes",
+      "available": true
+    }
+  ],
+  "deviations_declared": []
+}

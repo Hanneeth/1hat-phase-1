@@ -1,8 +1,6 @@
 # IRIS — PM-JAY Pre-Authorisation & Claims Verification Engine
 
-**IRIS (Intelligence for Rules and Integration of Schemes)** is a clinical-first decision and validation engine built for the Ayushman Bharat PM-JAY national health scheme. In public health administration, pre-authorisation and claim auditing are heavily bottlenecked by manual, error-prone matching of unstructured clinical reports against complex billing packages, Standard Treatment Guidelines (STGs), and financial capping rules.
-
-IRIS solves this by integrating a deterministic rules orchestrator with state-of-the-art LLM reasoning (`gemini-2.5-flash`). The engine processes admission data through an 11-phase pre-authorisation pipeline and a 13-step claims verification pipeline. It automates patient eligibility routing, conducts semantic package candidate searches, verifies clinical criteria, applies sliding-scale rate deductions, projects wallet sufficiency, and audits discharges to detect clinical or procedural deviations, drafting automated justifications for medical audit reviewers.
+**IRIS (Intelligence for Rules and Integration of Schemes)** is a clinical-first decision and validation engine built for the Ayushman Bharat PM-JAY national health scheme. In public health administration, pre-authorisation and claim auditing are heavily bottlenecked by manual, error-prone matching of unstructured clinical reports against complex billing packages, Standard Treatment Guidelines (STGs), and financial capping rules. IRIS solves this by integrating a deterministic rules orchestrator with state-of-the-art LLM reasoning (`gemini-2.5-flash`). The engine processes admission data through an 11-phase pre-authorisation pipeline and a 13-step claims verification pipeline. It automates patient eligibility routing, conducts semantic package candidate searches, verifies clinical criteria, applies sliding-scale rate deductions, projects wallet sufficiency, and audits discharges to detect clinical or procedural deviations, drafting automated justifications for medical audit reviewers.
 
 ---
 
@@ -84,7 +82,7 @@ The document intake layer parses unstructured medical files and extracts them in
 *   **Execution module:** `intake/intake_runner.py` (via `run_intake(folder_path)`).
 *   **Process flow:**
     1. Scans the input folder for PDF or DOCX files.
-    2. Extracts text using `pdf_extractor.py` (which tries `pdfplumber` and falls back to pytesseract OCR if text is less than 50 characters) or `docx_extractor.py` (which processes paragraphs and tables).
+    2. Extracts text using `pdf_extractor.py` (which tries `pdfplumber` and falls back to pytesseract OCR if text is less than 30 words) or `docx_extractor.py` (which processes paragraphs and tables).
     3. Calls `discharge_parser.py` (Gemini-based prompt utilizing a 3-strategy JSON extraction mechanism) to map raw text to the schema.
     4. Validates target structure, types, and required fields using `schema_validator.py`.
     5. Saves the parsed dict to `tests/inputs/<case_id>_discharge_parsed.json`.

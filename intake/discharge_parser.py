@@ -45,7 +45,7 @@ SCHEMA_TEMPLATE = """{
     "name": "<string — patient full name>",
     "pmjay_id": "<string — PMJAY/Ayushman Bharat ID if present>",
     "age": 0,
-    "gender": "<string — M or F>",
+    "gender": "M",
     "address": "<string — patient address if present>",
     "contact_number": "<string — contact number if present>",
     "ipd_number": "<string — IPD/inpatient number if present>",
@@ -166,6 +166,7 @@ def parse_discharge_from_documents(
     files_text: dict[str, str],
     preauth_reference: str,
     case_id: str,
+    procedure_doc_keys: list[str] | None = None,
 ) -> dict | None:
     """Parse medical documents text using Gemini into the discharge JSON schema.
 
@@ -173,6 +174,7 @@ def parse_discharge_from_documents(
         files_text: Dict mapping filename (e.g. "doc.pdf") to extracted text.
         preauth_reference: Pre-auth identifier string.
         case_id: Case identifier string.
+        procedure_doc_keys: Optional list of mandatory document keys to check.
 
     Returns:
         The populated discharge schema dict on success, or None on failure.
@@ -183,6 +185,30 @@ def parse_discharge_from_documents(
         case_id,
         len(files_text),
     )
+
+    if procedure_doc_keys:
+        doc_entries = []
+        for key in procedure_doc_keys:
+            label = key.replace("_", " ").title()
+            doc_entries.append(
+                f'    {{"key": "{key}", "label": "{label}", "available": false}}'
+            )
+        # Always ensure discharge_summary is first
+        discharge_entry = '    {"key": "discharge_summary", "label": "Discharge Summary", "available": false}'
+        if not any("discharge_summary" in e for e in doc_entries):
+            doc_entries.insert(0, discharge_entry)
+        documents_submitted_block = "[\n" + ",\n".join(doc_entries) + "\n  ]"
+    else:
+        # Fallback: keep the existing generic 8-item list from SCHEMA_TEMPLATE
+        documents_submitted_block = None
+
+    if documents_submitted_block is not None:
+        start_pos = SCHEMA_TEMPLATE.find('"documents_submitted": [') + len('"documents_submitted": ')
+        end_pos = SCHEMA_TEMPLATE.find(']', start_pos) + 1
+        target_array_str = SCHEMA_TEMPLATE[start_pos:end_pos]
+        dynamic_schema = SCHEMA_TEMPLATE.replace(target_array_str, documents_submitted_block)
+    else:
+        dynamic_schema = SCHEMA_TEMPLATE
 
     # Build the prompt
     user_prompt = (
@@ -195,7 +221,7 @@ def parse_discharge_from_documents(
 
     user_prompt += (
         "Now populate the following JSON schema exactly. Return only the completed JSON object:\n\n"
-        f"{SCHEMA_TEMPLATE}"
+        f"{dynamic_schema}"
     )
 
     try:
@@ -209,7 +235,7 @@ def parse_discharge_from_documents(
                     config=genai.types.GenerateContentConfig(
                         system_instruction=SYSTEM_PROMPT,
                         temperature=0,
-                        max_output_tokens=8192,
+                        max_output_tokens=65536,
                         response_mime_type="application/json",
                         http_options=genai.types.HttpOptions(
                             timeout=QUERY_PREDICTOR_TIMEOUT_SECONDS * 1000,

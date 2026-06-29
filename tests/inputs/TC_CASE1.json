@@ -1,0 +1,81 @@
+{
+  "patient": {
+    "patient_id": "P004"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2025-10-10",
+    "bed_category": "ward",
+    "is_emergency": true,
+    "is_medico_legal": false,
+    "chief_complaints": "Acute onset severe abdominal pain in right lower quadrant for 12 hours, pain started periumbilically and migrated to right iliac fossa, associated nausea, vomiting (3 episodes), and fever 101F, pain aggravated by movement and coughing",
+    "duration_days": 0,
+    "history_of_present_illness": "28-year-old male with no prior medical history presented to emergency with acute onset right lower quadrant abdominal pain for 12 hours. Pain started periumbilically and shifted to right iliac fossa — classical migratory pattern. Associated with nausea, 3 episodes of vomiting, and fever of 101F. No previous similar episodes. USG abdomen showed dilated appendix 9mm with surrounding fluid collection and localized peritonitis, consistent with perforated appendicitis. Emergency surgical management planned.",
+    "provisional_diagnosis": "Acute appendicitis with perforation and localized peritonitis (ICD-10: K35.32)",
+    "planned_procedure": "Emergency laparoscopic appendectomy with peritoneal lavage and drain placement",
+    "weight_kg": 70.0,
+    "height_cm": 172.0,
+    "vitals": {
+      "bp_systolic_mmhg": 120,
+      "bp_diastolic_mmhg": 80,
+      "pulse_bpm": 110,
+      "spo2_pct": 98,
+      "temperature_f": 101.2,
+      "rr_per_min": 18
+    },
+    "examination_findings": {
+      "general": "Conscious, oriented, in pain, mild distress. Febrile 101.2F.",
+      "cvs": "Tachycardia HR 110 bpm. BP 120/80 mmHg. No murmurs.",
+      "rs": "Clear bilaterally. No added sounds.",
+      "abdomen": "Tenderness and guarding in right iliac fossa. Positive McBurney's point tenderness. Positive Rovsing's sign. Rebound tenderness present. No organomegaly.",
+      "cns": "Conscious, GCS 15, no focal deficits.",
+      "local": null
+    },
+    "investigations": [
+      {
+        "type": "usg",
+        "result_summary": "Dilated appendix 9mm diameter with surrounding fluid collection suggestive of perforation and localized peritonitis. Free fluid in right iliac fossa.",
+        "structured_values": null,
+        "document_available": true,
+        "report_date": "2025-10-09"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "TLC 18500/cumm (elevated), Neutrophils 85%, CRP 45 mg/L (elevated). Serum electrolytes within normal limits. RFT within normal limits. Blood sugar random 110 mg/dL.",
+        "structured_values": [
+          {"parameter": "TLC", "value": 18500, "unit": "/cumm", "flag": "H", "leads": null},
+          {"parameter": "Neutrophils", "value": 85, "unit": "%", "flag": "H", "leads": null},
+          {"parameter": "CRP", "value": 45, "unit": "mg/L", "flag": "H", "leads": null},
+          {"parameter": "Blood_Sugar_Random", "value": 110, "unit": "mg/dL", "flag": "N", "leads": null}
+        ],
+        "document_available": true,
+        "report_date": "2025-10-09"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No significant past medical history. No chronic illnesses.",
+    "past_surgical_history": "No previous surgeries.",
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "none",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {"key": "clinical_notes", "label": "Clinical notes and ER assessment", "available": true},
+      {"key": "usg_report", "label": "USG Abdomen report", "available": true},
+      {"key": "blood_reports", "label": "Blood investigation reports (CBC, CRP, RFT, electrolytes)", "available": true}
+    ],
+    "treating_doctor": {
+      "name": "Dr. Suresh Patel",
+      "registration_number": "KMC-12345-2010",
+      "qualification": "MBBS, MS General Surgery",
+      "specialty_code": "SG"
+    },
+    "notes": "Emergency admission. Perforated appendicitis confirmed on USG. No implants required. Standard laparoscopic appendectomy planned. No MLC. Patient has no prior PM-JAY utilisation."
+  }
+}

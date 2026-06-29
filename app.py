@@ -13,6 +13,7 @@ from llm.nearest_match import get_nearest_match
 from dataclasses import asdict
 from phases.phase11_claim import run_phase11
 from phases.phase10_output import _coerce_serialisable
+from intake.intake_runner import run_intake_from_bytes, IntakeError
 
 # 1. Page Configuration
 st.set_page_config(page_title="IRIS Debug Console", layout="wide")
@@ -34,6 +35,8 @@ if "claim_logs" not in st.session_state:
     st.session_state.claim_logs = ""
 if "claim_run_error" not in st.session_state:
     st.session_state.claim_run_error = None
+if "claim_intake_error" not in st.session_state:
+    st.session_state.claim_intake_error = None
 
 # 3. Log Capture Mechanism
 def run_with_log_capture(raw_json: dict):
@@ -697,320 +700,582 @@ with tab1:
                 st.error(f"Error rendering output: {e}")
 
 with tab2:
-    DISCHARGE_DIR = Path(__file__).parent / "tests" / "inputs"
-    discharge_files = sorted(DISCHARGE_DIR.glob("TC*_discharge.json"))
-    if not discharge_files:
-        st.warning("No TC*_discharge.json files found in tests/inputs/")
-    else:
-        labels_list = []
-        file_map = {}
-        for f in discharge_files:
-            try:
-                with open(f, "r", encoding="utf-8") as file_obj:
-                    data = json.load(file_obj)
-                test_id = data.get("_test_id", f.stem)
-                desc = data.get("_description", "No description")
-                if len(desc) > 80:
-                    desc = desc[:80] + "..."
-                label = f"{test_id} — {desc}"
-            except Exception:
-                label = f.stem
-            labels_list.append(label)
-            file_map[label] = f
+    st.subheader("Claims Verification — Stage 3")
 
-        selected_discharge_label = st.selectbox(
-            "Select Discharge Test Case",
-            options=labels_list,
-            key="discharge_tc_selector"
-        )
+    claim_mode = st.radio(
+        "Input Mode",
+        ["Test Case JSON", "Upload Documents", "Use Stage 1/2 Session Output"],
+        horizontal=True,
+        key="claim_mode_radio"
+    )
+
+    def render_claim_output(co: dict):
+        # D1 — STATUS BANNER
+        claim_status = co.get("claim_status", "UNKNOWN")
+        CLAIM_STATUS_STYLES = {
+            "CLAIM_READY":     ("success", "✅ CLAIM READY"),
+            "CLAIM_GAPS":      ("warning", "🟡 CLAIM GAPS"),
+            "CLAIM_DEVIATION": ("warning", "🟠 CLAIM DEVIATION"),
+            "CLAIM_BLOCKED":   ("error",   "🔴 CLAIM BLOCKED"),
+        }
+        style, label = CLAIM_STATUS_STYLES.get(claim_status, ("info", f"⚪ {claim_status}"))
+        getattr(st, style)(f"**{label}** — {co.get('package_name', '')} ({co.get('procedure_code', '')})")
+
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Claim Docs Required", len(co.get("claim_docs_required", [])))
+        col2.metric("Docs Missing", len(co.get("claim_docs_missing", [])))
+        col3.metric("Deviations", len(co.get("deviations_detected", [])))
         
-        selected_file = file_map[selected_discharge_label]
-        try:
-            with open(selected_file, "r", encoding="utf-8") as file_obj:
-                discharge_dict = json.load(file_obj)
-        except Exception as e:
-            st.error(f"Failed to parse JSON file {selected_file.name}: {e}")
-            discharge_dict = None
+        cpd_verdict = co.get("cpd_verdict", "unknown").upper()
+        CPD_ICONS = {"CLEAN": "✅", "GAPS_PRESENT": "🟡", "LIKELY_DEDUCTED": "🔴"}
+        col4.metric("CPD Verdict", CPD_ICONS.get(cpd_verdict, "❓") + " " + cpd_verdict)
 
-        if discharge_dict:
-            with st.container(border=True):
-                col_left, col_mid, col_right = st.columns(3)
-                
-                with col_left:
-                    st.caption("PATIENT")
-                    patient = discharge_dict.get("patient", {})
-                    st.write(f"**{patient.get('name', '—')}**")
-                    st.write(f"ID: {patient.get('pmjay_id', '—')} | Age: {patient.get('age', '—')} | {patient.get('gender', '—')}")
+        # D2 — TWO COLUMNS
+        col_docs, col_cpd = st.columns(2)
 
-                with col_mid:
-                    st.caption("ADMISSION")
-                    admission = discharge_dict.get("admission", {})
-                    st.write(f"{admission.get('date_of_admission', '—')} → {admission.get('date_of_discharge', '—')}")
-                    st.write(f"LOS: {admission.get('actual_los_days', '—')} days | Status: {admission.get('discharge_status', '—')}")
-                    st.write(f"Package: {admission.get('package_booked', '—')}")
+        with col_docs:
+            st.subheader("Claim Documents")
+            for doc in co.get("claim_docs_required", []):
+                available = doc.get("available", False)
+                criticality = doc.get("criticality", "")
+                label = doc.get("label", doc.get("key", "—"))
+                pkg = doc.get("package_code")
+                pkg_tag = f" *({pkg})*" if pkg else " *(universal)*"
+                notes = doc.get("notes")
+                if available:
+                    icon = "✅"
+                elif criticality == "hard_block":
+                    icon = "🔴"
+                else:
+                    icon = "🟡"
+                line = f"{icon} {label}{pkg_tag}"
+                if notes:
+                    line += f" — *{notes}*"
+                st.markdown(line)
 
-                with col_right:
-                    st.caption("PROCEDURE")
-                    clinical = discharge_dict.get("clinical", {})
-                    st.write(clinical.get("final_procedure_performed", "—"))
-                    st.caption("HOSPITAL")
-                    hospital = discharge_dict.get("hospital", {})
-                    st.write(hospital.get("name", "—"))
+        with col_cpd:
+            st.subheader("CPD Evaluation")
+            cpd_verdict = co.get("cpd_verdict", "unknown").upper()
+            cpd_summary = co.get("cpd_verdict_summary", "")
+            CPD_VERDICT_STYLES = {
+                "CLEAN": ("success", "✅ CLEAN"),
+                "GAPS_PRESENT": ("warning", "🟡 GAPS PRESENT"),
+                "LIKELY_DEDUCTED": ("error", "🔴 LIKELY DEDUCTED"),
+            }
+            v_style, v_label = CPD_VERDICT_STYLES.get(cpd_verdict, ("info", cpd_verdict))
+            getattr(st, v_style)(v_label)
+            if cpd_summary:
+                st.caption(cpd_summary)
 
-            test_id = selected_file.stem.replace("_discharge", "")
-            cache_path = Path(__file__).parent / "tests" / "outputs" / f"{test_id}_output.json"
+            llm_status = co.get("llm_evaluation_status", "unknown")
+            if llm_status != "success":
+                st.warning(f"LLM evaluation {llm_status.upper()} — checklist results unavailable")
+
+            for res in co.get("cpd_checklist_results", []):
+                risk = res.get("risk_level", "pass")
+                question = res.get("question", "")
+                reasoning = res.get("reasoning", "")
+                if risk == "pass":
+                    icon = "✅"
+                elif risk == "medium":
+                    icon = "🟡"
+                elif risk == "high":
+                    icon = "🔴"
+                else:
+                    icon = "⚪"
+                st.markdown(f"{icon} {question}")
+                if risk in ("medium", "high") and reasoning:
+                    st.caption(f"↳ {reasoning}")
+
+        # D3 — DEVIATIONS DETECTED
+        st.subheader("Deviations Detected")
+        deviations = co.get("deviations_detected", [])
+        if not deviations:
+            st.success("No deviations detected.")
+        else:
+            SEVERITY_ICONS = {
+                "none": "✅", "info": "ℹ️", "warning": "⚠️", "block": "🔴"
+            }
+            for dev in deviations:
+                severity = dev.get("severity", "warning")
+                dev_type = dev.get("deviation_type", "—")
+                icon = SEVERITY_ICONS.get(severity, "⚠️")
+                with st.container(border=True):
+                    st.markdown(f"{icon} **{dev_type.replace('_', ' ').title()}** — severity: `{severity}`")
+                    if severity == "none":
+                        st.success("Assessed as no real deviation — wording difference only.")
+                    else:
+                        from_val = dev.get("from_value", "—")
+                        to_val = dev.get("to_value", "—")
+                        desc = dev.get("description", "")
+                        st.markdown(f"**From:** {from_val}")
+                        st.markdown(f"**To:** {to_val}")
+                        if desc:
+                            st.caption(desc)
+                        just = dev.get("justification_draft")
+                        if just is None:
+                            st.caption("📝 Justification draft: pending LLM")
+                        elif just.strip() == "":
+                            st.caption("📝 No justification required")
+                        else:
+                            st.info(f"📝 Draft justification: {just}")
+
+        # D4 — THREE COLUMNS
+        col_los, col_pay, col_flags = st.columns(3)
+
+        with col_los:
+            st.subheader("Length of Stay")
+            los_actual = co.get("los_actual", 0)
+            los_indicative = co.get("los_approved_indicative", 0)
+            c1, c2 = st.columns(2)
+            c1.metric("Actual LOS", f"{los_actual} days")
+            c2.metric("Indicative LOS", f"{los_indicative} days")
+            los_note = co.get("los_deviation_note")
+            if los_note:
+                st.warning(los_note)
+            else:
+                st.success("LOS within indicative range.")
+
+        with col_pay:
+            st.subheader("Special Payment")
+            sp = co.get("special_payment")
+            if not sp:
+                st.success("None — normal discharge")
+            else:
+                st.warning(f"**{sp.get('trigger', '—').replace('_', ' ').title()}**")
+                st.metric("Payable Amount", f"₹{sp.get('payable_amount_inr', 0):,}")
+                st.caption(f"{sp.get('payable_percentage', 0)}% of ₹{sp.get('base_package_rate_inr', 0):,}")
+                st.caption(sp.get("computation_note", ""))
+
+        with col_flags:
+            st.subheader("Audit Flags")
+            audit_flags = co.get("audit_flags_triggered", [])
+            sha_warning = co.get("sha_notification_warning")
+            if not audit_flags and not sha_warning:
+                st.success("No audit flags triggered.")
+            else:
+                for flag in audit_flags:
+                    st.error(f"🚩 {flag}")
+                if sha_warning:
+                    st.warning(f"⏰ SHA: {sha_warning}")
+
+        # D5 — SPECIALTY NOTES + IMAGE DOCS
+        col_spec, col_img = st.columns(2)
+
+        with col_spec:
+            st.subheader("Specialty Notes")
+            notes = co.get("specialty_specific_notes", [])
+            if not notes:
+                st.write("None.")
+            else:
+                for note in notes:
+                    st.info(note)
+
+        with col_img:
+            st.subheader("Image Docs — Upload to TMS")
+            reminders = co.get("image_docs_reminder", [])
+            if not reminders:
+                st.write("None required.")
+            else:
+                for item in reminders:
+                    st.markdown(f"• {item}")
+
+        # D6 — STEP 0 CONSISTENCY FLAGS
+        flags = co.get("flags", [])
+        if flags:
+            with st.expander(f"⚠️ Step 0 Consistency Flags ({len(flags)})", expanded=True):
+                SEVERITY_ICON = {"block": "🔴", "warning": "🟡", "info": "🔵"}
+                for flag in flags:
+                    sev = flag.get("severity", "info")
+                    icon = SEVERITY_ICON.get(sev, "⚪")
+                    st.markdown(f"{icon} **{flag.get('code', '—')}** — {flag.get('message', '—')}")
+
+        # D7 — ERRORS
+        errors = co.get("errors", [])
+        if errors:
+            with st.expander(f"Pipeline Errors ({len(errors)})", expanded=True):
+                for err in errors:
+                    st.error(err)
+
+        # D8 — COLLAPSIBLE EXPANDERS
+        with st.expander("Pipeline Logs", expanded=False):
+            logs = st.session_state.claim_logs
+            if logs and logs.strip():
+                st.code(logs, language=None)
+            else:
+                st.write("No logs captured.")
+
+        with st.expander("Raw JSON Output", expanded=False):
+            st.json(co)
+
+    if claim_mode == "Test Case JSON":
+        DISCHARGE_DIR = Path(__file__).parent / "tests" / "inputs"
+        discharge_files = sorted(DISCHARGE_DIR.glob("TC*_discharge.json"))
+        if not discharge_files:
+            st.warning("No TC*_discharge.json files found in tests/inputs/")
+        else:
+            labels_list = []
+            file_map = {}
+            for f in discharge_files:
+                try:
+                    with open(f, "r", encoding="utf-8") as file_obj:
+                        data = json.load(file_obj)
+                    test_id = data.get("_test_id", f.stem)
+                    desc = data.get("_description", "No description")
+                    if len(desc) > 80:
+                        desc = desc[:80] + "..."
+                    label = f"{test_id} — {desc}"
+                except Exception:
+                    label = f.stem
+                labels_list.append(label)
+                file_map[label] = f
+
+            selected_discharge_label = st.selectbox(
+                "Select Discharge Test Case",
+                options=labels_list,
+                key="discharge_tc_selector"
+            )
             
-            preauth_input_val = discharge_dict.get("preauth_input_path")
-            if preauth_input_val:
-                preauth_input_path = Path(__file__).parent / preauth_input_val
-            else:
-                preauth_input_path = None
+            selected_file = file_map[selected_discharge_label]
+            try:
+                with open(selected_file, "r", encoding="utf-8") as file_obj:
+                    discharge_dict = json.load(file_obj)
+            except Exception as e:
+                st.error(f"Failed to parse JSON file {selected_file.name}: {e}")
+                discharge_dict = None
 
-            if not cache_path.exists():
-                st.warning(
-                    f"Pre-auth cache not found at {cache_path}. "
-                    f"Run Stage 1/2 for {test_id} first (python main.py tests/inputs/{test_id}.json), "
-                    f"then return here."
-                )
-                st.button("▶ Run Claims Verification",
-                    type="primary", use_container_width=True, disabled=True)
-            else:
+            if discharge_dict:
+                with st.container(border=True):
+                    col_left, col_mid, col_right = st.columns(3)
+                    
+                    with col_left:
+                        st.caption("PATIENT")
+                        patient = discharge_dict.get("patient", {})
+                        st.write(f"**{patient.get('name', '—')}**")
+                        st.write(f"ID: {patient.get('pmjay_id', '—')} | Age: {patient.get('age', '—')} | {patient.get('gender', '—')}")
+
+                    with col_mid:
+                        st.caption("ADMISSION")
+                        admission = discharge_dict.get("admission", {})
+                        st.write(f"{admission.get('date_of_admission', '—')} → {admission.get('date_of_discharge', '—')}")
+                        st.write(f"LOS: {admission.get('actual_los_days', '—')} days | Status: {admission.get('discharge_status', '—')}")
+                        st.write(f"Package: {admission.get('package_booked', '—')}")
+
+                    with col_right:
+                        st.caption("PROCEDURE")
+                        clinical = discharge_dict.get("clinical", {})
+                        st.write(clinical.get("final_procedure_performed", "—"))
+                        st.caption("HOSPITAL")
+                        hospital = discharge_dict.get("hospital", {})
+                        st.write(hospital.get("name", "—"))
+
+                test_id = selected_file.stem.replace("_discharge", "")
+                cache_path = Path(__file__).parent / "tests" / "outputs" / f"{test_id}_output.json"
+                
+                preauth_input_val = discharge_dict.get("preauth_input_path")
+                if preauth_input_val:
+                    preauth_input_path = Path(__file__).parent / preauth_input_val
+                else:
+                    preauth_input_path = None
+
+                if not cache_path.exists():
+                    st.warning(
+                        f"Pre-auth cache not found at {cache_path}. "
+                        f"Run Stage 1/2 for {test_id} first (python main.py tests/inputs/{test_id}.json), "
+                        f"then return here."
+                    )
+                    st.button("▶ Run Claims Verification",
+                        type="primary", use_container_width=True, disabled=True)
+                else:
+                    try:
+                        with open(cache_path, "r", encoding="utf-8") as f_cache:
+                            preauth_output_dict = json.load(f_cache)
+                    except Exception as e:
+                        st.error(f"Failed to load cache from {cache_path}: {e}")
+                        preauth_output_dict = {}
+
+                    preauth_input_dict = {}
+                    if preauth_input_path and preauth_input_path.exists():
+                        try:
+                            with open(preauth_input_path, "r", encoding="utf-8") as f_in:
+                                preauth_input_dict = json.load(f_in)
+                        except Exception:
+                            preauth_input_dict = {}
+
+                    claim_run_clicked = st.button("▶ Run Claims Verification",
+                        type="primary", use_container_width=True, key="claim_run_btn")
+
+                    if claim_run_clicked:
+                        with st.spinner("Running Stage 3 claims verification... (LLM call may take 10–30 seconds)"):
+                            claim_output_dict, claim_logs, claim_error = run_claim_with_log_capture(
+                                discharge_dict,
+                                preauth_output_dict,
+                                preauth_input_dict,
+                            )
+                        st.session_state.claim_output_dict = claim_output_dict
+                        st.session_state.claim_logs = claim_logs
+                        st.session_state.claim_run_error = claim_error
+
+                    if st.session_state.claim_output_dict is None and st.session_state.claim_run_error is None:
+                        st.info("Select a discharge test case and click ▶ Run Claims Verification.")
+                    else:
+                        if st.session_state.claim_run_error:
+                            st.error(f"Stage 3 Exception: {st.session_state.claim_run_error}")
+                            with st.expander("Pipeline Logs", expanded=False):
+                                st.code(st.session_state.claim_logs or "No logs.", language=None)
+                        elif st.session_state.claim_output_dict is not None:
+                            render_claim_output(st.session_state.claim_output_dict)
+
+    elif claim_mode == "Upload Documents":
+        case_id_input = st.text_input(
+            "Case ID",
+            placeholder="e.g. TC_CASE1 or TC14",
+            help=(
+                "Must match the pre-auth output cache filename: "
+                "tests/outputs/{Case ID}_output.json. "
+                "Leave blank to run without pre-auth cross-check."
+            ),
+            key="upload_case_id"
+        )
+
+        uploaded_files = st.file_uploader(
+            "Upload Discharge Documents (PDF or DOCX)",
+            type=["pdf", "docx"],
+            accept_multiple_files=True,
+            key="discharge_uploader",
+            help="Upload one or more documents. The LLM will parse all of them together."
+        )
+
+        if uploaded_files:
+            for f in uploaded_files:
+                size_kb = len(f.getvalue()) / 1024.0
+                st.caption(f"📄 {f.name} ({size_kb:.1f} KB)")
+
+        preauth_output_dict = None
+        cache_found = False
+        if case_id_input.strip():
+            cache_path = Path(__file__).parent / "tests" / "outputs" / f"{case_id_input.strip()}_output.json"
+            if cache_path.exists():
                 try:
                     with open(cache_path, "r", encoding="utf-8") as f_cache:
                         preauth_output_dict = json.load(f_cache)
+                    cache_found = True
+                    st.success(f"Pre-auth cache found for {case_id_input.strip()}")
                 except Exception as e:
                     st.error(f"Failed to load cache from {cache_path}: {e}")
-                    preauth_output_dict = {}
+            else:
+                st.warning(
+                    f"No pre-auth cache found at {cache_path}. "
+                    f"Stage 3 will run without cross-consistency checks."
+                )
+        else:
+            st.info(
+                "No Case ID provided. Stage 3 will run without pre-auth "
+                "cross-consistency checks."
+            )
 
+        effective_case_id = case_id_input.strip() if case_id_input.strip() else "UPLOAD_SESSION"
+
+        run_disabled = not bool(uploaded_files)
+        claim_run_clicked = st.button(
+            "▶ Run Claims Verification",
+            type="primary",
+            use_container_width=True,
+            key="claim_run_upload_btn",
+            disabled=run_disabled
+        )
+
+        if claim_run_clicked and uploaded_files:
+            files_payload = []
+            for f in uploaded_files:
+                files_payload.append({
+                    "filename": f.name,
+                    "bytes": f.read(),
+                    "suffix": Path(f.name).suffix.lower()
+                })
+
+            with st.spinner("Running intake layer... extracting and parsing documents"):
+                intake_log_buffer = io.StringIO()
+                intake_handler = logging.StreamHandler(intake_log_buffer)
+                intake_handler.setFormatter(
+                    logging.Formatter("[%(levelname)s][%(name)s] %(message)s")
+                )
+                intake_handler.setLevel(logging.DEBUG)
+                root_logger = logging.getLogger()
+                prev_level = root_logger.level
+                root_logger.setLevel(logging.DEBUG)
+                root_logger.addHandler(intake_handler)
+
+                try:
+                    parsed_discharge_dict = run_intake_from_bytes(
+                        files_payload,
+                        effective_case_id,
+                        preauth_output_dict,
+                    )
+                    intake_succeeded = True
+                    st.session_state.claim_intake_error = None
+                except IntakeError as e:
+                    intake_succeeded = False
+                    parsed_discharge_dict = None
+                    st.session_state.claim_output_dict = None
+                    st.session_state.claim_intake_error = str(e)
+                except Exception as e:
+                    intake_succeeded = False
+                    parsed_discharge_dict = None
+                    st.session_state.claim_output_dict = None
+                    st.session_state.claim_intake_error = f"Unexpected error: {e}"
+                finally:
+                    root_logger.removeHandler(intake_handler)
+                    root_logger.setLevel(prev_level)
+
+                st.session_state.claim_logs = intake_log_buffer.getvalue()
+
+            if intake_succeeded:
+                st.success("Documents parsed successfully. Running Stage 3...")
                 preauth_input_dict = {}
-                if preauth_input_path and preauth_input_path.exists():
+                if case_id_input.strip():
+                    preauth_input_path = Path(__file__).parent / "tests" / "inputs" / f"{case_id_input.strip()}.json"
+                    if preauth_input_path.exists():
+                        try:
+                            with open(preauth_input_path, "r", encoding="utf-8") as f_in:
+                                preauth_input_dict = json.load(f_in)
+                        except Exception:
+                            pass
+
+                with st.spinner("Running Stage 3 claims verification..."):
+                    claim_output_dict, claim_logs, claim_error = run_claim_with_log_capture(
+                        parsed_discharge_dict,
+                        preauth_output_dict or {},
+                        preauth_input_dict,
+                    )
+                st.session_state.claim_output_dict = claim_output_dict
+                st.session_state.claim_logs += "\n" + (claim_logs or "")
+                st.session_state.claim_run_error = claim_error
+
+        if st.session_state.claim_intake_error:
+            st.error(f"Intake failed: {st.session_state.claim_intake_error}")
+        if st.session_state.claim_run_error:
+            st.error(f"Stage 3 failed: {st.session_state.claim_run_error}")
+
+        if st.session_state.claim_output_dict is not None:
+            render_claim_output(st.session_state.claim_output_dict)
+
+    elif claim_mode == "Use Stage 1/2 Session Output":
+        preauth_available = (
+            st.session_state.output_dict is not None
+            and st.session_state.output_dict.get("selected_packages")
+        )
+        if not preauth_available:
+            st.warning(
+                "No Stage 1/2 output in this session. "
+                "Go to the Pre-Auth tab, run the pipeline for your case, "
+                "then return here."
+            )
+        else:
+            selected = st.session_state.output_dict.get("selected_packages", [])
+            if selected:
+                proc_code = selected[0].get("validated", {}).get("procedure_code", "")
+                pkg_name = selected[0].get("validated", {}).get("package_name", "")
+                st.success(
+                    f"Stage 1/2 output loaded from session: "
+                    f"{proc_code} — {pkg_name}"
+                )
+
+            uploaded_files_s3 = st.file_uploader(
+                "Upload Discharge Documents (PDF or DOCX)",
+                type=["pdf", "docx"],
+                accept_multiple_files=True,
+                key="discharge_uploader_session",
+                help="Upload discharge documents to verify against the Stage 1/2 result."
+            )
+
+            if uploaded_files_s3:
+                for f in uploaded_files_s3:
+                    size_kb = len(f.getvalue()) / 1024.0
+                    st.caption(f"📄 {f.name} ({size_kb:.1f} KB)")
+
+            session_case_id = (
+                st.session_state.output_dict
+                .get("session_id", "SESSION_CASE")
+                or "SESSION_CASE"
+            )
+            st.caption(f"Session case ID: {session_case_id}")
+
+            run_disabled_s3 = not bool(uploaded_files_s3)
+            claim_run_s3 = st.button(
+                "▶ Run Claims Verification",
+                type="primary",
+                use_container_width=True,
+                key="claim_run_session_btn",
+                disabled=run_disabled_s3
+            )
+
+            if claim_run_s3 and uploaded_files_s3:
+                files_payload = []
+                for f in uploaded_files_s3:
+                    files_payload.append({
+                        "filename": f.name,
+                        "bytes": f.read(),
+                        "suffix": Path(f.name).suffix.lower()
+                    })
+
+                with st.spinner("Running intake layer... extracting and parsing documents"):
+                    intake_log_buffer = io.StringIO()
+                    intake_handler = logging.StreamHandler(intake_log_buffer)
+                    intake_handler.setFormatter(
+                        logging.Formatter("[%(levelname)s][%(name)s] %(message)s")
+                    )
+                    intake_handler.setLevel(logging.DEBUG)
+                    root_logger = logging.getLogger()
+                    prev_level = root_logger.level
+                    root_logger.setLevel(logging.DEBUG)
+                    root_logger.addHandler(intake_handler)
+
                     try:
-                        with open(preauth_input_path, "r", encoding="utf-8") as f_in:
-                            preauth_input_dict = json.load(f_in)
-                    except Exception:
-                        preauth_input_dict = {}
+                        parsed_discharge_dict = run_intake_from_bytes(
+                            files_payload,
+                            session_case_id,
+                            st.session_state.output_dict,
+                        )
+                        intake_succeeded = True
+                        st.session_state.claim_intake_error = None
+                    except IntakeError as e:
+                        intake_succeeded = False
+                        parsed_discharge_dict = None
+                        st.session_state.claim_output_dict = None
+                        st.session_state.claim_intake_error = str(e)
+                    except Exception as e:
+                        intake_succeeded = False
+                        parsed_discharge_dict = None
+                        st.session_state.claim_output_dict = None
+                        st.session_state.claim_intake_error = f"Unexpected error: {e}"
+                    finally:
+                        root_logger.removeHandler(intake_handler)
+                        root_logger.setLevel(prev_level)
 
-                claim_run_clicked = st.button("▶ Run Claims Verification",
-                    type="primary", use_container_width=True, key="claim_run_btn")
+                    st.session_state.claim_logs = intake_log_buffer.getvalue()
 
-                if claim_run_clicked:
-                    with st.spinner("Running Stage 3 claims verification... (LLM call may take 10–30 seconds)"):
+                if intake_succeeded:
+                    st.success("Documents parsed successfully. Running Stage 3...")
+                    preauth_input_dict = {}
+
+                    with st.spinner("Running Stage 3 claims verification..."):
                         claim_output_dict, claim_logs, claim_error = run_claim_with_log_capture(
-                            discharge_dict,
-                            preauth_output_dict,
+                            parsed_discharge_dict,
+                            st.session_state.output_dict,
                             preauth_input_dict,
                         )
                     st.session_state.claim_output_dict = claim_output_dict
-                    st.session_state.claim_logs = claim_logs
+                    st.session_state.claim_logs += "\n" + (claim_logs or "")
                     st.session_state.claim_run_error = claim_error
 
-            if st.session_state.claim_output_dict is None and st.session_state.claim_run_error is None:
-                st.info("Select a discharge test case and click ▶ Run Claims Verification.")
-            else:
-                if st.session_state.claim_run_error:
-                    st.error(f"Stage 3 Exception: {st.session_state.claim_run_error}")
-                    with st.expander("Pipeline Logs", expanded=False):
-                        st.code(st.session_state.claim_logs or "No logs.", language=None)
-                else:
-                    co = st.session_state.claim_output_dict
+            if st.session_state.claim_intake_error:
+                st.error(f"Intake failed: {st.session_state.claim_intake_error}")
+            if st.session_state.claim_run_error:
+                st.error(f"Stage 3 failed: {st.session_state.claim_run_error}")
 
-                    # D1 — STATUS BANNER
-                    claim_status = co.get("claim_status", "UNKNOWN")
-                    CLAIM_STATUS_STYLES = {
-                        "CLAIM_READY":     ("success", "✅ CLAIM READY"),
-                        "CLAIM_GAPS":      ("warning", "🟡 CLAIM GAPS"),
-                        "CLAIM_DEVIATION": ("warning", "🟠 CLAIM DEVIATION"),
-                        "CLAIM_BLOCKED":   ("error",   "🔴 CLAIM BLOCKED"),
-                    }
-                    style, label = CLAIM_STATUS_STYLES.get(claim_status, ("info", f"⚪ {claim_status}"))
-                    getattr(st, style)(f"**{label}** — {co.get('package_name', '')} ({co.get('procedure_code', '')})")
-
-                    col1, col2, col3, col4 = st.columns(4)
-                    col1.metric("Claim Docs Required", len(co.get("claim_docs_required", [])))
-                    col2.metric("Docs Missing", len(co.get("claim_docs_missing", [])))
-                    col3.metric("Deviations", len(co.get("deviations_detected", [])))
-                    
-                    cpd_verdict = co.get("cpd_verdict", "unknown").upper()
-                    CPD_ICONS = {"CLEAN": "✅", "GAPS_PRESENT": "🟡", "LIKELY_DEDUCTED": "🔴"}
-                    col4.metric("CPD Verdict", CPD_ICONS.get(cpd_verdict, "❓") + " " + cpd_verdict)
-
-                    # D2 — TWO COLUMNS
-                    col_docs, col_cpd = st.columns(2)
-
-                    with col_docs:
-                        st.subheader("Claim Documents")
-                        for doc in co.get("claim_docs_required", []):
-                            available = doc.get("available", False)
-                            criticality = doc.get("criticality", "")
-                            label = doc.get("label", doc.get("key", "—"))
-                            pkg = doc.get("package_code")
-                            pkg_tag = f" *({pkg})*" if pkg else " *(universal)*"
-                            notes = doc.get("notes")
-                            if available:
-                                icon = "✅"
-                            elif criticality == "hard_block":
-                                icon = "🔴"
-                            else:
-                                icon = "🟡"
-                            line = f"{icon} {label}{pkg_tag}"
-                            if notes:
-                                line += f" — *{notes}*"
-                            st.markdown(line)
-
-                    with col_cpd:
-                        st.subheader("CPD Evaluation")
-                        cpd_verdict = co.get("cpd_verdict", "unknown").upper()
-                        cpd_summary = co.get("cpd_verdict_summary", "")
-                        CPD_VERDICT_STYLES = {
-                            "CLEAN": ("success", "✅ CLEAN"),
-                            "GAPS_PRESENT": ("warning", "🟡 GAPS PRESENT"),
-                            "LIKELY_DEDUCTED": ("error", "🔴 LIKELY DEDUCTED"),
-                        }
-                        v_style, v_label = CPD_VERDICT_STYLES.get(cpd_verdict, ("info", cpd_verdict))
-                        getattr(st, v_style)(v_label)
-                        if cpd_summary:
-                            st.caption(cpd_summary)
-
-                        llm_status = co.get("llm_evaluation_status", "unknown")
-                        if llm_status != "success":
-                            st.warning(f"LLM evaluation {llm_status.upper()} — checklist results unavailable")
-
-                        for res in co.get("cpd_checklist_results", []):
-                            risk = res.get("risk_level", "pass")
-                            question = res.get("question", "")
-                            reasoning = res.get("reasoning", "")
-                            if risk == "pass":
-                                icon = "✅"
-                            elif risk == "medium":
-                                icon = "🟡"
-                            elif risk == "high":
-                                icon = "🔴"
-                            else:
-                                icon = "⚪"
-                            st.markdown(f"{icon} {question}")
-                            if risk in ("medium", "high") and reasoning:
-                                st.caption(f"↳ {reasoning}")
-
-                    # D3 — DEVIATIONS DETECTED
-                    st.subheader("Deviations Detected")
-                    deviations = co.get("deviations_detected", [])
-                    if not deviations:
-                        st.success("No deviations detected.")
-                    else:
-                        SEVERITY_ICONS = {
-                            "none": "✅", "info": "ℹ️", "warning": "⚠️", "block": "🔴"
-                        }
-                        for dev in deviations:
-                            severity = dev.get("severity", "warning")
-                            dev_type = dev.get("deviation_type", "—")
-                            icon = SEVERITY_ICONS.get(severity, "⚠️")
-                            with st.container(border=True):
-                                st.markdown(f"{icon} **{dev_type.replace('_', ' ').title()}** — severity: `{severity}`")
-                                if severity == "none":
-                                    st.success("Assessed as no real deviation — wording difference only.")
-                                else:
-                                    from_val = dev.get("from_value", "—")
-                                    to_val = dev.get("to_value", "—")
-                                    desc = dev.get("description", "")
-                                    st.markdown(f"**From:** {from_val}")
-                                    st.markdown(f"**To:** {to_val}")
-                                    if desc:
-                                        st.caption(desc)
-                                    just = dev.get("justification_draft")
-                                    if just is None:
-                                        st.caption("📝 Justification draft: pending LLM")
-                                    elif just.strip() == "":
-                                        st.caption("📝 No justification required")
-                                    else:
-                                        st.info(f"📝 Draft justification: {just}")
-
-                    # D4 — THREE COLUMNS
-                    col_los, col_pay, col_flags = st.columns(3)
-
-                    with col_los:
-                        st.subheader("Length of Stay")
-                        los_actual = co.get("los_actual", 0)
-                        los_indicative = co.get("los_approved_indicative", 0)
-                        c1, c2 = st.columns(2)
-                        c1.metric("Actual LOS", f"{los_actual} days")
-                        c2.metric("Indicative LOS", f"{los_indicative} days")
-                        los_note = co.get("los_deviation_note")
-                        if los_note:
-                            st.warning(los_note)
-                        else:
-                            st.success("LOS within indicative range.")
-
-                    with col_pay:
-                        st.subheader("Special Payment")
-                        sp = co.get("special_payment")
-                        if not sp:
-                            st.success("None — normal discharge")
-                        else:
-                            st.warning(f"**{sp.get('trigger', '—').replace('_', ' ').title()}**")
-                            st.metric("Payable Amount", f"₹{sp.get('payable_amount_inr', 0):,}")
-                            st.caption(f"{sp.get('payable_percentage', 0)}% of ₹{sp.get('base_package_rate_inr', 0):,}")
-                            st.caption(sp.get("computation_note", ""))
-
-                    with col_flags:
-                        st.subheader("Audit Flags")
-                        audit_flags = co.get("audit_flags_triggered", [])
-                        sha_warning = co.get("sha_notification_warning")
-                        if not audit_flags and not sha_warning:
-                            st.success("No audit flags triggered.")
-                        else:
-                            for flag in audit_flags:
-                                st.error(f"🚩 {flag}")
-                            if sha_warning:
-                                st.warning(f"⏰ SHA: {sha_warning}")
-
-                    # D5 — SPECIALTY NOTES + IMAGE DOCS
-                    col_spec, col_img = st.columns(2)
-
-                    with col_spec:
-                        st.subheader("Specialty Notes")
-                        notes = co.get("specialty_specific_notes", [])
-                        if not notes:
-                            st.write("None.")
-                        else:
-                            for note in notes:
-                                st.info(note)
-
-                    with col_img:
-                        st.subheader("Image Docs — Upload to TMS")
-                        reminders = co.get("image_docs_reminder", [])
-                        if not reminders:
-                            st.write("None required.")
-                        else:
-                            for item in reminders:
-                                st.markdown(f"• {item}")
-
-                    # D6 — STEP 0 CONSISTENCY FLAGS
-                    flags = co.get("flags", [])
-                    if flags:
-                        with st.expander(f"⚠️ Step 0 Consistency Flags ({len(flags)})", expanded=True):
-                            SEVERITY_ICON = {"block": "🔴", "warning": "🟡", "info": "🔵"}
-                            for flag in flags:
-                                sev = flag.get("severity", "info")
-                                icon = SEVERITY_ICON.get(sev, "⚪")
-                                st.markdown(f"{icon} **{flag.get('code', '—')}** — {flag.get('message', '—')}")
-
-                    # D7 — ERRORS
-                    errors = co.get("errors", [])
-                    if errors:
-                        with st.expander(f"Pipeline Errors ({len(errors)})", expanded=True):
-                            for err in errors:
-                                st.error(err)
-
-                    # D8 — COLLAPSIBLE EXPANDERS
-                    with st.expander("Pipeline Logs", expanded=False):
-                        logs = st.session_state.claim_logs
-                        if logs and logs.strip():
-                            st.code(logs, language=None)
-                        else:
-                            st.write("No logs captured.")
-
-                    with st.expander("Raw JSON Output", expanded=False):
-                        st.json(co)
+            if st.session_state.claim_output_dict is not None:
+                render_claim_output(st.session_state.claim_output_dict)
 
 with tab3:
     st.markdown("### IRIS — Intelligence for Rules and Integration of Schemes")

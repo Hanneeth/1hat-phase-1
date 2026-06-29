@@ -13,7 +13,7 @@ def extract_text_from_pdf(file_path: str) -> str:
     """Extract raw plain text from a PDF file.
 
     Attempts text extraction via pdfplumber first. If the resulting text is
-    fewer than 50 characters, falls back to OCR via pdf2image and pytesseract.
+    fewer than 30 words, falls back to OCR via pdf2image and pytesseract.
 
     Args:
         file_path: Absolute or relative path to the PDF file.
@@ -36,11 +36,11 @@ def extract_text_from_pdf(file_path: str) -> str:
 
         extracted_text = "\n\n".join(pages_text)
 
-        # Fallback to OCR if extracted text is fewer than 50 characters
-        if len(extracted_text.strip()) < 50:
+        # Fallback to OCR if extracted text is fewer than 30 words
+        if len(extracted_text.strip().split()) < 30:
             logger.warning(
-                "Near-empty text (%d chars) from pdfplumber for '%s'. Falling back to OCR.",
-                len(extracted_text.strip()),
+                "Near-empty text (%d words) from pdfplumber for '%s'. Falling back to OCR.",
+                len(extracted_text.strip().split()),
                 file_path,
             )
             logger.info(

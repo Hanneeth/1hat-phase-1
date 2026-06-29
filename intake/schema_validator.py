@@ -89,6 +89,14 @@ def validate_discharge_schema(discharge_dict: dict) -> tuple[bool, list[str]]:
     except Exception:
         missing_fields.append("admission.discharge_status")
 
+    # admission.package_booked — must be a non-empty string
+    try:
+        val = discharge_dict["admission"]["package_booked"]
+        if not isinstance(val, str) or not val.strip():
+            missing_fields.append("admission.package_booked")
+    except Exception:
+        missing_fields.append("admission.package_booked")
+
     # clinical.final_diagnosis_at_discharge — must be a non-empty string
     try:
         val = discharge_dict["clinical"]["final_diagnosis_at_discharge"]
