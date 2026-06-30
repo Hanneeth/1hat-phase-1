@@ -1,3 +1,8 @@
 rapidfuzz>=3.0
 google-genai>=1.0
 python-dotenv>=1.0
+pdfplumber
+pdf2image
+pytesseract
+python-docx
+streamlit
