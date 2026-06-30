@@ -126,39 +126,7 @@ SCHEMA_TEMPLATE = """{
 
   "implant_details": null,
 
-  "documents_submitted": [
-    {"key": "discharge_summary", "label": "Discharge Summary", "available": false},
-    {"key": "operative_notes", "label": "Operative Notes", "available": false},
-    {"key": "pre_anesthesia_check_up_report", "label": "Pre-Anaesthesia Check-up Report", "available": false},
-    {"key": "post_op_clinical_photograph", "label": "Post-operative Clinical Photograph", "available": false},
-    {"key": "intraoperative_clinical_photograph", "label": "Intraoperative Clinical Photograph", "available": false},
-    {"key": "invoice_of_mesh_tacker_used", "label": "Invoice of Mesh / Tacker Used", "available": false},
-    {"key": "implant_invoice_sticker", "label": "Implant Invoice / Sticker with Model and Serial Number", "available": false},
-    {"key": "clinical_notes", "label": "Clinical / Admission Notes", "available": false},
-    {"key": "usg_report", "label": "USG Report", "available": false},
-    {"key": "blood_reports", "label": "Blood Investigation Reports", "available": false},
-    {"key": "ecg_report", "label": "ECG Report", "available": false},
-    {"key": "xray_report", "label": "X-Ray Report", "available": false},
-    {"key": "mlc_fir", "label": "MLC / FIR Copy", "available": false},
-    {"key": "histopathology_report", "label": "Histopathology / Biopsy Report", "available": false},
-    {"key": "consent_form", "label": "Informed Consent Form", "available": false},
-    {"key": "patient_photo", "label": "Patient Photo on Hospital Bed", "available": false},
-    {"key": "mortality_audit_report", "label": "Mortality Audit Report", "available": false},
-    {"key": "indoor_case_papers", "label": "Indoor Case Papers", "available": false},
-    {"key": "procedure_note_operative_note", "label": "Procedure Note / Operative Note", "available": false},
-    {"key": "post_procedure_clinical_photograph", "label": "Post Procedure Clinical Photograph", "available": false},
-    {"key": "gross_specimen_photograph", "label": "Gross Specimen Photograph", "available": false},
-    {"key": "detailed_indoor_case_papers", "label": "Detailed Indoor Case Papers", "available": false},
-    {"key": "post_procedure_imaging_stone_removed", "label": "Post Procedure Imaging Showing Stone Removed", "available": false},
-    {"key": "detailed_procedure_operative_notes", "label": "Detailed Procedure / Operative Notes", "available": false},
-    {"key": "detailed_discharge_summary", "label": "Detailed Discharge Summary", "available": false},
-    {"key": "still_image_of_patient_undergoing_procedure", "label": "Still Image of the Patient Undergoing the Procedure with Date & Time", "available": false},
-    {"key": "angiogram_stills_report_showing_stent_post_stent_flow", "label": "Angiogram Stills & Report Showing Stent & Post Stent Flow", "available": false},
-    {"key": "serial_ecgs_post_procedure", "label": "Serial ECGs (Post Procedure)", "available": false},
-    {"key": "cardiac_enzymes_post_procedure", "label": "Cardiac Enzymes (Troponins T/I or CPK-MB) (Post Procedure)", "available": false},
-    {"key": "procedure_operation_notes", "label": "Procedure / Operation Notes", "available": false},
-    {"key": "barcode_of_stent_used", "label": "Barcode of the Stent(s) Used (Bare Metal/Drug Eluting Stent)", "available": false}
-  ],
+  "documents_submitted": __DOCUMENTS_SUBMITTED_PLACEHOLDER__,
 
   "deviations_declared": []
 }"""
@@ -168,6 +136,7 @@ def parse_discharge_from_documents(
     files_text: dict[str, str],
     preauth_reference: str,
     case_id: str,
+    procedure_doc_keys: list[dict] | None = None,
 ) -> dict | None:
     """Parse medical documents text using Gemini into the discharge JSON schema.
 
@@ -175,6 +144,7 @@ def parse_discharge_from_documents(
         files_text: Dict mapping filename (e.g. "doc.pdf") to extracted text.
         preauth_reference: Pre-auth identifier string.
         case_id: Case identifier string.
+        procedure_doc_keys: Optional list of dynamic document keys for this case.
 
     Returns:
         The populated discharge schema dict on success, or None on failure.
@@ -186,7 +156,40 @@ def parse_discharge_from_documents(
         len(files_text),
     )
 
-    dynamic_schema = SCHEMA_TEMPLATE
+    if not procedure_doc_keys:
+        logger.warning(
+            "parse_discharge_from_documents: procedure_doc_keys is None or empty. "
+            "Falling back to universal discharge_summary checklist entry."
+        )
+        docs_array = [
+            {"key": "discharge_summary", "label": "Discharge Summary", "available": False}
+        ]
+    else:
+        docs_array = []
+        seen = set()
+        for doc in procedure_doc_keys:
+            key = doc.get("key")
+            label = doc.get("label") or key
+            if key and key not in seen:
+                seen.add(key)
+                docs_array.append({
+                    "key": key,
+                    "label": label,
+                    "available": False
+                })
+        
+        # Ensure discharge_summary is present
+        if "discharge_summary" not in seen:
+            docs_array.insert(0, {
+                "key": "discharge_summary",
+                "label": "Discharge Summary",
+                "available": False
+            })
+
+    dynamic_schema = SCHEMA_TEMPLATE.replace(
+        "__DOCUMENTS_SUBMITTED_PLACEHOLDER__",
+        json.dumps(docs_array, indent=4)
+    )
 
     # Build the prompt
     user_prompt = (

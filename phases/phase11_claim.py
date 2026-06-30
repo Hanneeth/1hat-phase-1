@@ -667,31 +667,6 @@ def _build_claim_docs_list(
                 context["procedure_code"]
             )
 
-    # SUB-STEP D — Implant invoice
-    implant_req = False
-    selected_packages = preauth_output_dict.get("selected_packages", [])
-    if selected_packages:
-        first_package = selected_packages[0]
-        validated = get_val(first_package, "validated")
-        if validated:
-            implant = get_val(validated, "implant")
-            if implant:
-                implant_req = (get_val(implant, "required") == True)
-
-    if implant_req:
-        if "implant_invoice_sticker" not in required_keys:
-            claim_docs_required.append(
-                ClaimDocumentItem(
-                    key="implant_invoice_sticker",
-                    label="Implant invoice / sticker with model and serial number",
-                    package_code=context["package_code"],
-                    available=False,
-                    criticality="hard_block",
-                    notes=None
-                )
-            )
-            required_keys.add("implant_invoice_sticker")
-
     # SUB-STEP E — Death within 24h mortality audit
     admission = discharge_dict.get("admission", {})
     discharge_status = admission.get("discharge_status")

@@ -1,0 +1,332 @@
+{
+  "clusters": [
+    {
+      "canonical_key": "clinical_notes",
+      "canonical_label": "Clinical Notes",
+      "aliases": [
+        "clinical_notes_treatment_plan_indication",
+        "clinical_notes_planned_treatment",
+        "clinical_notes_with_treatment_plan",
+        "clinical_notes_with_planned_line_of_treatment",
+        "clinical_notes",
+        "clinical_notes_with_planned_treatment",
+        "clinical_notes_vitals_examination",
+        "clinical_notes_with_indication",
+        "clinical_notes_history_indications_admission",
+        "clinical_notes_history_indications_admission_notes"
+      ],
+      "reasoning": "These keys all refer to the patient's clinical record, detailing history, examination findings, indications, and planned treatment."
+    },
+    {
+      "canonical_key": "ecg_report",
+      "canonical_label": "ECG Report",
+      "aliases": [
+        "ecg",
+        "electrocardiogram_ecg",
+        "serial_ecgs_post_procedure",
+        "ecg_with_cardiologist_report",
+        "ecg_cardiologist_report",
+        "serial_ecgs"
+      ],
+      "reasoning": "These keys all represent an electrocardiogram report, including serial and post-procedure variations, and those with a cardiologist's interpretation."
+    },
+    {
+      "canonical_key": "echo_doppler_angiography_pre_procedure_report",
+      "canonical_label": "Pre-Procedure Echo, Doppler, Angiography, CT, MRA Report",
+      "aliases": [
+        "echo_report_stills",
+        "colour_doppler_ct_angio_report",
+        "doppler_ct_angiogram_report",
+        "doppler_report_angiogram_report",
+        "echo_doppler_report_and_stills",
+        "echo_doppler_report_stills",
+        "angiogram_report_stills",
+        "detailed_echo_report",
+        "detailed_echo_doppler_report",
+        "echo_doppler_report",
+        "echo_or_angiography_report",
+        "coronary_angiography_stills_reports",
+        "echo_colour_doppler_report_with_stills",
+        "echo_color_doppler_report_stills",
+        "doppler_ultrasound_digital_subtraction_angiography_computed_tomography_angiography_magnetic_resonance_angiography_report_with_stills",
+        "angiogram_report_with_stills",
+        "echo_color_doppler_report_with_stills",
+        "echo_doppler_report_with_stills",
+        "angiogram_report",
+        "2d_echo"
+      ],
+      "reasoning": "These keys all refer to various pre-procedure diagnostic imaging reports such as Echo, Doppler, Angiography, CT Angiography, or MRA, often including stills."
+    },
+    {
+      "canonical_key": "procedure_operative_notes",
+      "canonical_label": "Procedure / Operative Notes",
+      "aliases": [
+        "procedure_operation_notes",
+        "procedure_operative_notes",
+        "procedure_operative_notes_indication",
+        "procedure_operative_notes_with_indication",
+        "detailed_procedure_operative_notes"
+      ],
+      "reasoning": "These keys all refer to the documentation of the surgical or interventional procedure performed, sometimes including the indication."
+    },
+    {
+      "canonical_key": "discharge_summary",
+      "canonical_label": "Discharge Summary",
+      "aliases": [
+        "detailed_discharge_summary"
+      ],
+      "reasoning": "This key refers to the detailed summary provided upon patient discharge."
+    },
+    {
+      "canonical_key": "invoice_catheter",
+      "canonical_label": "Invoice of Catheter Used",
+      "aliases": [
+        "invoices_catheter_accessories",
+        "invoices_catheter_used",
+        "invoices_of_catheter_used",
+        "invoice_barcode_of_catheters"
+      ],
+      "reasoning": "These keys all represent invoices for catheters and related accessories used in a procedure, some including barcode information."
+    },
+    {
+      "canonical_key": "invoice_thrombolytic_drug",
+      "canonical_label": "Invoice of Thrombolytic Drug Used",
+      "aliases": [
+        "invoice_thrombolytic_drug_tpa",
+        "invoice_thrombolytic_drug_used",
+        "invoice_of_thrombolytic_drug_used",
+        "invoice_of_thrombolytic_agent_used"
+      ],
+      "reasoning": "These keys all represent invoices for thrombolytic drugs or agents used."
+    },
+    {
+      "canonical_key": "post_procedure_imaging_report",
+      "canonical_label": "Post-Procedure Echo, Doppler, Angiography, CT Report",
+      "aliases": [
+        "post_procedure_colour_doppler_angio_report",
+        "post_procedure_doppler_ct_angiogram",
+        "post_procedure_colour_doppler_angio_report_of_affected_limb",
+        "post_procedure_echo_angiogram_report",
+        "post_procedure_echo_angiogram_stills_report",
+        "post_procedure_echo_stills_with_report",
+        "post_procedure_echo_stills_report",
+        "post_procedure_echo_stills",
+        "per_post_procedure_stills_showing_stent",
+        "angiogram_stills_report_showing_stent_post_stent_flow",
+        "post_procedure_echo_color_doppler_angio_stills",
+        "post_procedure_stills_of_angio_with_report",
+        "check_angiography_after_procedure",
+        "post_procedure_echo_color_doppler_report",
+        "post_procedure_echo_doppler",
+        "2d_echo_post_procedure"
+      ],
+      "reasoning": "These keys all represent imaging reports (Echo, Doppler, Angiography, CT) performed after a procedure, often including stills and details about the outcome or device placement."
+    },
+    {
+      "canonical_key": "barcode_balloon_implant",
+      "canonical_label": "Barcode of Balloon or Implant",
+      "aliases": [
+        "barcode_of_balloon_implant"
+      ],
+      "reasoning": "This key refers specifically to the barcode documentation for a balloon or implant, distinct from an invoice."
+    },
+    {
+      "canonical_key": "invoice_balloon_blade_device",
+      "canonical_label": "Invoice of Balloon, Blade, or Device Used",
+      "aliases": [
+        "invoice_balloon_used",
+        "invoice_of_balloon_used",
+        "invoice_barcode_balloon",
+        "invoice_barcode_device_used",
+        "invoice_blade_balloon",
+        "invoice_barcode_of_blade_device_used"
+      ],
+      "reasoning": "These keys all represent invoices for balloons, blades, or other devices used in a procedure, often including barcode information."
+    },
+    {
+      "canonical_key": "invoice_stent",
+      "canonical_label": "Invoice of Stent Used",
+      "aliases": [
+        "invoice_of_stent_used",
+        "invoice_barcode_of_stent_used"
+      ],
+      "reasoning": "These keys all represent invoices for stents used in a procedure, often including barcode information."
+    },
+    {
+      "canonical_key": "barcode_stent",
+      "canonical_label": "Barcode of Stent",
+      "aliases": [
+        "barcode_of_stent_used"
+      ],
+      "reasoning": "This key refers specifically to the barcode documentation for a stent, distinct from an invoice."
+    },
+    {
+      "canonical_key": "cardiac_enzymes_report",
+      "canonical_label": "Cardiac Enzymes Report",
+      "aliases": [
+        "cardiac_enzymes",
+        "cardiac_enzymes_post_procedure"
+      ],
+      "reasoning": "These keys refer to reports of cardiac enzyme levels, whether pre- or post-procedure."
+    },
+    {
+      "canonical_key": "routine_biochemistry_report",
+      "canonical_label": "Routine Biochemistry Report",
+      "aliases": [
+        "routine_biochemistry"
+      ],
+      "reasoning": "This key refers to a report detailing routine biochemistry parameters."
+    },
+    {
+      "canonical_key": "patient_photograph",
+      "canonical_label": "Patient Photograph",
+      "aliases": [
+        "patient_photograph"
+      ],
+      "reasoning": "This key refers to a general photograph of the patient."
+    },
+    {
+      "canonical_key": "still_image_patient_during_procedure",
+      "canonical_label": "Still Image of Patient Undergoing Procedure",
+      "aliases": [
+        "still_image_of_patient_undergoing_procedure"
+      ],
+      "reasoning": "This key refers to a still image captured of the patient during the procedure, including date and time."
+    },
+    {
+      "canonical_key": "indication_for_procedure",
+      "canonical_label": "Indication for Procedure",
+      "aliases": [
+        "indication_for_procedure"
+      ],
+      "reasoning": "This key refers to the documented reason or justification for performing a medical procedure."
+    },
+    {
+      "canonical_key": "ep_study_report",
+      "canonical_label": "EP Study Report",
+      "aliases": [
+        "ep_study_report"
+      ],
+      "reasoning": "This key refers to an Electrophysiology (EP) study report."
+    },
+    {
+      "canonical_key": "chest_x_ray",
+      "canonical_label": "Chest X-ray",
+      "aliases": [
+        "chest_x_ray"
+      ],
+      "reasoning": "This key refers to a general chest X-ray report."
+    },
+    {
+      "canonical_key": "hrct_chest_ctpa_report",
+      "canonical_label": "HRCT Chest / CTPA Report",
+      "aliases": [
+        "hrct_chest_ctpa"
+      ],
+      "reasoning": "This key refers to a High-Resolution CT Chest or CT Pulmonary Angiography report."
+    },
+    {
+      "canonical_key": "fluid_analysis_report",
+      "canonical_label": "Analysis of Fluid Removed",
+      "aliases": [
+        "analysis_of_fluid_removed"
+      ],
+      "reasoning": "This key refers to the report detailing the analysis of fluid removed from the patient."
+    },
+    {
+      "canonical_key": "investigation_reports_diagnosis",
+      "canonical_label": "Investigation Reports for Diagnosis (ECG, ECHO, Cardiac Enzymes, Angiography, Holter)",
+      "aliases": [
+        "investigation_reports_diagnosis_ecg_echo_cardiac_enzymes_angiography_holter",
+        "relevant_investigations_ecg_echo_cardiac_enzymes_angiography_holter"
+      ],
+      "reasoning": "These keys are meta-documents listing various types of investigation reports used for diagnosis."
+    },
+    {
+      "canonical_key": "treatment_details",
+      "canonical_label": "Treatment Details",
+      "aliases": [
+        "treatment_details"
+      ],
+      "reasoning": "This key refers to the documented specifics of the treatment administered."
+    },
+    {
+      "canonical_key": "ecg_paced_rhythm_strip_lead_still_frame",
+      "canonical_label": "ECG Paced Rhythm Strip / Still Frame of Lead in Situ",
+      "aliases": [
+        "ecg_paced_rhythm_strip_still_frame_of_lead_in_situ"
+      ],
+      "reasoning": "This key specifically refers to a paced rhythm strip or a still frame of a lead in situ, which is a distinct type of ECG documentation."
+    },
+    {
+      "canonical_key": "invoice_pacemaker_pacing_lead",
+      "canonical_label": "Invoice of Pacemaker or Pacing Lead Used",
+      "aliases": [
+        "invoice_barcode_of_pacemaker_pacing_lead",
+        "invoice_barcode_designated_pacemaker"
+      ],
+      "reasoning": "These keys all represent invoices for pacemakers or pacing leads used, including barcode information."
+    },
+    {
+      "canonical_key": "angiogram_report_if_done",
+      "canonical_label": "Angiogram Report (If Done)",
+      "aliases": [
+        "angiogram_report"
+      ],
+      "reasoning": "This key refers to an angiogram report, specifically noting it is provided if the procedure was performed."
+    },
+    {
+      "canonical_key": "x_ray_pacemaker_in_situ",
+      "canonical_label": "X-ray Showing Pacemaker in Situ",
+      "aliases": [
+        "x_ray_pacemaker_in_situ"
+      ],
+      "reasoning": "This key refers to an X-ray specifically showing the pacemaker in its implanted position."
+    },
+    {
+      "canonical_key": "post_op_chest_x_ray_sternal_sutures",
+      "canonical_label": "Post-Operative Chest X-ray Showing Sternal Sutures",
+      "aliases": [
+        "post_op_chest_x_ray_showing_sternal_sutures"
+      ],
+      "reasoning": "This key refers to a post-operative chest X-ray specifically documenting sternal sutures."
+    },
+    {
+      "canonical_key": "relevant_imaging_investigations",
+      "canonical_label": "Relevant Imaging Investigations (Duplex Ultrasound, Angiography, CTA, MRA)",
+      "aliases": [
+        "relevant_investigations_reports",
+        "relevant_investigations_duplex_ultrasound_angiography_cta_mra"
+      ],
+      "reasoning": "These keys are meta-documents listing various types of relevant imaging investigation reports."
+    },
+    {
+      "canonical_key": "barcode_implant_graft",
+      "canonical_label": "Barcode of Implant or Graft",
+      "aliases": [
+        "implant_graft_barcode",
+        "barcode_of_implant_or_graft_if_used_optional"
+      ],
+      "reasoning": "These keys refer specifically to the barcode documentation for implants or grafts, distinct from an invoice."
+    },
+    {
+      "canonical_key": "barcode_iabp",
+      "canonical_label": "Barcode of IABP",
+      "aliases": [
+        "barcode_of_iabp_used"
+      ],
+      "reasoning": "This key refers specifically to the barcode documentation for an Intra-Aortic Balloon Pump (IABP)."
+    },
+    {
+      "canonical_key": "indoor_case_papers",
+      "canonical_label": "Indoor Case Papers",
+      "aliases": [
+        "detailed_indoor_case_papers_icps",
+        "indoor_case_papers",
+        "detailed_indoor_case_papers",
+        "clinical_notes_indoor_case_papers_showing_poor_hemodynamics_high_usage_of_inotropic_agents"
+      ],
+      "reasoning": "These keys all refer to the comprehensive indoor case papers, which may include clinical notes, detailing the patient's hospital stay."
+    }
+  ]
+}

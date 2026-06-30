@@ -22,6 +22,70 @@ class IntakeError(Exception):
     pass
 
 
+def _resolve_procedure_doc_keys(procedure_code: str, specialty_code: str) -> list[dict]:
+    """Resolves dynamic, per-case document checklist from STG with Shard fallback."""
+    from kb.loader import load_stg
+    
+    # Path A: Try STG
+    try:
+        stg_dict = load_stg(procedure_code)
+        if stg_dict is not None:
+            preauth_docs = stg_dict.get("mandatory_documents", {}).get("preauth", []) or []
+            claim_docs = stg_dict.get("mandatory_documents", {}).get("claim", []) or []
+            combined_docs = preauth_docs + claim_docs
+            if combined_docs:
+                logger.info(
+                    "Dynamic document checklist resolved from STG for procedure '%s' (%d keys found)",
+                    procedure_code,
+                    len(combined_docs),
+                )
+                return combined_docs
+            else:
+                logger.info(
+                    "STG file found for procedure '%s' but mandatory_documents preauth/claim lists are empty.",
+                    procedure_code
+                )
+    except Exception as exc:
+        logger.warning("Error reading/parsing STG for %s: %s", procedure_code, exc)
+
+    # Path B: Shard Fallback
+    from phases.phase3_validator import SPECIALTY_CODE_TO_SHARD
+    from kb.loader import load_specialty_shard, get_procedure_from_shard
+    
+    shard_filename = SPECIALTY_CODE_TO_SHARD.get(specialty_code)
+    if shard_filename:
+        try:
+            shard_dict = load_specialty_shard(shard_filename)
+            proc_entry = get_procedure_from_shard(procedure_code, shard_dict)
+            if proc_entry:
+                preauth_docs = proc_entry.get("mandatory_documents", {}).get("preauth", []) or []
+                claim_docs = proc_entry.get("mandatory_documents", {}).get("claim", []) or []
+                combined_docs = preauth_docs + claim_docs
+                if combined_docs:
+                    logger.info(
+                        "Dynamic document checklist resolved from SHARD fallback for procedure '%s' / specialty '%s' (%d keys found)",
+                        procedure_code,
+                        specialty_code,
+                        len(combined_docs),
+                    )
+                    return combined_docs
+        except Exception as exc:
+            logger.warning(
+                "Error reading/parsing shard for procedure '%s' / specialty '%s': %s",
+                procedure_code,
+                specialty_code,
+                exc,
+            )
+
+    # Path C: Neither Found
+    logger.warning(
+        "LOUD WARNING: No document checklist could be built for procedure_code '%s' (specialty '%s') from either STG or Shard data!",
+        procedure_code,
+        specialty_code,
+    )
+    return []
+
+
 def run_intake(folder_path: str) -> dict:
     """Orchestrates folder scanning, text extraction, schema mapping, and validation.
 
@@ -77,18 +141,7 @@ def run_intake(folder_path: str) -> dict:
                             .get("specialty_code", "")
                         )
                         if procedure_code and specialty_code:
-                            from phases.phase3_validator import SPECIALTY_CODE_TO_SHARD
-                            from kb.loader import load_specialty_shard, get_procedure_from_shard
-                            shard_filename = SPECIALTY_CODE_TO_SHARD.get(specialty_code)
-                            if shard_filename:
-                                shard_dict = load_specialty_shard(shard_filename)
-                                proc_entry = get_procedure_from_shard(procedure_code, shard_dict)
-                                if proc_entry:
-                                    for doc_type in ("preauth", "claim"):
-                                        for doc in proc_entry.get("mandatory_documents", {}).get(doc_type, []):
-                                            key = doc.get("key")
-                                            if key and key not in preauth_doc_keys:
-                                                preauth_doc_keys.append(key)
+                            preauth_doc_keys = _resolve_procedure_doc_keys(procedure_code, specialty_code)
                 except Exception as e:
                     logger.warning(
                         "Could not extract procedure doc keys from preauth cache: %s. "
@@ -169,7 +222,7 @@ def run_intake(folder_path: str) -> dict:
 
         # Step 4: Parse via LLM
         parsed_dict = parse_discharge_from_documents(
-            files_text, preauth_reference, case_id
+            files_text, preauth_reference, case_id, procedure_doc_keys=preauth_doc_keys
         )
 
         if parsed_dict is None:
@@ -282,24 +335,7 @@ def run_intake_from_bytes(
                         selected[0].get("validated", {}).get("specialty_code", "")
                     )
                     if procedure_code and specialty_code:
-                        from phases.phase3_validator import SPECIALTY_CODE_TO_SHARD
-                        from kb.loader import load_specialty_shard, get_procedure_from_shard
-                        shard_filename = SPECIALTY_CODE_TO_SHARD.get(specialty_code)
-                        if shard_filename:
-                            shard_dict = load_specialty_shard(shard_filename)
-                            proc_entry = get_procedure_from_shard(
-                                procedure_code, shard_dict
-                            )
-                            if proc_entry:
-                                for doc_type in ("preauth", "claim"):
-                                    for doc in (
-                                        proc_entry
-                                        .get("mandatory_documents", {})
-                                        .get(doc_type, [])
-                                    ):
-                                        key = doc.get("key")
-                                        if key and key not in preauth_doc_keys:
-                                            preauth_doc_keys.append(key)
+                        preauth_doc_keys = _resolve_procedure_doc_keys(procedure_code, specialty_code)
             except Exception as e:
                 logger.warning(
                     "Could not extract doc keys from preauth_output_dict: %s",
@@ -364,7 +400,7 @@ def run_intake_from_bytes(
 
         # STEP 4 — Parse via LLM:
         parsed_dict = parse_discharge_from_documents(
-            files_text, preauth_reference, case_id
+            files_text, preauth_reference, case_id, procedure_doc_keys=preauth_doc_keys
         )
         if parsed_dict is None:
             raise IntakeError(f"Discharge parser returned no result for case {case_id}.")

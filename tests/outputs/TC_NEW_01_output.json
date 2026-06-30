@@ -33,15 +33,13 @@
         "special_conditions_rule": false,
         "stg_eligible": true,
         "stg_missing_criteria": [
-          "Minimum doctor qualification (MS / DNB/ equivalent (General Surgery), DNB/ MCh/ equivalent (Pediatric Surgery)) not specified in clinical input"
+          "Minimum doctor qualification (MS / DNB/ equivalent (General Surgery), DNB/ MCh/ equivalent (Pediatric Surgery)) not specified in clinical presentation"
         ],
-        "stg_reasoning": "The patient's clinical presentation unambiguously satisfies multiple indications for inguinal hernia repair. The 'reducible swelling 4x3 cm at the inguinal region' directly meets the 'Bulge in the area on either side of pubic bone' criterion. The 'discomfort during physical activity' and 'increases on standing and coughing' satisfy the 'Pain and discomfort in groin region when coughing, exercising or bending over' criterion. Furthermore, the 'dragging sensation' aligns with 'A heavy full sensation in the groin'. The diagnosis of right indirect inguinal hernia is confirmed by both clinical examination (positive impulse on cough, positive deep ring occlusion test) and ultrasonography. No clinical thresholds are specified for this procedure. The absence of information regarding the treating doctor's qualification is noted but does not clinically disqualify the patient.",
+        "stg_reasoning": "The patient satisfies multiple clinical indications for inguinal hernia repair. The presence of a 'reducible swelling 4x3 cm at the inguinal region' directly meets the 'Bulge in the area on either side of pubic bone' indication. The patient's chief complaints of 'discomfort during physical activity' and a 'dragging sensation, increases on standing and coughing' satisfy both the 'Pain and discomfort in groin region when coughing, exercising or bending over' and 'A heavy full sensation in the groin' indications. The diagnosis of right indirect inguinal hernia is confirmed by both clinical examination and ultrasonography. No clinical thresholds are specified for this procedure. The absence of the treating doctor's qualification is noted but does not preclude clinical eligibility.",
         "is_addon_to": null,
         "addon_type": null,
         "match_score": 100.0,
-        "flags": [
-          "STG_LOW_CONFIDENCE: The patient's clinical presentation unambiguously satisfies multiple indications for inguinal hernia"
-        ]
+        "flags": []
       },
       "role": "primary",
       "deduction_factor": 1.0,
@@ -107,7 +105,7 @@
           "expected": true,
           "actual": true,
           "risk_level": "pass",
-          "reasoning": "Clinical notes are available and contain detailed history, signs, symptoms, and clear indication for the procedure."
+          "reasoning": "Detailed clinical notes, chief complaints, HPI, examination findings, and diagnosis are available."
         },
         {
           "question": "Was the Photograph showing hernia / bulge submitted?",
@@ -121,34 +119,34 @@
           "expected": false,
           "actual": false,
           "risk_level": "pass",
-          "reasoning": "Patient history explicitly states no previous hernia repair on the same side."
+          "reasoning": "Patient history explicitly states 'No previous hernia repair'."
         }
       ],
       "common_query_risks": [
         {
           "query_text": "Clinical notes missing detailed history, signs & symptoms, or indication for procedure",
           "risk_level": "low",
-          "reasoning": "Clinical notes are available and provide comprehensive details regarding history, signs, symptoms, and clear indication for the procedure."
+          "reasoning": "Detailed clinical notes with history, signs, symptoms, and indication are available."
         },
         {
           "query_text": "Photograph showing hernia/bulge missing at pre-authorization",
           "risk_level": "low",
-          "reasoning": "A patient photograph showing the hernia/bulge is listed as available in the submitted documents."
+          "reasoning": "A photograph showing the hernia/bulge is explicitly listed as available in the documents."
         },
         {
           "query_text": "Intraoperative clinical photograph missing or does not show presence of Mesh",
           "risk_level": "low",
-          "reasoning": "This query trigger pertains to intraoperative documentation, which is not relevant at the pre-authorization stage."
+          "reasoning": "This query trigger pertains to intraoperative documentation, not required at pre-authorization."
         },
         {
           "query_text": "Invoice for the mesh used is missing",
           "risk_level": "low",
-          "reasoning": "This query trigger pertains to post-procedure documentation (invoice), which is not relevant at the pre-authorization stage."
+          "reasoning": "The invoice for the mesh is a post-procedure document and is not expected at pre-authorization."
         },
         {
           "query_text": "Patient previously operated for hernia on the same side without adequate justification",
           "risk_level": "low",
-          "reasoning": "Patient history explicitly states no previous hernia repair on the same side, thus eliminating this concern."
+          "reasoning": "Patient history clearly states 'No previous hernia repair,' directly addressing this potential query."
         },
         {
           "query_text": "No clinical symptom of bulge in the area on either side of pubic bone documented",

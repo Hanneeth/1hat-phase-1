@@ -1,0 +1,122 @@
+{
+  "preauth_reference": "TC_NEW_03",
+  "case_id": "TC_NEW_03",
+  "preauth_input_path": "tests\\inputs\\TC_NEW_03.json",
+  "hospital": {
+    "name": "Apollo Speciality Hospital",
+    "hospital_code": "H001",
+    "address": "21, Greams Road, Chennai - 600006, Tamil Nadu",
+    "district": "Chennai"
+  },
+  "patient": {
+    "name": "Selvam Rajakumar",
+    "pmjay_id": "P003",
+    "age": 38,
+    "gender": "M",
+    "address": "7, Nehru Street, Villivakkam, Chennai - 600049",
+    "contact_number": "+91-9841234567",
+    "ipd_number": "APH2026TCNEW03",
+    "pmjay_case_id": "TC_NEW_03"
+  },
+  "treating_consultant": {
+    "name": "Dr. Ramesh Natarajan",
+    "contact_number": null,
+    "qualification": "MBBS, MS, MCh (Urology)",
+    "registration_number": "TN-MED-38892",
+    "specialty": "Urology"
+  },
+  "admission": {
+    "date_of_admission": "2026-07-02",
+    "time_of_admission": "09:00",
+    "date_of_discharge": "2026-07-03",
+    "time_of_discharge": "11:00",
+    "date_of_operation": "2026-07-02",
+    "actual_los_days": 1,
+    "ward_category_actual": "ward",
+    "bed_category_breakdown": {
+      "ward_days": 1,
+      "hdu_days": 0,
+      "icu_days": 0,
+      "icu_vent_days": 0
+    },
+    "admission_type": "Planned / Elective",
+    "package_booked": "SU014A",
+    "discharge_status": "recovered",
+    "discharge_condition": "Stable. Afebrile. Pain relieved. Voiding normally. DJ stent in situ (left side). No active haematuria."
+  },
+  "clinical": {
+    "presenting_complaints": "Severe colicky RIGHT flank pain radiating to right groin and inner thigh for 4 days. Associated nausea, vomiting, burning micturition and increased urinary frequency. Microscopic haematuria noted on day 2. No fever. No urinary retention.",
+    "duration_of_complaints": "4 days",
+    "initial_assessment": "Mr. Selvam Rajakumar, a 38-year-old male, presents with a 4-day history of severe colicky RIGHT flank pain radiating to the right groin and inner thigh — characteristic of a lower ureteric calculus. Pain is intermittent and severe. Associated nausea, vomiting, burning micturition and urinary frequency suggest distal ureteric irritation. Microscopic haematuria noted. No fever, no urinary retention. USG abdomen and CT KUB both confirm a 9mm calculus in the RIGHT lower ureter at the vesicoureteric junction (VUJ) with mild RIGHT hydronephrosis. LEFT kidney and ureter entirely normal. No previous history of renal or ureteric stones. Referred for right ureteroscopy and stone removal under PM-JAY. Clinical Examination Findings: Conscious, cooperative, in mild discomfort. No pallor or icterus. Weight / Height 72 kg / 168 cm. Vitals BP 128/82 mmHg, Pulse 86/min, SpO2 98% (room air), Temp 98.8 F, RR 16/min. CVS S1 S2 heard, no murmurs. Respiratory Air entry bilateral, clear. Abdomen Soft, mild RIGHT flank and right iliac fossa tenderness. RIGHT renal angle tenderness POSITIVE. LEFT renal angle tenderness NEGATIVE. CNS No focal neurological deficits. Local RIGHT flank tenderness. RIGHT renal angle tenderness — positive. LEFT side — no tenderness. External genitalia normal.",
+    "significant_past_history": "No significant past medical history. No previous renal or ureteric stones. No known drug allergies. No previous surgeries. Chronic Illnesses None, Previous Surgeries None, Current Medications None, Known Allergies None, Smoking / Alcohol Non-smoker, social alcohol.",
+    "primary_diagnosis_at_admission": "Right Lower Ureteric Calculus 9mm at Vesicoureteric Junction (VUJ) with Mild Right Hydronephrosis",
+    "final_diagnosis_at_discharge": "Post-procedure status following successful left ureteroscopy with holmium laser lithotripsy and stone removal at left VUJ",
+    "icd10_codes": [
+      "N20.1"
+    ],
+    "key_investigations": "Pre-operative Blood Reports (CBC, RFT, Electrolytes, PT/INR, Sugar), Urine Routine and Culture Report, ECG Report, USG Abdomen & Pelvis Report, CT KUB Report, X-ray KUB (post-procedure).",
+    "investigation_findings": "Haemoglobin (Hb) 14.2 g/dL (Normal), WBC Count 9,800 /cumm (Normal), Platelet Count 2.6 Lakh (Normal), Serum Creatinine 1.1 mg/dL (Normal), Urea 32 mg/dL (Normal), Electrolytes Na 138, K 4.2 mEq/L (Normal), PT / INR 13.2 sec / 1.05 (Normal), Blood Sugar Random 102 mg/dL (Normal). Urine Routine: Microscopic haematuria — RBC 15-20/hpf. Pus cells 2-4/hpf. No casts. Urine Culture: No growth (Normal). ECG: Normal sinus rhythm. USG Abdomen & Pelvis: RIGHT lower ureteric calculus 9mm at VUJ with mild RIGHT hydronephrosis. LEFT kidney and ureter normal. CT KUB: RIGHT lower ureteric calculus at VUJ measuring 9x7mm — distal ureter just proximal to bladder. Mild RIGHT hydronephrosis. LEFT ureter and kidney ENTIRELY NORMAL. Post-procedure X-ray KUB: No residual calculus seen. DJ stent in situ — left side.",
+    "treatment_given": "Left Ureteroscopy with Holmium Laser Lithotripsy and Stone Removal — Lower Ureter (VUJ) performed under Spinal Anaesthesia. Flexible ureteroscopy performed via left ureteric orifice. 9x7mm calculus identified at left VUJ. Holmium laser lithotripsy performed — stone fragmented to dust and small fragments. Fragments retrieved with stone basket. DJ stent placed left side. Complete stone clearance confirmed on fluoroscopy. Post-procedure: Patient comfortable, vitals stable. Oral fluids tolerated. IV antibiotics given. Urinary catheter removed after 4 hours. Patient voiding normally. No haematuria.",
+    "operative_findings": "Left lower ureteric calculus 9x7mm at VUJ confirmed. Stone fragmented and cleared. No ureteric injury. No bleeding.",
+    "final_procedure_performed": "Left Ureteroscopy with Holmium Laser Lithotripsy and Stone Removal — Lower Ureter (VUJ)",
+    "complications": "No intraoperative or post-procedure complications.",
+    "follow_up_date": "2026-07-10",
+    "advice_on_discharge": "Day 7 (10/07/2026): Review at Urology OPD — DJ stent removal planning. Day 14 (17/07/2026): DJ stent removal under local anaesthesia. Increase fluid intake to 3 litres per day to prevent stone recurrence. Warning Signs: Report immediately for high fever (>101F), severe pain, inability to pass urine, or heavy bleeding in urine.",
+    "discharge_summary_text": "Apollo Speciality Hospital\n21, Greams Road, Chennai - 600006, Tamil Nadu\nPh: 044-28293333 | Email: records@apollochennai.org\nHospital Reg No: TN/CHE/2003/00412 | PMJAY Empanelment ID: H001\nDISCHARGE SUMMARY\nSummary No: APH/DS/2026/TCNEW03 Date: 03/07/2026\nSECTION 1 — HOSPITAL & PATIENT INFORMATION\nHospital Name Apollo Speciality Hospital\nAddress 21, Greams Road, Chennai - 600006, Tamil Nadu\nPMJAY Empanelment ID H001\nPatient Name Selvam Rajakumar\nAge / Gender 38 Years / Male\nPMJAY Beneficiary ID P003\nPMJAY Card No. TN-PMJAY-2024-003891\nAddress 7, Nehru Street, Villivakkam, Chennai - 600049\nSECTION 2 — ADMISSION & DISCHARGE DETAILS\nDate & Time of Admission 02/07/2026 at 09:00 hrs\nDate & Time of Discharge 03/07/2026 at 11:00 hrs\nTotal Duration of Stay 1 Day (Day Care)\nType of Admission Planned / Elective\nWard / Room Category General Ward\nTreating Consultant Dr. Ramesh Natarajan\nQualification MBBS, MS, MCh (Urology)\nRegistration Number TN-MED-38892\nSpecialty Urology\nPMJAY Package Booked SU014A\nPre-Auth Reference PMJAY-PREAUTH-2026-TCNEW03-001\nSECTION 3 — CLINICAL SUMMARY\nPresenting Complaints:\nSevere colicky left flank pain radiating to left groin and inner thigh for 4 days. Associated nausea, vomiting, burning\nmicturition. Microscopic haematuria.\nRelevant Medical History:\nNo significant past medical history. No previous renal or ureteric stones. No known drug allergies. No previous\nsurgeries.\nPre-operative Examination:\nBP 128/82 mmHg, Pulse 86/min, SpO2 98%, afebrile. LEFT renal angle tenderness positive. RIGHT renal angle\ntenderness negative. USG and CT KUB confirmed left lower ureteric calculus 9x7mm at left VUJ.\n\nSECTION 4 — DIAGNOSIS\nProvisional Diagnosis (Admission) Left Lower Ureteric Calculus 9mm at Vesicoureteric Junction (VUJ) with Mild Left\nHydronephrosis — ICD-10: N20.1\nFinal Diagnosis (Discharge) Post-procedure status following successful left ureteroscopy with holmium laser\nlithotripsy and stone removal at left VUJ — ICD-10: N20.1\nSECTION 5 — PROCEDURE PERFORMED\nProcedure Name Left Ureteroscopy with Holmium Laser Lithotripsy and Stone Removal — Lower\nUreter (VUJ)\nPMJAY Package SU014A\nLaterality LEFT side — Unilateral\nDate of Procedure 02/07/2026 at 11:00 hrs\nDuration 45 minutes\nAnaesthesia Spinal Anaesthesia — Dr. Anitha Kumar, MD Anaesthesiology, Reg: TN-MED-29341\nTechnique Flexible ureteroscopy performed via left ureteric orifice. 9x7mm calculus identified at\nleft VUJ. Holmium laser lithotripsy performed — stone fragmented to dust and small\nfragments. Fragments retrieved with stone basket. DJ stent placed left side.\nComplete stone clearance confirmed on fluoroscopy.\nIntraoperative Findings Left lower ureteric calculus 9x7mm at VUJ confirmed. Stone fragmented and cleared.\nNo ureteric injury. No bleeding.\nPost-procedure Imaging X-ray KUB post-procedure: No residual calculus seen. DJ stent in situ — left side.\nSECTION 6 — POST-OPERATIVE COURSE\nPost-procedure: Patient comfortable, vitals stable. Oral fluids tolerated. IV antibiotics given. Urinary catheter removed\nafter 4 hours. Patient voiding normally. No haematuria. Declared fit for discharge.\nSECTION 7 — COMPLICATIONS\nNo intraoperative or post-procedure complications.\nSECTION 8 — CONDITION AT DISCHARGE\nStable. Afebrile. Pain relieved. Voiding normally. DJ stent in situ (left side). No active haematuria.\nSECTION 9 — DISCHARGE MEDICATIONS\n# Medication Dose Frequency Duration\n1 Tab. Ciprofloxacin 500mg 1 tablet Twice daily 5 Days\n2 Tab. Tamsulosin 0.4mg 1 tablet Once daily at night Until stent removal\n3 Tab. Paracetamol 500mg 1-2 tablets As needed 5 Days\n4 Tab. Pantoprazole 40mg 1 tablet Once daily 5 Days\n5 Syp. Potassium Citrate 10 ml Three times daily 1 Month\n\nSECTION 10 — FOLLOW-UP INSTRUCTIONS\nDay 7 (10/07/2026): Review at Urology OPD — DJ stent removal planning.\nDay 14 (17/07/2026): DJ stent removal under local anaesthesia.\nIncrease fluid intake to 3 litres per day to prevent stone recurrence.\nWarning Signs: Report immediately for high fever (>101F), severe pain, inability to pass urine, or heavy bleeding in\nurine.\nSECTION 11 — DOCUMENTS SUBMITTED WITH THIS DISCHARGE SUMMARY\nThe following documents are available and submitted for PMJAY claim processing:\n# Document Status\n1 Discharge Summary (CAM Annexure 6 format) Available — this document\n2 Detailed Indoor Case Papers with daily vitals and treatment details Available\n3 Detailed Procedure / Operative Notes (left ureteroscopy with laser lithotripsy) Available\n4 Detailed Discharge Summary Available\n5 Post Procedure Imaging — X-Ray KUB showing stone removed and DJ stent in situ (left) Available\n6 Post Procedure Imaging — USG showing stone clearance (left VUJ) Available\n7 Pre-operative Blood Reports (CBC, RFT, Electrolytes, PT/INR, Sugar) Available\n8 Urine Routine and Culture Report Available\n9 USG Abdomen & Pelvis Report Available\n10 CT KUB Report Available\n11 ECG Report Available\n12 Anaesthesia Record Available\n13 Informed Consent Form (signed by patient) Available\n14 PMJAY Beneficiary Card Copy Available\n15 Patient Photo on Hospital Bed (admission) Available\nSECTION 12 — TREATING DOCTOR'S DECLARATION\nI certify that the patient was under my care, the treatment was medically necessary, the procedure was performed as\ndocumented, and all information in this discharge summary is true and correct to the best of my knowledge. All\nmandatory claim documents are enclosed.\nConsultant Urologist PMAM (PM-JAY Arogya Mitra) Patient / Attendant\nDr. Ramesh Natarajan Mr. Ganesh Iyer Selvam Rajakumar\nMBBS, MS, MCh (Urology) PMAM ID: TN-PMAM-00812 (Signed)\nReg: TN-MED-38892 (Signed) Date: 03/07/2026\nDate: 03/07/2026 Date: 03/07/2026\n(Signed)",
+    "operative_notes_text": "Procedure Name Left Ureteroscopy with Holmium Laser Lithotripsy and Stone Removal — Lower\nUreter (VUJ)\nPMJAY Package SU014A\nLaterality LEFT side — Unilateral\nDate of Procedure 02/07/2026 at 11:00 hrs\nDuration 45 minutes\nAnaesthesia Spinal Anaesthesia — Dr. Anitha Kumar, MD Anaesthesiology, Reg: TN-MED-29341\nTechnique Flexible ureteroscopy performed via left ureteric orifice. 9x7mm calculus identified at\nleft VUJ. Holmium laser lithotripsy performed — stone fragmented to dust and small\nfragments. Fragments retrieved with stone basket. DJ stent placed left side.\nComplete stone clearance confirmed on fluoroscopy.\nIntraoperative Findings Left lower ureteric calculus 9x7mm at VUJ confirmed. Stone fragmented and cleared.\nNo ureteric injury. No bleeding.\nPost-procedure Imaging X-ray KUB post-procedure: No residual calculus seen. DJ stent in situ — left side.",
+    "pre_anaesthesia_text": "ANAESTHESIA FITNESS\nReviewed by Anaesthesia team on 01/07/2026. ASA Grade I. Fit for elective procedure under Spinal Anaesthesia.\nPre-operative fasting advised."
+  },
+  "discharge_medications": [
+    "Tab. Ciprofloxacin 500mg 1 tablet Twice daily 5 Days",
+    "Tab. Tamsulosin 0.4mg 1 tablet Once daily at night Until stent removal",
+    "Tab. Paracetamol 500mg 1-2 tablets As needed 5 Days",
+    "Tab. Pantoprazole 40mg 1 tablet Once daily 5 Days",
+    "Syp. Potassium Citrate 10 ml Three times daily 1 Month"
+  ],
+  "signatures": {
+    "treating_consultant_signed": true,
+    "pmam_signed": true,
+    "patient_or_attendant_signed": true
+  },
+  "patient_amount_collected_inr": 0,
+  "sha_notification_date": null,
+  "implant_details": "DJ Stent — Left side (to be removed at Day 14 follow-up)",
+  "documents_submitted": [
+    {
+      "key": "discharge_summary",
+      "label": "Discharge Summary",
+      "available": true
+    },
+    {
+      "key": "clinical_notes",
+      "label": "Clinical notes including evaluation findings and planned line of treatment",
+      "available": true
+    },
+    {
+      "key": "ivp_ncct_ct_ivp",
+      "label": "IVP / NCCT+ CT-IVP confirming the indication for the procedure",
+      "available": true
+    },
+    {
+      "key": "detailed_indoor_case_papers",
+      "label": "Detailed indoor case papers",
+      "available": true
+    },
+    {
+      "key": "post_procedure_imaging_stone_removed",
+      "label": "Post procedure Imaging X Ray/USG showing stone is removed.",
+      "available": true
+    },
+    {
+      "key": "detailed_procedure_operative_notes",
+      "label": "Detailed Procedure / Operative Notes",
+      "available": true
+    },
+    {
+      "key": "detailed_discharge_summary",
+      "label": "Detailed discharge summary",
+      "available": true
+    }
+  ],
+  "deviations_declared": []
+}

@@ -114,51 +114,51 @@
           "expected": true,
           "actual": true,
           "risk_level": "pass",
-          "reasoning": "Clinical notes are available and provide comprehensive details on signs, symptoms, examination findings, and indications for surgery."
+          "reasoning": "Clinical notes are available and contain detailed signs, symptoms, examination findings, and clear indications for the procedure."
         },
         {
           "question": "Throat culture report?",
           "expected": true,
           "actual": null,
           "risk_level": "high",
-          "reasoning": "A throat culture report is explicitly expected but is not listed in the available investigations or documents."
+          "reasoning": "The throat culture report is explicitly expected but is not listed among the available investigations or documents."
         }
       ],
       "common_query_risks": [
         {
           "query_text": "Clinical notes (detailing signs, symptoms, examination findings, indications, and advice for admission) missing or incomplete at pre-authorization",
           "risk_level": "low",
-          "reasoning": "Clinical notes are available and provide comprehensive details on signs, symptoms, examination findings, indications, and implied advice for admission."
+          "reasoning": "Detailed clinical notes are available and comprehensively cover signs, symptoms, examination findings, indications, and implied advice for admission."
         },
         {
           "query_text": "Throat culture report missing at pre-authorization",
           "risk_level": "high",
-          "reasoning": "The throat culture report is explicitly missing from the provided investigations and documents."
+          "reasoning": "The throat culture report is a specific document commonly queried and is clearly missing from the provided patient data."
         },
         {
           "query_text": "OT notes do not detail surgical steps or outcomes at claim stage",
           "risk_level": "low",
-          "reasoning": "This query trigger pertains to the claim stage, not the pre-authorization stage, and cannot be assessed with current data."
+          "reasoning": "This query trigger pertains to the claim stage, not the pre-authorization stage, and therefore cannot be assessed with current documentation."
         },
         {
           "query_text": "Histopathology report of removed tonsils missing at claim stage",
           "risk_level": "low",
-          "reasoning": "This query trigger pertains to the claim stage, not the pre-authorization stage, and cannot be assessed with current data."
+          "reasoning": "This query trigger pertains to the claim stage, not the pre-authorization stage, and therefore cannot be assessed with current documentation."
         },
         {
           "query_text": "Picture of gross specimen on removed tonsils missing at claim stage",
           "risk_level": "low",
-          "reasoning": "This query trigger pertains to the claim stage, not the pre-authorization stage, and cannot be assessed with current data."
+          "reasoning": "This query trigger pertains to the claim stage, not the pre-authorization stage, and therefore cannot be assessed with current documentation."
         },
         {
           "query_text": "Post-procedure clinical photograph of the affected part missing at claim stage",
           "risk_level": "low",
-          "reasoning": "This query trigger pertains to the claim stage, not the pre-authorization stage, and cannot be assessed with current data."
+          "reasoning": "This query trigger pertains to the claim stage, not the pre-authorization stage, and therefore cannot be assessed with current documentation."
         },
         {
           "query_text": "Signs, symptoms, or examination findings do not confirm the presence of enlarged tonsils",
           "risk_level": "low",
-          "reasoning": "Examination findings and provisional diagnosis clearly confirm bilateral Grade III tonsillar enlargement and adenoid hypertrophy."
+          "reasoning": "Examination findings clearly document Grade III bilateral tonsillar enlargement, confirming the presence of enlarged tonsils."
         },
         {
           "query_text": "Provide Treating Doctor's Prescription advising Hospitalization with diagnosis",
@@ -207,9 +207,9 @@
       "severity": "info"
     },
     {
-      "code": "ADDON_PARENT_UNKNOWN",
-      "message": "SE040A add-on parent unknown \u2014 removed.",
-      "severity": "warning"
+      "code": "CONFLICT_RESOLVED",
+      "message": "1 package(s) removed by conflict resolver before billing rules \u2014 mutual exclusivity or sub-inclusion detected.",
+      "severity": "info"
     },
     {
       "code": "DEDUCTION_APPROXIMATE",

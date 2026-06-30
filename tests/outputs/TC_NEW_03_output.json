@@ -50,17 +50,13 @@
   ],
   "blocked_candidates": [
     {
-      "procedure_code": "SU094A",
-      "reason_code": "PLAUSIBILITY_FAILED",
-      "message": "The candidate package is for evaluation/investigation and conservative management with medicines, which does not directly correspond to the planned surgical procedure of right ureteroscopy with lithotripsy and stone removal."
-    },
-    {
       "procedure_code": "SU014B",
       "reason_code": "STG_NOT_ELIGIBLE",
-      "message": "The patient's clinical presentation and imaging definitively place the calculus at the right vesicoureteric junction (VUJ), which is part of the lower ureter. Procedure SU014B is specifically designated for 'Ureteroscopy with lithotripsy, Upper Ureter'. This represents a direct anatomical mismatch between the patient's pathology and the procedure's intended site. While the patient does exhibit haematuria and colic associated with nausea and vomiting, these are general symptoms of ureteric stones and do not override the anatomical specificity of the procedure. Furthermore, the characteristic pain radiation pattern for upper ureteric stones (back to front) is not present; the patient's pain radiates to the groin and inner thigh, which is consistent with a lower ureteric stone. Therefore, the patient is not eligible for this specific procedure.",
+      "message": "The patient is not eligible for procedure SU014B, which is specifically designated for upper ureteric stones. Both USG and CT KUB imaging unequivocally confirm the calculus is located in the right lower ureter at the vesicoureteric junction (VUJ). This represents a direct anatomical mismatch with the procedure's intended site. While the patient does present with haematuria and colicky pain associated with nausea and vomiting, satisfying two general indications, these do not override the fundamental anatomical specificity of the procedure. The STG's first indication for SU014B explicitly links 'pain radiating to front' with 'suggestive of upper ureteric stone'; the patient's pain radiation to the groin and inner thigh is characteristic of lower ureteric pathology, further reinforcing the anatomical discrepancy. The absence of documented doctor qualification is noted but does not alter the primary clinical ineligibility.",
       "missing_criteria": [
-        "Anatomical mismatch: Procedure SU014B is for upper ureteric stones; imaging (USG and CT KUB) confirms the calculus is located at the right vesicoureteric junction (VUJ), which is in the lower ureter. No stone is present in the upper ureter.",
-        "Pain radiation pattern: The indication 'Colicky pain starting from back and radiating to front (suggestive of upper ureteric stone)' is not met. The patient's pain radiates to the right groin and inner thigh, which is characteristic of a lower ureteric stone, not an upper ureteric stone."
+        "Anatomical mismatch: Procedure SU014B is for upper ureteric stones, but imaging (USG and CT KUB) definitively locates the patient's 9mm calculus in the right lower ureter at the vesicoureteric junction (VUJ).",
+        "The characteristic pain radiation for upper ureteric stones (radiating to front) is not present; the patient's pain radiates to the groin and inner thigh, which is typical for lower ureteric stones.",
+        "Minimum doctor qualification (MCh/DNB or Equivalent in Urology) is not specified in the clinical presentation."
       ],
       "confidence": "high",
       "procedure_name": "Upper Ureter",
@@ -153,51 +149,51 @@
           "expected": true,
           "actual": true,
           "risk_level": "pass",
-          "reasoning": "CT KUB report is available and clearly confirms a 9x7mm right lower ureteric calculus with mild hydronephrosis."
+          "reasoning": "CT KUB report is available and confirms a 9x7mm right lower ureteric calculus with mild hydronephrosis."
         },
         {
           "question": "Was the Clinical notes and IVP / NCCT/ CT-IVP indicative of procedure?",
           "expected": true,
           "actual": true,
           "risk_level": "pass",
-          "reasoning": "Clinical notes and CT KUB findings are consistent with the clinical indications for the procedure, confirming a lower ureteric stone."
+          "reasoning": "Clinical notes and CT KUB clearly indicate a 9mm right lower ureteric calculus causing symptoms, justifying ureteroscopy."
         }
       ],
       "common_query_risks": [
         {
           "query_text": "Clinical notes and IVP / NCCT/ CT-IVP not indicative of the procedure",
           "risk_level": "low",
-          "reasoning": "Clinical notes and CT KUB clearly indicate the need for the procedure, with symptoms and imaging confirming a lower ureteric stone."
+          "reasoning": "Clinical notes and CT KUB clearly indicate a 9mm right lower ureteric calculus causing symptoms, justifying ureteroscopy."
         },
         {
           "query_text": "Clinical notes including evaluation findings and planned line of treatment missing or incomplete at pre-authorization",
           "risk_level": "low",
-          "reasoning": "Clinical notes with detailed evaluation findings and planned treatment are explicitly available and complete at pre-authorization."
+          "reasoning": "Clinical notes with detailed evaluation findings and the planned line of treatment are explicitly available and complete."
         },
         {
           "query_text": "IVP / NCCT+ CT-IVP confirming the indication for the procedure missing or inadequate at pre-authorization",
           "risk_level": "low",
-          "reasoning": "CT KUB report is available and clearly confirms a 9x7mm right lower ureteric calculus, adequately confirming the indication."
+          "reasoning": "CT KUB report is available and clearly confirms a 9x7mm right lower ureteric calculus, providing adequate indication."
         },
         {
           "query_text": "Detailed indoor case papers with daily vitals and treatment details missing or incomplete at claim submission",
           "risk_level": "low",
-          "reasoning": "This query trigger is relevant for claim submission, not pre-authorization, so there is no risk at this stage."
+          "reasoning": "This trigger pertains to claim submission, not pre-authorization; therefore, it is not applicable at this stage."
         },
         {
           "query_text": "Post-procedure imaging (X-Ray/USG) not showing stone removal at claim submission",
           "risk_level": "low",
-          "reasoning": "This query trigger is relevant for claim submission and post-procedure, not pre-authorization, so there is no risk at this stage."
+          "reasoning": "This trigger pertains to claim submission, not pre-authorization; therefore, it is not applicable at this stage."
         },
         {
           "query_text": "Detailed Procedure / Operative Notes missing or incomplete at claim submission",
           "risk_level": "low",
-          "reasoning": "This query trigger is relevant for claim submission and post-procedure, not pre-authorization, so there is no risk at this stage."
+          "reasoning": "This trigger pertains to claim submission, not pre-authorization; therefore, it is not applicable at this stage."
         },
         {
           "query_text": "Detailed discharge summary missing or incomplete at claim submission",
           "risk_level": "low",
-          "reasoning": "This query trigger is relevant for claim submission and post-procedure, not pre-authorization, so there is no risk at this stage."
+          "reasoning": "This trigger pertains to claim submission, not pre-authorization; therefore, it is not applicable at this stage."
         },
         {
           "query_text": "Provide Treating Doctor's Prescription advising Hospitalization with diagnosis",
@@ -238,7 +234,7 @@
     },
     {
       "code": "CANDIDATES_GENERATED",
-      "message": "Generated 3 candidates from index",
+      "message": "Generated 2 candidates from index",
       "severity": "info"
     },
     {
@@ -264,7 +260,7 @@
   ],
   "stg_coverage": {
     "validated": 2,
-    "stg_missing": 1
+    "stg_missing": 0
   },
   "errors": []
 }

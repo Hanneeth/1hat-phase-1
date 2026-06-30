@@ -1,0 +1,377 @@
+{
+  "clusters": [
+    {
+      "canonical_key": "clinical_notes",
+      "canonical_label": "Clinical Notes",
+      "aliases": [
+        "clinical_notes_treatment_plan_indication",
+        "clinical_notes_planned_treatment",
+        "clinical_notes_with_treatment_plan",
+        "clinical_notes_with_planned_line_of_treatment",
+        "clinical_notes",
+        "clinical_notes_vitals_examination",
+        "clinical_notes_with_indication",
+        "clinical_notes_history_indications_admission",
+        "clinical_notes_history_indications_admission_notes",
+        "clinical_notes_indoor_case_papers_showing_poor_hemodynamics_high_usage_of_inotropic_agents",
+        "treatment_details",
+        "indication_for_procedure"
+      ],
+      "reasoning": "These keys all refer to the physician's ongoing record of the patient's condition, treatment plan, and observations, which are typically part of the same physical clinical notes document."
+    },
+    {
+      "canonical_key": "discharge_summary",
+      "canonical_label": "Discharge Summary",
+      "aliases": [
+        "detailed_discharge_summary"
+      ],
+      "reasoning": "This key refers to the comprehensive summary provided upon patient discharge."
+    },
+    {
+      "canonical_key": "procedure_operative_notes",
+      "canonical_label": "Procedure / Operative Notes",
+      "aliases": [
+        "procedure_operation_notes",
+        "procedure_operative_notes",
+        "procedure_operative_notes_indication",
+        "procedure_operative_notes_with_indication",
+        "detailed_procedure_operative_notes"
+      ],
+      "reasoning": "These keys all describe the official record of a surgical or interventional procedure, detailing steps, findings, and indications, which are part of the same physical document."
+    },
+    {
+      "canonical_key": "ecg_report",
+      "canonical_label": "ECG Report",
+      "aliases": [
+        "ecg",
+        "electrocardiogram_ecg",
+        "ecg_with_cardiologist_report",
+        "ecg_cardiologist_report"
+      ],
+      "reasoning": "These keys all refer to an electrocardiogram report, which is a single diagnostic test."
+    },
+    {
+      "canonical_key": "serial_ecgs",
+      "canonical_label": "Serial ECGs",
+      "aliases": [
+        "serial_ecgs_post_procedure",
+        "serial_ecgs"
+      ],
+      "reasoning": "These keys refer to multiple ECGs taken over time, which are distinct from a single ECG report."
+    },
+    {
+      "canonical_key": "ecg_paced_rhythm_strip",
+      "canonical_label": "ECG Paced Rhythm Strip",
+      "aliases": [
+        "ecg_paced_rhythm_strip_still_frame_of_lead_in_situ"
+      ],
+      "reasoning": "This is a very specific type of ECG document related to pacemaker implantation, distinct from a general ECG report or serial ECGs."
+    },
+    {
+      "canonical_key": "echocardiography_report",
+      "canonical_label": "Echocardiography Report",
+      "aliases": [
+        "echo_report_stills",
+        "detailed_echo_report",
+        "2d_echo"
+      ],
+      "reasoning": "These keys refer to an echocardiography report, which is a single ultrasound-based diagnostic test, sometimes including still images."
+    },
+    {
+      "canonical_key": "post_procedure_echocardiography_report",
+      "canonical_label": "Post Procedure Echocardiography Report",
+      "aliases": [
+        "post_procedure_echo_stills_with_report",
+        "post_procedure_echo_stills_report",
+        "post_procedure_echo_stills",
+        "2d_echo_post_procedure"
+      ],
+      "reasoning": "These keys specifically refer to an echocardiography report performed after a procedure, often including stills, which is a distinct post-intervention assessment."
+    },
+    {
+      "canonical_key": "echocardiography_doppler_report",
+      "canonical_label": "Echocardiography / Doppler Report",
+      "aliases": [
+        "echo_doppler_report_stills",
+        "detailed_echo_doppler_report",
+        "echo_doppler_report",
+        "echo_colour_doppler_report_with_stills",
+        "echo_color_doppler_report_stills",
+        "echo_color_doppler_report_with_stills",
+        "echo_doppler_report_with_stills"
+      ],
+      "reasoning": "These keys consistently refer to a combined echocardiography and Doppler ultrasound report, often with stills, representing a single diagnostic document combining these two related ultrasound modalities."
+    },
+    {
+      "canonical_key": "post_procedure_echocardiography_doppler_report",
+      "canonical_label": "Post Procedure Echocardiography / Doppler Report",
+      "aliases": [
+        "post_procedure_echo_color_doppler_report",
+        "post_procedure_echo_doppler"
+      ],
+      "reasoning": "These keys refer to a combined echocardiography and Doppler ultrasound report performed after a procedure."
+    },
+    {
+      "canonical_key": "angiography_report",
+      "canonical_label": "Angiography Report",
+      "aliases": [
+        "angiogram_report_stills",
+        "coronary_angiography_stills_reports",
+        "angiogram_stills_report_showing_stent_post_stent_flow",
+        "angiogram_report_with_stills",
+        "angiogram_report"
+      ],
+      "reasoning": "These keys all refer to an angiography report, which is an X-ray based diagnostic test, often including stills."
+    },
+    {
+      "canonical_key": "post_procedure_angiography_report",
+      "canonical_label": "Post Procedure Angiography Report",
+      "aliases": [
+        "post_procedure_stills_of_angio_with_report",
+        "check_angiography_after_procedure"
+      ],
+      "reasoning": "These keys refer to an angiography report performed after a procedure, often including stills, which is a distinct post-intervention assessment."
+    },
+    {
+      "canonical_key": "doppler_ct_angiography_report",
+      "canonical_label": "Doppler / CT Angiography Report",
+      "aliases": [
+        "colour_doppler_ct_angio_report",
+        "doppler_ct_angiogram_report"
+      ],
+      "reasoning": "These keys represent a bundled report that includes both Colour Doppler and CT Angiography, which are distinct imaging modalities but requested together in this specific document."
+    },
+    {
+      "canonical_key": "doppler_angiogram_report",
+      "canonical_label": "Doppler / Angiogram Report",
+      "aliases": [
+        "doppler_report_angiogram_report",
+        "post_procedure_colour_doppler_angio_report",
+        "post_procedure_colour_doppler_angio_report_of_affected_limb"
+      ],
+      "reasoning": "These keys represent a bundled report that includes both Doppler and Angiography, which are distinct imaging modalities but requested together in this specific document."
+    },
+    {
+      "canonical_key": "echo_angiogram_report",
+      "canonical_label": "Echo / Angiogram Report",
+      "aliases": [
+        "echo_or_angiography_report",
+        "post_procedure_echo_angiogram_report",
+        "post_procedure_echo_angiogram_stills_report"
+      ],
+      "reasoning": "These keys represent a bundled report that includes both Echocardiography and Angiography, which are distinct imaging modalities but requested together in this specific document."
+    },
+    {
+      "canonical_key": "post_procedure_echo_color_doppler_angio_stills",
+      "canonical_label": "Post Procedure Echo / Color Doppler / Angio Stills",
+      "aliases": [
+        "post_procedure_echo_color_doppler_angio_stills"
+      ],
+      "reasoning": "This key represents a bundled post-procedure document combining stills from Echo, Colour Doppler, and Angiography."
+    },
+    {
+      "canonical_key": "per_post_procedure_stills_showing_stent",
+      "canonical_label": "Per-procedure or Post-procedure Stills Showing Stent",
+      "aliases": [
+        "per_post_procedure_stills_showing_stent"
+      ],
+      "reasoning": "This key represents a specific document showing per- or post-procedure stills from either angiography or echocardiography, specifically demonstrating a stent in place."
+    },
+    {
+      "canonical_key": "doppler_dsa_cta_mra_report",
+      "canonical_label": "Doppler Ultrasound / Digital Subtraction Angiography / Computed Tomography Angiography / Magnetic Resonance Angiography Report",
+      "aliases": [
+        "doppler_ultrasound_digital_subtraction_angiography_computed_tomography_angiography_magnetic_resonance_angiography_report_with_stills"
+      ],
+      "reasoning": "This key represents a highly bundled diagnostic report encompassing multiple distinct imaging modalities, and must not be merged with individual modality reports."
+    },
+    {
+      "canonical_key": "investigation_reports_ecg_echo_cardiac_enzymes_angiography_holter",
+      "canonical_label": "Investigation Reports (ECG / ECHO / Cardiac Enzymes / Angiography / Holter)",
+      "aliases": [
+        "investigation_reports_diagnosis_ecg_echo_cardiac_enzymes_angiography_holter",
+        "relevant_investigations_ecg_echo_cardiac_enzymes_angiography_holter"
+      ],
+      "reasoning": "These keys represent a highly bundled diagnostic report encompassing multiple distinct tests and modalities, and must not be merged with individual test reports."
+    },
+    {
+      "canonical_key": "relevant_investigations_duplex_ultrasound_angiography_cta_mra",
+      "canonical_label": "Relevant Investigations (Duplex Ultrasound / Angiography / CTA / MRA)",
+      "aliases": [
+        "relevant_investigations_reports",
+        "relevant_investigations_duplex_ultrasound_angiography_cta_mra"
+      ],
+      "reasoning": "These keys represent a highly bundled diagnostic report encompassing multiple distinct imaging modalities, and must not be merged with individual modality reports."
+    },
+    {
+      "canonical_key": "invoice_catheter_accessories",
+      "canonical_label": "Invoice of Catheter and Accessories Used",
+      "aliases": [
+        "invoices_catheter_accessories",
+        "invoices_catheter_used",
+        "invoices_of_catheter_used"
+      ],
+      "reasoning": "These keys all refer to the invoice for catheters and related accessories used in a procedure."
+    },
+    {
+      "canonical_key": "invoice_thrombolytic_drug",
+      "canonical_label": "Invoice of Thrombolytic Drug Used",
+      "aliases": [
+        "invoice_thrombolytic_drug_tpa",
+        "invoice_thrombolytic_drug_used",
+        "invoice_of_thrombolytic_drug_used",
+        "invoice_of_thrombolytic_agent_used"
+      ],
+      "reasoning": "These keys all refer to the invoice for thrombolytic drugs or agents used."
+    },
+    {
+      "canonical_key": "invoice_balloon_blade",
+      "canonical_label": "Invoice of Balloon / Blade Used",
+      "aliases": [
+        "invoice_balloon_used",
+        "invoice_of_balloon_used",
+        "invoice_blade_balloon"
+      ],
+      "reasoning": "These keys all refer to the invoice for a balloon or blade used in a procedure."
+    },
+    {
+      "canonical_key": "invoice_stent",
+      "canonical_label": "Invoice of Stent Used",
+      "aliases": [
+        "invoice_of_stent_used"
+      ],
+      "reasoning": "This key refers to the invoice for a stent used."
+    },
+    {
+      "canonical_key": "invoice_barcode_catheters",
+      "canonical_label": "Invoice / Barcode of Catheters",
+      "aliases": [
+        "invoice_barcode_of_catheters"
+      ],
+      "reasoning": "This key explicitly bundles the invoice and barcode for catheters, and must remain separate from pure invoices or pure barcodes."
+    },
+    {
+      "canonical_key": "invoice_barcode_balloon_device",
+      "canonical_label": "Invoice / Barcode of Balloon / Device Used",
+      "aliases": [
+        "invoice_barcode_balloon",
+        "invoice_barcode_device_used",
+        "invoice_barcode_of_blade_device_used"
+      ],
+      "reasoning": "These keys explicitly bundle the invoice and barcode for balloons, implants, or devices, and must remain separate from pure invoices or pure barcodes."
+    },
+    {
+      "canonical_key": "invoice_barcode_stent",
+      "canonical_label": "Invoice / Barcode of Stent Used",
+      "aliases": [
+        "invoice_barcode_of_stent_used"
+      ],
+      "reasoning": "This key explicitly bundles the invoice and barcode for a stent, and must remain separate from pure invoices or pure barcodes."
+    },
+    {
+      "canonical_key": "invoice_barcode_pacemaker_lead",
+      "canonical_label": "Invoice / Barcode of Pacemaker / Pacing Lead",
+      "aliases": [
+        "invoice_barcode_of_pacemaker_pacing_lead",
+        "invoice_barcode_designated_pacemaker"
+      ],
+      "reasoning": "These keys explicitly bundle the invoice and barcode for a pacemaker or pacing lead, and must remain separate from pure invoices or pure barcodes."
+    },
+    {
+      "canonical_key": "barcode_implant_device",
+      "canonical_label": "Barcode of Implant / Device Used",
+      "aliases": [
+        "barcode_of_balloon_implant",
+        "barcode_of_stent_used",
+        "implant_graft_barcode",
+        "barcode_of_implant_or_graft_if_used_optional",
+        "barcode_of_iabp_used"
+      ],
+      "reasoning": "These keys all refer to the barcode or serial number label of an implanted device or graft, which is a distinct physical artifact from an invoice."
+    },
+    {
+      "canonical_key": "cardiac_enzymes_report",
+      "canonical_label": "Cardiac Enzymes Report",
+      "aliases": [
+        "cardiac_enzymes",
+        "cardiac_enzymes_post_procedure"
+      ],
+      "reasoning": "These keys refer to laboratory reports for cardiac enzymes, which are the same test regardless of when performed."
+    },
+    {
+      "canonical_key": "routine_biochemistry_report",
+      "canonical_label": "Routine Biochemistry Report",
+      "aliases": [
+        "routine_biochemistry"
+      ],
+      "reasoning": "This key refers to a standard laboratory report for routine biochemistry tests."
+    },
+    {
+      "canonical_key": "analysis_of_fluid_removed_report",
+      "canonical_label": "Analysis of Fluid Removed Report",
+      "aliases": [
+        "analysis_of_fluid_removed"
+      ],
+      "reasoning": "This key refers to a laboratory report detailing the analysis of fluid removed during a procedure."
+    },
+    {
+      "canonical_key": "ep_study_report",
+      "canonical_label": "EP Study Report",
+      "aliases": [
+        "ep_study_report"
+      ],
+      "reasoning": "This key refers to an Electrophysiology (EP) study report, a distinct diagnostic procedure."
+    },
+    {
+      "canonical_key": "chest_x_ray",
+      "canonical_label": "Chest X-ray",
+      "aliases": [
+        "chest_x_ray"
+      ],
+      "reasoning": "This key refers to a standard chest X-ray imaging report."
+    },
+    {
+      "canonical_key": "hrct_chest_ctpa",
+      "canonical_label": "HRCT Chest / CTPA",
+      "aliases": [
+        "hrct_chest_ctpa"
+      ],
+      "reasoning": "This key refers to a High-Resolution CT of the Chest or CT Pulmonary Angiography, which are specific CT imaging modalities."
+    },
+    {
+      "canonical_key": "x_ray_pacemaker_in_situ",
+      "canonical_label": "X-ray Showing Pacemaker In Situ",
+      "aliases": [
+        "x_ray_pacemaker_in_situ"
+      ],
+      "reasoning": "This key refers to a specific X-ray image documenting the placement of a pacemaker."
+    },
+    {
+      "canonical_key": "post_op_chest_x_ray_sternal_sutures",
+      "canonical_label": "Post-Op Chest X-ray Showing Sternal Sutures",
+      "aliases": [
+        "post_op_chest_x_ray_showing_sternal_sutures"
+      ],
+      "reasoning": "This key refers to a specific post-operative chest X-ray focused on sternal sutures."
+    },
+    {
+      "canonical_key": "patient_photograph",
+      "canonical_label": "Patient Photograph",
+      "aliases": [
+        "patient_photograph",
+        "still_image_of_patient_undergoing_procedure"
+      ],
+      "reasoning": "These keys refer to photographic documentation of the patient, either general or during a procedure."
+    },
+    {
+      "canonical_key": "indoor_case_papers",
+      "canonical_label": "Indoor Case Papers",
+      "aliases": [
+        "detailed_indoor_case_papers_icps",
+        "indoor_case_papers",
+        "detailed_indoor_case_papers"
+      ],
+      "reasoning": "These keys all refer to the comprehensive indoor case papers or medical records maintained during a patient's hospital stay."
+    }
+  ]
+}

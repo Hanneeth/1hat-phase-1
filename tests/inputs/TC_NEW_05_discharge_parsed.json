@@ -1,0 +1,171 @@
+{
+  "preauth_reference": "TC_NEW_05",
+  "case_id": "TC_NEW_05",
+  "preauth_input_path": "tests\\inputs\\TC_NEW_05.json",
+  "hospital": {
+    "name": "Apollo Speciality Hospital",
+    "hospital_code": null,
+    "address": "21, Greams Road, Chennai - 600006, Tamil Nadu",
+    "district": "Chennai"
+  },
+  "patient": {
+    "name": "Ravichandran Pillai",
+    "pmjay_id": "P005",
+    "age": 58,
+    "gender": "M",
+    "address": "45, Lake View Road, Velachery, Chennai - 600042",
+    "contact_number": "+91-9884423109",
+    "ipd_number": "APH2026TCNEW05",
+    "pmjay_case_id": "PMJAY-PREAUTH-2026-TCNEW05-001"
+  },
+  "treating_consultant": {
+    "name": "Dr. Senthil Kumaran",
+    "contact_number": null,
+    "qualification": "MBBS, MD, DM Cardiology",
+    "registration_number": "TN-MED-33761",
+    "specialty": "Cardiology"
+  },
+  "admission": {
+    "date_of_admission": "2026-06-20",
+    "time_of_admission": "08:15",
+    "date_of_discharge": "2026-06-22",
+    "time_of_discharge": "10:30",
+    "date_of_operation": "2026-06-21",
+    "actual_los_days": 2,
+    "ward_category_actual": "ward",
+    "bed_category_breakdown": {
+      "ward_days": 2,
+      "hdu_days": 0,
+      "icu_days": 0,
+      "icu_vent_days": 0
+    },
+    "admission_type": "elective",
+    "package_booked": "MC011A",
+    "discharge_status": "recovered",
+    "discharge_condition": "stable"
+  },
+  "clinical": {
+    "presenting_complaints": "Patient presented with retrosternal chest discomfort on exertion (climbing 1-2 flights of stairs) for the past 6 weeks, associated with mild breathlessness, relieved within 5-10 minutes of rest. No discomfort at rest. No radiation to arm or jaw at presentation. No associated diaphoresis or palpitations.",
+    "duration_of_complaints": "6 Weeks",
+    "initial_assessment": "General Condition Conscious, cooperative, well-built, no pallor, icterus, cyanosis, clubbing, or pedal oedema. Weight / Height 74 kg / 169 cm | BMI: 25.9. Vitals BP 138/88 mmHg, Pulse 82/min, SpO2 98% (room air), Temp 98.4 F, RR 16/min. CVS S1 S2 heard, no murmurs, no added sounds, regular rhythm. Respiratory Air entry bilateral, clear. Abdomen Soft, non-tender, no organomegaly. CNS No focal neurological deficits.",
+    "significant_past_history": "Chronic Illnesses Hypertension — 8 years, well controlled on Tab. Telmisartan 40mg OD. Previous Surgeries None. Current Medications Tab. Telmisartan 40mg OD; Tab. Aspirin 75mg OD; Tab. Atorvastatin 40mg OD. Known Allergies None. Smoking / Alcohol Ex-smoker (quit 5 years ago, 10 pack-years), Occasional alcohol. Family History Father had myocardial infarction at age 62.",
+    "primary_diagnosis_at_admission": "Stable Angina, Single-Vessel Coronary Artery Disease (Proximal LAD, 80% stenosis)",
+    "final_diagnosis_at_discharge": "Stable Angina, Single-Vessel Coronary Artery Disease (Proximal LAD, 80% stenosis)",
+    "icd10_codes": [
+      "I25.110"
+    ],
+    "key_investigations": "Haemoglobin (Hb), Serum Creatinine, Lipid Profile (LDL), Blood Sugar Fasting, Troponin I, Resting ECG, Treadmill Test (TMT), Chest X-Ray, Coronary Angiography.",
+    "investigation_findings": "Haemoglobin (Hb) 14.1 g/dL Normal. Serum Creatinine 0.9 mg/dL Normal. Lipid Profile (LDL) 142 mg/dL High. Blood Sugar Fasting 102 mg/dL Normal. Troponin I Negative Normal. Resting ECG Sinus rhythm, no acute ST-T changes Normal. Treadmill Test (TMT) Positive — ST depression at peak exercise, Bruce stage II Positive. Chest X-Ray Normal cardiac size, no active cardiopulmonary disease Normal. Coronary Angiography LAD 80% proximal stenosis, single-vessel disease, LVEF 58% Confirmed.",
+    "treatment_given": "Percutaneous Transluminal Coronary Angioplasty (PTCA) — Proximal LAD. Technique Right radial artery access. Coronary angiography confirmed 80% stenosis in proximal LAD. Lesion crossed with guidewire, predilated with balloon. Single Bare Metal Stent deployed at the lesion site with good angiographic result, TIMI III flow restored. No intraoperative complications. Post-procedure stable, vitals monitored, access site clean and dry, no haematoma. Serial ECGs unremarkable. Cardiac enzymes post-procedure within normal limits. Ambulated same evening. Afebrile, asymptomatic, vitals stable, access site healing well. Declared medically fit for discharge.",
+    "operative_findings": "Single-vessel proximal LAD disease confirmed. Successful stent deployment, no dissection, no perforation, no residual stenosis.",
+    "final_procedure_performed": "Percutaneous Transluminal Coronary Angioplasty (PTCA) — Proximal LAD",
+    "complications": "None",
+    "follow_up_date": null,
+    "advice_on_discharge": null,
+    "discharge_summary_text": "Apollo Speciality Hospital\n21, Greams Road, Chennai - 600006, Tamil Nadu\nPh: 044-28293333 | Email: records@apollochennai.org\nHospital Reg No: TN/CHE/2003/00412 | PMJAY Empanelment ID: H001\nDISCHARGE SUMMARY\nSummary No: APH/DS/2026/TCNEW05 Date: 22/06/2026\nSECTION 1 — HOSPITAL & PATIENT INFORMATION\nHospital Name Apollo Speciality Hospital\nAddress 21, Greams Road, Chennai - 600006, Tamil Nadu\nPMJAY Empanelment ID H001\nPatient Name Ravichandran Pillai\nAge / Gender 58 Years / Male\nPMJAY Beneficiary ID P005\nPMJAY Card No. TN-PMJAY-2024-005678\nAddress 45, Lake View Road, Velachery, Chennai - 600042\nSECTION 2 — ADMISSION & DISCHARGE DETAILS\nDate & Time of Admission 20/06/2026 at 08:15 hrs\nDate & Time of Discharge 22/06/2026 at 10:30 hrs\nTotal Duration of Stay 2 Days\nType of Admission Planned / Elective\nWard / Room Category General Ward\nTreating Consultant Dr. Senthil Kumaran\nRegistration Number TN-MED-33761\nSpecialty Cardiology\nPMJAY Package Booked MC011A — PTCA, inclusive of diagnostic angiogram\nPre-Auth Reference PMJAY-PREAUTH-2026-TCNEW05-001\nSECTION 3 — CLINICAL SUMMARY\nPresenting Complaints:\nRetrosternal chest discomfort on exertion for 6 weeks, relieved by rest. No discomfort at rest.\nRelevant Medical History:\nHypertensive for 8 years, well controlled on Telmisartan 40mg OD. Non-diabetic. No previous cardiac events.\nPre-procedure Examination:\nBP 138/88 mmHg, Pulse 82/min, SpO2 98%, afebrile. CVS: S1 S2 heard, no murmurs. All systemic examination within\nnormal limits.\nSECTION 4 — DIAGNOSIS\nProvisional Diagnosis (Admission) Stable Angina, Single-Vessel Coronary Artery Disease (Proximal LAD, 80% stenosis)\n— ICD-10: I25.110\nSECTION 5 — PROCEDURE PERFORMED\nProcedure Name Percutaneous Transluminal Coronary Angioplasty (PTCA) — Proximal LAD\nPMJAY Package MC011A — PTCA, inclusive of diagnostic angiogram\nDate of Surgery 21/06/2026 at 09:30 hrs\nDuration 40 minutes\nAnaesthesia Local Anaesthesia with Conscious Sedation\nTechnique Right radial artery access. Coronary angiography confirmed 80% stenosis in proximal\nLAD. Lesion crossed with guidewire, predilated with balloon. Single Bare Metal Stent\ndeployed at the lesion site with good angiographic result, TIMI III flow restored. No\nintraoperative complications.\nIntraoperative Finding Single-vessel proximal LAD disease confirmed. Successful stent deployment, no\ndissection, no perforation, no residual stenosis.\nImplant Used Coronary Stent for PDA stenting — Bare Metal. Brand: MedTronic, Model: BMS-3018,\nSerial No: STN2026062101\nSECTION 6 — POST-OPERATIVE COURSE\nDay 1 (21/06/2026): Post-procedure stable, vitals monitored, access site clean and dry, no haematoma. Serial ECGs\nunremarkable. Cardiac enzymes post-procedure within normal limits. Ambulated same evening.\nDay 2 (22/06/2026): Afebrile, asymptomatic, vitals stable, access site healing well. Declared medically fit for discharge.\nSECTION 7 — COMPLICATIONS\nNo intraoperative or post-procedure complications.\nSECTION 9 — DISCHARGE MEDICATIONS\n# Medication Dose Frequency Duration\n1 Tab. Aspirin 75mg 1 tablet Once daily Lifelong\n2 Tab. Clopidogrel 75mg 1 tablet Once daily 12 Months\n3 Tab. Atorvastatin 40mg 1 tablet Once daily (night) Lifelong\n4 Tab. Telmisartan 40mg 1 tablet Once daily Continued\n5 Tab. Metoprolol 25mg 1 tablet Twice daily Continued\nSECTION 11 — DOCUMENTS SUBMITTED WITH THIS DISCHARGE SUMMARY\nThe following documents are available and submitted along with this discharge summary for PMJAY claim processing:\n# Document Status\n1 Still Image of the Patient Undergoing the Procedure with Date & Time Available\n2 Angiogram Stills & Report Showing Stent & Post Stent Flow Available\n3 Serial ECGs (Post Procedure) Available\n4 Cardiac Enzymes — Troponin I (Post Procedure) Available\n5 Procedure / Operation Notes Available\n6 Detailed Discharge Summary Available — this document\n7 Barcode of the Stent(s) Used (Bare Metal Stent) Available\n8 Pre-Procedure Investigation Reports (CBC, RFT, Lipid, Sugar, Troponin) Available\n9 Coronary Angiography Report (Pre-Procedure) Available\n10 Informed Consent Form (signed by patient) Available\n11 PMJAY Beneficiary Card Copy Available\n12 Patient Photo on Hospital Bed (admission) Available\nSECTION 12 — TREATING DOCTOR'S DECLARATION\nI certify that the patient was under my care during this admission, the treatment was medically necessary, the procedure\nwas performed as documented, and all information in this discharge summary is true and correct to the best of my\nknowledge. All mandatory claim documents as per PMJAY/CAM guidelines are enclosed.\nConsultant Surgeon PMAM (PM-JAY Arogya Mitra) Patient / Attendant\nDr. Senthil Kumaran Mr. Suresh Babu Ravichandran Pillai\nMBBS, MD, DM Cardiology PMAM ID: TN-PMAM-00892 (Signed)\nReg: TN-MED-33761 (Signed) NOT SIGNED — pending PMAM review Date: 22/06/2026\nDate: 22/06/2026\n(Signed)",
+    "operative_notes_text": "Procedure Name Percutaneous Transluminal Coronary Angioplasty (PTCA) — Proximal LAD\nPMJAY Package MC011A — PTCA, inclusive of diagnostic angiogram\nDate of Surgery 21/06/2026 at 09:30 hrs\nDuration 40 minutes\nAnaesthesia Local Anaesthesia with Conscious Sedation\nTechnique Right radial artery access. Coronary angiography confirmed 80% stenosis in proximal\nLAD. Lesion crossed with guidewire, predilated with balloon. Single Bare Metal Stent\ndeployed at the lesion site with good angiographic result, TIMI III flow restored. No\nintraoperative complications.\nIntraoperative Finding Single-vessel proximal LAD disease confirmed. Successful stent deployment, no\ndissection, no perforation, no residual stenosis.\nImplant Used Coronary Stent for PDA stenting — Bare Metal. Brand: MedTronic, Model: BMS-3018,\nSerial No: STN2026062101",
+    "pre_anaesthesia_text": "10. PRE-PROCEDURE FITNESS\nReviewed by Cardiology and Anaesthesia team on 19/06/2026. ASA Grade II (controlled hypertension). Fit for elective\nPTCA."
+  },
+  "discharge_medications": [
+    "Tab. Aspirin 75mg 1 tablet Once daily Lifelong",
+    "Tab. Clopidogrel 75mg 1 tablet Once daily 12 Months",
+    "Tab. Atorvastatin 40mg 1 tablet Once daily (night) Lifelong",
+    "Tab. Telmisartan 40mg 1 tablet Once daily Continued",
+    "Tab. Metoprolol 25mg 1 tablet Twice daily Continued"
+  ],
+  "signatures": {
+    "treating_consultant_signed": true,
+    "pmam_signed": false,
+    "patient_or_attendant_signed": true
+  },
+  "patient_amount_collected_inr": 0,
+  "sha_notification_date": null,
+  "implant_details": {
+    "implant_name": "Coronary Stent",
+    "implant_type": "Bare Metal",
+    "brand": "MedTronic",
+    "model": "BMS-3018",
+    "serial_number": "STN2026062101",
+    "quantity": 1,
+    "unit_price": 9373,
+    "total_price": 9373
+  },
+  "documents_submitted": [
+    {
+      "key": "discharge_summary",
+      "label": "Discharge Summary",
+      "available": true
+    },
+    {
+      "key": "clinical_notes",
+      "label": "Clinical notes",
+      "available": true
+    },
+    {
+      "key": "electrocardiogram_ecg",
+      "label": "Electrocardiogram (ECG)",
+      "available": true
+    },
+    {
+      "key": "2d_echo",
+      "label": "2D ECHO",
+      "available": false
+    },
+    {
+      "key": "coronary_angiography_stills_reports",
+      "label": "Coronary Angiography stills & reports (showing blockage)",
+      "available": true
+    },
+    {
+      "key": "cardiac_enzymes",
+      "label": "Cardiac enzymes (Troponins T/ I (if not available then CPK-MB)",
+      "available": true
+    },
+    {
+      "key": "routine_biochemistry",
+      "label": "Routine Biochemistry (Haemogram, urea, creatinine, electrolytes, sugar, fasting lipids, Liver function test, Urinalysis)",
+      "available": true
+    },
+    {
+      "key": "patient_photograph",
+      "label": "Patient Photograph",
+      "available": true
+    },
+    {
+      "key": "still_image_of_patient_undergoing_procedure",
+      "label": "Still image of the patient undergoing the procedure with date & time",
+      "available": true
+    },
+    {
+      "key": "angiogram_stills_report_showing_stent_post_stent_flow",
+      "label": "Angiogram stills & report showing stent & post stent flow",
+      "available": true
+    },
+    {
+      "key": "serial_ecgs_post_procedure",
+      "label": "Serial ECGs (Post Procedure)",
+      "available": true
+    },
+    {
+      "key": "cardiac_enzymes_post_procedure",
+      "label": "Cardiac enzymes (Troponins T/ I (if not available then CPK-MB) (Post Procedure)",
+      "available": true
+    },
+    {
+      "key": "procedure_operation_notes",
+      "label": "Procedure/ Operation notes",
+      "available": true
+    },
+    {
+      "key": "detailed_discharge_summary",
+      "label": "Detailed discharge summary",
+      "available": true
+    },
+    {
+      "key": "barcode_of_stent_used",
+      "label": "Barcode of the stent(s) used (Bare metal/ Drug eluting stent)",
+      "available": true
+    }
+  ],
+  "deviations_declared": []
+}

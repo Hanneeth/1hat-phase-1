@@ -1,0 +1,842 @@
+============================================================
+IRIS STG Document Key Extractor (Script 1 of 2)
+============================================================
+Found 1168 JSON guideline files in STG directory.
+Notable Event: 'MR001C.json' has empty or missing preauth documents list.
+Notable Event: 'MR001C.json' has empty or missing claim documents list.
+
+============================================================
+EXTRACTION SUMMARY STATS
+============================================================
+Total STG files found:                      1168
+Successfully parsed files:                  1168
+Failed to parse files:                      0
+STGs with non-empty preauth section:        1167
+STGs with empty/missing preauth section:    1
+STGs with non-empty claim section:          1167
+STGs with empty/missing claim section:      1
+Total individual document key entries:      9800
+Total UNIQUE exact-match keys:              2008
+Total keys labeled as optional:             686
+
+----------------------------------------
+KEYS Labeled as Optional:
+----------------------------------------
+  - Key: '2d_echo_optional' in file: SV034A.json
+  - Key: '2decho_optional' in file: M300002.json
+  - Key: 'abdominal_xray_necrotizing_enterocolitis' in file: M300005.json
+  - Key: 'abg_analysis_optional_rd' in file: M300002.json
+  - Key: 'accident_fir_report' in file: SN009A.json
+  - Key: 'accident_fir_report' in file: SN009B.json
+  - Key: 'accident_fir_report' in file: SN009C.json
+  - Key: 'amplitude_integrated_electro_encephalography_aeeg' in file: M300004.json
+  - Key: 'angiography' in file: SG006A.json
+  - Key: 'angiography' in file: SG073A.json
+  - Key: 'angiography' in file: SG073B.json
+  - Key: 'angiography_optional' in file: SV015A.json
+  - Key: 'aortography_optional' in file: SV015B.json
+  - Key: 'apt_test_optional' in file: M300002.json
+  - Key: 'arterial_cord_blood_analysis_optional' in file: MN001A.json
+  - Key: 'b_scan' in file: SE032A.json
+  - Key: 'balloon_test_occlusion_bto_optional' in file: IN005A.json
+  - Key: 'barcode_invoice_implant_optional' in file: SB020A.json
+  - Key: 'barcode_of_graft' in file: SV019X.json
+  - Key: 'barcode_of_implant_or_graft_if_used_optional' in file: SV019Z.json
+  - Key: 'barium_study_optional' in file: SV029A.json
+  - Key: 'bedside_20_minute_whole_blood_clotting_test_optional' in file: MG070A.json
+  - Key: 'biopsy' in file: SG008A.json
+  - Key: 'biopsy' in file: SG009A.json
+  - Key: 'biopsy_report_optional' in file: SB053A.json
+  - Key: 'biopsy_report_optional' in file: SG120A.json
+  - Key: 'biopsy_report_optional' in file: SG122A.json
+  - Key: 'biopsy_report_optional' in file: SG124A.json
+  - Key: 'blood_culture' in file: MP005A.json
+  - Key: 'blood_culture' in file: MP005D.json
+  - Key: 'blood_culture' in file: MP005E.json
+  - Key: 'blood_culture' in file: MP005F.json
+  - Key: 'blood_sugar_asphyxia_optional' in file: MN001A.json
+  - Key: 'blood_sugar_propranolol_patients' in file: SP007A.json
+  - Key: 'blood_sugar_propranolol_patients' in file: SP007B.json
+  - Key: 'blood_sugar_propranolol_patients' in file: SP007C.json
+  - Key: 'bone_marrow_aspiration_optional' in file: MP041A.json
+  - Key: 'bone_scan_optional' in file: SN043A.json
+  - Key: 'bone_scan_optional' in file: SN043B.json
+  - Key: 'c_reactive_protein' in file: SO038A.json
+  - Key: 'c_reactive_protein_optional' in file: SO056A.json
+  - Key: 'ca_125_tumor_marker' in file: SO001A.json
+  - Key: 'caffeine_administration_apnea_of_prematurity' in file: M300004.json
+  - Key: 'cardiac_catheterization_(optional)' in file: SV002L.json
+  - Key: 'cardiac_catheterization_optional' in file: SV002K.json
+  - Key: 'cect_abdomen' in file: SG006A.json
+  - Key: 'cect_thorax_malignancy_optional' in file: SG106A.json
+  - Key: 'cect_thorax_malignancy_optional' in file: SG106B.json
+  - Key: 'central_venous_pressure' in file: M300005.json
+  - Key: 'cervical_vaginal_swab_culture_sensitivity' in file: SO038A.json
+  - Key: 'chest_x_ray' in file: SO038A.json
+  - Key: 'chest_x_ray_optional' in file: MP041A.json
+  - Key: 'chest_x_ray_optional' in file: SN043A.json
+  - Key: 'chest_x_ray_optional' in file: SN043B.json
+  - Key: 'chest_x_ray_optional' in file: SV002K.json
+  - Key: 'chest_xray_(optional)' in file: SV002L.json
+  - Key: 'chest_xray_optional_chd' in file: M300005.json
+  - Key: 'clinical_photograph' in file: SO030A.json
+  - Key: 'clinical_photograph' in file: SO042A.json
+  - Key: 'clinical_photograph_affected_part' in file: SU071A.json
+  - Key: 'clinical_photograph_affected_part' in file: SU071B.json
+  - Key: 'clinical_photograph_affected_part' in file: SU071C.json
+  - Key: 'clinical_photograph_affected_part' in file: SU071D.json
+  - Key: 'clinical_photograph_associated_conditions_optional' in file: SN007A.json
+  - Key: 'clinical_photograph_associated_conditions_optional' in file: SN007B.json
+  - Key: 'clinical_photograph_optional' in file: SG033A.json
+  - Key: 'clinical_photographs_optional' in file: SG054A.json
+  - Key: 'clinical_photographs_optional' in file: SG054B.json
+  - Key: 'clinical_photographs_optional' in file: SG057A.json
+  - Key: 'clinical_photographs_optional' in file: SG057B.json
+  - Key: 'coagulation_profile' in file: SO005A.json
+  - Key: 'colonoscopy_biopsy_report_optional' in file: SG106A.json
+  - Key: 'colonoscopy_biopsy_report_optional' in file: SG106B.json
+  - Key: 'complete_blood_count_anemia_of_prematurity' in file: M300004.json
+  - Key: 'complete_blood_count_anemia_prematurity' in file: M300005.json
+  - Key: 'complete_blood_count_asphyxia_optional' in file: MN001A.json
+  - Key: 'complete_blood_count_optional' in file: SG002A.json
+  - Key: 'complete_blood_count_optional' in file: SS004A.json
+  - Key: 'copy_of_mlc_fir' in file: SN066A.json
+  - Key: 'coronary_angiography_optional' in file: SV015B.json
+  - Key: 'cranial_spinal_ultrasound_optional' in file: SN005A.json
+  - Key: 'cranial_spinal_ultrasound_optional' in file: SN005B.json
+  - Key: 'cranial_spinal_ultrasound_optional' in file: SN005C.json
+  - Key: 'cranial_spinal_ultrasound_optional' in file: SN052A.json
+  - Key: 'cranial_spinal_ultrasound_optional' in file: SN053A.json
+  - Key: 'ct_angiogram_affected_bone' in file: SP007A.json
+  - Key: 'ct_angiogram_affected_bone' in file: SP007B.json
+  - Key: 'ct_angiogram_affected_bone' in file: SP007C.json
+  - Key: 'ct_angiography' in file: SG073A.json
+  - Key: 'ct_angiography' in file: SG073B.json
+  - Key: 'ct_angiography_optional' in file: SV015A.json
+  - Key: 'ct_brain_optional_depending_on_clinical_condition' in file: IN004A.json
+  - Key: 'ct_brain_optional_depending_on_clinical_condition' in file: IN004B.json
+  - Key: 'ct_chest_report_optional' in file: SV025A.json
+  - Key: 'ct_mri' in file: IN008A.json
+  - Key: 'ct_mri' in file: SG068A.json
+  - Key: 'ct_mri' in file: SL018D.json
+  - Key: 'ct_mri' in file: SL018E.json
+  - Key: 'ct_mri' in file: SO038A.json
+  - Key: 'ct_mri_angiography' in file: SG116A.json
+  - Key: 'ct_mri_brain' in file: MP029A.json
+  - Key: 'ct_mri_brain' in file: MP029B.json
+  - Key: 'ct_mri_brain' in file: SN009A.json
+  - Key: 'ct_mri_brain' in file: SN009B.json
+  - Key: 'ct_mri_brain' in file: SN009C.json
+  - Key: 'ct_mri_brain_optional_asd' in file: MP032A.json
+  - Key: 'ct_mri_optional' in file: SG002A.json
+  - Key: 'ct_mri_optional' in file: SO069A.json
+  - Key: 'ct_mri_optional' in file: SS004A.json
+  - Key: 'ct_mri_optional_adhd' in file: MP032A.json
+  - Key: 'ct_mri_other_regions_if_symptomatic_optional' in file: SN043A.json
+  - Key: 'ct_mri_other_regions_if_symptomatic_optional' in file: SN043B.json
+  - Key: 'ct_mri_scan_pelvis' in file: SO041A.json
+  - Key: 'ct_mri_scan_pelvis' in file: SO060A.json
+  - Key: 'ct_mri_scan_pelvis' in file: SO060B.json
+  - Key: 'ct_scan' in file: SG099A.json
+  - Key: 'ct_scan' in file: SV022A.json
+  - Key: 'culdocentesis_if_us_unavailable' in file: SO040A.json
+  - Key: 'culdocentesis_if_us_unavailable' in file: SO052A.json
+  - Key: 'cystoscopy_optional' in file: SU075A.json
+  - Key: 'd_dimer_test_optional' in file: M300002.json
+  - Key: 'detailed_discharge_summary' in file: SE022A.json
+  - Key: 'detailed_indoor_case_papers_optional' in file: SG096B.json
+  - Key: 'detailed_indoor_case_papers_optional' in file: SG096C.json
+  - Key: 'detailed_indoor_case_papers_optional' in file: SG096E.json
+  - Key: 'detailed_operative_procedures_notes_optional' in file: MP009A.json
+  - Key: 'diagnostic_laparoscopy' in file: SO031A.json
+  - Key: 'digital_subtraction_angiography_dsa' in file: SN006A.json
+  - Key: 'digital_subtraction_angiography_dsa' in file: SN006B.json
+  - Key: 'digital_subtraction_angiography_embolotherapy' in file: SP007A.json
+  - Key: 'digital_subtraction_angiography_embolotherapy' in file: SP007B.json
+  - Key: 'digital_subtraction_angiography_embolotherapy' in file: SP007C.json
+  - Key: 'direct_coombs_test_optional' in file: MN001A.json
+  - Key: 'documentation_icd_block_antibiotics_physiotherapy_optional' in file: SG077A.json
+  - Key: 'doppler_sonography' in file: SG116A.json
+  - Key: 'doppler_study_ovaries' in file: SO001A.json
+  - Key: 'doppler_ultrasound' in file: SO041A.json
+  - Key: 'doppler_ultrasound' in file: SO060A.json
+  - Key: 'doppler_ultrasound' in file: SO060B.json
+  - Key: 'duplex_scan' in file: SG073A.json
+  - Key: 'duplex_scan' in file: SG073B.json
+  - Key: 'duplex_scan_optional' in file: SV015A.json
+  - Key: 'duplex_scan_optional' in file: SV015B.json
+  - Key: 'ecg' in file: SP007A.json
+  - Key: 'ecg' in file: SP007B.json
+  - Key: 'ecg' in file: SP007C.json
+  - Key: 'eeg_ventilation' in file: M300004.json
+  - Key: 'electrocardiogram_(optional)' in file: SV002L.json
+  - Key: 'electrocardiogram_ecg' in file: M300005.json
+  - Key: 'electrocardiogram_optional' in file: SV002K.json
+  - Key: 'electroencephalogram_eeg' in file: M300005.json
+  - Key: 'electroencephalography_optional' in file: MP009A.json
+  - Key: 'electromyogram_emg' in file: SN037A.json
+  - Key: 'electromyography_emg_report' in file: ST009A.json
+  - Key: 'electromyography_emg_report' in file: ST009B.json
+  - Key: 'endocervical_swab_culture_optional' in file: SO040B.json
+  - Key: 'endoscopic_retrograde_cholangiopancreatography_ercp_ct_abdomen' in file: S100211.json
+  - Key: 'endoscopic_ultrasound_optional' in file: SG002A.json
+  - Key: 'endoscopic_ultrasound_optional' in file: SS004A.json
+  - Key: 'endoscopy_optional' in file: SV029A.json
+  - Key: 'ercp_optional' in file: S100182.json
+  - Key: 'ercp_optional' in file: S100205.json
+  - Key: 'ercp_optional' in file: SG011A.json
+  - Key: 'ercp_optional' in file: SG011C.json
+  - Key: 'eye_and_hearing_screening_optional' in file: MP032A.json
+  - Key: 'falloposcopy_optional' in file: SO004A.json
+  - Key: 'ferritin_optional' in file: M300002.json
+  - Key: 'fine_needle_aspiration_cytology_optional' in file: SG054A.json
+  - Key: 'fine_needle_aspiration_cytology_optional' in file: SG054B.json
+  - Key: 'fine_needle_aspiration_cytology_optional' in file: SG057A.json
+  - Key: 'fine_needle_aspiration_cytology_optional' in file: SG057B.json
+  - Key: 'fir_mlc_trauma' in file: SG007A.json
+  - Key: 'fir_mlc_trauma' in file: SG007B.json
+  - Key: 'foetal_blood_haematocrit_mca_psv_post_transfusion_(optional)' in file: SO021A.json
+  - Key: 'follicular_study_optional' in file: SO004A.json
+  - Key: 'g6pd_enzyme_activity_optional' in file: M300002.json
+  - Key: 'g6pd_enzyme_activity_optional' in file: MN001A.json
+  - Key: 'gerd_gerd_study_barium_swallow' in file: M300004.json
+  - Key: 'gross_specimen_photo_optional' in file: SO015A.json
+  - Key: 'hearing_assessment' in file: M300004.json
+  - Key: 'hearing_assessment_bera_optional' in file: M300002.json
+  - Key: 'hemoglobin_reticulocyte_smear_hemolysis_optional' in file: MN001A.json
+  - Key: 'high_vaginal_swab_optional' in file: SO056A.json
+  - Key: 'histopathological_examination' in file: SG078A.json
+  - Key: 'histopathological_examination' in file: SP007A.json
+  - Key: 'histopathological_examination' in file: SP007B.json
+  - Key: 'histopathological_examination' in file: SP007C.json
+  - Key: 'histopathological_examination' in file: SV022A.json
+  - Key: 'histopathological_examination_optional' in file: SG002A.json
+  - Key: 'histopathological_examination_optional' in file: SG101A.json
+  - Key: 'histopathological_examination_optional' in file: SS004A.json
+  - Key: 'histopathological_report' in file: SO030A.json
+  - Key: 'histopathological_report' in file: SO031A.json
+  - Key: 'histopathological_report' in file: SO042A.json
+  - Key: 'histopathology_report' in file: S700141.json
+  - Key: 'histopathology_report' in file: SU001A.json
+  - Key: 'histopathology_report' in file: SU001B.json
+  - Key: 'histopathology_report_evacuated_tissue_optional' in file: SO019A.json
+  - Key: 'hiv_elisa_hiv_viral_load_report' in file: MG007A.json
+  - Key: 'hormonal_profile_optional' in file: SO037A.json
+  - Key: 'hyperoxia_test' in file: M300005.json
+  - Key: 'hysterosalpingography_hsg' in file: SO022A.json
+  - Key: 'hysterosalpingography_hsg_optional' in file: SO037A.json
+  - Key: 'hysteroscopy' in file: SO022A.json
+  - Key: 'implant_graft_barcode' in file: SV019U.json
+  - Key: 'implant_invoice_barcode' in file: SB015A.json
+  - Key: 'implant_invoice_barcode' in file: SB015B.json
+  - Key: 'in_case_of_accidents_fir_optional' in file: SN045A.json
+  - Key: 'in_case_of_accidents_fir_optional' in file: SN049B.json
+  - Key: 'indirect_coombs_test_optional' in file: MP041A.json
+  - Key: 'intra_operative_clinical_photograph' in file: SG117A.json
+  - Key: 'intra_operative_clinical_photograph_optional' in file: SP004A.json
+  - Key: 'intra_operative_monitoring_eeg_optional' in file: SV015B.json
+  - Key: 'intra_operative_monitoring_eeg_provocative_testing_optional' in file: IN005A.json
+  - Key: 'intra_operative_monitoring_nirs_optional' in file: SV015B.json
+  - Key: 'intra_operative_photo_submitted_optional' in file: ST010A.json
+  - Key: 'intra_operative_photo_submitted_optional' in file: ST010B.json
+  - Key: 'intra_operative_photograph' in file: SG022A.json
+  - Key: 'intra_operative_photograph' in file: SG025A.json
+  - Key: 'intra_operative_photograph' in file: SL002A.json
+  - Key: 'intra_operative_photograph' in file: ST009A.json
+  - Key: 'intra_operative_photograph' in file: ST009B.json
+  - Key: 'intra_operative_photograph_optional' in file: SN046A.json
+  - Key: 'intra_operative_photograph_optional' in file: SN047A.json
+  - Key: 'intra_operative_photograph_optional' in file: SN049A.json
+  - Key: 'intra_operative_photograph_optional' in file: ST008A.json
+  - Key: 'intra_operative_photograph_optional' in file: ST009C.json
+  - Key: 'intra_operative_photograph_optional' in file: ST009D.json
+  - Key: 'intra_operative_photograph_optional' in file: ST009E.json
+  - Key: 'intra_operative_photographs' in file: IN001A.json
+  - Key: 'intra_operative_photographs' in file: IN001B.json
+  - Key: 'intra_operative_photographs' in file: IN001C.json
+  - Key: 'intra_operative_photographs' in file: IN001D.json
+  - Key: 'intra_operative_photographs' in file: IN002A.json
+  - Key: 'intra_operative_photographs' in file: IN002B.json
+  - Key: 'intra_operative_photographs' in file: IN003A.json
+  - Key: 'intra_operative_photographs' in file: IN006A.json
+  - Key: 'intra_operative_photographs' in file: IN007A.json
+  - Key: 'intra_operative_photographs' in file: S100211.json
+  - Key: 'intra_operative_photographs' in file: SG006A.json
+  - Key: 'intra_operative_photographs' in file: SG007A.json
+  - Key: 'intra_operative_photographs' in file: SG007B.json
+  - Key: 'intra_operative_photographs' in file: SG008A.json
+  - Key: 'intra_operative_photographs' in file: SG009A.json
+  - Key: 'intra_operative_photographs' in file: SG048A.json
+  - Key: 'intra_operative_photographs' in file: SG068A.json
+  - Key: 'intra_operative_photographs' in file: SL018D.json
+  - Key: 'intra_operative_photographs' in file: SL018E.json
+  - Key: 'intra_operative_photographs' in file: SN009A.json
+  - Key: 'intra_operative_photographs' in file: SN009B.json
+  - Key: 'intra_operative_photographs' in file: SN009C.json
+  - Key: 'intra_operative_photographs' in file: SN025A.json
+  - Key: 'intra_operative_photographs' in file: SN025B.json
+  - Key: 'intra_operative_photographs' in file: SN025C.json
+  - Key: 'intra_operative_photographs' in file: SN028A.json
+  - Key: 'intra_operative_photographs' in file: SN029A.json
+  - Key: 'intra_operative_photographs' in file: SN030A.json
+  - Key: 'intra_operative_photographs' in file: SN036A.json
+  - Key: 'intra_operative_photographs' in file: SN041A.json
+  - Key: 'intra_operative_photographs' in file: SN041B.json
+  - Key: 'intra_operative_photographs' in file: SN054A.json
+  - Key: 'intra_operative_photographs' in file: SO001A.json
+  - Key: 'intra_operative_photographs' in file: SO012A.json
+  - Key: 'intra_operative_photographs' in file: SO041A.json
+  - Key: 'intra_operative_photographs' in file: SO045A.json
+  - Key: 'intra_operative_photographs' in file: SU096A.json
+  - Key: 'intra_operative_photographs' in file: SU096B.json
+  - Key: 'intra_operative_photographs' in file: SV022A.json
+  - Key: 'intra_operative_photographs_optional' in file: IN004A.json
+  - Key: 'intra_operative_photographs_optional' in file: IN004B.json
+  - Key: 'intra_operative_photographs_optional' in file: IN010A.json
+  - Key: 'intra_operative_photographs_optional' in file: SG002A.json
+  - Key: 'intra_operative_photographs_optional' in file: SG015A.json
+  - Key: 'intra_operative_photographs_optional' in file: SG016A.json
+  - Key: 'intra_operative_photographs_optional' in file: SG016B.json
+  - Key: 'intra_operative_photographs_optional' in file: SG038A.json
+  - Key: 'intra_operative_photographs_optional' in file: SG046A.json
+  - Key: 'intra_operative_photographs_optional' in file: SG047A.json
+  - Key: 'intra_operative_photographs_optional' in file: SG053A.json
+  - Key: 'intra_operative_photographs_optional' in file: SG053B.json
+  - Key: 'intra_operative_photographs_optional' in file: SG053C.json
+  - Key: 'intra_operative_photographs_optional' in file: SG053D.json
+  - Key: 'intra_operative_photographs_optional' in file: SG058A.json
+  - Key: 'intra_operative_photographs_optional' in file: SG084A.json
+  - Key: 'intra_operative_photographs_optional' in file: SN010A.json
+  - Key: 'intra_operative_photographs_optional' in file: SN011A.json
+  - Key: 'intra_operative_photographs_optional' in file: SN016A.json
+  - Key: 'intra_operative_photographs_optional' in file: SN033A.json
+  - Key: 'intra_operative_photographs_optional' in file: SN035A.json
+  - Key: 'intra_operative_photographs_optional' in file: SN035B.json
+  - Key: 'intra_operative_photographs_optional' in file: SN036B.json
+  - Key: 'intra_operative_photographs_optional' in file: SN042A.json
+  - Key: 'intra_operative_photographs_optional' in file: SN042B.json
+  - Key: 'intra_operative_photographs_optional' in file: SN043A.json
+  - Key: 'intra_operative_photographs_optional' in file: SN043B.json
+  - Key: 'intra_operative_photographs_optional' in file: SN044A.json
+  - Key: 'intra_operative_photographs_optional' in file: SN045A.json
+  - Key: 'intra_operative_photographs_optional' in file: SN049B.json
+  - Key: 'intra_operative_photographs_optional' in file: SO013A.json
+  - Key: 'intra_operative_photographs_optional' in file: SO032A.json
+  - Key: 'intra_operative_photographs_optional' in file: SO037A.json
+  - Key: 'intra_operative_photographs_optional' in file: SO060A.json
+  - Key: 'intra_operative_photographs_optional' in file: SO060B.json
+  - Key: 'intra_operative_photographs_optional' in file: SS004A.json
+  - Key: 'intra_operative_photographs_optional' in file: SS006A.json
+  - Key: 'intra_operative_photographs_optional' in file: SV029A.json
+  - Key: 'intra_operative_photos' in file: SO025A.json
+  - Key: 'intra_operative_photos' in file: SO025B.json
+  - Key: 'intra_operative_photos' in file: SO027A.json
+  - Key: 'intra_operative_specimen_photographs' in file: SG083A.json
+  - Key: 'intra_operative_specimen_photographs' in file: SV023A.json
+  - Key: 'intra_operative_stills' in file: SL011A.json
+  - Key: 'intra_operative_stills_optional' in file: SO066A.json
+  - Key: 'intra_operative_stills_optional' in file: SV025A.json
+  - Key: 'intra_procedural_mr_ct_angiography_optional' in file: IN005A.json
+  - Key: 'intra_procedure_clinical_photograph_optional' in file: SP003A.json
+  - Key: 'intra_procedure_clinical_photograph_optional_claim' in file: SP005A.json
+  - Key: 'intra_procedure_photograph_optional' in file: MN008A.json
+  - Key: 'intra_procedure_photograph_optional' in file: MN009A.json
+  - Key: 'intra_procedure_photograph_optional' in file: SE030A.json
+  - Key: 'intra_procedure_photograph_stills' in file: IN009A.json
+  - Key: 'intra_procedure_photograph_stills_optional' in file: IN005A.json
+  - Key: 'intra_procedure_photograph_with_time_and_date' in file: SE029A.json
+  - Key: 'intra_procedure_photograph_with_time_and_date' in file: SE029B.json
+  - Key: 'intra_procedure_photographs' in file: IN008A.json
+  - Key: 'intra_procedure_photographs_optional' in file: SG096B.json
+  - Key: 'intra_procedure_photographs_optional' in file: SG096C.json
+  - Key: 'intra_procedure_photographs_optional' in file: SG096E.json
+  - Key: 'intra_procedure_still_images' in file: SL012A.json
+  - Key: 'intra_procedure_still_images' in file: SL013A.json
+  - Key: 'intra_procedure_still_photograph' in file: S700066.json
+  - Key: 'intra_procedure_still_photograph' in file: SU057A.json
+  - Key: 'intracranial_pressure_monitoring' in file: SN009A.json
+  - Key: 'intracranial_pressure_monitoring' in file: SN009B.json
+  - Key: 'intracranial_pressure_monitoring' in file: SN009C.json
+  - Key: 'intraoperative_clinical_photograph' in file: SG073A.json
+  - Key: 'intraoperative_clinical_photograph' in file: SG073B.json
+  - Key: 'intraoperative_photograph' in file: SE010A.json
+  - Key: 'intraoperative_photograph' in file: SE010B.json
+  - Key: 'intraoperative_photograph' in file: SE010C.json
+  - Key: 'intraoperative_photograph' in file: SE010D.json
+  - Key: 'intraoperative_photograph' in file: SE027A.json
+  - Key: 'intraoperative_photograph' in file: SE027B.json
+  - Key: 'intraoperative_photograph' in file: SE027C.json
+  - Key: 'intraoperative_photograph' in file: SE027D.json
+  - Key: 'intraoperative_photograph' in file: SE028A.json
+  - Key: 'intraoperative_photograph' in file: SG121A.json
+  - Key: 'intraoperative_photograph' in file: SG123A.json
+  - Key: 'intraoperative_photograph' in file: SL003A.json
+  - Key: 'intraoperative_photograph' in file: SL003B.json
+  - Key: 'intraoperative_photograph_laparoscopic_optional' in file: SG106A.json
+  - Key: 'intraoperative_photograph_laparoscopic_optional' in file: SG106B.json
+  - Key: 'intraoperative_photograph_optional' in file: SG122A.json
+  - Key: 'intraoperative_photograph_optional' in file: SL014A.json
+  - Key: 'intraoperative_photograph_optional' in file: SL014B.json
+  - Key: 'intraoperative_photograph_optional' in file: SL014C.json
+  - Key: 'intraoperative_photograph_optional' in file: SL014D.json
+  - Key: 'intraoperative_photograph_patient_id_date_time_optional' in file: SE008A.json
+  - Key: 'intraoperative_photograph_patient_id_date_time_optional' in file: SE008B.json
+  - Key: 'intraoperative_photograph_patient_id_time_date' in file: SE026A.json
+  - Key: 'intraoperative_photograph_patient_id_timestamp' in file: SE032A.json
+  - Key: 'intraoperative_photograph_patient_id_timestamp' in file: SE033A.json
+  - Key: 'intraoperative_photograph_with_patient_id_time_and_date_optional' in file: SE019A.json
+  - Key: 'intraoperative_photograph_with_patient_id_time_and_date_optional' in file: SE031A.json
+  - Key: 'intraoperative_photograph_with_patient_id_time_and_date_stamp_optional' in file: SE009A.json
+  - Key: 'intraoperative_photograph_with_patient_id_time_date' in file: SE039A.json
+  - Key: 'intraoperative_photograph_with_patient_id_time_date_optional' in file: SE017A.json
+  - Key: 'intraoperative_photograph_with_patient_id_time_date_optional' in file: SE018A.json
+  - Key: 'intraoperative_photograph_with_time_and_date' in file: SE021A.json
+  - Key: 'intraoperative_photograph_with_time_and_date' in file: SE021B.json
+  - Key: 'intraoperative_photograph_with_time_and_date' in file: SE021C.json
+  - Key: 'intraoperative_photograph_with_time_and_date' in file: SE022A.json
+  - Key: 'intraoperative_photograph_with_time_and_date_optional' in file: SL006A.json
+  - Key: 'intraoperative_specimen_photographs' in file: SV023C.json
+  - Key: 'intraprocedural_still_photograph_optional' in file: S700067.json
+  - Key: 'intraprocedural_still_photograph_optional' in file: SU042A.json
+  - Key: 'investigation_requirement_current_visit' in file: OT001D.json
+  - Key: 'investigation_requirement_current_visit' in file: OT001E.json
+  - Key: 'investigation_requirement_current_visit' in file: OT001F.json
+  - Key: 'investigation_requirement_current_visit_optional' in file: SG097A.json
+  - Key: 'investigation_requirement_current_visit_optional' in file: SG097B.json
+  - Key: 'investigation_requirement_for_current_visit' in file: M300007.json
+  - Key: 'investigation_requirement_for_current_visit' in file: MN007A.json
+  - Key: 'investigations_done_optional' in file: S100080.json
+  - Key: 'investigations_done_optional' in file: S100081.json
+  - Key: 'investigations_optional_complete_blood_count_inr_pt_serum_creatinine' in file: IN010A.json
+  - Key: 'invoice_and_barcode_of_implant' in file: SB055B.json
+  - Key: 'invoice_barcode_implant' in file: SB006A.json
+  - Key: 'invoice_barcode_implant' in file: SB007A.json
+  - Key: 'invoice_barcode_implant' in file: SB007B.json
+  - Key: 'invoice_barcode_implant' in file: SB007C.json
+  - Key: 'invoice_barcode_implant_optional' in file: SB057A.json
+  - Key: 'invoice_barcode_implant_used_optional' in file: SB013A.json
+  - Key: 'invoice_barcode_implant_used_optional' in file: SB014B.json
+  - Key: 'invoice_receipt_consumables_optional' in file: SG097A.json
+  - Key: 'invoice_receipt_consumables_optional' in file: SG097B.json
+  - Key: 'ivus_intravascular_ultrasound_monitoring' in file: IN004A.json
+  - Key: 'ivus_intravascular_ultrasound_monitoring' in file: IN004B.json
+  - Key: 'karyotyping' in file: SO031A.json
+  - Key: 'karyotyping_report_sga_optional' in file: MN001A.json
+  - Key: 'kidney_function_tests_optional' in file: MP041A.json
+  - Key: 'kryotyping_optional' in file: SO037A.json
+  - Key: 'lactate_dehydrogenase_ldh' in file: M300005.json
+  - Key: 'lactate_dehydrogenase_optional' in file: MP041A.json
+  - Key: 'laparoscopy_diagnostic_optional' in file: SO004A.json
+  - Key: 'laparoscopy_hysteroscopy_vaginoscopy_optional' in file: SO037A.json
+  - Key: 'liver_function_test_hdn_optional' in file: M300002.json
+  - Key: 'liver_function_test_optional' in file: SG002A.json
+  - Key: 'liver_function_test_optional' in file: SS004A.json
+  - Key: 'lumbar_puncture_blood_culture' in file: MP005A.json
+  - Key: 'lumbar_puncture_blood_culture' in file: MP005B.json
+  - Key: 'lumbar_puncture_blood_culture' in file: MP005C.json
+  - Key: 'lumbar_puncture_blood_culture' in file: MP005D.json
+  - Key: 'lumbar_puncture_blood_culture' in file: MP005E.json
+  - Key: 'lumbar_puncture_blood_culture' in file: MP005F.json
+  - Key: 'lumbar_puncture_blood_culture' in file: MP005G.json
+  - Key: 'mammography_optional' in file: SN043A.json
+  - Key: 'mammography_optional' in file: SN043B.json
+  - Key: 'medico_legal_case_report_fir_optional' in file: S600005.json
+  - Key: 'metabolic_profile_optional' in file: M300002.json
+  - Key: 'metabolic_profile_optional' in file: SG002A.json
+  - Key: 'metabolic_profile_optional' in file: SS004A.json
+  - Key: 'mra' in file: SG073A.json
+  - Key: 'mra' in file: SG073B.json
+  - Key: 'mri' in file: SO029A.json
+  - Key: 'mri_affected_part' in file: SP007A.json
+  - Key: 'mri_affected_part' in file: SP007B.json
+  - Key: 'mri_affected_part' in file: SP007C.json
+  - Key: 'mri_brain' in file: M300004.json
+  - Key: 'mri_pelvis_optional' in file: SO037A.json
+  - Key: 'mri_report' in file: ST009A.json
+  - Key: 'mri_report' in file: ST009B.json
+  - Key: 'mri_report_optional' in file: ST008A.json
+  - Key: 'need_for_dialysis' in file: M300005.json
+  - Key: 'need_for_nsg_ventricular_dilatation' in file: M300004.json
+  - Key: 'need_for_nsg_ventricular_dilatation' in file: M300005.json
+  - Key: 'need_for_pda_closure_paracetamol_ibuprofen' in file: M300005.json
+  - Key: 'need_for_pda_closure_paracetamol_ibuprofen_indomethacin' in file: M300004.json
+  - Key: 'need_for_prostaglandin' in file: M300005.json
+  - Key: 'nerve_conduction_emg_mri_mra_doppler_reports_submitted_optional' in file: ST010A.json
+  - Key: 'nerve_conduction_emg_mri_mra_doppler_reports_submitted_optional' in file: ST010B.json
+  - Key: 'nerve_conduction_emg_report_optional' in file: ST008A.json
+  - Key: 'nerve_conduction_test_mri_ct_viral_serology_optional' in file: MP016A.json
+  - Key: 'nerve_conduction_velocity' in file: ST009A.json
+  - Key: 'nerve_conduction_velocity' in file: ST009B.json
+  - Key: 'neurosonogram_optional' in file: M300002.json
+  - Key: 'oesophageal_manometry_optional' in file: SG002A.json
+  - Key: 'oesophageal_manometry_optional' in file: SS004A.json
+  - Key: 'oesophageal_manometry_report' in file: SG123A.json
+  - Key: 'oesophageal_ph_monitoring_optional' in file: SG002A.json
+  - Key: 'oesophageal_ph_monitoring_optional' in file: SS004A.json
+  - Key: 'optional_blood_glucose' in file: SO059A.json
+  - Key: 'optional_blood_glucose' in file: SO059B.json
+  - Key: 'optional_c_reactive_protein_crp' in file: SO059A.json
+  - Key: 'optional_c_reactive_protein_crp' in file: SO059B.json
+  - Key: 'optional_ct_scan' in file: SG077A.json
+  - Key: 'optional_ct_scan' in file: SV028A.json
+  - Key: 'optional_diagnostic_imaging_ercp' in file: M200037.json
+  - Key: 'optional_diagnostic_imaging_ercp' in file: MP024A.json
+  - Key: 'optional_etiology_based_investigations' in file: MP018A.json
+  - Key: 'optional_etiology_based_investigations' in file: MP019A.json
+  - Key: 'optional_etiology_based_investigations' in file: SV016A.json
+  - Key: 'optional_etiology_based_investigations' in file: SV016B.json
+  - Key: 'optional_etiology_based_investigations' in file: SV016C.json
+  - Key: 'optional_etiology_based_investigations' in file: SV016D.json
+  - Key: 'optional_etiology_documents' in file: MP005A.json
+  - Key: 'optional_etiology_documents' in file: MP005B.json
+  - Key: 'optional_etiology_documents' in file: MP005C.json
+  - Key: 'optional_etiology_documents' in file: MP005D.json
+  - Key: 'optional_etiology_documents' in file: MP005E.json
+  - Key: 'optional_etiology_documents' in file: MP005F.json
+  - Key: 'optional_etiology_documents' in file: MP005G.json
+  - Key: 'optional_etiology_investigations_ppd' in file: M200022.json
+  - Key: 'optional_etiology_investigations_ppd' in file: MP033A.json
+  - Key: 'optional_fluid_for_culture_sensitivity_gram_staining' in file: SO059A.json
+  - Key: 'optional_fluid_for_culture_sensitivity_gram_staining' in file: SO059B.json
+  - Key: 'optional_lab_investigations' in file: M200037.json
+  - Key: 'optional_lab_investigations' in file: MP024A.json
+  - Key: 'optional_mri_for_huge_cyst' in file: SO059A.json
+  - Key: 'optional_mri_for_huge_cyst' in file: SO059B.json
+  - Key: 'optional_nerve_conduction_emg_mri_report' in file: ST009C.json
+  - Key: 'optional_nerve_conduction_emg_mri_report' in file: ST009D.json
+  - Key: 'optional_nerve_conduction_emg_mri_report' in file: ST009E.json
+  - Key: 'optional_tests_etiology_availability' in file: MP016A.json
+  - Key: 'optional_usg_of_affected_part' in file: SO059A.json
+  - Key: 'optional_usg_of_affected_part' in file: SO059B.json
+  - Key: 'orbital_ultrasound' in file: IN004A.json
+  - Key: 'orbital_ultrasound' in file: IN004B.json
+  - Key: 'other_tumor_markers' in file: SO041A.json
+  - Key: 'other_tumor_markers' in file: SO060A.json
+  - Key: 'other_tumor_markers' in file: SO060B.json
+  - Key: 'pap_smear' in file: SO013A.json
+  - Key: 'pet_scan_optional' in file: SN043A.json
+  - Key: 'pet_scan_optional' in file: SN043B.json
+  - Key: 'photograph_demonstrating_prolapse' in file: SG026A.json
+  - Key: 'photograph_demonstrating_prolapse' in file: SG027A.json
+  - Key: 'photograph_demonstrating_prolapse' in file: SG027B.json
+  - Key: 'pivka_optional' in file: M300002.json
+  - Key: 'positron_emission_tomography_pet_scan' in file: SN006A.json
+  - Key: 'positron_emission_tomography_pet_scan' in file: SN006B.json
+  - Key: 'post_op_clinical_photograph' in file: S600008.json
+  - Key: 'post_op_clinical_photograph' in file: S600009.json
+  - Key: 'post_op_clinical_photograph_implant_fixation_flap_cover' in file: ST007A.json
+  - Key: 'post_op_clinical_photograph_optional' in file: S600005.json
+  - Key: 'post_op_ct_chest' in file: SV033A.json
+  - Key: 'post_op_ct_scan_optional' in file: SV015B.json
+  - Key: 'post_op_investigations' in file: SV016A.json
+  - Key: 'post_op_investigations' in file: SV016B.json
+  - Key: 'post_op_investigations' in file: SV016C.json
+  - Key: 'post_op_investigations' in file: SV016D.json
+  - Key: 'post_operative_clinical_photograph' in file: SG114A.json
+  - Key: 'post_operative_clinical_photograph' in file: SU071A.json
+  - Key: 'post_operative_clinical_photograph' in file: SU071B.json
+  - Key: 'post_operative_clinical_photograph' in file: SU071C.json
+  - Key: 'post_operative_clinical_photograph' in file: SU071D.json
+  - Key: 'post_operative_clinical_photograph_optional' in file: SU088A.json
+  - Key: 'post_operative_clinical_photograph_optional' in file: SU088B.json
+  - Key: 'post_operative_clinical_photograph_optional' in file: SU088C.json
+  - Key: 'post_operative_photograph' in file: SG026A.json
+  - Key: 'post_operative_photograph' in file: SG027A.json
+  - Key: 'post_operative_photograph' in file: SG027B.json
+  - Key: 'post_operative_photographs' in file: S800044.json
+  - Key: 'post_operative_photographs' in file: S800062.json
+  - Key: 'post_operative_photographs' in file: SG036A.json
+  - Key: 'post_operative_photographs' in file: SG078A.json
+  - Key: 'post_operative_photographs' in file: SN065A.json
+  - Key: 'post_operative_photographs' in file: SP007A.json
+  - Key: 'post_operative_photographs' in file: SP007B.json
+  - Key: 'post_operative_photographs' in file: SP007C.json
+  - Key: 'post_operative_photographs_optional' in file: S100182.json
+  - Key: 'post_operative_photographs_optional' in file: S100205.json
+  - Key: 'post_operative_photographs_optional' in file: SG011A.json
+  - Key: 'post_operative_photographs_optional' in file: SG011C.json
+  - Key: 'post_operative_photographs_optional' in file: SG033A.json
+  - Key: 'post_operative_photographs_optional' in file: SG054A.json
+  - Key: 'post_operative_photographs_optional' in file: SG054B.json
+  - Key: 'post_operative_photographs_optional' in file: SG057A.json
+  - Key: 'post_operative_photographs_optional' in file: SG057B.json
+  - Key: 'post_operative_photographs_optional' in file: SN005A.json
+  - Key: 'post_operative_photographs_optional' in file: SN005B.json
+  - Key: 'post_operative_photographs_optional' in file: SN005C.json
+  - Key: 'post_operative_photographs_optional' in file: SN007A.json
+  - Key: 'post_operative_photographs_optional' in file: SN007B.json
+  - Key: 'post_operative_photographs_optional' in file: SN039A.json
+  - Key: 'post_operative_photographs_optional' in file: SN039B.json
+  - Key: 'post_operative_photographs_optional' in file: SN040A.json
+  - Key: 'post_operative_photographs_optional' in file: SN040B.json
+  - Key: 'post_operative_photographs_optional' in file: SN052A.json
+  - Key: 'post_operative_photographs_optional' in file: SN053A.json
+  - Key: 'post_operative_photographs_optional' in file: SU075A.json
+  - Key: 'post_operative_scar_photo_optional' in file: SO058A.json
+  - Key: 'post_operative_scar_photo_optional' in file: SO058B.json
+  - Key: 'post_procedure_clinical_photo_scar_photo' in file: S800060.json
+  - Key: 'post_procedure_clinical_photograph' in file: SB006A.json
+  - Key: 'post_procedure_clinical_photograph' in file: SB007A.json
+  - Key: 'post_procedure_clinical_photograph' in file: SB007B.json
+  - Key: 'post_procedure_clinical_photograph' in file: SB007C.json
+  - Key: 'post_procedure_clinical_photograph' in file: SN004A.json
+  - Key: 'post_procedure_clinical_photograph_affected_part_optional' in file: SL014A.json
+  - Key: 'post_procedure_clinical_photograph_affected_part_optional' in file: SL014B.json
+  - Key: 'post_procedure_clinical_photograph_affected_part_optional' in file: SL014C.json
+  - Key: 'post_procedure_clinical_photograph_affected_part_optional' in file: SL014D.json
+  - Key: 'post_procedure_clinical_photograph_optional' in file: SB032A.json
+  - Key: 'post_procedure_clinical_photograph_optional' in file: SB032B.json
+  - Key: 'post_procedure_clinical_photograph_optional' in file: SB032C.json
+  - Key: 'post_procedure_clinical_photograph_optional' in file: SB032D.json
+  - Key: 'post_procedure_clinical_photograph_optional' in file: SB032E.json
+  - Key: 'post_procedure_clinical_photograph_optional' in file: SB032F.json
+  - Key: 'post_procedure_clinical_photograph_optional' in file: SB032G.json
+  - Key: 'post_procedure_clinical_photograph_scar_photo' in file: S800074.json
+  - Key: 'post_procedure_clinical_photograph_scar_photo' in file: S800081.json
+  - Key: 'post_procedure_clinical_photograph_scar_photo' in file: SN051A.json
+  - Key: 'post_procedure_clinical_photograph_scar_photo_optional' in file: SN002A.json
+  - Key: 'post_procedure_clinical_photograph_scar_photo_optional' in file: SN002B.json
+  - Key: 'post_procedure_clinical_photograph_scar_photograph' in file: SN022A.json
+  - Key: 'post_procedure_clinical_photograph_scar_photograph' in file: SN022B.json
+  - Key: 'post_procedure_clinical_photograph_scar_photograph' in file: SN022C.json
+  - Key: 'post_procedure_clinical_photograph_scar_photograph' in file: SN022D.json
+  - Key: 'post_procedure_clinical_picture_radiology' in file: SL035D.json
+  - Key: 'post_procedure_photograph' in file: SG104A.json
+  - Key: 'post_procedure_photograph_optional' in file: MN010A.json
+  - Key: 'post_procedure_photographs_optional' in file: SG096A.json
+  - Key: 'post_procedure_photographs_optional' in file: SG096D.json
+  - Key: 'postoperative_chest_ct' in file: SV023A.json
+  - Key: 'pre_op_clinical_photograph_injury' in file: ST007A.json
+  - Key: 'pre_procedural_photograph_lesion' in file: SG104A.json
+  - Key: 'pre_procedure_hpe_report' in file: SG113A.json
+  - Key: 'predicted_post_operative_values_optional' in file: SV024A.json
+  - Key: 'prior_treatment_details_optional' in file: M0036A.json
+  - Key: 'prior_treatment_details_optional' in file: M0036C.json
+  - Key: 'prior_treatment_details_optional' in file: M0036D.json
+  - Key: 'prior_treatment_details_optional' in file: MO034B.json
+  - Key: 'prior_treatment_details_optional' in file: MO036A.json
+  - Key: 'prior_treatment_details_optional' in file: MO036B.json
+  - Key: 'prior_treatment_details_optional' in file: MO036C.json
+  - Key: 'prior_treatment_details_optional' in file: MO036D.json
+  - Key: 'prothrombin_time_aptt_platelet_count_optional' in file: SV017A.json
+  - Key: 'prothrombin_time_aptt_platelet_count_optional' in file: SV017B.json
+  - Key: 'prothrombin_time_aptt_platelet_count_optional' in file: SV017C.json
+  - Key: 'prothrombin_time_aptt_platelet_count_optional' in file: SV017D.json
+  - Key: 'pulmonary_function_tests_optional' in file: SV024A.json
+  - Key: 'relevant_investigations_mri_ct_mra_optional' in file: MG079A.json
+  - Key: 'renal_ultrasound_optional' in file: SO037A.json
+  - Key: 'salpingoscopy_optional' in file: SO004A.json
+  - Key: 'sepsis_screen' in file: SO058A.json
+  - Key: 'sepsis_screen' in file: SO058B.json
+  - Key: 'sepsis_screen_hypoglycemia_optional' in file: M300002.json
+  - Key: 'sepsis_screen_jaundice_optional' in file: M300002.json
+  - Key: 'septic_screen_csf_analysis_optional' in file: M300002.json
+  - Key: 'septic_screen_sepsis_bw' in file: M300004.json
+  - Key: 'septic_screen_sepsis_optional' in file: M300005.json
+  - Key: 'septic_screen_ventilation' in file: M300004.json
+  - Key: 'serum_calcium_electrolytes_alkaline_phosphatase_parathyroid_hormone_osteopenia_of_prematurity' in file: M300004.json
+  - Key: 'serum_d_dimer' in file: M300005.json
+  - Key: 'serum_ferritin' in file: M300005.json
+  - Key: 'sonohysterography' in file: SO022A.json
+  - Key: 'spect_single_photon_emission_computed_tomography' in file: IN008A.json
+  - Key: 'spine_imaging_xray_optional' in file: SO037A.json
+  - Key: 'splenoportovenography_optional' in file: SG046A.json
+  - Key: 'splenoportovenography_optional' in file: SG047A.json
+  - Key: 'thromboelastography_optional' in file: SV034A.json
+  - Key: 'thyroid_profile' in file: M300004.json
+  - Key: 'thyroid_profile_optional' in file: M200040.json
+  - Key: 'thyroid_profile_optional' in file: MP015A.json
+  - Key: 'thyroid_scan_thyroglossal_cyst' in file: SG085A.json
+  - Key: 'thyroid_scan_thyroglossal_cyst' in file: SG085B.json
+  - Key: 'thyroid_scan_thyroglossal_cyst' in file: SG085C.json
+  - Key: 'total_parenteral_nutrition_availability' in file: M300005.json
+  - Key: 'total_parenteral_nutrition_tpn' in file: M300004.json
+  - Key: 'total_serum_bilirubin_jaundice' in file: M300004.json
+  - Key: 'total_serum_bilirubin_jaundice' in file: M300005.json
+  - Key: 'transcranial_doppler' in file: IN006A.json
+  - Key: 'two_d_echo_functional' in file: M300005.json
+  - Key: 'two_d_echo_patent_ductus_arteriosus' in file: M300004.json
+  - Key: 'two_d_echo_patent_ductus_arteriosus' in file: M300005.json
+  - Key: 'two_d_echo_suspicion_of_underlying_heart_defect' in file: M300004.json
+  - Key: 'two_d_echo_ventilation' in file: M300004.json
+  - Key: 'ultrasound_of_abdomen_optional' in file: SN043A.json
+  - Key: 'ultrasound_of_abdomen_optional' in file: SN043B.json
+  - Key: 'urethroscopy' in file: SO024A.json
+  - Key: 'urethroscopy' in file: SO024B.json
+  - Key: 'urethroscopy' in file: SO043A.json
+  - Key: 'urethroscopy' in file: SO043B.json
+  - Key: 'urine_culture_blood_sugar_residual_urine' in file: SO024A.json
+  - Key: 'urine_culture_blood_sugar_residual_urine' in file: SO024B.json
+  - Key: 'urine_culture_blood_sugar_residual_urine' in file: SO043A.json
+  - Key: 'urine_culture_blood_sugar_residual_urine' in file: SO043B.json
+  - Key: 'urine_culture_sensitivity' in file: SO038A.json
+  - Key: 'urine_routine_microscopic_complete_examination_(optional)' in file: SO021A.json
+  - Key: 'urodynamic_studies' in file: SO024A.json
+  - Key: 'urodynamic_studies' in file: SO024B.json
+  - Key: 'urodynamic_studies' in file: SO043A.json
+  - Key: 'urodynamic_studies' in file: SO043B.json
+  - Key: 'usg_abdomen_pelvis' in file: SO005A.json
+  - Key: 'usg_abdomen_pelvis' in file: SO012A.json
+  - Key: 'usg_abdomen_pelvis' in file: SO024A.json
+  - Key: 'usg_abdomen_pelvis' in file: SO024B.json
+  - Key: 'usg_abdomen_pelvis' in file: SO043A.json
+  - Key: 'usg_abdomen_pelvis' in file: SO043B.json
+  - Key: 'usg_abdomen_pelvis' in file: SO045A.json
+  - Key: 'usg_abdomen_pelvis' in file: SU096A.json
+  - Key: 'usg_abdomen_pelvis' in file: SU096B.json
+  - Key: 'usg_abdomen_pelvis_optional' in file: SO003A.json
+  - Key: 'usg_abdomen_pelvis_optional' in file: SO020A.json
+  - Key: 'usg_abdomen_pelvis_optional' in file: SO032A.json
+  - Key: 'usg_abdomen_pelvis_optional' in file: SO040A.json
+  - Key: 'usg_abdomen_pelvis_optional' in file: SO052A.json
+  - Key: 'usg_ct_mri_sinugram_fistulogram_confirming_diagnosis' in file: SL018A.json
+  - Key: 'usg_ct_mri_sinugram_fistulogram_confirming_diagnosis' in file: SL018B.json
+  - Key: 'usg_ct_mri_sinugram_fistulogram_confirming_diagnosis' in file: SL018C.json
+  - Key: 'usg_ct_optional' in file: SG084A.json
+  - Key: 'usg_guided_fnac' in file: SG121A.json
+  - Key: 'usg_skull_abdomen_optional' in file: M300002.json
+  - Key: 'vaginoscopy_optional' in file: SU075A.json
+  - Key: 'viral_serology_optional' in file: MP041A.json
+  - Key: 'voiding_cysto_urethrography' in file: M300004.json
+  - Key: 'voiding_cystourethrogram_optional' in file: SO032A.json
+  - Key: 'wada_amytal_test' in file: IN009A.json
+  - Key: 'x_ray_erect_abdomen_usg_abdomen_stool_for_occult_blood_necrotizing_enterocolitis' in file: M300004.json
+  - Key: 'x_ray_pa_lateral_views_optional' in file: SG002A.json
+  - Key: 'x_ray_pa_lateral_views_optional' in file: SS004A.json
+  - Key: 'xray_ct_abdomen' in file: SG036A.json
+  - Key: 'xray_if_instrumentation_or_fusion_is_done_optional' in file: SN037A.json
+  - Key: 'xray_usg_ct_mri_region_of_interest' in file: SG085A.json
+  - Key: 'xray_usg_ct_mri_region_of_interest' in file: SG085B.json
+  - Key: 'xray_usg_ct_mri_region_of_interest' in file: SG085C.json
+
+============================================================
+TOP 10 MOST WIDELY REUSED KEYS
+============================================================
+   1. Key: 'detailed_discharge_summary              ' -> in 852 files
+   2. Key: 'clinical_notes                          ' -> in 622 files
+   3. Key: 'detailed_indoor_case_papers             ' -> in 489 files
+   4. Key: 'detailed_procedure_operative_notes      ' -> in 401 files
+   5. Key: 'discharge_summary                       ' -> in 197 files
+   6. Key: 'indoor_case_papers                      ' -> in 174 files
+   7. Key: 'procedure_operative_notes               ' -> in 152 files
+   8. Key: 'post_procedure_clinical_photograph      ' -> in  96 files
+   9. Key: 'planned_line_of_treatment               ' -> in  94 files
+  10. Key: 'histopathology_report                   ' -> in  92 files
+
+============================================================
+BREAKDOWN BY SPECIALTY
+============================================================
+  Specialty: 'Burns Management                   ' ->  20 files,  24 unique keys
+  Specialty: 'CTVS                               ' ->  85 files,  75 unique keys
+  Specialty: 'CTVS, General Surgery              ' ->   6 files,  33 unique keys
+  Specialty: 'CTVS, Pediatric Surgery            ' ->   4 files,  28 unique keys
+  Specialty: 'CTVS, Pediatric Surgery, General Surgery' ->   1 files,   9 unique keys
+  Specialty: 'CTVS/ General Surgery/ Pediatric Surgery' ->   1 files,   4 unique keys
+  Specialty: 'CTVS/Cardiology/Radiology          ' ->   1 files,   6 unique keys
+  Specialty: 'CTVS/Plastic Surgery/Pediatric surgery/Cardiology/Intervention Radiology' ->   1 files,   6 unique keys
+  Specialty: 'Cardiology                         ' ->  15 files,  48 unique keys
+  Specialty: 'Cardiology / CTVS                  ' ->   2 files,   6 unique keys
+  Specialty: 'Cardiology/ CTVS                   ' ->  15 files,   7 unique keys
+  Specialty: 'Cardiology/ Cardiothoracic Vascular Surgery' ->   6 files,  24 unique keys
+  Specialty: 'Cardiology/ General Surgery        ' ->   1 files,   6 unique keys
+  Specialty: 'Cardiology/CTVS                    ' ->   2 files,   6 unique keys
+  Specialty: 'Cardiology/Interventional Neuroradiology' ->   3 files,  16 unique keys
+  Specialty: 'Duplication cyst excision (Pediatric Surgery)' ->   1 files,   9 unique keys
+  Specialty: 'ENT                                ' ->  34 files,  57 unique keys
+  Specialty: 'ENT, General Surgery               ' ->   1 files,   7 unique keys
+  Specialty: 'ENT, General Surgery, Pediatric Surgery' ->   1 files,   6 unique keys
+  Specialty: 'ENT/ General Surgery/ Pediatric surgery' ->   2 files,   8 unique keys
+  Specialty: 'ENT/ Pediatric surgery             ' ->   3 files,   8 unique keys
+  Specialty: 'Emergency Room Packages            ' ->   4 files,  13 unique keys
+  Specialty: 'Gastrostomy + Esophagoscopy + Threading (Pediatric Surgery)' ->   1 files,  17 unique keys
+  Specialty: 'General Medicine                   ' ->  10 files,  49 unique keys
+  Specialty: 'General Medicine / Pediatric Medical Management' ->   7 files,  12 unique keys
+  Specialty: 'General Medicine / Pediatric Medicine' ->   2 files,   8 unique keys
+  Specialty: 'General Medicine, Cardiology, Pediatric Medicine' ->   2 files,   6 unique keys
+  Specialty: 'General Medicine, Pediatric Medical Management' ->  82 files, 175 unique keys
+  Specialty: 'General Medicine/ Pediatric Medical Management' ->  16 files,  28 unique keys
+  Specialty: 'General Medicine/ Pediatric medical management/ General surgery' ->   3 files,   8 unique keys
+  Specialty: 'General Medicine/Pediatric Medical Management' ->   1 files,   6 unique keys
+  Specialty: 'General Medicine/Pediatric Medical Management/ENT' ->   1 files,   6 unique keys
+  Specialty: 'General Medicine; Pediatric Medical Management' ->   1 files,   7 unique keys
+  Specialty: 'General Surgery                    ' ->  43 files, 114 unique keys
+  Specialty: 'General Surgery / GI Surgery       ' ->   1 files,   9 unique keys
+  Specialty: 'General Surgery / Pediatric Surgery' ->   6 files,  12 unique keys
+  Specialty: 'General Surgery / Pediatric Surgery / Vascular Surgery' ->   2 files,  11 unique keys
+  Specialty: 'General Surgery / Surgical Oncology / Gastrointestinal Surgery / Paediatric Surgery' ->   2 files,  12 unique keys
+  Specialty: 'General Surgery, Orthopedics       ' ->   1 files,   7 unique keys
+  Specialty: 'General Surgery, Pediatric Surgery ' ->   2 files,  16 unique keys
+  Specialty: 'General Surgery, Pediatric Surgery, CTVS' ->   2 files,  10 unique keys
+  Specialty: 'General Surgery, Pediatric Surgery, Genitourinary Surgery' ->   4 files,   9 unique keys
+  Specialty: 'General Surgery, Pediatric Surgery, Obstetrics & Gynecology' ->   2 files,   8 unique keys
+  Specialty: 'General Surgery, Plastic & Reconstructive Surgery, Pediatric Surgery' ->   4 files,   7 unique keys
+  Specialty: 'General Surgery/ Pediatric Surgery ' ->   6 files,  12 unique keys
+  Specialty: 'General Surgery/ENT                ' ->   3 files,   9 unique keys
+  Specialty: 'General Surgery/IVR/Surgical Oncology' ->   1 files,   7 unique keys
+  Specialty: 'General Surgery/Pediatric Surgery/Urology' ->   1 files,   7 unique keys
+  Specialty: 'General Surgery/Urology            ' ->   1 files,   6 unique keys
+  Specialty: 'General/Pediatric Surgery          ' ->  15 files,  32 unique keys
+  Specialty: 'General/Pediatric Surgery/Obstetrics & Gynecology' ->   1 files,   8 unique keys
+  Specialty: 'Infectious Diseases                ' ->   4 files,  16 unique keys
+  Specialty: 'Interventional Neuroradiology      ' ->  15 files,  74 unique keys
+  Specialty: 'Medical Oncology                   ' ->  61 files, 134 unique keys
+  Specialty: 'Mental Disorders                   ' ->  21 files,  21 unique keys
+  Specialty: 'Neo-natal Care                     ' ->   9 files, 223 unique keys
+  Specialty: 'Neo-natal Care/ pediatric surgery  ' ->   1 files,   8 unique keys
+  Specialty: 'Neo-natal Care/Ophthalmology       ' ->   3 files,   7 unique keys
+  Specialty: 'Neurosurgery                       ' ->  64 files, 122 unique keys
+  Specialty: 'Neurosurgery, Orthopedics          ' ->   5 files,  14 unique keys
+  Specialty: 'Neurosurgery, Orthopedics - Spine Decompression & Fusion' ->   2 files,   8 unique keys
+  Specialty: 'Obstetrics & Gynaecology           ' ->   7 files,  19 unique keys
+  Specialty: 'Obstetrics & Gynecology            ' ->  61 files, 204 unique keys
+  Specialty: 'Obstetrics & Gynecology, Pediatric Surgery' ->   1 files,   8 unique keys
+  Specialty: 'Obstetrics & Gynecology, Urology   ' ->   2 files,   8 unique keys
+  Specialty: 'Obstetrics & Gynecology/ Urology   ' ->   3 files,  14 unique keys
+  Specialty: 'Obstetrics & Gynecology/ Urology/ Pediatric Surgery' ->   1 files,  11 unique keys
+  Specialty: 'Operation for Duplication of Intestine (General/Pediatric Surgery)' ->   1 files,   9 unique keys
+  Specialty: 'Operations for Replacement of Oesophagus by Colon (General/Pediatric Surgery)' ->   1 files,  17 unique keys
+  Specialty: 'Ophthalmology                      ' ->  51 files,  80 unique keys
+  Specialty: 'Oral & Maxillofacial Surgery       ' ->   1 files,   5 unique keys
+  Specialty: 'Oral Maxillo Facial Surgery        ' ->   4 files,  18 unique keys
+  Specialty: 'Oral Maxillo Facial Surgery/ENT    ' ->   1 files,   5 unique keys
+  Specialty: 'Oral Maxillofacial Surgery         ' ->   3 files,   6 unique keys
+  Specialty: 'Oral Maxillofacial Surgery/ENT     ' ->   9 files,  15 unique keys
+  Specialty: 'Organ and Tissue Transplant        ' ->   6 files,  21 unique keys
+  Specialty: 'Orthopedics                        ' -> 117 files, 155 unique keys
+  Specialty: 'Orthopedics - Spine deformity correction' ->   1 files,   7 unique keys
+  Specialty: 'Orthopedics, Neurosurgery (Nerve root block)' ->   3 files,   8 unique keys
+  Specialty: 'Orthopedics/Emergency Room Packages' ->   1 files,   6 unique keys
+  Specialty: 'Pediatric Medical Management       ' ->  28 files, 143 unique keys
+  Specialty: 'Pediatric Medical Management/ General Medicine' ->   3 files,   7 unique keys
+  Specialty: 'Pediatric Medical management       ' ->   2 files,   8 unique keys
+  Specialty: 'Pediatric Surgery                  ' ->  30 files,  43 unique keys
+  Specialty: 'Pediatric Surgery/ General Surgery ' ->   2 files,  11 unique keys
+  Specialty: 'Pediatric Surgery/ Oral & Maxillofacial Surgery/ Plastic & Reconstructive Surgery' ->   1 files,   7 unique keys
+  Specialty: 'Plastic & Reconstructive Surgery   ' ->  12 files,  51 unique keys
+  Specialty: 'Plastic & Reconstructive Surgery, Surgical Oncology' ->   2 files,   7 unique keys
+  Specialty: 'Plastic & Reconstructive Surgery/General Surgery' ->   2 files,   8 unique keys
+  Specialty: 'Polytrauma                         ' ->   2 files,  10 unique keys
+  Specialty: 'Polytrauma, Orthopedics, Neurosurgery, General Surgery' ->  18 files,  48 unique keys
+  Specialty: 'Polytrauma/Neurosurgery            ' ->   4 files,   9 unique keys
+  Specialty: 'Radiation Oncology                 ' ->  12 files,  17 unique keys
+  Specialty: 'Surgical Oncology                  ' ->  21 files,  20 unique keys
+  Specialty: 'Urology                            ' ->  61 files, 110 unique keys
+  Specialty: 'Urology / Pediatric surgery        ' ->   4 files,  13 unique keys
+  Specialty: 'Urology, Obstetrics & Gynecology   ' ->   4 files,   6 unique keys
+  Specialty: 'Urology, Paediatric Surgery        ' ->   2 files,   6 unique keys
+  Specialty: 'Urology, Pediatric Surgery         ' ->  33 files,  54 unique keys
+  Specialty: 'Urology, Pediatric Surgery, Emergency Room Packages' ->   1 files,   6 unique keys
+  Specialty: 'Urology, Pediatric Surgery, Interventional Neuroradiology' ->   2 files,   5 unique keys
+  Specialty: 'Urology, Pediatric Surgery, Plastic & Reconstructive Surgery' ->   5 files,  11 unique keys
+  Specialty: 'Urology, Pediatric surgery         ' ->   8 files,  24 unique keys
+  Specialty: 'Urology, Surgical Oncology         ' ->   1 files,   6 unique keys
+  Specialty: 'Urology/ Obstetrics & Gynecology   ' ->   1 files,   6 unique keys
+  Specialty: 'Urology/ Pediatric Surgery         ' ->  16 files,  25 unique keys
+
+============================================================
+OUTPUT FILE PATHS WRITTEN
+============================================================
+JSON flat list: canonical_keys_tooling\output\flat_key_list.json
+CSV flat list:  canonical_keys_tooling\output\flat_key_list.csv
+Run log text:   canonical_keys_tooling\output\run_log.txt
+============================================================

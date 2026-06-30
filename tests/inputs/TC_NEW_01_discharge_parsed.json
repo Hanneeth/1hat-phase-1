@@ -1,7 +1,7 @@
 {
   "preauth_reference": "TC_NEW_01",
   "case_id": "TC_NEW_01",
-  "preauth_input_path": "tests/inputs/TC_NEW_01.json",
+  "preauth_input_path": "tests\\inputs\\TC_NEW_01.json",
   "hospital": {
     "name": "Apollo Speciality Hospital",
     "hospital_code": null,
@@ -47,24 +47,24 @@
   "clinical": {
     "presenting_complaints": "Patient presented with a painless reducible swelling in the right groin for the past 8 months. Swelling increases on standing, coughing, and straining and reduces on lying down. Associated dull dragging sensation in the groin. No bowel or urinary complaints. No history of trauma.",
     "duration_of_complaints": "8 Months",
-    "initial_assessment": "BP 126/80 mmHg, Pulse 78/min, SpO2 98%, afebrile. Right groin: reducible swelling 4x3 cm, positive impulse on cough, positive deep ring occlusion test. All systemic examination within normal limits. Conscious, cooperative, well-nourished, no pallor or icterus. Weight 68 kg / Height 165 cm | BMI: 24.98. Temp 98.4 F, RR 16/min. CVS S1 S2 heard, no murmurs. Respiratory Air entry bilateral, clear. Abdomen Soft, non-tender, no organomegaly. CNS No focal neurological deficits. Swelling reduces completely in supine position. Left groin: Normal. Scrotum: Normal.",
-    "significant_past_history": "No significant past medical history. No chronic illnesses. No known drug allergies. No previous surgeries. Non-smoker, Occasional alcohol.",
+    "initial_assessment": "BP 126/80 mmHg, Pulse 78/min, SpO2 98%, afebrile. Right groin: reducible swelling 4x3 cm, positive impulse on cough, positive deep ring occlusion test. All systemic examination within normal limits. General Condition: Conscious, cooperative, well-nourished, no pallor or icterus. Weight / Height: 68 kg / 165 cm | BMI: 24.98. Vitals: Temp 98.4 F, RR 16/min. CVS: S1 S2 heard, no murmurs. Respiratory: Air entry bilateral, clear. Abdomen: Soft, non-tender, no organomegaly. CNS: No focal neurological deficits. Local Examination: Right groin: Reducible swelling 4x3 cm at inguinal region. Impulse on cough positive. Deep ring occlusion test positive. Swelling reduces completely in supine position. Left groin: Normal. Scrotum: Normal.",
+    "significant_past_history": "No significant past medical history. No chronic illnesses. No known drug allergies. No previous surgeries. Chronic Illnesses: None. Previous Surgeries: None. Current Medications: None. Known Allergies: None. Smoking / Alcohol: Non-smoker, Occasional alcohol.",
     "primary_diagnosis_at_admission": "Right Indirect Inguinal Hernia (Reducible) — ICD-10: K40.9",
     "final_diagnosis_at_discharge": "Post-operative status following successful laparoscopic TEP inguinal hernia repair, right side — ICD-10: K40.9",
     "icd10_codes": [
       "K40.9"
     ],
-    "key_investigations": "Haemoglobin (Hb), WBC Count, Platelet Count, Blood Sugar Fasting, Serum Creatinine, Serum Electrolytes, PT / INR, Chest X-Ray, ECG, USG Abdomen & Groin.",
-    "investigation_findings": "All pre-op investigations within normal limits. USG confirms right indirect inguinal hernia with bowel loops in sac. No obstruction or strangulation. Haemoglobin (Hb) 13.8 g/dL, WBC Count 7,200 /cumm, Platelet Count 2.4 Lakh, Blood Sugar Fasting 94 mg/dL, Serum Creatinine 0.8 mg/dL, Serum Electrolytes Na 139, K 4.0 mEq/L, PT / INR 12.4 sec / 1.02, Chest X-Ray No active cardiopulmonary disease, ECG Normal sinus rhythm, USG Abdomen & Groin Right indirect inguinal hernia confirmed. Bowel loops in sac. No obstruction or strangulation. Left side normal.",
-    "treatment_given": "Day 1 (19/06/2026): Comfortable post-op, vitals stable, IV fluids continued, oral liquids started. Wound site clean and dry. Day 2 (20/06/2026): Afebrile, soft diet tolerated, mobilising independently, IV antibiotics completed, switched to oral medications. Wound dressing done. Day 3 (21/06/2026): Fully ambulatory, normal diet, wound healing well. Declared medically fit for discharge.",
+    "key_investigations": "Pre-operative Investigation Reports (CBC, RFT, Sugar, PT/INR, ECG, CXR), USG Abdomen & Groin Report",
+    "investigation_findings": "Haemoglobin (Hb) 13.8 g/dL (Normal), WBC Count 7,200 /cumm (Normal), Platelet Count 2.4 Lakh (Normal), Blood Sugar Fasting 94 mg/dL (Normal), Serum Creatinine 0.8 mg/dL (Normal), Serum Electrolytes Na 139, K 4.0 mEq/L (Normal), PT / INR 12.4 sec / 1.02 (Normal), Chest X-Ray (No active cardiopulmonary disease), ECG (Normal sinus rhythm). USG Abdomen & Groin: Right indirect inguinal hernia confirmed. Bowel loops in sac. No obstruction or strangulation. Left side normal.",
+    "treatment_given": "Laparoscopic Inguinal Hernia Repair — TEP (Totally Extraperitoneal) — Right Side performed on 19/06/2026 at 10:00 hrs under General Anaesthesia. Three-port TEP technique used. Preperitoneal space created using balloon dissector. Polypropylene mesh 6x3 cm placed extraperitoneally covering all groin defects. No intraoperative complications. Haemostasis secured. Ports closed in layers. Post-operatively: Day 1 (19/06/2026): Comfortable post-op, vitals stable, IV fluids continued, oral liquids started. Wound site clean and dry. Day 2 (20/06/2026): Afebrile, soft diet tolerated, mobilising independently, IV antibiotics completed, switched to oral medications. Wound dressing done. Day 3 (21/06/2026): Fully ambulatory, normal diet, wound healing well. Declared medically fit for discharge.",
     "operative_findings": "Indirect inguinal hernia confirmed. Sac ligated and reduced. No strangulation, no visceral injury.",
     "final_procedure_performed": "Laparoscopic Inguinal Hernia Repair — TEP (Totally Extraperitoneal) — Right Side",
     "complications": null,
     "follow_up_date": "2026-06-28",
-    "advice_on_discharge": "Activity: Avoid heavy lifting (>5 kg) for 4 weeks. No strenuous activity for 6 weeks. Warning Signs: Report immediately for fever >100F, wound redness/discharge, swelling at operative site, or urinary difficulty.",
+    "advice_on_discharge": "Day 7 (28/06/2026): Wound check and suture removal at OPD. Day 30 (19/07/2026): Final post-operative assessment. Activity: Avoid heavy lifting (>5 kg) for 4 weeks. No strenuous activity for 6 weeks. Warning Signs: Report immediately for fever >100F, wound redness/discharge, swelling at operative site, or urinary difficulty.",
     "discharge_summary_text": "Apollo Speciality Hospital\n21, Greams Road, Chennai - 600006, Tamil Nadu\nPh: 044-28293333 | Email: records@apollochennai.org\nHospital Reg No: TN/CHE/2003/00412 | PMJAY Empanelment ID: H001\nDISCHARGE SUMMARY\nSummary No: APH/DS/2026/TCNEW01 Date: 21/06/2026\nSECTION 1 — HOSPITAL & PATIENT INFORMATION\nHospital Name Apollo Speciality Hospital\nAddress 21, Greams Road, Chennai - 600006, Tamil Nadu\nPMJAY Empanelment ID H001\nPatient Name Murugan Selvaraj\nAge / Gender 42 Years / Male\nPMJAY Beneficiary ID P001\nPMJAY Card No. TN-PMJAY-2024-001234\nAddress 12, Kamaraj Nagar, Tambaram, Chennai - 600045\nSECTION 2 — ADMISSION & DISCHARGE DETAILS\nDate & Time of Admission 18/06/2026 at 09:00 hrs\nDate & Time of Discharge 21/06/2026 at 11:30 hrs\nTotal Duration of Stay 3 Days\nType of Admission Planned / Elective\nWard / Room Category General Ward\nTreating Consultant Dr. Priya Venkataraman\nQualification MBBS, MS (General Surgery), FMAS\nRegistration Number TN-MED-20045\nSpecialty General Surgery\nPMJAY Package Booked SG050B — Groin Hernia Repair (Inguinal - Lap.)\nPre-Auth Reference PMJAY-PREAUTH-2026-TCNEW01-001\nSECTION 3 — CLINICAL SUMMARY\nPresenting Complaints:\nPainless reducible right groin swelling for 8 months with dragging sensation. Swelling increased on coughing and\nstanding, reduced on lying down.\nRelevant Medical History:\nNo significant past medical history. No chronic illnesses. No known drug allergies. No previous surgeries.\nPre-operative Examination:\nBP 126/80 mmHg, Pulse 78/min, SpO2 98%, afebrile. Right groin: reducible swelling 4x3 cm, positive impulse on\ncough, positive deep ring occlusion test. All systemic examination within normal limits.\n\nSECTION 4 — DIAGNOSIS\nProvisional Diagnosis (Admission) Right Indirect Inguinal Hernia (Reducible) — ICD-10: K40.9\nFinal Diagnosis (Discharge) Post-operative status following successful laparoscopic TEP inguinal hernia repair,\nright side — ICD-10: K40.9\nSECTION 5 — PROCEDURE PERFORMED\nProcedure Name Laparoscopic Inguinal Hernia Repair — TEP (Totally Extraperitoneal) — Right Side\nPMJAY Package SG050B — Groin Hernia Repair (Inguinal - Lap.)\nDate of Surgery 19/06/2026 at 10:00 hrs\nDuration 55 minutes\nAnaesthesia General Anaesthesia — Dr. Meena Rajan, MD Anaesthesiology, Reg:\nTN-MED-30012\nTechnique Three-port TEP technique. Preperitoneal space created using balloon dissector.\nPolypropylene mesh 6x3 cm placed extraperitoneally covering all groin defects. No\nintraoperative complications. Haemostasis secured. Ports closed in layers.\nIntraoperative Finding Indirect inguinal hernia confirmed. Sac ligated and reduced. No strangulation, no\nvisceral injury.\nImplant Used Polypropylene Mesh 6x3 cm — Brand: Surgipro, Model: SPM-6030, Serial No:\nSRG2026061901\nSECTION 6 — POST-OPERATIVE COURSE\nDay 1 (19/06/2026): Comfortable post-op, vitals stable, IV fluids continued, oral liquids started. Wound site clean and\ndry.\nDay 2 (20/06/2026): Afebrile, soft diet tolerated, mobilising independently, IV antibiotics completed, switched to oral\nmedications. Wound dressing done.\nDay 3 (21/06/2026): Fully ambulatory, normal diet, wound healing well. Declared medically fit for discharge.\nSECTION 7 — COMPLICATIONS\nNo intraoperative or post-operative complications.\nSECTION 8 — CONDITION AT DISCHARGE\nStable. Afebrile. Pain well controlled on oral analgesics. Surgical wounds clean and dry. Ambulatory without\nassistance.\nSECTION 9 — DISCHARGE MEDICATIONS\n# Medication Dose Frequency Duration\n1 Tab. Amoxicillin-Clavulanate 625mg 1 tablet Twice daily 5 Days\n2 Tab. Paracetamol 500mg 1-2 tablets As needed 5 Days\n3 Tab. Pantoprazole 40mg 1 tablet Once daily 7 Days\n4 Tab. Ibuprofen 400mg 1 tablet Twice daily after food 3 Days\n\nSECTION 10 — FOLLOW-UP INSTRUCTIONS\nDay 7 (28/06/2026): Wound check and suture removal at OPD.\nDay 30 (19/07/2026): Final post-operative assessment.\nActivity: Avoid heavy lifting (>5 kg) for 4 weeks. No strenuous activity for 6 weeks.\nWarning Signs: Report immediately for fever >100F, wound redness/discharge, swelling at operative site, or urinary\ndifficulty.\nSECTION 11 — DOCUMENTS SUBMITTED WITH THIS DISCHARGE SUMMARY\nThe following documents are available and submitted along with this discharge summary for PMJAY claim processing:\n# Document Status\n1 Discharge Summary (CAM Annexure 6 format) Available — this document\n2 Operative Notes (detailed intraoperative findings) Available\n3 Pre-Anaesthesia Check-up Report (ASA Grade I, dated 17/06/2026) Available\n4 Post-operative Clinical Photograph showing surgical wound (Day 1) Available\n5 Intraoperative Clinical Photograph showing mesh placement in-situ Available\n6 Invoice of Polypropylene Mesh used (Surgipro SPM-6030, Rs. 1,500) Available\n7 Implant Invoice with model and serial number sticker attached Available\n8 Pre-operative Investigation Reports (CBC, RFT, Sugar, PT/INR, ECG, CXR) Available\n9 USG Abdomen & Groin Report (17/06/2026) Available\n10 Informed Consent Form (signed by patient) Available\n11 Anaesthesia Record Available\n12 Nursing Notes Available\n13 PMJAY Beneficiary Card Copy Available\n14 Patient Photo on Hospital Bed (admission) Available\nSECTION 12 — TREATING DOCTOR'S DECLARATION\nI certify that the patient was under my care during this admission, the treatment was medically necessary, the\nprocedure was performed as documented, and all information in this discharge summary is true and correct to the best\nof my knowledge. All mandatory claim documents as per PMJAY/CAM guidelines are enclosed.\nConsultant Surgeon PMAM (PM-JAY Arogya Mitra) Patient / Attendant\nDr. Priya Venkataraman Mr. Suresh Babu Murugan Selvaraj\nMBBS, MS (General Surgery), FMAS PMAM ID: TN-PMAM-00892 (Signed)\nReg: TN-MED-20045 (Signed) Date: 21/06/2026\nDate: 21/06/2026 Date: 21/06/2026\n(Signed)",
-    "operative_notes_text": "Procedure Name Laparoscopic Inguinal Hernia Repair — TEP (Totally Extraperitoneal) — Right Side\nPMJAY Package SG050B — Groin Hernia Repair (Inguinal - Lap.)\nDate of Surgery 19/06/2026 at 10:00 hrs\nDuration 55 minutes\nAnaesthesia General Anaesthesia — Dr. Meena Rajan, MD Anaesthesiology, Reg:\nTN-MED-30012\nTechnique Three-port TEP technique. Preperitoneal space created using balloon dissector.\nPolypropylene mesh 6x3 cm placed extraperitoneally covering all groin defects. No\nintraoperative complications. Haemostasis secured. Ports closed in layers.\nIntraoperative Finding Indirect inguinal hernia confirmed. Sac ligated and reduced. No strangulation, no\nvisceral injury.\nImplant Used Polypropylene Mesh 6x3 cm — Brand: Surgipro, Model: SPM-6030, Serial No:\nSRG2026061901",
-    "pre_anaesthesia_text": "Reviewed by Anaesthesia team on 17/06/2026. ASA Grade I. Fit for elective surgery under General Anaesthesia."
+    "operative_notes_text": "SECTION 5 — PROCEDURE PERFORMED\nProcedure Name Laparoscopic Inguinal Hernia Repair — TEP (Totally Extraperitoneal) — Right Side\nPMJAY Package SG050B — Groin Hernia Repair (Inguinal - Lap.)\nDate of Surgery 19/06/2026 at 10:00 hrs\nDuration 55 minutes\nAnaesthesia General Anaesthesia — Dr. Meena Rajan, MD Anaesthesiology, Reg:\nTN-MED-30012\nTechnique Three-port TEP technique. Preperitoneal space created using balloon dissector.\nPolypropylene mesh 6x3 cm placed extraperitoneally covering all groin defects. No\nintraoperative complications. Haemostasis secured. Ports closed in layers.\nIntraoperative Finding Indirect inguinal hernia confirmed. Sac ligated and reduced. No strangulation, no\nvisceral injury.\nImplant Used Polypropylene Mesh 6x3 cm — Brand: Surgipro, Model: SPM-6030, Serial No:\nSRG2026061901",
+    "pre_anaesthesia_text": "ANAESTHESIA FITNESS Reviewed by Anaesthesia team on 17/06/2026. ASA Grade I. Fit for elective surgery under General Anaesthesia."
   },
   "discharge_medications": [
     "Tab. Amoxicillin-Clavulanate 625mg 1 tablet Twice daily 5 Days",
@@ -80,26 +80,15 @@
   "patient_amount_collected_inr": 0,
   "sha_notification_date": null,
   "implant_details": {
-    "name": "Polypropylene Mesh",
-    "size": "6x3 cm",
-    "brand": "Surgipro",
-    "model": "SPM-6030",
+    "implant_name": "Polypropylene Mesh",
+    "implant_type": "Mesh",
+    "manufacturer": "Surgipro",
+    "model_number": "SPM-6030",
     "serial_number": "SRG2026061901",
-    "invoice_number": null,
-    "cost": 1500,
-    "date_of_implant": "2026-06-19",
-    "implant_type": "mesh",
-    "implant_category": "surgical",
-    "implant_status": "used",
-    "implant_manufacturer": "Surgipro",
-    "implant_expiry_date": null,
-    "implant_batch_number": null,
-    "implant_unique_device_identifier": null,
-    "implant_hsn_code": null,
-    "implant_gst_rate": null,
-    "implant_gst_amount": null,
-    "implant_total_amount": 1500,
-    "implant_remarks": "within PMJAY package SG050B"
+    "size": "6x3 cm",
+    "unit_cost": 1500,
+    "total_cost": 1500,
+    "quantity": 1
   },
   "documents_submitted": [
     {
@@ -108,118 +97,28 @@
       "available": true
     },
     {
-      "key": "operative_notes",
-      "label": "Operative Notes",
+      "key": "clinical_notes",
+      "label": "Clinical notes",
       "available": true
     },
     {
-      "key": "pre_anesthesia_check_up_report",
-      "label": "Pre-Anaesthesia Check-up Report",
-      "available": true
+      "key": "photograph_showing_hernia_bulge",
+      "label": "Photograph showing hernia / bulge",
+      "available": false
     },
     {
       "key": "post_op_clinical_photograph",
-      "label": "Post-operative Clinical Photograph",
+      "label": "Post op clinical photograph",
       "available": true
     },
     {
-      "key": "intraoperative_clinical_photograph",
-      "label": "Intraoperative Clinical Photograph",
+      "key": "operative_notes",
+      "label": "Operative notes",
       "available": true
     },
     {
       "key": "invoice_of_mesh_tacker_used",
-      "label": "Invoice of Mesh / Tacker Used",
-      "available": true
-    },
-    {
-      "key": "implant_invoice_sticker",
-      "label": "Implant Invoice / Sticker with Model and Serial Number",
-      "available": true
-    },
-    {
-      "key": "clinical_notes",
-      "label": "Clinical / Admission Notes",
-      "available": true
-    },
-    {
-      "key": "usg_report",
-      "label": "USG Report",
-      "available": true
-    },
-    {
-      "key": "blood_reports",
-      "label": "Blood Investigation Reports",
-      "available": true
-    },
-    {
-      "key": "ecg_report",
-      "label": "ECG Report",
-      "available": true
-    },
-    {
-      "key": "xray_report",
-      "label": "X-Ray Report",
-      "available": true
-    },
-    {
-      "key": "mlc_fir",
-      "label": "MLC / FIR Copy",
-      "available": false
-    },
-    {
-      "key": "histopathology_report",
-      "label": "Histopathology / Biopsy Report",
-      "available": false
-    },
-    {
-      "key": "consent_form",
-      "label": "Informed Consent Form",
-      "available": true
-    },
-    {
-      "key": "patient_photo",
-      "label": "Patient Photo on Hospital Bed",
-      "available": true
-    },
-    {
-      "key": "mortality_audit_report",
-      "label": "Mortality Audit Report",
-      "available": false
-    },
-    {
-      "key": "indoor_case_papers",
-      "label": "Indoor Case Papers",
-      "available": true
-    },
-    {
-      "key": "procedure_note_operative_note",
-      "label": "Procedure Note / Operative Note",
-      "available": true
-    },
-    {
-      "key": "post_procedure_clinical_photograph",
-      "label": "Post Procedure Clinical Photograph",
-      "available": true
-    },
-    {
-      "key": "gross_specimen_photograph",
-      "label": "Gross Specimen Photograph",
-      "available": false
-    },
-    {
-      "key": "detailed_indoor_case_papers",
-      "label": "Detailed Indoor Case Papers",
-      "available": true
-    },
-    {
-      "key": "post_procedure_imaging_stone_removed",
-      "label": "Post Procedure Imaging Showing Stone Removed",
-      "available": false
-    },
-    {
-      "key": "detailed_procedure_operative_notes",
-      "label": "Detailed Procedure / Operative Notes",
+      "label": "Invoice of the Mesh / tacker used",
       "available": true
     },
     {
@@ -228,34 +127,9 @@
       "available": true
     },
     {
-      "key": "still_image_of_patient_undergoing_procedure",
-      "label": "Still Image of the Patient Undergoing the Procedure with Date & Time",
+      "key": "pre_anesthesia_check_up_report",
+      "label": "Pre-anesthesia check-up report",
       "available": true
-    },
-    {
-      "key": "angiogram_stills_report_showing_stent_post_stent_flow",
-      "label": "Angiogram Stills & Report Showing Stent & Post Stent Flow",
-      "available": false
-    },
-    {
-      "key": "serial_ecgs_post_procedure",
-      "label": "Serial ECGs (Post Procedure)",
-      "available": false
-    },
-    {
-      "key": "cardiac_enzymes_post_procedure",
-      "label": "Cardiac Enzymes (Troponins T/I or CPK-MB) (Post Procedure)",
-      "available": false
-    },
-    {
-      "key": "procedure_operation_notes",
-      "label": "Procedure / Operation Notes",
-      "available": true
-    },
-    {
-      "key": "barcode_of_stent_used",
-      "label": "Barcode of the Stent(s) Used (Bare Metal/Drug Eluting Stent)",
-      "available": false
     }
   ],
   "deviations_declared": []

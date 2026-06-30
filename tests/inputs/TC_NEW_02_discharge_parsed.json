@@ -1,0 +1,128 @@
+{
+  "preauth_reference": "TC_NEW_02",
+  "case_id": "TC_NEW_02",
+  "preauth_input_path": "tests\\inputs\\TC_NEW_02.json",
+  "hospital": {
+    "name": "Apollo Speciality Hospital",
+    "hospital_code": null,
+    "address": "21, Greams Road, Chennai - 600006, Tamil Nadu",
+    "district": "Chennai"
+  },
+  "patient": {
+    "name": "Aditya Suresh",
+    "pmjay_id": "P002",
+    "age": 12,
+    "gender": "M",
+    "address": "34, Anna Nagar East, Chennai - 600102",
+    "contact_number": "+91-9500123456",
+    "ipd_number": "APH2026TCNEW02",
+    "pmjay_case_id": "TC_NEW_02"
+  },
+  "treating_consultant": {
+    "name": "Dr. Meenakshi Sundaram",
+    "contact_number": null,
+    "qualification": "MBBS, MS (ENT), DLO",
+    "registration_number": "TN-MED-44821",
+    "specialty": "ENT (Ear, Nose & Throat)"
+  },
+  "admission": {
+    "date_of_admission": "2026-06-25",
+    "time_of_admission": "10:00",
+    "date_of_discharge": "2026-06-29",
+    "time_of_discharge": "12:00",
+    "date_of_operation": "2026-06-26",
+    "actual_los_days": 4,
+    "ward_category_actual": "ward",
+    "bed_category_breakdown": {
+      "ward_days": 4,
+      "hdu_days": 0,
+      "icu_days": 0,
+      "icu_vent_days": 0
+    },
+    "admission_type": "elective",
+    "package_booked": "SL016A",
+    "discharge_status": "recovered",
+    "discharge_condition": "Stable"
+  },
+  "clinical": {
+    "presenting_complaints": "Recurrent sore throat with high fever, 8-9 episodes per year for 3 years. Difficulty swallowing. Habitual snoring and mouth breathing at night.",
+    "duration_of_complaints": "3 Years",
+    "initial_assessment": "General Condition Conscious, cooperative, well-nourished child. Mouth breathing noted. Weight / Height 38 kg / 148 cm Vitals BP 104/66 mmHg, Pulse 84/min, SpO2 99% (room air), Temp 98.6 F, RR 18/min CVS S1 S2 heard, no murmurs Respiratory Air entry bilateral, clear Abdomen Soft, non-tender CNS No focal deficits Local — Oropharynx Bilateral tonsils Grade III enlargement, cryptic surface, congested. No peritonsillar bulge. Uvula midline. Posterior pharyngeal wall — mild granularity. Local — Nose Bilateral inferior turbinate hypertrophy. Nasal mucosa congested. Local — Ears Bilateral tympanic membranes intact. No middle ear effusion. Pre-operative Examination: BP 104/66 mmHg, Pulse 84/min, SpO2 99%, afebrile. Grade III bilateral tonsillar hypertrophy, cryptic and congested. X-ray neck lateral: adenoid-nasopharynx ratio 0.7 — adenoid hypertrophy confirmed.",
+    "significant_past_history": "Recurrent tonsillitis since age 9. No other chronic illnesses. No known drug allergies. No previous surgeries.",
+    "primary_diagnosis_at_admission": "Chronic Recurrent Tonsillitis, Grade III Bilateral Tonsillar Hypertrophy with Adenoid Hypertrophy — ICD-10: J35.0 / J35.3",
+    "final_diagnosis_at_discharge": "Post-operative status following bilateral tonsillectomy and adenoidectomy for chronic recurrent tonsillitis with Grade III tonsillar hypertrophy and adenoid hypertrophy — ICD-10: J35.3",
+    "icd10_codes": [
+      "J35.0",
+      "J35.3"
+    ],
+    "key_investigations": "Haemoglobin (Hb), WBC Count, Platelet Count, Bleeding Time (BT), Clotting Time (CT), Blood Group, Blood Sugar Random, ECG, X-Ray Neck Lateral View.",
+    "investigation_findings": "BP 104/66 mmHg, Pulse 84/min, SpO2 99%, afebrile. Grade III bilateral tonsillar hypertrophy, cryptic and congested. X-ray neck lateral: adenoid-nasopharynx ratio 0.7 — adenoid hypertrophy confirmed. Haemoglobin (Hb) 12.4 g/dL, WBC Count 8,600 /cumm, Platelet Count 2.8 Lakh, Bleeding Time (BT) 2 min 30 sec, Clotting Time (CT) 5 min 10 sec, Blood Group B Positive, Blood Sugar Random 88 mg/dL, ECG Normal sinus rhythm, X-Ray Neck Lateral View Enlarged adenoid shadow. Adenoid-nasopharynx ratio 0.7 (elevated). No retropharyngeal collection. Adenoid hypertrophy.",
+    "treatment_given": "Day 1 (26/06/2026): Comfortable post-op, vitals stable, IV fluids and IV analgesics. Throat pain expected and managed with IV Paracetamol and Tramadol.\nDay 2 (27/06/2026): Afebrile, tolerating oral liquids, throat pain persisting — IV analgesics continued. No bleeding from operative site.\nDay 3 (28/06/2026): Low-grade fever (99.2F), throat pain — clinical decision to extend stay by 1 day for IV antibiotics and observation. No signs of secondary haemorrhage.\nDay 4 (29/06/2026): Afebrile, throat pain improving, tolerating soft diet, declared medically fit for discharge.",
+    "operative_findings": "Bilateral Grade III tonsils — severely hypertrophied, cryptic, adherent to pillars. Adenoids: large, obstructing posterior choanae bilaterally — adenoidectomy clinically necessary. No intraoperative complications.",
+    "final_procedure_performed": "Bilateral Tonsillectomy and Adenoidectomy",
+    "complications": "Prolonged throat pain and low-grade fever on Day 3 necessitating 1-day extension of hospital stay. No secondary haemorrhage. No airway compromise.",
+    "follow_up_date": "2026-07-06",
+    "advice_on_discharge": "Medications: Tab. Amoxicillin-Clavulanate 375mg 1 tablet Twice daily 5 Days, Tab. Paracetamol 500mg 1 tablet Three times daily 5 Days, Tab. Ibuprofen 200mg 1 tablet Twice daily after food 3 Days, Syp. Pantoprazole 20mg 5 ml Once daily before breakfast 7 Days, Throat Gargles (Betadine diluted) As directed Twice daily 7 Days. Follow-up: Day 7 (06/07/2026): Post-operative wound check at ENT OPD. Day 14 (13/07/2026): Review — histopathology report collection. Diet: Cold soft diet for 2 weeks. Avoid hot, spicy, hard foods for 3 weeks. Activity: Rest at home for 1 week. Avoid strenuous activity for 3 weeks. No school for 10 days. Warning Signs: Report immediately for any fresh bleeding from mouth/nose, high fever (>101F), or difficulty breathing.",
+    "discharge_summary_text": "Apollo Speciality Hospital\n21, Greams Road, Chennai - 600006, Tamil Nadu\nPh: 044-28293333 | Email: records@apollochennai.org\nHospital Reg No: TN/CHE/2003/00412 | PMJAY Empanelment ID: H001\nDISCHARGE SUMMARY\nSummary No: APH/DS/2026/TCNEW02 Date: 29/06/2026\nSECTION 1 — HOSPITAL & PATIENT INFORMATION\nHospital Name Apollo Speciality Hospital\nAddress 21, Greams Road, Chennai - 600006, Tamil Nadu\nPMJAY Empanelment ID H001\nPatient Name Aditya Suresh\nAge / Gender 12 Years / Male\nGuardian Mr. Suresh Krishnamurthy (Father)\nPMJAY Beneficiary ID P002\nPMJAY Card No. TN-PMJAY-2024-002567\nAddress 34, Anna Nagar East, Chennai - 600102\nSECTION 2 — ADMISSION & DISCHARGE DETAILS\nDate & Time of Admission 25/06/2026 at 10:00 hrs\nDate & Time of Discharge 29/06/2026 at 12:00 hrs\nTotal Duration of Stay 4 Days (pre-auth indicative: 3 Days)\nReason for Extended Stay Post-operative pain management — patient required additional IV analgesics and\nobservation on Day 3 due to throat pain and low-grade fever. Extended by 1 day on\nclinical grounds.\nType of Admission Planned / Elective\nWard / Room Category General Ward\nTreating Consultant Dr. Meenakshi Sundaram\nQualification MBBS, MS (ENT), DLO\nRegistration Number TN-MED-44821\nSpecialty ENT (Ear, Nose & Throat)\nPMJAY Package Booked SL016A — Tonsillectomy (U/L tonsillectomy unilateral/bilateral)\nPre-Auth Reference PMJAY-PREAUTH-2026-TCNEW02-001\nSECTION 3 — CLINICAL SUMMARY\nPresenting Complaints:\nRecurrent sore throat with high fever, 8-9 episodes per year for 3 years. Difficulty swallowing. Habitual snoring and\nmouth breathing at night.\nRelevant Medical History:\nRecurrent tonsillitis since age 9. No other chronic illnesses. No known drug allergies. No previous surgeries.\nPre-operative Examination:\nBP 104/66 mmHg, Pulse 84/min, SpO2 99%, afebrile. Grade III bilateral tonsillar hypertrophy, cryptic and congested.\nX-ray neck lateral: adenoid-nasopharynx ratio 0.7 — adenoid hypertrophy confirmed.\nSECTION 4 — DIAGNOSIS\nProvisional Diagnosis (Admission) Chronic Recurrent Tonsillitis, Grade III Bilateral Tonsillar Hypertrophy with Adenoid\nHypertrophy — ICD-10: J35.0 / J35.3\nFinal Diagnosis (Discharge) Post-operative status following bilateral tonsillectomy and adenoidectomy for chronic\nrecurrent tonsillitis with Grade III tonsillar hypertrophy and adenoid hypertrophy —\nICD-10: J35.3\nSECTION 5 — PROCEDURES PERFORMED\nDEVIATION NOTE: Pre-authorisation was obtained for bilateral tonsillectomy (SL016A). During surgery under GA,\nsignificant adenoid hypertrophy was confirmed on direct visualisation (consistent with pre-operative X-ray finding of\nadenoid-nasopharynx ratio 0.7). Adenoidectomy was performed in the same sitting as it was clinically necessary to\naddress the obstructive adenoid tissue. This is an intraoperative clinical decision deviation from the pre-authorised\nprocedure.\nProcedure 1 (Pre-authed) Bilateral Tonsillectomy — PMJAY Package SL016A\nProcedure 2 (Additional) Adenoidectomy — performed intraoperatively, not separately pre-authed\nDate of Surgery 26/06/2026 at 09:30 hrs\nDuration 75 minutes (combined)\nAnaesthesia General Anaesthesia — Dr. Kavitha Rajan, MD Anaesthesiology, Reg:\nTN-MED-31045\nTechnique — Tonsillectomy Dissection and snare technique. Bilateral tonsils removed. Haemostasis achieved\nwith bipolar cautery.\nTechnique — Adenoidectomy Adenoid tissue curetted under direct vision. Haemostasis achieved. Specimens sent\nfor histopathology.\nIntraoperative Findings Bilateral Grade III tonsils — severely hypertrophied, cryptic, adherent to pillars.\nAdenoids: large, obstructing posterior choanae bilaterally — adenoidectomy clinically\nnecessary. No intraoperative complications.\nSECTION 6 — POST-OPERATIVE COURSE\nDay 1 (26/06/2026): Comfortable post-op, vitals stable, IV fluids and IV analgesics. Throat pain expected and\nmanaged with IV Paracetamol and Tramadol.\nDay 2 (27/06/2026): Afebrile, tolerating oral liquids, throat pain persisting — IV analgesics continued. No bleeding from\noperative site.\nDay 3 (28/06/2026): Low-grade fever (99.2F), throat pain — clinical decision to extend stay by 1 day for IV antibiotics\nand observation. No signs of secondary haemorrhage.\nDay 4 (29/06/2026): Afebrile, throat pain improving, tolerating soft diet, declared medically fit for discharge.\nSECTION 7 — COMPLICATIONS\nNo intraoperative complications. Post-operative: prolonged throat pain and low-grade fever on Day 3 necessitating\n1-day extension of hospital stay. No secondary haemorrhage. No airway compromise.\nSECTION 8 — CONDITION AT DISCHARGE\nStable. Afebrile. Throat pain reducing. Tolerating soft diet. Operative sites healing well. No active bleeding.\nSECTION 9 — DISCHARGE MEDICATIONS\n# Medication Dose Frequency Duration\n1 Tab. Amoxicillin-Clavulanate 375mg 1 tablet Twice daily 5 Days\n2 Tab. Paracetamol 500mg 1 tablet Three times daily 5 Days\n3 Tab. Ibuprofen 200mg 1 tablet Twice daily after food 3 Days\n4 Syp. Pantoprazole 20mg 5 ml Once daily before breakfast 7 Days\n5 Throat Gargles (Betadine diluted) As directed Twice daily 7 Days\nSECTION 10 — FOLLOW-UP INSTRUCTIONS\nDay 7 (06/07/2026): Post-operative wound check at ENT OPD.\nDay 14 (13/07/2026): Review — histopathology report collection.\nDiet: Cold soft diet for 2 weeks. Avoid hot, spicy, hard foods for 3 weeks.\nActivity: Rest at home for 1 week. Avoid strenuous activity for 3 weeks. No school for 10 days.\nWarning Signs: Report immediately for any fresh bleeding from mouth/nose, high fever (>101F), or difficulty\nbreathing.\nSECTION 11 — DOCUMENTS SUBMITTED WITH THIS DISCHARGE SUMMARY\nThe following documents are available and submitted for PMJAY claim processing:\n# Document Status\n1 Discharge Summary (CAM Annexure 6 format) Available — this document\n2 Operative Notes (bilateral tonsillectomy + adenoidectomy) Available\n3 Pre-Anaesthesia Check-up Report (ASA Grade I, dated 24/06/2026) Available\n4 Post-operative Clinical Photograph (operative site Day 1) Available\n5 Intraoperative Clinical Photograph (tonsil and adenoid specimen) Available\n6 Gross Specimen Photograph (removed tonsils and adenoid tissue) Available\n7 Histopathology Report (tonsil and adenoid tissue — sent for HPE) Available\n8 Pre-operative Blood Reports (CBC, BT/CT, Blood Group, Sugar, ECG) Available\n9 X-Ray Neck Lateral View Report (adenoid hypertrophy confirmed) Available\n10 Indoor Case Papers / Clinical Notes Available\n11 Informed Consent Form (signed by parent/guardian) Available\n12 PMJAY Beneficiary Card Copy Available\n13 Patient Photo on Hospital Bed (admission) Available\n14 Anaesthesia Record Available\n15 Deviation Justification Letter — Adenoidectomy (intraoperative decision) Available\nSECTION 12 — TREATING DOCTOR'S DECLARATION\nI certify that the patient was under my care, all treatments were medically necessary, procedures were performed as\ndocumented, and the extended stay was clinically warranted. The additional adenoidectomy was an intraoperative\nclinical decision based on direct visualisation confirming significant obstructive adenoid hypertrophy consistent with\npre-operative imaging. All mandatory claim documents are enclosed.\nConsultant ENT Surgeon PMAM (PM-JAY Arogya Mitra) Guardian / Attendant\nDr. Meenakshi Sundaram Ms. Rani Selvam Mr. Suresh Krishnamurthy (Father)\nMBBS, MS (ENT), DLO PMAM ID: TN-PMAM-00934 (Signed)\nReg: TN-MED-44821 (Signed) Date: 29/06/2026\nDate: 29/06/2026 Date: 29/06/2026\n(Signed)",
+    "operative_notes_text": null,
+    "pre_anaesthesia_text": null
+  },
+  "discharge_medications": [
+    "Tab. Amoxicillin-Clavulanate 375mg 1 tablet Twice daily 5 Days",
+    "Tab. Paracetamol 500mg 1 tablet Three times daily 5 Days",
+    "Tab. Ibuprofen 200mg 1 tablet Twice daily after food 3 Days",
+    "Syp. Pantoprazole 20mg 5 ml Once daily before breakfast 7 Days",
+    "Throat Gargles (Betadine diluted) As directed Twice daily 7 Days"
+  ],
+  "signatures": {
+    "treating_consultant_signed": true,
+    "pmam_signed": true,
+    "patient_or_attendant_signed": true
+  },
+  "patient_amount_collected_inr": 0,
+  "sha_notification_date": null,
+  "implant_details": null,
+  "documents_submitted": [
+    {
+      "key": "discharge_summary",
+      "label": "Discharge Summary",
+      "available": true
+    },
+    {
+      "key": "clinical_notes",
+      "label": "Clinical notes (detailing signs, symptoms, examination findings, indications for doing the procedure & advise for admission)",
+      "available": true
+    },
+    {
+      "key": "throat_culture_report",
+      "label": "Throat culture report",
+      "available": false
+    },
+    {
+      "key": "indoor_case_papers",
+      "label": "Indoor case papers",
+      "available": true
+    },
+    {
+      "key": "procedure_note_operative_note",
+      "label": "Procedure note/ operative note",
+      "available": true
+    },
+    {
+      "key": "detailed_discharge_summary",
+      "label": "Detailed Discharge summary",
+      "available": true
+    },
+    {
+      "key": "histopathology_report",
+      "label": "Histopathology report",
+      "available": true
+    },
+    {
+      "key": "post_procedure_clinical_photograph",
+      "label": "Post procedure clinical photograph of the affected part",
+      "available": true
+    }
+  ],
+  "deviations_declared": []
+}
