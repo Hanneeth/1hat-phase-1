@@ -44,6 +44,45 @@ def _load_stg_for_prediction(procedure_code: str) -> dict | None:
         return None
 
 
+def _format_comorbidities(comorbidities: list) -> str:
+    """Format comorbidities list into a readable string for the prompt.
+
+    Handles list elements that are either dicts or strings.
+
+    Args:
+        comorbidities: List of comorbidities (dicts or strings).
+
+    Returns:
+        Formatted single-line string with "; " separators, or "None reported".
+    """
+    if not comorbidities:
+        return "None reported"
+    formatted_items = []
+    for item in comorbidities:
+        if isinstance(item, dict):
+            condition = item.get("condition")
+            if not condition:
+                continue
+            details = []
+            duration = item.get("duration")
+            if duration:
+                details.append(f"duration: {duration}")
+            controlled = item.get("controlled")
+            if controlled is True:
+                details.append("controlled")
+            elif controlled is False:
+                details.append("uncontrolled")
+            if details:
+                formatted_items.append(f"{condition} ({', '.join(details)})")
+            else:
+                formatted_items.append(condition)
+        elif isinstance(item, str):
+            formatted_items.append(item)
+    if not formatted_items:
+        return "None reported"
+    return "; ".join(formatted_items)
+
+
 def _build_query_prediction_prompt(
     stg_dict: dict,
     clinical,
@@ -112,7 +151,7 @@ def _build_query_prediction_prompt(
             f"Registration Number: {td.registration_number}"
         )
 
-    comorb_str = ", ".join(clinical.comorbidities) if clinical.comorbidities else "None"
+    comorb_str = _format_comorbidities(clinical.comorbidities)
 
     # Section 7 Investigations
     investigations_lines = []

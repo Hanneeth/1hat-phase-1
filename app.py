@@ -120,7 +120,11 @@ tab1, tab2, tab3 = st.tabs([
 
 with tab1:
     # 5. Mode Selector
-    mode = st.radio("Mode", ["Test Case Mode", "Manual Input Mode"], horizontal=True)
+    mode = st.radio(
+        "Mode",
+        ["Test Case Mode", "Upload JSON", "Manual Input Mode"],
+        horizontal=True
+    )
 
     raw_json = None
     validation_failed = False
@@ -177,6 +181,54 @@ with tab1:
                     st.write(f"**Patient ID:** {patient_id} | **Hospital ID:** {hospital_id}")
 
                 raw_json = tc_data
+
+    elif mode == "Upload JSON":
+        uploaded_json = st.file_uploader(
+            "Upload Pre-Auth Input JSON",
+            type=["json"],
+            key="preauth_json_uploader",
+            help=(
+                "Upload any valid IRIS pre-auth input JSON file. "
+                "Does not need to be in tests/inputs/. "
+                "Must follow the standard TC input schema."
+            )
+        )
+
+        if uploaded_json is not None:
+            try:
+                raw_bytes = uploaded_json.read()
+                tc_data = json.loads(raw_bytes.decode("utf-8"))
+                with st.container(border=True):
+                    st.caption("UPLOADED FILE")
+                    st.write(uploaded_json.name)
+                    st.caption("CLINICAL SNAPSHOT")
+                    clinical = tc_data.get("clinical", {})
+                    st.write(
+                        f"**Chief Complaints:** "
+                        f"{clinical.get('chief_complaints', '—')}"
+                    )
+                    st.write(
+                        f"**Diagnosis:** "
+                        f"{clinical.get('provisional_diagnosis', '—')}"
+                    )
+                    planned = clinical.get("planned_procedure")
+                    if planned:
+                        st.write(f"**Planned Procedure:** {planned}")
+                    patient_id = tc_data.get("patient", {}).get("patient_id", "—")
+                    hospital_id = tc_data.get("hospital", {}).get("hospital_id", "—")
+                    st.write(
+                        f"**Patient ID:** {patient_id} | "
+                        f"**Hospital ID:** {hospital_id}"
+                    )
+                raw_json = tc_data
+            except Exception as e:
+                st.error(f"Failed to parse uploaded JSON: {e}")
+                raw_json = None
+                validation_failed = True
+        else:
+            st.info("Upload a JSON file to run the pipeline.")
+            raw_json = None
+            validation_failed = True
 
     else:
         # Manual Input Mode
@@ -548,30 +600,47 @@ with tab1:
                         enhancement_requests = validated.get("enhancement_requests_needed", 0)
 
                         rate_display = f"₹{base_rate:,}" if base_rate is not None else "—"
-                        stg_icon = "✅" if stg_eligible else ("❌" if stg_eligible is False else "⚠️")
 
-                        with st.expander(
-                            f"{pkg_code} / {proc_code} — {pkg_name}  |  {role.upper()}  |  {rate_display}",
-                            expanded=True
-                        ):
-                            c1, c2, c3, c4 = st.columns(4)
-                            c1.markdown(f"**Procedure**\n\n{proc_name}")
-                            c2.markdown(f"**Specialty**\n\n{specialty}")
-                            c3.markdown(f"**Billing Type**\n\n{billing_type}")
-                            c4.markdown(f"**Pre-Auth Group**\n\nGroup {group}")
+                        with st.container(border=True):
+                            st.markdown(f"### {proc_code} &nbsp;·&nbsp; {pkg_name}")
+                            st.caption(
+                                f"Package: {pkg_code} &nbsp;|&nbsp; Role: {role.upper()} "
+                                f"&nbsp;|&nbsp; Group {group} &nbsp;|&nbsp; "
+                                f"Deduction: {factor*100:.0f}%"
+                            )
 
-                            c5, c6, c7, c8 = st.columns(4)
-                            c5.markdown(f"**Role**\n\n{role}")
-                            c6.markdown(f"**Deduction Factor**\n\n{factor}")
-                            c7.markdown(f"**Base Rate**\n\n{rate_display}")
-                            c8.markdown(f"**STG Eligible**\n\n{stg_icon}")
+                            col1, col2, col3, col4 = st.columns(4)
+                            col1.metric("Base Rate", rate_display)
+                            col2.metric("Billing Type", billing_type.title() if billing_type else "—")
+                            col3.metric("Specialty", specialty if specialty else "—")
+                            col4.metric(
+                                "STG Eligible",
+                                "✅ Yes" if stg_eligible is True
+                                else ("❌ No" if stg_eligible is False else "⚠️ Unknown")
+                            )
 
                             if stg_reasoning:
-                                st.caption(f"STG Reasoning: {stg_reasoning}")
+                                st.caption("STG Reasoning")
+                                st.info(stg_reasoning)
+
                             if enhancement_applicable:
+                                st.warning(
+                                    f"⚡ Enhancement applicable — "
+                                    f"{enhancement_requests} request(s) needed"
+                                )
+
+                            strat = validated.get("stratification", {})
+                            if strat.get("determinable") and strat.get("selected_stratum"):
                                 st.caption(
-                                    f"Enhancement Applicable — estimated {enhancement_requests} "
-                                    f"enhancement request(s) needed"
+                                    f"Stratum: {strat['selected_stratum']}"
+                                    + (f" — {strat['note']}" if strat.get('note') else "")
+                                )
+
+                            implant = validated.get("implant", {})
+                            if implant.get("required"):
+                                st.caption(
+                                    f"Implant: {implant.get('name', '—')} | "
+                                    f"₹{implant.get('cost_inr', 0):,}"
                                 )
 
                 # 10.3 Blocked Candidates
@@ -704,7 +773,7 @@ with tab2:
 
     claim_mode = st.radio(
         "Input Mode",
-        ["Test Case JSON", "Upload Documents", "Use Stage 1/2 Session Output"],
+        ["Test Case JSON", "Upload Documents", "Use Stage 1/2 Session Output", "Test Case Folder (PDFs)"],
         horizontal=True,
         key="claim_mode_radio"
     )
@@ -1263,6 +1332,137 @@ with tab2:
                         claim_output_dict, claim_logs, claim_error = run_claim_with_log_capture(
                             parsed_discharge_dict,
                             st.session_state.output_dict,
+                            preauth_input_dict,
+                        )
+                    st.session_state.claim_output_dict = claim_output_dict
+                    st.session_state.claim_logs += "\n" + (claim_logs or "")
+                    st.session_state.claim_run_error = claim_error
+
+            if st.session_state.claim_intake_error:
+                st.error(f"Intake failed: {st.session_state.claim_intake_error}")
+            if st.session_state.claim_run_error:
+                st.error(f"Stage 3 failed: {st.session_state.claim_run_error}")
+
+            if st.session_state.claim_output_dict is not None:
+                render_claim_output(st.session_state.claim_output_dict)
+
+    elif claim_mode == "Test Case Folder (PDFs)":
+        inputs_dir = Path(__file__).parent / "tests" / "inputs"
+        tc_folders = []
+        if inputs_dir.exists() and inputs_dir.is_dir():
+            for entry in inputs_dir.iterdir():
+                if entry.is_dir():
+                    files = list(entry.glob("*.pdf")) + list(entry.glob("*.docx"))
+                    if files:
+                        tc_folders.append(entry.name)
+        
+        tc_folders = sorted(tc_folders)
+        
+        if not tc_folders:
+            st.warning("No folders with PDF/DOCX files found in tests/inputs/")
+        else:
+            selected_folder_name = st.selectbox(
+                "Select Test Case Folder",
+                options=tc_folders,
+                key="discharge_folder_selector"
+            )
+            
+            selected_folder_path = inputs_dir / selected_folder_name
+            folder_files = sorted(
+                list(selected_folder_path.glob("*.pdf")) + list(selected_folder_path.glob("*.docx")),
+                key=lambda p: p.name
+            )
+            for f_path in folder_files:
+                size_kb = f_path.stat().st_size / 1024.0
+                st.caption(f"📄 {f_path.name} ({size_kb:.1f} KB)")
+                
+            preauth_output_dict = None
+            cache_found = False
+            cache_path = Path(__file__).parent / "tests" / "outputs" / f"{selected_folder_name}_output.json"
+            
+            if cache_path.exists():
+                try:
+                    with open(cache_path, "r", encoding="utf-8") as f_cache:
+                        preauth_output_dict = json.load(f_cache)
+                    cache_found = True
+                    st.success(f"Pre-auth cache found for {selected_folder_name}")
+                except Exception as e:
+                    st.error(f"Failed to load cache from {cache_path}: {e}")
+            else:
+                st.warning(
+                    f"No pre-auth cache found at {cache_path}. "
+                    f"Stage 3 will run without cross-consistency checks."
+                )
+
+            run_disabled_folder = not bool(folder_files)
+            claim_run_clicked = st.button(
+                "▶ Run Claims Verification",
+                type="primary",
+                use_container_width=True,
+                key="claim_run_folder_btn",
+                disabled=run_disabled_folder
+            )
+
+            if claim_run_clicked and folder_files:
+                files_payload = []
+                for f_path in folder_files:
+                    files_payload.append({
+                        "filename": f_path.name,
+                        "bytes": f_path.read_bytes(),
+                        "suffix": f_path.suffix.lower()
+                    })
+
+                with st.spinner("Running intake layer... extracting and parsing documents"):
+                    intake_log_buffer = io.StringIO()
+                    intake_handler = logging.StreamHandler(intake_log_buffer)
+                    intake_handler.setFormatter(
+                        logging.Formatter("[%(levelname)s][%(name)s] %(message)s")
+                    )
+                    intake_handler.setLevel(logging.DEBUG)
+                    root_logger = logging.getLogger()
+                    prev_level = root_logger.level
+                    root_logger.setLevel(logging.DEBUG)
+                    root_logger.addHandler(intake_handler)
+
+                    try:
+                        parsed_discharge_dict = run_intake_from_bytes(
+                            files_payload,
+                            selected_folder_name,
+                            preauth_output_dict,
+                        )
+                        intake_succeeded = True
+                        st.session_state.claim_intake_error = None
+                    except IntakeError as e:
+                        intake_succeeded = False
+                        parsed_discharge_dict = None
+                        st.session_state.claim_output_dict = None
+                        st.session_state.claim_intake_error = str(e)
+                    except Exception as e:
+                        intake_succeeded = False
+                        parsed_discharge_dict = None
+                        st.session_state.claim_output_dict = None
+                        st.session_state.claim_intake_error = f"Unexpected error: {e}"
+                    finally:
+                        root_logger.removeHandler(intake_handler)
+                        root_logger.setLevel(prev_level)
+
+                    st.session_state.claim_logs = intake_log_buffer.getvalue()
+
+                if intake_succeeded:
+                    st.success("Documents parsed successfully. Running Stage 3...")
+                    preauth_input_dict = {}
+                    preauth_input_path = Path(__file__).parent / "tests" / "inputs" / f"{selected_folder_name}.json"
+                    if preauth_input_path.exists():
+                        try:
+                            with open(preauth_input_path, "r", encoding="utf-8") as f_in:
+                                preauth_input_dict = json.load(f_in)
+                        except Exception:
+                            pass
+
+                    with st.spinner("Running Stage 3 claims verification..."):
+                        claim_output_dict, claim_logs, claim_error = run_claim_with_log_capture(
+                            parsed_discharge_dict,
+                            preauth_output_dict or {},
                             preauth_input_dict,
                         )
                     st.session_state.claim_output_dict = claim_output_dict

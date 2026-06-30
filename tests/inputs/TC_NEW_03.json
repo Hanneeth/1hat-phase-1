@@ -1,0 +1,207 @@
+{
+  "session_id": "IRIS-TCNEW03-20260702",
+  "created_at": "2026-07-02T09:00:00+05:30",
+  "patient": {
+    "patient_id": "P003"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-07-02",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Severe colicky right flank pain radiating to right groin and inner thigh for 4 days, nausea, vomiting, burning micturition, increased urinary frequency, microscopic haematuria",
+    "duration_days": 4,
+    "history_of_present_illness": "Mr. Selvam Rajakumar, a 38-year-old male, presents with a 4-day history of severe colicky right flank pain radiating to the right groin and inner thigh. Pain is intermittent, severe in intensity, associated with nausea, vomiting, burning micturition and increased urinary frequency — symptoms consistent with a lower ureteric calculus near the vesicoureteric junction. Patient noticed blood in urine on day 2. No fever. No urinary retention. USG abdomen shows a 9mm calculus in the right lower ureter at the vesicoureteric junction (VUJ) with mild right hydronephrosis. CT KUB confirms right lower ureteric calculus at VUJ measuring 9x7mm. Left kidney and ureter entirely normal. Referred for right ureteroscopy and stone removal — lower ureter.",
+    "provisional_diagnosis": "Right lower ureteric calculus 9mm at vesicoureteric junction (VUJ) with mild right hydronephrosis — ICD-10: N20.1",
+    "planned_procedure": "Right ureteroscopy with lithotripsy and stone removal — lower ureter",
+    "weight_kg": 72,
+    "height_cm": 168,
+    "vitals": {
+      "bp_systolic_mmhg": 128,
+      "bp_diastolic_mmhg": 82,
+      "pulse_bpm": 86,
+      "spo2_pct": 98,
+      "temperature_f": 98.8,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": 102
+    },
+    "examination_findings": {
+      "general": "Conscious, cooperative, in mild discomfort. No pallor or icterus.",
+      "cvs": "S1 S2 heard, no murmurs",
+      "rs": "Air entry bilateral, clear",
+      "abdomen": "Soft, mild right flank and right iliac fossa tenderness. Right renal angle tenderness positive. Left renal angle tenderness negative.",
+      "cns": "No focal deficits",
+      "local": "Right flank and right iliac fossa: tenderness present. Right renal angle tenderness — positive. Left side: no tenderness. No palpable mass. External genitalia normal."
+    },
+    "investigations": [
+      {
+        "type": "usg",
+        "result_summary": "USG Abdomen and Pelvis (01/07/2026): Right lower ureteric calculus 9mm at vesicoureteric junction (VUJ) with mild right hydronephrosis. Right renal pelvis mildly dilated. Left kidney and ureter normal. Bladder — mild wall thickening near right VUJ. No other calculi.",
+        "structured_values": [
+          {
+            "parameter": "calculus_side",
+            "value": "right",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "calculus_size_mm",
+            "value": 9,
+            "unit": "mm",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "calculus_location",
+            "value": "right_lower_ureter_VUJ",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "hydronephrosis_right",
+            "value": "mild",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-07-01"
+      },
+      {
+        "type": "ct_scan",
+        "result_summary": "CT KUB (01/07/2026): Right lower ureteric calculus at vesicoureteric junction (VUJ) measuring 9x7mm causing mild right hydronephrosis. Stone is in the distal ureter just proximal to the bladder. Left ureter and kidney entirely normal. No other calculi identified.",
+        "structured_values": [
+          {
+            "parameter": "calculus_side",
+            "value": "right",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "calculus_size_mm",
+            "value": "9x7",
+            "unit": "mm",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "calculus_location",
+            "value": "right_lower_ureter_VUJ",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-07-01"
+      },
+      {
+        "type": "blood_reports",
+        "result_summary": "CBC: Hb 14.2 g/dL, WBC 9800/cumm, Platelets 2.6 lakh. RFT: Creatinine 1.1 mg/dL, Urea 32 mg/dL. Electrolytes: Na 138, K 4.2 mEq/L. PT/INR: 13.2 sec / 1.05.",
+        "structured_values": [
+          {
+            "parameter": "creatinine",
+            "value": 1.1,
+            "unit": "mg/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "Hb",
+            "value": 14.2,
+            "unit": "g/dL",
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-07-01"
+      },
+      {
+        "type": "urine_examination",
+        "result_summary": "Urine routine: Microscopic haematuria — RBC 15-20/hpf. Pus cells 2-4/hpf. No casts. Urine culture: No growth.",
+        "structured_values": [
+          {
+            "parameter": "RBC_hpf",
+            "value": "15-20",
+            "unit": "/hpf",
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-07-01"
+      },
+      {
+        "type": "ecg",
+        "result_summary": "Normal sinus rhythm. No abnormality detected.",
+        "structured_values": [],
+        "document_available": true,
+        "report_date": "2026-07-01"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No significant medical history. No previous renal or ureteric stones.",
+    "past_surgical_history": "None",
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "social",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Urology admission and clinical notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo on hospital bed",
+        "available": true
+      },
+      {
+        "key": "usg_report",
+        "label": "USG abdomen and pelvis confirming right lower ureteric calculus at VUJ",
+        "available": true
+      },
+      {
+        "key": "ct_kub_report",
+        "label": "CT KUB confirming right lower ureteric calculus 9x7mm at VUJ",
+        "available": true
+      },
+      {
+        "key": "pre_op_investigations",
+        "label": "Pre-operative blood reports, urine examination, ECG",
+        "available": true
+      },
+      {
+        "key": "anaesthesia_fitness",
+        "label": "Anaesthesia fitness certificate — ASA Grade I",
+        "available": true
+      },
+      {
+        "key": "informed_consent",
+        "label": "Informed consent signed by patient",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Ramesh Natarajan",
+      "registration_number": "TN-MED-38892",
+      "qualification": "MBBS MS MCh Urology",
+      "specialty_code": "GU"
+    },
+    "notes": "Pre-auth for RIGHT lower ureteroscopy and stone removal at VUJ. At discharge stage, the procedure will be documented as LEFT ureteroscopy — simulating a laterality error. This is a MAJOR deviation — wrong side procedure — and should result in CLAIM_BLOCKED at Stage 3."
+  }
+}

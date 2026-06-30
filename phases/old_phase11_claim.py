@@ -21,8 +21,6 @@ EQUIVALENT_KEYS = {
     "ot_notes": "procedure_operative_notes",
     "clinical_photo_intraop": "intraoperative_photo_gross_specimen",
     "clinical_photo_posttreat": "post_treatment_clinical_photograph",
-    "procedure_operation_notes": ["operative_notes", "procedure_note_operative_note", "detailed_procedure_operative_notes"],
-    "serial_ecgs_post_procedure": "ecg_report",
 }
 
 
@@ -348,7 +346,7 @@ def run_phase11(
 
     # Step 11: compute claim status
     try:
-        claim_status = _compute_claim_status(claim_docs_missing, deviations, checklist_results, ds_complete)
+        claim_status = _compute_claim_status(claim_docs_missing, deviations, checklist_results)
     except Exception as exc:
         logger.error("Phase 11 Step 11 error: %s", exc)
         errors.append(f"Step 11 compute claim status failed: {exc}")
@@ -1189,7 +1187,6 @@ def _compute_claim_status(
     claim_docs_missing: list[ClaimDocumentItem],
     deviations: list[DeviationItem],
     cpd_checklist_results: list[CPDChecklistResult],
-    discharge_summary_complete: bool,
 ) -> str:
     """Determine final claim routing state based on priority-ordered severity rules."""
     # 1. Any claim_docs_missing with criticality=="hard_block" -> "CLAIM_BLOCKED"
@@ -1207,10 +1204,6 @@ def _compute_claim_status(
     # 4. Any deviation with severity=="warning" -> "CLAIM_DEVIATION"
     if any(dev.severity == "warning" for dev in deviations):
         return "CLAIM_DEVIATION"
-
-    # NEW RULE — discharge summary completeness (same tier as rules 5/6)
-    if not discharge_summary_complete:
-        return "CLAIM_GAPS"
 
     # 5. Any claim_docs_missing with criticality=="cpd_query_risk" -> "CLAIM_GAPS"
     if any(doc.criticality == "cpd_query_risk" for doc in claim_docs_missing):

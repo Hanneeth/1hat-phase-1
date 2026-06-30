@@ -1,0 +1,205 @@
+{
+  "session_id": "IRIS-TCNEW05-20260620",
+  "created_at": "2026-06-20T08:15:00+05:30",
+  "patient": {
+    "patient_id": "P005"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-20",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Exertional chest discomfort and breathlessness on climbing stairs for the past 6 weeks, relieved by rest",
+    "duration_days": 42,
+    "history_of_present_illness": "Mr. Ravichandran Pillai, a 58-year-old male, presents with retrosternal chest discomfort on exertion (climbing 1-2 flights of stairs) for the past 6 weeks, associated with mild breathlessness, relieved within 5-10 minutes of rest. No discomfort at rest. No radiation to arm or jaw at presentation. No associated diaphoresis or palpitations. Risk factors: hypertensive for 8 years on regular medication, non-diabetic. Referred by cardiologist after positive treadmill test (TMT) for coronary angiography, which confirmed significant single-vessel disease. Admitted for elective percutaneous coronary intervention.",
+    "provisional_diagnosis": "Stable angina with significant single-vessel coronary artery disease (proximal LAD, 80% stenosis) confirmed on coronary angiography — ICD-10: I25.110",
+    "planned_procedure": "Elective Percutaneous Transluminal Coronary Angioplasty (PTCA) with single Bare Metal Stent (BMS) to proximal LAD",
+    "weight_kg": 74,
+    "height_cm": 169,
+    "vitals": {
+      "bp_systolic_mmhg": 138,
+      "bp_diastolic_mmhg": 88,
+      "pulse_bpm": 82,
+      "spo2_pct": 98,
+      "temperature_f": 98.4,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": 102
+    },
+    "examination_findings": {
+      "general": "Conscious, cooperative, well-built, no pallor, icterus, cyanosis, clubbing, or pedal oedema",
+      "cvs": "S1 S2 heard, no murmurs, no added sounds, regular rhythm",
+      "rs": "Air entry bilateral, clear, no added sounds",
+      "abdomen": "Soft, non-tender, no organomegaly",
+      "cns": "No focal neurological deficits",
+      "local": "Not applicable"
+    },
+    "investigations": [
+      {
+        "type": "blood_reports",
+        "result_summary": "CBC: Hb 14.1 g/dL, WBC 7100/cumm, Platelets 2.5 lakh. RFT: Creatinine 0.9 mg/dL, Urea 28 mg/dL. Lipid Profile: Total Cholesterol 218 mg/dL, LDL 142 mg/dL, HDL 38 mg/dL, Triglycerides 178 mg/dL. Blood Sugar Fasting: 102 mg/dL. Troponin I: Negative. PT/INR: 12.6 sec / 1.04.",
+        "structured_values": [
+          {
+            "parameter": "Hb",
+            "value": 14.1,
+            "unit": "g/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "creatinine",
+            "value": 0.9,
+            "unit": "mg/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "LDL",
+            "value": 142,
+            "unit": "mg/dL",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "troponin_I",
+            "value": "negative",
+            "unit": null,
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "blood_sugar_fasting",
+            "value": 102,
+            "unit": "mg/dL",
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-19"
+      },
+      {
+        "type": "ecg",
+        "result_summary": "Sinus rhythm, rate 82/min. No acute ST-T changes at rest. Old TMT (12/06/2026) showed ST depression at peak exercise, Bruce protocol Stage II, terminated due to chest discomfort.",
+        "structured_values": [
+          {
+            "parameter": "rhythm",
+            "value": "sinus",
+            "unit": null,
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "tmt_result",
+            "value": "positive",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-19"
+      },
+      {
+        "type": "angiography",
+        "result_summary": "Coronary Angiography (18/06/2026): Right dominant system. LAD — 80% stenosis in proximal segment, discrete lesion. LCX — mild luminal irregularities, no significant stenosis. RCA — normal. LVEF 58% on ventriculography. Single-vessel disease, proximal LAD, suitable for PTCA with BMS.",
+        "structured_values": [
+          {
+            "parameter": "vessel_disease",
+            "value": "single_vessel_LAD",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "stenosis_pct",
+            "value": 80,
+            "unit": "%",
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "LVEF",
+            "value": 58,
+            "unit": "%",
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-18"
+      },
+      {
+        "type": "xray",
+        "result_summary": "Chest X-Ray PA view: Normal cardiac size, no active cardiopulmonary disease.",
+        "structured_values": [],
+        "document_available": true,
+        "report_date": "2026-06-19"
+      }
+    ],
+    "comorbidities": [
+      {
+        "condition": "Hypertension",
+        "duration": "8 years",
+        "controlled": true,
+        "current_management": "Tab. Telmisartan 40mg OD"
+      }
+    ],
+    "past_medical_history": "Hypertensive for 8 years, well controlled on Telmisartan 40mg OD. No diabetes. No prior cardiac events.",
+    "past_surgical_history": "None",
+    "current_medications": [
+      "Tab. Telmisartan 40mg OD",
+      "Tab. Aspirin 75mg OD (started after angiography)",
+      "Tab. Atorvastatin 40mg OD (started after angiography)"
+    ],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "ex-smoker, quit 5 years ago, 10 pack-years",
+      "alcohol": "occasional",
+      "diet": "mixed"
+    },
+    "family_history": "Father had myocardial infarction at age 62",
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Cardiology admission notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo on hospital bed",
+        "available": true
+      },
+      {
+        "key": "blood_reports",
+        "label": "Pre-procedure blood investigation reports",
+        "available": true
+      },
+      {
+        "key": "ecg_report",
+        "label": "Resting ECG and TMT report",
+        "available": true
+      },
+      {
+        "key": "angiography_report",
+        "label": "Coronary angiography report confirming single-vessel LAD disease",
+        "available": true
+      },
+      {
+        "key": "informed_consent",
+        "label": "Informed consent form signed by patient for PTCA",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Senthil Kumaran",
+      "registration_number": "TN-MED-33761",
+      "qualification": "MBBS MD DM Cardiology",
+      "specialty_code": "MC"
+    },
+    "notes": "Clean elective PTCA case — single-vessel proximal LAD disease confirmed on angiography, positive TMT, no contraindications. ASA Grade II (controlled hypertension). All pre-procedure investigations normal. Happy-path pre-auth expected to approve cleanly with no document gaps. Stage 3 discharge summary will be deliberately built incomplete (missing PMAM signature, final diagnosis at discharge, discharge advice, and doctor qualification) to test CLAIM_GAPS routing via Stage 3 Step 2 completeness check. All other Stage 3 elements (claim docs, LOS, deviations) should be clean."
+  }
+}

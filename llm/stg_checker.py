@@ -372,7 +372,7 @@ def check_stg_eligibility(
                 config=genai.types.GenerateContentConfig(
                     system_instruction=SYSTEM_PROMPT,
                     temperature=0,
-                    max_output_tokens=4096,
+                    max_output_tokens=16384,
                     response_mime_type="application/json",
                     http_options=genai.types.HttpOptions(
                         timeout=LLM_TIMEOUT_SECONDS * 1000,  # SDK uses ms
@@ -395,6 +395,7 @@ def check_stg_eligibility(
                 )
                 return result
 
+            print(f"\n=== STG CHECKER RAW RESPONSE (attempt {attempt}) ===\n{raw_text}\n=====================\n")
             logger.warning(
                 "STG check for %s — invalid JSON response on attempt %d/%d, retrying",
                 procedure_code, attempt, LLM_MAX_RETRIES,
@@ -522,7 +523,7 @@ def check_plausibility(
                 config=genai.types.GenerateContentConfig(
                     system_instruction=_PLAUSIBILITY_SYSTEM,
                     temperature=0,
-                    max_output_tokens=4096,
+                    max_output_tokens=16384,
                     response_mime_type="application/json",
                     http_options=genai.types.HttpOptions(
                         timeout=LLM_TIMEOUT_SECONDS * 1000,
@@ -700,7 +701,7 @@ def resolve_stratum(
                 config=genai.types.GenerateContentConfig(
                     system_instruction=_SYSTEM,
                     temperature=0,
-                    max_output_tokens=4096,
+                    max_output_tokens=16384,
                     response_mime_type="application/json",
                     http_options=genai.types.HttpOptions(
                         timeout=LLM_TIMEOUT_SECONDS * 1000,
@@ -793,9 +794,7 @@ def _build_user_prompt(
 
     investigations_str = _format_investigations(clinical.investigations)
 
-    comorbidities_str = (
-        ", ".join(clinical.comorbidities) if clinical.comorbidities else "None reported"
-    )
+    comorbidities_str = _format_comorbidities(clinical.comorbidities)
 
     pmh_section = (
         f"Past medical history: {clinical.past_medical_history}"
@@ -944,6 +943,45 @@ def _format_examination(examination_findings) -> str:
     if not lines:
         return ""
     return "Examination:\n" + "\n".join(lines)
+
+
+def _format_comorbidities(comorbidities: list) -> str:
+    """Format comorbidities list into a readable string for the prompt.
+
+    Handles list elements that are either dicts or strings.
+
+    Args:
+        comorbidities: List of comorbidities (dicts or strings).
+
+    Returns:
+        Formatted single-line string with "; " separators, or "None reported".
+    """
+    if not comorbidities:
+        return "None reported"
+    formatted_items = []
+    for item in comorbidities:
+        if isinstance(item, dict):
+            condition = item.get("condition")
+            if not condition:
+                continue
+            details = []
+            duration = item.get("duration")
+            if duration:
+                details.append(f"duration: {duration}")
+            controlled = item.get("controlled")
+            if controlled is True:
+                details.append("controlled")
+            elif controlled is False:
+                details.append("uncontrolled")
+            if details:
+                formatted_items.append(f"{condition} ({', '.join(details)})")
+            else:
+                formatted_items.append(condition)
+        elif isinstance(item, str):
+            formatted_items.append(item)
+    if not formatted_items:
+        return "None reported"
+    return "; ".join(formatted_items)
 
 
 def _parse_and_validate(raw_text: str) -> dict | None:

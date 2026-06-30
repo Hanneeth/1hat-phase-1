@@ -169,7 +169,7 @@ def run_intake(folder_path: str) -> dict:
 
         # Step 4: Parse via LLM
         parsed_dict = parse_discharge_from_documents(
-            files_text, preauth_reference, case_id, preauth_doc_keys
+            files_text, preauth_reference, case_id
         )
 
         if parsed_dict is None:
@@ -364,7 +364,7 @@ def run_intake_from_bytes(
 
         # STEP 4 — Parse via LLM:
         parsed_dict = parse_discharge_from_documents(
-            files_text, preauth_reference, case_id, preauth_doc_keys
+            files_text, preauth_reference, case_id
         )
         if parsed_dict is None:
             raise IntakeError(f"Discharge parser returned no result for case {case_id}.")

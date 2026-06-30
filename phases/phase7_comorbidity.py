@@ -82,19 +82,22 @@ def run_phase7(session: IRISSession) -> IRISSession:
     )
 
     for c in comorbidities:
-        if _is_management_condition(c):
+        cond_name = c.get("condition") if isinstance(c, dict) else c
+        if not cond_name:
+            continue
+        if _is_management_condition(cond_name):
             if surgical_admission:
                 session.comorbidity_notes.append(
-                    f"Comorbidity '{c}' is absorbed in the surgical package — do not raise separately."
+                    f"Comorbidity '{cond_name}' is absorbed in the surgical package — do not raise separately."
                 )
             else:
                 session.comorbidity_notes.append(
-                    f"Comorbidity '{c}' managed under current medical package."
+                    f"Comorbidity '{cond_name}' managed under current medical package."
                 )
         else:
             session.add_flag(
                 "COMORBIDITY_REVIEW_NEEDED",
-                f"Comorbidity '{c}' may require separate clinical review — not a standard management condition.",
+                f"Comorbidity '{cond_name}' may require separate clinical review — not a standard management condition.",
                 "info",
             )
 

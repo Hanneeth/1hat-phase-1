@@ -1,0 +1,270 @@
+{
+  "readiness_status": "CONDITIONAL",
+  "selected_packages": [
+    {
+      "validated": {
+        "procedure_code": "SU014A",
+        "package_code": "SU014",
+        "specialty_code": "SU",
+        "package_name": "Ureteroscopy + Stone removal with lithotripsy",
+        "procedure_name": "Lower Ureter",
+        "billing_type": "day_care",
+        "billing_unit": "one_time",
+        "procedure_label": "regular",
+        "auto_approved": "full",
+        "enhancement_applicable": false,
+        "enhancement_requests_needed": null,
+        "reserved_public_only": false,
+        "base_rate_inr": 44900,
+        "stratification": {
+          "determinable": false,
+          "selected_stratum": null,
+          "note": "Stratification type undeterminable from available clinical input \u2014 physician selection required"
+        },
+        "implant": {
+          "required": false,
+          "name": null,
+          "cost_inr": null,
+          "age_appropriate": true,
+          "gender_appropriate": true,
+          "quantity": null
+        },
+        "special_conditions_popup": false,
+        "special_conditions_rule": false,
+        "stg_eligible": true,
+        "stg_missing_criteria": [
+          "Minimum doctor qualification (MCh/DNB or Equivalent in Urology) not specified in clinical presentation"
+        ],
+        "stg_reasoning": "The patient's clinical presentation unambiguously satisfies multiple STG indications for SU014A. The severe colicky right flank pain radiating to the right groin and inner thigh directly matches the 'Colicky pain starting from back and radiating to upper thigh and scrotum/vulva' indication. The associated nausea and vomiting satisfy the 'Colics may be associated with nausea and vomiting' indication. Furthermore, the documented microscopic haematuria and the patient noticing blood in urine satisfy the 'Haematuria may be present with stone at any location' indication. Imaging (USG and CT KUB) confirms a 9mm calculus at the right vesicoureteric junction, which is a lower ureteric stone, making the procedure anatomically appropriate. No clinical thresholds are specified for this procedure, so none are unmet. The absence of the treating doctor's qualification is an administrative gap and does not clinically disqualify the patient.",
+        "is_addon_to": null,
+        "addon_type": null,
+        "match_score": 100.0,
+        "flags": [
+          "STRATIFICATION_UNDETERMINABLE: Stratification type undeterminable from available clinical input \u2014 physician selection required"
+        ]
+      },
+      "role": "primary",
+      "deduction_factor": 1.0,
+      "pre_auth_group": 1
+    }
+  ],
+  "blocked_candidates": [
+    {
+      "procedure_code": "SU094A",
+      "reason_code": "PLAUSIBILITY_FAILED",
+      "message": "The candidate package is for evaluation/investigation and conservative management with medicines, which does not directly correspond to the planned surgical procedure of right ureteroscopy with lithotripsy and stone removal."
+    },
+    {
+      "procedure_code": "SU014B",
+      "reason_code": "STG_NOT_ELIGIBLE",
+      "message": "The patient's clinical presentation and imaging definitively place the calculus at the right vesicoureteric junction (VUJ), which is part of the lower ureter. Procedure SU014B is specifically designated for 'Ureteroscopy with lithotripsy, Upper Ureter'. This represents a direct anatomical mismatch between the patient's pathology and the procedure's intended site. While the patient does exhibit haematuria and colic associated with nausea and vomiting, these are general symptoms of ureteric stones and do not override the anatomical specificity of the procedure. Furthermore, the characteristic pain radiation pattern for upper ureteric stones (back to front) is not present; the patient's pain radiates to the groin and inner thigh, which is consistent with a lower ureteric stone. Therefore, the patient is not eligible for this specific procedure.",
+      "missing_criteria": [
+        "Anatomical mismatch: Procedure SU014B is for upper ureteric stones; imaging (USG and CT KUB) confirms the calculus is located at the right vesicoureteric junction (VUJ), which is in the lower ureter. No stone is present in the upper ureter.",
+        "Pain radiation pattern: The indication 'Colicky pain starting from back and radiating to front (suggestive of upper ureteric stone)' is not met. The patient's pain radiates to the right groin and inner thigh, which is characteristic of a lower ureteric stone, not an upper ureteric stone."
+      ],
+      "confidence": "high",
+      "procedure_name": "Upper Ureter",
+      "package_name": "Ureteroscopy + Stone removal with lithotripsy"
+    }
+  ],
+  "preauth_docs_required": [
+    {
+      "key": "clinical_notes",
+      "label": "Admission / clinical notes",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "patient_photo",
+      "label": "Photo of patient on hospital bed",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "clinical_notes",
+      "label": "Clinical notes",
+      "package_code": "SU014",
+      "available": true,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "ivp_report",
+      "label": "IVP",
+      "package_code": "SU014",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "ct_report",
+      "label": "NCCT",
+      "package_code": "SU014",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "ct_ivp_report",
+      "label": "CT-IVP confirming the indication",
+      "package_code": "SU014",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    }
+  ],
+  "preauth_docs_missing": [
+    {
+      "key": "ivp_report",
+      "label": "IVP",
+      "package_code": "SU014",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "ct_report",
+      "label": "NCCT",
+      "package_code": "SU014",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "ct_ivp_report",
+      "label": "CT-IVP confirming the indication",
+      "package_code": "SU014",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    }
+  ],
+  "query_predictions": [
+    {
+      "procedure_code": "SU014A",
+      "package_name": "Ureteroscopy + Stone removal with lithotripsy",
+      "readiness_verdict": "gaps_present",
+      "verdict_summary": "1 item(s) may prompt PPD query.",
+      "checklist_results": [
+        {
+          "question": "Was the Clinical notes including evaluation findings and planned line of treatment submitted?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "Clinical notes with evaluation findings and planned treatment are explicitly available and detailed."
+        },
+        {
+          "question": "Was the IVP / NCCT/ CT-IVP confirming the indication for the procedure submitted?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "CT KUB report is available and clearly confirms a 9x7mm right lower ureteric calculus with mild hydronephrosis."
+        },
+        {
+          "question": "Was the Clinical notes and IVP / NCCT/ CT-IVP indicative of procedure?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "Clinical notes and CT KUB findings are consistent with the clinical indications for the procedure, confirming a lower ureteric stone."
+        }
+      ],
+      "common_query_risks": [
+        {
+          "query_text": "Clinical notes and IVP / NCCT/ CT-IVP not indicative of the procedure",
+          "risk_level": "low",
+          "reasoning": "Clinical notes and CT KUB clearly indicate the need for the procedure, with symptoms and imaging confirming a lower ureteric stone."
+        },
+        {
+          "query_text": "Clinical notes including evaluation findings and planned line of treatment missing or incomplete at pre-authorization",
+          "risk_level": "low",
+          "reasoning": "Clinical notes with detailed evaluation findings and planned treatment are explicitly available and complete at pre-authorization."
+        },
+        {
+          "query_text": "IVP / NCCT+ CT-IVP confirming the indication for the procedure missing or inadequate at pre-authorization",
+          "risk_level": "low",
+          "reasoning": "CT KUB report is available and clearly confirms a 9x7mm right lower ureteric calculus, adequately confirming the indication."
+        },
+        {
+          "query_text": "Detailed indoor case papers with daily vitals and treatment details missing or incomplete at claim submission",
+          "risk_level": "low",
+          "reasoning": "This query trigger is relevant for claim submission, not pre-authorization, so there is no risk at this stage."
+        },
+        {
+          "query_text": "Post-procedure imaging (X-Ray/USG) not showing stone removal at claim submission",
+          "risk_level": "low",
+          "reasoning": "This query trigger is relevant for claim submission and post-procedure, not pre-authorization, so there is no risk at this stage."
+        },
+        {
+          "query_text": "Detailed Procedure / Operative Notes missing or incomplete at claim submission",
+          "risk_level": "low",
+          "reasoning": "This query trigger is relevant for claim submission and post-procedure, not pre-authorization, so there is no risk at this stage."
+        },
+        {
+          "query_text": "Detailed discharge summary missing or incomplete at claim submission",
+          "risk_level": "low",
+          "reasoning": "This query trigger is relevant for claim submission and post-procedure, not pre-authorization, so there is no risk at this stage."
+        },
+        {
+          "query_text": "Provide Treating Doctor's Prescription advising Hospitalization with diagnosis",
+          "risk_level": "medium",
+          "reasoning": "No treating doctor prescription found in documents in hand."
+        }
+      ],
+      "advisory_claim_docs": [
+        {
+          "key": "detailed_indoor_case_papers",
+          "label": "Detailed indoor case papers"
+        },
+        {
+          "key": "post_procedure_imaging_stone_removed",
+          "label": "Post procedure Imaging X Ray/USG showing stone is removed."
+        },
+        {
+          "key": "detailed_procedure_operative_notes",
+          "label": "Detailed Procedure / Operative Notes"
+        },
+        {
+          "key": "detailed_discharge_summary",
+          "label": "Detailed discharge summary"
+        }
+      ],
+      "llm_evaluation_status": "success"
+    }
+  ],
+  "enhancement_plan": [],
+  "copayment_required": false,
+  "copayment_gap_inr": null,
+  "comorbidity_notes": [],
+  "flags": [
+    {
+      "code": "EMERGENCY_PHASE_STUBBED",
+      "message": "Emergency routing not implemented \u2014 assuming planned elective admission",
+      "severity": "info"
+    },
+    {
+      "code": "CANDIDATES_GENERATED",
+      "message": "Generated 3 candidates from index",
+      "severity": "info"
+    },
+    {
+      "code": "DEDUCTION_APPROXIMATE",
+      "message": "100-50-25 deduction order uses base_rate as proxy for final price. Actual order should use final price after tier/level/accreditation multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "FINANCIAL_ESTIMATE_APPROXIMATE",
+      "message": "Cost estimate uses base rates only. Final rates include tier, level, accreditation, and geo multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "PAEDIATRIC_DEVICE",
+      "message": "Patient age 5 \u226414: paediatric implants/devices apply where relevant. TMS auto-detects; overriding triggers medical audit.",
+      "severity": "info"
+    },
+    {
+      "code": "DOC_GAP_ANALYSIS",
+      "message": "Required: 6 docs. Missing: 3.",
+      "severity": "info"
+    }
+  ],
+  "stg_coverage": {
+    "validated": 2,
+    "stg_missing": 1
+  },
+  "errors": []
+}

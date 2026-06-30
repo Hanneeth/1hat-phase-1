@@ -1,0 +1,146 @@
+{
+  "session_id": "IRIS-TCNEW02-20260625",
+  "created_at": "2026-06-25T10:00:00+05:30",
+  "patient": {
+    "patient_id": "P002"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-25",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Recurrent sore throat with fever, 8-9 episodes per year for the past 3 years, difficulty swallowing, snoring at night",
+    "duration_days": 1095,
+    "history_of_present_illness": "Master Aditya Suresh, a 12-year-old male, presents with a 2-year history of recurrent tonsillitis with 8-9 episodes per year, each requiring antibiotic treatment. Episodes are associated with high fever (up to 103F), severe throat pain, and difficulty swallowing. Patient also reports habitual loud snoring and mouth breathing at night noticed by parents. No history of peritonsillar abscess or quinsy. Referred by paediatrician for elective tonsillectomy under PM-JAY.",
+    "provisional_diagnosis": "Chronic recurrent tonsillitis — Grade III tonsillar hypertrophy bilateral",
+    "planned_procedure": "Tonsillectomy bilateral under general anaesthesia",
+    "weight_kg": 38,
+    "height_cm": 148,
+    "vitals": {
+      "bp_systolic_mmhg": 104,
+      "bp_diastolic_mmhg": 66,
+      "pulse_bpm": 84,
+      "spo2_pct": 99,
+      "temperature_f": 98.6,
+      "rr_per_min": 18,
+      "gcs": 15,
+      "blood_glucose_mgdl": null
+    },
+    "examination_findings": {
+      "general": "Conscious, cooperative, well-nourished child. Mouth breathing noted.",
+      "cvs": "S1 S2 heard, no murmurs",
+      "rs": "Air entry bilateral, clear",
+      "abdomen": "Soft, non-tender",
+      "cns": "No focal deficits",
+      "local": "Oropharynx: Bilateral tonsils Grade III enlargement, cryptic, congested. No peritonsillar bulge. Uvula midline. Posterior pharyngeal wall — mild granularity. Nasal examination: Bilateral inferior turbinate hypertrophy noted."
+    },
+    "investigations": [
+      {
+        "type": "blood_reports",
+        "result_summary": "CBC: Hb 12.4 g/dL, WBC 8600/cumm, Platelets 2.8 lakh. BT 2 min 30 sec, CT 5 min 10 sec. Blood group: B positive. Blood Sugar Random: 88 mg/dL.",
+        "structured_values": [
+          {
+            "parameter": "Hb",
+            "value": 12.4,
+            "unit": "g/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "WBC",
+            "value": 8600,
+            "unit": "/cumm",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "bleeding_time",
+            "value": "2 min 30 sec",
+            "unit": null,
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "clotting_time",
+            "value": "5 min 10 sec",
+            "unit": null,
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-24"
+      },
+      {
+        "type": "xray",
+        "result_summary": "X-Ray Neck lateral view (24/06/2026): Enlarged adenoid shadow noted. Adenoid-nasopharynx ratio approximately 0.7. Soft tissue lateral neck — no retropharyngeal collection.",
+        "structured_values": [
+          {
+            "parameter": "adenoid_nasopharynx_ratio",
+            "value": 0.7,
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-24"
+      },
+      {
+        "type": "ecg",
+        "result_summary": "Normal sinus rhythm. No abnormality detected.",
+        "structured_values": [],
+        "document_available": true,
+        "report_date": "2026-06-24"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "Recurrent tonsillitis since age 10. No other chronic illnesses.",
+    "past_surgical_history": "None",
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "none",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "ENT admission and clinical notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo on hospital bed",
+        "available": true
+      },
+      {
+        "key": "pre_op_investigations",
+        "label": "Pre-operative blood reports, BT/CT, ECG, X-ray neck lateral",
+        "available": true
+      },
+      {
+        "key": "anaesthesia_fitness",
+        "label": "Anaesthesia fitness certificate — ASA Grade I",
+        "available": true
+      },
+      {
+        "key": "informed_consent",
+        "label": "Informed consent signed by parent/guardian",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Meenakshi Sundaram",
+      "registration_number": "TN-MED-44821",
+      "qualification": "MBBS MS ENT DLO",
+      "specialty_code": "EN"
+    },
+    "notes": "Elective tonsillectomy for chronic recurrent tonsillitis meeting Paradise criteria (6+ episodes/year). Pre-auth should select ENT tonsillectomy package cleanly. At discharge stage, adenoidectomy will also have been performed (common intraoperative finding — enlarged adenoids on X-ray already noted). Discharge will also show 1 extra LOS day due to post-op pain management. These are the two minor deviations for TC-NEW-02."
+  }
+}

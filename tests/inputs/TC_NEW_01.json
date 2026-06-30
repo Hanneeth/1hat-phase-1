@@ -1,0 +1,179 @@
+{
+  "session_id": "IRIS-TCNEW01-20260618",
+  "created_at": "2026-06-18T09:00:00+05:30",
+  "patient": {
+    "patient_id": "P001"
+  },
+  "hospital": {
+    "hospital_id": "H001"
+  },
+  "clinical": {
+    "admission_date": "2026-06-18",
+    "bed_category": null,
+    "is_emergency": false,
+    "is_medico_legal": false,
+    "chief_complaints": "Painless reducible swelling in right groin for 8 months, dragging sensation, increases on standing and coughing, reduces on lying down",
+    "duration_days": 240,
+    "history_of_present_illness": "Mr. Murugan Selvaraj, a 42-year-old male labourer, noticed a progressively enlarging swelling in the right groin 8 months ago. Initially small and reducible, it has grown to approximately 4x3 cm and is now causing discomfort during physical activity. No prior episodes of incarceration or strangulation. No previous hernia repair. Referred from PHC for elective surgical management under PM-JAY.",
+    "provisional_diagnosis": "Right indirect inguinal hernia (reducible) — ICD-10: K40.9",
+    "planned_procedure": "Laparoscopic inguinal hernia repair TEP (totally extraperitoneal) right side",
+    "weight_kg": 68,
+    "height_cm": 165,
+    "vitals": {
+      "bp_systolic_mmhg": 126,
+      "bp_diastolic_mmhg": 80,
+      "pulse_bpm": 78,
+      "spo2_pct": 98,
+      "temperature_f": 98.4,
+      "rr_per_min": 16,
+      "gcs": 15,
+      "blood_glucose_mgdl": 94
+    },
+    "examination_findings": {
+      "general": "Conscious, cooperative, well-nourished, no pallor or icterus",
+      "cvs": "S1 S2 heard, no murmurs",
+      "rs": "Air entry bilateral, clear, no added sounds",
+      "abdomen": "Soft, non-tender, no organomegaly",
+      "cns": "No focal neurological deficits",
+      "local": "Right groin: reducible swelling 4x3 cm at the inguinal region. Impulse on cough positive. Deep ring occlusion test positive. Swelling reduces completely in supine position. Left groin normal. Scrotum normal."
+    },
+    "investigations": [
+      {
+        "type": "blood_reports",
+        "result_summary": "CBC: Hb 13.8 g/dL, WBC 7200/cumm, Platelets 2.4 lakh. RFT: Creatinine 0.8 mg/dL. Blood Sugar Fasting: 94 mg/dL. Electrolytes: Na 139, K 4.0 mEq/L. PT/INR: 12.4 sec / 1.02.",
+        "structured_values": [
+          {
+            "parameter": "Hb",
+            "value": 13.8,
+            "unit": "g/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "WBC",
+            "value": 7200,
+            "unit": "/cumm",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "creatinine",
+            "value": 0.8,
+            "unit": "mg/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "blood_sugar_fasting",
+            "value": 94,
+            "unit": "mg/dL",
+            "flag": "N",
+            "leads": null
+          },
+          {
+            "parameter": "INR",
+            "value": 1.02,
+            "unit": null,
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-17"
+      },
+      {
+        "type": "usg",
+        "result_summary": "USG Abdomen and Groin (17/06/2026): Right indirect inguinal hernia confirmed. Bowel loops within sac. No signs of obstruction or strangulation. Left side normal.",
+        "structured_values": [
+          {
+            "parameter": "hernia_side",
+            "value": "right",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "hernia_type",
+            "value": "indirect_inguinal",
+            "unit": null,
+            "flag": "H",
+            "leads": null
+          },
+          {
+            "parameter": "obstruction",
+            "value": "absent",
+            "unit": null,
+            "flag": "N",
+            "leads": null
+          }
+        ],
+        "document_available": true,
+        "report_date": "2026-06-17"
+      },
+      {
+        "type": "ecg",
+        "result_summary": "Normal sinus rhythm. No ST-T changes.",
+        "structured_values": [],
+        "document_available": true,
+        "report_date": "2026-06-17"
+      },
+      {
+        "type": "xray",
+        "result_summary": "Chest X-Ray PA view: No active cardiopulmonary disease.",
+        "structured_values": [],
+        "document_available": true,
+        "report_date": "2026-06-17"
+      }
+    ],
+    "comorbidities": [],
+    "past_medical_history": "No significant medical history. No chronic illnesses.",
+    "past_surgical_history": "None",
+    "current_medications": [],
+    "allergies": [],
+    "personal_history": {
+      "smoking": "none",
+      "alcohol": "social",
+      "diet": "mixed"
+    },
+    "family_history": null,
+    "non_clinical_documents_in_hand": [
+      {
+        "key": "clinical_notes",
+        "label": "Surgical admission notes",
+        "available": true
+      },
+      {
+        "key": "patient_photo",
+        "label": "Patient photo on hospital bed",
+        "available": true
+      },
+      {
+        "key": "usg_report",
+        "label": "USG abdomen and groin report confirming right inguinal hernia",
+        "available": true
+      },
+      {
+        "key": "pre_op_investigations",
+        "label": "Pre-operative blood reports, ECG, chest X-ray",
+        "available": true
+      },
+      {
+        "key": "anaesthesia_fitness",
+        "label": "Anaesthesia fitness certificate — ASA Grade I",
+        "available": true
+      },
+      {
+        "key": "informed_consent",
+        "label": "Informed consent form signed by patient",
+        "available": true
+      }
+    ],
+    "treating_doctor": {
+      "name": "Dr. Priya Venkataraman",
+      "registration_number": "TN-MED-20045",
+      "qualification": "MBBS MS General Surgery FMAS",
+      "specialty_code": "SG"
+    },
+    "notes": "Straightforward elective laparoscopic hernia repair. All pre-op investigations normal. USG confirms diagnosis. No comorbidities. ASA Grade I. Happy path test case — Stage 1/2 should select SG039A cleanly, all documents present, no query flags expected."
+  }
+}

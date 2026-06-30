@@ -1,0 +1,240 @@
+{
+  "readiness_status": "CONDITIONAL",
+  "selected_packages": [
+    {
+      "validated": {
+        "procedure_code": "SL016A",
+        "package_code": "SL016",
+        "specialty_code": "SL",
+        "package_name": "Tonsillectomy",
+        "procedure_name": "Tonsillectomy - U/L tonsillectomy (unilateral/bilateral)",
+        "billing_type": "surgical",
+        "billing_unit": "one_time",
+        "procedure_label": "regular",
+        "auto_approved": "full",
+        "enhancement_applicable": false,
+        "enhancement_requests_needed": null,
+        "reserved_public_only": false,
+        "base_rate_inr": 15300,
+        "stratification": {
+          "determinable": true,
+          "selected_stratum": null,
+          "note": null
+        },
+        "implant": {
+          "required": false,
+          "name": null,
+          "cost_inr": null,
+          "age_appropriate": true,
+          "gender_appropriate": true,
+          "quantity": null
+        },
+        "special_conditions_popup": false,
+        "special_conditions_rule": false,
+        "stg_eligible": true,
+        "stg_missing_criteria": [
+          "Minimum doctor qualification not specified in the clinical presentation"
+        ],
+        "stg_reasoning": "The patient satisfies multiple STG indications. First, the patient has a well-documented history of 8-9 disabling episodes of tonsillitis per year for the past three years, associated with high fever, severe throat pain, and difficulty swallowing. This frequency exceeds all specified sub-criteria for recurrent tonsillitis (>=7 in the preceding year, >=5 in each of the preceding two years, and >=3 in each of the three preceding years). Second, the patient meets the indication for tonsillar and adenoid hyperplasia, presenting with Grade III bilateral tonsillar enlargement and an enlarged adenoid shadow (adenoid-nasopharynx ratio 0.7), which results in habitual loud snoring, mouth breathing (suggestive of obstructive sleep apnea), and difficulty swallowing. All three mandatory frequency thresholds for recurrent tonsillitis are also met based on the reported 8-9 episodes per year for the past three years. The clinical diagnosis is well-supported by the patient's symptoms and examination findings.",
+        "is_addon_to": null,
+        "addon_type": null,
+        "match_score": 100.0,
+        "flags": [
+          "STG_LOW_CONFIDENCE: The patient satisfies multiple STG indications. First, the patient has a well-documented history of "
+        ]
+      },
+      "role": "primary",
+      "deduction_factor": 1.0,
+      "pre_auth_group": 1
+    }
+  ],
+  "blocked_candidates": [],
+  "preauth_docs_required": [
+    {
+      "key": "clinical_notes",
+      "label": "Admission / clinical notes",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "patient_photo",
+      "label": "Photo of patient on hospital bed",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "clinical_notes",
+      "label": "Indication for surgery from treating doctor with supporting case history",
+      "package_code": "SL016",
+      "available": true,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "investigation_reports",
+      "label": "physical examination findings, supporting investigation reports",
+      "package_code": "SL016",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "clinical_photo_initial",
+      "label": "Clinical Photograph",
+      "package_code": "SL016",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    }
+  ],
+  "preauth_docs_missing": [
+    {
+      "key": "investigation_reports",
+      "label": "physical examination findings, supporting investigation reports",
+      "package_code": "SL016",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "clinical_photo_initial",
+      "label": "Clinical Photograph",
+      "package_code": "SL016",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    }
+  ],
+  "query_predictions": [
+    {
+      "procedure_code": "SL016A",
+      "package_name": "Tonsillectomy",
+      "readiness_verdict": "likely_queried",
+      "verdict_summary": "2 high-risk item(s) detected: Throat culture report?, Throat culture report missing at pre-authorization",
+      "checklist_results": [
+        {
+          "question": "Detailed Clinical notes (including clinical signs & symptoms such as difficulty in breathing, examination findings of oral cavity and tonsils, indications for doing the procedure & advise for admission)?",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "Clinical notes are available and provide comprehensive details on signs, symptoms, examination findings, and indications for surgery."
+        },
+        {
+          "question": "Throat culture report?",
+          "expected": true,
+          "actual": null,
+          "risk_level": "high",
+          "reasoning": "A throat culture report is explicitly expected but is not listed in the available investigations or documents."
+        }
+      ],
+      "common_query_risks": [
+        {
+          "query_text": "Clinical notes (detailing signs, symptoms, examination findings, indications, and advice for admission) missing or incomplete at pre-authorization",
+          "risk_level": "low",
+          "reasoning": "Clinical notes are available and provide comprehensive details on signs, symptoms, examination findings, indications, and implied advice for admission."
+        },
+        {
+          "query_text": "Throat culture report missing at pre-authorization",
+          "risk_level": "high",
+          "reasoning": "The throat culture report is explicitly missing from the provided investigations and documents."
+        },
+        {
+          "query_text": "OT notes do not detail surgical steps or outcomes at claim stage",
+          "risk_level": "low",
+          "reasoning": "This query trigger pertains to the claim stage, not the pre-authorization stage, and cannot be assessed with current data."
+        },
+        {
+          "query_text": "Histopathology report of removed tonsils missing at claim stage",
+          "risk_level": "low",
+          "reasoning": "This query trigger pertains to the claim stage, not the pre-authorization stage, and cannot be assessed with current data."
+        },
+        {
+          "query_text": "Picture of gross specimen on removed tonsils missing at claim stage",
+          "risk_level": "low",
+          "reasoning": "This query trigger pertains to the claim stage, not the pre-authorization stage, and cannot be assessed with current data."
+        },
+        {
+          "query_text": "Post-procedure clinical photograph of the affected part missing at claim stage",
+          "risk_level": "low",
+          "reasoning": "This query trigger pertains to the claim stage, not the pre-authorization stage, and cannot be assessed with current data."
+        },
+        {
+          "query_text": "Signs, symptoms, or examination findings do not confirm the presence of enlarged tonsils",
+          "risk_level": "low",
+          "reasoning": "Examination findings and provisional diagnosis clearly confirm bilateral Grade III tonsillar enlargement and adenoid hypertrophy."
+        },
+        {
+          "query_text": "Provide Treating Doctor's Prescription advising Hospitalization with diagnosis",
+          "risk_level": "medium",
+          "reasoning": "No treating doctor prescription found in documents in hand."
+        }
+      ],
+      "advisory_claim_docs": [
+        {
+          "key": "indoor_case_papers",
+          "label": "Indoor case papers"
+        },
+        {
+          "key": "procedure_note_operative_note",
+          "label": "Procedure note/ operative note"
+        },
+        {
+          "key": "detailed_discharge_summary",
+          "label": "Detailed Discharge summary"
+        },
+        {
+          "key": "histopathology_report",
+          "label": "Histopathology report"
+        },
+        {
+          "key": "post_procedure_clinical_photograph",
+          "label": "Post procedure clinical photograph of the affected part"
+        }
+      ],
+      "llm_evaluation_status": "success"
+    }
+  ],
+  "enhancement_plan": [],
+  "copayment_required": false,
+  "copayment_gap_inr": null,
+  "comorbidity_notes": [],
+  "flags": [
+    {
+      "code": "EMERGENCY_PHASE_STUBBED",
+      "message": "Emergency routing not implemented \u2014 assuming planned elective admission",
+      "severity": "info"
+    },
+    {
+      "code": "CANDIDATES_GENERATED",
+      "message": "Generated 2 candidates from index",
+      "severity": "info"
+    },
+    {
+      "code": "ADDON_PARENT_UNKNOWN",
+      "message": "SE040A add-on parent unknown \u2014 removed.",
+      "severity": "warning"
+    },
+    {
+      "code": "DEDUCTION_APPROXIMATE",
+      "message": "100-50-25 deduction order uses base_rate as proxy for final price. Actual order should use final price after tier/level/accreditation multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "VAY_VANDANA_DEBIT_ORDER_AMBIGUOUS",
+      "message": "Patient has dual wallet: family \u20b9200,000 + Vay Vandana \u20b9300,000. NHA does not specify debit order \u2014 verify with SHA before submission.",
+      "severity": "warning"
+    },
+    {
+      "code": "FINANCIAL_ESTIMATE_APPROXIMATE",
+      "message": "Cost estimate uses base rates only. Final rates include tier, level, accreditation, and geo multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "DOC_GAP_ANALYSIS",
+      "message": "Required: 5 docs. Missing: 2.",
+      "severity": "info"
+    }
+  ],
+  "stg_coverage": {
+    "validated": 1,
+    "stg_missing": 1
+  },
+  "errors": []
+}

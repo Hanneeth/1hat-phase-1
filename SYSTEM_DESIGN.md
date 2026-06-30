@@ -1,6 +1,6 @@
 # IRIS Pre-Auth & Claim Selection Engine — System Design
 
-This document serves as the absolute, ground-up source of truth for the architecture, data models, knowledge base schemas, processing pipeline, and LLM integrations of the IRIS pre-authorisation and claim selection engine. All descriptions correspond directly to the actual python codebase.
+This document serves as the absolute, ground-up source of truth for the architecture, data models, knowledge base schemas, processing pipeline, and LLM integrations of the IRIS pre-authorisation and claim selection engine. All descriptions correspond directly to the actual Python codebase.
 
 ---
 
@@ -54,7 +54,7 @@ flowchart TD
     P5 --> P6[Phase 6: Clinical Exclusions Check]
     P6 --> P7[Phase 7: Comorbidity Absorption]
     P7 --> P8[Phase 8: Special Populations Routing]
-    P7 --> P9
+    P8 --> P9
     
     P9 --> P10
     P10 --> End([IRIS Structured Output JSON])
@@ -71,16 +71,16 @@ flowchart TD
 
 ### Stage 3: Claims Verification Pipeline (Phase 11)
 
-Implemented in `phases/phase11_claim.py` and run via `main_claim.py`, the claims verification pipeline implements a 13-step verification process to compare actual discharge data against the approved pre-authorization baseline:
+Implemented in [phase11_claim.py](file:///e:/Code/1hat-phase1/phases/phase11_claim.py) and run via [main_claim.py](file:///e:/Code/1hat-phase1/main_claim.py), the claims verification pipeline implements a 13-step verification process to compare actual discharge data against the approved pre-authorization baseline:
 
-*   **Step 0: Cross-consistency checking:** Validates identity mismatch checks (patient PMJAY ID, admitting hospital, treating doctor registration number) and package integrity (comparing pre-auth validated `procedure_code` against discharge `admission.package_booked`). Also performs an LLM-based clinical consistency check to alert on diagnosis or admission type inconsistencies (e.g. elective pre-auth vs. emergency discharge).
-*   **Step 1: Claim context loading:** Reads the pre-auth output dict, checks for selected packages, and pulls active STG details and specialty HBP shards.
-*   **Step 2: Discharge summary completeness check:** Evaluates the discharge summary against CAM Annexure 6 criteria for fields (patient/hospital identifiers, treating consultant, diagnosis, procedure, treatment details) and signatures (consultant, PMAM, patient/attendant).
+*   **Step 0: Cross-consistency checking:** Validates identity mismatch checks (patient PMJAY ID, admitting hospital, treating doctor registration number) and package integrity (comparing pre-auth validated `procedure_code` against discharge `admission.package_booked`). Also performs an LLM-based clinical consistency check to alert on diagnosis or admission type inconsistencies.
+*   **Step 1: Claim context loading:** Reads the pre-auth output dict, checks for selected packages, and pulls active STG details and specialty HBP shards, getting the indicative Length of Stay (LoS).
+*   **Step 2: Discharge summary completeness check:** Evaluates the discharge summary against CAM Annexure 6 criteria for fields (hospital name, patient name, PMJAY ID, doctor details, admission/discharge dates, complaints, diagnoses, procedure performed, treatment given, discharge condition, advice) and signatures (treating consultant, PMAM, patient/attendant).
 *   **Step 3: Required claim documents list building:** Compiles mandatory documents from STGs, HBP shards (as fallback if STG is missing), implant invoices (if required), and mortality audit reports (if death occurs within 24 hours). Resolves duplicate documents using a bidirectional alias-to-canonical checks dictionary (`EQUIVALENT_KEYS`).
 *   **Step 4: Length of Stay (LoS) check:** Computes actual LoS vs. indicative LoS. Checks if an approved enhancement plan was filed for prolonged stays.
-*   **Step 5: Deviation detection:** Flags anomalies including procedure code changes, ward category upgrades/downgrades, doctor registration mismatches, LoS excesses with no enhancement, and urology minor procedure sub-inclusions.
+*   **Step 5: Deviation detection:** Flags anomalies including procedure code changes, ward category upgrades/downgrades, doctor registration mismatches, LoS excesses with no enhancement, and urology minor procedure sub-inclusions (cystoscopy, ureteric catheterisation, retrograde pyelogram, DJ stenting, nephrostomy are sub-included in urology package rates ≥₹15,000).
 *   **Step 6: LLM Evaluation (CPD Checker):** Calls Gemini to evaluate actual findings against the CPD claim checklist and drafts clinical justifications for any detected deviations.
-*   **Step 7: Special payments calculation:** Applies partial billing calculations for LAMA/DAMA, death (on-table, within 24h, or post-operative), and referral cases based on per-day bed category rates and HBP guidelines.
+*   **Step 7: Special payments calculation:** Applies partial billing calculations for LAMA/DAMA, death (on-table, within 24h, before surgery, or post-operative), and referral cases based on per-day bed category rates and HBP guidelines.
 *   **Step 8: Audit flag triggering:** Triggers flags for stable-in-ICU, prolonged stay, billed days exceeding stay, missing STG documents, unspecified package abuse, and patient cash collection.
 *   **Step 9: SHA notification date check:** Verifies if the hospital notified the State Health Authority within 24 hours of LAMA, referral, or death.
 *   **Step 10: Specialty guidelines check:** Applies rules like BM (Burns management) follow-up photo frequency (days 5, 10, 15, 20) and MC/SV (Cardiology) stent carton sticker verification.
@@ -91,77 +91,55 @@ Implemented in `phases/phase11_claim.py` and run via `main_claim.py`, the claims
 
 ## 2. File Structure & Module Purposes
 
-```
-e:\Code\1hat-phase1\
-│
-├── config.py                     # Global constants, paths, thresholds, and search mode
-├── logger_setup.py               # Standardized stdout console logging utility
-├── input_validator.py            # Input JSON schema validation rules (stub returning True)
-├── models.py                     # Unified data models and dataclass definitions
-├── session.py                    # Session state class (IRISSession) for pipeline execution
-├── main.py                       # Pre-authorisation pipeline entry point and orchestrator
-├── main_claim.py                 # Claims verification pipeline entry point and orchestrator
-├── app.py                        # Streamlit web dashboard with Tab 1 (Pre-auth), Tab 2 (Claims), Tab 3 (About)
-├── eval.py                       # Subprocess test suite running inputs against expected_output.json
-│
-├── kb/
-│   ├── __init__.py               # Package marker
-│   ├── loader.py                 # Shard-level JSON file loaders and caches (using @lru_cache)
-│   ├── searcher.py               # Fuzzy candidate selection using RapidFuzz token_set_ratio
-│   ├── searcher_llm.py           # Gemini-based candidate selection
-│   └── searcher_router.py        # Routes search queries to fuzzy or llm backend based on config
-│
-├── llm/
-│   ├── __init__.py               # Package marker
-│   ├── conflict_resolver.py      # LLM check for mutual exclusions and sub-inclusions in Phase 4
-│   ├── cpd_evaluator.py          # LLM evaluation of CPD checklists and deviation justifications
-│   ├── nearest_match.py          # LLM identification of closest blocked candidate post-failure
-│   ├── query_predictor.py        # LLM query predictor checking qualification, vitals, and STGs
-│   └── stg_checker.py            # LLM check for STG criteria, plausibility, and stratum ties
-│
-├── phases/
-│   ├── __init__.py               # Package marker
-│   ├── phase0_preflight.py       # Patient eligibility (BIS) and hospital check (HEM)
-│   ├── phase1_emergency.py       # Emergency package check (stubbed for elective cases)
-│   ├── phase2_candidates.py      # Candidate generation orchestration
-│   ├── phase3_validator.py       # Validation logic: rules, STGs, implants, and tiebreakers
-│   ├── phase4_multipackage.py    # PM-JAY package combinations and sliding-scale deductions
-│   ├── phase5_financial.py       # Wallet balance sufficiency check and Vay Vandana allocation
-│   ├── phase6_exclusion.py       # Keyword screen and LLM exception engine for exclusions
-│   ├── phase7_comorbidity.py     # Management conditions comorbidity absorption
-│   ├── phase8_special_pop.py     # Specialty advisory routing (neonatal, oncology, transplant, etc.)
-│   ├── phase9_documents.py       # Document checklist compilation and gap checker
-│   ├── phase10_output.py         # Readiness status calculation and output serialization
-│   └── phase11_claim.py          # Claims verification logic (13-step verification)
-│
-├── stubs/
-│   ├── __init__.py               # Package marker
-│   ├── bis_stub.py               # Mock client reading dummy_bis.json for patient details
-│   └── hem_stub.py               # Mock hospital empanelment stub reading dummy_hem.json
-│
-├── intake/
-│   ├── __init__.py               # Package marker
-│   ├── intake_runner.py          # Folder scanning, text extraction, parser orchestration, schema validation
-│   ├── pdf_extractor.py          # Text extraction from PDF using pdfplumber, falling back to Tesseract OCR
-│   ├── docx_extractor.py         # Text extraction from DOCX paragraphs and tables using python-docx
-│   ├── discharge_parser.py       # Gemini-based unstructured medical text to schema mapping parser
-│   └── schema_validator.py       # Enforces hard-required patient, admission, and clinical fields
-│
-└── data/
-    ├── KB_SPEC.md                # Specifications for knowledge base structures
-    ├── dummy/
-    │   ├── dummy_bis.json        # Mock patient database (identities, wallets, and past claims)
-    │   └── dummy_hem.json        # Mock hospital database (empanelments and specialties)
-    ├── schemes/
-    │   └── pmjay.json            # PM-JAY core configuration master (KB-1)
-    ├── hbp/
-    │   ├── _index.json           # Flat index of all procedure codes across specialties (KB-2)
-    │   └── <specialty>.json      # Category package master shards (KB-2)
-    ├── stg/
-    │   └── <procedure_code>.json # Standard Treatment Guideline json files (KB-3)
-    └── samples/
-        └── query_taxonomy.json   # Standardized query and rejection taxonomy placeholder (KB-4)
-```
+*   [config.py](file:///e:/Code/1hat-phase1/config.py): Global constants, paths, thresholds, and search mode.
+*   [logger_setup.py](file:///e:/Code/1hat-phase1/logger_setup.py): Standardized stdout console logging utility.
+*   [input_validator.py](file:///e:/Code/1hat-phase1/input_validator.py): Input JSON schema validation rules (currently stubbed).
+*   [models.py](file:///e:/Code/1hat-phase1/models.py): Unified data models and dataclass definitions.
+*   [session.py](file:///e:/Code/1hat-phase1/session.py): Session state class (`IRISSession`) for pre-auth pipeline execution.
+*   [main.py](file:///e:/Code/1hat-phase1/main.py): Pre-authorisation pipeline entry point and orchestrator.
+*   [main_claim.py](file:///e:/Code/1hat-phase1/main_claim.py): Claims verification pipeline entry point and orchestrator.
+*   [app.py](file:///e:/Code/1hat-phase1/app.py): Streamlit web dashboard for visualizing pre-auth and claim evaluations.
+*   [eval.py](file:///e:/Code/1hat-phase1/eval.py): Test suite running input test cases against an expected answer key.
+*   `kb/`:
+    *   [kb/loader.py](file:///e:/Code/1hat-phase1/kb/loader.py): Specialty-level JSON HBP shard loaders and caches.
+    *   [kb/searcher.py](file:///e:/Code/1hat-phase1/kb/searcher.py): Fuzzy candidate selection using RapidFuzz `token_set_ratio`.
+    *   [kb/searcher_llm.py](file:///e:/Code/1hat-phase1/kb/searcher_llm.py): Gemini-based candidate selection.
+    *   [kb/searcher_router.py](file:///e:/Code/1hat-phase1/kb/searcher_router.py): Routes search queries to fuzzy or LLM backend based on config.
+*   `llm/`:
+    *   [llm/conflict_resolver.py](file:///e:/Code/1hat-phase1/llm/conflict_resolver.py): LLM conflict checker for mutual exclusions and sub-inclusions in Phase 4.
+    *   [llm/cpd_evaluator.py](file:///e:/Code/1hat-phase1/llm/cpd_evaluator.py): LLM evaluation of CPD checklists and clinical consistency checking between pre-auth and discharge data.
+    *   [llm/nearest_match.py](file:///e:/Code/1hat-phase1/llm/nearest_match.py): LLM nearest-match logic to identify the closest blocked candidate when zero packages validate.
+    *   [llm/query_predictor.py](file:///e:/Code/1hat-phase1/llm/query_predictor.py): LLM query risk predictor checking qualification, vitals, and STGs.
+    *   [llm/stg_checker.py](file:///e:/Code/1hat-phase1/llm/stg_checker.py): LLM check for STG criteria, clinical plausibility, and stratum tiebreakers.
+*   `phases/`:
+    *   [phases/phase0_preflight.py](file:///e:/Code/1hat-phase1/phases/phase0_preflight.py): Patient eligibility (BIS) and hospital check (HEM).
+    *   [phases/phase1_emergency.py](file:///e:/Code/1hat-phase1/phases/phase1_emergency.py): Emergency package routing (stubbed).
+    *   [phases/phase2_candidates.py](file:///e:/Code/1hat-phase1/phases/phase2_candidates.py): Candidate generation orchestration.
+    *   [phases/phase3_validator.py](file:///e:/Code/1hat-phase1/phases/phase3_validator.py): Validation logic: rules, STGs, implants, and tiebreakers.
+    *   [phases/phase4_multipackage.py](file:///e:/Code/1hat-phase1/phases/phase4_multipackage.py): PM-JAY package combinations and sliding-scale deductions.
+    *   [phases/phase5_financial.py](file:///e:/Code/1hat-phase1/phases/phase5_financial.py): Wallet balance sufficiency check and Vay Vandana allocation.
+    *   [phases/phase6_exclusion.py](file:///e:/Code/1hat-phase1/phases/phase6_exclusion.py): Keyword screening and LLM-based exceptions for clinical exclusions.
+    *   [phases/phase7_comorbidity.py](file:///e:/Code/1hat-phase1/phases/phase7_comorbidity.py): Comorbidity absorption checks.
+    *   [phases/phase8_special_pop.py](file:///e:/Code/1hat-phase1/phases/phase8_special_pop.py): Specialty advisory routing (neonatal, oncology, transplant, etc.).
+    *   [phases/phase9_documents.py](file:///e:/Code/1hat-phase1/phases/phase9_documents.py): Document checklist compilation and gap checker.
+    *   [phases/phase10_output.py](file:///e:/Code/1hat-phase1/phases/phase10_output.py): Readiness status calculation and output assembly.
+    *   [phases/phase11_claim.py](file:///e:/Code/1hat-phase1/phases/phase11_claim.py): Claims verification logic (13-step verification).
+*   `stubs/`:
+    *   [stubs/bis_stub.py](file:///e:/Code/1hat-phase1/stubs/bis_stub.py): Mock patient database client.
+    *   [stubs/hem_stub.py](file:///e:/Code/1hat-phase1/stubs/hem_stub.py): Mock hospital empanelment client.
+*   `intake/`:
+    *   [intake/intake_runner.py](file:///e:/Code/1hat-phase1/intake/intake_runner.py): Folder scanning, text extraction, parser orchestration, schema validation.
+    *   [intake/pdf_extractor.py](file:///e:/Code/1hat-phase1/intake/pdf_extractor.py): PDF text extractor using pdfplumber, falling back to Tesseract OCR.
+    *   [intake/docx_extractor.py](file:///e:/Code/1hat-phase1/intake/docx_extractor.py): DOCX text extractor.
+    *   [intake/discharge_parser.py](file:///e:/Code/1hat-phase1/intake/discharge_parser.py): Gemini-based unstructured medical text parser mapping raw discharge documents to structured JSON schemas.
+    *   [intake/schema_validator.py](file:///e:/Code/1hat-phase1/intake/schema_validator.py): Validator for hard-required patient, admission, and clinical fields.
+*   `data/`:
+    *   [data/dummy/dummy_bis.json](file:///e:/Code/1hat-phase1/data/dummy/dummy_bis.json): Mock patient entitlements, wallets, and past claims.
+    *   [data/dummy/dummy_hem.json](file:///e:/Code/1hat-phase1/data/dummy/dummy_hem.json): Mock hospital empanelments and specialties.
+    *   [data/schemes/pmjay.json](file:///e:/Code/1hat-phase1/data/schemes/pmjay.json): PM-JAY core rules (KB-1).
+    *   [data/hbp/](file:///e:/Code/1hat-phase1/data/hbp/): Specialty category package master shards and flat compiled index `_index.json` (KB-2).
+    *   [data/stg/](file:///e:/Code/1hat-phase1/data/stg/): Standard Treatment Guideline JSON documents (KB-3).
+    *   [data/samples/query_taxonomy.json](file:///e:/Code/1hat-phase1/data/samples/query_taxonomy.json): Query taxonomy master (KB-4).
 
 ---
 
@@ -217,7 +195,7 @@ A single extracted parameter from an OCR-processed investigation document.
 
 ### 6. `Investigation`
 A single investigation or diagnostic report in the clinical input.
-*   `type: str` — canonical type (e.g., "ecg", "echo", "ct", "blood_reports").
+*   `type: str` — Canonical type (e.g. "ecg", "echo", "blood_reports").
 *   `result_summary: str | None` — Free-text summary of the report.
 *   `structured_values: list[StructuredValue] | None` — Machine-readable parameters.
 *   `document_available: bool` — Whether the document is in hand.
@@ -282,11 +260,11 @@ Complete clinical presentation of the patient at admission.
 Thin procedure record produced by Phase 2 search against `_index.json`.
 *   `procedure_code: str` — Standard PM-JAY procedure code.
 *   `package_code: str` — Parent package code.
-*   `specialty_code: str` — specialty identifier.
-*   `specialty: str` — specialty name.
+*   `specialty_code: str` — Specialty identifier.
+*   `specialty: str` — Specialty name.
 *   `package_name: str` — Package name.
 *   `procedure_name: str` — Procedure name.
-*   `billing_unit: str` — billing unit type.
+*   `billing_unit: str` — Billing unit type.
 *   `reserved_public_only: bool` — Public-reserved status.
 *   `procedure_label: str` — regular | add_on | standalone | follow_up.
 *   `auto_approved: str` — none | full | day1_only.
@@ -421,25 +399,25 @@ Final output container of the Stage 1 & 2 pre-auth pipeline. Holds selection, bl
 IRIS partitions references and catalog data into 5 separate tiers:
 
 *   **KB-1: Core Scheme Rules**
-    *   *Source file:* `data/schemes/pmjay.json`
+    *   *Source file:* [pmjay.json](file:///e:/Code/1hat-phase1/data/schemes/pmjay.json)
     *   *Purpose:* Declares scheme pricing configurations, Northeast states, private/public enhancement batch limits, bed category multipliers, LAMA/DAMA partial billing percentages, and discharge audit triggers.
     *   *Status:* **Active**.
 *   **KB-2: Specialty Shards & Derived Index**
-    *   *Source files:* `data/hbp/` directory.
+    *   *Source files:* [data/hbp/](file:///e:/Code/1hat-phase1/data/hbp/)
     *   *Purpose:* Houses specialty shards (e.g., `cardiology.json`, `general_surgery.json`) containing full procedure records (billing_unit, reserved_public_only, stratification, is_addon_to, implant, rates_inr, pricing details) and a compiled `_index.json` containing flat metadata for searching.
     *   *Status:* **Active**.
 *   **KB-3: Standard Treatment Guidelines**
-    *   *Source files:* `data/stg/<procedure_code>.json`
+    *   *Source files:* [data/stg/](file:///e:/Code/1hat-phase1/data/stg/)
     *   *Purpose:* Standard Treatment Guidelines for specific procedures. Declares clinical indications, structured clinical thresholds (parameter, operator, value), doctor qualification checks, checklist queries, common auditor queries, and pre-auth/claim document lists.
     *   *Status:* **Active**.
 *   **KB-4: Rejection & Query Taxonomy**
-    *   *Source file:* `data/query_taxonomy.json` (Falls back to `data/samples/query_taxonomy.json` if absent).
+    *   *Source file:* [query_taxonomy.json](file:///e:/Code/1hat-phase1/data/query_taxonomy.json) (Falls back to `data/samples/query_taxonomy.json` if absent).
     *   *Purpose:* Master taxonomy catalog mapping rejection codes and claim audit red flags.
     *   *Status:* **Missing** (Loads the samples fallback).
 *   **KB-5: State-Specific Overrides**
-    *   *Source file:* `data/schemes/cmchis.json`.
-    *   *Purpose:* State-specific override sheets (e.g., CMCHIS Tamil Nadu).
-    *   *Status:* **Not Started** (Stubbed or not implemented).
+    *   *Source file:* [cmchis.json](file:///e:/Code/1hat-phase1/data/schemes/cmchis.json) (intended for CMCHIS Tamil Nadu state overrides).
+    *   *Purpose:* Declares state-specific override sheets.
+    *   *Status:* **Not Started** (Not implemented).
 
 ---
 

@@ -1,0 +1,271 @@
+{
+  "readiness_status": "CONDITIONAL",
+  "selected_packages": [
+    {
+      "validated": {
+        "procedure_code": "MC011A",
+        "package_code": "MC011",
+        "specialty_code": "MC",
+        "package_name": "PTCA, inclusive of diagnostic angiogram",
+        "procedure_name": "PTCA, inclusive of diagnostic angiogram",
+        "billing_type": "fixed_medical",
+        "billing_unit": "one_time",
+        "procedure_label": "regular",
+        "auto_approved": "none",
+        "enhancement_applicable": false,
+        "enhancement_requests_needed": null,
+        "reserved_public_only": false,
+        "base_rate_inr": 60900,
+        "stratification": {
+          "determinable": false,
+          "selected_stratum": null,
+          "note": "Stratification type undeterminable from available clinical input \u2014 physician selection required"
+        },
+        "implant": {
+          "required": true,
+          "name": "Coronary Stent for PDA stenting - Bare Metal",
+          "cost_inr": 9373,
+          "age_appropriate": true,
+          "gender_appropriate": true,
+          "quantity": 1
+        },
+        "special_conditions_popup": true,
+        "special_conditions_rule": false,
+        "stg_eligible": true,
+        "stg_missing_criteria": [
+          "Minimum doctor qualification for the treating physician is not explicitly stated in the clinical presentation"
+        ],
+        "stg_reasoning": "The patient satisfies the 'History of coronary artery disease (CAD)/ multiple risk factors for MI' indication, as coronary angiography confirms 80% stenosis in the proximal LAD, establishing CAD, and the patient has a history of hypertension. The mandatory clinical threshold of 'stenosis >= 70% in one or more of the main coronary artery' is also unambiguously met, with the angiography report detailing 80% stenosis in the proximal LAD. All clinical criteria for the procedure are satisfied. While the specific qualification of the performing doctor is not explicitly stated, the patient was referred by a cardiologist, suggesting appropriate medical oversight.",
+        "is_addon_to": null,
+        "addon_type": null,
+        "match_score": 100.0,
+        "flags": [
+          "STRATIFICATION_UNDETERMINABLE: Stratification type undeterminable from available clinical input \u2014 physician selection required"
+        ]
+      },
+      "role": "primary",
+      "deduction_factor": 1.0,
+      "pre_auth_group": 1
+    }
+  ],
+  "blocked_candidates": [
+    {
+      "procedure_code": "MC022A",
+      "reason_code": "PLAUSIBILITY_FAILED",
+      "message": "The candidate package is for a 'First Follow-up- 2-4 weeks after discharge', which is not a procedure for the patient's current admission."
+    },
+    {
+      "procedure_code": "MC022B",
+      "reason_code": "PLAUSIBILITY_FAILED",
+      "message": "The patient is admitted for an elective Percutaneous Transluminal Coronary Angioplasty (PTCA), while the candidate package is a 'Second Follow-up- After 3 months', which is not the procedure for the current admission."
+    },
+    {
+      "procedure_code": "MC022C",
+      "reason_code": "PLAUSIBILITY_FAILED",
+      "message": "The patient is currently admitted for an elective Percutaneous Transluminal Coronary Angioplasty (PTCA), whereas the candidate package is for a 'Third Follow-up- After 3 months', which is a future event not directly related to the current admission's planned intervention."
+    },
+    {
+      "procedure_code": "MC022D",
+      "reason_code": "PLAUSIBILITY_FAILED",
+      "message": "The patient is currently admitted for an elective percutaneous coronary intervention, not for a follow-up visit scheduled after 3 months."
+    },
+    {
+      "procedure_code": "MC022E",
+      "reason_code": "PLAUSIBILITY_FAILED",
+      "message": "The patient's current admission is for an elective percutaneous coronary intervention, not for a follow-up appointment scheduled 3 months post-procedure."
+    }
+  ],
+  "preauth_docs_required": [
+    {
+      "key": "clinical_notes",
+      "label": "Admission / clinical notes",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "patient_photo",
+      "label": "Photo of patient on hospital bed",
+      "package_code": null,
+      "available": true,
+      "criticality": "hard_block"
+    },
+    {
+      "key": "ecg",
+      "label": "ECG",
+      "package_code": "MC011",
+      "available": true,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "echo",
+      "label": "ECHO",
+      "package_code": "MC011",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "cag_report",
+      "label": "CAG stills showing blocks & Reports",
+      "package_code": "MC011",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    }
+  ],
+  "preauth_docs_missing": [
+    {
+      "key": "echo",
+      "label": "ECHO",
+      "package_code": "MC011",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    },
+    {
+      "key": "cag_report",
+      "label": "CAG stills showing blocks & Reports",
+      "package_code": "MC011",
+      "available": false,
+      "criticality": "ppd_query_risk"
+    }
+  ],
+  "query_predictions": [
+    {
+      "procedure_code": "MC011A",
+      "package_name": "PTCA, inclusive of diagnostic angiogram",
+      "readiness_verdict": "gaps_present",
+      "verdict_summary": "2 item(s) may prompt PPD query.",
+      "checklist_results": [
+        {
+          "question": "Consent duly signed by Patient & treating Cardiologist- Yes",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "Informed consent document is listed as available in the documents in hand section."
+        },
+        {
+          "question": "Stenosis of >/=70% in one or more of the main coronary artery - Yes",
+          "expected": true,
+          "actual": true,
+          "risk_level": "pass",
+          "reasoning": "Angiography report confirms 80% stenosis in the proximal LAD, meeting the >=70% threshold."
+        }
+      ],
+      "common_query_risks": [
+        {
+          "query_text": "Consent not signed by Patient and treating Cardiologist.",
+          "risk_level": "low",
+          "reasoning": "Informed consent document is available, indicating it is duly signed by patient and cardiologist."
+        },
+        {
+          "query_text": "Stenosis of main coronary artery documented below 70% without justification.",
+          "risk_level": "low",
+          "reasoning": "Angiography report clearly documents 80% stenosis in the proximal LAD, which is above 70%."
+        },
+        {
+          "query_text": "Angiogram stills not showing stent and post stent flow.",
+          "risk_level": "low",
+          "reasoning": "This is a pre-authorization request; post-stent angiogram stills are not expected at this stage."
+        },
+        {
+          "query_text": "Barcode of stent(s) not available or illegible.",
+          "risk_level": "low",
+          "reasoning": "This is a pre-authorization request; stent barcode is not expected to be available at this stage."
+        },
+        {
+          "query_text": "Stent type not justified as per clinical indications provided.",
+          "risk_level": "medium",
+          "reasoning": "Patient is non-diabetic, supporting BMS, but artery diameter and lesion length for BMS justification are not explicitly documented."
+        },
+        {
+          "query_text": "Clinical notes/discharge summary not showing proper monitoring of vitals, post-op care or medications.",
+          "risk_level": "low",
+          "reasoning": "This is a pre-authorization request; post-op care and discharge summary are not expected at this stage."
+        },
+        {
+          "query_text": "Coronary Angiography stills & reports (showing blockage) not uploaded at pre-auth.",
+          "risk_level": "low",
+          "reasoning": "Angiography report and summary confirming 80% blockage in LAD are available and uploaded."
+        },
+        {
+          "query_text": "Cardiac enzymes (Troponins T/ I or CPK-MB) not uploaded at pre-auth.",
+          "risk_level": "low",
+          "reasoning": "Troponin I results are available and documented as negative in the blood reports."
+        },
+        {
+          "query_text": "Provide Treating Doctor's Prescription advising Hospitalization with diagnosis",
+          "risk_level": "medium",
+          "reasoning": "No treating doctor prescription found in documents in hand."
+        }
+      ],
+      "advisory_claim_docs": [
+        {
+          "key": "still_image_of_patient_undergoing_procedure",
+          "label": "Still image of the patient undergoing the procedure with date & time"
+        },
+        {
+          "key": "angiogram_stills_report_showing_stent_post_stent_flow",
+          "label": "Angiogram stills & report showing stent & post stent flow"
+        },
+        {
+          "key": "serial_ecgs_post_procedure",
+          "label": "Serial ECGs (Post Procedure)"
+        },
+        {
+          "key": "cardiac_enzymes_post_procedure",
+          "label": "Cardiac enzymes (Troponins T/ I (if not available then CPK-MB) (Post Procedure)"
+        },
+        {
+          "key": "procedure_operation_notes",
+          "label": "Procedure/ Operation notes"
+        },
+        {
+          "key": "detailed_discharge_summary",
+          "label": "Detailed discharge summary"
+        },
+        {
+          "key": "barcode_of_stent_used",
+          "label": "Barcode of the stent(s) used (Bare metal/ Drug eluting stent)"
+        }
+      ],
+      "llm_evaluation_status": "success"
+    }
+  ],
+  "enhancement_plan": [],
+  "copayment_required": true,
+  "copayment_gap_inr": 52900,
+  "comorbidity_notes": [
+    "Comorbidity 'Hypertension' managed under current medical package."
+  ],
+  "flags": [
+    {
+      "code": "EMERGENCY_PHASE_STUBBED",
+      "message": "Emergency routing not implemented \u2014 assuming planned elective admission",
+      "severity": "info"
+    },
+    {
+      "code": "CANDIDATES_GENERATED",
+      "message": "Generated 6 candidates from index",
+      "severity": "info"
+    },
+    {
+      "code": "WALLET_INSUFFICIENT",
+      "message": "Estimated cost \u20b960,900 exceeds available wallet \u20b98,000. Gap: \u20b952,900.",
+      "severity": "warning"
+    },
+    {
+      "code": "FINANCIAL_ESTIMATE_APPROXIMATE",
+      "message": "Cost estimate uses base rates only. Final rates include tier, level, accreditation, and geo multipliers.",
+      "severity": "info"
+    },
+    {
+      "code": "DOC_GAP_ANALYSIS",
+      "message": "Required: 5 docs. Missing: 2.",
+      "severity": "info"
+    }
+  ],
+  "stg_coverage": {
+    "validated": 1,
+    "stg_missing": 5
+  },
+  "errors": []
+}

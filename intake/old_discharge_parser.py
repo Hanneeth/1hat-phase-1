@@ -151,13 +151,7 @@ SCHEMA_TEMPLATE = """{
     {"key": "detailed_indoor_case_papers", "label": "Detailed Indoor Case Papers", "available": false},
     {"key": "post_procedure_imaging_stone_removed", "label": "Post Procedure Imaging Showing Stone Removed", "available": false},
     {"key": "detailed_procedure_operative_notes", "label": "Detailed Procedure / Operative Notes", "available": false},
-    {"key": "detailed_discharge_summary", "label": "Detailed Discharge Summary", "available": false},
-    {"key": "still_image_of_patient_undergoing_procedure", "label": "Still Image of the Patient Undergoing the Procedure with Date & Time", "available": false},
-    {"key": "angiogram_stills_report_showing_stent_post_stent_flow", "label": "Angiogram Stills & Report Showing Stent & Post Stent Flow", "available": false},
-    {"key": "serial_ecgs_post_procedure", "label": "Serial ECGs (Post Procedure)", "available": false},
-    {"key": "cardiac_enzymes_post_procedure", "label": "Cardiac Enzymes (Troponins T/I or CPK-MB) (Post Procedure)", "available": false},
-    {"key": "procedure_operation_notes", "label": "Procedure / Operation Notes", "available": false},
-    {"key": "barcode_of_stent_used", "label": "Barcode of the Stent(s) Used (Bare Metal/Drug Eluting Stent)", "available": false}
+    {"key": "detailed_discharge_summary", "label": "Detailed Discharge Summary", "available": false}
   ],
 
   "deviations_declared": []
